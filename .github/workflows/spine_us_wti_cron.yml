@@ -1,0 +1,39 @@
+name: Update WTI & Spine-US Core
+
+on:
+  schedule:
+    # Every Wednesday at 22:00 UTC (adjust as needed)
+    - cron: "0 22 * * 3"
+  workflow_dispatch: {}
+
+jobs:
+  update-wti-and-spine:
+    runs-on: ubuntu-latest
+
+    env:
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+      R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+      R2_BUCKET: thespine-us-hub
+      # Add any secrets needed by fetch_latest_wti()
+      # WTI_SOURCE_CSV: ${{ secrets.WTI_SOURCE_CSV }}
+      # WTI_API_KEY:    ${{ secrets.WTI_API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Update WTI history & rebuild Spine-US core
+        run: |
+          python scripts/update_wti_hist_and_spine.py
+

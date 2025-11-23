@@ -1,0 +1,29 @@
+on:
+  schedule:
+    - cron: "31 15 * * WED"   # 10:31 AM EST = 15:31 UTC
+
+env:
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+  R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+  R2_BUCKET: thespine-us-hub
+
+jobs:
+  refresh-wti:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Update WTI leaf
+        run: python scripts/upload_wti_leaf_to_r2.py
+
+      - name: Rebuild Spine-US-Core
+        run: python scripts/build_spine_us_core.py

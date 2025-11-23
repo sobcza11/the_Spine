@@ -1,0 +1,27 @@
+# 🔐 Secrets & environment
+.env
+.env.*
+
+# Python cache / build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.build/
+
+# Virtual environments (if you put one under the_Spine/)
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db

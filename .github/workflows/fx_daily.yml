@@ -1,0 +1,29 @@
+name: Daily FX Update
+
+on:
+  schedule:
+    - cron: "0 9 * * 1-5"   # 9am UTC = 4am EST
+  workflow_dispatch:
+
+jobs:
+  fx-refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run FX Builder
+        env:
+          PYTHONPATH: ./src
+          R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+          R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+        run: python scripts/build_fx_spot_canonical.py
+
