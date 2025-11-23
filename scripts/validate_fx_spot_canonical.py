@@ -22,32 +22,51 @@ from common.r2_client import read_parquet_from_r2
 
 R2_KEY = "spine_us/us_fx_spot_canonical.parquet"
 
-# Once you’re happy with the canonical universe,
-# fill in EXPECTED_PAIRS with your 24 canonical pairs.
-EXPECTED_PAIRS: Optional[List[str]] = None
-# Example:
-# EXPECTED_PAIRS = [
-#     "EURUSD", "USDJPY", "GBPUSD", "USDCHF", "AUDUSD", "NZDUSD",
-#     "USDCAD", "USDNOK", "USDSEK", "USDZAR", "USDBRL",
-#     "EURJPY", "EURGBP", "EURCHF", "EURAUD", "EURNZD",
-#     "EURCAD", "EURNOK", "EURSEK", "EURZAR", "EURBRL",
-#     "GBPJPY", "AUDJPY", "CADJPY"
-# ]
+# Canonical pair universe you discovered in the leaf
+EXPECTED_PAIRS: Optional[List[str]] = [
+    "AUDCAD",
+    "AUDJPY",
+    "AUDUSD",
+    "EURAUD",
+    "EURBRL",
+    "EURCAD",
+    "EURCHF",
+    "EURGBP",
+    "EURJPY",
+    "EURNOK",
+    "EURNZD",
+    "EURSEK",
+    "EURUSD",
+    "EURZAR",
+    "GBPUSD",
+    "NZDAUD",
+    "NZDUSD",
+    "USDBRL",
+    "USDCAD",
+    "USDCHF",
+    "USDJPY",
+    "USDNOK",
+    "USDSEK",
+    "USDZAR",
+]
 
 # Freshness guardrail in calendar days
 MAX_STALENESS_DAYS = 5
 
-# Candidate column names if schema ≠ our internal alias
+# Candidate column names if schema ≠ internal aliases
 DATE_CANDIDATES = [
     "as_of_date",
+    "fx_date",
     "date",
     "obs_date",
     "time",
     "ref_date",
     "TIME_PERIOD",
 ]
+
 VALUE_CANDIDATES = [
     "spot_mid",
+    "fx_close",
     "spot",
     "rate",
     "fx_rate",
@@ -103,21 +122,27 @@ def resolve_core_columns(df: pd.DataFrame) -> Tuple[pd.DataFrame, bool]:
     print("            ", list(df.columns))
 
     if "pair" not in df.columns:
-        print("[FX-ERR] Required column 'pair' not found. "
-              "Check build_fx_spot_canonical.py output schema.")
+        print(
+            "[FX-ERR] Required column 'pair' not found. "
+            "Check build_fx_spot_canonical.py output schema."
+        )
         return df, False
 
     date_col = _guess_date_col(df)
     value_col = _guess_value_col(df)
 
     if date_col is None:
-        print("[FX-ERR] Could not infer a date column from candidates "
-              f"{DATE_CANDIDATES} or dtype inspection.")
+        print(
+            "[FX-ERR] Could not infer a date column from candidates "
+            f"{DATE_CANDIDATES} or dtype inspection."
+        )
         return df, False
 
     if value_col is None:
-        print("[FX-ERR] Could not infer a spot/value column from candidates "
-              f"{VALUE_CANDIDATES} or dtype inspection.")
+        print(
+            "[FX-ERR] Could not infer a spot/value column from candidates "
+            f"{VALUE_CANDIDATES} or dtype inspection."
+        )
         return df, False
 
     print(f"[FX-RESOLVE] Using '{date_col}' as as_of_date")
@@ -252,8 +277,10 @@ def check_pair_universe(df: pd.DataFrame) -> bool:
     print(", ".join(pairs))
 
     if EXPECTED_PAIRS is None:
-        print("[FX-INFO] EXPECTED_PAIRS not set. "
-              "Edit this script & fill it in once you freeze the canonical universe.")
+        print(
+            "[FX-INFO] EXPECTED_PAIRS not set. "
+            "Edit this script & fill it in once you freeze the canonical universe."
+        )
         return True
 
     expected_set = set(EXPECTED_PAIRS)
@@ -354,4 +381,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
