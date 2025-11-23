@@ -17,14 +17,14 @@ R2 key:
 
     spine_us/us_ir_yields_canonical.parquet
 """
-import os
-import requests
 
 from __future__ import annotations
 
 import datetime as dt
 from typing import Iterable, List
 
+import os
+import requests
 import pandas as pd
 
 from common.r2_client import write_parquet_to_r2
