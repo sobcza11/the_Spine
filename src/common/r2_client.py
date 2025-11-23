@@ -74,19 +74,21 @@ def read_parquet_from_r2(key: str, *, columns: Optional[list[str]] = None) -> pd
     return pd.read_parquet(io.BytesIO(data), columns=columns)
 
 
-def write_parquet_to_r2(df: pd.DataFrame, key: str) -> None:
+def write_parquet_to_r2(df: pd.DataFrame, key: str, index: bool = False) -> None:
     """
     Write a pandas DataFrame to R2 as a Parquet file.
 
     Args:
         df: DataFrame to write.
         key: Object key inside the R2 bucket.
+        index: Whether to include the DataFrame index in the Parquet file.
+               Default is False (no index), matching typical analytics usage.
     """
     client = get_r2_client()
     bucket = _get_bucket_name()
 
     buf = io.BytesIO()
-    df.to_parquet(buf, index=False)
+    df.to_parquet(buf, index=index)
     buf.seek(0)
 
     client.put_object(Bucket=bucket, Key=key, Body=buf.getvalue())
