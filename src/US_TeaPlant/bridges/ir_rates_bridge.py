@@ -17,6 +17,8 @@ R2 key:
 
     spine_us/us_ir_yields_canonical.parquet
 """
+import os
+import requests
 
 from __future__ import annotations
 
@@ -40,18 +42,52 @@ def _date_range_str(start_date: dt.date, end_date: dt.date) -> str:
 
 def fetch_usd_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
     """
-    Fetch USD yields and policy rates.
+    Fetch USD 10Y Treasury (DGS10) and Effective Fed Funds Rate (FEDFUNDS)
+    using the free FRED API.
 
-    Recommended free source:
-        - FRED API (requires free key via env var FRED_API_KEY)
-            DGS10      10-year Treasury
-            DGS2       2-year Treasury
-            TB3MS      3-month T-Bill
-            FEDFUNDS   Effective Fed Funds Rate
+    Requires env var:
+        FRED_API_KEY
     """
-    # TODO: Implement actual FRED API calls here.
-    # For now, return empty DataFrame with correct columns.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
+
+    api_key = os.environ.get("FRED_API_KEY")
+    if not api_key:
+        print("[IR-USD] Missing FRED_API_KEY env var; skipping USD yields.")
+        return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
+
+    def fred(series_id: str) -> pd.DataFrame:
+        url = (
+            "https://api.stlouisfed.org/fred/series/observations?"
+            f"series_id={series_id}&api_key={api_key}&file_type=json"
+            f"&observation_start={start_date}&observation_end={end_date}"
+        )
+        r = requests.get(url, timeout=30)
+        r.raise_for_status()
+        js = r.json()
+        if "observations" not in js:
+            print(f"[IR-USD] No observations for FRED series {series_id}")
+            return pd.DataFrame(columns=["date", "value"])
+
+        return pd.DataFrame(js["observations"])[["date", "value"]]
+
+    # 10Y Treasury yield
+    df_10y = fred("DGS10")
+    df_10y = df_10y.rename(columns={"date": "as_of_date", "value": "rate_value"})
+    df_10y["ccy"] = "USD"
+    df_10y["tenor"] = "10Y"
+
+    # Policy rate (Fed Funds)
+    df_pol = fred("FEDFUNDS")
+    df_pol = df_pol.rename(columns={"date": "as_of_date", "value": "rate_value"})
+    df_pol["ccy"] = "USD"
+    df_pol["tenor"] = "POLICY"
+
+    df = pd.concat([df_10y, df_pol], ignore_index=True)
+
+    # Clean values
+    df["rate_value"] = pd.to_numeric(df["rate_value"], errors="coerce")
+    df = df.dropna(subset=["as_of_date", "rate_value"])
+
+    return df[["as_of_date", "ccy", "tenor", "rate_value"]]
 
 
 def fetch_eur_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
