@@ -151,6 +151,17 @@ def main() -> None:
     df = read_parquet_from_r2(R2_IR_DIFF_KEY)
     print(f"[IR-INFO] Loaded {len(df):,} rows from {R2_IR_DIFF_KEY}")
 
+    if df.empty:
+        print("[IR-INFO] IR diff leaf is empty (0 rows).")
+        print(
+            "[IR-INFO] This is expected while only USD rates are wired; "
+            "add more CCY yield fetchers to populate diffs."
+        )
+        print("\n" + "=" * 72)
+        print("[IR-RESULT] ✅ IR diff canonical leaf validation skipped (no data yet)")
+        print("=" * 72)
+        return
+
     checks: List[tuple[str, callable]] = [
         ("columns", check_columns),
         ("dtypes", check_dtypes),

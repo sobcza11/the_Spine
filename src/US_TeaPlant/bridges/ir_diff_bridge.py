@@ -169,7 +169,38 @@ def build_ir_diff_canonical(
     if not rows:
         print("[IR-DIFF] WARNING: No IR differentials computed; "
               "check tenor coverage in IR yields leaf.")
-        return pd.DataFrame()
+
+        df_empty = pd.DataFrame(
+            columns=[
+                "as_of_date",
+                "pair",
+                "base_ccy",
+                "quote_ccy",
+                "base_10y_yield",
+                "quote_10y_yield",
+                "diff_10y_bp",
+                "base_policy_rate",
+                "quote_policy_rate",
+                "diff_policy_bp",
+                "leaf_group",
+                "leaf_name",
+                "source_system",
+                "updated_at",
+            ]
+        )
+
+        # Fill static metadata (helps validator & downstream)
+        df_empty["leaf_group"] = pd.Series(dtype="object")
+        df_empty["leaf_name"] = pd.Series(dtype="object")
+        df_empty["source_system"] = pd.Series(dtype="object")
+        df_empty["updated_at"] = pd.Series(dtype="datetime64[ns]")
+
+        write_parquet_to_r2(df_empty, R2_IR_DIFF_KEY, index=False)
+        print(
+            f"[IR-DIFF] Wrote EMPTY IR diff leaf to R2 at {R2_IR_DIFF_KEY} "
+            "(rows=0)"
+        )
+        return df_empty
 
     df_diff = pd.DataFrame(rows)
     df_diff["as_of_date"] = pd.to_datetime(df_diff["as_of_date"])
