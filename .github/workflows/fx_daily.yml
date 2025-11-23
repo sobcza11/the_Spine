@@ -1,10 +1,8 @@
 name: Daily FX Canonical Build
 
 on:
-  # Weekdays at 09:00 UTC (early morning US time)
   schedule:
     - cron: "0 9 * * 1-5"
-  # Manual trigger from Actions tab
   workflow_dispatch:
 
 jobs:
@@ -28,15 +26,10 @@ jobs:
       - name: Build FX canonical leaf
         env:
           PYTHONPATH: ./src
-
-          # 🔐 Map GitHub Secrets → the env vars your r2_client expects.
-          # If common/r2_client.py uses different names, change these keys
-          # to match what that module reads from os.environ.
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
         run: python scripts/build_fx_spot_canonical.py
 
       - name: Validate FX canonical leaf
@@ -46,7 +39,5 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
         run: python scripts/validate_fx_spot_canonical.py
 
-        
