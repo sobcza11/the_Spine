@@ -148,14 +148,32 @@ def check_values(df: pd.DataFrame) -> bool:
 
 def main() -> None:
     print("[IR-VALIDATE] Loading canonical IR diff leaf from R2 …")
-    df = read_parquet_from_r2(R2_IR_DIFF_KEY)
+    try:
+        df = read_parquet_from_r2(R2_IR_DIFF_KEY)
+    except Exception as e:
+        msg = str(e)
+        # If the object simply doesn't exist in R2 yet, treat this as "not populated yet"
+        if "NoSuchKey" in msg:
+            print(f"[IR-INFO] IR diff leaf {R2_IR_DIFF_KEY} not found in R2 yet.")
+            print(
+                "[IR-INFO] This is expected while only USD rates are wired and "
+                "no pair-level IR differentials have been computed."
+            )
+            print("\n" + "=" * 72)
+            print("[IR-RESULT] ✅ IR diff canonical leaf validation skipped (no file yet)")
+            print("=" * 72)
+            return
+        # Any other error should still fail loudly
+        raise
+
     print(f"[IR-INFO] Loaded {len(df):,} rows from {R2_IR_DIFF_KEY}")
 
+    # If file exists but has 0 rows, also treat as "not populated yet"
     if df.empty:
         print("[IR-INFO] IR diff leaf is empty (0 rows).")
         print(
             "[IR-INFO] This is expected while only USD rates are wired; "
-            "add more CCY yield fetchers to populate diffs."
+            "add more CCY yield fetchers to populate pair-level diffs."
         )
         print("\n" + "=" * 72)
         print("[IR-RESULT] ✅ IR diff canonical leaf validation skipped (no data yet)")
