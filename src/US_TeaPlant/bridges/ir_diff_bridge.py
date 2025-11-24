@@ -58,22 +58,35 @@ def _get_fx_pair_universe() -> List[Tuple[str, str, str]]:
     return list(df_fx[["pair", "base_ccy", "quote_ccy"]].itertuples(index=False, name=None))
 
 
-def _pivot_yields(df_yield: pd.DataFrame, tenor: str) -> pd.DataFrame:
+def _pivot_yields(df_y: pd.DataFrame, tenor: str) -> pd.DataFrame:
     """
-    Filter to one tenor & pivot to wide form:
+    Take the long IR yields DF, filter to a tenor (e.g. '10Y' or 'POLICY'),
+    and return a wide table indexed by as_of_date with one column per ccy.
 
-        as_of_date, ccy -> rate_value
-
-    Used for joining base vs quote curves.
+    It is tolerant of schema changes:
+    - prefers 'rate_value' if present (legacy)
+    - falls back to 'rate'
+    - then to 'yield'
     """
-    df = df_yield[df_yield["tenor"] == tenor].copy()
-    if df.empty:
-        return pd.DataFrame()
+    df = df_y[df_y["tenor"] == tenor].copy()
 
-    df = df[["as_of_date", "ccy", "rate_value"]]
-    df = df.dropna(subset=["rate_value"])
-    df = df.pivot(index="as_of_date", columns="ccy", values="rate_value")
-    df.columns.name = None
+    # Resolve which column holds the numeric rate
+    if "rate_value" in df.columns:
+        value_col = "rate_value"
+    elif "rate" in df.columns:
+        value_col = "rate"
+    elif "yield" in df.columns:
+        value_col = "yield"
+    else:
+        raise KeyError(
+            "No suitable rate column found; expected one of "
+            "['rate_value', 'rate', 'yield'] in IR yields leaf."
+        )
+
+    df = df[["as_of_date", "ccy", value_col]].copy()
+    df = df.pivot(index="as_of_date", columns="ccy", values=value_col)
+    df = df.sort_index()
+
     return df
 
 
