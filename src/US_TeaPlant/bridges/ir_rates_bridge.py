@@ -1,234 +1,239 @@
 """
-US_TeaPlant.bridges.ir_rates_bridge
+src/US_TeaPlant/bridges/ir_rates_bridge.py
 
-Builds a canonical interest-rate yields leaf across currencies,
-using only free, official public sources (FRED, ECB, BoE, BoC, etc.).
+Builds the canonical IR yields leaf for the Spine:
 
-Schema (canonical yields leaf):
+- Pulls 10Y & policy rates for:
+    * USD  (US)
+    * EUR  (Euro Area, 19 countries)
+    * CAD  (Canada)
 
-    as_of_date      datetime64[ns]
-    ccy             str          # USD, EUR, JPY, GBP, ...
-    tenor           str          # e.g. 'POLICY', '2Y', '10Y'
-    rate_value      float        # in percent or yield, consistent per series
-    source_system   str
-    updated_at      datetime64[ns]
-
-R2 key:
+- Normalises everything to daily frequency via forward-fill.
+- Writes a long, tidy Parquet to R2 at:
 
     spine_us/us_ir_yields_canonical.parquet
+
+Expected columns (superset for safety):
+- ir_date (datetime64[ns])
+- as_of_date (datetime64[ns])  # alias of ir_date
+- ccy (str)
+- tenor (str)   # e.g. "10Y", "POLICY"
+- rate (float)  # % level
+- yield (float) # alias of rate
 """
 
 from __future__ import annotations
 
 import datetime as dt
-from typing import Iterable, List
-
 import os
-import requests
+from typing import List
+
 import pandas as pd
+import requests
 
 from common.r2_client import write_parquet_to_r2
 
+
 R2_IR_YIELDS_KEY = "spine_us/us_ir_yields_canonical.parquet"
 
-
-# ---------------------------------------------------------------------------
-# PER-CCY FETCHERS (STUBS TO BE IMPLEMENTED)
-# ---------------------------------------------------------------------------
-
-def _date_range_str(start_date: dt.date, end_date: dt.date) -> str:
-    return f"{start_date.isoformat()}→{end_date.isoformat()}"
+FRED_BASE_URL = "https://api.stlouisfed.org/fred/series/observations"
 
 
-def fetch_usd_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch USD 10Y Treasury (DGS10) and Effective Fed Funds Rate (FEDFUNDS)
-    using the free FRED API.
+class FredError(RuntimeError):
+    """Raised when FRED returns an error or empty payload."""
 
-    Requires env var:
-        FRED_API_KEY
-    """
 
-    api_key = os.environ.get("FRED_API_KEY")
+def _get_fred_api_key() -> str:
+    api_key = os.environ.get("FRED_API_KEY", "").strip()
     if not api_key:
-        print("[IR-USD] Missing FRED_API_KEY env var; skipping USD yields.")
-        return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-    def fred(series_id: str) -> pd.DataFrame:
-        url = (
-            "https://api.stlouisfed.org/fred/series/observations?"
-            f"series_id={series_id}&api_key={api_key}&file_type=json"
-            f"&observation_start={start_date}&observation_end={end_date}"
+        raise FredError(
+            "FRED_API_KEY env var is missing or empty – "
+            "set it locally and in GitHub Secrets for the IR workflow."
         )
-        r = requests.get(url, timeout=30)
-        r.raise_for_status()
-        js = r.json()
-        if "observations" not in js:
-            print(f"[IR-USD] No observations for FRED series {series_id}")
-            return pd.DataFrame(columns=["date", "value"])
-
-        return pd.DataFrame(js["observations"])[["date", "value"]]
-
-    # 10Y Treasury yield
-    df_10y = fred("DGS10")
-    df_10y = df_10y.rename(columns={"date": "as_of_date", "value": "rate_value"})
-    df_10y["ccy"] = "USD"
-    df_10y["tenor"] = "10Y"
-
-    # Policy rate (Fed Funds)
-    df_pol = fred("FEDFUNDS")
-    df_pol = df_pol.rename(columns={"date": "as_of_date", "value": "rate_value"})
-    df_pol["ccy"] = "USD"
-    df_pol["tenor"] = "POLICY"
-
-    df = pd.concat([df_10y, df_pol], ignore_index=True)
-
-    # Clean values
-    df["rate_value"] = pd.to_numeric(df["rate_value"], errors="coerce")
-    df = df.dropna(subset=["as_of_date", "rate_value"])
-
-    return df[["as_of_date", "ccy", "tenor", "rate_value"]]
+    return api_key
 
 
-def fetch_eur_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
+def _fetch_fred_series(
+    series_id: str,
+    start_date: dt.date,
+    end_date: dt.date,
+) -> pd.DataFrame:
     """
-    Fetch EUR yields and policy rates.
+    Fetch a single FRED series as a (date, value) DataFrame.
 
-    Recommended free source:
-        - ECB SDW REST API
-          Example 10Y benchmark:
-            FM.M.U2.EUR.RT.BB10.SV_YM.E
-          Example MRO policy rate:
-            FM.M.U2.EUR.4F.KR.MRR_FR.LEV
+    Dates come back as period dates (daily or month-end, etc.).
+    We just parse them & coerce to float here; resampling to daily
+    is handled by _resample_to_daily.
     """
-    # TODO: Implement ECB SDW calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
+    api_key = _get_fred_api_key()
+
+    params = {
+        "series_id": series_id,
+        "api_key": api_key,
+        "file_type": "json",
+        "observation_start": start_date.isoformat(),
+        "observation_end": end_date.isoformat(),
+    }
+
+    resp = requests.get(FRED_BASE_URL, params=params, timeout=15)
+    resp.raise_for_status()
+    payload = resp.json()
+
+    if "observations" not in payload:
+        raise FredError(f"FRED payload missing 'observations' for series {series_id}")
+
+    obs = payload["observations"]
+    if not obs:
+        raise FredError(f"FRED returned no observations for series {series_id}")
+
+    df = pd.DataFrame(obs)[["date", "value"]].copy()
+    df["date"] = pd.to_datetime(df["date"]).dt.date
+    df["value"] = pd.to_numeric(df["value"], errors="coerce")
+    df = df.dropna(subset=["value"])
+
+    return df
 
 
-def fetch_gbp_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
+def _resample_to_daily(
+    df: pd.DataFrame,
+    start_date: dt.date,
+    end_date: dt.date,
+) -> pd.DataFrame:
     """
-    Fetch GBP yields and policy rates.
-
-    Recommended free source:
-        - Bank of England (BoE) public API
-          Bank Rate, 10Y benchmark yields.
+    Take a (date, value) DF (daily or lower frequency) and produce
+    a daily, forward-filled series from start_date to end_date.
     """
-    # TODO: Implement BoE calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
+    if df.empty:
+        return pd.DataFrame(columns=["date", "value"])
+
+    s = (
+        df.set_index("date")
+        .sort_index()["value"]
+    )
+
+    idx = pd.date_range(start=start_date, end=end_date, freq="D")
+    s = s.reindex(idx).ffill()
+
+    out = s.reset_index()
+    out.columns = ["date", "value"]
+    out["date"] = out["date"].dt.date
+    return out
 
 
-def fetch_jpy_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
+def _build_ccy_yields(
+    ccy: str,
+    tenors: List[str],
+    tenors_to_series: dict,
+    start_date: dt.date,
+    end_date: dt.date,
+) -> pd.DataFrame:
     """
-    Fetch JPY yields and policy rates.
-
-    Recommended free source:
-        - Bank of Japan data portal
-          10Y JGB yields + policy rate.
+    Generic helper: given a mapping {tenor -> FRED series_id}, pull all
+    series, resample to daily, & stack them into a long DF for that ccy.
     """
-    # TODO: Implement BoJ calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
+    frames: List[pd.DataFrame] = []
 
+    for tenor in tenors:
+        series_id = tenors_to_series[tenor]
+        df_raw = _fetch_fred_series(series_id, start_date, end_date)
+        df_daily = _resample_to_daily(df_raw, start_date, end_date)
+        df_daily["ccy"] = ccy
+        df_daily["tenor"] = tenor
+        frames.append(df_daily)
 
-def fetch_chf_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch CHF yields and policy rates.
-
-    Recommended free source:
-        - Swiss National Bank (SNB) statistics.
-    """
-    # TODO: Implement SNB calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-def fetch_cad_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch CAD yields and policy rates.
-
-    Recommended free source:
-        - Bank of Canada JSON API.
-    """
-    # TODO: Implement BoC calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-def fetch_aud_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch AUD yields and policy rates.
-
-    Recommended free source:
-        - Reserve Bank of Australia (RBA).
-    """
-    # TODO: Implement RBA calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-def fetch_nzd_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch NZD yields and policy rates.
-
-    Recommended free source:
-        - Reserve Bank of New Zealand (RBNZ).
-    """
-    # TODO: Implement RBNZ API calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-def fetch_nok_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch NOK yields and policy rates.
-
-    Recommended free source:
-        - Norges Bank open API.
-    """
-    # TODO: Implement Norges Bank calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-def fetch_sek_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch SEK yields and policy rates.
-
-    Recommended free source:
-        - Sveriges Riksbank API.
-    """
-    # TODO: Implement Riksbank calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-def fetch_zar_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch ZAR yields and policy rates.
-
-    Recommended free source:
-        - DBnomics (aggregates SARB data).
-    """
-    # TODO: Implement DBnomics or SARB CSV fetch here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-def fetch_brl_yields(start_date: dt.date, end_date: dt.date) -> pd.DataFrame:
-    """
-    Fetch BRL yields and policy rates.
-
-    Recommended free source:
-        - Banco Central do Brasil SGS API.
-    """
-    # TODO: Implement BCB SGS API calls here.
-    return pd.DataFrame(columns=["as_of_date", "ccy", "tenor", "rate_value"])
-
-
-# ---------------------------------------------------------------------------
-# CANONICAL BUILDER
-# ---------------------------------------------------------------------------
-
-def _concat_nonempty(frames: Iterable[pd.DataFrame]) -> pd.DataFrame:
-    frames = [f for f in frames if not f.empty]
     if not frames:
-        return pd.DataFrame(
-            columns=["as_of_date", "ccy", "tenor", "rate_value",
-                     "source_system", "updated_at"]
-        )
-    return pd.concat(frames, ignore_index=True)
+        return pd.DataFrame(columns=["date", "ccy", "tenor", "value"])
+
+    out = pd.concat(frames, ignore_index=True)
+    return out
+
+
+# -------------------------------------------------------------------
+# Per-ccy builders
+# -------------------------------------------------------------------
+
+
+def _build_usd_yields(
+    start_date: dt.date,
+    end_date: dt.date,
+) -> pd.DataFrame:
+    """
+    USD yields via FRED:
+
+    - 10Y:      DGS10        (10-Year Treasury Constant Maturity, daily)
+    - POLICY:   FEDFUNDS     (Effective Fed Funds Rate, daily)
+    """
+    tenors = ["10Y", "POLICY"]
+    tenors_to_series = {
+        "10Y": "DGS10",
+        "POLICY": "FEDFUNDS",
+    }
+
+    df = _build_ccy_yields(
+        ccy="USD",
+        tenors=tenors,
+        tenors_to_series=tenors_to_series,
+        start_date=start_date,
+        end_date=end_date,
+    )
+    return df
+
+
+def _build_eur_yields(
+    start_date: dt.date,
+    end_date: dt.date,
+) -> pd.DataFrame:
+    """
+    EUR-area yields via FRED:
+
+    - 10Y:    IRLTLT01EZM156N  (10Y gov. bond yield, monthly, Euro Area, OECD)
+    - POLICY: ECBMRRFR         (ECB Main Refinancing Operations Rate, daily)
+    """
+    tenors = ["10Y", "POLICY"]
+    tenors_to_series = {
+        "10Y": "IRLTLT01EZM156N",
+        "POLICY": "ECBMRRFR",
+    }
+
+    df = _build_ccy_yields(
+        ccy="EUR",
+        tenors=tenors,
+        tenors_to_series=tenors_to_series,
+        start_date=start_date,
+        end_date=end_date,
+    )
+    return df
+
+
+def _build_cad_yields(
+    start_date: dt.date,
+    end_date: dt.date,
+) -> pd.DataFrame:
+    """
+    CAD yields via FRED:
+
+    - 10Y:    IRLTLT01CAM156N   (10Y gov. bond yield, monthly, Canada, OECD)
+    - POLICY: IRSTCB01CAM156N   (Central bank policy rate, monthly, Canada)
+    """
+    tenors = ["10Y", "POLICY"]
+    tenors_to_series = {
+        "10Y": "IRLTLT01CAM156N",
+        "POLICY": "IRSTCB01CAM156N",
+    }
+
+    df = _build_ccy_yields(
+        ccy="CAD",
+        tenors=tenors,
+        tenors_to_series=tenors_to_series,
+        start_date=start_date,
+        end_date=end_date,
+    )
+    return df
+
+
+# -------------------------------------------------------------------
+# Public entrypoint
+# -------------------------------------------------------------------
 
 
 def build_ir_yields_canonical(
@@ -236,55 +241,63 @@ def build_ir_yields_canonical(
     end_date: dt.date,
 ) -> pd.DataFrame:
     """
-    Build the canonical IR yields leaf across currencies and write to R2.
+    Build the canonical IR yields leaf across all wired ccys
+    and write it to R2.
 
-    Returns the canonical DataFrame.
+    Returns the DataFrame that was written.
     """
     print(
         f"[IR-RATES] Building canonical IR yields for "
-        f"{_date_range_str(start_date, end_date)} …"
+        f"{start_date.isoformat()}→{end_date.isoformat()} …"
     )
 
-    dfs: List[pd.DataFrame] = []
+    frames: List[pd.DataFrame] = []
 
-    dfs.append(fetch_usd_yields(start_date, end_date))
-    dfs.append(fetch_eur_yields(start_date, end_date))
-    dfs.append(fetch_gbp_yields(start_date, end_date))
-    dfs.append(fetch_jpy_yields(start_date, end_date))
-    dfs.append(fetch_chf_yields(start_date, end_date))
-    dfs.append(fetch_cad_yields(start_date, end_date))
-    dfs.append(fetch_aud_yields(start_date, end_date))
-    dfs.append(fetch_nzd_yields(start_date, end_date))
-    dfs.append(fetch_nok_yields(start_date, end_date))
-    dfs.append(fetch_sek_yields(start_date, end_date))
-    dfs.append(fetch_zar_yields(start_date, end_date))
-    dfs.append(fetch_brl_yields(start_date, end_date))
+    # USD
+    frames.append(_build_usd_yields(start_date, end_date))
 
-    df_all = _concat_nonempty(dfs)
+    # EUR (Euro Area 19 countries)
+    frames.append(_build_eur_yields(start_date, end_date))
 
-    if df_all.empty:
-        print("[IR-RATES] WARNING: No IR yields data fetched. "
-              "Check per-CCY fetchers / API wiring.")
-        return df_all
+    # CAD
+    frames.append(_build_cad_yields(start_date, end_date))
 
-    # Canonical housekeeping
-    df_all["as_of_date"] = pd.to_datetime(df_all["as_of_date"])
-    df_all["source_system"] = df_all.get("source_system", "PUBLIC_CENTRAL_BANK_API")
-    df_all["updated_at"] = pd.Timestamp.utcnow().normalize()
+    df_all = pd.concat(frames, ignore_index=True)
 
-    df_all = df_all.sort_values(["as_of_date", "ccy", "tenor"]).reset_index(drop=True)
+    # Normalise columns & dtypes
+    df_all["ir_date"] = pd.to_datetime(df_all["date"])
+    df_all["as_of_date"] = df_all["ir_date"]
 
-    print(
-        "[IR-RATES] Built canonical IR yields leaf: "
-        f"rows={len(df_all):,}, ccy={df_all['ccy'].nunique()}, "
-        f"tenors={sorted(df_all['tenor'].unique().tolist())}"
-    )
+    # Rate columns (keep both names for compatibility)
+    df_all["rate"] = df_all["value"].astype(float)
+    df_all["yield"] = df_all["rate"]
 
+    df_all = df_all[[
+        "ir_date",
+        "as_of_date",
+        "ccy",
+        "tenor",
+        "rate",
+        "yield",
+    ]].copy()
+
+    # Sort for stability
+    df_all = df_all.sort_values(["ccy", "tenor", "ir_date"]).reset_index(drop=True)
+
+    # Write to R2
     write_parquet_to_r2(df_all, R2_IR_YIELDS_KEY, index=False)
+
+    ccy_count = df_all["ccy"].nunique()
+    tenors = sorted(df_all["tenor"].unique())
     print(
-        f"[IR-RATES] Wrote canonical IR yields leaf to R2 at {R2_IR_YIELDS_KEY} "
-        f"(rows={len(df_all):,})"
+        f"[IR-RATES] Built canonical IR yields leaf: "
+        f"rows={len(df_all):,}, ccy={ccy_count}, tenors={tenors}"
+    )
+    print(
+        f"[IR-RATES] Wrote canonical IR yields leaf to R2 at "
+        f"{R2_IR_YIELDS_KEY} (rows={len(df_all):,})"
     )
 
     return df_all
+
 
