@@ -7,7 +7,7 @@ from datetime import datetime
 
 import pandas as pd
 
-from US_TeaPlant.leaves.us_core_lvs_bridge import build_us_core_lvs_bridge
+from US_TeaPlant.trunk.us_core_lvs_bridge import build_us_core_lvs_bridge
 
 DATA_DIR = pathlib.Path("data/us/posture")
 HIST_PATH = DATA_DIR / "df_us_posture_hist.parquet"  # df_ prefix

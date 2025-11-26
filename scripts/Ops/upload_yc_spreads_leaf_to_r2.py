@@ -1,0 +1,1 @@
+RAW_YC_KEY = "raw/us/yc_spreads/df_yc_spreads_hist.parquet"

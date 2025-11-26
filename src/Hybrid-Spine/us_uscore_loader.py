@@ -4,7 +4,7 @@ from typing import Optional
 import pandas as pd
 
 # Import from the US_TeaPlant leaf bridge
-from US_TeaPlant.leaves.us_core_lvs_bridge import build_us_core_lvs_bridge
+from US_TeaPlant.trunk.us_core_lvs_bridge import build_us_core_lvs_bridge
 from US_TeaPlant.leaves.us_yieldcurve_10y3m_bridge import ( build_us_yieldcurve_10y3m_bridge, )
 
 def load_us_core_wti_leaf(as_of: Optional[pd.Timestamp] = None) -> pd.DataFrame:

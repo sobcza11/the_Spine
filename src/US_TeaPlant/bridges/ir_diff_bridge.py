@@ -136,8 +136,15 @@ def build_ir_diff_canonical(
             # No usable data for this pair at all
             continue
 
-        # Align indices
-        idx = m_policy.index if not m_policy.empty else m_10y.index
+        # Align indices: only use dates that exist in the matrices we will read from
+        if not m_policy.empty and not m_10y.empty:
+            # Dates that exist in BOTH policy & 10Y
+            idx = m_policy.index.intersection(m_10y.index)
+        elif not m_policy.empty:
+            idx = m_policy.index
+        else:
+            idx = m_10y.index
+
         idx = idx.sort_values()
 
         for as_of_date in idx:

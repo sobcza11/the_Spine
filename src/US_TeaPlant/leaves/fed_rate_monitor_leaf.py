@@ -285,3 +285,4 @@ def update_front2_tracker_parquet(tracker_path: str, max_sections: int = 3) -> N
     )
 
     combined.to_parquet(tracker_path, index=False)
+    
