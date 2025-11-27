@@ -129,86 +129,57 @@ All pipes converge into an interpretable macro-state:
 
 ---
 
-## 🔒 Governance (CPMAI-Inspired, Responsible Data Science)
+🔒 Governance (CPMAI-Inspired, Responsible Data Science)
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
 
-Data Transparency
+### **Data Transparency**
+- All data legally obtained  
+- Upstream sources documented  
+- No private or login-restricted content  
 
-All data legally obtained
+### **Data Preparation**
+- Schema validation  
+- Drift detection (PSI, KS, Z-score)  
+- Outlier gates  
+- Versioned ETL  
 
-Upstream sources documented
+### **Modeling**
+- Each pipe outputs *one* interpretable signal  
+- MAIN_p fuses signals with documented, explainable weights  
 
-No private or login-restricted content
+### **Evaluation**
+- Regime-shift stability  
+- Year-over-year consistency  
+- Confidence scoring  
 
-Data Preparation
-
-Schema validation
-
-Drift detection (PSI, KS, Z-score)
-
-Outlier gates
-
-Versioned ETL
-
-Modeling
-
-Every pipe outputs ONE interpretable signal
-
-MAIN_p fuses signals with documented weights
-
-Evaluation
-
-Regime-shift stability
-
-YoY consistency
-
-Confidence scoring
-
-Deployment
-
-Versioned parquet leaves
-
-Logging metadata
-
-Drift & validation hooks
+### **Deployment**
+- Versioned parquet leaves  
+- Logged metadata for audit  
+- Drift gates & validation hooks
 
 ## 📦 Data Sources (Active + Pending)
-Active
+### **Active**
+- EIA  
+- ISM  
+- BLS CPI  
+- Internal NLP sentiment pipelines  
+- MicroLineage-AI datasets  
 
-EIA
+### **Pending**
+- TradingEconomics — global yields API  
+- WRDS Approval — CRSP/Compustat, equities, macro datasets  
 
-ISM
-
-BLS CPI
-
-Internal NLP sentiment pipelines
-
-MicroLineage-AI datasets
-
-Pending
-
-TradingEconomics — global yields API
-
-WRDS Approval — CRSP/Compustat, equities, macro data
-
-These unlock Phase III global yield curve expansion + factor universes.
-
+> These unlock Phase III: global yield curve expansion + equity factor universes.
 ## 🧭 Roadmap
 
-PINN-based commodity constraints
-
-Global yield curve curvature
-
-Volatility regime classifier
-
-GeoNLP sentiment embeddings
-
-Full /docs governance pages
-
-Interactive macro dashboard
-
-WRDS + TradingEconomics integration
+- PINN-based commodity constraints  
+- Global yield curve curvature  
+- Volatility regime classifier  
+- GeoNLP sentiment embeddings  
+- Full /docs governance pages  
+- Interactive macro dashboard  
+- WRDS + TradingEconomics integration
 
 ## 📜 License
 
