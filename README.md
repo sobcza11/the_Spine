@@ -39,7 +39,7 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 
 ## 🔮 OracleChambers | Human Interface to the Spine
 
-In short: **the_Spine is the engine; OracleChambers is where humans interface with the tea leaves.**
+In short: **the_Spine is the engine; OracleChambers is where humans interpret the tea leaves & extract insight.**
 
 OracleChambers is the **interpretive layer** of the_Spine — the place where raw macro pipes become
 human-usable views, narratives, and regimes. It sits on top of the canonical leaves and organizes
