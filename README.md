@@ -1,4 +1,4 @@
-# <p align="center"> 🧠 the Spine  </p>
+> # <p align="center"> the_Spine | 🧠 </p>
 
 <p align="center">
   <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
