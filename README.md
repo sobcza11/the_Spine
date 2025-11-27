@@ -119,7 +119,7 @@ All sentiment leaves are now implemented:
 | **Fed SEP (Dot Plot)** | Complete |
 | **Fed Speeches** | Complete |
 
-### 🧘 OracleChambers  
+## 🧘 OracleChambers  
 A forward-looking space for exploratory sentiment research:
 - Contagion analysis between Fed language & market reaction  
 - Association Rule Mining (ARM) for news → markets pattern analysis  
@@ -170,44 +170,44 @@ All pipes converge into an interpretable macro-state:
 
 ---
 
-🔒 Governance (CPMAI-Inspired, Responsible Data Science)
+## 🔒 **Governance (CPMAI-Inspired, Responsible Data Science)**
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
 
-### **Data Transparency**
+## **Data Transparency**
 - All data legally obtained  
 - Upstream sources documented  
 - No private or login-restricted content  
 
-### **Data Preparation**
+## **Data Preparation**
 - Schema validation  
 - Drift detection (PSI, KS, Z-score)  
 - Outlier gates  
 - Versioned ETL  
 
-### **Modeling**
+## **Modeling**
 - Each pipe outputs *one* interpretable signal  
 - MAIN_p fuses signals with documented, explainable weights  
 
-### **Evaluation**
+## **Evaluation**
 - Regime-shift stability  
 - Year-over-year consistency  
 - Confidence scoring  
 
-### **Deployment**
+## **Deployment**
 - Versioned parquet leaves  
 - Logged metadata for audit  
 - Drift gates & validation hooks
 
 ## 📦 Data Sources (Active + Pending)
-### **Active**
+## **Active**
 - EIA  
 - ISM  
 - BLS CPI  
 - Internal NLP sentiment pipelines  
 - MicroLineage-AI datasets  
 
-### **Pending**
+## **Pending**
 - TradingEconomics — global yields API  
 - WRDS Approval — CRSP/Compustat, equities, macro datasets  
 
@@ -228,7 +228,7 @@ MIT License — open for reuse.
 
 ---
 
-# 🚀 Ready to upload?
+## 🚀 Ready to upload?
 
 Once you paste this into `README.md`, run:
 
