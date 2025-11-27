@@ -40,59 +40,33 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 
 ## 🧩 Architecture (High-Level)
 
+```text
 the_Spine/
 │
-├── MAIN_p/ # Unified macro fusion engine
+├── MAIN_p/                          # Unified macro fusion engine
 │
-├── p_FX_Global/ # FX basis, USD liquidity, EM stress
-├── p_Econ_Global/ # Global PMI diffusion, new orders, export cycles
-├── p_Com_Global/ # Brent/WTI spread, LNG, shipping rates
+├── p_FX_Global/                     # FX basis, USD liquidity, EM stress
+├── p_Econ_Global/                   # Global PMI diffusion, new orders, export cycles
+├── p_Com_Global/                    # Brent/WTI spread, LNG, shipping rates
 │
-├── p_Econ_US/ # ISM, NMI, payrolls, claims
-├── p_Com_US/ # WTI inventories, Cushing flows
-├── p_Inflation_US/ # CPI components, supercore, shelter
-├── p_Micro_US/ # MicroLineage-AI (SKU-level demand)
-├── p_HealthAI_US/ # Clinical DriftOps governance models
+├── p_Econ_US/                       # ISM, NMI, payrolls, claims
+├── p_Com_US/                        # WTI inventories, Cushing flows
+├── p_Inflation_US/                  # CPI components, supercore, shelter
+├── p_Micro_US/                      # MicroLineage-AI (SKU-level demand)
+├── p_HealthAI_US/                   # Clinical DriftOps governance models
 │
-├── p_Sentiment_US/ # OracleChambers (Fed sentiment)
-│ ├── BeigeBook/ # District business, labor & price tone
-│ ├── FOMC_Minutes/ # Policy disagreement, uncertainty
-│ ├── FOMC_Statement/ # Paragraph-level stance (hawkish/dovish)
-│ ├── Fed_SEP/ # Dot-plot shifts, forward guidance
-│ └── Fed_Speeches/ # Speaker-level tone & certainty
+├── p_Sentiment_US/                  # OracleChambers (Fed sentiment)
+│   ├── BeigeBook/                   # District business, labor & price tone
+│   ├── FOMC_Minutes/                # Policy disagreement, uncertainty
+│   ├── FOMC_Statement/              # Paragraph-level stance (hawkish/dovish)
+│   ├── Fed_SEP/                     # Dot-plot shifts, forward guidance
+│   └── Fed_Speeches/                # Speaker-level tone & certainty
 │
 ├── p_Equity_US/
-│ └── VinV/ # "Value in Vogue" equity factor
+│   └── VinV/                        # "Value in Vogue" equity factor
 │
-└── MAIN_fusion/ # Explainable macro-state scoring
-
----
-
-## 🌐 Global Pipes
-
-| Pipe | Description |
-|------|-------------|
-| **p_FX_Global** | Cross-currency basis, USD funding stress, EM risk-off indicators |
-| **p_Econ_Global** | Global PMI diffusion, new orders, export cycles |
-| **p_Com_Global** | Brent–WTI spread, LNG shipping rates, upstream supply tension |
-| **p_Sent_Global** | (Upcoming) GeoNLP embeddings, geopolitical volatility |
-
----
-
-## 🇺🇸 US Pipes
-
-| Pipe | Description |
-|------|-------------|
-| **p_Econ_US** | ISM PMI, ISM NMI, hiring cycle, jobless claims |
-| **p_Com_US** | Cushing inventories, refinery flows, internal crude spreads |
-| **p_Inflation_US** | CPI decomposition into shelter, goods, services, supercore |
-| **p_Micro_US** | MicroLineage-AI SKU-level micro signals |
-| **p_HealthAI_US** | Clinical DriftOps fairness & drift monitoring |
-
----
-
-## 🗣️ Fed & Macro Sentiment Pipes (OracleChambers)
-
+└── MAIN_fusion/                     # Explainable macro-state scoring
+```
 All sentiment leaves are now implemented:
 
 | Leaf | Status |
