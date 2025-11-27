@@ -1,4 +1,4 @@
-> # <p align="center"> the_Spine | 🧠 </p>
+# <p align="center">the_Spine | 🧠</p>
 
 <p align="center">
   <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
@@ -109,6 +109,7 @@ the_Spine/
 │
 └── MAIN_fusion/                     # Explainable macro-state
 ```
+
 All sentiment leaves are now implemented:
 
 | Leaf | Status |
@@ -142,9 +143,8 @@ A monthly equity factor that measures:
 
 Canonical output:
 
-as_of_date | vinv_spread_val | vinv_spread_ret_12m | vinv_breadth
-| vinv_score | vinv_regime
-
+| as_of_date | vinv_spread_val | vinv_spread_ret_12m | vinv_breadth | vinv_score | vinv_regime |
+|------------|------------------|----------------------|--------------|------------|-------------|
 
 ---
 
@@ -174,46 +174,49 @@ All pipes converge into an interpretable macro-state:
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
 
-# **Data Transparency**
+## Data Transparency
 - All data legally obtained  
 - Upstream sources documented  
 - No private or login-restricted content  
 
-# **Data Preparation**
+## Data Preparation
 - Schema validation  
 - Drift detection (PSI, KS, Z-score)  
 - Outlier gates  
 - Versioned ETL  
 
-# **Modeling**
+## Modeling
 - Each pipe outputs *one* interpretable signal  
 - MAIN_p fuses signals with documented, explainable weights  
 
-# **Evaluation**
+## Evaluation
 - Regime-shift stability  
 - Year-over-year consistency  
 - Confidence scoring  
 
-# **Deployment**
+## Deployment
 - Versioned parquet leaves  
 - Logged metadata for audit  
 - Drift gates & validation hooks
 
-# 📦 Data Sources (Active + Pending)
-# **Active**
+## 📦 Data Sources (Active + Pending)
+
+### **Active**
 - EIA  
 - ISM  
 - BLS CPI  
 - Internal NLP sentiment pipelines  
 - MicroLineage-AI datasets  
 
-# **Pending**
+### **Pending**
 - TradingEconomics — global yields API  
 - WRDS Approval — CRSP/Compustat, equities, macro datasets  
 
 > These unlock Phase III: global yield curve expansion + equity factor universes.
 
-# 🧭 Roadmap
+---
+
+## 🧭 Roadmap
 - PINN-based commodity constraints  
 - Global yield curve curvature  
 - Volatility regime classifier  
@@ -222,13 +225,14 @@ The Spine applies CPMAI-style rigor without claiming formal certification.
 - Interactive macro dashboard  
 - WRDS + TradingEconomics integration
 
-# 📜 License
+---
 
+## 📜 License
 MIT License — open for reuse.
 
 ---
 
-# 🚀 Ready to upload?
+## 🚀 Ready to upload?
 Once you paste this into `README.md`, run:
 
 ```powershell
