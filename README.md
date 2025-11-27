@@ -1,477 +1,250 @@
-\# ?? the\_Spine
-
-\### A Hybrid, Governed Global�US Macro Intelligence Backbone
-
-Bridging FX, PMI, Commodities, Inflation, Sentiment, \& Micro-economics into a unified, interpretable macro state.
-
-
+# 🧠 the_Spine  
+### A Hybrid, Governed Global–US Macro Intelligence Backbone  
+Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a unified, interpretable macro state.
 
 <p align="center">
-
-� <img src="\\\_supporting/assets/m\\\_photo.png" width="100%" />
-
+  <img src="_supporting/assets/m_photo.png" width="100%" />
 </p>
-
-
 
 <p align="center">
-
-� <img src="https://img.shields.io/badge/MacroFusion-Enabled-blueviolet" />
-
-� <img src="https://img.shields.io/badge/Explainability-SHAP\\\_%26\\\_Permutation-success" />
-
-� <img src="https://img.shields.io/badge/TimeSeries-Weekly\\\_%26\\\_Monthly-lightgrey" />
-
-� <img src="https://img.shields.io/badge/MLOps-Governed\\\_%26\\\_Versioned-yellowgreen" />
-
-� <img src="https://img.shields.io/badge/Python-3.10-blue" />
-
-� <img src="https://img.shields.io/badge/License-MIT-green.svg" />
-
+  <img src="https://img.shields.io/badge/MacroFusion-Enabled-blueviolet" />
+  <img src="https://img.shields.io/badge/Explainability-SHAP_%26_Permutation-success" />
+  <img src="https://img.shields.io/badge/TimeSeries-Weekly_%26_Monthly-lightgrey" />
+  <img src="https://img.shields.io/badge/MLOps-Governed_%26_Versioned-yellowgreen" />
+  <img src="https://img.shields.io/badge/Python-3.10-blue" />
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" />
 </p>
-
-
 
 ---
 
+## ⭐ Overview
 
-
-\## ? Overview
-
-
-
-\*\*the\_Spine\*\* is a modular, governed macro-intelligence architecture that fuses \*\*global breadth\*\* with \*\*US micro-depth\*\* to create a stable and interpretable multi-domain macro signal.
-
-Every component (a �pipe�) produces a validated canonical signal, and all pipes flow into \*\*MAIN\_p\*\*, the unified fusion engine.
-
-
+**the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create a stable and interpretable multi-domain macro signal.  
+Every component (a “pipe”) produces a validated canonical signal, and all pipes flow into **MAIN_p**, the unified fusion engine.
 
 The system integrates:
 
+- 🌐 Global FX basis & cross-currency spreads  
+- 🌍 Global PMI diffusion & export cycles  
+- 🛢️ Commodity flows (Brent/WTI spread, LNG, shipping rates)  
+- 🇺🇸 WTI inventories & refinery throughput  
+- 🧩 US inflation decomposition (core, supercore, shelter)  
+- 🛒 MicroLineage-AI (SKU-level retail micro-economics)  
+- 🏥 Clinical DriftOps (healthcare governance models)  
+- 🗣️ Fed & macro sentiment signals (Beige Book, FOMC Minutes, SEP, Statements, Speeches)  
+- 📊 Equity VinV (“Value in Vogue”) regime model  
+- 🔐 Governance, drift detection, schema validation, versioned lineage  
 
+This is the **Hybrid Spine** — the union of *Global context* & *US precision timing*.
 
-\- ?? Global FX basis \& cross-currency spreads
+---
 
-\- ?? Global PMI diffusion \& export cycles
-
-\- ??? Commodity flows (Brent/WTI spread, LNG, shipping rates)
-
-\- ???? WTI inventories \& refinery throughput
-
-\- ?? US inflation decomposition (core, supercore, shelter)
-
-\- ?? MicroLineage-AI (SKU-level retail micro-economics)
-
-\- ?? Clinical DriftOps (healthcare governance models)
-
-\- ??? Fed \& macro sentiment signals (Beige Book, FOMC Minutes, SEP, Statements, Speeches)
-
-\- ?? Equity VinV (�Value in Vogue�) regime model
-
-\- ?? Governance, drift detection, schema validation, versioned lineage
-
-
-
-This is the \*\*Hybrid Spine\*\* � the union of \*Global context\* \& \*US precision timing\*.
-
+## 🧩 Architecture (High-Level)
+the_Spine/
+│
+├── MAIN_p/ # Unified macro fusion engine
+│
+├── p_FX_Global/ # FX basis, USD liquidity, EM stress
+├── p_Econ_Global/ # PMI diffusion, orders, global cycles
+├── p_Com_Global/ # Brent/WTI, LNG, shipping
+│
+├── p_Econ_US/ # ISM, NMI, payrolls, claims
+├── p_Com_US/ # WTI inventories, Cushing flows
+├── p_Inflation_US/ # CPI components, supercore, shelter
+├── p_Micro_US/ # MicroLineage-AI (SKU-level demand)
+├── p_HealthAI_US/ # Clinical DriftOps governance models
+│
+├── p_Sentiment_US/
+│ ├── BeigeBook
+│ ├── FOMC_Minutes
+│ ├── FOMC_Statement
+│ ├── Fed_SEP
+│ └── Fed_Speeches
+│
+├── p_Equity_US/
+│ └── VinV (Value in Vogue)
+│
+└── MAIN_fusion/ # Explainable macro score (risk-on/off)
 
 
 ---
 
-
-
-\## ?? Architecture (High-Level)
-
-
-
-the\_Spine/
-
-�
-
-+-- MAIN\_p/ # Unified macro fusion engine
-
-�
-
-+-- p\_FX\_Global/ # FX basis, USD liquidity, EM stress
-
-+-- p\_Econ\_Global/ # PMI diffusion, orders, global cycles
-
-+-- p\_Com\_Global/ # Brent/WTI, LNG, shipping
-
-�
-
-+-- p\_Econ\_US/ # ISM, NMI, payrolls, claims
-
-+-- p\_Com\_US/ # WTI inventories, Cushing flows
-
-+-- p\_Inflation\_US/ # CPI components, supercore, shelter
-
-+-- p\_Micro\_US/ # MicroLineage-AI (SKU-level demand)
-
-+-- p\_HealthAI\_US/ # Clinical DriftOps governance models
-
-�
-
-+-- p\_Sentiment\_US/
-
-� +-- BeigeBook
-
-� +-- FOMC\_Minutes
-
-� +-- FOMC\_Statement
-
-� +-- Fed\_SEP
-
-� +-- Fed\_Speeches
-
-�
-
-+-- p\_Equity\_US/
-
-� +-- VinV (Value in Vogue)
-
-�
-
-+-- MAIN\_fusion/ # Explainable macro score (risk-on/off)
-
-
-
-
-
----
-
-
-
-\## ?? Global Pipes
-
-
+## 🌐 Global Pipes
 
 | Pipe | Description |
-
 |------|-------------|
-
-| \*\*p\_FX\_Global\*\* | Cross-currency basis, USD funding stress, EM risk-off indicators |
-
-| \*\*p\_Econ\_Global\*\* | Global PMI diffusion, new orders, export cycles |
-
-| \*\*p\_Com\_Global\*\* | Brent�WTI spread, LNG shipping rates, upstream supply tension |
-
-| \*\*p\_Sent\_Global\*\* | (Upcoming) GeoNLP embeddings, geopolitical volatility |
-
-
+| **p_FX_Global** | Cross-currency basis, USD funding stress, EM risk-off indicators |
+| **p_Econ_Global** | Global PMI diffusion, new orders, export cycles |
+| **p_Com_Global** | Brent–WTI spread, LNG shipping rates, upstream supply tension |
+| **p_Sent_Global** | (Upcoming) GeoNLP embeddings, geopolitical volatility |
 
 ---
 
-
-
-\## ???? US Pipes
-
-
+## 🇺🇸 US Pipes
 
 | Pipe | Description |
-
 |------|-------------|
-
-| \*\*p\_Econ\_US\*\* | ISM PMI, ISM NMI, hiring cycle, jobless claims |
-
-| \*\*p\_Com\_US\*\* | Cushing inventories, refinery flows, internal crude spreads |
-
-| \*\*p\_Inflation\_US\*\* | CPI decomposition into shelter, goods, services, supercore |
-
-| \*\*p\_Micro\_US\*\* | MicroLineage-AI SKU-level micro signals |
-
-| \*\*p\_HealthAI\_US\*\* | Clinical DriftOps fairness \& drift monitoring |
-
-
+| **p_Econ_US** | ISM PMI, ISM NMI, hiring cycle, jobless claims |
+| **p_Com_US** | Cushing inventories, refinery flows, internal crude spreads |
+| **p_Inflation_US** | CPI decomposition into shelter, goods, services, supercore |
+| **p_Micro_US** | MicroLineage-AI SKU-level micro signals |
+| **p_HealthAI_US** | Clinical DriftOps fairness & drift monitoring |
 
 ---
 
-
-
-\## ??? Fed \& Macro Sentiment Pipes (OracleChambers)
-
-
+## 🗣️ Fed & Macro Sentiment Pipes (OracleChambers)
 
 All sentiment leaves are now implemented:
 
-
-
 | Leaf | Status |
-
 |------|--------|
+| **Beige Book** | Complete (district-level sentiment) |
+| **FOMC Minutes** | Complete |
+| **FOMC Statement** | Complete |
+| **Fed SEP (Dot Plot)** | Complete |
+| **Fed Speeches** | Complete |
 
-| \*\*Beige Book\*\* | Complete (district-level sentiment) |
-
-| \*\*FOMC Minutes\*\* | Complete |
-
-| \*\*FOMC Statement\*\* | Complete |
-
-| \*\*Fed SEP (Dot Plot)\*\* | Complete |
-
-| \*\*Fed Speeches\*\* | Complete |
-
-
-
-\### ?? OracleChambers
-
+### 🧘 OracleChambers  
 A forward-looking space for exploratory sentiment research:
 
-
-
-\- Contagion analysis between Fed language \& market reaction
-
-\- Association Rule Mining (ARM) for news ? markets pattern analysis
-
-\- Corporate earnings sentiment drift (fraud/overstatement detection)
-
-\- Cross-market signaling consistency
-
-\- Dalio/Gundlach �Illusory Wealth Regime� integration
-
-\- WRDS data expansion (pending approval)
-
-
+- Contagion analysis between Fed language & market reaction  
+- Association Rule Mining (ARM) for news → markets pattern analysis  
+- Corporate earnings sentiment drift (fraud/overstatement detection)  
+- Cross-market signaling consistency  
+- Dalio/Gundlach “Illusory Wealth Regime” integration  
+- WRDS data expansion (pending approval)  
 
 ---
 
-
-
-\## ?? Equity: VinV (Value in Vogue)
-
-
+## 📊 Equity: VinV (Value in Vogue)
 
 A monthly equity factor that measures:
 
-
-
-\- Value vs. Growth valuation spread
-
-\- 12-month relative performance spread
-
-\- Cohort breadth (percentage of value names outperforming benchmark)
-
-\- Composite VinV Score ? \[-1, +1]
-
-\- Regime classification: \*out\_of\_favor ? transition ? in\_vogue\*
-
-
+- Value vs. Growth valuation spread  
+- 12-month relative performance spread  
+- Cohort breadth (percentage of value names outperforming benchmark)  
+- Composite VinV Score ∈ [-1, +1]  
+- Regime classification: *out_of_favor → transition → in_vogue*
 
 Canonical output:
 
-
-
-as\_of\_date | vinv\_spread\_val | vinv\_spread\_ret\_12m | vinv\_breadth
-
-| vinv\_score | vinv\_regime
-
-
-
+as_of_date | vinv_spread_val | vinv_spread_ret_12m | vinv_breadth
+| vinv_score | vinv_regime
 
 
 ---
 
-
-
-\## ?? Fusion Engine (MAIN\_p)
-
-
+## 🧠 Fusion Engine (MAIN_p)
 
 All pipes converge into an interpretable macro-state:
 
-
-
 ```json
-
 {
-
-\&nbsp; "macro\\\_state": "Moderate Slowdown",
-
-\&nbsp; "risk\\\_on\\\_off": "Neutral",
-
-\&nbsp; "confidence": 0.78,
-
-\&nbsp; "drivers": \\\["WTI\\\_Inventory", "PMI\\\_Diffusion", "FX\\\_Basis"],
-
-\&nbsp; "explainability": {
-
-\&nbsp;   "p\\\_Com\\\_US": 0.33,
-
-\&nbsp;   "p\\\_Econ\\\_Global": 0.29,
-
-\&nbsp;   "p\\\_FX\\\_Global": 0.22,
-
-\&nbsp;   "p\\\_Inflation\\\_US": 0.10,
-
-\&nbsp;   "p\\\_Sentiment\\\_US": 0.06
-
-\&nbsp; }
-
+  "macro_state": "Moderate Slowdown",
+  "risk_on_off": "Neutral",
+  "confidence": 0.78,
+  "drivers": ["WTI_Inventory", "PMI_Diffusion", "FX_Basis"],
+  "explainability": {
+    "p_Com_US": 0.33,
+    "p_Econ_Global": 0.29,
+    "p_FX_Global": 0.22,
+    "p_Inflation_US": 0.10,
+    "p_Sentiment_US": 0.06
+  }
 }
 
-
-
-?? Governance (CPMAI-Inspired, Responsible Data Science)
-
-
+🔒 Governance (CPMAI-Inspired, Responsible Data Science)
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
 
-
-
 Data Transparency
 
+All data legally obtained
 
+Upstream sources documented
 
-All data legally obtained; no private or login-protected data
-
-
-
-Upstream sourcing clearly identified
-
-
+No private or login-restricted content
 
 Data Preparation
 
-
-
 Schema validation
-
-
 
 Drift detection (PSI, KS, Z-score)
 
-
+Outlier gates
 
 Versioned ETL
 
-
-
-Outlier gates
-
-
-
 Modeling
 
+Every pipe outputs ONE interpretable signal
 
-
-Each pipe produces a single interpretable signal
-
-
-
-Fusion engine uses transparent, explainable weighting
-
-
+MAIN_p fuses signals with documented weights
 
 Evaluation
 
+Regime-shift stability
 
+YoY consistency
 
-Stability tests
-
-
-
-Year-over-year consistency
-
-
-
-Regime-shift resilience
-
-
+Confidence scoring
 
 Deployment
 
-
+Versioned parquet leaves
 
 Logging metadata
 
+Drift & validation hooks
 
-
-Versioned parquet leaves
-
-
-
-Internal documentation in /docs (upcoming)
-
-
-
-?? Data Sources (Pending / Active)
-
+📦 Data Sources (Active + Pending)
 Active
 
-
-
-EIA (WTI inventory)
-
-
+EIA
 
 ISM
 
-
-
 BLS CPI
 
-
-
-Internal NLP sentiment (FOMC/Beige Book/SEP)
-
-
+Internal NLP sentiment pipelines
 
 MicroLineage-AI datasets
 
+Pending
 
+TradingEconomics — global yields API
 
-Pending Response
+WRDS Approval — CRSP/Compustat, equities, macro data
 
+These unlock Phase III global yield curve expansion + factor universes.
 
+🧭 Roadmap
 
-TradingEconomics API � global yields (20+ countries)
+PINN-based commodity constraints
 
+Global yield curve curvature
 
+Volatility regime classifier
 
-WRDS Approval � equities, bond data, CRSP/Compustat access
+GeoNLP sentiment embeddings
 
+Full /docs governance pages
 
+Interactive macro dashboard
 
-These unlock the next stage of Global Yield Curve, FX carry, Cross-market microstructure, and global valuation pipes.
+WRDS + TradingEconomics integration
 
+📜 License
 
+MIT License — open for reuse.
 
-?? Roadmap
+---
 
+# 🚀 Ready to upload?
 
+Once you paste this into `README.md`, run:
 
-Add PINN-based commodity constraints (physics-informed WTI flows)
-
-
-
-Add global yield curve curvature pipe
-
-
-
-Add volatility regime classifier (GARCH/HARCH)
-
-
-
-Add GeoNLP embeddings (global political drift)
-
-
-
-Build /docs governance pages
-
-
-
-Build interactive dashboard for macro-state visualization
-
-
-
-Full WRDS + TradingEconomics integration
-
-
-
-?? License
-
-
-
-MIT License � open for reuse.
-
-
+```powershell
+git add README.md
+git commit -m "Full README.md for the_Spine"
+git push
