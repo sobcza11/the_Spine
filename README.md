@@ -91,26 +91,26 @@ the_Spine/
 ├── MAIN_p/                          # Unified macro fusion engine
 │
 ├── p_FX_Global/                     # FX basis, USD liquidity, EM stress
-├── p_Econ_Global/                   # Global PMI diffusion, new orders, export cycles
-├── p_Com_Global/                    # Brent/WTI spread, LNG, shipping rates
+├── p_Econ_Global/                   # Global PMI diffusion, new orders, exports
+├── p_Com_Global/                    # Brent/WTI, LNG, shipping
 │
 ├── p_Econ_US/                       # ISM, NMI, payrolls, claims
 ├── p_Com_US/                        # WTI inventories, Cushing flows
 ├── p_Inflation_US/                  # CPI components, supercore, shelter
-├── p_Micro_US/                      # MicroLineage-AI (SKU-level demand)
+├── p_Micro_US/                      # MicroLineage-AI (SKU demand signals)
 ├── p_HealthAI_US/                   # Clinical DriftOps governance models
 │
-├── p_Sentiment_US/                  # OracleChambers (Fed sentiment)
-│   ├── BeigeBook/                   # District business, labor & price tone
-│   ├── FOMC_Minutes/                # Policy disagreement, uncertainty
-│   ├── FOMC_Statement/              # Paragraph-level stance (hawkish/dovish)
-│   ├── Fed_SEP/                     # Dot-plot shifts, forward guidance
-│   └── Fed_Speeches/                # Speaker-level tone & certainty
+├── p_Sentiment_US/                  # Fed_Sentiment (canonical leaves)
+│   ├── BeigeBook/
+│   ├── FOMC_Minutes/
+│   ├── FOMC_Statement/
+│   ├── Fed_SEP/
+│   └── Fed_Speeches/
 │
 ├── p_Equity_US/
-│   └── VinV/                        # "Value in Vogue" equity factor
+│   └── VinV/                        # Value-in-Vogue equity factor
 │
-└── MAIN_fusion/                     # Explainable macro-state scoring
+└── MAIN_fusion/                     # Explainable macro-state
 ```
 All sentiment leaves are now implemented:
 
