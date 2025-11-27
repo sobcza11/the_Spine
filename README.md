@@ -13,12 +13,12 @@
   <img src="https://img.shields.io/badge/License-MIT-green.svg" />
 </p>
 
-### Governed Global–US Hybrid Macro Intelligence Backbone  
+# Governed Global–US Hybrid Macro Intelligence Backbone  
 Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a unified, interpretable macro state.
 
 ---
 
-## ⭐ Overview
+# ⭐ Overview
 
 **the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create a stable and interpretable multi-domain macro signal.  
 Every component (a “pipe”) produces a validated canonical signal, and all pipes flow into **MAIN_p**, the unified fusion engine.
@@ -37,7 +37,7 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 
 ---
 
-## 🔮 OracleChambers | Human Interface to the Spine
+# 🔮 OracleChambers | Human Interface to the Spine
 
 **the_Spine is the engine; OracleChambers is where humans interpret its signals—reading the tea leaves with structure.**
 
@@ -80,7 +80,7 @@ sub-system within the_Spine, not as a separate codebase.
 
 ---
 
-## 🧩 Architecture (High-Level)
+# 🧩 Architecture (High-Level)
 
 ```text
 the_Spine/
@@ -119,7 +119,7 @@ All sentiment leaves are now implemented:
 | **Fed SEP (Dot Plot)** | Complete |
 | **Fed Speeches** | Complete |
 
-## 🧘 OracleChambers  
+# 🧘 OracleChambers  
 A forward-looking space for exploratory sentiment research:
 - Contagion analysis between Fed language & market reaction  
 - Association Rule Mining (ARM) for news → markets pattern analysis  
@@ -130,7 +130,7 @@ A forward-looking space for exploratory sentiment research:
 
 ---
 
-## 📊 Equity: VinV (Value in Vogue)
+# 📊 Equity: VinV (Value in Vogue)
 
 A monthly equity factor that measures:
 
@@ -148,7 +148,7 @@ as_of_date | vinv_spread_val | vinv_spread_ret_12m | vinv_breadth
 
 ---
 
-## 🧠 Fusion Engine (MAIN_p)
+# 🧠 Fusion Engine (MAIN_p)
 
 All pipes converge into an interpretable macro-state:
 
@@ -170,50 +170,50 @@ All pipes converge into an interpretable macro-state:
 
 ---
 
-## 🔒 **Governance (CPMAI-Inspired, Responsible Data Science)**
+# 🔒 **Governance (CPMAI-Inspired, Responsible Data Science)**
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
 
-## **Data Transparency**
+# **Data Transparency**
 - All data legally obtained  
 - Upstream sources documented  
 - No private or login-restricted content  
 
-## **Data Preparation**
+# **Data Preparation**
 - Schema validation  
 - Drift detection (PSI, KS, Z-score)  
 - Outlier gates  
 - Versioned ETL  
 
-## **Modeling**
+# **Modeling**
 - Each pipe outputs *one* interpretable signal  
 - MAIN_p fuses signals with documented, explainable weights  
 
-## **Evaluation**
+# **Evaluation**
 - Regime-shift stability  
 - Year-over-year consistency  
 - Confidence scoring  
 
-## **Deployment**
+# **Deployment**
 - Versioned parquet leaves  
 - Logged metadata for audit  
 - Drift gates & validation hooks
 
-## 📦 Data Sources (Active + Pending)
-## **Active**
+# 📦 Data Sources (Active + Pending)
+# **Active**
 - EIA  
 - ISM  
 - BLS CPI  
 - Internal NLP sentiment pipelines  
 - MicroLineage-AI datasets  
 
-## **Pending**
+# **Pending**
 - TradingEconomics — global yields API  
 - WRDS Approval — CRSP/Compustat, equities, macro datasets  
 
 > These unlock Phase III: global yield curve expansion + equity factor universes.
-## 🧭 Roadmap
 
+# 🧭 Roadmap
 - PINN-based commodity constraints  
 - Global yield curve curvature  
 - Volatility regime classifier  
@@ -222,14 +222,13 @@ The Spine applies CPMAI-style rigor without claiming formal certification.
 - Interactive macro dashboard  
 - WRDS + TradingEconomics integration
 
-## 📜 License
+# 📜 License
 
 MIT License — open for reuse.
 
 ---
 
-## 🚀 Ready to upload?
-
+# 🚀 Ready to upload?
 Once you paste this into `README.md`, run:
 
 ```powershell
