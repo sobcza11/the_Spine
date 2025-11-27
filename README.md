@@ -3,7 +3,7 @@
 Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a unified, interpretable macro state.
 
 <p align="center">
-  <img src="_support/assets/main_photo.png" width="100%" />
+  <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
 </p>
 
 <p align="center">
