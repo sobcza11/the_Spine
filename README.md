@@ -150,9 +150,11 @@ All pipes converge into an interpretable macro-state:
     "p_Inflation_US": 0.10,
     "p_Sentiment_US": 0.06
   }
-
 }
+```
+
 ---
+
 🔒 Governance (CPMAI-Inspired, Responsible Data Science)
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
