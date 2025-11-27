@@ -33,8 +33,53 @@ The system integrates:
 - 🗣️ Fed & macro sentiment signals (Beige Book, FOMC Minutes, SEP, Statements, Speeches)  
 - 📊 Equity VinV (“Value in Vogue”) regime model  
 - 🔐 Governance, drift detection, schema validation, versioned lineage  
-
 This is the **Hybrid Spine** — the union of *Global context* & *US precision timing*.
+
+---
+
+## 🔮 OracleChambers | Human Interface to the Spine
+
+In short: **the_Spine is the engine; OracleChambers is where humans interface with the tea leaves.**
+
+OracleChambers is the **interpretive layer** of the_Spine — the place where raw macro pipes become
+human-usable views, narratives, and regimes. It sits on top of the canonical leaves and organizes
+them into “oracles” that a macro desk, research team, or FinTech MLOps group could actually use.
+
+Current focus areas:
+
+- 🗣️ **Fed Speak (OracleChambers | Fed)**  
+  NLP-ready sentiment leaves built around FOMC communications:
+  - **Beige Book** – district-level tone on business, labor, wages, prices  
+  - **FOMC Minutes** – uncertainty, disagreement, inflation vs. growth concern  
+  - **FOMC Statement** – paragraph-level hawkish/dovish stance and focus  
+  - **Fed SEP (Dot Plot)** – shifts in rate path & neutral rate sentiment  
+  - **Fed Speeches** – speaker-level tone, certainty, forward-guidance hints  
+
+  These are wired into canonical parquet leaves under `p_Sentiment_US`, ready for downstream
+  modeling (regime flags, risk premia overlays, or macro-state explainers).
+
+- 📊 **VinV (Value in Vogue)**  
+  A US equity factor that tracks when **value is “in fashion”** relative to growth/market:
+  - Valuation spread (value vs. benchmark)  
+  - 12-month relative performance spread  
+  - Breadth (% of value names outperforming)  
+  - Composite **VinV Score** ∈ [-1, 1] and discrete regimes:
+    `out_of_favor → transition → in_vogue`  
+
+  Implemented as a canonical leaf under `p_Equity_US/VinV/`, designed to plug cleanly into the
+  fusion engine and to stand alone as a factor for experimentation.
+
+- 🧪 **Future Oracles (Planned)**  
+  OracleChambers is also the “staging ground” for future interpretive layers, for example:
+  - **Contagion analysis** – Fed language shifts → cross-asset response patterns  
+  - **Association Rule Mining** – news / narrative patterns → market co-moves  
+  - **Corporate & earnings sentiment drift** – fraud / overstatement red-flags  
+  - **Macro regime narratives** – linking Dalio/Gundlach “Illusory Wealth Regime” style views
+    to Spine signals  
+  - **WRDS-backed extensions** – CRSP/Compustat earnings & factor overlays (pending access)  
+
+All of this remains **inside this repo** for now — OracleChambers functions as a documented
+sub-system within the_Spine, not as a separate codebase.
 
 ---
 
