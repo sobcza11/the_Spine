@@ -150,7 +150,7 @@ All pipes converge into an interpretable macro-state:
     "p_Inflation_US": 0.10,
     "p_Sentiment_US": 0.06
   }
-}
+}```
 
 
 ---
