@@ -39,13 +39,11 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 
 ## 🔮 OracleChambers | Human Interface to the Spine
 
-In short: **the_Spine is the engine; OracleChambers is where humans interpret its signals—reading the tea leaves with structure.**
+**the_Spine is the engine; OracleChambers is where humans interpret its signals—reading the tea leaves with structure.**
 
-OracleChambers is the **interpretive layer** of the_Spine — the place where raw macro pipes become
-human-usable views, narratives, and regimes. It sits on top of the canonical leaves and organizes
-them into “oracles” that a macro desk, research team, or FinTech MLOps group could actually use.
+OracleChambers is the **interpretive layer** — transforming structural signals into human-usable macro narratives, regimes, and explainers.
 
-Current focus areas:
+**Current focus areas**:
 
 - 🗣️ **Fed Speak (OracleChambers | Fed)**  
   NLP-ready sentiment leaves built around FOMC communications:
@@ -66,21 +64,19 @@ Current focus areas:
   - Composite **VinV Score** ∈ [-1, 1] and discrete regimes:
     `out_of_favor → transition → in_vogue`  
 
-  Implemented as a canonical leaf under `p_Equity_US/VinV/`, designed to plug cleanly into the
-  fusion engine and to stand alone as a factor for experimentation.
+  Lives under `p_Equity_US/VinV/` and integrates cleanly into MAIN_p.
 
 - 🧪 **Future Oracles (Planned)**  
   OracleChambers is also the “staging ground” for future interpretive layers, for example:
   - **Contagion analysis** – Fed language shifts → cross-asset response patterns  
-  - **Association Rule Mining** – news / narrative patterns → market co-moves  
+  - **WRDS-backed extensions** – CRSP/Compustat earnings & factor overlays (pending access)  
   - **Corporate & earnings sentiment drift** – fraud / overstatement red-flags  
+  - **Association Rule Mining** – news / narrative patterns → market co-moves  
   - **Macro regime narratives** – linking Dalio/Gundlach “Illusory Wealth Regime” style views
     to Spine signals  
-  - **WRDS-backed extensions** – CRSP/Compustat earnings & factor overlays (pending access)  
 
 All of this remains **inside this repo** for now — OracleChambers functions as a documented
 sub-system within the_Spine, not as a separate codebase.
-
 ---
 
 ## 🧩 Architecture (High-Level)
