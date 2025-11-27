@@ -155,7 +155,7 @@ All pipes converge into an interpretable macro-state:
 
 ---
 
-🔒 Governance (CPMAI-Inspired, Responsible Data Science)
+## 🔒 Governance (CPMAI-Inspired, Responsible Data Science)
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
 
@@ -199,7 +199,7 @@ Logging metadata
 
 Drift & validation hooks
 
-📦 Data Sources (Active + Pending)
+## 📦 Data Sources (Active + Pending)
 Active
 
 EIA
@@ -220,7 +220,7 @@ WRDS Approval — CRSP/Compustat, equities, macro data
 
 These unlock Phase III global yield curve expansion + factor universes.
 
-🧭 Roadmap
+## 🧭 Roadmap
 
 PINN-based commodity constraints
 
@@ -236,7 +236,7 @@ Interactive macro dashboard
 
 WRDS + TradingEconomics integration
 
-📜 License
+## 📜 License
 
 MIT License — open for reuse.
 
