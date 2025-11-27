@@ -1,6 +1,4 @@
 # 🧠 the_Spine  
-### A Hybrid, Governed Global–US Macro Intelligence Backbone  
-Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a unified, interpretable macro state.
 
 <p align="center">
   <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
@@ -14,6 +12,9 @@ Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a un
   <img src="https://img.shields.io/badge/Python-3.10-blue" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" />
 </p>
+
+### Governed Global–US Hybrid Macro Intelligence Backbone  
+Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a unified, interpretable macro state.
 
 ---
 
