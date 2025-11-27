@@ -77,6 +77,7 @@ OracleChambers is the **interpretive layer** — transforming structural signals
 
 All of this remains **inside this repo** for now — OracleChambers functions as a documented
 sub-system within the_Spine, not as a separate codebase.
+
 ---
 
 ## 🧩 Architecture (High-Level)
