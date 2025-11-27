@@ -30,8 +30,6 @@ The system integrates:
 - 🛢️ Commodity flows (Brent/WTI spread, LNG, shipping rates)  
 - 🇺🇸 WTI inventories & refinery throughput  
 - 🧩 US inflation decomposition (core, supercore, shelter)  
-- 🛒 MicroLineage-AI (SKU-level retail micro-economics)  
-- 🏥 Clinical DriftOps (healthcare governance models)  
 - 🗣️ Fed & macro sentiment signals (Beige Book, FOMC Minutes, SEP, Statements, Speeches)  
 - 📊 Equity VinV (“Value in Vogue”) regime model  
 - 🔐 Governance, drift detection, schema validation, versioned lineage  
