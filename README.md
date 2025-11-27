@@ -152,6 +152,9 @@ All pipes converge into an interpretable macro-state:
   }
 }
 
+
+---
+
 🔒 Governance (CPMAI-Inspired, Responsible Data Science)
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
