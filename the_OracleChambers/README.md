@@ -6,7 +6,7 @@
 
 ---
 
-## **the_OracleChambers** is a domain-specific Mini AI Lab that transforms economic signals, Fed communication, and cross-market data into structured narratives, macro briefs, scenario paths, and policy-drift insights.
+**the_OracleChambers** is a domain-specific Mini AI Lab that transforms economic signals, Fed communication, and cross-market data into structured narratives, macro briefs, scenario paths, and policy-drift insights.
 
 It functions as the **interpretive intelligence layer** on top of:
 
@@ -21,7 +21,7 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
-## 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
+### 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
 
 NLP-ready sentiment leaves built around major FOMC communication streams:
 
