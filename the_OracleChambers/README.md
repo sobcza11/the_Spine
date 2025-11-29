@@ -1,7 +1,7 @@
 # <p align="center">the_OracleChambers • 🔮 • Macro Narratives → Insight</p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo.png" width="720">
+  <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
 </p>
 
 **the_OracleChambers** is a domain-specific Mini AI Lab that transforms economic signals, Fed communication, and cross-market data into structured narratives, macro briefs, scenario paths, and policy-drift insights.
