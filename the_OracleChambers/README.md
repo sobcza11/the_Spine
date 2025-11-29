@@ -25,9 +25,9 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
-# Signal WIP • Oracles in the Chamber
+## Oracles in the Chamber
 
-## 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
+### 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
 
 NLP-ready sentiment leaves built around major FOMC communication streams:
 
