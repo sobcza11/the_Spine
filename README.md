@@ -11,7 +11,7 @@
 
 
 <p align="center">
-  <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
+  <img src="_support/assets/main_photo2.png" width="100%"  width="420"/>
 </p>
 
 ---
