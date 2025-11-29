@@ -21,7 +21,7 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
-### 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
+## 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
 
 NLP-ready sentiment leaves built around major FOMC communication streams:
 
@@ -36,7 +36,7 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 ---
 
-## 📊 PLANNED FOCUS AREAS
+### 📊 PLANNED FOCUS AREAS
 
 ### **VinV (Value in Vogue)**  
 A U.S. equity factor tracking when value is “in fashion”:
@@ -64,6 +64,35 @@ The_OracleChambers serves as the staging ground for additional interpretive laye
 OracleChambers operates as a documented **interpretation subsystem** within the broader `the_Spine` architecture.
 
 ---
+
+### **VinV (Value in Vogue)**  
+A U.S. equity factor tracking when value is “in fashion”:
+
+- Valuation spread  
+- 12-month relative performance  
+- Breadth (% of value names outperforming)  
+- Composite **VinV Score** ∈ [-1, 1]  
+- Regimes: `out_of_favor → transition → in_vogue`
+
+Stored under **`p_Equity_US/VinV/`**, integrated into **MAIN_p**.
+
+---
+
+### 🧪 Future Oracles (Planned)
+
+The_OracleChambers serves as the staging ground for additional interpretive layers:
+
+- **Contagion analysis** — Fed language → cross-asset reactions  
+- **WRDS extensions** — CRSP/Compustat factor overlays  
+- **Corporate & earnings sentiment drift** — fraud / overstatement signals  
+- **Association-Rule mining** — narrative patterns → market co-moves  
+- **Macro regime narratives** — Dalio/Gundlach “Illusory Wealth Regime” alignment  
+
+OracleChambers operates as a documented **interpretation subsystem** within the broader `the_Spine` architecture.
+
+---
+
+
 
 # 🧠 Purpose & Vision
 
