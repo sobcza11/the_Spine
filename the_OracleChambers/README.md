@@ -31,9 +31,9 @@ It functions as the **interpretive intelligence layer** on top of:
 - **the_Spine** — macro fusion engine  
 - **FedSpeak NLP** — policy-sensitive communication analysis  
 
-Together, these create a governed and explainable research stack modeled after architectures used in modern macro hedge funds, central banks, and advanced research labs.
+**Together**, these create a ***collective-intelligence research stack***—**each part reinforcing the others**—mirroring the **collaborative architecture** behind *modern macro research labs*, *policy groups*, and *global central-bank analysis* teams.
 
-We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously operating*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
+We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
 
 
