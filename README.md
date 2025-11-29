@@ -2,9 +2,9 @@
 <p align="center">
   <img src="https://img.shields.io/badge/MacroFusion-Enabled-blueviolet" />
   <img src="https://img.shields.io/badge/Explainability-SHAP_%26_Permutation-success" />
-  <img src="https://img.shields.io/badge/TimeSeries-Dy, Wkly_%26_Mnthly-lightgrey" />
-  <img src="https://img.shields.io/badge/MLOps-Governed_%26_Versioned-yellowgreen" />
-  <img src="https://img.shields.io/badge/Python-3.13-blue" />
+  <img src="https://img.shields.io/badge/TimeSeries-Dly, Wkly_%26_Mnthly-lightgrey" />
+  <img src="https://img.shields.io/badge/MLOps-Gov._%26_Ver.-yellowgreen" />
+  <img src="https://img.shields.io/badge/Python-blue" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" />
 </p>
 
