@@ -1,9 +1,4 @@
 # <p align="center">the_Spine | 🧠</p>
-
-<p align="center">
-  <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
-</p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/MacroFusion-Enabled-blueviolet" />
   <img src="https://img.shields.io/badge/Explainability-SHAP_%26_Permutation-success" />
@@ -11,6 +6,11 @@
   <img src="https://img.shields.io/badge/MLOps-Governed_%26_Versioned-yellowgreen" />
   <img src="https://img.shields.io/badge/Python-3.13-blue" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+</p>
+
+
+<p align="center">
+  <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
 </p>
 
 # Governed Global–US Hybrid Macro Intelligence Backbone  
