@@ -33,7 +33,7 @@ It functions as the **interpretive intelligence layer** on top of:
 
 Together, these create a governed and explainable research stack modeled after architectures used in modern macro hedge funds, central banks, and advanced research labs.
 
-the_OracleChambers behaves like a **macro-financial AI Lab** — a CPMAI-aligned approach to governed, structured, transparent reasoning designed to produce **decision-support intelligence**, not just analytics.
+We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously operating*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
 
 
