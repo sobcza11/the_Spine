@@ -163,7 +163,7 @@ To scale cleanly, the project introduces **RCpacks (Regional Canonical Packs)** 
 
 Based on development status — `the_Spine`'s primary **macro segmentation  mirrors** the frameworks **applied by central banks** and **quantitative research** teams.
 
----
+----
 
 **Advanced Economies** (***AE-RCpack***)
 
