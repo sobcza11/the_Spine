@@ -166,12 +166,9 @@ To scale cleanly, the project introduces **RCpacks (Regional Canonical Packs)** 
 Based on development status — `the_Spine`'s primary **macro segmentation  mirrors** the frameworks **applied by central banks** and **quantitative research** teams.
 
 - **Advanced Economies** (***AE-RCpack***)
-
   - ***Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU***
-
-    → *Stable cycles, high-frequency signals, transparent data*
-
-    → *Ideal for PMI, inflation decomposition, yield curve curvature*
+    - *Stable cycles, high-frequency signals, transparent data*
+    - *Ideal for PMI, inflation decomposition, yield curve curvature*
 
 
 - **Emerging Economies** (***EM-RCpack***)
