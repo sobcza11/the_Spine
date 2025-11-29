@@ -23,7 +23,7 @@ Bridging micro-signals, PMI, commodities, sentiment, equities/FX, & inflation in
 
 ---
 
-# ⭐ Overview
+## ⭐ Overview
 
 **the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create a stable and interpretable multi-domain macro signal.
 Every component (a “pipe”) produces a validated canonical signal, and all pipes flow into **`MAIN_p`**, the unified fusion engine.
@@ -42,7 +42,7 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 
 ---
 
-# 🔮 OracleChambers | Human Interface to the Spine
+## 🔮 OracleChambers | Human Interface to the Spine
 
 **the_Spine is the engine; OracleChambers is where humans interpret its signals—reading the tea leaves with structure.**
 
@@ -85,7 +85,7 @@ sub-system within the_Spine, not as a separate codebase.
 
 ---
 
-# 🧩 Architecture (High-Level)
+## 🧩 Architecture (High-Level)
 
 ```text
 the_Spine/
@@ -125,7 +125,7 @@ All sentiment leaves are now implemented:
 | **Fed SEP (Dot Plot)** | Complete |
 | **Fed Speeches** | Complete |
 
-# 🧘 OracleChambers  
+## 🧘 OracleChambers  
 A forward-looking space for exploratory sentiment research:
 - Contagion analysis between Fed language & market reaction  
 - Association Rule Mining (ARM) for news → markets pattern analysis  
@@ -136,7 +136,7 @@ A forward-looking space for exploratory sentiment research:
 
 ---
 
-# 📊 Equity: VinV (Value in Vogue)
+## 📊 Equity: VinV (Value in Vogue)
 
 A monthly equity factor that measures:
 
@@ -153,7 +153,7 @@ Canonical output:
 
 ---
 
-# 🌍 G20 Global Expansion (AE & EM RCpacks)
+## 🌍 G20 Global Expansion (AE & EM RCpacks)
 ***Extending the Spine to a Globally Balanced Architecture***
 
 The G20 cluster represents **85% of world GDP** and is the natural extension of the_Spine’s Global layer.
@@ -223,7 +223,7 @@ as_of_date	vinv_spread_val	vinv_spread_ret_12m	vinv_breadth	vinv_score	vinv_regi
 
 ---
 
-# 🧠 Fusion Engine (MAIN_p)
+## 🧠 Fusion Engine (MAIN_p)
 
 All pipes converge into an interpretable macro-state:
 
@@ -245,7 +245,7 @@ All pipes converge into an interpretable macro-state:
 
 ---
 
-# 🔒 **Governance (CPMAI-Inspired, Responsible Data Science)**
+## 🔒 **Governance (CPMAI-Inspired, Responsible Data Science)**
 
 The Spine applies CPMAI-style rigor without claiming formal certification.
 
