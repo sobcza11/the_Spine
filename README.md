@@ -126,32 +126,6 @@ All sentiment leaves are now implemented:
 | **Fed SEP (Dot Plot)** | Complete |
 | **Fed Speeches** | Complete |
 
-## 🧘 OracleChambers  
-A forward-looking space for exploratory sentiment research:
-- Contagion analysis between Fed language & market reaction  
-- Association Rule Mining (ARM) for news → markets pattern analysis  
-- Corporate earnings sentiment drift (fraud/overstatement detection)  
-- Cross-market signaling consistency  
-- Dalio/Gundlach “Illusory Wealth Regime” integration  
-- WRDS data expansion (pending approval)  
-
----
-
-## 📊 Equity: VinV (Value in Vogue)
-
-A monthly equity factor that measures:
-
-- Value vs. Growth valuation spread  
-- 12-month relative performance spread  
-- Cohort breadth (percentage of value names outperforming benchmark)  
-- Composite VinV Score ∈ [-1, +1]  
-- Regime classification: *out_of_favor → transition → in_vogue*
-
-Canonical output:
-
-| as_of_date | vinv_spread_val | vinv_spread_ret_12m | vinv_breadth | vinv_score | vinv_regime |
-|------------|------------------|----------------------|--------------|------------|-------------|
-
 ---
 
 ## 🌍 G20 Global Expansion (AE & EM RCpacks)
