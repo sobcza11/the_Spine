@@ -1,4 +1,4 @@
-# 📘 the_OracleChambers – Mini AI Lab for Macro & Policy Intelligence
+# <p align="center">the_OracleChambers • 🔮 • Macro Narratives → Insight</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo.png" width="720">
