@@ -1,16 +1,18 @@
 # <p align="center">the_OracleChambers • 🔮 • Signals → Insights</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11+-0A66C2?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/MacroFusion-Enabled-4B0082?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Explainability-SHAP_%7C_Permutation-228B22?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/TimeSeries-Daily_%7C_Weekly_%7C_Monthly-696969?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/MLOps-Governance_%7C_Versioning-556B2F?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/License-MIT-006400?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/PMI--CPMAI-Observant-DAA520?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/NLP-Prediction_%7C_Probabilities-483D8B?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Creative_Commons-Attribution-2F4F4F?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-blue" />
+  <img src="https://img.shields.io/badge/MacroFusion-Enabled-4B0082" />
+  <img src="https://img.shields.io/badge/Explainability-SHAP_%7C_Permutation-228B22" />
+  <img src="https://img.shields.io/badge/TimeSeries-Daily_%7C_Weekly_%7C_Monthly-696969" />
+  <img src="https://img.shields.io/badge/MLOps-Governance_%7C_Versioning-556B2F" />
+  <img src="https://img.shields.io/badge/License-MIT-006400" />
+  <img src="https://img.shields.io/badge/PMI--CPMAI-Observant-DAA520" />
+  <img src="https://img.shields.io/badge/NLP-Prediction_%7C_Probabilities-483D8B" />
+  <img src="https://img.shields.io/badge/Creative_Commons-Attribution-2F4F4F" />
 </p>
+
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
