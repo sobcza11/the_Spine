@@ -1,4 +1,4 @@
-# <p align="center">the_OracleChambers • 🔮 • Signals → Insight(s)</p>
+# <p align="center">the_OracleChambers • 🔮 • Signals → Insights</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
@@ -25,7 +25,7 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
-# Oracles in the Chamber • Signal Reviews • 🧘...
+## • 🧘 • Oracles in the Chamber • Signal Review WIP; below
 
 ## 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
 
