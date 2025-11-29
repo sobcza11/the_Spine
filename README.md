@@ -161,7 +161,7 @@ To scale cleanly, the project introduces **RCpacks (Regional Canonical Packs)** 
 
 ----
 
-### G20 Global Expansion (AE & EM RCpacks)
+### G20 Global Future Expansion (AE & EM RCpacks)
 
 Based on development status — `the_Spine`'s primary **macro segmentation  mirrors** the frameworks **applied by central banks** and **quantitative research** teams.
 
