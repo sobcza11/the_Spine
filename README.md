@@ -1,7 +1,7 @@
 # <p align="center">the_Spine | 🧠</p>
 
-<p align="center">
-  <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
+<p>
+  <img src="_support/assets/main_photo.png" width="80%"  width="420"/>
 </p>
 
 <p align="center">
