@@ -1,4 +1,4 @@
-# <p align="center">the_OracleChambers • 🔮 • Macro Narratives → Insight</p>
+# <p align="center">the_OracleChambers • 🔮 • Signals → Insight</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
@@ -21,6 +21,9 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
+### *the_Spine • 🧠 * | [Return](https://github.com/sobcza11/the_Spine/tree/main)
+
+---
 ## 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
 
 NLP-ready sentiment leaves built around major FOMC communication streams:
