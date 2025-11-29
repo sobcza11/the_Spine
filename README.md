@@ -200,7 +200,7 @@ the_Spine/
 
 ---
 
-# Fusion Logic
+## Fusion Logic
 **Global_Spine** = *w_AE * AE_fusion  +  w_EM * EM_fusion*
 
 
@@ -210,7 +210,7 @@ Where:
 
 This ***produces*** **the Glob-US Macro State**, the final output for `MAIN_p`.
 
-# 📊 Equity: VinV (Value in Vogue)
+## 📊 Equity: VinV (Value in Vogue)
 
 A monthly equity factor that measures:
 - Valuation spread
