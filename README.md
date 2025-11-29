@@ -16,7 +16,7 @@
 ---
 
 ## GOVERNED GLOBAL 
-### *a US Hybrid Macro Intelligence Backbone*  
+### *A US-Hybrid Macro Intelligence Oracle*  
 
 Bridging micro-signals, PMI, commodities, sentiment, equities/FX, & inflation into a unified, interpretable macro-state.
 
