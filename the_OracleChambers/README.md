@@ -6,18 +6,16 @@
 
 ---
 
-**the_OracleChambers** is a domain-specific Mini AI Lab that transforms economic signals, Fed communication, and cross-market data into structured narratives, macro briefs, scenario paths, and policy-drift insights.
+**the_OracleChambers** is a domain-specific `Mini AI Lab` that **transforms** *economic signals*, *Fed communication*, & *cross-market* **data** into **structured narratives**, **macro briefs**, **scenario paths**, and **policy-drift insights**.
 
 It functions as the **interpretive intelligence layer** on top of:
 
 - **the_Spine** — macro fusion engine  
 - **FedSpeak NLP** — policy-sensitive communication analysis  
-- **HKNSL scaffolding** — canonical leaf & scenario structure  
 
-Together, these form a governed, explainable system modeled after architectures used in modern macro hedge funds, central banks, and advanced research labs.
+Together, these create a governed and explainable research stack modeled after architectures used in modern macro hedge funds, central banks, and advanced research labs.
 
-**the_OracleChambers behaves like a macro-financial AI Lab** — a CPMAI-aligned approach to governed, structured, and transparent reasoning designed to produce  
-**decision-support intelligence**, not just analytics.
+the_OracleChambers behaves like a **macro-financial AI Lab** — a CPMAI-aligned approach to governed, structured, transparent reasoning designed to produce **decision-support intelligence**, not just analytics.
 
 ---
 
