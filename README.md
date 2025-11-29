@@ -13,6 +13,8 @@
   <img src="_support/assets/main_photo.png" width="100%"  width="420"/>
 </p>
 
+---
+
 # Governed Global–US Hybrid Macro Intelligence Backbone  
 Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a unified, interpretable macro state.
 
