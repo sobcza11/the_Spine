@@ -1,4 +1,6 @@
-# <p align="center">the_Spine • 🧠 • Signals → Macro</p>
+# <p align="center">the_Spine • 🧠</p>
+<p align="center">Signals → Macro</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
   <img src="https://img.shields.io/badge/MacroFusion-Enabled-blueviolet" />
