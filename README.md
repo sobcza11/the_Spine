@@ -18,7 +18,7 @@
 ## Governed Global 
 ### a US Hybrid Macro Intelligence Backbone  
 
-Bridging micro-signals, PMI, commodities, sentiment, equities/FX, and inflation into a unified, interpretable macro-state.
+Bridging micro-signals, PMI, commodities, sentiment, equities/FX, & inflation into a unified, interpretable macro-state.
 
 ---
 
