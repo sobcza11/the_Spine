@@ -42,7 +42,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ---
 
-# <p align="center">Oracles in the Chamber</p>
+# <p align="center">the_OracleChamber Insight Machine • 🔮 • From Signals → Radical Clarity</p>
 
 ### 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
 
