@@ -42,7 +42,8 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 
 ---
 
-## 🔮 OracleChambers | Human Interface to the Spine
+## 🔮 OracleChambers 
+# *Human Interface to the Spine* | *Click Here*
 
 **the_Spine is the engine; OracleChambers is where humans interpret its signals—reading the tea leaves with structure.**
 
