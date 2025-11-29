@@ -185,16 +185,6 @@ Where:
 
 This ***produces*** **the Glob-US Macro State**, the final output for `MAIN_p`.
 
-## 📊 Equity: VinV (Value in Vogue)
-
-A monthly equity factor that measures:
-- Valuation spread
-- 12-month relative return
-- Breadth
-- Composite VinV Score ∈ [-1, +1]
-- Regime states: out_of_favor → transition → in_vogue
-
-as_of_date	vinv_spread_val	vinv_spread_ret_12m	vinv_breadth	vinv_score	vinv_regime
 
 ---
 
