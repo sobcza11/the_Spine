@@ -15,9 +15,10 @@
 
 ---
 
-## Governed Global–US Hybrid Macro Intelligence Backbone  
+## Governed Global,
+### US Hybrid Macro Intelligence Backbone  
 
-Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a unified, interpretable macro state.
+Bridging **Micro-economics**, PMI, Commodities, Sentiment, Equities / FX, & Inflation into a unified, interpretable **Macro-economic state***.
 
 ---
 
