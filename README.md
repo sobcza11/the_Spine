@@ -20,8 +20,8 @@ Bridging FX, PMI, Commodities, Inflation, Sentiment, & Micro-economics into a un
 
 # ⭐ Overview
 
-**the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create a stable and interpretable multi-domain macro signal.  
-Every component (a “pipe”) produces a validated canonical signal, and all pipes flow into **MAIN_p**, the unified fusion engine.
+**the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create a stable and interpretable multi-domain macro signal.
+Every component (a “pipe”) produces a validated canonical signal, and all pipes flow into **`MAIN_p`**, the unified fusion engine.
 
 The system integrates:
 
@@ -145,6 +145,76 @@ Canonical output:
 
 | as_of_date | vinv_spread_val | vinv_spread_ret_12m | vinv_breadth | vinv_score | vinv_regime |
 |------------|------------------|----------------------|--------------|------------|-------------|
+
+---
+
+# 🌍 G20 Global Expansion (AE & EM RCpacks)
+***Extending the Spine to a Globally Balanced Architecture***
+
+The G20 cluster represents **85% of world GDP** and is the natural extension of the_Spine’s Global layer.
+To scale cleanly, the project introduces **RCpacks (Regional Canonical Packs)** — governed, structured data-packs for each economic block.
+
+## G20 Global Expansion (AE & EM RCpacks)
+
+Based on development status — the dominant macro segmentation used by central banks & quants.
+
+**Advanced Economies** (***AE-RCpack***)
+
+Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU
+→ Stable cycles, high-frequency signals, transparent data
+→ Ideal for PMI, inflation decomposition, yield curve curvature
+
+**Emerging Economies** (***EM-RCpack***)
+
+Argentina, Brazil, China, India, Indonesia, Mexico, Russia, Saudi Arabia, South Africa, Türkiye
+→ Higher volatility, asymmetric shocks, more signal in FX/commodities
+→ Ideal for diffusion heatmaps, EM FX basis, commodity sensitivity
+
+---
+
+## Directory Structure
+
+```text
+the_Spine/
+│
+├── p_Glob/
+│   ├── AE_RCpack/
+│   │    ├── AE_m/         # Canonical AE macro panel
+│   │    ├── AE_fx/        # FX basis, carry, liquidity indicators
+│   │    ├── AE_pmi/       # Manufacturing + services diffusion
+│   │    └── AE_com/       # LNG, Brent, metals
+│   │
+│   ├── EM_RCpack/
+│   │    ├── EM_m/         # Canonical EM macro panel
+│   │    ├── EM_fx/        # EM basis, stress spreads
+│   │    ├── EM_pmi/       # EM PMI + new orders components
+│   │    └── EM_com/       # Commodity-linked EM exposures
+│   │
+│   └── Glob_fusion/       # AE + EM → unified global macro signal
+```
+
+---
+
+# Fusion Logic
+**Global_Spine** = *w_AE * AE_fusion  +  w_EM * EM_fusion*
+
+
+Where:
+- w_AE ≈ stability weight
+- w_EM ≈ volatility-weighted signal strength
+
+This ***produces*** **the Glob-US Macro State**, the final output for `MAIN_p`.
+
+# 📊 Equity: VinV (Value in Vogue)
+
+A monthly equity factor that measures:
+- Valuation spread
+- 12-month relative return
+- Breadth
+- Composite VinV Score ∈ [-1, +1]
+- Regime states: out_of_favor → transition → in_vogue
+
+as_of_date	vinv_spread_val	vinv_spread_ret_12m	vinv_breadth	vinv_score	vinv_regime
 
 ---
 
