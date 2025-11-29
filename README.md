@@ -170,14 +170,10 @@ Based on development status — `the_Spine`'s primary **macro segmentation  mirr
     - *Stable cycles, high-frequency signals, transparent data*
     - *Ideal for PMI, inflation decomposition, yield curve curvature*
 
-
 - **Emerging Economies** (***EM-RCpack***)
-
   - ***Argentina, Brazil, China, India, Indonesia, Mexico, Russia, Saudi Arabia, South Africa, Türkiye***
-
-    → *Higher volatility, asymmetric shocks, more signal in FX/commodities*
-    
-    → *Ideal for diffusion heatmaps, EM FX basis, commodity sensitivity*
+    - *Higher volatility, asymmetric shocks, more signal in FX/commodities*
+    - *Ideal for diffusion heatmaps, EM FX basis, commodity sensitivity*
 
 ---
 
