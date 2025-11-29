@@ -166,12 +166,12 @@ To scale cleanly, the project introduces **RCpacks (Regional Canonical Packs)** 
 Based on development status — `the_Spine`'s primary **macro segmentation  mirrors** the frameworks **applied by central banks** and **quantitative research** teams.
 
 - **Advanced Economies** (***AE-RCpack***)
-  - ***Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU***
+  - **Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU**
     - *Stable cycles, high-frequency signals, transparent data*
     - *Ideal for PMI, inflation decomposition, yield curve curvature*
 
 - **Emerging Economies** (***EM-RCpack***)
-  - ***Argentina, Brazil, China, India, Indonesia, Mexico, Russia, Saudi Arabia, South Africa, Türkiye***
+  - **Argentina, Brazil, China, India, Indonesia, Mexico, Russia, Saudi Arabia, South Africa, Türkiye**
     - *Higher volatility, asymmetric shocks, more signal in FX/commodities*
     - *Ideal for diffusion heatmaps, EM FX basis, commodity sensitivity*
 
