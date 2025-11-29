@@ -21,7 +21,7 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
-### *the_Spine • 🧠 * | [Return](https://github.com/sobcza11/the_Spine/tree/main)
+### ***the_Spine • 🧠*** __[Return](https://github.com/sobcza11/the_Spine/tree/main)
 
 ---
 ## 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
