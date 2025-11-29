@@ -165,15 +165,13 @@ Based on development status — `the_Spine`'s primary **macro segmentation  mirr
 
 **Advanced Economies** (***AE-RCpack***)
 
-Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU
-
+<p align="left">Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU</p>
 → Stable cycles, high-frequency signals, transparent data
 → Ideal for PMI, inflation decomposition, yield curve curvature
 
 **Emerging Economies** (***EM-RCpack***)
 
-Argentina, Brazil, China, India, Indonesia, Mexico, Russia, Saudi Arabia, South Africa, Türkiye
-
+<p align="left">Argentina, Brazil, China, India, Indonesia, Mexico, Russia, Saudi Arabia, South Africa, Türkiye</p>
 → Higher volatility, asymmetric shocks, more signal in FX/commodities
 → Ideal for diffusion heatmaps, EM FX basis, commodity sensitivity
 
