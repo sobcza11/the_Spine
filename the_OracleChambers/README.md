@@ -25,7 +25,7 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
-## • 🧘 • Oracles in the Chamber • Signal Review WIP; below
+## • 🧘 • Oracles in the Chamber • Signal WIP
 
 ## 🗣️ CURRENT FOCUS AREA — Fed Speak (OracleChambers | Fed)
 
