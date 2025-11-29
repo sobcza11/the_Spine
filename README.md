@@ -84,50 +84,6 @@ OracleChambers is the **interpretive layer** — transforming structural signals
 All of this remains **inside this repo** for now — OracleChambers functions as a documented
 sub-system within the_Spine, not as a separate codebase.
 
----
-
-## 🧩 Architecture (High-Level)
-
-```text
-the_Spine/
-│
-├── MAIN_p/                          # Unified macro fusion engine
-│
-├── p_FX_Global/                     # FX basis, USD liquidity, EM stress
-├── p_Econ_Global/                   # Global PMI diffusion, new orders, exports
-├── p_Com_Global/                    # Brent/WTI, LNG, shipping
-│
-├── p_Econ_US/                       # ISM, NMI, payrolls, claims
-├── p_Com_US/                        # WTI inventories, Cushing flows
-├── p_Inflation_US/                  # CPI components, supercore, shelter
-├── p_Micro_US/                      # MicroLineage-AI (SKU demand signals)
-├── p_HealthAI_US/                   # Clinical DriftOps governance models
-│
-├── p_Sentiment_US/                  # Fed_Sentiment (canonical leaves)
-│   ├── BeigeBook/
-│   ├── FOMC_Minutes/
-│   ├── FOMC_Statement/
-│   ├── Fed_SEP/
-│   └── Fed_Speeches/
-│
-├── p_Equity_US/
-│   └── VinV/                        # Value-in-Vogue equity factor
-│
-└── MAIN_fusion/                     # Explainable macro-state
-```
-
-All sentiment leaves are now implemented:
-
-| Leaf | Status |
-|------|--------|
-| **Beige Book** | Complete (district-level sentiment) |
-| **FOMC Minutes** | Complete |
-| **FOMC Statement** | Complete |
-| **Fed SEP (Dot Plot)** | Complete |
-| **Fed Speeches** | Complete |
-
----
-
 ## 🌍 G20 Global Expansion (AE & EM RCpacks)
 ***Extending the Spine to a Globally Balanced Architecture***
 
@@ -152,25 +108,53 @@ Based on development status — `the_Spine`'s primary **macro segmentation  mirr
 
 ---
 
-## Directory Structure
+## 🧩 Architecture (High-Level)
 
 ```text
 the_Spine/
 │
+├── MAIN_p/                          # Unified macro fusion engine
+│
+├── p_FX_Global/                     # FX basis, USD liquidity, EM stress
+├── p_Econ_Global/                   # Global PMI diffusion, new orders, exports
+├── p_Com_Global/                    # Brent/WTI, LNG, shipping
+│
+├── p_Econ_US/                       # ISM, NMI, payrolls, claims
+├── p_Com_US/                        # WTI inventories, Cushing flows
+├── p_Inflation_US/                  # CPI, supercore, shelter
+├── p_Micro_US/                      # MicroLineage-AI (SKU demand signals)
+├── p_HealthAI_US/                   # Clinical DriftOps governance models
+│
+├── p_Sentiment_US/                  # Fed communication sentiment leaves
+│   ├── BeigeBook/
+│   ├── FOMC_Minutes/
+│   ├── FOMC_Statement/
+│   ├── Fed_SEP/
+│   └── Fed_Speeches/
+│
+├── p_Equity_US/
+│   └── VinV/                        # Value-in-Vogue equity factor
+│
+│
+│   🌍 G20 Global Expansion (AE & EM RCpacks)
+│
 ├── p_Glob/
-│   ├── AE_RCpack/
-│   │    ├── AE_m/         # Canonical AE macro panel
-│   │    ├── AE_fx/        # FX basis, carry, liquidity indicators
-│   │    ├── AE_pmi/       # Manufacturing + services diffusion
-│   │    └── AE_com/       # LNG, Brent, metals
+│   ├── AE_RCpack/                   # Advanced Economies
+│   │    ├── AE_m/                  # macro panel
+│   │    ├── AE_fx/                 # FX basis, carry, liquidity
+│   │    ├── AE_pmi/                # PMI diffusion
+│   │    └── AE_com/                # Brent, LNG, metals
 │   │
-│   ├── EM_RCpack/
-│   │    ├── EM_m/         # Canonical EM macro panel
-│   │    ├── EM_fx/        # EM basis, stress spreads
-│   │    ├── EM_pmi/       # EM PMI + new orders components
-│   │    └── EM_com/       # Commodity-linked EM exposures
+│   ├── EM_RCpack/                   # Emerging Markets
+│   │    ├── EM_m/                  # macro panel
+│   │    ├── EM_fx/                 # EM basis, stress spreads
+│   │    ├── EM_pmi/                # PMI + new orders
+│   │    └── EM_com/                # EM commodity exposures
 │   │
-│   └── Glob_fusion/       # AE + EM → unified global macro signal
+│   └── Glob_fusion/                # AE + EM → global macro signal
+│
+└── MAIN_fusion/                    # Explainable macro-state (US + Global)
+
 ```
 
 ---
