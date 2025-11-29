@@ -20,7 +20,11 @@
 
 ---
 
-**the_OracleChambers** is a domain-specific `Mini AI Lab` that **transforms** *economic signals*, *Fed communication*, & *cross-market* **data** into **structured narratives**, **macro briefs**, **scenario paths**, and **policy-drift insights**.
+**the_OracleChambers** is a domain-specific `Mini AI Lab` that **transforms** *economic signals*, *Fed communication*, & *cross-market* **data** into:
+- **Macro briefs** — regime overview • dominant forces • near-term pressure points
+- **Structured narratives** — coherent explanations • fused signals • interpretable logic
+- **Scenario paths** — projected states • probability deltas • scenario surfaces
+- **Policy-drift insights**— tone direction • language weighting • forward-guidance signals
 
 It functions as the **interpretive intelligence layer** on top of:
 
