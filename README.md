@@ -43,13 +43,17 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 ---
 
 ## 🔮 OracleChambers 
-### *Human Interface to the Spine* | Click Here
+### *Human Interface to the_Spine* | [Click Here](https://github.com/sobcza11/the_Spine/tree/main/the_OracleChambers)
 
 **the_Spine is the engine; OracleChambers is where humans interpret its signals—reading the tea leaves with structure.**
 
-OracleChambers is the **interpretive layer** — transforming structural signals into human-usable macro narratives, regimes, and explainers.
+OracleChambers is the **interpretive layer** — transforming structural, parquet-based leaves from the_Spine into human-usable macro narratives, regime flags, risk explainers, and scenario commentary.
 
-**Current focus areas**:
+Fed communication outputs land as canonical parquet leaves under `p_Sentiment_US`, ensuring they are fully available for downstream modeling: regime inference, risk-premia overlays, and macro-state explainability.
+
+---
+
+**CURRENT FOCUS AREA**:
 
 - 🗣️ **Fed Speak (OracleChambers | Fed)**  
   NLP-ready sentiment leaves built around FOMC communications:
@@ -62,6 +66,12 @@ OracleChambers is the **interpretive layer** — transforming structural signals
   These are wired into canonical parquet leaves under `p_Sentiment_US`, ready for downstream
   modeling (regime flags, risk premia overlays, or macro-state explainers).
 
+All outputs integrate into `p_Sentiment_US` for consistent macro interpretation inside the_Spine and OracleChambers
+
+---
+
+**PLANNED FOCUS AREA(s)**:
+
 - 📊 **VinV (Value in Vogue)**  
   A US equity factor that tracks when **value is “in fashion”** relative to growth/market:
   - Valuation spread (value vs. benchmark)  
@@ -70,10 +80,12 @@ OracleChambers is the **interpretive layer** — transforming structural signals
   - Composite **VinV Score** ∈ [-1, 1] and discrete regimes:
     `out_of_favor → transition → in_vogue`  
 
-  Lives under `p_Equity_US/VinV/` and integrates cleanly into MAIN_p.
+  Stored under `p_Equity_US/VinV/` and cleanly integrated into `MAIN_p`.
+
+--- 
 
 - 🧪 **Future Oracles (Planned)**  
-  OracleChambers is also the “staging ground” for future interpretive layers, for example:
+  OracleChambers is the “staging ground” for next-generation interpretive layers:
   - **Contagion analysis** – Fed language shifts → cross-asset response patterns  
   - **WRDS-backed extensions** – CRSP/Compustat earnings & factor overlays (pending access)  
   - **Corporate & earnings sentiment drift** – fraud / overstatement red-flags  
@@ -81,8 +93,9 @@ OracleChambers is the **interpretive layer** — transforming structural signals
   - **Macro regime narratives** – linking Dalio/Gundlach “Illusory Wealth Regime” style views
     to Spine signals  
 
-All of this remains **inside this repo** for now — OracleChambers functions as a documented
-sub-system within the_Spine, not as a separate codebase.
+OracleChambers operates as a documented **interpretation subsystem** within the broader `the_Spine` architecture.
+
+---
 
 ## 🌍 G20 Global Expansion (AE & EM RCpacks)
 ***Extending the Spine to a Globally Balanced Architecture***
@@ -154,7 +167,6 @@ the_Spine/
 │   └── Glob_fusion/                # AE + EM → global macro signal
 │
 └── MAIN_fusion/                    # Explainable macro-state (US + Global)
-
 ```
 
 ---
