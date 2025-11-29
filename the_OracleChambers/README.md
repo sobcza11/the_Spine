@@ -58,7 +58,7 @@ NLP-ready sentiment leaves built around major FOMC communication streams:
 All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretation inside both  
 **the_Spine** and **the_OracleChambers**.
 
----
+##
 
 ### 🧩 PLANNED FOCUS AREAS
 ### 💼 **VinV (Value in Vogue)**  
@@ -73,7 +73,7 @@ A U.S. equity factor tracking when value is “in fashion”:
 
 Stored under **`p_Equity_US/VinV/`**, integrated into **MAIN_p**.
 
----
+##
 
 ### 🧪 Future Oracles (Planned)
 
@@ -87,7 +87,7 @@ The_OracleChambers serves as the staging ground for additional interpretive laye
 
 OracleChambers operates as a documented **interpretation subsystem** within the broader `the_Spine` architecture.
 
----
+##
 
 ### **VinV (Value in Vogue)**  
 A U.S. equity factor tracking when value is “in fashion”:
@@ -100,7 +100,7 @@ A U.S. equity factor tracking when value is “in fashion”:
 
 Stored under **`p_Equity_US/VinV/`**, integrated into **MAIN_p**.
 
----
+##
 
 ### 🧪 Future Oracles (Planned)
 
