@@ -21,7 +21,7 @@ Together, these form a governed, explainable system modeled after architectures 
 
 ---
 
-### <p align="right">***🧠 • the_Spine •*** [Return](https://github.com/sobcza11/the_Spine/tree/main)</p>
+### <p align="right">***🧠 the_Spine •*** [Return](https://github.com/sobcza11/the_Spine/tree/main)</p>
 
 ---
 
