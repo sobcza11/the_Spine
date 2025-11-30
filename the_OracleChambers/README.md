@@ -104,17 +104,13 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
 
 
-### 🌏 **CGRI**
+### 🔥 **WPI**  
 
-**China Geopolitical Risk Index** (***CGRI***) tracks the **strategic posture of China during the Xi era**, treating geopolitics as a *flow* that shapes markets the same way liquidity, credit creation, and policy cycles do.
-
-- **Narrative Signals** — what China says through state media  
-- **Behavioral Signals** — what China *does* via PLA activity in Taiwan/SCS  
-- **Intent Signals** — how policy language shifts around sovereignty and “core interests”  
-- **RULE** — CGRI shifts the balance of global regime probabilities, raising the odds of:  
-  - regional conflict premium  
-  - trade fragmentation  
-  - commodity supply-chain instability  
+**WTI Pressure Index** **(*WPI*)** interprets weekly EIA crude & Cushing storage flows to identify supply–demand imbalance and inflation-linked energy pressure.
+- **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
+- **Cushing storage shifts** — hub-level imbalances driving front-month pricing.
+- **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
+- **RULE** - *A storage-curve stress indicator linked to inflationary impulse*
 
 
 ### 🌏 **CGRI**
@@ -125,8 +121,6 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 - **Militarized activity** — frequency/intensity of PLA flights and maneuvers around Taiwan & the South China Sea.  
 - **Policy language drift** — shifts in wording around sovereignty, reunification, and security “red lines.”  
 - **RULE** – *A geopolitical-risk overlay adjusting scenario weights for China-linked growth, trade, and inflation paths.*  
-
-
 
 ##
 
