@@ -37,10 +37,6 @@ It functions as the **interpretive intelligence layer** on top of:
 We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
 
-
-### <p align="right">***🧠 the_Spine •*** [Return](https://github.com/sobcza11/the_Spine/tree/main)</p>
-
-
 <p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
 
 <h3 align="center">•    PORTFOLIO    •</h3>
@@ -121,7 +117,9 @@ OracleChambers operates as a documented **interpretation subsystem** within the 
 
 
 ---
+### <p align="right">***🧠 the_Spine •*** [Return](https://github.com/sobcza11/the_Spine/tree/main)</p>
 
+---
 
 
 # 🧠 Purpose & Vision
