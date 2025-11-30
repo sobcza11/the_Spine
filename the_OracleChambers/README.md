@@ -44,7 +44,8 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ## <p align="center">**Insight Machine** • 🧠⚙️ • From Signals → Radical Clarity</p>
 ---
-<h3 align="center"><u>🧭 • CURRENT FOCUS AREA</u></h3>
+<h3 align="center">🧭 • CURRENT FOCUS AREA</h3>
+
 ### 🗣️ Fed Speak (OracleChambers | Fed)
 
 NLP-ready sentiment leaves built around major FOMC communication streams:
@@ -60,7 +61,8 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 ---
 
-### 🧩 • PLANNED FOCUS AREAS
+<h3 align="center">🧩 • PLANNED FOCUS AREAS</h3>
+
 ### 💼 **VinV (Value in Vogue)**  
 
 A U.S. equity factor tracking when value is “in fashion”:
@@ -75,7 +77,7 @@ Stored under **`p_Equity_US/VinV/`**, integrated into **MAIN_p**.
 
 ---
 
-### 🧪 • Future Oracles (Planned)
+<h3 align="center">🧪 • Future Oracles (Planned)</h3>
 
 The_OracleChambers serves as the staging ground for additional interpretive layers:
 
