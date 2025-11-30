@@ -44,9 +44,9 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 <hr style="margin-top:5px; margin-bottom:20px;">
 
 <!-- PORTFOLIO SECTION (Header + Images, no spacing gaps) -->
-<div align="center" style="font-size:26px; font-weight:700; margin-bottom:10px; margin-top:0;">
+<h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
   PORTFOLIO
-</div>
+</h3>
 
 <div align="center" style="margin-top:0;">
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
