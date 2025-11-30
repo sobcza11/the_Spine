@@ -44,7 +44,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ## <p align="center">**Insight Machine** • 🧠⚙️ • From Signals → Radical Clarity</p>
 
-<h3 align="center">📁 Portfolio</h3>
+<h3 align="center">📁 • Portfolio • 🧠</h3>
 
 <p align="center">
 
@@ -53,7 +53,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
          alt="US Inflation Phenomenon"
          height="100">
   </a>
- • 
+ <h3>•</h3> 
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law">
     <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
          alt="HK Security Law NLP"
