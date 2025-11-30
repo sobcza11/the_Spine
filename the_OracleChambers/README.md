@@ -36,16 +36,17 @@ It functions as the **interpretive intelligence layer** on top of:
 
 We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
-<!-- TOP SECTION: No extra whitespace -->
-<div align="center" style="font-size:40px; font-weight:700; margin-bottom:0;">
+<!-- H1 — the_OracleChambers -->
+<h1 align="center" style="margin-top:0; margin-bottom:5px; font-size:42px;">
   🔮 • the_OracleChambers
-</div>
+</h1>
 
-<div align="center" style="font-size:28px; font-weight:600; margin-top:5px; margin-bottom:10px;">
+<!-- H2 — Signals line -->
+<h2 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
   Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🧘
-</div>
+</h2>
 
-<hr>
+<hr style="margin-top:5px; margin-bottom:20px;">
 
 <!-- PORTFOLIO SECTION (Header + Images, no spacing gaps) -->
 <div align="center" style="font-size:26px; font-weight:700; margin-bottom:10px; margin-top:0;">
@@ -66,10 +67,10 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   </a>
 </div>
 
-<!-- SECTION HEADER (tight spacing) -->
-<div align="center" style="font-size:22px; font-weight:700; margin-top:20px;">
+<!-- H3 — CURRENT FOCUS AREA -->
+<h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
   🧮 • CURRENT FOCUS AREA • 🧭
-</div>
+</h3>
 
 ### 🗣️ Fed Speak
 
