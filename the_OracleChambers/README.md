@@ -64,7 +64,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 </p>
 
----
+<p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
 
 <h3 align="center">🧮 • CURRENT FOCUS AREA • 🧭</h3>
 
