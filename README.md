@@ -29,7 +29,7 @@ And apply **AI & MLOps techniques** to analyze **Fed communications**, **economi
 
 ---
 
-## ⭐ Multi-Domain Macro Intelligence Layer
+## 🌐 Multi-Domain Macro Intelligence Layer
 
 **the_Spine** is a multi-domain intelligence layer unifying **global breadth** with **US micro-depth**.
 
