@@ -91,8 +91,6 @@ the_Spine/
 ├── p_Econ_US/                       # ISM, NMI, payrolls, claims
 ├── p_Com_US/                        # WTI inventories, Cushing flows
 ├── p_Inflation_US/                  # CPI, supercore, shelter
-├── p_Micro_US/                      # MicroLineage-AI (SKU demand signals)
-├── p_HealthAI_US/                   # Clinical DriftOps governance models
 │
 ├── p_Sentiment_US/                  # Fed communication sentiment leaves
 │   ├── BeigeBook/
