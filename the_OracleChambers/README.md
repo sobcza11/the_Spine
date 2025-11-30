@@ -142,7 +142,7 @@ OracleChambers operates as a documented **interpretation subsystem** within the 
 
 ---
 
-<h2> 🧠 **Purpose & Vision**</h2>
+<h2>🧠 Purpose & Vision</h2>
 
 The purpose of the_OracleChambers is simple:
 
