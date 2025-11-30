@@ -36,29 +36,40 @@ It functions as the **interpretive intelligence layer** on top of:
 
 We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
----
+<!-- TOP SECTION: No extra whitespace -->
+<div align="center" style="font-size:40px; font-weight:700; margin-bottom:0;">
+  🔮 • the_OracleChambers
+</div>
 
-<h1 align="center">🔮 • the_OracleChambers</h1>
-<h2 align="center">Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🧘</h2>
+<div align="center" style="font-size:28px; font-weight:600; margin-top:5px; margin-bottom:10px;">
+  Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🧘
+</div>
 
----
+<hr>
 
-<h1 align="center">PORTFOLIO |
+<!-- PORTFOLIO SECTION (Header + Images, no spacing gaps) -->
+<div align="center" style="font-size:26px; font-weight:700; margin-bottom:10px; margin-top:0;">
+  PORTFOLIO
+</div>
+
+<div align="center" style="margin-top:0;">
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
      title="Inflation Dynamics • Regime Shifts • Macro Drivers">
     <img src="https://raw.githubusercontent.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/main/_other/READ_ME_Back.jpg"
-         alt="US Inflation Phenomenon"
          height="100">
   </a>
+
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law"
      title="Sensitive Geopolitical Situations • Policy NLP • Narrative Detection">
     <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
-         alt="NLP Geopolitical Situation"
          height="100">
   </a>
-</h1>
+</div>
 
-<h3 align="center">🧮 • CURRENT FOCUS AREA • 🧭</h3>
+<!-- SECTION HEADER (tight spacing) -->
+<div align="center" style="font-size:22px; font-weight:700; margin-top:20px;">
+  🧮 • CURRENT FOCUS AREA • 🧭
+</div>
 
 ### 🗣️ Fed Speak
 
