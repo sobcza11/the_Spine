@@ -142,24 +142,25 @@ OracleChambers operates as a documented **interpretation subsystem** within the 
 
 ---
 
+<h2> 🧠 **Purpose & Vision**</h2>
 
-# 🧠 Purpose & Vision
+The purpose of the_OracleChambers is simple:
 
-The aim of the_OracleChambers is straightforward:
-
-> **Explain *why* the economy is shifting — not just *what* is happening.**
+> **Reveal *why* macro conditions are shifting — not just describe *what* moved.**
 
 It produces both analyst-ready and machine-ready insights through multi-modal reasoning:
 
+The system produces research-grade and machine-grade insights by fusing signals, narratives, and probability structures into decision-support outputs.
+
 ### Outputs include:
 
-- Leadership-grade macro briefs  
-- Scenario-aware market commentaries  
-- Policy-drift & communication-shift insights  
-- Multi-lens risk narratives  
-- Machine-readable narrative atoms  
+- Leadership-level macro briefs  
+- Scenario-aware commentary & forward paths  
+- Policy-drift and communication-shift diagnostics  
+- Multi-lens risk narratives across asset classes  
+- Machine-readable “narrative atoms” for downstream modeling  
 - Regime-aware probability adjustments  
-- Interpretability across inflation, labor, policy, and global signals  
+- Interpretability across inflation, labor, policy, and global dynamics  
 
 ---
 
