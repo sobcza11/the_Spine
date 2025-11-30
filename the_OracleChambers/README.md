@@ -42,7 +42,6 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 
 <p align="center">
-
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
      title="Inflation Dynamics • Regime Shifts • Macro Drivers">
     <img src="https://raw.githubusercontent.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/main/_other/READ_ME_Back.jpg"
@@ -55,7 +54,6 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
          alt="NLP Geopolitical Situation"
          height="100">
   </a>
-
 </p>
 
 ---
