@@ -39,13 +39,18 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 ---
 
 <!-- H2 — Signals line -->
-<h2 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🔮</h2>
+<h2 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
+Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🔮
+</h2>
 
-<hr style="margin-top:5px; margin-bottom:20px;">
 
-<!-- PORTFOLIO SECTION (Header + Images, no spacing gaps) -->
+<!-- SINGLE LARGE SEPARATOR (no mini-line above or below) -->
+<hr style="height:2px; border:none; background:#999; margin-top:10px; margin-bottom:25px;" />
+
+
+<!-- PORTFOLIO SECTION (Header + Images, aligned cleanly) -->
 <h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
-  PORTFOLIO
+PORTFOLIO
 </h3>
 
 <div align="center" style="margin-top:0;">
