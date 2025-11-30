@@ -75,7 +75,6 @@ VinV operates as a meta-factor, not a static Value replication — blending:
 The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
 
-##
 
 ### 🔥 **WTI Pressure Index** (*WPI*)  
 
