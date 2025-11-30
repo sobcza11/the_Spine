@@ -1,4 +1,4 @@
-# <p align="center">the_OracleChambers • 🔮 • Signals → Insights</p>
+# <p align="center">*the*_OracleChambers • 🔮 • Signals → Insights</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
@@ -21,7 +21,7 @@
 
 ---
 
-**the_OracleChambers** is a domain-specific `Mini AI Lab` that **transforms** *economic signals*, *Fed communication*, & *cross-market* **data** into:
+***the*_OracleChambers** is a domain-specific `Mini AI Lab` that **transforms** *economic signals*, *Fed communication*, & *cross-market* **data** into:
 - **Macro briefs** — regime overview • dominant forces • near-term pressure points
 - **Structured narratives** — coherent explanations • fused signals • interpretable logic
 - **Scenario paths** — projected states • probability deltas • scenario surfaces
@@ -29,12 +29,12 @@
 
 It functions as the **interpretive intelligence layer** on top of:
 
-- **the_Spine** — macro fusion engine  
+- ***the*_Spine** — macro fusion engine  
 - **FedSpeak NLP** — policy-sensitive communication analysis  
 
 **Together**, these create a ***collective-intelligence research stack***—**each part reinforcing the others**—mirroring the **collaborative architecture** behind *modern macro research labs*, *policy groups*, and *global central-bank analysis* teams.
 
-We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
+We position *the*_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
 ---
 
@@ -83,7 +83,7 @@ NLP-ready sentiment leaves extracted from major FOMC communication channels:
 - **Fed Speeches** — speaker-level tone, certainty, forward-guidance signals
 
 All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretation inside both  
-**the_Spine** and **the_OracleChambers**.
+***the*_Spine** and ***the*_OracleChambers**.
 
 ##
 
@@ -125,7 +125,7 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 
 <h3 align="center">🔧 • FUTURE ORACLES (Planned) • 🧪</h3>
 
-The_OracleChambers serves as the staging ground for additional interpretive layers:
+*the*_OracleChambers serves as the staging ground for additional interpretive layers:
 
 - **Contagion analysis** — Fed language → cross-asset reactions  
 - **WRDS extensions** — CRSP/Compustat factor overlays  
@@ -133,7 +133,7 @@ The_OracleChambers serves as the staging ground for additional interpretive laye
 - **Association-Rule mining** — narrative patterns → market co-moves  
 - **Macro regime narratives** — Dalio/Gundlach “Illusory Wealth Regime” alignment  
 
-OracleChambers operates as a documented **interpretation subsystem** within the broader `the_Spine` architecture.
+*the*_OracleChambers operates as a documented **interpretation subsystem** within the broader ***the*_Spine** architecture.
 
 
 ---
@@ -143,7 +143,7 @@ OracleChambers operates as a documented **interpretation subsystem** within the 
 
 <h2>🧠 Purpose & Vision</h2>
 
-The purpose of the_OracleChambers is simple:
+The purpose of *the*_OracleChambers is simple:
 
 > **Reveal *why* macro conditions are shifting — not just describe *what* moved.**
 
@@ -165,12 +165,12 @@ The system produces research-grade and machine-grade insights by fusing signals,
 
 <h2>🧩 System Architecture</h2>
 
-the_OracleChambers sits as the interpretive layer on top of a focused macro stack:
+*the*_OracleChambers sits as the interpretive layer on top of a focused macro stack:
 
-- **the_Spine / Spine-Glob-US** — macro fusion engine (regimes, probabilities, canonical macro leaves)  
+- ***the*_Spine / Spine-Glob-US** — macro fusion engine (regimes, probabilities, canonical macro leaves)  
 - **FedSpeak engine** — policy-sensitive NLP and structured communication leaves  
 
-Within the_OracleChambers, interpretation is organized into dedicated **Macro Labs**:
+Within *the*_OracleChambers, interpretation is organized into dedicated **Macro Labs**:
 
 - **🗣️ Fed Speak • Macro Policy Lab** — FOMC language, tone, and uncertainty mapped into macro-state and risk interpretation.  
 - **💼 VinV • Equity Style-Timing Lab** — equity-style rotation signal detecting when Value moves into or out of favor vs. the U.S. equity market.  
