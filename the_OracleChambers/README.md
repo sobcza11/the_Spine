@@ -104,7 +104,7 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 
 ### 🌏 **CGRI** • *Geopolitical Signal Lab*
 
-**CGRI** (*China Geopolitical Risk Index*) is a narrative-driven tension signal capturing how **China’s economic and political posture under Xi Jinping** transmits into global macro conditions and risk premia.
+**CGRI** (*China Geopolitical Risk Index*) is a narrative-driven tension signal capturing & monitoring observed **economic** and **political posture** under **Xi Jinping** affecting **China’s global macro** conditions and **risk premia**.
 
 - **State-media tone** — escalation vs. de-escalation cues in official press and commentary.  
 - **Militarized activity** — frequency/intensity of PLA flights and maneuvers around Taiwan & the South China Sea.  
