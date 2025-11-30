@@ -52,7 +52,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
      target="_blank"
      rel="noopener noreferrer"
-     title="Macro Drivers • Inflation Dynamics • Regime Shifts"
+     title="Econometrics | Macro Drivers • Inflation Dynamics • Regime Shifts"
      style="display:inline-block; margin-right:10px;">
     <img src="https://raw.githubusercontent.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/main/_other/READ_ME_Back.jpg"
          height="110">
@@ -60,7 +60,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law"
      target="_blank"
      rel="noopener noreferrer"
-     title="Narrative Detection • Sens. GeoPol. Situation • PoliSci NLP"
+     title="NLP | PoliSciv • Narrative Detection • Sens. GeoPol. Situation"
      style="display:inline-block; margin-left:10px;">
     <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
          height="110">
@@ -104,13 +104,14 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
 
 
-### 🔥 **WPI**  
+### 🌏 **CGRI**
 
-**WTI Pressure Index** **(*WPI*)** interprets weekly EIA crude & Cushing storage flows to identify supply–demand imbalance and inflation-linked energy pressure.
-- **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
-- **Cushing storage shifts** — hub-level imbalances driving front-month pricing.
-- **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
-- **RULE** - *A storage-curve stress indicator linked to inflationary impulse*
+**China Geopolitical Risk Index** (***CGRI***) A compact tension signal tracking **China’s Xi-era geopolitical posture** and its macro spillovers.
+
+- **State-media tone** — escalation vs. easing  
+- **PLA regional activity** — Taiwan & South China Sea intensity  
+- **Policy-language drift** — sovereignty & security red-line shifts  
+- **RULE** — adjusts global scenario weights for China-linked growth, trade, and inflation risk  
 
 ##
 
