@@ -46,9 +46,9 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 <h3 align="center">🧮 • CURRENT FOCUS AREA • 🧭</h3>
 
-### 🗣️ Fed Speak (OracleChambers | Fed)
+### 🗣️ Federal Communications Analysis
 
-NLP-ready sentiment leaves built around major FOMC communication streams:
+NLP-ready sentiment leaves extracted from major FOMC communication channels:
 
 - **Beige Book** — district-level tone on business, labor, wages, prices  
 - **FOMC Minutes** — uncertainty, disagreement, inflation vs. growth concern  
