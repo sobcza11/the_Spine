@@ -59,7 +59,7 @@ NLP-ready sentiment leaves built around major FOMC communication streams:
 All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretation inside both  
 **the_Spine** and **the_OracleChambers**.
 
----
+##
 
 <h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
@@ -76,7 +76,7 @@ A U.S. equity factor tracking when value is “in fashion”:
 
 Stored under **`p_Equity_US/VinV/`**, integrated into **MAIN_p**.
 
----
+##
 
 <h3 align="center">🔧 • FUTURE ORACLES (Planned) • 🧪</h3>
 
