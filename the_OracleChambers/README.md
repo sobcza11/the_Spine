@@ -44,8 +44,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ## <p align="center">**Insight Machine** • 🧠⚙️ • From Signals → Radical Clarity</p>
 ---
-
-### 🧭 • CURRENT FOCUS AREA
+<h3 align="center"><u>🧭 • CURRENT FOCUS AREA</u></h3>
 ### 🗣️ Fed Speak (OracleChambers | Fed)
 
 NLP-ready sentiment leaves built around major FOMC communication streams:
