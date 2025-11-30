@@ -164,7 +164,7 @@ The system produces research-grade and machine-grade insights by fusing signals,
 
 ---
 
-# 🧩 System Architecture
+<h2>🧩 System Architecture</h2>
 
 the_OracleChambers sits as the interpretive layer on top of a focused macro stack:
 
