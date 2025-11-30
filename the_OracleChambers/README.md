@@ -65,7 +65,7 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 ### 💼 **VinV (Value in Vogue)**  
 
-A U.S. equity factor tracking when value is “in fashion”:
+A U.S. equity factor tracking <u>when value is “<i>in fashion</i>”</u>:
 
 - Valuation spread  
 - 12-month relative performance  
