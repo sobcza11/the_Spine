@@ -49,7 +49,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon">
     <img src="https://raw.githubusercontent.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/main/_other/READ_ME_Back.jpg"
          alt="US Inflation Phenomenon"
-         height="165">
+         height="88">
   </a>
 
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -57,7 +57,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law">
     <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
          alt="HK Security Law NLP"
-         height="165">
+         height="88">
   </a>
 
 </p>
