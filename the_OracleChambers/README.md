@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/PMI--CPMAI-Observant-DAA520" />
   <img src="https://img.shields.io/badge/NLP-Policy_Sensitive-483D8B" />
   <img src="https://img.shields.io/badge/Probabilistic-Scenario_Paths-2E2B5F" />
+  
   <img src="https://img.shields.io/badge/Creative_Commons-Attribution-2F4F4F" />
 </p>
 
@@ -44,9 +45,9 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 <hr style="margin-top:5px; margin-bottom:20px;">
 
 <!-- PORTFOLIO SECTION (Header + Images, no spacing gaps) -->
-<h2 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
+<h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
   PORTFOLIO
-</h2>
+</h3>
 
 <div align="center" style="margin-top:0;">
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
