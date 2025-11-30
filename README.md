@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Python-blue" />
   <img src="https://img.shields.io/badge/MacroFusion-Enabled-blueviolet" />
   <img src="https://img.shields.io/badge/Explainability-SHAP_%26_Permutation-success" />
-  <img src="https://img.shields.io/badge/TimeSeries-Dly, Wkly_%26_Mnthly-lightgrey" />
+  <img src="https://img.shields.io/badge/TimeSeries-DY, WK_%26_MNTH-YR-lightgrey" />
   <img src="https://img.shields.io/badge/MLOps-Gov._%26_Ver.-yellowgreen" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" />
 </p>
