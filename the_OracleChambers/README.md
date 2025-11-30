@@ -6,11 +6,10 @@
   <img src="https://img.shields.io/badge/Explainability-SHAP_%7C_Permutation-228B22" />
   <img src="https://img.shields.io/badge/TimeSeries-Daily_%7C_Weekly_%7C_Monthly-696969" />
   <img src="https://img.shields.io/badge/MLOps-Governance_%7C_Versioning-556B2F" />
-  <img src="https://img.shields.io/badge/License-MIT-006400" />
   <img src="https://img.shields.io/badge/PMI--CPMAI-Observant-DAA520" />
   <img src="https://img.shields.io/badge/NLP-Policy_Sensitive-483D8B" />
   <img src="https://img.shields.io/badge/Probabilistic-Scenario_Paths-2E2B5F" />
-  
+  <img src="https://img.shields.io/badge/License-MIT-006400" />  
   <img src="https://img.shields.io/badge/Creative_Commons-Attribution-2F4F4F" />
 </p>
 
