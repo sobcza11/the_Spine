@@ -73,7 +73,7 @@ PORTFOLIO
   🧮 • CURRENT FOCUS AREA • 🧭
 </h3>
 
-### 🗣️ Fed Speak
+### 🗣️ Fed Speak • *Macro Policy Lab*
 
 NLP-ready sentiment leaves extracted from major FOMC communication channels:
 
@@ -90,9 +90,9 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 <h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
-### 💼 **VinV**  
+### 💼 **VinV** • *Equity Style-Timing Lab*
 
-**VinV** (*Value in Vogue*) VA rule-based equity timing signal detecting when Value style exposures rotate into or out of favor versus the U.S. equity market.
+**VinV** (*Value in Vogue*) is an equity-style rotation signal designed to detect when *Value* exposures move **into** or **out of** favor relative to the U.S. equity market.
 
 VinV operates as a meta-factor, not a static Value replication — blending:
 - **Valuation differentials**
@@ -103,7 +103,7 @@ VinV operates as a meta-factor, not a static Value replication — blending:
 The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
 
-### 🌏 **CGRI**
+### 🌏 **CGRI** • *Geopolitical Signal Lab*
 
 **CGRI** (*China Geopolitical Risk Index*) is a narrative-driven tension signal capturing how **China’s economic and political posture under Xi Jinping** transmits into global macro conditions and risk premia.
 
@@ -113,7 +113,7 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 - **RULE** – *A geopolitical-risk overlay adjusting scenario weights for China-linked growth, trade, and inflation paths.*  
 
 
-### 🔥 **WTI Pressure**  
+### 🔥 **WTI Pressure** • *Inflation Dynamics Lab*
 
 **WTI Pressure Index** **(*WTI_PI*)** interprets weekly EIA crude & Cushing storage flows to identify supply–demand imbalance and inflation-linked energy pressure.
 - **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
