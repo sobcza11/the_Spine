@@ -36,9 +36,9 @@ It functions as the **interpretive intelligence layer** on top of:
 
 We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
-<p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+---
 
-<h3 align="center">•    PORTFOLIO    •</h3>
+<h3 align="center">• PORTFOLIO •</h3>
 
 
 <p align="center">
@@ -76,7 +76,7 @@ NLP-ready sentiment leaves extracted from major FOMC communication channels:
 - **FOMC Minutes** — uncertainty, disagreement, inflation vs. growth concern  
 - **FOMC Statement** — paragraph-level hawkish/dovish stance  
 - **Fed SEP (Dot Plot)** — rate-path & neutral-rate sentiment  
-- **Fed Speeches** — speaker-level tone, certainty, forward-guidance signals  
+- **Fed Speeches** — speaker-level tone, certainty, forward-guidance signals
 
 All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretation inside both  
 **the_Spine** and **the_OracleChambers**.
@@ -93,6 +93,7 @@ VinV operates as a meta-factor, not a static Value replication — blending:
 - **Valuation differentials**
 - **Relative performance trends**
 - **Participation breadth**
+- *A rules-based timing overlay detecting rotation pressure in style factors.*
 
 The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
@@ -104,6 +105,7 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 - **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
 - **Cushing storage shifts** — hub-level imbalances driving front-month pricing.
 - **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
+- *A storage-curve stress indicator linked to inflationary impulse*
 
 ##
 
