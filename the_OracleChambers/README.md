@@ -104,7 +104,7 @@ VinV operates as a meta-factor, not a static Value replication — blending:
 - **Valuation differentials**
 - **Relative performance trends**
 - **Participation breadth**
-- **Mantra** - *A rules-based timing overlay detecting rotation pressure in style factors.*
+- **RULE** - *A rules-based timing overlay detecting rotation pressure in style factors.*
 
 The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
@@ -116,7 +116,7 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 - **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
 - **Cushing storage shifts** — hub-level imbalances driving front-month pricing.
 - **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
-- **Mantra** - *A storage-curve stress indicator linked to inflationary impulse*
+- **RULE** - *A storage-curve stress indicator linked to inflationary impulse*
 
 ##
 
