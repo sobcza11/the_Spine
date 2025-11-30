@@ -29,26 +29,21 @@ And apply **AI & MLOps techniques** to analyze **Fed communications**, **economi
 
 ---
 
-## ⭐ Overview
+## ⭐ Multi-Domain Macro Intelligence Layer
 
-**the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create:
-- a **Stable** & 
-- **Interpretable Multi-domain Macro Signal**.
+**the_Spine** is a multi-domain intelligence layer unifying **global breadth** with **US micro-depth**.
 
-Every component (a “pipe”) produces a validated canonical signal (its "home"), & all pipes flow into **`MAIN_p`**, the unified fusion engine:
-- ***the_Spine's*** | **Signal Integration Point**
+Each domain outputs a canonical, governed signal; together they form `MAIN_p`, the macro-integration point.
 
-The system integrates:
+It synthesizes:
 
-- 🌐 Global FX basis & cross-currency spreads  
-- 🌍 Global PMI diffusion & export cycles  
-- 🛢️ Commodity flows (Brent/WTI spread, LNG, shipping rates)  
-- 🇺🇸 WTI inventories & refinery throughput  
-- 🧩 US inflation decomposition (core, supercore, shelter)  
-- 🗣️ Fed & macro sentiment signals (Beige Book, FOMC Minutes, SEP, Statements, Speeches)  
-- 📊 Equity VinV (“Value in Vogue”) regime model  
-- 🔐 Governance, drift detection, schema validation, versioned lineage  
-This is the **Hybrid Spine** — the union of *Global context* & *US precision timing*.
+- Global FX & PMI cycles
+- Commodity & energy flows
+- US inflation micro-components
+- Fed sentiment & communication tone
+- VinV equity-style rotation
+
+**Outcome**: an interpretable Multi-domain macro-state engineered for stability, explainability, & real-time adaptability
 
 ---
 
