@@ -36,7 +36,7 @@ It functions as the **interpretive intelligence layer** on top of:
 
 We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
---- 
+---
 
 <!-- H2 — Signals line -->
 <h2 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🔮</h2>
@@ -67,7 +67,8 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   </a>
 </div>
 
-<!-- H3 — CURRENT FOCUS AREA -->
+---
+
 <h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
   🧮 • CURRENT FOCUS AREA • 🧭
 </h3>
