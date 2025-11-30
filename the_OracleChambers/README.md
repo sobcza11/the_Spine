@@ -60,7 +60,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law"
      target="_blank"
      rel="noopener noreferrer"
-     title="NLP | PoliSciv • Narrative Detection • Sens. GeoPol. Situation"
+     title="NLP | PoliSci • Narrative Detection • Sens. GeoPol. Situation"
      style="display:inline-block; margin-left:10px;">
     <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
          height="110">
@@ -103,16 +103,6 @@ VinV operates as a meta-factor, not a static Value replication — blending:
 The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
 
-
-### 🔥 **WTI Pressure**  
-
-**WTI Pressure Index** **(*WTI_PI*)** interprets weekly EIA crude & Cushing storage flows to identify supply–demand imbalance and inflation-linked energy pressure.
-- **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
-- **Cushing storage shifts** — hub-level imbalances driving front-month pricing.
-- **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
-- **RULE** - *A storage-curve stress indicator linked to inflationary impulse*
-
-
 ### 🌏 **CGRI**
 
 **CGRI** (*China Geopolitical Risk Index*) is a narrative-driven tension signal capturing how **China’s economic and political posture under Xi Jinping** transmits into global macro conditions and risk premia.
@@ -122,7 +112,17 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 - **Policy language drift** — shifts in wording around sovereignty, reunification, and security “red lines.”  
 - **RULE** – *A geopolitical-risk overlay adjusting scenario weights for China-linked growth, trade, and inflation paths.*  
 
+
+### 🔥 **WTI Pressure**  
+
+**WTI Pressure Index** **(*WTI_PI*)** interprets weekly EIA crude & Cushing storage flows to identify supply–demand imbalance and inflation-linked energy pressure.
+- **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
+- **Cushing storage shifts** — hub-level imbalances driving front-month pricing.
+- **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
+- **RULE** - *A storage-curve stress indicator linked to inflationary impulse*
+
 ##
+
 
 <h3 align="center">🔧 • FUTURE ORACLES (Planned) • 🧪</h3>
 
