@@ -25,8 +25,12 @@ Bridging micro-signals, PMI, commodities, sentiment, equities/FX, & inflation in
 
 ## ⭐ Overview
 
-**the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create a stable and interpretable multi-domain macro signal.
-Every component (a “pipe”) produces a validated canonical signal, and all pipes flow into **`MAIN_p`**, the unified fusion engine.
+**the_Spine** is a modular, governed macro-intelligence architecture that fuses **global breadth** with **US micro-depth** to create:
+- a **Stable** & 
+- **Interpretable Multi-domain Macro Signal**.
+
+Every component (a “pipe”) produces a validated canonical signal (its "home"), & all pipes flow into **`MAIN_p`**, the unified fusion engine:
+- ***the_Spine's*** | **Signal Integration Point**
 
 The system integrates:
 
