@@ -39,13 +39,13 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 ---
 
 <!-- H2 — Signals line -->
-<h2 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
+<h1 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
 Signals • 🧠 → AI & MLOps • ⚙️ → Radical Clarity • 🔮
-</h2>
-
-<h1 align="center">
-PORTFOLIO
 </h1>
+
+<h2 align="center">
+PORTFOLIO
+</h2>
 
 <div align="center" style="margin-top:0;">
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
