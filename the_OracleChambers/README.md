@@ -40,7 +40,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 <!-- H2 — Signals line -->
 <h2 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
-Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🔮
+Signals • 🧠 → AI & MLOps • ⚙️ → Radical Clarity • 🔮
 </h2>
 
 <!-- PORTFOLIO SECTION (Header + Images, aligned cleanly) -->
