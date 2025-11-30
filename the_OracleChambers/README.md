@@ -1,4 +1,4 @@
-# <p align="center">the_OracleChambers • 🔮 • Signals → Insights</p>
+# <p align="center">the OracleChambers • 🔮 • Signals → Insights</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
