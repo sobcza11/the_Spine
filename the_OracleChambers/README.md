@@ -72,6 +72,7 @@ A U.S. equity factor tracking when value is “in fashion”:
 - Breadth (% of value names outperforming)  
 - Composite **VinV Score** ∈ [-1, 1]  
 - Regimes: `out_of_favor → transition → in_vogue`
+- Pending approval: WRDS Access for CRSP/Compustat overlays
 
 Stored under **`p_Equity_US/VinV/`**, integrated into **MAIN_p**.
 
