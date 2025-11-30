@@ -47,6 +47,10 @@ Signals • 🧠 → AI & MLOps • ⚙️ → Radical Clarity • 🔮
 PORTFOLIO
 </h1>
 
+<h4 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
+*(hover over, for info)*
+</h4>
+
 <div align="center" style="margin-top:0;">
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
      target="_blank"
