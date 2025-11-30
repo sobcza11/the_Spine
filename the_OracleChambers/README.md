@@ -63,9 +63,9 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 <h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
-### 💼 **VinV • *Value in Vogue***  
+### 💼 **VinV**  
 
-A rule-based equity timing signal detecting when Value style exposures rotate into or out of favor versus the U.S. equity market.
+**VinV** (*Value in Vogue*) VA rule-based equity timing signal detecting when Value style exposures rotate into or out of favor versus the U.S. equity market.
 
 VinV operates as a meta-factor, not a static Value replication — blending:
 - **Valuation differentials**
