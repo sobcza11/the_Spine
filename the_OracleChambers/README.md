@@ -43,11 +43,6 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 Signals • 🧠 → ML • ⚙️ → Radical Clarity • 🔮
 </h2>
 
-
-<!-- SINGLE LARGE SEPARATOR (no mini-line above or below) -->
-<hr style="height:2px; border:none; background:#999; margin-top:10px; margin-bottom:25px;" />
-
-
 <!-- PORTFOLIO SECTION (Header + Images, aligned cleanly) -->
 <h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
 PORTFOLIO
