@@ -42,11 +42,11 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ---
 
-<h2 align="center">Signals • 🧠 → Insight Engine • ⚙️ → Radical Clarity • 🧘</h2>
+<h2 align="center">Signals • 🧠 → 'OracleChambers' • ⚙️ → Radical Clarity • 🧘</h2>
 
 <p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
 
-<h3 align="center">📁 • PORTFOLIO • 🧠</h3>
+<h3 align="center"> ~ •~ PORTFOLIO ~• ~ </h3>
 
 <p align="center">
 
@@ -58,7 +58,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law">
     <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
-         alt="HK Security Law NLP"
+         alt="NLP Geopolitical Situation "
          height="100">
   </a>
 
