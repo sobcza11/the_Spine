@@ -51,7 +51,11 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 
 **the_Spine** is **the engine**; **OracleChambers** is where humans *interpret* its tea leaves—*signals*—reading them with framework.
 
-OracleChambers is the **interpretive layer** — transforming structural, parquet-based leaves from the_Spine into human-usable macro narratives, regime flags, risk explainers, and scenario commentary.
+OracleChambers is the **interpretive layer** — transforming structural, parquet-based leaves from the_Spine into human-usable:
+- *macro narratives*
+- *regime flags*
+- *risk explainers* 
+- *scenario commentary*
 
 Fed communication outputs land as canonical parquet leaves under `p_Sentiment_US`, ensuring they are fully available for downstream modeling: regime inference, risk-premia overlays, and macro-state explainability.
 
