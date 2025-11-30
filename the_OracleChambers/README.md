@@ -76,9 +76,9 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
 
 
-### 🔥 **WTI Pressure Index** (*WPI*)  
+### 🔥 **WPI**  
 
-**WPI** interprets weekly EIA crude & Cushing storage flows to identify supply–demand imbalance and inflation-linked energy pressure.
+**WTI Pressure Index** (*WPI*) interprets weekly EIA crude & Cushing storage flows to identify supply–demand imbalance and inflation-linked energy pressure.
 - **Inventory deltas** — crude builds vs. draws signaling oversupply or tightening.
 - **Cushing storage shifts** — hub-level imbalances driving front-month pricing.
 - **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
