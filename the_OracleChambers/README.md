@@ -44,7 +44,7 @@ Signals • 🧠 → AI & MLOps • ⚙️ → Radical Clarity • 🔮
 </h1>
 
 <h2 align="center">
-PORTFOLIO
+PORTFOLIO (PRODUCTION-READY)
 </h2>
 
 <div align="center" style="margin-top:0;">
