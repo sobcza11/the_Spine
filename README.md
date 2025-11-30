@@ -25,7 +25,7 @@
 - **FRED** (Federal Reserve Economic Data),
 - **EIA** (Energy Information Administration),
 
-And apply **AI & MLOps techniques** to analyze **Fed communications**, **economic reports**, & **market movements** to dynamically predict inflationary pressures, growth risks, and other macroeconomic variables, *among other data streams & future potential opportunities.*
+And apply CPMAI-aligned **AI** & **MLOps techniques** to analyze *Fed communications*, *economic reports*, & *market movements*, dynamically ***forecasting inflation pressures***, ***growth risks***, & ***broader macro-economic conditions***, with extensibility for future data streams
 
 ---
 
@@ -47,10 +47,10 @@ It synthesizes:
 
 ---
 
-## 🔮 the_OracleChambers 
+## 🔮 *the*_OracleChambers 
 ### *Human Interface to the_Spine* | [Click Here](https://github.com/sobcza11/the_Spine/tree/main/the_OracleChambers)
 
-**the_Spine** is **the engine**; **OracleChambers** is where humans *interpret* its tea leaves—*signals*—reading them with framework.
+***the*_Spine** is **the engine**; **OracleChambers** is where humans *interpret* its tea leaves—*signals*—reading them with framework.
 
 OracleChambers is the **interpretive layer** — transforming structural, parquet-based leaves from the_Spine into human-usable:
 - *macro narratives*
@@ -72,7 +72,7 @@ To scale cleanly, the project introduces **RCpacks (Regional Canonical Packs)** 
 
 ### G20 Global Future Expansion (AE & EM RCpacks)
 
-Based on development status — `the_Spine`'s primary **macro segmentation  mirrors** the frameworks **applied by central banks** and **quantitative research** teams.
+Based on development status — ***the*_Spine's** primary **macro segmentation  mirrors** the frameworks **applied by central banks** and **quantitative research** teams.
 
 - **Advanced Economies** (***AE-RCpack***)
   - **Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU**
