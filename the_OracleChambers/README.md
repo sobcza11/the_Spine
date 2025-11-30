@@ -36,7 +36,6 @@ It functions as the **interpretive intelligence layer** on top of:
 
 We position the_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
 
-
 <p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
 
 <h3 align="center">•    PORTFOLIO    •</h3>
@@ -44,15 +43,17 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 <p align="center">
 
-  <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon">
+  <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
+     title="Inflation Dynamics • Regime Shifts • Macro Drivers">
     <img src="https://raw.githubusercontent.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/main/_other/READ_ME_Back.jpg"
          alt="US Inflation Phenomenon"
          height="100">
   </a>
 
-  <a href="https://github.com/sobcza11/NLP_HK_Security_Law">
+  <a href="https://github.com/sobcza11/NLP_HK_Security_Law"
+     title="Sensitive Geopolitical Situations • Policy NLP • Narrative Detection">
     <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
-         alt="NLP Geopolitical Situation "
+         alt="NLP Geopolitical Situation"
          height="100">
   </a>
 
