@@ -60,7 +60,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ---
 
-### <p align="right">Signals • 🧠 → 'OracleChambers' • ⚙️ → Radical Clarity • 🧘/p>
+### <p align="right">Signals • 🧠 → 'OracleChambers' • ⚙️ → Radical Clarity • 🧘</p>
 
 ---
 
