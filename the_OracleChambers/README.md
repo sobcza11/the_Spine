@@ -65,16 +65,15 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 ### 💼 **VinV • *Value in Vogue***  
 
-A **U.S. equity** factor **tracking** when **value** is “<i>in fashion</i>”:
+A rule-based equity timing signal detecting when Value style exposures rotate into or out of favor versus the U.S. equity market.
 
-- Valuation spread  
-- 12-month relative performance  
-- Breadth (% of value names outperforming)  
-- Composite **VinV Score** ∈ [-1, 1]  
-- Regimes: `out_of_favor → transition → in_vogue`
-- Pending approval: WRDS Access for CRSP/Compustat overlays
+VinV operates as a meta-factor, not a static Value replication — blending:
+- **Valuation differentials**
+- **Relative performance trends**
+- **Participation breadth**
 
-Stored under **`p_Equity_US/VinV/`**, integrated into **MAIN_p**.
+The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
+`out_of_favor → transition → in_vogue`
 
 ##
 
