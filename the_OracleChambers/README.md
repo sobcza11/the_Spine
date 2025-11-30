@@ -40,9 +40,8 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ### <p align="right">***🧠 the_Spine •*** [Return](https://github.com/sobcza11/the_Spine/tree/main)</p>
 
----
 
-<p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+<p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
 
 <h3 align="center"> ~ •~ PORTFOLIO ~• ~ </h3>
 
@@ -61,6 +60,8 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
   </a>
 
 </p>
+
+---
 
 <h2 align="center">Signals • 🧠 → 'OracleChambers' • ⚙️ → Radical Clarity • 🧘</h2>
 
