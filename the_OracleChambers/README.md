@@ -106,12 +106,27 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 
 ### 🌏 **CGRI**
 
-**China Geopolitical Risk Index** (***CGRI***) A compact tension signal tracking **China’s Xi-era geopolitical posture** and its macro spillovers.
+**China Geopolitical Risk Index** (***CGRI***) tracks the **strategic posture of China during the Xi era**, treating geopolitics as a *flow* that shapes markets the same way liquidity, credit creation, and policy cycles do.
 
-- **State-media tone** — escalation vs. easing  
-- **PLA regional activity** — Taiwan & South China Sea intensity  
-- **Policy-language drift** — sovereignty & security red-line shifts  
-- **RULE** — adjusts global scenario weights for China-linked growth, trade, and inflation risk  
+- **Narrative Signals** — what China says through state media  
+- **Behavioral Signals** — what China *does* via PLA activity in Taiwan/SCS  
+- **Intent Signals** — how policy language shifts around sovereignty and “core interests”  
+- **RULE** — CGRI shifts the balance of global regime probabilities, raising the odds of:  
+  - regional conflict premium  
+  - trade fragmentation  
+  - commodity supply-chain instability  
+
+
+### 🌏 **CGRI**
+
+**CGRI** (*China Geopolitical Risk Index*) is a narrative-driven tension signal capturing how **China’s economic and political posture under Xi Jinping** transmits into global macro conditions and risk premia.
+
+- **State-media tone** — escalation vs. de-escalation cues in official press and commentary.  
+- **Militarized activity** — frequency/intensity of PLA flights and maneuvers around Taiwan & the South China Sea.  
+- **Policy language drift** — shifts in wording around sovereignty, reunification, and security “red lines.”  
+- **RULE** – *A geopolitical-risk overlay adjusting scenario weights for China-linked growth, trade, and inflation paths.*  
+
+
 
 ##
 
