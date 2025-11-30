@@ -53,50 +53,6 @@ Fed communication outputs land as canonical parquet leaves under `p_Sentiment_US
 
 ---
 
-**CURRENT FOCUS AREA**:
-
-- 🗣️ **Fed Speak (OracleChambers | Fed)**  
-  NLP-ready sentiment leaves built around FOMC communications:
-  - **Beige Book** – district-level tone on business, labor, wages, prices  
-  - **FOMC Minutes** – uncertainty, disagreement, inflation vs. growth concern  
-  - **FOMC Statement** – paragraph-level hawkish/dovish stance and focus  
-  - **Fed SEP (Dot Plot)** – shifts in rate path & neutral rate sentiment  
-  - **Fed Speeches** – speaker-level tone, certainty, forward-guidance hints  
-
-  These are wired into canonical parquet leaves under `p_Sentiment_US`, ready for downstream
-  modeling (regime flags, risk premia overlays, or macro-state explainers).
-
-All outputs integrate into `p_Sentiment_US` for consistent macro interpretation inside the_Spine and OracleChambers
-
----
-
-**PLANNED FOCUS AREA(s)**:
-
-- 📊 **VinV (Value in Vogue)**  
-  A US equity factor that tracks when **value is “in fashion”** relative to growth/market:
-  - Valuation spread (value vs. benchmark)  
-  - 12-month relative performance spread  
-  - Breadth (% of value names outperforming)  
-  - Composite **VinV Score** ∈ [-1, 1] and discrete regimes:
-    `out_of_favor → transition → in_vogue`  
-
-  Stored under `p_Equity_US/VinV/` and cleanly integrated into `MAIN_p`.
-
---- 
-
-- 🧪 **Future Oracles (Planned)**  
-  OracleChambers is the “staging ground” for next-generation interpretive layers:
-  - **Contagion analysis** – Fed language shifts → cross-asset response patterns  
-  - **WRDS-backed extensions** – CRSP/Compustat earnings & factor overlays (pending access)  
-  - **Corporate & earnings sentiment drift** – fraud / overstatement red-flags  
-  - **Association Rule Mining** – news / narrative patterns → market co-moves  
-  - **Macro regime narratives** – linking Dalio/Gundlach “Illusory Wealth Regime” style views
-    to Spine signals  
-
-OracleChambers operates as a documented **interpretation subsystem** within the broader `the_Spine` architecture.
-
----
-
 ## 🌍 G20 Global Expansion (AE & EM RCpacks)
 ***Extending the Spine to a Globally Balanced Architecture***
 
