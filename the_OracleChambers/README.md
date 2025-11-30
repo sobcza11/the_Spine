@@ -43,6 +43,10 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 Signals • 🧠 → AI & MLOps • ⚙️ → Radical Clarity • 🔮
 </h2>
 
+<h1 align="center">
+PORTFOLIO
+</h1>
+
 <div align="center" style="margin-top:0;">
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
      target="_blank"
