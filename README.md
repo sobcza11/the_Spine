@@ -16,10 +16,16 @@
 
 ---
 
-## Governed Global
-### *A US-Hybrid Macro Intelligence Oracle*  
+## Dynamic Quant / Qual Signal Integration
+### *A US-Hybrid Macro Intel Oracle*  
 
-Bridging micro-signals, PMI, commodities, sentiment, equities/FX, & inflation into a unified, interpretable macro-state.
+**Integrate real-time data streams** from various sources such as:
+- **WRDS** (Wharton Research Data Services),
+- **ISM** (Institute for Supply Management),
+- **FRED** (Federal Reserve Economic Data),
+- **EIA** (Energy Information Administration),
+
+And apply **AI & MLOps techniques** to analyze **Fed communications**, **economic reports**, & **market movements** to dynamically predict inflationary pressures, growth risks, and other macroeconomic variables, *among other data streams & future potential opportunities.*
 
 ---
 
