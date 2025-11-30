@@ -166,14 +166,20 @@ The system produces research-grade and machine-grade insights by fusing signals,
 
 # 🧩 System Architecture
 
-the_OracleChambers sits atop a larger macro-analytic family:
+the_OracleChambers sits as the interpretive layer on top of a focused macro stack:
 
-- **the_Spine / Spine-Glob-US** — macro fusion (regimes, probabilities, macro leaves)  
-- **FedSpeak / HKNSL** — policy-sensitive NLP & communication leaves  
-- **MicroLineage / DriftOps** — micro-demand & governance patterns  
+- **the_Spine / Spine-Glob-US** — macro fusion engine (regimes, probabilities, canonical macro leaves)  
+- **FedSpeak engine** — policy-sensitive NLP and structured communication leaves  
 
-OracleChambers ingests these upstream signals and converts them into  
-interpretable outputs: narratives, risk briefs, scenario commentary.
+Within the_OracleChambers, interpretation is organized into dedicated **Macro Labs**:
+
+- **🗣️ Fed Speak • Macro Policy Lab** — FOMC language, tone, and uncertainty mapped into macro-state and risk interpretation.  
+- **💼 VinV • Equity Style-Timing Lab** — equity-style rotation signal detecting when Value moves into or out of favor vs. the U.S. equity market.  
+- **🌏 CGRI • Geopolitical Signal Lab** — China-centric geopolitical risk index linking Xi-era posture to global growth, trade, and risk premia.  
+- **🔥 WTI Pressure • Inflation Dynamics Lab** — WTI storage, curve posture, and flow-based stress index for energy-driven inflation pressure.  
+
+Together, these upstream signals and Macro Labs are fused into  
+**interpretable outputs** — narratives, risk briefs, and scenario-aware commentary.
 
 ```text
 the_OracleChambers/
@@ -181,25 +187,39 @@ the_OracleChambers/
 │  ├─ processed/
 │  │  ├─ narrative_snapshots.parquet
 │  │  ├─ fedspeak_story_blocks.parquet
-│  │  └─ macro_state_briefs.parquet
+│  │  ├─ vinv_rotation_signals.parquet
+│  │  ├─ cgri_tension_scores.parquet
+│  │  └─ wti_pressure_index.parquet
+│  │
 │  ├─ prompts/
 │  │  └─ oracle_prompts.yml
+│  │
 │  └─ vocab/
 │     ├─ macro_terms.json
 │     ├─ tone_lexicon.json
+│     ├─ geopolitics_terms.json
+│     ├─ energy_terms.json
 │     └─ risk_glyphs.json
 │
 ├─ src/
 │  └─ oraclechambers/
 │     ├─ config.py
-│     ├─ registry.py
+│     ├─ registry.py                    # central access to all Macro Labs + Spine
 │     │
 │     ├─ inputs/
-│     │  ├─ spine_loader.py
-│     │  ├─ fedspeak_loader.py
-│     │  └─ markets_loader.py
+│     │  ├─ spine_loader.py             # macro_state_spine_us, fusion outputs
+│     │  ├─ fedspeak_loader.py          # Beige Book, Statements, Minutes, SEP
+│     │  ├─ equity_loader.py            # value spreads, perf metrics (for VinV)
+│     │  ├─ geopolitics_loader.py       # CGRI upstream signals (media, events)
+│     │  └─ energy_loader.py            # EIA weekly, Cushing flows, curves
 │     │
-│     ├─ lenses/
+│     ├─ labs/                           # ← NEW: Macro Labs live here
+│     │  ├─ fedspeak_lab.py              # Macro Policy Lab
+│     │  ├─ vinv_lab.py                  # Equity Style-Timing Lab
+│     │  ├─ cgri_lab.py                  # Geopolitical Signal Lab
+│     │  └─ wti_pressure_lab.py          # Inflation Dynamics Lab
+│     │
+│     ├─ lenses/                         # interpretive modules
 │     │  ├─ inflation_lens.py
 │     │  ├─ labor_lens.py
 │     │  ├─ stability_lens.py
@@ -208,13 +228,16 @@ the_OracleChambers/
 │     ├─ narratives/
 │     │  ├─ macro_state_story.py
 │     │  ├─ fedspeak_story.py
+│     │  ├─ vinv_story.py                # NEW optional: equity-rotation narrative
+│     │  ├─ cgri_story.py                # NEW optional: geopolitical narrative
+│     │  ├─ energy_story.py              # NEW optional: WTI/energy narrative
 │     │  ├─ risk_brief.py
 │     │  └─ scenario_commentary.py
 │     │
 │     ├─ scoring/
-│     │  ├─ coherence.py
-│     │  ├─ stability.py
-│     │  └─ alignment.py
+│     │  ├─ coherence.py                 # cross-lab narrative consistency
+│     │  ├─ stability.py                 # time-series narrative stability
+│     │  └─ alignment.py                 # alignment across Labs + Spine regimes
 │     │
 │     ├─ exporters/
 │     │  ├─ to_markdown.py
@@ -228,7 +251,11 @@ the_OracleChambers/
 └─ notebooks/
    ├─ 01_overview.ipynb
    ├─ 02_macro_narratives.ipynb
-   └─ 03_fedspeak_interpretation.ipynb
+   ├─ 03_fedspeak_interpretation.ipynb
+   ├─ 04_vinv_rotation.ipynb             # NEW demo notebook
+   ├─ 05_cgri_geopolitics.ipynb          # NEW demo notebook
+   └─ 06_wti_pressure.ipynb              # NEW demo notebook
+```
 
 
 
