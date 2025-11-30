@@ -46,7 +46,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 <h3 align="center">🧮 • CURRENT FOCUS AREA • 🧭</h3>
 
-### 🗣️ Federal Communications Analysis
+### 🗣️ Fed Speak
 
 NLP-ready sentiment leaves extracted from major FOMC communication channels:
 
@@ -63,7 +63,7 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 <h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
-### 💼 **VinV (Value in Vogue)**  
+### 💼 **VinV • *Value in Vogue***  
 
 A **U.S. equity** factor **tracking** when **value** is “<i>in fashion</i>”:
 
