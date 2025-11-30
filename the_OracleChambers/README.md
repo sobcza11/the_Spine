@@ -42,7 +42,7 @@ We position the_OracleChambers as a **macro-financial AI Lab** — ***continuous
 
 ---
 
-<p align="center">Signals • 🧠 → Insight Engine • ⚙️ → Radical Clarity • 🧘</p>
+<h2 align="center">Signals • 🧠 → Insight Engine • ⚙️ → Radical Clarity • 🧘</h2>
 
 <p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
 
