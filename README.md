@@ -16,7 +16,7 @@
 
 ---
 
-## Dynamic Quant / Qual Signal Integration
+## 💹 Dynamic (*Quant*, *Qual*) Signal Integration
 ### *A US-Hybrid Macro Intel Oracle*  
 
 **Integrate real-time data streams** from various sources such as:
