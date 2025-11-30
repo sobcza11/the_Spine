@@ -49,7 +49,7 @@ This is the **Hybrid Spine** — the union of *Global context* & *US precision t
 ## 🔮 the_OracleChambers 
 ### *Human Interface to the_Spine* | [Click Here](https://github.com/sobcza11/the_Spine/tree/main/the_OracleChambers)
 
-**the_Spine is the engine; OracleChambers is where humans interpret its signals—reading the tea leaves with structure.**
+**the_Spine** is **the engine**; **OracleChambers** is where humans *interpret* its tea leaves—*signals*—reading them with framework.
 
 OracleChambers is the **interpretive layer** — transforming structural, parquet-based leaves from the_Spine into human-usable macro narratives, regime flags, risk explainers, and scenario commentary.
 
