@@ -143,23 +143,24 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 
 <h2>🧠 Purpose & Vision</h2>
 
-The purpose of *the*_OracleChambers is simple:
+***the*_OracleChambers converts raw macro signals into governed, explainable intelligence**.
+Rooted in a CPMAI-aligned workflow, it brings structure, transparency, and calm interpretability to an otherwise noisy global system.
 
-> **Reveal *why* macro conditions are shifting — not just describe *what* moved.**
+It interprets the outputs of the_Spine through disciplined, auditable steps—producing narratives, scenario paths, risk diagnostics, and machine-grade features that explain why the macro regime is evolving and how probabilities are shifting.
 
-It produces both analyst-ready and machine-ready insights through multi-modal reasoning:
-
-The system produces research-grade and machine-grade insights by fusing signals, narratives, and probability structures into decision-support outputs.
+Where the_Spine generates signals, ***the*_OracleChambers creates clarity**—a quiet analytical space where complex forces resolve into coherent insight.
 
 ### Outputs include:
 
-- Leadership-level macro briefs  
-- Scenario-aware commentary & forward paths  
-- Policy-drift and communication-shift diagnostics  
-- Multi-lens risk narratives across asset classes  
-- Machine-readable “narrative atoms” for downstream modeling  
-- Regime-aware probability adjustments  
-- Interpretability across inflation, labor, policy, and global dynamics  
+- Macro briefs grounded in evidence & lineage
+- Scenario-aware forward paths tied to regime probabilities
+- Policy-drift diagnostics (tone, emphasis, uncertainty)
+- Cross-asset risk narratives calibrated to macro states
+- Machine-readable “narrative atoms” for modeling pipelines
+-  Regime-aware adjustments across growth, inflation, policy, and global tension
+
+The design philosophy is simple:
+**govern the process, clarify the signal, and let insight emerge without noise**.
 
 ---
 

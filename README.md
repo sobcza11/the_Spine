@@ -20,12 +20,12 @@
 ### *A US-Hybrid Macro Intel Oracle*  
 
 **Integrate real-time data streams** from various sources such as:
-- **WRDS** (Wharton Research Data Services),
-- **ISM** (Institute for Supply Management),
-- **FRED** (Federal Reserve Economic Data),
-- **EIA** (Energy Information Administration),
+- **WRDS** (Wharton Research Data Services)
+- **ISM** (Institute for Supply Management)
+- **FRED** (Federal Reserve Economic Data)
+- **EIA** (Energy Information Administration)
 
-And apply CPMAI-aligned **AI** & **MLOps techniques** to analyze *Fed communications*, *economic reports*, & *market movements*, dynamically ***forecasting inflation pressures***, ***growth risks***, & ***broader macro-economic conditions***, with extensibility for future data streams
+And apply CPMAI-aligned **AI** & **MLOps techniques** to analyze *Fed communications*, *economic reports*, & *market movements*, dynamically ***forecasting inflation pressures***, ***growth risks***, & ***broader macro-economic conditions***, with extensibility for future data streams.
 
 ---
 
