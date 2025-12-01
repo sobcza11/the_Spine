@@ -74,6 +74,8 @@ PORTFOLIO (PRODUCTION-READY)
 
 ### 🗣️ Fed Speak • *Macro Policy Lab*
 
+[**View FedSpeak Module →**](https://github.com/sobcza11/FedSpeak/blob/main/README.md)
+
 NLP-ready sentiment leaves extracted from major FOMC communication channels:
 
 - **Beige Book** — district-level tone on business, labor, wages, prices  
