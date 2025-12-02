@@ -93,6 +93,9 @@ All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretat
 
 ### 💼 **VinV** • *Equity Style-Timing Lab*
 
+[**View FedSpeak Module →**](https://github.com/sobcza11/VinV)
+
+
 **VinV** (*Value in Vogue*) is an equity-style rotation signal designed to detect when *Value* exposures move **into** or **out of** favor relative to the U.S. equity market.
 
 VinV operates as a meta-factor, not a static Value replication — blending:
