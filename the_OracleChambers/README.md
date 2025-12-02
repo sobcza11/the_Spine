@@ -87,10 +87,6 @@ NLP-ready sentiment leaves extracted from major FOMC communication channels:
 All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretation inside both  
 ***the*_Spine** and ***the*_OracleChambers**.
 
-##
-
-<h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
-
 ### 💼 **VinV** • *Equity Style-Timing Lab*
 
 [**View FedSpeak Module →**](https://github.com/sobcza11/VinV)
@@ -106,6 +102,10 @@ VinV operates as a meta-factor, not a static Value replication — blending:
 
 The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
+
+##
+
+<h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
 ### 🌏 **CGRI** • *Geopolitical Signal Lab*
 
