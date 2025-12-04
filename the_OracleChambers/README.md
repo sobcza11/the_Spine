@@ -1,19 +1,17 @@
-# <p align="center">*the*_OracleChambers • 🔮 • Signals → Insights</p>
+# <p align="center">FedSpeak • 🔊 • Policy-Language Intelligence Engine</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
-  <img src="https://img.shields.io/badge/PMI--CPMAI-Observant-DAA520" />
-  <img src="https://img.shields.io/badge/MacroFusion-Enabled-4B0082" />
-  <img src="https://img.shields.io/badge/Explainability-SHAP_%7C_Permutation-228B22" />
-  <img src="https://img.shields.io/badge/TimeSeries-Daily_%7C_Weekly_%7C_Monthly-696969" />
-  <img src="https://img.shields.io/badge/MLOps-Governance_%7C_Versioning-556B2F" />
+  <img src="https://img.shields.io/badge/PMI--CPMAI-Phase_III_Aligned-DAA520" />
+  <img src="https://img.shields.io/badge/MacroFusion-Policy_Signals_Ready-4B0082" />
+  <img src="https://img.shields.io/badge/Explainability-Rule_Based_%7C_Bounded-228B22" />
+  <img src="https://img.shields.io/badge/TimeSeries-Event_%7C_Daily-696969" />
+  <img src="https://img.shields.io/badge/MLOps-Governance_%7C_Drift_Monitoring-556B2F" />
   <img src="https://img.shields.io/badge/NLP-Policy_Sensitive-483D8B" />
-  <img src="https://img.shields.io/badge/Probabilistic-Scenario_Paths-2E2B5F" />
+  <img src="https://img.shields.io/badge/Diagnostics-Drift_%7C_Stability-2E2B5F" />
   <img src="https://img.shields.io/badge/License-MIT-006400" />  
   <img src="https://img.shields.io/badge/Creative_Commons-Attribution-2F4F4F" />
 </p>
-
-
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
@@ -21,72 +19,81 @@
 
 ---
 
-***the*_OracleChambers** is a domain-specific `Mini AI Lab` that **transforms** *economic signals*, *Fed communication*, & *cross-market* **data** into:
-- **Macro briefs** — regime overview • dominant forces • near-term pressure points
-- **Structured narratives** — coherent explanations • fused signals • interpretable logic
-- **Scenario paths** — projected states • probability deltas • scenario surfaces
-- **Policy-drift insights**— tone direction • language weighting • forward-guidance signals
+**FedSpeak** is a domain-specific `Policy Language Engine` that **transforms** *Federal Reserve communication* into:
 
-It functions as the **interpretive intelligence layer** on top of:
+- **Policy-risk signals** — inflation_risk • growth_risk • policy_bias  
+- **Regime labels** — hawkish • neutral • dovish • unknown  
+- **Drift diagnostics** — Z-score deviations from a governed baseline  
+- **Stability summaries** — quarterly tone consistency & variability  
+
+It functions as the **policy-language backbone** underneath:
 
 - ***the*_Spine** — macro fusion engine  
-- **FedSpeak NLP** — policy-sensitive communication analysis  
+- ***the*_OracleChambers** — interpretive / narrative layer  
 
-**Together**, these create a ***collective-intelligence research stack***—**each part reinforcing the others**—mirroring the **collaborative architecture** behind *modern macro research labs*, *policy groups*, and *global central-bank analysis* teams.
+**Together**, these create a **macro-financial research stack** in which Fed communication is:
 
-We position *the*_OracleChambers as a **macro-financial AI Lab** — ***continuously evolving*** under a **CPMAI-aligned** approach to *governed*, *structured*, *transparent reasoning* designed to produce **decision-support intelligence**, not just analytics.
+> **canonicalized → bounded → governed → fused → interpreted**  
+
+FedSpeak is positioned as an **institution-grade policy module** — built under a **CPMAI-aligned** approach to *governed*, *reproducible*, *transparent* policy reasoning designed to support **academic research, RegTech workstreams, and supervisory-style analytics**.
 
 ---
 
 <!-- H2 — Signals line -->
 <h1 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
-Signals • 🧠 → AI & MLOps • ⚙️ → Radical Clarity • 🔮
+Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
 </h1>
 
 <h2 align="center">
-PORTFOLIO (PRODUCTION-READY)
+CURRENT FOCUS AREA (PRODUCTION-READY)
 </h2>
 
-<div align="center" style="margin-top:0;">
-  <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon"
-     target="_blank"
-     rel="noopener noreferrer"
-     title="Econometrics | Macro Drivers • Inflation Dynamics • Regime Shifts"
-     style="display:inline-block; margin-right:10px;">
-    <img src="https://raw.githubusercontent.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/main/_other/READ_ME_Back.jpg"
-         height="110">
-  </a>
-  <a href="https://github.com/sobcza11/NLP_HK_Security_Law"
-     target="_blank"
-     rel="noopener noreferrer"
-     title="NLP | PoliSci • Narrative Detection • Sens. GeoPol. Situation"
-     style="display:inline-block; margin-left:10px;">
-    <img src="https://raw.githubusercontent.com/sobcza11/NLP_HK_Security_Law/main/_supporting/READ%20ME_HK.jpg"
-         height="110">
-  </a>
-</div>
+### 🗣️ FedSpeak • *Macro Policy Engine*
+
+NLP-ready policy leaves extracted from major **FOMC communication channels**:
+
+- **Beige Book** — district-level tone on business, labor, wages, and prices  
+- **FOMC Minutes** — uncertainty, disagreement, risk balance around growth vs. inflation  
+- **FOMC Statements** — paragraph-level hawkish/dovish posture and forward guidance  
+- **Fed SEP (Dot Plot)** — rate-path & neutral-rate sentiment embeddings  
+- **Fed Speeches** — speaker-specific tone, conviction, and drift over time  
+
+Outputs are standardized into **bounded, interpretable policy scores**:
+
+- `inflation_risk ∈ [-1, 1]`  
+- `growth_risk ∈ [-1, 1]`  
+- `policy_bias ∈ [-1, 1]`  
+- `policy_regime_label ∈ {hawkish, neutral, dovish, unknown}`  
+
+All signals integrate into **`p_Sentiment_US`** and the fusion layer, forming the policy spine for both  
+***the*_Spine** and ***the*_OracleChambers**.
 
 ---
 
 <h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
-  🧮 • CURRENT FOCUS AREA • 🧭
+  🧮 • DIAGNOSTICS & GOVERNANCE • 🛡️
 </h3>
 
-### 🗣️ Fed Speak • *Macro Policy Lab*
+### 📊 Drift & Stability Labs
 
+<<<<<<< HEAD
 [**View FedSpeak Module →**](https://github.com/sobcza11/FedSpeak/blob/main/README.md)
 
 NLP-ready sentiment leaves extracted from major FOMC communication channels:
+=======
+FedSpeak is treated as a **live, governed engine**, not a static script.  
+Two lightweight diagnostics sit on top of the canonical leaf:
+>>>>>>> a172957 (Add FedSpeak TRANCHE 1 documentation and governance updates)
 
-- **Beige Book** — district-level tone on business, labor, wages, prices  
-- **FOMC Minutes** — uncertainty, disagreement, inflation vs. growth concern  
-- **FOMC Statement** — paragraph-level hawkish/dovish stance  
-- **Fed SEP (Dot Plot)** — rate-path & neutral-rate sentiment  
-- **Fed Speeches** — speaker-level tone, certainty, forward-guidance signals
+- **Feature Baseline** — `fedspeak_feature_baseline.json`  
+  - Historical mean & std for `inflation_risk`, `growth_risk`, `policy_bias`  
+  - Serves as a *reference regime* for drift monitoring  
 
-All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretation inside both  
-***the*_Spine** and ***the*_OracleChambers**.
+- **Drift Report** — `fedspeak_drift_report.parquet`  
+  - Event-level Z-scores vs. the baseline  
+  - Highlights when policy language meaningfully diverges from “normal”  
 
+<<<<<<< HEAD
 ### 💼 **VinV** • *Equity Style-Timing Lab*
 
 [**View FedSpeak Module →**](https://github.com/sobcza11/VinV)
@@ -143,121 +150,87 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 
 ---
 ### <p align="right">***🧠 the_Spine •*** [Return](https://github.com/sobcza11/the_Spine/tree/main)</p>
+=======
+- **Stability Summary** — `fedspeak_stability.parquet`  
+  - Quarterly aggregates: mean & std of key policy metrics  
+  - Captures *tone stability* and *variability* over calendar time  
+
+Each artifact is paired with:
+
+- **Metadata sidecar (`.meta.json`)**  
+- **Schema hash** over column names  
+- **Record count checks**  
+- **Pytest-based validation**  
+
+Ensuring that **no structural change** to FedSpeak goes unnoticed.
+>>>>>>> a172957 (Add FedSpeak TRANCHE 1 documentation and governance updates)
 
 ---
 
-<h2>🧠 Purpose & Vision</h2>
+<h3 align="center">🗂️ • DATA PRODUCTS • 📑</h3>
 
-***the*_OracleChambers converts raw macro signals into governed, explainable intelligence**.
-Rooted in a CPMAI-aligned workflow, it brings structure, transparency, and calm interpretability to an otherwise noisy global system.
-
-It interprets the outputs of the_Spine through disciplined, auditable steps—producing narratives, scenario paths, risk diagnostics, and machine-grade features that explain why the macro regime is evolving and how probabilities are shifting.
-
-Where the_Spine generates signals, ***the*_OracleChambers creates clarity**—a quiet analytical space where complex forces resolve into coherent insight.
-
-### Outputs include:
-
-- Macro briefs grounded in evidence & lineage
-- Scenario-aware forward paths tied to regime probabilities
-- Policy-drift diagnostics (tone, emphasis, uncertainty)
-- Cross-asset risk narratives calibrated to macro states
-- Machine-readable “narrative atoms” for modeling pipelines
--  Regime-aware adjustments across growth, inflation, policy, and global tension
-
-The design philosophy is simple:
-**govern the process, clarify the signal, and let insight emerge without noise**.
-
----
-
-<h2>🧩 System Architecture</h2>
-
-*the*_OracleChambers sits as the interpretive layer on top of a focused macro stack:
-
-- ***the*_Spine / Spine-Glob-US** — macro fusion engine (regimes, probabilities, canonical macro leaves)  
-- **FedSpeak engine** — policy-sensitive NLP and structured communication leaves  
-
-Within *the*_OracleChambers, interpretation is organized into dedicated **Macro Labs**:
-
-- **🗣️ Fed Speak • Macro Policy Lab** — FOMC language, tone, and uncertainty mapped into macro-state and risk interpretation.  
-- **💼 VinV • Equity Style-Timing Lab** — equity-style rotation signal detecting when Value moves into or out of favor vs. the U.S. equity market.  
-- **🌏 CGRI • Geopolitical Signal Lab** — China-centric geopolitical risk index linking Xi-era posture to global growth, trade, and risk premia.  
-- **🔥 WTI Pressure • Inflation Dynamics Lab** — WTI storage, curve posture, and flow-based stress index for energy-driven inflation pressure.  
-
-Together, these upstream signals and Macro Labs are fused into  
-**interpretable outputs** — narratives, risk briefs, and scenario-aware commentary.
+### 🧾 Core Artifacts
 
 ```text
-the_OracleChambers/
-├─ data/
-│  ├─ processed/
-│  │  ├─ narrative_snapshots.parquet
-│  │  ├─ fedspeak_story_blocks.parquet
-│  │  ├─ vinv_rotation_signals.parquet
-│  │  ├─ cgri_tension_scores.parquet
-│  │  └─ wti_pressure_index.parquet
-│  │
-│  ├─ prompts/
-│  │  └─ oracle_prompts.yml
-│  │
-│  └─ vocab/
-│     ├─ macro_terms.json
-│     ├─ tone_lexicon.json
-│     ├─ geopolitics_terms.json
-│     ├─ energy_terms.json
-│     └─ risk_glyphs.json
-│
-├─ src/
-│  └─ oraclechambers/
-│     ├─ config.py
-│     ├─ registry.py                    # central access to all Macro Labs + Spine
-│     │
-│     ├─ inputs/
-│     │  ├─ spine_loader.py             # macro_state_spine_us, fusion outputs
-│     │  ├─ fedspeak_loader.py          # Beige Book, Statements, Minutes, SEP
-│     │  ├─ equity_loader.py            # value spreads, perf metrics (for VinV)
-│     │  ├─ geopolitics_loader.py       # CGRI upstream signals (media, events)
-│     │  └─ energy_loader.py            # EIA weekly, Cushing flows, curves
-│     │
-│     ├─ labs/                           # ← NEW: Macro Labs live here
-│     │  ├─ fedspeak_lab.py              # Macro Policy Lab
-│     │  ├─ vinv_lab.py                  # Equity Style-Timing Lab
-│     │  ├─ cgri_lab.py                  # Geopolitical Signal Lab
-│     │  └─ wti_pressure_lab.py          # Inflation Dynamics Lab
-│     │
-│     ├─ lenses/                         # interpretive modules
-│     │  ├─ inflation_lens.py
-│     │  ├─ labor_lens.py
-│     │  ├─ stability_lens.py
-│     │  └─ global_lens.py
-│     │
-│     ├─ narratives/
-│     │  ├─ macro_state_story.py
-│     │  ├─ fedspeak_story.py
-│     │  ├─ vinv_story.py                # NEW optional: equity-rotation narrative
-│     │  ├─ cgri_story.py                # NEW optional: geopolitical narrative
-│     │  ├─ energy_story.py              # NEW optional: WTI/energy narrative
-│     │  ├─ risk_brief.py
-│     │  └─ scenario_commentary.py
-│     │
-│     ├─ scoring/
-│     │  ├─ coherence.py                 # cross-lab narrative consistency
-│     │  ├─ stability.py                 # time-series narrative stability
-│     │  └─ alignment.py                 # alignment across Labs + Spine regimes
-│     │
-│     ├─ exporters/
-│     │  ├─ to_markdown.py
-│     │  ├─ to_json.py
-│     │  └─ to_deck_outline.py
-│     │
-│     └─ utils/
-│        ├─ formatting.py
-│        └─ time_windows.py
-│
-└─ notebooks/
-   ├─ 01_overview.ipynb
-   ├─ 02_macro_narratives.ipynb
-   ├─ 03_fedspeak_interpretation.ipynb
-   ├─ 04_vinv_rotation.ipynb             # NEW demo notebook
-   ├─ 05_cgri_geopolitics.ipynb          # NEW demo notebook
-   └─ 06_wti_pressure.ipynb              # NEW demo notebook
-```
+data/processed/FedSpeak/
+├─ combined_policy_leaf.parquet
+├─ combined_policy_leaf.meta.json
+├─ fedspeak_drift_report.parquet
+├─ fedspeak_drift_report.meta.json
+├─ fedspeak_stability.parquet
+└─ fedspeak_stability.meta.json
+
+config/
+└─ fedspeak_feature_baseline.json
+
+<h3 align="center">🔧 • CPMAI ALIGNMENT • 📐</h3>
+
+FedSpeak is built to mirror CPMAI discipline:
+- **Phase I** – Business Understanding
+
+Policy language treated as a first-class macro driver
+- **Phase II** – Data Understanding
+
+Channels mapped explicitly (Beige, Minutes, Statements, SEP, Speeches)
+- **Phase III** – Data Preparation
+
+Canonicalization → feature construction → leaf writing → metadata
+- **Phase IV** – Modeling (Lightweight)
+
+Bounded risk scoring and simple regime rules (no black-box models)
+- **Phase V** – Evaluation
+
+Drift & stability artifacts with statistical baselines
+- **Phase VI** – Deployment
+
+***Reproducible scripts***, ***config-driven paths***, and ***automated tests*.**
+
+
+<h3 align="center">🚀 • DEVELOPER QUICKSTART • 🧩</h3>
+
+From the project root:
+
+# Rebuild the main policy leaf (v2)
+python -m scripts.upgrade_fedspeak_leaf_v2
+
+# Initialize / refresh baseline statistics
+python -m scripts.fedspeak_init_baseline
+
+# Compute drift diagnostics
+python -m scripts.fedspeak_compute_drift
+
+# Compute quarterly stability metrics
+python -m scripts.fedspeak_compute_stability
+
+# Run validation tests
+pytest tests/test_artifacts_validation.py
+
+
+
+<p align="right">🧠 the_Spine • Return
+</p>
+
+---
+
+If you want, next we can do the **matching VinV block in the same style**, so FedSpeak + VinV look like.
+

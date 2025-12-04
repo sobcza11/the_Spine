@@ -13,7 +13,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 from fed_speak.config import PROCESSED_DIR, TONE_SUFFIX
 
-sia = SentimentIntensityAnalyzer()
+sia = SentimentIntensityAnalyzer()      
 
 
 def _rule_based_tone(sentence: str, category: str) -> str:

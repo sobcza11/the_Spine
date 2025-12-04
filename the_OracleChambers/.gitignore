@@ -1,0 +1,26 @@
+# Ignore all processed data artifacts
+data/
+local_data/
+warehouse/
+
+# Ignore pipelines & leaf outputs
+*_leaf.parquet
+*.parquet
+*.meta.json
+*.json
+*.csv
+
+# Ignore notebooks & large binary outputs
+*.ipynb
+*.pkl
+*.zip
+*.pdf
+*.pptx
+*.png
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log

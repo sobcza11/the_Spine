@@ -1,356 +1,283 @@
-"""
-beige_lda.py
-
-HKNSL-style topic engine for BeigeBook:
-
-- Use BeigeBook canonical sentences + VADER scores
-- Split into Positive / Negative buckets (optional)
-- Build Bag of Words with bigrams/trigrams
-- Train LDA with coherence scoring
-- Export:
-    - beige_topics.parquet        (topic per sentence)
-    - beige_lda_model/            (gensim LDA model)
-    - beige_dict.pkl              (gensim Dictionary)
-    - beige_lda_vis.html          (pyLDAvis visualization)
-    - beige_topics_rbl.parquet    (top sentences per topic for RBL work)
-"""
-
+import logging
 from pathlib import Path
-from typing import List, Tuple, Dict
+from typing import List, Tuple
 
 import pandas as pd
-import numpy as np
-
-import gensim
-from gensim import corpora
-from gensim.models import CoherenceModel
-
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-
-from fed_speak.config import PROCESSED_DIR
-
-# Make sure you have nltk data installed at least once:
-# nltk.download('punkt')
-# nltk.download('stopwords')
-
-try:
-    import pyLDAvis
-    import pyLDAvis.gensim_models as gensimvis
-    HAS_PYLDAVIS = True
-except ImportError:
-    HAS_PYLDAVIS = False
+from gensim import corpora, models
+from gensim.models.coherencemodel import CoherenceModel
+from gensim.utils import simple_preprocess
 
 
-# -----------------------------
-# 1. Loading & basic filtering
-# -----------------------------
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-def load_beige_sentences() -> pd.DataFrame:
+
+# Minimal, self-contained English stopword list to avoid NLTK dependency.
+# You can expand this later if you want.
+EN_STOPWORDS = {
+    "a", "about", "above", "after", "again", "against", "all", "almost", "also",
+    "am", "an", "and", "any", "are", "as", "at",
+    "be", "because", "been", "before", "being", "below", "between", "both",
+    "but", "by",
+    "can",
+    "did", "do", "does", "doing", "down", "during",
+    "each",
+    "few", "for", "from", "further",
+    "had", "has", "have", "having", "he", "her", "here", "hers", "herself",
+    "him", "himself", "his", "how",
+    "i", "if", "in", "into", "is", "it", "its", "itself",
+    "just",
+    "more", "most", "my", "myself",
+    "no", "nor", "not", "now",
+    "of", "off", "on", "once", "only", "or", "other", "our", "ours",
+    "ourselves", "out", "over", "own",
+    "same", "she", "should", "so", "some", "such",
+    "than", "that", "the", "their", "theirs", "them", "themselves", "then",
+    "there", "these", "they", "this", "those", "through", "to", "too",
+    "under", "until", "up",
+    "very",
+    "was", "we", "were", "what", "when", "where", "which", "while", "who",
+    "whom", "why", "will", "with",
+    "you", "your", "yours", "yourself", "yourselves",
+}
+
+
+def load_canonical_sentences(canonical_path: Path) -> pd.DataFrame:
     """
-    Load BeigeBook canonical sentences joined with tone (VADER) data.
-    Expects:
-        PROCESSED_DIR / 'BeigeBook' / 'canonical_sentences.parquet'
-        PROCESSED_DIR / 'BeigeBook' / 'sentiment_scores.parquet'
+    Expected minimal columns:
+        - event_id
+        - sentence_id
+        - sentence_text
+    Additional columns are preserved but not required.
     """
-    canon_path = PROCESSED_DIR / "BeigeBook" / "canonical_sentences.parquet"
-    tone_path = PROCESSED_DIR / "BeigeBook" / "sentiment_scores.parquet"
-
-    df_canon = pd.read_parquet(canon_path)
-    df_tone = pd.read_parquet(tone_path)
-
-    # They should have same rows & ordering; if they don't, merge on event_id + sentence_id
-    if "sentence_id" in df_canon.columns and "sentence_id" in df_tone.columns:
-        df = pd.merge(
-            df_canon,
-            df_tone[
-                [
-                    "event_id",
-                    "sentence_id",
-                    "vader_compound",
-                    "tone_leaf",
-                ]
-            ],
-            on=["event_id", "sentence_id"],
-            how="inner",
-        )
-    else:
-        # fallback: assume identical index
-        df = pd.concat([df_canon, df_tone[["vader_compound", "tone_leaf"]]], axis=1)
-
+    df = pd.read_parquet(canonical_path)
+    required = {"event_id", "sentence_id", "sentence_text"}
+    missing = required - set(df.columns)
+    if missing:
+        raise ValueError(f"Canonical sentences parquet missing required columns: {missing}")
     return df
 
 
-def filter_for_topic_modeling(
-    df: pd.DataFrame,
-    comp_pos_threshold: float = 0.2,
-    comp_neg_threshold: float = -0.2,
-    min_len: int = 5,
-) -> pd.DataFrame:
+def simple_clean_tokens(text: str, stop_words: set) -> List[str]:
     """
-    Filter BeigeBook sentences for LDA:
-    - Drop very short sentences
-    - (Optionally) split into positive / negative buckets, or keep all
-
-    For now, we keep all sentences but store a 'sent_bucket' label.
+    Tokenize and lowercase a sentence, filtering out stopwords and very short tokens.
+    Uses gensim.simple_preprocess (no NLTK dependency).
     """
-    df = df.copy()
-    df["sent_len"] = df["sentence_text"].str.split().str.len()
-    df = df[df["sent_len"] >= min_len]
-
-    def _bucket(comp):
-        if comp >= comp_pos_threshold:
-            return "positive"
-        elif comp <= comp_neg_threshold:
-            return "negative"
-        return "neutral"
-
-    df["sent_bucket"] = df["vader_compound"].apply(_bucket)
-    return df.reset_index(drop=True)
+    tokens = simple_preprocess(text, deacc=True, min_len=2)
+    return [t for t in tokens if t not in stop_words]
 
 
-# -----------------------------
-# 2. Tokenization & n-grams
-# -----------------------------
-
-def tokenize_and_clean(text: str, stop_words: set) -> List[str]:
+def build_corpus(
+    sentences: List[str],
+    stop_words: set,
+) -> Tuple[corpora.Dictionary, List[List[tuple]], List[List[str]]]:
     """
-    Simple tokenizer + lowercasing + stopword removal + alpha filtering.
+    Returns dictionary, corpus (BoW), and cleaned_docs (list of token lists).
     """
-    tokens = word_tokenize(text.lower())
-    tokens = [t for t in tokens if t.isalpha()]
-    tokens = [t for t in tokens if t not in stop_words and len(t) > 2]
-    return tokens
+    cleaned_docs = [simple_clean_tokens(s, stop_words) for s in sentences]
 
+    # Filter out empty docs
+    cleaned_docs = [doc for doc in cleaned_docs if len(doc) > 0]
 
-def build_bigrams_trigrams(
-    texts: List[List[str]],
-    min_count: int = 5,
-    threshold: float = 10.0,
-) -> Tuple[gensim.models.Phrases, gensim.models.Phrases]:
-    """
-    Build bigram and trigram gensim Phrases models.
-    """
-    bigram = gensim.models.Phrases(texts, min_count=min_count, threshold=threshold)
-    trigram = gensim.models.Phrases(bigram[texts], threshold=threshold)
+    if not cleaned_docs:
+        raise ValueError("No non-empty documents after cleaning; check input text or stopword list.")
 
-    bigram_mod = gensim.models.phrases.Phraser(bigram)
-    trigram_mod = gensim.models.phrases.Phraser(trigram)
-
-    return bigram_mod, trigram_mod
-
-
-def apply_ngrams(
-    texts: List[List[str]],
-    bigram_mod: gensim.models.Phrases,
-    trigram_mod: gensim.models.Phrases,
-) -> List[List[str]]:
-    """
-    Apply learned bigram + trigram models.
-    """
-    return [trigram_mod[bigram_mod[doc]] for doc in texts]
-
-
-# -----------------------------
-# 3. LDA + Coherence
-# -----------------------------
-
-def build_dictionary_corpus(
-    texts: List[List[str]],
-) -> Tuple[corpora.Dictionary, List[List[Tuple[int, int]]]]:
-    """
-    Build gensim dictionary & BoW corpus.
-    """
-    dictionary = corpora.Dictionary(texts)
+    dictionary = corpora.Dictionary(cleaned_docs)
+    # Basic filtering – tune as needed
     dictionary.filter_extremes(no_below=5, no_above=0.5)
-    corpus = [dictionary.doc2bow(text) for text in texts]
-    return dictionary, corpus
+    corpus = [dictionary.doc2bow(doc) for doc in cleaned_docs]
+
+    return dictionary, corpus, cleaned_docs
 
 
-def train_lda_with_coherence(
-    texts: List[List[str]],
-    dictionary: corpora.Dictionary,
-    corpus: List[List[Tuple[int, int]]],
-    k_values: List[int] = None,
-) -> Tuple[gensim.models.LdaModel, int, List[Tuple[int, float]]]:
+def train_lda_for_k(
+    corpus,
+    dictionary,
+    cleaned_docs: List[List[str]],
+    k_values: List[int],
+) -> Tuple[int, models.LdaModel, float]:
     """
-    Train LDA across candidate topic numbers and pick best by coherence.
+    Train LDA for each k and pick the best by coherence.
+    Returns (best_k, best_model, best_coherence).
     """
-    if k_values is None:
-        k_values = [5, 8, 10, 12, 15]
-
-    best_model = None
     best_k = None
-    best_coh = -np.inf
-    results: List[Tuple[int, float]] = []
+    best_model = None
+    best_coherence = float("-inf")
 
+    logger.info(f"Training LDA models for k in {k_values}...")
     for k in k_values:
-        lda = gensim.models.LdaMulticore(
+        logger.info(f"Training LDA(k={k})...")
+        model = models.LdaModel(
             corpus=corpus,
             id2word=dictionary,
             num_topics=k,
             random_state=42,
             passes=10,
-            workers=2,
-            chunksize=2000,
+            alpha="auto",
+            eta="auto",
         )
         coherence_model = CoherenceModel(
-            model=lda,
-            texts=texts,
+            model=model,
+            texts=cleaned_docs,
             dictionary=dictionary,
             coherence="c_v",
         )
-        coh = coherence_model.get_coherence()
-        results.append((k, coh))
-        print(f"[LDA] k={k}, coherence={coh:.4f}")
+        coherence = coherence_model.get_coherence()
+        logger.info(f"k={k} coherence={coherence:.3f}")
 
-        if coh > best_coh:
-            best_coh = coh
-            best_model = lda
+        if coherence > best_coherence:
             best_k = k
+            best_model = model
+            best_coherence = coherence
 
-    assert best_model is not None
-    print(f"[LDA] Best k={best_k} with coherence={best_coh:.4f}")
-    return best_model, best_k, results
+    if best_model is None:
+        raise RuntimeError("Failed to train any valid LDA model.")
+
+    logger.info(f"Best LDA(k={best_k}) coherence={best_coherence:.3f}")
+    return best_k, best_model, best_coherence
 
 
-# -----------------------------
-# 4. Topic assignment & RBL
-# -----------------------------
-
-def assign_topics_to_sentences(
+def build_topics_parquet(
     df: pd.DataFrame,
-    lda_model: gensim.models.LdaModel,
-    corpus: List[List[Tuple[int, int]]],
+    corpus,
+    model: models.LdaModel,
+    output_path: Path,
 ) -> pd.DataFrame:
     """
-    For each sentence (doc), assign dominant topic + probability.
-    """
-    dominant_topics = []
-    topic_probs = []
+    For each sentence (row in df), attach topic_id and topic_prob of the dominant topic.
 
-    for doc_bow in corpus:
-        if not doc_bow:
-            dominant_topics.append(None)
-            topic_probs.append(0.0)
+    NOTE: For simplicity, we recompute topic distribution for each sentence directly
+    from its text, rather than trying to perfectly align df rows with the corpus.
+    """
+    topic_rows = []
+    for idx, row in df.iterrows():
+        text = str(row["sentence_text"])
+        tokens = simple_clean_tokens(text, EN_STOPWORDS)
+        bow = model.id2word.doc2bow(tokens)
+        if not bow:
+            topic_rows.append((idx, None, 0.0))
             continue
 
-        topic_dist = lda_model.get_document_topics(doc_bow, minimum_probability=0.0)
-        topic_id, prob = max(topic_dist, key=lambda x: x[1])
-        dominant_topics.append(topic_id)
-        topic_probs.append(prob)
+        topic_dist = model.get_document_topics(bow)
+        if not topic_dist:
+            topic_rows.append((idx, None, 0.0))
+            continue
 
-    df = df.copy()
-    df["topic_id"] = dominant_topics
-    df["topic_prob"] = topic_probs
-    return df
+        # Dominant topic
+        dominant_topic, prob = max(topic_dist, key=lambda x: x[1])
+        topic_rows.append((idx, dominant_topic, float(prob)))
+
+    topic_df = pd.DataFrame(
+        topic_rows,
+        columns=["_row_idx", "topic_id", "topic_prob"],
+    )
+
+    merged = (
+        df.reset_index(drop=True)
+        .reset_index(names="_row_idx")
+        .merge(topic_df, on="_row_idx", how="left")
+        .drop(columns=["_row_idx"])
+    )
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    merged.to_parquet(output_path, index=False)
+    logger.info(f"Saved topics parquet to {output_path}")
+    return merged
 
 
-def build_rbl_view(df_topics: pd.DataFrame, top_n: int = 20) -> pd.DataFrame:
+def build_rbl_parquet(
+    topics_df: pd.DataFrame,
+    output_path: Path,
+    top_n_per_topic: int = 10,
+) -> pd.DataFrame:
     """
-    'Reading Between the Lines' helper:
-    select top N sentences per topic by topic_prob.
+    RBL = "Reading Between the Lines" – top N sentences per topic.
+    Expects topics_df to have: event_id, sentence_id, sentence_text, topic_id, topic_prob.
     """
-    subset_rows = []
-    for topic_id, group in df_topics.groupby("topic_id"):
-        top_group = group.nlargest(top_n, "topic_prob")
-        subset_rows.append(top_group.assign(rbl_rank=range(1, len(top_group) + 1)))
-    rbl_df = pd.concat(subset_rows, ignore_index=True)
+    required = {"event_id", "sentence_id", "sentence_text", "topic_id", "topic_prob"}
+    missing = required - set(topics_df.columns)
+    if missing:
+        raise ValueError(f"topics_df missing required columns: {missing}")
+
+    # Drop rows without a valid topic assignment
+    valid = topics_df.dropna(subset=["topic_id"]).copy()
+    if valid.empty:
+        raise ValueError("No valid topic assignments found; RBL parquet would be empty.")
+
+    valid["topic_id"] = valid["topic_id"].astype(int)
+
+    rbl_rows = []
+    for topic_id, group in valid.groupby("topic_id"):
+        top_group = group.sort_values("topic_prob", ascending=False).head(top_n_per_topic)
+        for _, row in top_group.iterrows():
+            rbl_rows.append(
+                {
+                    "topic_id": topic_id,
+                    "event_id": row["event_id"],
+                    "sentence_id": row["sentence_id"],
+                    "sentence_text": row["sentence_text"],
+                    "topic_prob": row["topic_prob"],
+                }
+            )
+
+    rbl_df = pd.DataFrame(rbl_rows)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    rbl_df.to_parquet(output_path, index=False)
+    logger.info(f"Saved RBL parquet to {output_path}")
     return rbl_df
 
 
-# -----------------------------
-# 5. Optional pyLDAvis export
-# -----------------------------
-
-def export_pyldavis(
-    lda_model: gensim.models.LdaModel,
-    corpus: List[List[Tuple[int, int]]],
-    dictionary: corpora.Dictionary,
-    out_path: Path,
-) -> None:
-    if not HAS_PYLDAVIS:
-        print("[WARN] pyLDAvis not installed; skipping visualization export.")
-        return
-    vis_data = gensimvis.prepare(lda_model, corpus, dictionary)
-    pyLDAvis.save_html(vis_data, str(out_path))
-    print(f"[OK] pyLDAvis saved to {out_path}")
-
-
-# -----------------------------
-# 6. Orchestrator
-# -----------------------------
-
-def run_beige_lda() -> None:
+def main() -> None:
     """
-    End-to-end BeigeBook LDA pipeline:
-
-    1) Load canonical sentences + tone
-    2) Filter for LDA
-    3) Tokenize & build bigrams/trigrams
-    4) Build dictionary + corpus
-    5) Train LDA with coherence search
-    6) Assign topics to sentences
-    7) Save:
-        - beige_topics.parquet
-        - beige_topics_rbl.parquet
-        - dictionary + model
-        - pyLDAvis HTML
+    CLI entry point:
+    - loads canonical sentences
+    - trains LDA over multiple k
+    - writes topics + RBL parquets
+    - logs coherence for governance checks
     """
-    out_dir = PROCESSED_DIR / "BeigeBook"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    base_processed = Path("data/processed/BeigeBook")
+    canonical_path = base_processed / "canonical_sentences.parquet"
+    topics_path = base_processed / "beige_topics.parquet"
+    rbl_path = base_processed / "beige_topics_rbl.parquet"
 
-    print("[STEP] Loading BeigeBook sentences + tone…")
-    df = load_beige_sentences()
+    logger.info(f"Loading canonical sentences from {canonical_path}...")
+    df = load_canonical_sentences(canonical_path)
 
-    print("[STEP] Filtering for LDA…")
-    df = filter_for_topic_modeling(df)
-
-    # Tokenization
-    print("[STEP] Tokenizing…")
-    stop_words = set(stopwords.words("english"))
-    texts = [tokenize_and_clean(t, stop_words) for t in df["sentence_text"].tolist()]
-
-    print("[STEP] Building bigrams/trigrams…")
-    bigram_mod, trigram_mod = build_bigrams_trigrams(texts)
-    texts_ngrams = apply_ngrams(texts, bigram_mod, trigram_mod)
-
-    print("[STEP] Building dictionary & corpus…")
-    dictionary, corpus = build_dictionary_corpus(texts_ngrams)
-
-    print("[STEP] Training LDA with coherence search…")
-    lda_model, best_k, coh_results = train_lda_with_coherence(
-        texts_ngrams, dictionary, corpus
+    logger.info("Building corpus...")
+    dictionary, corpus, cleaned_docs = build_corpus(
+        sentences=df["sentence_text"].astype(str).tolist(),
+        stop_words=EN_STOPWORDS,
     )
 
-    # Save dictionary & model
-    dict_path = out_dir / "beige_dict.pkl"
-    model_path = out_dir / "beige_lda_model"
-    dictionary.save(str(dict_path))
-    lda_model.save(str(model_path))
-    print(f"[OK] Dictionary saved to {dict_path}")
-    print(f"[OK] LDA model (k={best_k}) saved to {model_path}")
+    logger.info("Training and selecting best LDA model...")
+    k_values = [5, 8, 10, 12, 15]
+    best_k, best_model, best_coherence = train_lda_for_k(
+        corpus=corpus,
+        dictionary=dictionary,
+        cleaned_docs=cleaned_docs,
+        k_values=k_values,
+    )
+    logger.info(f"Best LDA model has k={best_k} with coherence={best_coherence:.3f}")
 
-    print("[STEP] Assigning topics to sentences…")
-    df_topics = assign_topics_to_sentences(df, lda_model, corpus)
-    topics_path = out_dir / "beige_topics.parquet"
-    df_topics.to_parquet(topics_path, index=False)
-    print(f"[OK] beige_topics.parquet written to {topics_path}")
+    logger.info("Building topics parquet...")
+    topics_df = build_topics_parquet(
+        df=df,
+        corpus=corpus,
+        model=best_model,
+        output_path=topics_path,
+    )
 
-    print("[STEP] Building RBL view…")
-    rbl_df = build_rbl_view(df_topics, top_n=20)
-    rbl_path = out_dir / "beige_topics_rbl.parquet"
-    rbl_df.to_parquet(rbl_path, index=False)
-    print(f"[OK] beige_topics_rbl.parquet written to {rbl_path}")
+    logger.info("Building RBL parquet...")
+    build_rbl_parquet(
+        topics_df=topics_df,
+        output_path=rbl_path,
+        top_n_per_topic=10,
+    )
 
-    # Optional pyLDAvis
-    vis_path = out_dir / "beige_lda_vis.html"
-    export_pyldavis(lda_model, corpus, dictionary, vis_path)
-
-    print("[DONE] BeigeBook LDA pipeline complete.")
+    logger.info("BeigeBook LDA pipeline completed successfully.")
 
 
 if __name__ == "__main__":
-    run_beige_lda()
+    main()
+
 
