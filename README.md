@@ -18,17 +18,17 @@
 
 ## 🌐 Multi-Domain Macro Intelligence Layer
 
-**the_Spine** is a multi-domain intelligence layer unifying **global breadth** with **US micro-depth**.
+***the*_Spine** is a multi-domain intelligence layer unifying **global breadth** with **US micro-depth**.
 
 Each domain outputs a canonical, governed signal; together they form `MAIN_p`, the macro-integration point.
 
 It synthesizes:
 
-- Global FX & PMI cycles
-- Commodity & energy flows
-- US inflation micro-components
-- Fed sentiment & communication tone
-- VinV equity-style rotation
+- **Global** FX & PMI **cycles**
+- Commodity & **energy flows**
+- US **inflation micro-components**
+- **Fed** sentiment & **communication tone**
+- **VinV** equity-style rotation (*VinV does not constitute investment or financial advice*)
 
 **Outcome**: an interpretable Multi-domain macro-state engineered for stability, explainability, & real-time adaptability
 
@@ -61,12 +61,12 @@ To scale cleanly, the project introduces **RCpacks (Regional Canonical Packs)** 
 
 Based on development status — ***the*_Spine's** primary **macro segmentation  mirrors** the frameworks **applied by central banks** and **quantitative research** teams.
 
-- **Advanced Economies** (***AE-RCpack***)
+- 🪴 **Advanced Economies** (***AE-RCpack***)
   - **Australia, Canada, France, Germany, Italy, Japan, Korea, UK, US, EU**
     - *Stable cycles, high-frequency signals, transparent data*
     - *Ideal for PMI, inflation decomposition, yield curve curvature*
 
-- **Emerging Economies** (***EM-RCpack***)
+- 🌱 **Emerging Economies** (***EM-RCpack***)
   - **Argentina, Brazil, China, India, Indonesia, Mexico, Russia, Saudi Arabia, South Africa, Türkiye**
     - *Higher volatility, asymmetric shocks, more signal in FX/commodities*
     - *Ideal for diffusion heatmaps, EM FX basis, commodity sensitivity*

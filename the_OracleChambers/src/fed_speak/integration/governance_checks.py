@@ -63,3 +63,4 @@ def run_tranche1_checks() -> None:
     meta_path = PROCESSED_DIR / "fed_speak_metadata.json"
     with meta_path.open("w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2)
+
