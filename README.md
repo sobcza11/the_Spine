@@ -20,7 +20,6 @@
 ### *A US-Hybrid Macro Intel Oracle*  
 
 **Integrate real-time data streams** from various sources such as:
-- **WRDS** (Wharton Research Data Services)
 - **ISM** (Institute for Supply Management)
 - **FRED** (Federal Reserve Economic Data)
 - **EIA** (Energy Information Administration)
