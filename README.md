@@ -16,18 +16,6 @@
 
 ---
 
-## 💹 Dynamic (*Quant*, *Qual*) Signal Integration
-### *A US-Hybrid Macro Intel Oracle*  
-
-**Integrate real-time data streams** from various sources such as:
-- **ISM** (Institute for Supply Management)
-- **FRED** (Federal Reserve Economic Data)
-- **EIA** (Energy Information Administration)
-
-And apply CPMAI-aligned **AI** & **MLOps techniques** to analyze *Fed communications*, *economic reports*, & *market movements*, dynamically ***forecasting inflation pressures***, ***growth risks***, & ***broader macro-economic conditions***, with extensibility for future data streams.
-
----
-
 ## 🌐 Multi-Domain Macro Intelligence Layer
 
 **the_Spine** is a multi-domain intelligence layer unifying **global breadth** with **US micro-depth**.
@@ -84,6 +72,20 @@ Based on development status — ***the*_Spine's** primary **macro segmentation  
     - *Ideal for diffusion heatmaps, EM FX basis, commodity sensitivity*
 
 ---
+
+
+## 💹 Dynamic (*Quant*, *Qual*) Signal Integration
+### *A US-Hybrid Macro Intel Oracle*  
+
+**Integrate real-time data streams** from various sources such as:
+- **ISM** (Institute for Supply Management)
+- **FRED** (Federal Reserve Economic Data)
+- **EIA** (Energy Information Administration)
+
+And apply CPMAI-aligned **AI** & **MLOps techniques** to analyze *Fed communications*, *economic reports*, & *market movements*, dynamically ***forecasting inflation pressures***, ***growth risks***, & ***broader macro-economic conditions***, with extensibility for future data streams.
+
+---
+
 
 ## 🧩 Architecture (High-Level)
 
