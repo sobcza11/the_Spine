@@ -48,7 +48,7 @@ Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
 CURRENT FOCUS AREA (PRODUCTION-READY)
 </h2>
 
-### 🗣️ FedSpeak • *Macro Policy Engine* • **[*Repo*.]**(https://github.com/sobcza11/FedSpeak)
+### 🗣️ FedSpeak • *Macro Policy Engine* • [*Click here*]([https://github.com/sobcza11/the_Spine/tree/main/the_OracleChambers](https://github.com/sobcza11/FedSpeak))
 NLP-ready policy leaves extracted from major **FOMC communication channels**:
 
 - **Beige Book** — district-level tone on business, labor, wages, and prices  
