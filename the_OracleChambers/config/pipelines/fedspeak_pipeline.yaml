@@ -1,0 +1,73 @@
+# FedSpeak Pipeline Config (Phase III / IV)
+
+pipeline_id: "fedspeak_pipeline"
+version: "v1.0.0"
+owner: "the_Spine / FedSpeak Lab"
+last_updated: "2025-12-04"
+
+channels:
+  beige_book:
+    enabled: true
+    source_type: "html"
+    canonical_output: "data/canonical/FedSpeak/BeigeBook/{release_date}_canonical_sentences.parquet"
+    topic_model:
+      n_topics: 30
+      algorithm: "LDA"
+      max_iter: 200
+    sentiment_model:
+      engine: "VADER"
+      thresholds:
+        pos: 0.05
+        neg: -0.05
+    rbl:
+      enabled: true
+      top_n_per_topic: 20
+
+  minutes:
+    enabled: true
+    source_type: "pdf"
+    canonical_output: "data/canonical/FedSpeak/Minutes/{meeting_date}_canonical_segments.parquet"
+    segmentation:
+      unit: "paragraph"
+      min_tokens: 15
+    sentiment_model:
+      engine: "VADER"
+    risk_balance_detection:
+      enabled: true
+
+  statement:
+    enabled: true
+    source_type: "html"
+    canonical_output: "data/canonical/FedSpeak/Statements/{meeting_date}_canonical_paragraphs.parquet"
+    segmentation:
+      unit: "paragraph"
+    sentiment_model:
+      engine: "VADER"
+
+aggregation:
+  combined_leaf_output: "data/processed/FedSpeak/combined_policy_leaf.parquet"
+  time_granularity: "event"
+  weighting_scheme:
+    beige_book: 0.30
+    minutes: 0.40
+    statement: 0.30
+  normalization:
+    target_range: [-1.0, 1.0]
+    method: "minmax_clipped"
+
+quality_checks:
+  min_records_per_event: 50
+  allow_missing_channels: ["sep", "speech"]
+  strict_channels: ["beige_book", "minutes", "statement"]
+
+metadata:
+  write_meta_files: true
+  meta_output_pattern: "data/canonical/FedSpeak/{channel}/{artifact_basename}_meta.json"
+  include_schema_hash: true
+  include_pipeline_config_version: true
+
+logging:
+  level: "INFO"
+  log_to_file: true
+  logfile: "logs/fedspeak_pipeline.log"
+
