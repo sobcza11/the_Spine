@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # <p align="center">*the*_OracleChambers • 🔊 • Policy-Language Intelligence Engine</p>
+=======
+# <p align="center">the_ • 🔊 • Interpretive Intelligence Layers</p>
+>>>>>>> c4cff42 (Add OracleChambers VS project structure)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
