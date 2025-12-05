@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\Rand Sobczak Jr\AppData\Local\Temp\ipykernel_34996\3117765154.py", line 20, in <module>
+    raw = ensure_required_cols(raw)
+  File "C:\Users\Rand Sobczak Jr\AppData\Local\Temp\ipykernel_34996\1391776141.py", line 146, in ensure_required_cols
+    raise ValueError(f"Missing price columns. Have: {list(d.columns)[:25]}")
+ValueError: Missing price columns. Have: ['Date', 'price', 'dividend', 'ticker']

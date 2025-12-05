@@ -52,13 +52,11 @@ class CftcConfig:
 # ---------------------------------------------------------------------
 
 TRADER_GROUP_MAP = {
-    # These must match the *prefixes* in the TFF column names
-    # e.g. Dealer_Intermediary_Long_All, Asset_Mgr_Inst_Short_All, etc.
-    "Dealer_Intermediary": "DEALER",
-    "Asset_Mgr_Inst": "ASSET_MANAGER",
+    "Dealer": "DEALER",
+    "Asset_Mgr": "ASSET_MANAGER",
     "Lev_Money": "LEVERAGED_FUNDS",
-    "Other_Reportables": "OTHER_REPORTABLES",
-    "Nonreportable_Positions": "NON_REPORTABLES",
+    "Other_Rept": "OTHER_REPORTABLES",
+    "NonRept": "NONREPORTABLES",
 }
 
 
@@ -94,6 +92,10 @@ def load_universe_mapping(cfg: CftcConfig) -> pd.DataFrame:
     if "active" in df_uni.columns:
         df_uni = df_uni[df_uni["active"] == 1].copy()
 
+    # Hard gate: active universe rows must have a real spine_symbol
+    if "spine_symbol" in df_uni.columns:
+        df_uni = df_uni[df_uni["spine_symbol"].notna()].copy()
+
     # Critical: ensure type matches normalized TFF (string)
     df_uni["cftc_market_code"] = (
         df_uni["cftc_market_code"].astype(str).str.strip()
@@ -105,7 +107,16 @@ def load_universe_mapping(cfg: CftcConfig) -> pd.DataFrame:
     if "exchange" in df_uni.columns:
         df_uni["exchange"] = df_uni["exchange"].astype(str).str.strip()
     if "spine_symbol" in df_uni.columns:
-        df_uni["spine_symbol"] = df_uni["spine_symbol"].astype(str).str.strip()
+        df_uni["spine_symbol"] = (
+            df_uni["spine_symbol"]
+            .replace({np.nan: pd.NA})
+            .astype("string")
+            .str.strip()
+        )
+        df_uni.loc[
+            df_uni["spine_symbol"].isin(["", "nan", "None"]),
+            "spine_symbol"
+        ] = pd.NA
     if "asset_class" in df_uni.columns:
         df_uni["asset_class"] = df_uni["asset_class"].astype(str).str.strip()
 
@@ -201,18 +212,16 @@ def normalize_tff_columns(df: pd.DataFrame) -> pd.DataFrame:
         )
 
     # -------- 2) MARKET CODE / NAME DETECTION --------
-    if "CFTC_Market_Code" in df.columns:
-        mc_col = "CFTC_Market_Code"
-    elif "CFTC_Contract_Market_Code" in df.columns:
+    if "CFTC_Contract_Market_Code" in df.columns:
         mc_col = "CFTC_Contract_Market_Code"
     else:
-        raise ValueError(
-            "No recognizable CFTC market code column. "
-            "Expected 'CFTC_Market_Code' or 'CFTC_Contract_Market_Code'. "
-            f"Columns: {list(df.columns)}"
-        )
+        raise KeyError(
+            "Expected 'CFTC_Contract_Market_Code' in raw TFF. "
+            "This is the numeric contract code used by metadata/cftc_cot_universe.csv.")
 
-    if "Market_and_Exchange_Name" in df.columns:
+    if "Market_and_Exchange_Names" in df.columns:
+        mn_col = "Market_and_Exchange_Names"
+    elif "Market_and_Exchange_Name" in df.columns:
         mn_col = "Market_and_Exchange_Name"
     elif "CONTRACT_MARKET_NAME" in df.columns:
         mn_col = "CONTRACT_MARKET_NAME"
@@ -242,6 +251,7 @@ def normalize_tff_columns(df: pd.DataFrame) -> pd.DataFrame:
 
     # -------- 5) PARSE DATE --------
     df["as_of_date"] = pd.to_datetime(df["as_of_date_raw"].astype(str))
+    log.info("[COT] cftc_market_code sample: %s", df["cftc_market_code"].dropna().astype(str).head(10).tolist())
 
     # Standardize code & name
     df["cftc_market_code"] = df["cftc_market_code"].astype(str).str.strip()
@@ -334,6 +344,18 @@ def map_to_spine_symbols(df: pd.DataFrame, df_uni: pd.DataFrame) -> pd.DataFrame
         matched,
         n_sym,
     )
+
+    # --- Coverage gate (QA control) ---
+    min_symbols_warn = 10
+    min_match_rate_warn = 0.10
+    match_rate = matched / max(1, len(df_map))
+
+    if n_sym < min_symbols_warn or match_rate < min_match_rate_warn:
+        log.warning(
+            "[COT][QA] Low universe coverage: symbols=%s (warn<%s), match_rate=%.2f (warn<%.2f). "
+            "Action: expand/complete metadata/cftc_cot_universe.csv (spine_symbol coverage).",
+            n_sym, min_symbols_warn, match_rate, min_match_rate_warn
+        )
 
     # Fallback if universe mapping didn't match anything
     if matched == 0:

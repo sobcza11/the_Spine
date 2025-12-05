@@ -1,0 +1,10 @@
+{
+  "run_id": "20251213T123553Z",
+  "outputs": {
+    "vinv_inputs_raw.parquet": {
+      "rows": 0,
+      "cols": 2,
+      "sha256": "526365b26d9ad82f2640c9dc3d8fadc1eef1ec12c93a29daef386a25cfc80c6e"
+    }
+  }
+}

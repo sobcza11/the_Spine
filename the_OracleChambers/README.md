@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# <p align="center">*the*_OracleChambers • 🔊 • Policy-Language Intelligence Engine</p>
-=======
 # <p align="center">the_ • 🔊 • Interpretive Intelligence Layers</p>
 >>>>>>> c4cff42 (Add OracleChambers VS project structure)
 
@@ -21,25 +18,12 @@
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
 </p>
 
----
+<h2 align="center">
+PORTFOLIO
+</h2>
 
-**FedSpeak** is a domain-specific `Policy Language Engine` that **transforms** *Federal Reserve communication* into:
-
-- **Policy-risk signals** — inflation_risk • growth_risk • policy_bias  
-- **Regime labels** — hawkish • neutral • dovish • unknown  
-- **Drift diagnostics** — Z-score deviations from a governed baseline  
-- **Stability summaries** — quarterly tone consistency & variability  
-
-It functions as the **policy-language backbone** underneath:
-
-- ***the*_Spine** — macro fusion engine  
-- ***the*_OracleChambers** — interpretive / narrative layer  
-
-**Together**, these create a **macro-financial research stack** in which Fed communication is:
-
-> **canonicalized → bounded → governed → fused → interpreted**  
-
-FedSpeak is positioned as an **institution-grade policy module** — built under a **CPMAI-aligned** approach to *governed*, *reproducible*, *transparent* policy reasoning designed to support **academic research, RegTech workstreams, and supervisory-style analytics**.
+https://github.com/sobcza11/The-US-Inflation-Phenomenon
+https://github.com/sobcza11/NLP_HK_Security_Law
 
 ---
 

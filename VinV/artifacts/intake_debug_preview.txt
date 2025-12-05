@@ -1,0 +1,10 @@
+Found files: 2553
+======================================================================
+SAMPLE FILE: C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\the_OracleChambers\VinV_1_0\data_yahoo_combined\A_combined.csv
+RAW BYTES (first 240): b'Date,Open,High,Low,Close,Adj_Close,Volume,Dividend\r\n1999-11-18,32.55,35.77,28.61,31.47,26.35,62546380.0,0.0\r\n1999-11-19,30.71,30.76,28.48,28.88,24.18,15234146.0,0.0\r\n1999-11-22,29.55,31.47,28.66,31.47,26.35,6577870.0,0.0\r\n1999-11-23,30.4,31'
+======================================================================
+SAMPLE FILE: C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\the_OracleChambers\VinV_1_0\data_yahoo_combined\AA_combined.csv
+RAW BYTES (first 240): b'Date,Open,High,Low,Close,Adj_Close,Volume,Dividend\r\n1970-01-02,7.16,7.23,7.16,7.16,1.91,22971.0,0.0\r\n1970-01-05,7.16,7.21,7.07,7.08,1.89,25968.0,0.0\r\n1970-01-06,7.08,7.11,7.01,7.01,1.87,92884.0,0.0\r\n1970-01-07,6.98,6.98,6.96,6.97,1.86,73908'
+======================================================================
+SAMPLE FILE: C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\the_OracleChambers\VinV_1_0\data_yahoo_combined\AAL_combined.csv
+RAW BYTES (first 240): b'Date,Open,High,Low,Close,Adj_Close,Volume,Dividend\r\n2005-09-27,21.05,21.4,19.1,19.3,18.19,961200,0.0\r\n2005-09-28,19.3,20.53,19.2,20.5,19.33,5747900,0.0\r\n2005-09-29,20.4,20.58,20.1,20.21,19.05,1078200,0.0\r\n2005-09-30,20.26,21.05,20.18,21.01,'

@@ -1,0 +1,234 @@
+"""
+01_vinv2_qa.py / 01_vinv2_qa.ipynb
+
+VinV_2.0 QA & sanity checks (excluding COT)
+- Loads VinV Phase 2 panel
+- Optionally loads VinV+Macro panel (if present)
+- Runs basic health checks & summary stats
+- Writes a lightweight QA summary to data/vinv/vinv_2_0/qa/
+"""
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+# ------------------------------------------------------------------------------------
+# 0. ROOT DETECTION (works in script and notebook)
+# ------------------------------------------------------------------------------------
+try:
+    # When running as a .py script
+    ROOT = Path(__file__).resolve().parents[2]  # .../the_Spine
+except NameError:
+    # When running inside a notebook
+    ROOT = Path.cwd()
+    # Try to climb up until we see a plausible project root with /data and /the_OracleChambers or /src
+    for p in [ROOT] + list(ROOT.parents):
+        if (p / "data").exists():
+            ROOT = p
+            break
+
+print(f"[QA] Detected ROOT: {ROOT}")
+
+VINV_PHASE2_PANEL = ROOT / "data" / "vinv" / "vinv_2_0" / "phase2_outputs" / "vinv_monthly_panel_phase2.parquet"
+VINV_WITH_MACRO = ROOT / "data" / "vinv" / "vinv_2_0" / "phase2_outputs" / "vinv_monthly_panel_v2_with_macro.parquet"
+
+QA_OUT_DIR = ROOT / "data" / "vinv" / "vinv_2_0" / "qa"
+QA_OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+print(f"[QA] VinV panel path:      {VINV_PHASE2_PANEL}")
+print(f"[QA] VinV+macro panel:     {VINV_WITH_MACRO}")
+print(f"[QA] QA output directory:  {QA_OUT_DIR}")
+
+
+# ------------------------------------------------------------------------------------
+# 1. LOADERS
+# ------------------------------------------------------------------------------------
+
+def safe_read_parquet(path: Path, label: str) -> pd.DataFrame:
+    """Read parquet or raise a friendly error."""
+    if not path.exists():
+        raise FileNotFoundError(f"[QA] {label} not found at {path}")
+    df = pd.read_parquet(path)
+    print(f"[QA] Loaded {label}: {df.shape}")
+    return df
+
+
+# ------------------------------------------------------------------------------------
+# 2. CORE QA FUNCTIONS
+# ------------------------------------------------------------------------------------
+
+def basic_health_checks(df: pd.DataFrame, label: str) -> dict:
+    """
+    Return a dict with basic health metrics (used to write a QA summary later).
+    """
+    print(f"\n[QA] === Basic health checks: {label} ===")
+    out = {}
+    out["n_rows"] = len(df)
+    out["n_cols"] = df.shape[1]
+
+    if "symbol" in df.columns:
+        out["n_symbols"] = df["symbol"].nunique()
+        print(f"  • Symbols: {out['n_symbols']}")
+    if "date" in df.columns:
+        out["date_min"] = df["date"].min()
+        out["date_max"] = df["date"].max()
+        print(f"  • Date range: {out['date_min']} → {out['date_max']}")
+
+    # Null stats on key columns
+    key_cols = ["VinV_raw", "VinV_pct", "VinV_0_10", "Val_z", "Qual_z", "Growth_z", "pe", "eps", "sales"]
+    for col in key_cols:
+        if col in df.columns:
+            nulls = df[col].isna().sum()
+            out[f"nulls_{col}"] = int(nulls)
+            print(f"  • Nulls in {col}: {nulls}")
+
+    print("\n[QA] Head:")
+    print(df.head())
+
+    print("\n[QA] Tail:")
+    print(df.tail())
+
+    return out
+
+
+def tranche_exposure_summary(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Count number of observations per (tranche, year) to ensure coverage.
+    """
+    if "tranche" not in df.columns or "date" not in df.columns:
+        print("[QA] Tranche or date columns missing – skipping tranche exposure summary.")
+        return pd.DataFrame()
+
+    tmp = df.copy()
+    tmp["year"] = tmp["date"].dt.year
+    grp = tmp.groupby(["tranche", "year"]).size().reset_index(name="n_obs")
+    print("\n[QA] Tranche-by-year coverage (first 20 rows):")
+    print(grp.head(20))
+    return grp
+
+
+def vinv_distribution_checks(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Check VinV_0_10 distribution by tranche and decade.
+    """
+    if "VinV_0_10" not in df.columns:
+        print("[QA] VinV_0_10 missing – skipping distribution checks.")
+        return pd.DataFrame()
+
+    tmp = df.copy()
+    tmp["year"] = tmp["date"].dt.year
+    tmp["decade"] = (tmp["year"] // 10) * 10
+
+    summary = (
+        tmp.groupby(["tranche", "decade"])["VinV_0_10"]
+        .agg(["count", "mean", "min", "max"])
+        .reset_index()
+        .sort_values(["tranche", "decade"])
+    )
+
+    print("\n[QA] VinV_0_10 by tranche & decade:")
+    print(summary.head(20))
+    return summary
+
+
+def plot_sample_timeseries(df: pd.DataFrame, symbol: str = "AAPL"):
+    """
+    Simple time-series plot of VinV_0_10 and (optionally) macro overlays for one symbol.
+    """
+    if "symbol" not in df.columns or "VinV_0_10" not in df.columns:
+        print("[QA] Missing symbol or VinV_0_10 – skipping timeseries plot.")
+        return
+
+    sub = df[df["symbol"] == symbol].sort_values("date")
+    if sub.empty:
+        print(f"[QA] No rows for {symbol} – skipping timeseries plot.")
+        return
+
+    plt.figure(figsize=(10, 4))
+    plt.plot(sub["date"], sub["VinV_0_10"], label="VinV_0_10")
+    plt.title(f"{symbol} – VinV_0_10 over time")
+    plt.xlabel("Date")
+    plt.ylabel("VinV_0_10 (0–10)")
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+
+# ------------------------------------------------------------------------------------
+# 3. MAIN QA RUNNER
+# ------------------------------------------------------------------------------------
+
+def run_vinv_qa():
+    qa_records = []
+
+    # 1) Load VinV Phase 2 panel
+    df_vinv = safe_read_parquet(VINV_PHASE2_PANEL, "VinV Phase2 panel")
+
+    # 2) Basic health checks
+    health = basic_health_checks(df_vinv, "VinV Phase2 panel")
+    health["panel"] = "vinv_phase2"
+    qa_records.append(health)
+
+    # 3) Tranche-by-year coverage
+    tranche_cov = tranche_exposure_summary(df_vinv)
+    if not tranche_cov.empty:
+        tranche_cov.to_parquet(QA_OUT_DIR / "vinv_tranche_coverage.parquet", index=False)
+        tranche_cov.to_csv(QA_OUT_DIR / "vinv_tranche_coverage.csv", index=False)
+        print(f"[QA] Saved tranche coverage → {QA_OUT_DIR / 'vinv_tranche_coverage.*'}")
+
+    # 4) VinV_0_10 distribution by tranche & decade
+    vinv_decade = vinv_distribution_checks(df_vinv)
+    if not vinv_decade.empty:
+        vinv_decade.to_parquet(QA_OUT_DIR / "vinv_vinv0_10_decade_summary.parquet", index=False)
+        vinv_decade.to_csv(QA_OUT_DIR / "vinv_vinv0_10_decade_summary.csv", index=False)
+        print(f"[QA] Saved VinV_0_10 decade summary → {QA_OUT_DIR / 'vinv_vinv0_10_decade_summary.*'}")
+
+    # 5) Simple timeseries plot for AAPL (you can change symbol)
+    plot_sample_timeseries(df_vinv, symbol="AAPL")
+
+    # 6) If VinV+Macro exists, load and sanity-check join
+    if VINV_WITH_MACRO.exists():
+        df_vinv_macro = safe_read_parquet(VINV_WITH_MACRO, "VinV+Macro panel")
+        health_macro = basic_health_checks(df_vinv_macro, "VinV+Macro panel")
+        health_macro["panel"] = "vinv_with_macro"
+        qa_records.append(health_macro)
+
+        # Quick check: macro columns exist?
+        macro_cols = [
+            "cpi_all_items",
+            "fed_funds_rate",
+            "wti_spot_price",
+            "curve_10y_2y",
+            "curve_10y_3m",
+            "cpi_infl_3m_annualized",
+            "wti_12m_change",
+            "policy_stance_realish",
+        ]
+        present = [c for c in macro_cols if c in df_vinv_macro.columns]
+        print("\n[QA] Macro columns present on VinV panel:")
+        for c in present:
+            print(f"  • {c}")
+
+    else:
+        print("\n[QA] VinV+Macro panel not found – skipping macro QA.")
+
+    # 7) Write QA health summary table
+    if qa_records:
+        df_qa = pd.DataFrame(qa_records)
+        df_qa.to_parquet(QA_OUT_DIR / "vinv_qa_health_summary.parquet", index=False)
+        df_qa.to_csv(QA_OUT_DIR / "vinv_qa_health_summary.csv", index=False)
+        print(f"\n[QA] Wrote QA health summary → {QA_OUT_DIR / 'vinv_qa_health_summary.*'}")
+
+        print("\n[QA] QA health summary:")
+        print(df_qa)
+
+    print("\n[QA] VinV_2.0 QA run completed (excluding COT).")
+
+
+# ------------------------------------------------------------------------------------
+# 4. ENTRYPOINT
+# ------------------------------------------------------------------------------------
+
+if __name__ == "__main__":
+    run_vinv_qa()
