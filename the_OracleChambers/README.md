@@ -48,7 +48,7 @@ Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
 CURRENT FOCUS AREA (PRODUCTION-READY)
 </h2>
 
-### 🗣️ FedSpeak • *Macro Policy Engine* • [Click here](https://github.com/sobcza11/FedSpeak))
+### 🗣️ FedSpeak • *Macro Policy Engine* • [Click here](https://github.com/sobcza11/FedSpeak)
 NLP-ready policy leaves extracted from major **FOMC communication channels**:
 
 - **Beige Book** — district-level tone on business, labor, wages, and prices  
@@ -74,7 +74,7 @@ All signals integrate into **`p_Sentiment_US`** and the fusion layer, forming th
 
 <h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
-### 💼 **VinV** • *Equity Style-Timing Lab* •*** **[*Repo*.]**(https://github.com/sobcza11/VinV)
+### 💼 **VinV** • *Equity Style-Timing Lab**** • [Click here](https://github.com/sobcza11/VinV)
 **VinV** (*Value in Vogue*) is an equity-style rotation signal designed to detect when *Value* exposures move **into** or **out of** favor relative to the U.S. equity market.
 
 VinV operates as a meta-factor, not a static Value replication — blending:
