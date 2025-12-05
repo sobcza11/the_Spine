@@ -49,7 +49,7 @@ CURRENT FOCUS AREA (PRODUCTION-READY)
 </h2>
 
 ### 🗣️ FedSpeak • *Macro Policy Engine*
-
+### <p align="left">***🧠 the_Spine •*** [Return](https://github.com/sobcza11/FedSpeak)</p>
 NLP-ready policy leaves extracted from major **FOMC communication channels**:
 
 - **Beige Book** — district-level tone on business, labor, wages, and prices  
@@ -70,29 +70,13 @@ All signals integrate into **`p_Sentiment_US`** and the fusion layer, forming th
 
 ---
 
-<h3 align="center" style="margin-top:0; font-size:22px; font-weight:700;">
-  🧮 • DIAGNOSTICS & GOVERNANCE • 🛡️
-</h3>
-
-### 🗣️ Fed Speak • *Macro Policy Lab*
-
-NLP-ready sentiment leaves extracted from major FOMC communication channels:
-
-- **Beige Book** — district-level tone on business, labor, wages, prices  
-- **FOMC Minutes** — uncertainty, disagreement, inflation vs. growth concern  
-- **FOMC Statement** — paragraph-level hawkish/dovish stance  
-- **Fed SEP (Dot Plot)** — rate-path & neutral-rate sentiment  
-- **Fed Speeches** — speaker-level tone, certainty, forward-guidance signals
-
-All outputs integrate into **`p_Sentiment_US`** for consistent macro interpretation inside both  
-***the*_Spine** and ***the*_OracleChambers**.
 
 ##
 
 <h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
 ### 💼 **VinV** • *Equity Style-Timing Lab*
-
+### <p align="left">***🧠 the_Spine •*** [Return](https://github.com/sobcza11/VinV)</p>
 **VinV** (*Value in Vogue*) is an equity-style rotation signal designed to detect when *Value* exposures move **into** or **out of** favor relative to the U.S. equity market.
 
 VinV operates as a meta-factor, not a static Value replication — blending:

@@ -1,0 +1,136 @@
+# FedSpeak Feature Manifest (Phase III)
+# Defines FedSpeak features, their meaning, ranges, and computation notes.
+
+version: "v1.0.0"
+last_updated: "2025-12-04"
+owner: "the_Spine / FedSpeak Lab"
+
+features:
+
+  policy_bias:
+    description: >
+      Net direction of policy stance, balancing hawkish vs dovish language
+      across inflation, growth, and financial conditions.
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "all_channels_aggregated"
+    range: [-1.0, 1.0]
+    interpretation:
+      - negative: dovish / easing-biased
+      - zero: neutral / balanced
+      - positive: hawkish / tightening-biased
+    dependencies:
+      - beige_policy_bias
+      - minutes_policy_bias
+      - statement_policy_signals
+    computation_notes: >
+      Weighted aggregation of channel-specific policy_bias components,
+      normalized to [-1,1]. Weights defined in fedspeak_pipeline.yaml.
+
+  inflation_risk:
+    description: >
+      Fed communication-implied risk that inflation remains above target
+      or resurges.
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "all_channels_aggregated"
+    range: [-1.0, 1.0]
+    interpretation:
+      - negative: disinflation / low inflation concern
+      - zero: inflation risks balanced
+      - positive: elevated inflation concern
+    dependencies:
+      - beige_inflation_risk
+      - minutes_inflation_risk
+      - statement_inflation_signals
+    computation_notes: >
+      Derived from inflation-related terms, risk language,
+      and emphasis on price stability vs growth concerns.
+
+  growth_risk:
+    description: >
+      Fed communication-implied risk of below-trend growth or recession.
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "all_channels_aggregated"
+    range: [-1.0, 1.0]
+    interpretation:
+      - negative: downside growth risk dominant
+      - zero: balanced growth risk
+      - positive: upside growth momentum emphasized
+    dependencies:
+      - beige_growth_risk
+      - minutes_growth_risk
+      - statement_growth_signals
+    computation_notes: >
+      Derived from growth-related language, downside vs upside risk
+      wording, and emphasis on labor market vs output.
+
+  beige_policy_bias:
+    description: >
+      Policy stance implied specifically by Beige Book narrative tone and topics.
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "beige_book"
+    range: [-1.0, 1.0]
+    interpretation:
+      - negative: Beige tone consistent with easier policy bias
+      - positive: Beige tone consistent with tighter policy bias
+    dependencies:
+      - beige_topics
+      - beige_sentiment_scores
+    computation_notes: >
+      Computed using district-level sentiment, topic loadings,
+      and RBL sentences, mapped into policy stance space.
+
+  beige_inflation_risk:
+    description: "Inflation risk implied by Beige Book price & wage narrative."
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "beige_book"
+    range: [-1.0, 1.0]
+    dependencies:
+      - beige_price_topics
+      - wage_sentiment
+    computation_notes: >
+      Weighted sentiment of price and wage-related sentences.
+
+  beige_growth_risk:
+    description: "Growth risk implied by Beige Book real activity and labor narrative."
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "beige_book"
+    range: [-1.0, 1.0]
+    dependencies:
+      - beige_activity_topics
+      - employment_sentiment
+    computation_notes: >
+      Weighted sentiment of output, employment, and demand-related topics.
+
+  minutes_policy_bias:
+    description: "Policy stance implied by FOMC Minutes discussion."
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "minutes"
+    range: [-1.0, 1.0]
+    dependencies:
+      - minutes_hawkish_dovish_terms
+      - minutes_risk_balance_segments
+    computation_notes: >
+      Combines hawkish/dovish term counts, risk balance discussion,
+      and forward guidance language.
+
+  minutes_inflation_risk:
+    description: "Inflation risk perceived in Minutes discussion."
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "minutes"
+    range: [-1.0, 1.0]
+    dependencies:
+      - minutes_inflation_segments
+    computation_notes: >
+      Focuses on inflation-related paragraphs, uncertainty, and skew.
+
+  minutes_growth_risk:
+    description: "Growth risk perceived in Minutes discussion."
+    artifact: "FedSpeak/combined_policy_leaf.parquet"
+    channel_scope: "minutes"
+    range: [-1.0, 1.0]
+    dependencies:
+      - minutes_growth_segments
+    computation_notes: >
+      Focuses on downside growth risk vs upside surprise balance.
+
+
