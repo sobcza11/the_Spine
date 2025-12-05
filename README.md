@@ -39,7 +39,7 @@ It synthesizes:
 
 ***the*_Spine** is **the engine**; **OracleChambers** is where humans *interpret* its tea leaves—*signals*—reading them with framework.
 
-OracleChambers is the **interpretive layer** — transforming structural, parquet-based leaves from the_Spine into human-usable:
+*the*_OracleChambers is the **interpretive layer** — transforming structural, parquet-based leaves from the_Spine into human-usable:
 - *macro narratives*
 - *regime flags*
 - *risk explainers* 
