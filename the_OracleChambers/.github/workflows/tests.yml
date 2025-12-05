@@ -1,0 +1,46 @@
+name: the_Spine CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install pytest pandas pyarrow duckdb
+          fi
+
+      - name: Build macro_state fusion artifact
+        run: |
+          python -m scripts.add_regimes_econ_inflation
+          python -m scripts.build_macro_state_spine_us
+
+      - name: Run artifact validation tests
+        run: |
+          pytest tests/test_artifacts_validation.py
+
+      - name: Build VinV MVP signal
+        run: python -m scripts.build_vinv_signal
+
+      - name: Build VinV narrative story
+        run: python -m scripts.build_vinv_story
+
+          
