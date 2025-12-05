@@ -1,4 +1,4 @@
-# <p align="center">FedSpeak • 🔊 • Policy-Language Intelligence Engine</p>
+# <p align="center">*the*_OracleChambers • 🔊 • Policy-Language Intelligence Engine</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
