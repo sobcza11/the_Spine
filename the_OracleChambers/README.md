@@ -49,8 +49,8 @@
     <img 
       src="https://github.com/sobcza11/FedSpeak/blob/main/_assets/FedSpeak.png" 
       alt="pending..." 
-      title="PoliSci NLP"
-      height="140"
+      title="FOMC policy-drift detection"
+      height="130"
       width="220" 
       style="border-radius:10px; margin:10px;"
     />
@@ -59,9 +59,9 @@
   <a href="https://github.com/sobcza11/VinV" target="_blank">
     <img 
       src="https://github.com/sobcza11/VinV/blob/main/_assets/vinv_m.png" 
-      alt="pending..." 
-      title="PoliSci NLP"
-      height="140"
+      alt="Dividend Stability" 
+      title="value-cycle intel"
+      height="130"
       width="240" 
       style="border-radius:10px; margin:10px;"
     />
