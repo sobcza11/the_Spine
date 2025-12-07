@@ -51,7 +51,7 @@
       alt="pending..." 
       title="PoliSci NLP"
       height="140"
-      width="240" 
+      width="220" 
       style="border-radius:10px; margin:10px;"
     />
   </a>
@@ -61,6 +61,7 @@
       src="https://github.com/sobcza11/VinV/blob/main/_assets/vinv_m.png" 
       alt="pending..." 
       title="PoliSci NLP"
+      height="140"
       width="240" 
       style="border-radius:10px; margin:10px;"
     />
