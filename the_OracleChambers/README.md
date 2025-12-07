@@ -33,7 +33,7 @@ CURRENT FOCUS AREA (PRODUCTION-READY)
   <!-- BOX 1 -->
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon" target="_blank">
     <img 
-      src="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/blob/main/_other/READ_ME_Back.jpg" 
+      src="https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg" 
       alt="US Inflation Project" 
       width="380" 
       style="border-radius:10px; margin:10px;"
