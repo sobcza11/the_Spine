@@ -17,10 +17,12 @@
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
 </p>
 
-<!-- H2 — Signals line -->
-<h1 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
-Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
-</h1>
+
+<p align="center">
+  <strong style="font-size:26px;">
+    Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
+  </strong>
+</p>
 
 <h2 align="center">
 PORTFOLIO
