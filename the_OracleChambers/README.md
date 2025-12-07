@@ -44,6 +44,30 @@
     />
   </a>
 
+
+
+
+  <!-- BOX 2 -->
+  <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
+    <img 
+      src="https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg" 
+      alt="NLP Hong Kong Security Law Project" 
+      title="PoliSci NLP"
+      width="240" 
+      style="border-radius:10px; margin:10px;"
+    />
+  </a>
+  <!-- BOX 2 -->
+  <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
+    <img 
+      src="https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg" 
+      alt="NLP Hong Kong Security Law Project" 
+      title="PoliSci NLP"
+      width="240" 
+      style="border-radius:10px; margin:10px;"
+    />
+  </a>
+  
 </p>
 
 ---
