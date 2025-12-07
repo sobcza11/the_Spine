@@ -50,7 +50,7 @@
       src="https://github.com/sobcza11/FedSpeak/blob/main/_assets/FedSpeak.png" 
       alt="pending..." 
       title="PoliSci NLP"
-      height="160"
+      height="120"
       width="240" 
       style="border-radius:10px; margin:10px;"
     />
