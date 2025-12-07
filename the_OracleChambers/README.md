@@ -19,7 +19,7 @@
 
 
 <p align="center">
-  <strong style="font-size:48px;">
+  <strong style="font-size:98px;">
     Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
   </strong>
 </p>
