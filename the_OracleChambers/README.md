@@ -19,26 +19,6 @@
 
 ---
 
-**FedSpeak** is a domain-specific `Policy Language Engine` that **transforms** *Federal Reserve communication* into:
-
-- **Policy-risk signals** — inflation_risk • growth_risk • policy_bias  
-- **Regime labels** — hawkish • neutral • dovish • unknown  
-- **Drift diagnostics** — Z-score deviations from a governed baseline  
-- **Stability summaries** — quarterly tone consistency & variability  
-
-It functions as the **policy-language backbone** underneath:
-
-- ***the*_Spine** — macro fusion engine  
-- ***the*_OracleChambers** — interpretive / narrative layer  
-
-**Together**, these create a **macro-financial research stack** in which Fed communication is:
-
-> **canonicalized → bounded → governed → fused → interpreted**  
-
-FedSpeak is positioned as an **institution-grade policy module** — built under a **CPMAI-aligned** approach to *governed*, *reproducible*, *transparent* policy reasoning designed to support **academic research, RegTech workstreams, and supervisory-style analytics**.
-
----
-
 <!-- H2 — Signals line -->
 <h1 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
 Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
