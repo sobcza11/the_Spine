@@ -112,8 +112,9 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 
 ##
 
-
-<h3 align="center">🔧 • FUTURE ORACLES (Planned) • 🧪</h3>
+<h2 align="center">
+  🔧 • FUTURE ORACLES (Planned) • 🧪
+</h2>
 
 *the*_OracleChambers serves as the staging ground for additional interpretive layers:
 
