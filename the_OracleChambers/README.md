@@ -59,8 +59,8 @@
   <a href="https://github.com/sobcza11/VinV" target="_blank">
     <img 
       src="https://github.com/sobcza11/VinV/blob/main/_assets/vinv_m.png" 
-      alt="Dividend Stability" 
-      title="value-cycle intel"
+      alt="pending..." 
+      title="Dividend Stability • Value-cycle Intel"
       height="130"
       width="240" 
       style="border-radius:10px; margin:10px;"
