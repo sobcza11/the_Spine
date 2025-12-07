@@ -28,6 +28,30 @@ Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
 CURRENT FOCUS AREA (PRODUCTION-READY)
 </h2>
 
+<p align="center">
+
+  <!-- BOX 1 -->
+  <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon" target="_blank">
+    <img 
+      src="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/blob/main/_other/READ_ME_Back.jpg" 
+      alt="US Inflation Project" 
+      width="380" 
+      style="border-radius:10px; margin:10px;"
+    />
+  </a>
+
+  <!-- BOX 2 -->
+  <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
+    <img 
+      src="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/blob/main/_other/READ_ME_Back.jpg" 
+      alt="NLP Hong Kong Security Law Project" 
+      width="380" 
+      style="border-radius:10px; margin:10px;"
+    />
+  </a>
+
+</p>
+
 ### 🗣️ FedSpeak • *Macro Policy Engine* • [Click here](https://github.com/sobcza11/FedSpeak)
 NLP-ready policy leaves extracted from major **FOMC communication channels**:
 
