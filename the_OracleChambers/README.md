@@ -25,7 +25,7 @@ Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
 </h1>
 
 <h2 align="center">
-CURRENT FOCUS AREA (PRODUCTION-READY)
+PORTFOLIO
 </h2>
 
 <p align="center">
@@ -53,7 +53,6 @@ CURRENT FOCUS AREA (PRODUCTION-READY)
   </a>
 
 </p>
-
 ### 🗣️ FedSpeak • *Macro Policy Engine* • [Click here](https://github.com/sobcza11/FedSpeak)
 NLP-ready policy leaves extracted from major **FOMC communication channels**:
 
