@@ -44,15 +44,13 @@
     />
   </a>
 
-
-
-
   <!-- BOX 1.3 -->
   <a href="https://github.com/sobcza11/FedSpeak/blob/main/README.md" target="_blank">
     <img 
       src="https://github.com/sobcza11/FedSpeak/blob/main/_assets/FedSpeak.png" 
       alt="pending..." 
       title="PoliSci NLP"
+      height="2"
       width="240" 
       style="border-radius:10px; margin:10px;"
     />
