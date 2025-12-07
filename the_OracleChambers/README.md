@@ -48,7 +48,7 @@
 
 
   <!-- BOX 1.3 -->
-  # <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
+  <a href="https://github.com/sobcza11/FedSpeak/blob/main/README.md" target="_blank">
     <img 
       src="https://github.com/sobcza11/FedSpeak/blob/main/_assets/FedSpeak.png" 
       alt="pending..." 
@@ -58,7 +58,7 @@
     />
   </a>
   <!-- BOX 1.4 -->
-  # <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
+  <a href="https://github.com/sobcza11/VinV" target="_blank">
     <img 
       src="https://github.com/sobcza11/VinV/blob/main/_assets/vinv_m.png" 
       alt="pending..." 
