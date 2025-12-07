@@ -22,7 +22,7 @@
 
 <p align="center">
 
-  <!-- BOX 1 -->
+  <!-- BOX 1.1 -->
   <a href="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon" target="_blank">
     <img 
       src="https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/blob/main/_other/READ_ME_Back.jpg" 
@@ -33,7 +33,7 @@
     />
   </a>
 
-  <!-- BOX 2 -->
+  <!-- BOX 1.2 -->
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
     <img 
       src="https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg" 
@@ -47,21 +47,21 @@
 
 
 
-  <!-- BOX 2 -->
-  <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
+  <!-- BOX 1.3 -->
+  # <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
     <img 
-      src="https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg" 
-      alt="NLP Hong Kong Security Law Project" 
+      src="https://github.com/sobcza11/FedSpeak/blob/main/_assets/FedSpeak.png" 
+      alt="pending..." 
       title="PoliSci NLP"
       width="240" 
       style="border-radius:10px; margin:10px;"
     />
   </a>
-  <!-- BOX 2 -->
-  <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
+  <!-- BOX 1.4 -->
+  # <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
     <img 
-      src="https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg" 
-      alt="NLP Hong Kong Security Law Project" 
+      src="https://github.com/sobcza11/VinV/blob/main/_assets/vinv_m.png" 
+      alt="pending..." 
       title="PoliSci NLP"
       width="240" 
       style="border-radius:10px; margin:10px;"
