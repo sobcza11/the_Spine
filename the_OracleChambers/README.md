@@ -112,7 +112,7 @@ The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 - **Curve posture & refinery throughput** — backwardation/contango + utilization indicating pricing pressure.
 - **RULE** - *A storage-curve stress indicator linked to inflationary impulse*
 
-##
+---
 
 <h2 align="center">
   🔧 • FUTURE ORACLES (Planned) • 🧪
