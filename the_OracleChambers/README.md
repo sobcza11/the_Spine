@@ -18,9 +18,11 @@
 </p>
 
 
-<h2 align="center">
-  Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
-</h2>
+<div align="center">
+  <span style="font-size:26px; font-weight:700;">
+    Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
+  </span>
+</div>
 
 <h2 align="center">
 PORTFOLIO
