@@ -17,16 +17,8 @@
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
 </p>
 
+# <p align="center">PORTFOLIO</p>
 
-<p align="center">
-  <strong style="font-size:96px;">
-    Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
-  </strong>
-</p>
-
-<h2 align="center">
-PORTFOLIO
-</h2>
 
 <p align="center">
 
