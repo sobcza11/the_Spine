@@ -43,7 +43,7 @@ CURRENT FOCUS AREA (PRODUCTION-READY)
   <!-- BOX 2 -->
   <a href="https://github.com/sobcza11/NLP_HK_Security_Law" target="_blank">
     <img 
-      src="[https://github.com/sobcza11/Understanding-the-US-Inflation-Phenomenon/blob/main/_other/READ_ME_Back.jpg](https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg)" 
+      src="[https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg]" 
       alt="NLP Hong Kong Security Law Project" 
       width="380" 
       style="border-radius:10px; margin:10px;"
