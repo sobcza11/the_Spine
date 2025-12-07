@@ -17,7 +17,7 @@
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
 </p>
 
-# <p align="center">PORTFOLIO</p>
+# <p align="center"> 📊 • PORTFOLIO • 🛡️</p>
 
 
 <p align="center">
