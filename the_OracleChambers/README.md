@@ -90,13 +90,6 @@ Outputs are standardized into **bounded, interpretable policy scores**:
 All signals integrate into **`p_Sentiment_US`** and the fusion layer, forming the policy spine for both  
 ***the*_Spine** and ***the*_OracleChambers**.
 
----
-
-
-##
-
-<h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
-
 ### 💼 **VinV** • *Equity Style-Timing Lab* • [Click here](https://github.com/sobcza11/VinV)
 **VinV** (*Value in Vogue*) is an equity-style rotation signal designed to detect when *Value* exposures move **into** or **out of** favor relative to the U.S. equity market.
 
@@ -108,6 +101,14 @@ VinV operates as a meta-factor, not a static Value replication — blending:
 
 The fused **VinV Score** (∈ [-1, 1]) identifies cycle regimes:
 `out_of_favor → transition → in_vogue`
+
+
+---
+
+
+##
+
+<h3 align="center">🗂️ • PLANNED FOCUS AREAS • 🧩</h3>
 
 ### 🌏 **CGRI** • *Geopolitical Signal Lab*
 
