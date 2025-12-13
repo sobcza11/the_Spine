@@ -25,3 +25,15 @@ env/
 # OS junk
 .DS_Store
 Thumbs.db
+
+
+# ---- local outputs (do not commit) ----
+data/
+reports/
+VinV/data/
+VinV/artifacts/
+**/*.parquet
+**/*.csv
+
+# notebooks detritus
+.ipynb_checkpoints/
