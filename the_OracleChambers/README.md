@@ -21,7 +21,10 @@
 PORTFOLIO
 </h2>
 
-• • • 
+<h2 align="center">
+• • •
+</h2> 
+
 ---
 
 <!-- H2 — Signals line -->
