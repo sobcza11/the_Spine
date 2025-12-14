@@ -21,8 +21,6 @@
 PORTFOLIO
 </h2>
 
-# https://github.com/sobcza11/The-US-Inflation-Phenomenon
-# https://github.com/sobcza11/NLP_HK_Security_Law
 • • • 
 ---
 
