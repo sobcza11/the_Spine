@@ -1,44 +1,111 @@
-# 🔐 Secrets & environment
-.env
-.env.*
-
-# Python cache / build
+############################################
+# OS / Editor noise
+############################################
+desktop.ini
+Thumbs.db
+.DS_Store
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.egg-info/
-.build/
-
-# Virtual environments (if you put one under the_Spine/)
-.venv/
-venv/
-env/
-
-# Jupyter
 .ipynb_checkpoints/
-
-# IDE / editor files
 .vscode/
 .idea/
 
-# OS junk
-.DS_Store
-Thumbs.db
+
+############################################
+# Python / Virtual Envs
+############################################
+.env
+.venv/
+venv/
+ENV/
+.envrc
+pip-wheel-metadata/
+*.egg-info/
 
 
-# ---- local outputs (do not commit) ----
+############################################
+# Test / cache artifacts
+############################################
+.pytest_cache/
+.coverage
+htmlcov/
+
+
+############################################
+# Data & heavy artifacts (default ignore)
+############################################
 data/
+exports/
+metadata/
+notebooks/
 reports/
-VinV/data/
-VinV/artifacts/
-**/*.parquet
-**/*.csv
 
-# notebooks detritus
-.ipynb_checkpoints/
 
-# Windows noise
-desktop.ini
-Thumbs.db
+############################################
+# Allowlisted ML EVIDENCE (CPMAI-safe)
+# Keep results small, auditable, & reviewable
+############################################
+!the_Spine/vinv/reports/
+!the_Spine/vinv/reports/model_ladder/
+!the_Spine/vinv/reports/model_ladder/*.csv
+!the_Spine/vinv/reports/model_ladder/*.md
+
+
+############################################
+# Models & binaries (default ignore)
+############################################
+*.joblib
+*.pkl
+*.parquet
+*.feather
+*.h5
+*.onnx
+
+
+############################################
+# Allowlisted CHAMPION FREEZE ARTIFACTS
+############################################
+!the_Spine/vinv/champion/
+!the_Spine/vinv/champion/**/champion_freeze_manifest.json
+!the_Spine/vinv/champion/**/freeze_hashes_sha256.json
+
+
+############################################
+# Large / raw source files
+############################################
+*.zip
+*.tar
+*.gz
+*.7z
+*.xlsx
+*.xls
+*.csv.gz
+*.html
+
+
+############################################
+# Scripts & build scratchpads (local only)
+############################################
+scripts/COT/B_build/
+scripts/WTI/C_build/
+scripts/ml/
+scripts/qdt/
+scripts/oraclechambers/
+scripts/vinv/
+
+
+############################################
+# OracleChambers noise
+############################################
+the_OracleChambers/.pytest_cache/
+
+
+############################################
+# Safety net
+############################################
+*.log
+*.tmp
+
 
