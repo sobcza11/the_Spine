@@ -37,3 +37,8 @@ VinV/artifacts/
 
 # notebooks detritus
 .ipynb_checkpoints/
+
+# Windows noise
+desktop.ini
+Thumbs.db
+
