@@ -1,0 +1,13 @@
+{
+  "vinv_release": "vFinal",
+  "timestamp_utc": "2025-12-15T21:33:25.179802",
+  "bundle_dir": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\the_Spine\\vinv\\champion\\vinv_champion_freeze_20251215T213325Z",
+  "hash_algo": "sha256",
+  "files": {
+    "champion_freeze_manifest.json": "83492a4ccf4070343269579bbe8c6da9b3b81dbc36e248efa0a72e6fd3a97b11",
+    "champion_model.joblib": "5a4b5bae1c6586d48777843181e0ea6fb5abecad6149253bf510a65a541486c3",
+    "model_ladder_metrics_by_fold.csv": "f4609af37b0ef2ab8968302804ea9d1a76946b19c177ce099b085bf5ec449f7a",
+    "model_ladder_predictions.parquet": "25b1d9fa99ab5204a6dc6af2707bbdef1dab83162a468a2ab997e7fb25c5c315",
+    "model_ladder_summary.csv": "84aa685ee3b18b0af233c7239b4b790e2e5808caf9f30f0a389b90aaedb4cc18"
+  }
+}
