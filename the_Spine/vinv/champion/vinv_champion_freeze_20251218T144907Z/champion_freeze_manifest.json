@@ -1,0 +1,62 @@
+{
+  "vinv_release": "vFinal",
+  "timestamp_utc": "2025-12-18T14:49:07.905351",
+  "champion": {
+    "model_key": "tier1_logistic_l2",
+    "auc": 1.0,
+    "long_short_sharpe_ann": NaN,
+    "lift_top_decile": 1.4666666666666668
+  },
+  "selection_policy": {
+    "primary": "mean AUC",
+    "tie_breaker_1": "long_short_sharpe_ann",
+    "tie_breaker_2": "lift_top_decile",
+    "deterministic": true
+  },
+  "final_refit": {
+    "cutoff_month": "2025-11-01 00:00:00",
+    "n_training_rows": 3116,
+    "n_features": 31,
+    "feature_cols_sample": [
+      "Val_z",
+      "Qual_z",
+      "Growth_z",
+      "VinV_raw",
+      "VinV_pct",
+      "VinV_0_10",
+      "pe",
+      "peg",
+      "sales_multiple",
+      "eps",
+      "eps_growth_pct",
+      "sales_growth_pct",
+      "net_income",
+      "sales",
+      "cpi_all_items",
+      "fed_funds_rate",
+      "pce_deflator",
+      "unemployment_rate",
+      "us_10y_2y_spread",
+      "us_10y_3m_spread",
+      "us_10y_yield",
+      "us_2y_yield",
+      "us_3m_yield",
+      "wti_spot_price",
+      "curve_10y_2y"
+    ]
+  },
+  "artifacts": {
+    "bundle_dir": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\the_Spine\\vinv\\champion\\vinv_champion_freeze_20251218T144907Z",
+    "summary_csv": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\the_Spine\\vinv\\reports\\model_ladder\\model_ladder_summary.csv",
+    "folds_csv": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\the_Spine\\vinv\\reports\\model_ladder\\model_ladder_metrics_by_fold.csv",
+    "predictions_parquet": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\the_Spine\\vinv\\reports\\model_ladder\\model_ladder_predictions.parquet",
+    "champion_pointer": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\the_Spine\\vinv\\champion\\champion_model.joblib"
+  },
+  "cpmai_controls": [
+    "Champion selected via pre-defined metrics only",
+    "No manual overrides",
+    "Final refit respects last WFV train_end cutoff",
+    "Artifacts frozen & timestamped",
+    "Hash-lock file produced (sha256)"
+  ]
+}
