@@ -121,3 +121,11 @@ the_Spine/vinv/champion/**/model_ladder_*.csv
 
 # Local config (if machine-specific)
 the_Spine/config/
+
+# keep ignoring generated data generally
+src/US_TeaPlant/data/**
+
+# but track the front2 tracker parquet (seed + ongoing updates)
+!src/US_TeaPlant/data/r2/
+!src/US_TeaPlant/data/r2/us_fed_front2_tracker.parquet
+
