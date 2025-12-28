@@ -22,15 +22,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      # TEMP: keep until green, then remove
-      - name: Debug workspace
+      - name: Install dependencies
+        working-directory: ${{ github.workspace }}
         run: |
-          echo "PWD:"; pwd
-          echo ""; echo "LS:"; ls -la
-          echo ""; echo "WORKSPACE:"; echo "$GITHUB_WORKSPACE"
-          ls -la "$GITHUB_WORKSPACE"
-          echo ""; echo "FIND requirements:"
-          find "$GITHUB_WORKSPACE" -maxdepth 3 -name "requirements.txt" -print
+          python -m pip install --upgrade pip
+          python -m pip install -r ./requirements.front2.txt
 
       - name: Install dependencies
         working-directory: ${{ github.workspace }}
