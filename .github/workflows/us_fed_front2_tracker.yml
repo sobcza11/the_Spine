@@ -2,7 +2,6 @@ name: Update US Fed front-2 tracker
 
 on:
   schedule:
-    # 11:00 UTC = 06:00 America/Detroit (standard time)
     - cron: "0 11 * * *"
   workflow_dispatch: {}
 
@@ -23,34 +22,29 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      # TEMP: keep until green, then remove
+      - name: Debug workspace
         run: |
+          echo "PWD:"; pwd
+          echo ""; echo "LS:"; ls -la
+          echo ""; echo "WORKSPACE:"; echo "$GITHUB_WORKSPACE"
+          ls -la "$GITHUB_WORKSPACE"
+          echo ""; echo "FIND requirements:"
+          find "$GITHUB_WORKSPACE" -maxdepth 3 -name "requirements.txt" -print
+
+      - name: Install dependencies
+        working-directory: ${{ github.workspace }}
+        run: |
+          python -m pip install --upgrade pip
           python -m pip install -r ./requirements.txt
 
       - name: Update Fed front-2 tracker parquet
         run: |
           python -m US_TeaPlant.cli.update_fed_front2_tracker
 
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Debug workspace
-        run: |
-          pwd
-          ls -la
-          find . -maxdepth 3 -name "requirements.txt" -print
-
-      - name: Install deps
-        run: python -m pip install -r ./requirements.txt
-
-      - name: Install deps
-        working-directory: scripts/us_fed_front2   # example
-        run: python -m pip install -r ../../requirements.txt
-        
-      # OPTIONAL: commit the updated parquet back to the repo
-      # If you prefer to sync this to R2/Cloudflare instead, remove this block
       - name: Commit tracker parquet (optional)
         if: github.ref == 'refs/heads/main'
+        working-directory: ${{ github.workspace }}
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
