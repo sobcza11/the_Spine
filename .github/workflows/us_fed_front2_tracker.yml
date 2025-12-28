@@ -9,10 +9,6 @@ jobs:
   update-fed-front2-tracker:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: src
-
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
@@ -22,27 +18,43 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        working-directory: ${{ github.workspace }}
+      - name: Debug & install deps (front2)
+        shell: bash
         run: |
+          set -euxo pipefail
+
+          echo "PWD: $(pwd)"
+          echo "Git SHA:"
+          git rev-parse HEAD
+
+          echo "Python:"
+          python -c "import sys; print(sys.version)"
+
+          echo "List repo root:"
+          ls -la
+
+          echo "Show requirements file:"
+          echo "---- ./requirements.front2.txt ----"
+          nl -ba ./requirements.front2.txt || true
+          echo "-----------------------------------"
+
           python -m pip install --upgrade pip
           python -m pip install -r ./requirements.front2.txt
 
-      - name: Install dependencies
+          python -m pip check || true
+
+
+      - name: Debug env
         working-directory: ${{ github.workspace }}
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r ./requirements.txt
+          python -c "import sys; print(sys.version)"
+          python -m pip check || true
+          python -m pip freeze | sort
 
       - name: Update Fed front-2 tracker parquet
+        working-directory: ${{ github.workspace }}/src
         run: |
           python -m US_TeaPlant.cli.update_fed_front2_tracker
-
-      - name: Install dependencies
-        working-directory: ${{ github.workspace }}
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r ./requirements.front2.txt
 
       - name: Commit tracker parquet (optional)
         if: github.ref == 'refs/heads/main'
