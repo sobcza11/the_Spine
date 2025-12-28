@@ -109,8 +109,7 @@ the_Spine/
 │   ├── Fed_SEP/
 │   └── Fed_Speeches/
 │
-├── p_Equity_US/
-│   └── VinV/                        # Value-in-Vogue equity factor
+├── the_OracleChambers/vinv/ # Value-in-Vogue equity (canonical home)
 │
 │
 │   🌍 G20 Global Expansion (AE & EM RCpacks)
