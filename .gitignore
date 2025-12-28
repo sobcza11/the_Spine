@@ -129,3 +129,4 @@ src/US_TeaPlant/data/**
 !src/US_TeaPlant/data/r2/
 !src/US_TeaPlant/data/r2/us_fed_front2_tracker.parquet
 
+*.egg-info/
