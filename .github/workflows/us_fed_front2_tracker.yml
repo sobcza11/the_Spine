@@ -1,32 +1,41 @@
-name: Update US Fed front-2 tracker
+name: update-fed-front2-tracker
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "0 11 * * *"
-  workflow_dispatch: {}
+    # Mon–Fri @ 06:10 ET (America/Detroit is UTC-5 in winter / UTC-4 in summer; GitHub cron uses UTC)
+    # Adjust as needed — this is a stable default for daily runs.
+    - cron: "10 11 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: us-fed-front2-tracker
+  cancel-in-progress: false
 
 jobs:
   update-fed-front2-tracker:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repo
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Debug & install deps (front2)
-        shell: bash
+      - name: Install deps
         run: |
           set -euxo pipefail
-
           echo "PWD: $(pwd)"
           echo "Git SHA:"
           git rev-parse HEAD
-
           echo "Python:"
           python -c "import sys; print(sys.version)"
 
@@ -35,34 +44,44 @@ jobs:
 
           echo "Show requirements file:"
           echo "---- ./requirements.front2.txt ----"
-          nl -ba ./requirements.front2.txt || true
+          nl -ba ./requirements.front2.txt
           echo "-----------------------------------"
 
           python -m pip install --upgrade pip
           python -m pip install -r ./requirements.front2.txt
-
           python -m pip check || true
 
-
-      - name: Debug env
-        working-directory: ${{ github.workspace }}
-        run: |
           python -c "import sys; print(sys.version)"
           python -m pip check || true
+
+          # Optional: print resolved environment (useful for CI diffs)
           python -m pip freeze | sort
 
-      - name: Update Fed front-2 tracker parquet
-        working-directory: ${{ github.workspace }}/src
+      - name: Run front-2 tracker update
         run: |
+          set -euxo pipefail
           python -m US_TeaPlant.cli.update_fed_front2_tracker
 
-      - name: Commit tracker parquet (optional)
-        if: github.ref == 'refs/heads/main'
-        working-directory: ${{ github.workspace }}
+      - name: Commit updated artifacts (if any)
         run: |
+          set -euxo pipefail
+
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add US_TeaPlant/data/r2/us_fed_front2_tracker.parquet
-          git commit -m "Update Fed front-2 tracker parquet [skip ci]" || echo "No changes to commit"
+          git config user.email "github-actions@users.noreply.github.com"
+
+          echo "Changed files (porcelain):"
+          git status --porcelain
+
+          # Stage whatever changed (avoid brittle hard-coded paths)
+          git add -A
+
+          # Only commit if there is something staged
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: update us fed front-2 tracker"
           git push
+
 
