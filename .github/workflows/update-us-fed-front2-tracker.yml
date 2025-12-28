@@ -31,6 +31,12 @@ jobs:
         run: |
           python -m US_TeaPlant.cli.update_fed_front2_tracker
 
+      - name: Ensure branch is up-to-date with remote (rebase)
+        run: |
+          git fetch origin
+          git checkout main
+          git pull --rebase origin main
+
       - name: Commit tracker parquet (optional)
         if: github.ref == 'refs/heads/main'
         working-directory: ${{ github.workspace }}
@@ -39,7 +45,8 @@ jobs:
           git config user.email "actions@github.com"
           git add US_TeaPlant/data/r2/us_fed_front2_tracker.parquet
           git commit -m "Update Fed front-2 tracker parquet [skip ci]" || echo "No changes to commit"
-          git push
+          git push origin main
+
 
 
 
