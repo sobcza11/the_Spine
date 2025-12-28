@@ -1,0 +1,11 @@
+# Minimal deps for US Fed front-2 tracker job
+pandas
+pyarrow
+requests
+python-dateutil
+pytz
+numpy
+fredapi
+s3fs
+fsspec
+boto3
