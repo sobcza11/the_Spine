@@ -3,8 +3,9 @@
 from pathlib import Path
 import pandas as pd
 
+
 def build_geoscen_leaf_stub(asof: str) -> pd.DataFrame:
-    \"\"\"Stub: returns an empty GeoScen leaf shell (context-only).\"\"\"
+    """Stub: returns an empty GeoScen leaf shell (context-only)."""
     return pd.DataFrame(
         [{
             "asof": asof,
@@ -12,6 +13,7 @@ def build_geoscen_leaf_stub(asof: str) -> pd.DataFrame:
             "note": "Contextual diagnostic leaf — not a scored FT-GMI pillar input."
         }]
     )
+
 
 def write_geoscen_leaf_stub(out_path: Path, asof: str) -> Path:
     out_path.parent.mkdir(parents=True, exist_ok=True)
