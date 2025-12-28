@@ -108,4 +108,16 @@ the_OracleChambers/.pytest_cache/
 *.log
 *.tmp
 
+# VinV generated outputs
+vinv/_Presentation/
+vinv/artifacts/
+vinv/review_bundle/
 
+# Model ladder outputs (if generated)
+the_Spine/vinv/reports/model_ladder/*.csv
+
+# Freeze outputs (if generated artifacts)
+the_Spine/vinv/champion/**/model_ladder_*.csv
+
+# Local config (if machine-specific)
+the_Spine/config/
