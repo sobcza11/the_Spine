@@ -26,23 +26,21 @@ jobs:
           python -m pip install -r ./requirements.front2.txt
           python -m pip check || true
 
+      - name: Pull latest changes from GitHub
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git pull origin main --rebase
+
       - name: Update Fed front-2 tracker parquet
         working-directory: ${{ github.workspace }}
         run: |
           python -m US_TeaPlant.cli.update_fed_front2_tracker
 
-      - name: Ensure branch is up-to-date with remote (rebase)
-        run: |
-          git fetch origin
-          git checkout main
-          git pull --rebase origin main
-
       - name: Commit tracker parquet (optional)
         if: github.ref == 'refs/heads/main'
         working-directory: ${{ github.workspace }}
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
           git add US_TeaPlant/data/r2/us_fed_front2_tracker.parquet
           git commit -m "Update Fed front-2 tracker parquet [skip ci]" || echo "No changes to commit"
           git push origin main
