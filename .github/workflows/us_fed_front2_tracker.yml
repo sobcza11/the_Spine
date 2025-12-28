@@ -3,9 +3,8 @@ name: update-fed-front2-tracker
 on:
   workflow_dispatch:
   schedule:
-    # Mon–Fri @ 06:10 ET (America/Detroit is UTC-5 in winter / UTC-4 in summer; GitHub cron uses UTC)
-    # Adjust as needed — this is a stable default for daily runs.
-    - cron: "10 11 * * 1-5"
+    # Weekdays @ 06:15 UTC (01:15 America/Detroit). Adjust if you want.
+    - cron: "15 6 * * 1-5"
 
 permissions:
   contents: write
@@ -15,22 +14,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update-fed-front2-tracker:
+  update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: Debug context
+        shell: bash
         run: |
           set -euxo pipefail
           echo "PWD: $(pwd)"
@@ -38,50 +38,48 @@ jobs:
           git rev-parse HEAD
           echo "Python:"
           python -c "import sys; print(sys.version)"
-
           echo "List repo root:"
           ls -la
-
           echo "Show requirements file:"
           echo "---- ./requirements.front2.txt ----"
           nl -ba ./requirements.front2.txt
           echo "-----------------------------------"
 
+      - name: Install deps
+        shell: bash
+        run: |
+          set -euxo pipefail
           python -m pip install --upgrade pip
           python -m pip install -r ./requirements.front2.txt
           python -m pip check || true
 
-          python -c "import sys; print(sys.version)"
-          python -m pip check || true
-
-          # Optional: print resolved environment (useful for CI diffs)
-          python -m pip freeze | sort
-
-      - name: Run front-2 tracker update
+      - name: Ensure src is on PYTHONPATH
+        shell: bash
         run: |
           set -euxo pipefail
+          echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
+
+      - name: Run front2 tracker update
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p src/US_TeaPlant/data/r2
           python -m US_TeaPlant.cli.update_fed_front2_tracker
 
-      - name: Commit updated artifacts (if any)
+      - name: Commit & push updated parquet
+        shell: bash
         run: |
           set -euxo pipefail
-
           git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
+          git config user.email "github-actions@github.com"
 
-          echo "Changed files (porcelain):"
-          git status --porcelain
+          git add src/US_TeaPlant/data/r2/us_fed_front2_tracker.parquet
 
-          # Stage whatever changed (avoid brittle hard-coded paths)
-          git add -A
-
-          # Only commit if there is something staged
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No parquet changes to commit."
             exit 0
           fi
 
-          git commit -m "chore: update us fed front-2 tracker"
+          git commit -m "data: update US Fed front-2 tracker"
           git push
-
 
