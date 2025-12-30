@@ -24,12 +24,24 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Free disk space
+        run: |
+          df -h
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android || true
+          rm -rf "$HOME/.cache/pip" || true
+          df -h
+
       - name: Install deps
+        env:
+          PIP_NO_CACHE_DIR: "1"
+          PIP_DISABLE_PIP_VERSION_CHECK: "1"
         run: |
           set -euxo pipefail
           python -m pip install --upgrade pip
-          python -m pip install -r ./requirements.front2.txt
+          python -m pip cache purge || true
+          python -m pip install --no-cache-dir -r ./requirements.front2.txt
           python -m pip check
+
 
       - name: Run tracker update
         env:
