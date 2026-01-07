@@ -130,3 +130,8 @@ src/US_TeaPlant/data/**
 !src/US_TeaPlant/data/r2/us_fed_front2_tracker.parquet
 
 *.egg-info/
+
+# allow quarantine parquet evidence
+!artifacts/_quarantine_parquet_zerobytes/*.parquet
+!artifacts/_quarantine_parquet_badfooter/**/*.parquet
+
