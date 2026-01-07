@@ -1,0 +1,283 @@
+Folder PATH listing for volume OS
+Volume serial number is 14E6-23DA
+C:.
++---.github
+|   \---workflows
++---.vscode
++---data
+|   +---canonical
+|   +---cot
+|   +---cot_OLD
+|   |   +---block4
+|   |   \---raw
+|   |       \---block4_1986_1989
+|   |           \---extracted_data
+|   +---ism
+|   +---market
+|   |   \---_tiingo_cache
+|   +---processed
+|   |   \---FedSpeak
+|   +---spine_us
+|   |   +---raw
+|   |   +---raw_cftc_tff
+|   |   \---us_sentiment
+|   |       \---raw
+|   |           +---beigebook
+|   |           +---minutes
+|   |           +---sep
+|   |           \---speeches
+|   +---us
+|   |   +---wti_inv_stor
+|   |   \---yieldcurve_10y3m
+|   +---vinv
+|   |   +---vinv_2_0
+|   |   +---vinv_universe_db
+|   |   |   +---alphavantage_cache
+|   |   |   +---audit_outputs
+|   |   |   +---combined_csvs
+|   |   |   |   \---outputs
+|   |   |   +---tiingo
+|   |   |   |   +---outputs
+|   |   |   |   \---raw
+|   |   |   \---tiingo_cache
+|   |   \---vinv_yfin
+|   |       \---outputs
+|   \---wti
+|       \---derived
++---exports
+|   \---wti
++---FT-GMI
+|   +---.github
+|   |   \---workflows
+|   +---data
+|   |   +---processed
+|   |   \---raw
+|   +---exports
+|   +---Globe
+|   |   +---AE_RCpack
+|   |   +---EM_RCpack
+|   |   \---Glob_fusion
+|   +---metadata
+|   +---scripts
+|   +---src
+|   |   \---ft_gmi
+|   |       \---pillars
+|   |           \---pillar1
+|   |               +---metrics
+|   |               \---scoring
+|   +---_assets
+|   \---_support
++---metadata
++---notebooks
+|   \---us_sentiment
+|       \---ingest
+|           \---data
+|               \---spine_us
+|                   \---us_sentiment
+|                       +---canonical
+|                       \---raw
+|                           \---fomc_statements
++---reports
+|   +---cot
+|   |   \---vinv
+|   +---deployment
+|   +---executive
+|   +---governance
+|   \---ml
+|       \---vinv
++---scripts
+|   +---core
+|   +---COT
+|   +---Debug
+|   +---Diagnostics
+|   +---Equities
+|   +---FX
+|   +---IR
+|   +---ISM
+|   +---Ops
+|   +---Validation
+|   +---WTI
+|   \---_demo
++---src
+|   +---common
+|   +---cot
+|   +---data
+|   |   +---R2
+|   |   \---spine_us
+|   +---fed_speak
+|   +---ft_gmi
+|   |   \---pillars
+|   |       \---pillar1
+|   |           +---metrics
+|   |           \---scoring
+|   +---Hybrid-Spine
+|   +---src
+|   |   \---data
+|   |       \---R2
+|   +---TeaLeaves
+|   +---TeaPlant-Global
+|   |   +---bridges
+|   |   +---leaves
+|   |   \---roots
+|   +---trunk
+|   +---US_TeaPlant
+|   |   +---bridges
+|   |   +---cli
+|   |   +---data
+|   |   |   +---r2
+|   |   |   \---us
+|   |   |       \---wti_inv_stor
+|   |   +---leaves
+|   |   \---trunk
+|   +---utils
+|   \---vinv
+|       \---reports
+|           \---notebooks
+|               \---reports
+|                   \---stress_windows
++---the_OracleChambers
+|   +---.github
+|   |   \---workflows
+|   +---config
+|   |   +---features
+|   |   \---pipelines
+|   +---data
+|   |   +---beige_book
+|   |   +---canonical
+|   |   |   \---FedSpeak
+|   |   |       \---BeigeBook
+|   |   +---cot
+|   |   |   +---raw
+|   |   |   \---xls
+|   |   +---fomc_minutes
+|   |   +---fomc_minutes_signals
+|   |   +---fomc_statements
+|   |   +---macro
+|   |   +---processed
+|   |   |   +---BeigeBook
+|   |   |   +---FedSpeak
+|   |   |   +---fusion
+|   |   |   +---geoscen
+|   |   |   +---narratives
+|   |   |   +---p_Com_US
+|   |   |   +---p_Econ_US
+|   |   |   +---p_Equity_US
+|   |   |   +---p_Inflation_US
+|   |   |   \---p_Tech_US
+|   |   +---prompts
+|   |   +---raw
+|   |   |   \---BeigeBook
+|   |   +---reference
+|   |   +---sep_dotplots
+|   |   +---speeches
+|   |   +---vinv
+|   |   |   \---vinv_2_0
+|   |   |       +---phase2_outputs
+|   |   |       \---qa
+|   |   +---vocab
+|   |   \---warehouse
+|   +---docs
+|   |   \---runbooks
+|   +---fed_speak
+|   |   +---inputs
+|   |   +---integration
+|   |   +---leaves
+|   |   +---preprocess
+|   |   +---topic
+|   |   \---utils
+|   +---GeoScen
+|   |   \---the_GeoScen_US
+|   +---oraclechambers
+|   |   +---geoscen
+|   |   +---narratives
+|   |   \---templates
+|   +---scripts
+|   +---src
+|   |   +---apps
+|   |   +---cot_engine
+|   |   +---data
+|   |   |   +---cot
+|   |   |   |   \---xls
+|   |   |   \---vinv
+|   |   |       \---vinv_2_0
+|   |   |           \---qa
+|   |   +---fedspeak_engine
+|   |   +---fed_speak
+|   |   |   +---admin
+|   |   |   +---inputs
+|   |   |   +---integration
+|   |   |   +---leaves
+|   |   |   +---preprocess
+|   |   |   +---tone
+|   |   |   \---topic
+|   |   +---macro
+|   |   +---oraclechambers
+|   |   |   +---exporters
+|   |   |   +---inputs
+|   |   |   +---lenses
+|   |   |   +---narratives
+|   |   |   +---scoring
+|   |   |   \---utils
+|   |   +---oracles
+|   |   +---scripts
+|   |   +---vinv
+|   |   \---warehouse
+|   |       \---scripts
+|   +---tests
+|   +---vinv
+|   |   +---champion
+|   |   |   +---vinv_champion_freeze_20251215T213325Z
+|   |   |   \---vinv_champion_freeze_20251218T144907Z
+|   |   +---models
+|   |   +---reports
+|   |   |   \---model_ladder
+|   |   |       \---trained_models
+|   |   |           +---tier0_dummy
+|   |   |           +---tier1_elastic_net
+|   |   |           +---tier1_logistic_l2
+|   |   |           +---tier2_gbdt
+|   |   |           \---tier2_random_forest
+|   |   \---ssot
+|   +---warehouse
+|   \---_support
+|       +---_archive_folders
+|       |   \---the_OracleChambers
+|       |       +---fed_speak
+|       |       |   \---scripts
+|       |       +---labs
+|       |       |   \---vinv
+|       |       |       \---2_0
+|       |       |           \---notebooks
+|       |       +---scripts
+|       |       +---src
+|       |       |   \---oracles
+|       |       +---VinV_1_0
+|       |       |   +---analytics
+|       |       |   +---data_stooq
+|       |       |   +---data_yahoo_combined
+|       |       |   +---data_yahoo_dividends
+|       |       |   +---data_yahoo_prices
+|       |       |   +---scripts
+|       |       |   \---src
+|       |       |       \---vinv
+|       |       |           \---vinv_2.0
+|       |       \---VinV_2_0
+|       |           \---scripts
+|       +---_archive_notebooks
+|       \---_archive_py
++---the_Spine
+|   \---src
+|       +---vinv
+|       |   \---_runbooks
+|       |       +---_cache_fmp_vinv
+|       |       \---_cache_vinv_sources
+|       \---_demo
+|           \---inspections
++---vinv
+|   \---review_bundle
+|       +---stage4_zfactors_growth
+|       \---stage5_outcome_conditioning
+|           \---inflation
+\---_support
+    +---assets
+    \---_archive_py

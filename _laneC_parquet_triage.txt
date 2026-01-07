@@ -1,0 +1,124 @@
+BAD_FOOTER(R1
+)|bytes=35896|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\canonical\us_macro_panel_weekly_canonical.parquet
+BAD_FOOTER(R1
+)|bytes=49684393|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_data.parquet
+BAD_FOOTER(R1
+)|bytes=145991|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_indexes_1989_2025.parquet
+BAD_FOOTER(R1
+)|bytes=39229|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_indexes_1989_2025_monthly.parquet
+BAD_FOOTER(R1
+)|bytes=45725491|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_weekly_1989_2025.parquet
+BAD_FOOTER(R1
+)|bytes=18879|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cleaned_cot_data.parquet
+BAD_FOOTER(R1
+)|bytes=442204|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_features_monthly_hybrid.parquet
+BAD_FOOTER(R1
+)|bytes=318335|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_block4.parquet
+BAD_FOOTER(R1
+)|bytes=2990168|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_weekly_unified.parquet
+BAD_FOOTER(R1
+)|bytes=3088444|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_weekly_unified_filled.parquet
+BAD_FOOTER(R1
+)|bytes=3037903|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_weekly_unified_filled_with_COT.parquet
+BAD_FOOTER(R1
+)|bytes=93467|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\filtered_cot_data_2025.parquet
+BAD_FOOTER(R1
+)|bytes=11973|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\filtered_wheat_cot_data.parquet
+BAD_FOOTER(R1
+)|bytes=93467|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\final_cot_data_2025.parquet
+BAD_FOOTER(R1
+)|bytes=3833612|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\updated_cot_data.parquet
+BAD_FOOTER(R1
+)|bytes=189240|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\block4\cot_block4_1986_1989_monthly.parquet
+BAD_FOOTER(R1
+)|bytes=318335|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\block4\cot_block4_1986_1989_weekly_std.parquet
+BAD_FOOTER(R1
+)|bytes=18291|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\market\etf_returns_monthly_tiingo.parquet
+ZERO_BYTES|bytes=0|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\processed\FedSpeak\combined_policy_leaf_v3.parquet
+BAD_FOOTER(R1
+)|bytes=35896|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_cftc_cot_factors_canonical.parquet
+BAD_FOOTER(R1
+)|bytes=3841212|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_cftc_cot_tff_canonical.parquet
+BAD_FOOTER(R1
+)|bytes=4407|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_equity_vinv_canonical.parquet
+BAD_FOOTER(R1
+)|bytes=31370|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_wti_inventory_canonical.parquet
+BAD_FOOTER(R1
+)|bytes=3092|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\raw\us_equity_vinv_raw.parquet
+BAD_FOOTER(R1
+)|bytes=76450|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\us\wti_inv_stor\df_wti_inv_stor_hist.parquet
+BAD_FOOTER(R1
+)|bytes=28082|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\us\yieldcurve_10y3m\df_yieldcurve_10y3m_hist.parquet
+HEADER+FOOTER_OK|bytes=5658|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\audit_outputs\annual_dividends_diag.parquet
+HEADER+FOOTER_OK|bytes=8151|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\audit_outputs\annual_dividends_long.parquet
+HEADER+FOOTER_OK|bytes=1858|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_dividends_annual_1990_2025.parquet
+HEADER+FOOTER_OK|bytes=8908|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_dividend_checks.parquet
+HEADER+FOOTER_OK|bytes=19709|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_joined_diagnostics.parquet
+HEADER+FOOTER_OK|bytes=6794|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_meta.parquet
+HEADER+FOOTER_OK|bytes=14888|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\vinv_data.parquet
+HEADER+FOOTER_OK|bytes=8125|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_yfin\outputs\df_diag_stageA_test.parquet
+HEADER+FOOTER_OK|bytes=2903|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_yfin\outputs\stageA_errors.parquet
+HEADER+FOOTER_OK|bytes=5652|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\data\R2\us_fed_policy_view.parquet
+HEADER+FOOTER_OK|bytes=10486|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\data\R2\us_fed_rate_monitor.parquet
+HEADER+FOOTER_OK|bytes=10486|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\src\data\R2\us_fed_rate_monitor.parquet
+HEADER+FOOTER_OK|bytes=12193|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\US_TeaPlant\data\r2\us_fed_front2_tracker.parquet
+BAD_FOOTER(R1
+)|bytes=47255641|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\cot\cot_store.parquet
+BAD_FOOTER(R1
+)|bytes=35351|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\macro\fred_raw_monthly.parquet
+BAD_FOOTER(R1
+)|bytes=76853|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\macro\macro_signals_monthly.parquet
+BAD_FOOTER(R1
+)|bytes=7014|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\combined_policy_leaf.parquet
+BAD_FOOTER(R1
+)|bytes=9378091|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\beige_topics.parquet
+BAD_FOOTER(R1
+)|bytes=81693|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\beige_topics_rbl.parquet
+BAD_FOOTER(R1
+)|bytes=9328245|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\canonical_sentences.parquet
+BAD_FOOTER(R1
+)|bytes=4942|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\leaf.parquet
+BAD_FOOTER(R1
+)|bytes=9339857|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\sentiment_scores.parquet
+BAD_FOOTER(R1
+)|bytes=7257|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\FedSpeak\combined_policy_leaf.parquet
+BAD_FOOTER(R1
+)|bytes=3465|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\FedSpeak\fedspeak_drift_report.parquet
+BAD_FOOTER(R1
+)|bytes=6936|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\FedSpeak\fedspeak_stability.parquet
+BAD_FOOTER(R1
+)|bytes=13564|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\fusion\macro_state_spine_us.parquet
+BAD_FOOTER(R1
+)|bytes=2451|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\geoscen\geoscen_leaf.parquet
+BAD_FOOTER(R1
+)|bytes=15993|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\narratives\macro_state_story.parquet
+BAD_FOOTER(R1
+)|bytes=340|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Com_US\wti_pressure_leaf.parquet
+BAD_FOOTER(R1
+)|bytes=2209|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Econ_US\econ_leaf.parquet
+BAD_FOOTER(R1
+)|bytes=1466|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Equity_US\vinv_signal.parquet
+BAD_FOOTER(R1
+)|bytes=2317|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Inflation_US\inflation_leaf.parquet
+BAD_FOOTER(R1
+)|bytes=1204|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Tech_US\technical_leaf.parquet
+HEADER+FOOTER_OK|bytes=9222307|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\raw\BeigeBook\beige_raw.parquet
+ZERO_BYTES|bytes=0|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_cot_weekly.parquet
+ZERO_BYTES|bytes=0|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_fundamentals_monthly.parquet
+ZERO_BYTES|bytes=0|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_returns_monthly.parquet
+BAD_FOOTER(R1
+)|bytes=19032|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_2_0\qa\vinv_benchmark_overlay.parquet
+BAD_FOOTER(R1
+)|bytes=2478|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_2_0\qa\vinv_tranche_coverage.parquet
+BAD_FOOTER(R1
+)|bytes=3846|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_2_0\qa\vinv_vinv0_10_decade_summary.parquet
+BAD_FOOTER(R1
+)|bytes=5849|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\champion\vinv_champion_freeze_20251215T213325Z\model_ladder_predictions.parquet
+BAD_FOOTER(R1
+)|bytes=5849|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\champion\vinv_champion_freeze_20251218T144907Z\model_ladder_predictions.parquet
+BAD_FOOTER(R1
+)|bytes=126505|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\reports\model_ladder\model_ladder_predictions.parquet
+BAD_FOOTER(R1
+)|bytes=152456|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\ssot\vinv_ml_ssot_vFinal.parquet
+BAD_FOOTER(R1
+)|bytes=185567|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\ssot\vinv_modeling_view_vFinal.parquet

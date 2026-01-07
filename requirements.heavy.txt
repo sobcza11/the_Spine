@@ -1,0 +1,28 @@
+# Local / research-only. Never install in GitHub Actions cron.
+-r requirements.core.txt
+
+# Your existing heavy stack (move it here from the old requirements.ci.txt)
+# Keep whatever you truly use locally:
+mlflow
+jupyterlab
+ipykernel
+evidently
+fairlearn
+langchain
+langchain-community
+langchain-openai
+huggingface-hub
+accelerate
+scikit-learn
+scipy
+matplotlib
+plotly
+seaborn
+
+# If you need them locally:
+pyspark==4.0.0
+tensorflow==2.20.0rc0
+tf-keras==2.15.0
+pyppeteer==0.0.25
+
+

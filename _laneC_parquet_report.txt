@@ -1,0 +1,71 @@
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\canonical\us_macro_panel_weekly_canonical.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_data.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_indexes_1989_2025.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_indexes_1989_2025_monthly.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot\COT_VinV_weekly_1989_2025.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cleaned_cot_data.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_features_monthly_hybrid.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_block4.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_weekly_unified.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_weekly_unified_filled.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\cot_store_weekly_unified_filled_with_COT.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\filtered_cot_data_2025.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\filtered_wheat_cot_data.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\final_cot_data_2025.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\updated_cot_data.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\block4\cot_block4_1986_1989_monthly.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\cot_OLD\block4\cot_block4_1986_1989_weekly_std.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\market\etf_returns_monthly_tiingo.parquet
+FAIL_MAGIC||C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\processed\FedSpeak\combined_policy_leaf_v3.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_cftc_cot_factors_canonical.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_cftc_cot_tff_canonical.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_equity_vinv_canonical.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\us_wti_inventory_canonical.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\spine_us\raw\us_equity_vinv_raw.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\us\wti_inv_stor\df_wti_inv_stor_hist.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\us\yieldcurve_10y3m\df_yieldcurve_10y3m_hist.parquet
+OK|rows=52|cols=7|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\audit_outputs\annual_dividends_diag.parquet
+OK|rows=1872|cols=3|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\audit_outputs\annual_dividends_long.parquet
+OK|rows=0|cols=3|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_dividends_annual_1990_2025.parquet
+OK|rows=52|cols=14|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_dividend_checks.parquet
+OK|rows=52|cols=31|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_joined_diagnostics.parquet
+OK|rows=52|cols=8|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\tiingo_meta.parquet
+OK|rows=0|cols=31|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_universe_db\tiingo\outputs\vinv_data.parquet
+OK|rows=4|cols=11|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_yfin\outputs\df_diag_stageA_test.parquet
+OK|rows=4|cols=2|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\data\vinv\vinv_yfin\outputs\stageA_errors.parquet
+OK|rows=3|cols=8|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\data\R2\us_fed_policy_view.parquet
+OK|rows=9|cols=16|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\data\R2\us_fed_rate_monitor.parquet
+FAIL_MAGIC|????|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\src\data\R2\us_fed_rate_monitor.parquet
+OK|rows=60|cols=16|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\src\US_TeaPlant\data\r2\us_fed_front2_tracker.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\cot\cot_store.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\macro\fred_raw_monthly.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\macro\macro_signals_monthly.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\combined_policy_leaf.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\beige_topics.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\beige_topics_rbl.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\canonical_sentences.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\leaf.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\BeigeBook\sentiment_scores.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\FedSpeak\combined_policy_leaf.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\FedSpeak\fedspeak_drift_report.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\FedSpeak\fedspeak_stability.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\fusion\macro_state_spine_us.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\geoscen\geoscen_leaf.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\narratives\macro_state_story.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Com_US\wti_pressure_leaf.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Econ_US\econ_leaf.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Equity_US\vinv_signal.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Inflation_US\inflation_leaf.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\processed\p_Tech_US\technical_leaf.parquet
+OK|rows=16|cols=6|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\raw\BeigeBook\beige_raw.parquet
+FAIL_MAGIC||C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_cot_weekly.parquet
+FAIL_MAGIC||C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_fundamentals_monthly.parquet
+FAIL_MAGIC||C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_returns_monthly.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_2_0\qa\vinv_benchmark_overlay.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_2_0\qa\vinv_tranche_coverage.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\data\vinv\vinv_2_0\qa\vinv_vinv0_10_decade_summary.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\champion\vinv_champion_freeze_20251215T213325Z\model_ladder_predictions.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\champion\vinv_champion_freeze_20251218T144907Z\model_ladder_predictions.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\reports\model_ladder\model_ladder_predictions.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\ssot\vinv_ml_ssot_vFinal.parquet
+FAIL_READ|ArrowInvalid:Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.|C:\Users\Rand Sobczak Jr\_rts\3_AI\the_Spine\the_OracleChambers\vinv\ssot\vinv_modeling_view_vFinal.parquet
