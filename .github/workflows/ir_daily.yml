@@ -23,8 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-
-      - run: python -m pip install --no-cache-dir -r ./requirements.ci.txt
+          python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
       - name: Build IR Yields Canonical
         env:
