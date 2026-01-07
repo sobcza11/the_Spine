@@ -1,9 +1,10 @@
-name: Refresh WTI leaf + Spine US core
+# .github/workflows/wti_spine_refresh.yml
+name: refresh_wti_leaf_spine_us_core
 
 on:
   schedule:
-    - cron: "31 15 * * 3"   # Wed 10:31 AM EST
-  workflow_dispatch: {}
+    - cron: "31 15 * * 3"   # Wed 10:31 AM America/Detroit ≈ 15:31 UTC
+  workflow_dispatch:
 
 jobs:
   refresh-wti-spine:
@@ -15,11 +16,14 @@ jobs:
       R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
       R2_BUCKET: ${{ secrets.R2_BUCKET }}
       PYTHONPATH: ./src
+      PIP_NO_CACHE_DIR: "1"
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -27,7 +31,7 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
       - name: Upload WTI leaf to R2
         run: python scripts/upload_wti_leaf_to_r2.py

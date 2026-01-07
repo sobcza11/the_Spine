@@ -1,33 +1,42 @@
+# .github/workflows/wti_auto_update.yml
+name: wti_auto_update
+
 on:
   schedule:
-    - cron: "31 15 * * WED"   # 10:31 AM EST = 15:31 UTC
+    - cron: "31 15 * * 3"   # Wed 10:31 AM America/Detroit ≈ 15:31 UTC
+  workflow_dispatch:
 
 env:
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
   R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
   R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
   R2_BUCKET: thespine-us-hub
+  PYTHONPATH: ./src
 
 jobs:
   refresh-wti:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-        
       - name: Install deps
-        run: python -m pip install --no-cache-dir -r ./requirements.ci.txt
+        env:
+          PIP_NO_CACHE_DIR: "1"
+          PIP_DISABLE_PIP_VERSION_CHECK: "1"
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
       - name: Update WTI leaf
         run: python scripts/upload_wti_leaf_to_r2.py
 
       - name: Rebuild Spine-US-Core
         run: python scripts/build_spine_us_core.py
-
 
 
