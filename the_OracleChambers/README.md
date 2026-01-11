@@ -22,7 +22,25 @@ PORTFOLIO
 </h2>
 
 <h2 align="center">
-• • •
+<p align="center">
+  <a href="https://github.com/sobcza11/The-US-Inflation-Phenomenon">
+    <img src="https://github.com/sobcza11/The-US-Inflation-Phenomenon/blob/main/_other/READ_ME_Back.jpg?raw=true"
+         width="300"
+         style="margin:10px;" />
+  </a>
+
+  <a href="https://github.com/sobcza11/NLP_HK_Security_Law">
+    <img src="https://github.com/sobcza11/NLP_HK_Security_Law/blob/main/_supporting/READ%20ME_HK.jpg?raw=true"
+         width="300"
+         style="margin:10px;" />
+  </a>
+
+  <a href="https://github.com/sobcza11/FedSpeak">
+    <img src="https://github.com/sobcza11/FedSpeak/blob/main/_assets/FedSpeak.png?raw=true"
+         width="300"
+         style="margin:10px;" />
+  </a>
+</p>
 </h2> 
 
 ---
