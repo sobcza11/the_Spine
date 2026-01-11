@@ -32,7 +32,7 @@ Together, they form the macro-state input used by downstream systems.
 
 ---
 
-## 🧠 What the Spine Does (& Does Not Do)
+## 🧠 What the Spine Does (*& Does Not Do*)
 
 ### ✅ Does
 - Canonical macro-financial **data fusion & normalization**
@@ -49,7 +49,7 @@ Together, they form the macro-state input used by downstream systems.
 
 ---
 
-## 🔮 Downstream Layers (Read-Only Consumers) 
+## 🔮 Downstream Layers (*Read-Only Consumers*) 
 **FT-GMI** | [Click Here](https://github.com/sobcza11/FT-GMI)
 
 Regime-aware macro-financial diagnostics.
@@ -73,7 +73,7 @@ It never alters upstream data or diagnostics.
 
 ---
 
-### G20 Global Future Expansion (AE & EM RCpacks)
+### G20 Global Future Expansion (*AE & EM RCpacks*)
 
 Based on development status, ***the*_Spine’s** macro segmentation mirrors
 frameworks commonly applied by **central banks** and **quantitative macro research teams**.
@@ -91,7 +91,7 @@ RCpacks are designed for **diagnostic comparability**, not predictive modeling.
     - Well-suited for stress propagation, diffusion heatmaps, FX basis, and commodity sensitivity diagnostics
 ---
 
-## 🔐 **Governance (CPMAI-Aligned)**
+## 🔐 **Governance (*CPMAI-Aligned*)**
 
 - Deterministic pipelines
 - Schema validation
@@ -117,7 +117,7 @@ RCpacks are designed for **diagnostic comparability**, not predictive modeling.
 
 ---
 
-## 🧭 **Roadmap (Post-Freeze Only)**
+## 🧭 **Roadmap (*Post-Freeze Only*)**
 
 - Cross-regime diagnostics
 - Stress-window extensions
@@ -125,14 +125,9 @@ RCpacks are designed for **diagnostic comparability**, not predictive modeling.
 - Documentation hardening
 
 
-
-
-
-
-
 ---
 
-## 🌍 G20 Global Expansion (AE & EM RCpacks)
+## 🌍 G20 Global Expansion (*AE & EM RCpacks*)
 ***Extending the Spine to a Globally Balanced Architecture***
 
 The G20 represents **85% of global GDP** & anchors the Spine’s macro scope.
@@ -144,7 +139,7 @@ To scale cleanly, the Spine introduces **RCpacks (Regional Canonical Packs)**
 
 ---
 
-## 🧩 Architecture (High-Level)
+## 🧩 Architecture (*High-Level*)
 
 ```text
 the_Spine/
@@ -171,7 +166,7 @@ the_Spine/
 
 ---
 
-## 🧠 Fusion Engine (MAIN_p)
+## 🧠 Fusion Engine (*MAIN_p*)
 
 All pipes converge into an interpretable macro-state:
 
