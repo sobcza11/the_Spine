@@ -30,6 +30,18 @@ Instead, it:
 
 ---
 
+## 🧠 Purpose & Vision
+
+*the*_OracleChambers converts raw macro signals into governed, explainable intelligence.
+Rooted in a CPMAI-aligned workflow, it brings structure, transparency, and calm interpretability to an otherwise noisy global system.
+
+**AI & ML Boundary (Non-Negotiable)**  
+_All ML & AI activity described here is conceptual, interpretive, and documentation-only; no models trained or evaluated in OracleChambers modify upstream data, diagnostics, or results._
+
+It interprets the outputs of the_Spine through disciplined, auditable steps—producing narratives, scenario paths, and validation artifacts that explain why macro regimes evolve.
+
+---
+
 ## 🧱 System Context (*Strict Ordering*)
 
 ***the* Spine → FT-GMI → VinV → *the* OracleChambers**
