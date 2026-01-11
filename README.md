@@ -60,7 +60,7 @@ Consumes Spine outputs read-only.
 U.S. equity behavior conditioned on FT-GMI regimes.
 Descriptive, not predictive.
 
-***the* OracleChambers** | [Click Here](https://github.com/sobcza11/the_Spine/tree/main/the_OracleChambers)
+***the* OracleChambers** | [*Click Here*](https://github.com/sobcza11/the_Spine/tree/main/the_OracleChambers)
 
 Interpretive narrative & validation layer.
 This is where AI/ML lives, operating strictly downstream — “*living off the exhaust*.”
