@@ -17,7 +17,7 @@
 
 ## 🧠 Purpose & Boundary
 
-***the*_OracleChambers** is the **interpretive narrative layer** of a governed macro-financial research stack.
+***the* OracleChambers** is the **interpretive narrative layer** of a governed macro-financial research stack.
 
 It **does not generate signals, forecasts, diagnostics, or allocation logic**.
 
@@ -32,7 +32,7 @@ Instead, it:
 
 ## 🧱 System Context (*Strict Ordering*)
 
-**the_Spine → FT-GMI → VinV → *the* OracleChambers**
+***the* Spine → FT-GMI → VinV → *the* OracleChambers**
 
 - **the_Spine** — canonical macro-financial data & fusion  
 - **FT-GMI** — regime-aware macro diagnostics (read-only)  
