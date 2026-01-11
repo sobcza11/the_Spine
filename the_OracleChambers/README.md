@@ -24,14 +24,14 @@ It **does not generate signals, forecasts, diagnostics, or allocation logic**.
 Instead, it:
 - Interprets **read-only outputs** from upstream systems  
 - Produces **governed, explainable narratives**  
-- Supports **validation, coherence checks, and communication**
+- Supports **validation, coherence checks, & communication**
 
-Rooted in a **CPMAI-aligned workflow**, the OracleChambers brings structure, transparency, and calm interpretability to an otherwise noisy macro environment.
+Rooted in a **CPMAI-aligned workflow**, the OracleChambers brings structure, transparency, & calm interpretability to an otherwise noisy macro environment.
 
 **AI & ML Boundary (Non-Negotiable)**  
-_All ML & AI activity described here is conceptual, interpretive, and documentation-only; no models trained or evaluated in the OracleChambers modify upstream data, diagnostics, or results._
+_All ML & AI activity described here is conceptual, interpretive, & documentation-only; no models trained or evaluated in the OracleChambers modify upstream data, diagnostics, or results._
 
-It interprets the outputs of *the*_Spine through disciplined, auditable steps—producing narratives, scenario paths, and validation artifacts that explain **why** macro regimes evolve, without asserting prediction or authority.
+It interprets the outputs of *the*_Spine through disciplined, auditable steps—producing narratives, scenario paths, & validation artifacts that explain **why** macro regimes evolve, without asserting prediction or authority.
 
 ---
 
@@ -51,7 +51,7 @@ It interprets the outputs of *the*_Spine through disciplined, auditable steps—
 ## 📁 Portfolio of Interpretive Case Studies (*Non-Operational*)
 
 Illustrative research artifacts demonstrating **interpretive methodology only**.  
-These are **not live systems**, **not signal generators**, and **not authoritative outputs**.
+These are **not live systems**, **not signal generators**, & **not authoritative outputs**.
 
 <p align="center">
   <a href="https://github.com/sobcza11/The-US-Inflation-Phenomenon">
