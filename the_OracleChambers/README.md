@@ -17,6 +17,11 @@
   <img src="https://raw.githubusercontent.com/sobcza11/the_Spine/main/_support/assets/main_photo2.png" width="720">
 </p>
 
+<!-- H2 — Signals line -->
+<h1 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
+Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
+</h1>
+
 <h2 align="center">
 • <b>Portfolio of Interpretive Case Studies (Non-Operational)</b> • 
 </h2>
@@ -47,14 +52,6 @@
 </h2> 
 
 ---
-
-
-
----
-<!-- H2 — Signals line -->
-<h1 align="center" style="margin-top:0; margin-bottom:10px; font-size:28px; font-weight:700;">
-Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
-</h1>
 
 <h2 align="center">
 CURRENT FOCUS AREA (PRODUCTION-READY)
