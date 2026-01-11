@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
-  <img src="https://img.shields.io/badge/PMI--CPMAI-Aligned-DAA520" />
+  <img src="https://img.shields.io/badge/Governance-CPMAI--Aligned-yellowgreen" />
   <img src="https://img.shields.io/badge/Explainability-Rule_Based_%7C_Bounded-228B22" />
   <img src="https://img.shields.io/badge/NLP-Policy_Sensitive-483D8B" />
   <img src="https://img.shields.io/badge/Diagnostics-Stability_%7C_Coherence-2E2B5F" />
