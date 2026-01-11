@@ -30,7 +30,7 @@ Instead, it:
 
 ---
 
-## 🧱 System Context (Strict Ordering)
+## 🧱 System Context (*Strict Ordering*)
 
 **the_Spine → FT-GMI → VinV → *the* OracleChambers**
 
@@ -43,7 +43,7 @@ Instead, it:
 
 ---
 
-## 📁 Portfolio of Interpretive Case Studies (Non-Operational)
+## 📁 Portfolio of Interpretive Case Studies (*Non-Operational*)
 
 Illustrative research artifacts demonstrating **interpretive methodology only**.  
 These are **not live systems**, **not signal generators**, and **not authoritative outputs**.
@@ -65,7 +65,7 @@ These are **not live systems**, **not signal generators**, and **not authoritati
 
 ---
 
-## ✅ Current Focus Area (Production-Ready, Read-Only)
+## ✅ Current Focus Area (*Production-Ready, Read-Only*)
 
 ### 💼 **VinV** — *Equity Interpretation Lab*  
 [View Repository](https://github.com/sobcza11/VinV)
@@ -79,7 +79,7 @@ These are **not live systems**, **not signal generators**, and **not authoritati
 
 ---
 
-## 🗂️ Planned Focus Areas (Non-Operational)
+## 🗂️ Planned Focus Areas (*Non-Operational*)
 
 Conceptual interpretive domains.  
 Activation requires **formal governance, documentation, & downstream-only integration**.
@@ -92,7 +92,7 @@ Narrative interpretation of energy-driven inflation pressure from storage & flow
 
 ---
 
-## 🔧 Future Oracles (Planned Interpretive Lenses)
+## 🔧 Future Oracles (*Planned Interpretive Lenses*)
 
 Proposed **explanatory overlays**, not models or signals:
 
