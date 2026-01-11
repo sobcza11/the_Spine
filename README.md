@@ -50,12 +50,12 @@ Together, they form the macro-state input used by downstream systems.
 ---
 
 ## 🔮 Downstream Layers (*Read-Only Consumers*) 
-**FT-GMI** | [Click Here](https://github.com/sobcza11/FT-GMI)
+**FT-GMI** | [*Click Here*](https://github.com/sobcza11/FT-GMI)
 
 Regime-aware macro-financial diagnostics.
 Consumes Spine outputs read-only.
 
-**VinV** | [Click Here](https://github.com/sobcza11/VinV)
+**VinV** | [*Click Here*](https://github.com/sobcza11/VinV)
 
 U.S. equity behavior conditioned on FT-GMI regimes.
 Descriptive, not predictive.
