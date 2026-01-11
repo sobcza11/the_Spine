@@ -51,8 +51,6 @@ Signals • 🧠 → Policy Engine • ⚙️ → Macro Fusion • 🔮
 </p>
 </h2> 
 
----
-
 <h2 align="center">
 CURRENT FOCUS AREA (PRODUCTION-READY)
 </h2>
