@@ -39,7 +39,7 @@ PORTFOLIO
 
   <a href="https://github.com/sobcza11/FedSpeak">
     <img src="https://github.com/sobcza11/FedSpeak/blob/main/_assets/FedSpeak.png?raw=true"
-          height="180"
+          height="160"
            width="200"
          style="margin:10px;" />
   </a>
