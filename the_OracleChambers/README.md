@@ -15,7 +15,7 @@
 
 ---
 
-## 🧠 Purpose & Boundary
+## 🧠 Purpose, Vision & Boundary
 
 ***the* OracleChambers** is the **interpretive narrative layer** of a governed macro-financial research stack.
 
@@ -26,19 +26,12 @@ Instead, it:
 - Produces **governed, explainable narratives**  
 - Supports **validation, coherence checks, and communication**
 
-**No output from *the* OracleChambers ever feeds upstream.**
-
----
-
-## 🧠 Purpose & Vision
-
-*the*_OracleChambers converts raw macro signals into governed, explainable intelligence.
-Rooted in a CPMAI-aligned workflow, it brings structure, transparency, and calm interpretability to an otherwise noisy global system.
+Rooted in a **CPMAI-aligned workflow**, the OracleChambers brings structure, transparency, and calm interpretability to an otherwise noisy macro environment.
 
 **AI & ML Boundary (Non-Negotiable)**  
-_All ML & AI activity described here is conceptual, interpretive, and documentation-only; no models trained or evaluated in OracleChambers modify upstream data, diagnostics, or results._
+_All ML & AI activity described here is conceptual, interpretive, and documentation-only; no models trained or evaluated in the OracleChambers modify upstream data, diagnostics, or results._
 
-It interprets the outputs of the_Spine through disciplined, auditable steps—producing narratives, scenario paths, and validation artifacts that explain why macro regimes evolve.
+It interprets the outputs of *the*_Spine through disciplined, auditable steps—producing narratives, scenario paths, and validation artifacts that explain **why** macro regimes evolve, without asserting prediction or authority.
 
 ---
 
