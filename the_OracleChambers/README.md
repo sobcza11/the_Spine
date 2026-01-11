@@ -31,7 +31,7 @@ Rooted in a **CPMAI-aligned workflow**, the OracleChambers brings structure, tra
 **AI & ML Boundary (Non-Negotiable)**  
 _All ML & AI activity described here is conceptual, interpretive, & documentation-only; no models trained or evaluated in the OracleChambers modify upstream data, diagnostics, or results._
 
-It interprets the outputs of *the*_Spine through disciplined, auditable steps—producing narratives, scenario paths, & validation artifacts that explain **why** macro regimes evolve, without asserting prediction or authority.
+It interprets the outputs of *the* Spine through disciplined, auditable steps—producing narratives, scenario paths, & validation artifacts that explain **why** macro regimes evolve, without asserting prediction or authority.
 
 ---
 
@@ -39,7 +39,7 @@ It interprets the outputs of *the*_Spine through disciplined, auditable steps—
 
 ***the* Spine → FT-GMI → VinV → *the* OracleChambers**
 
-- **the_Spine** — canonical macro-financial data & fusion  
+- ***the* Spine** — canonical macro-financial data & fusion  
 - **FT-GMI** — regime-aware macro diagnostics (read-only)  
 - **VinV** — regime-conditioned equity behavior analysis  
 - **OracleChambers** — interpretation & explanation only  
@@ -148,7 +148,7 @@ It exists to:
 
 —not to predict, optimize, or decide.
 
-<p align="right">🧠 <a href="https://github.com/sobcza11/the_Spine">Return to the_Spine</a></p>
+<p align="right">🧠 <a href="https://github.com/sobcza11/the_Spine">Return to <i>the</i> Spine</a></p>
 
 
 
