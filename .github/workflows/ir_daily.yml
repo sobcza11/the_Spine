@@ -33,7 +33,7 @@ jobs:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: python scripts/build_ir_yields_canonical.py
+        run: python -m spine.jobs.build_ir_yields_canonical
 
       - name: Build IR Differential Canonical
         env:
@@ -42,7 +42,7 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-        run: python scripts/build_ir_diff_canonical.py
+        run: python -m spine.jobs.build_ir_diff_canonical
 
       - name: Validate IR Differential Canonical
         env:
@@ -51,6 +51,6 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-        run: python scripts/validate_ir_diff_canonical.py
+        run: python -m spine.jobs.validate_ir_diff_canonical
 
         

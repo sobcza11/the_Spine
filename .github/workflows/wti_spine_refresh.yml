@@ -34,10 +34,10 @@ jobs:
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
       - name: Upload WTI leaf to R2
-        run: python scripts/upload_wti_leaf_to_r2.py
+        run: python -m spine.jobs.upload_wti_leaf_to_r2
 
       - name: Build Spine US core
-        run: python scripts/build_spine_us_core.py
+        run: python -m spine.jobs.build_spine_us_core
 
 
 

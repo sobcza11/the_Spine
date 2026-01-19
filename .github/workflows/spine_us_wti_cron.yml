@@ -35,5 +35,5 @@ jobs:
 
       - name: Update WTI history & rebuild Spine-US core
         run: |
-          python scripts/update_wti_hist_and_spine.py
+          python -m spine.jobs.update_wti_hist_and_spine
 

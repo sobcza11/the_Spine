@@ -34,9 +34,9 @@ jobs:
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
       - name: Update WTI leaf
-        run: python scripts/upload_wti_leaf_to_r2.py
+        run: python -m spine.jobs.upload_wti_leaf_to_r2
 
       - name: Rebuild Spine-US-Core
-        run: python scripts/build_spine_us_core.py
+        run: python -m spine.jobs.build_spine_us_core
 
 

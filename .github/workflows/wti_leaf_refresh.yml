@@ -33,5 +33,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run WTI leaf upload -> R2
-        run: python scripts/upload_wti_leaf_to_r2.py
+        run: python -m spine.jobs.upload_wti_leaf_to_r2
 
