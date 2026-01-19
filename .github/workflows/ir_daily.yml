@@ -1,10 +1,8 @@
 name: Daily IR Canonical Build
 
 on:
-  # Weekdays at 10:00 UTC
   schedule:
     - cron: "0 10 * * 1-5"
-  # Manual trigger from Actions tab
   workflow_dispatch:
 
 jobs:
@@ -20,6 +18,14 @@ jobs:
         with:
           python-version: "3.11"
 
+      # TEMPORARY — verify secrets wiring ONLY
+      # REMOVE AFTER FIRST SUCCESS
+      - name: Debug R2 endpoint (temporary)
+        env:
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+        run: |
+          echo "R2_ENDPOINT=${R2_ENDPOINT:+SET}"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -32,6 +38,7 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python -m spine.jobs.build_ir_yields_canonical
 
@@ -42,6 +49,7 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
         run: python -m spine.jobs.build_ir_diff_canonical
 
       - name: Validate IR Differential Canonical
@@ -51,6 +59,7 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
         run: python -m spine.jobs.validate_ir_diff_canonical
 
         
