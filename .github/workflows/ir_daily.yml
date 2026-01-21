@@ -8,6 +8,8 @@ on:
 jobs:
   ir-build-and-validate:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
 
     steps:
       - name: Checkout repo
@@ -33,7 +35,6 @@ jobs:
 
       - name: Build IR Yields Canonical
         env:
-          PYTHONPATH: ./src
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
@@ -44,7 +45,6 @@ jobs:
 
       - name: Build IR Differential Canonical
         env:
-          PYTHONPATH: ./src
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
@@ -54,12 +54,11 @@ jobs:
 
       - name: Validate IR Differential Canonical
         env:
-          PYTHONPATH: ./src
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-        run: python -m spine.jobs.validate_ir_diff_canonical
+        run: python -m spine.jobs.validate_ir_diff_canonical 
 
         
