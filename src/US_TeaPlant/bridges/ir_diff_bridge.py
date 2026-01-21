@@ -156,13 +156,18 @@ def build_ir_diff_canonical(
             }
 
             # 10Y differential
-            if not m_10y.empty and base_ccy in m_10y.columns and quote_ccy in m_10y.columns:
+            if (
+                not m_10y.empty
+                and base_ccy in m_10y.columns
+                and quote_ccy in m_10y.columns
+            ):
                 b10 = m_10y.at[as_of_date, base_ccy]
                 q10 = m_10y.at[as_of_date, quote_ccy]
                 if not (np.isnan(b10) or np.isnan(q10)):
                     row["base_10y_yield"] = float(b10)
                     row["quote_10y_yield"] = float(q10)
                     row["diff_10y_bp"] = float((b10 - q10) * 100.0)
+
             # Policy differential
             if (
                 not m_policy.empty
@@ -187,8 +192,10 @@ def build_ir_diff_canonical(
                 rows.append(row)
 
     if not rows:
-        print("[IR-DIFF] WARNING: No IR differentials computed; "
-              "check tenor coverage in IR yields leaf.")
+        print(
+            "[IR-DIFF] WARNING: No IR differentials computed; "
+            "check tenor coverage in IR yields leaf."
+        )
 
         df_empty = pd.DataFrame(
             columns=[
@@ -244,7 +251,6 @@ def build_ir_diff_canonical(
 
     return df_diff
 
-# --- add at bottom of file (below build_ir_diff_canonical) ---
 
 def main() -> None:
     """
@@ -258,6 +264,7 @@ def main() -> None:
     start_date = dt.date(2000, 1, 1)
     end_date = dt.datetime.utcnow().date()
     build_ir_diff_canonical(start_date=start_date, end_date=end_date)
+
 
 if __name__ == "__main__":
     main()
