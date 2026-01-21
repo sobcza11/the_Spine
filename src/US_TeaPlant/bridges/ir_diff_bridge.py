@@ -50,7 +50,7 @@ TENOR_10Y = "10Y"
 
 def _get_fx_pair_universe() -> List[Tuple[str, str, str]]:
     """
-    Read canonical FX spot leaf and return a unique universe of pairs:
+    Read canonical FX spot leaf & return a unique universe of pairs:
         [(pair, base_ccy, quote_ccy), ...]
     """
     df_fx = read_parquet_from_r2(R2_FX_SPOT_KEY, columns=["pair", "base_ccy", "quote_ccy"])
@@ -61,9 +61,9 @@ def _get_fx_pair_universe() -> List[Tuple[str, str, str]]:
 def _pivot_yields(df_y: pd.DataFrame, tenor: str) -> pd.DataFrame:
     """
     Take the long IR yields DF, filter to a tenor (e.g. '10Y' or 'POLICY'),
-    and return a wide table indexed by as_of_date with one column per ccy.
+    & return a wide table indexed by as_of_date with one column per ccy.
 
-    It is tolerant of schema changes:
+    Tolerant of schema changes:
     - prefers 'rate_value' if present (legacy)
     - falls back to 'rate'
     - then to 'yield'
@@ -96,7 +96,7 @@ def build_ir_diff_canonical(
 ) -> pd.DataFrame:
     """
     Build the canonical IR differential leaf for all FX pairs over [start_date, end_date]
-    and write to R2.
+    & write to R2.
     """
     print(
         f"[IR-DIFF] Building IR differentials for "
@@ -250,6 +250,112 @@ def build_ir_diff_canonical(
     )
 
     return df_diff
+
+
+def validate() -> None:
+    """
+    Governed validation entrypoint used by spine.jobs.validate_ir_diff_canonical.
+
+    Contract:
+      - reads canonical leaf from R2
+      - runs hard checks (raise on breach)
+      - prints a success line on pass
+    """
+    df = read_parquet_from_r2(R2_IR_DIFF_KEY)
+
+    if df is None or len(df) == 0:
+        raise RuntimeError(f"[IR-DIFF][VALIDATE] Leaf missing or empty: {R2_IR_DIFF_KEY}")
+
+    required_cols = [
+        "as_of_date",
+        "pair",
+        "base_ccy",
+        "quote_ccy",
+        "leaf_group",
+        "leaf_name",
+        "source_system",
+        "updated_at",
+    ]
+    missing = [c for c in required_cols if c not in df.columns]
+    if missing:
+        raise RuntimeError(
+            "[IR-DIFF][VALIDATE] Missing required columns: "
+            f"{missing}. Found={sorted(df.columns.tolist())}"
+        )
+
+    # Date coercion & sanity
+    df["as_of_date"] = pd.to_datetime(df["as_of_date"], errors="coerce")
+    if df["as_of_date"].isna().any():
+        bad = int(df["as_of_date"].isna().sum())
+        raise RuntimeError(f"[IR-DIFF][VALIDATE] {bad} rows have invalid as_of_date.")
+
+    # Required key uniqueness
+    dup_mask = df.duplicated(subset=["as_of_date", "pair"], keep=False)
+    if dup_mask.any():
+        n = int(dup_mask.sum())
+        raise RuntimeError(f"[IR-DIFF][VALIDATE] Duplicate (as_of_date,pair) keys: {n} rows.")
+
+    # Pair/base/quote presence
+    if df["pair"].isna().any() or (df["pair"].astype(str).str.len() == 0).any():
+        raise RuntimeError("[IR-DIFF][VALIDATE] Null/empty pair values detected.")
+    if df["base_ccy"].isna().any() or df["quote_ccy"].isna().any():
+        raise RuntimeError("[IR-DIFF][VALIDATE] Null base_ccy/quote_ccy detected.")
+
+    # Numeric sanity: at least one diff column must exist & have some numeric content
+    diff_cols = [c for c in ["diff_10y_bp", "diff_policy_bp"] if c in df.columns]
+    if not diff_cols:
+        raise RuntimeError(
+            "[IR-DIFF][VALIDATE] No diff columns found. Expected one of "
+            "['diff_10y_bp','diff_policy_bp']."
+        )
+
+    has_any_numeric = False
+    for c in diff_cols:
+        v = pd.to_numeric(df[c], errors="coerce")
+        if v.notna().any():
+            has_any_numeric = True
+
+        # Hard bound sanity (very wide, avoids false fails)
+        # bp diffs beyond +/- 5000 are almost certainly corrupt.
+        if v.notna().any():
+            too_wide = (v.abs() > 5000).sum()
+            if int(too_wide) > 0:
+                raise RuntimeError(
+                    f"[IR-DIFF][VALIDATE] {int(too_wide)} rows have |{c}| > 5000 bp."
+                )
+
+    if not has_any_numeric:
+        raise RuntimeError("[IR-DIFF][VALIDATE] All diff columns are null/non-numeric.")
+
+    # Coverage sanity
+    pairs = int(df["pair"].nunique(dropna=True))
+    rows = int(len(df))
+    if pairs < 1:
+        raise RuntimeError("[IR-DIFF][VALIDATE] No pairs present.")
+    if rows < pairs * 50:  # conservative minimum history per pair
+        raise RuntimeError(
+            f"[IR-DIFF][VALIDATE] Too few rows for pair count: rows={rows}, pairs={pairs}."
+        )
+
+    # Metadata sanity
+    if not (df["leaf_group"] == "IR").all():
+        raise RuntimeError("[IR-DIFF][VALIDATE] leaf_group must be 'IR' for all rows.")
+    if not (df["leaf_name"] == "IR_DIFF_CANONICAL").all():
+        raise RuntimeError("[IR-DIFF][VALIDATE] leaf_name must be 'IR_DIFF_CANONICAL' for all rows.")
+
+    # Freshness soft check (warn-only)
+    latest = pd.Timestamp(df["as_of_date"].max()).normalize()
+    today = pd.Timestamp(dt.datetime.utcnow().date())
+    lag_days = int((today - latest).days)
+    if lag_days > 10:
+        print(
+            f"[IR-DIFF][VALIDATE][WARN] Latest date lag is {lag_days} days "
+            f"(latest={latest.date()}, today={today.date()})."
+        )
+
+    print(
+        f"[IR-DIFF][VALIDATE] OK (rows={rows:,}, pairs={pairs}, latest={latest.date()}, lag_days={lag_days})"
+    )
 
 
 def main() -> None:
