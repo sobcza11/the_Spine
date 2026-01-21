@@ -244,3 +244,21 @@ def build_ir_diff_canonical(
 
     return df_diff
 
+# --- add at bottom of file (below build_ir_diff_canonical) ---
+
+def main() -> None:
+    """
+    CLI entrypoint used by spine.jobs.build_ir_diff_canonical.
+    Builds IR diff canonical over the default governed window.
+
+    Window rule:
+      - Start: 2000-01-01
+      - End:   today (UTC date)
+    """
+    start_date = dt.date(2000, 1, 1)
+    end_date = dt.datetime.utcnow().date()
+    build_ir_diff_canonical(start_date=start_date, end_date=end_date)
+
+if __name__ == "__main__":
+    main()
+
