@@ -1,29 +1,19 @@
 # .github/workflows/wti_spine_refresh.yml
 name: refresh_wti_leaf_spine_us_core
 
-
-
 on:
   schedule:
-    - cron: "31 15 * * 3"   # Wed 10:31 AM America/Detroit ≈ 15:31 UTC
+    - cron: "31 15 * * 3"
   workflow_dispatch:
 
-    
 jobs:
   refresh-wti-spine:
     runs-on: ubuntu-latest
 
     env:
-      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-      R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
-      R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
-      R2_BUCKET: ${{ secrets.R2_BUCKET }}
-      WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
-      R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
-
-      PYTHONPATH: ./src
       PIP_NO_CACHE_DIR: "1"
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      AWS_EC2_METADATA_DISABLED: "true"
 
     steps:
       - name: Checkout repo
@@ -39,22 +29,25 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
-      - name: Set PYTHONPATH (src-layout)
-        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
-
-      - name: Set PYTHONPATH (src-layout)
-        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
-
       - name: Upload WTI leaf to R2
         env:
+          PYTHONPATH: ${{ github.workspace }}/src
+          WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
+          R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
           R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
           R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
           R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
-          WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
         run: python -m spine.jobs.upload_wti_leaf_to_r2
 
+      - name: Sanity check US_TeaPlant import
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
+        run: python -c "import US_TeaPlant; print('US_TeaPlant import OK')"
+
       - name: Build Spine US core
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
         run: python -m US_TeaPlant.us_spine_core_builder
 
 

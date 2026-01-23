@@ -32,6 +32,9 @@ jobs:
           python -m pip install --no-cache-dir -r ./requirements.ci.fed-rate-monitor.lock.txt
           python -m pip check
 
+      - name: Set PYTHONPATH (src-layout)
+        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
+
       - name: Update R2 Fed Rate Monitor parquet
         env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}

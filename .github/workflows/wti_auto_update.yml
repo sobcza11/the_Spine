@@ -1,32 +1,19 @@
+# .github/workflows/wti_auto_update.yml
 name: wti_auto_update
 
 on:
   schedule:
-    - cron: "31 15 * * 3"
+    - cron: "31 15 * * 3" # Wed 10:31 AM America/Detroit ≈ 15:31 UTC
   workflow_dispatch:
-
-env:
-  # Python module resolution (src-layout)
-  PYTHONPATH: ${{ github.workspace }}/src
-
-  # WTI leaf source (local artifact produced earlier in pipeline)
-  WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
-  R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
-
-  # Cloudflare R2 (S3-compatible)
-  R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
-  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-  R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
-  R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
-  R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
-
-  # Optional but useful (safe defaults)
-  AWS_EC2_METADATA_DISABLED: "true"
-
 
 jobs:
   refresh-wti:
     runs-on: ubuntu-latest
+
+    env:
+      PIP_NO_CACHE_DIR: "1"
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      AWS_EC2_METADATA_DISABLED: "true"
 
     steps:
       - name: Checkout repo
@@ -38,22 +25,27 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        env:
-          PIP_NO_CACHE_DIR: "1"
-          PIP_DISABLE_PIP_VERSION_CHECK: "1"
         run: |
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
-      - name: Rebuild Spine-US-Core
-        run: python -m US_TeaPlant.us_spine_core_builder
-
       - name: Upload WTI leaf to R2
         env:
+          PYTHONPATH: ${{ github.workspace }}/src
+          WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
+          R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
           R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
           R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
           R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
-          WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
         run: python -m spine.jobs.upload_wti_leaf_to_r2
 
+      - name: Sanity check US_TeaPlant import
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
+        run: python -c "import US_TeaPlant; print('US_TeaPlant import OK')"
+
+      - name: Rebuild Spine-US-Core
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
+        run: python -m US_TeaPlant.us_spine_core_builder
