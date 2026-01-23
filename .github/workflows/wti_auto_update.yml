@@ -7,12 +7,12 @@ on:
 
 env:
   # Python module resolution (src-layout)
-  PYTHONPATH: ./src
+  PYTHONPATH: ${{ github.workspace }}/src
 
   # WTI leaf source (local artifact produced earlier in pipeline)
   WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
   R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
-  
+
   # Cloudflare R2 (S3-compatible)
   R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
@@ -46,7 +46,7 @@ jobs:
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
       - name: Rebuild Spine-US-Core
-        run: python -m spine.jobs.build_spine_us_core
+        run: python -m US_TeaPlant.us_spine_core_builder
 
       - name: Upload WTI leaf to R2
         env:
