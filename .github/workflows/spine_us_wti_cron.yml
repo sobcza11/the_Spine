@@ -25,8 +25,10 @@ jobs:
       R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
       R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
 
-      # Optional but useful
+      # Optional but useful (safe defaults)
       AWS_EC2_METADATA_DISABLED: "true"
+      PIP_NO_CACHE_DIR: "1"
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
 
     steps:
       - name: Checkout repo
@@ -38,15 +40,14 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        env:
-          PIP_NO_CACHE_DIR: "1"
-          PIP_DISABLE_PIP_VERSION_CHECK: "1"
         run: |
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
+          python -m pip check
 
-      - name: Sanity check US_TeaPlant import
-        run: python -c "import US_TeaPlant; print('US_TeaPlant import OK')"
+      - name: Sanity check module imports
+        run: |
+          python -c "import spine; import US_TeaPlant; print('imports OK')"
 
       # Step 1: Upload WTI leaf to R2
       - name: Upload WTI leaf to R2
@@ -55,3 +56,4 @@ jobs:
       # Step 2: Rebuild Spine-US Core
       - name: Rebuild Spine-US Core
         run: python -m US_TeaPlant.us_spine_core_builder
+        
