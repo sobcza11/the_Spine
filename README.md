@@ -1,4 +1,4 @@
-# <p align="center">*the*_Spine • 🧠 • Data → Diagnostics → Context</p>
+# <p align="center">*the* Spine • 🧠 • Data → Diagnostics → Context</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-blue" />
