@@ -39,5 +39,6 @@ jobs:
       - name: Build Spine US core
         run: python -m spine.jobs.build_spine_us_core
 
-
+      - name: Set PYTHONPATH (src-layout)
+        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
 
