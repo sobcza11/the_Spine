@@ -2,7 +2,7 @@ name: Update WTI & Spine-US Core
 
 on:
   schedule:
-    # Every Wednesday at 22:00 UTC (adjust as needed)
+    # Every Wednesday at 22:00 UTC
     - cron: "0 22 * * 3"
   workflow_dispatch: {}
 
@@ -10,29 +10,23 @@ jobs:
   update-wti-and-spine:
     runs-on: ubuntu-latest
 
-env:
-  # Python module resolution (src-layout)
-  PYTHONPATH: ${{ github.workspace }}/src
+    env:
+      # Python module resolution (src-layout)
+      PYTHONPATH: ${{ github.workspace }}/src
 
-  # WTI leaf local path & destination key
-  WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
-  R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
+      # WTI leaf local path & destination key
+      WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
+      R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
 
-  # Cloudflare R2 (S3-compatible)
-  R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
-  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-  R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
-  R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
-  R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
+      # Cloudflare R2 (S3-compatible)
+      R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+      R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+      R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
 
-  # Optional but useful
-  AWS_EC2_METADATA_DISABLED: "true"
-
-
-      
-      # Add any secrets needed by fetch_latest_wti()
-      # WTI_SOURCE_CSV: ${{ secrets.WTI_SOURCE_CSV }}
-      # WTI_API_KEY:    ${{ secrets.WTI_API_KEY }}
+      # Optional but useful
+      AWS_EC2_METADATA_DISABLED: "true"
 
     steps:
       - name: Checkout repo
@@ -44,16 +38,15 @@ env:
           python-version: "3.11"
 
       - name: Install dependencies
+        env:
+          PIP_NO_CACHE_DIR: "1"
+          PIP_DISABLE_PIP_VERSION_CHECK: "1"
         run: |
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
-      - name: Set PYTHONPATH (src-layout)
-        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
-
-      # - name: Update WTI history & rebuild Spine-US core
-      #   run: |
-      #     python -m spine.jobs.update_wti_hist_and_spine
+      - name: Sanity check US_TeaPlant import
+        run: python -c "import US_TeaPlant; print('US_TeaPlant import OK')"
 
       # Step 1: Upload WTI leaf to R2
       - name: Upload WTI leaf to R2
