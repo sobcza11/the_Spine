@@ -33,6 +33,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
+      - name: Set PYTHONPATH (src-layout)
+        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
+
       - name: Update WTI history & rebuild Spine-US core
         run: |
           python -m spine.jobs.update_wti_hist_and_spine

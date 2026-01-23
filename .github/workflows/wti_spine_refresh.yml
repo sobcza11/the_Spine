@@ -21,7 +21,7 @@ jobs:
       WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
       R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
 
-      PYTHONPATH: ./src
+      PYTHONPATH: ${{ github.workspace }}/src
       PIP_NO_CACHE_DIR: "1"
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
 
@@ -52,6 +52,6 @@ jobs:
         run: python -m spine.jobs.upload_wti_leaf_to_r2
 
       - name: Build Spine US core
-        run: python -m spine.jobs.build_spine_us_core
+        run: python -m US_TeaPlant.us_spine_core_builder
 
 
