@@ -32,6 +32,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set PYTHONPATH (src-layout)
+        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
+
       - name: Run WTI leaf upload -> R2
         run: python -m spine.jobs.upload_wti_leaf_to_r2
 
+      - name: Upload WTI leaf to R2
+        env:
+          R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
+          R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+          R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+          R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
+          WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
+        run: python -m spine.jobs.upload_wti_leaf_to_r2
