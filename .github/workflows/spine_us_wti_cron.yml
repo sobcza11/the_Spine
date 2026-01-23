@@ -10,11 +10,26 @@ jobs:
   update-wti-and-spine:
     runs-on: ubuntu-latest
 
-    env:
-      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-      R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
-      R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
-      R2_BUCKET: thespine-us-hub
+env:
+  # Python module resolution (src-layout)
+  PYTHONPATH: ${{ github.workspace }}/src
+
+  # WTI leaf local path & destination key
+  WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
+  R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
+
+  # Cloudflare R2 (S3-compatible)
+  R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
+  R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
+  R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
+
+  # Optional but useful
+  AWS_EC2_METADATA_DISABLED: "true"
+
+
+      
       # Add any secrets needed by fetch_latest_wti()
       # WTI_SOURCE_CSV: ${{ secrets.WTI_SOURCE_CSV }}
       # WTI_API_KEY:    ${{ secrets.WTI_API_KEY }}
@@ -36,7 +51,14 @@ jobs:
       - name: Set PYTHONPATH (src-layout)
         run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
 
-      - name: Update WTI history & rebuild Spine-US core
-        run: |
-          python -m spine.jobs.update_wti_hist_and_spine
+      # - name: Update WTI history & rebuild Spine-US core
+      #   run: |
+      #     python -m spine.jobs.update_wti_hist_and_spine
 
+      # Step 1: Upload WTI leaf to R2
+      - name: Upload WTI leaf to R2
+        run: python -m spine.jobs.upload_wti_leaf_to_r2
+
+      # Step 2: Rebuild Spine-US Core
+      - name: Rebuild Spine-US Core
+        run: python -m US_TeaPlant.us_spine_core_builder
