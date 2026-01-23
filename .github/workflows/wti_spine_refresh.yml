@@ -21,7 +21,7 @@ jobs:
       WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
       R2_OBJECT_KEY: spine_us/leaves/wti/wti_leaf.parquet
 
-      PYTHONPATH: ${{ github.workspace }}/src
+      PYTHONPATH: ./src
       PIP_NO_CACHE_DIR: "1"
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
 
@@ -38,6 +38,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
+
+      - name: Set PYTHONPATH (src-layout)
+        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
 
       - name: Set PYTHONPATH (src-layout)
         run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
