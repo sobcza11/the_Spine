@@ -1,10 +1,8 @@
 name: Refresh WTI Wkly Index Leaf
 
 on:
-  # Every Wednesday at 18:30 UTC (~ early afternoon ET, after EIA release)
   schedule:
-    - cron: "31 15 * * 3"    # 10:31 AM EST -- that shows UTC
-  # Allow manual trigger if you want to force an update
+    - cron: "31 15 * * 3"
   workflow_dispatch: {}
 
 jobs:
@@ -12,11 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      PYTHONPATH: ./src
+      WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
+
+      R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
       R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
       R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
       R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
-      R2_BUCKET: ${{ secrets.R2_BUCKET }}
-      PYTHONPATH: ./src
+      R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
 
     steps:
       - name: Checkout repo
@@ -32,17 +33,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Set PYTHONPATH (src-layout)
-        run: echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
-
-      - name: Run WTI leaf upload -> R2
-        run: python -m spine.jobs.upload_wti_leaf_to_r2
-
       - name: Upload WTI leaf to R2
-        env:
-          R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
-          R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
-          R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
-          R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
-          WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
         run: python -m spine.jobs.upload_wti_leaf_to_r2
+
+
+
+
+
+

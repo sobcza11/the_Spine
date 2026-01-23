@@ -1,21 +1,25 @@
-# .github/workflows/wti_auto_update.yml
 name: wti_auto_update
 
 on:
   schedule:
-    - cron: "31 15 * * 3"   # Wed 10:31 AM America/Detroit ≈ 15:31 UTC
+    - cron: "31 15 * * 3"
   workflow_dispatch:
 
 env:
+  PYTHONPATH: ./src
+
+  WTI_LEAF_PATH: src/US_TeaPlant/data/wti_inv_stor_hist.csv
+
+  R2_ENDPOINT:   ${{ secrets.R2_ENDPOINT }}
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
   R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
   R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
-  R2_BUCKET: thespine-us-hub
-  PYTHONPATH: ./src
+  R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
 
 jobs:
   refresh-wti:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
