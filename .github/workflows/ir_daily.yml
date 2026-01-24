@@ -3,10 +3,11 @@ name: Daily IR Canonical Build
 on:
   schedule:
     - cron: "0 10 * * 1-5"
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
-  ir-build-and-validate:
+  ir-daily:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: ${{ github.workspace }}/src

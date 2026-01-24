@@ -2,9 +2,7 @@
 name: wti_auto_update
 
 on:
-  # schedule:
-  #   - cron: "31 15 * * 3" # Wed 10:31 AM America/Detroit ≈ 15:31 UTC
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   refresh-wti:

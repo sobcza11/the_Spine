@@ -1,14 +1,13 @@
 name: Daily IR Canonical Build
 
 on:
-  # Weekdays at 10:00 UTC
   schedule:
     - cron: "0 10 * * 1-5"
-  # Manual trigger from Actions tab
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
-  ir-build-and-validate:
+  fx-daily:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
