@@ -56,4 +56,14 @@ jobs:
       # Step 2: Rebuild Spine-US Core
       - name: Rebuild Spine-US Core
         run: python -m US_TeaPlant.us_spine_core_builder
-        
+
+      - name: Print run context
+        shell: bash
+        run: |
+          echo "[CTX] ref=${GITHUB_REF}"
+          echo "[CTX] sha=${GITHUB_SHA}"
+          echo "[CTX] workflow=${GITHUB_WORKFLOW}"
+          echo "[CTX] run_id=${GITHUB_RUN_ID}"
+          echo "[CTX] actor=${GITHUB_ACTOR}"
+          echo "[CTX] event=${GITHUB_EVENT_NAME}"
+

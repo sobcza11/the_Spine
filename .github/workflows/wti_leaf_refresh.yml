@@ -40,7 +40,15 @@ jobs:
           R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
         run: python -m spine.jobs.upload_wti_leaf_to_r2
 
-
+      - name: Print run context
+        shell: bash
+        run: |
+          echo "[CTX] ref=${GITHUB_REF}"
+          echo "[CTX] sha=${GITHUB_SHA}"
+          echo "[CTX] workflow=${GITHUB_WORKFLOW}"
+          echo "[CTX] run_id=${GITHUB_RUN_ID}"
+          echo "[CTX] actor=${GITHUB_ACTOR}"
+          echo "[CTX] event=${GITHUB_EVENT_NAME}"
 
 
 
