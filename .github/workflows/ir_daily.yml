@@ -2,8 +2,13 @@ name: Daily IR Canonical Build
 
 on:
   schedule:
-    - cron: "0 10 * * 1-5"
+    - cron: "0 10 * * 1-5"   # Weekdays @ 10:00 UTC
   workflow_dispatch: {}
+
+# Prevent duplicate / overlapping scheduled runs
+concurrency:
+  group: ir-daily-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   ir-daily:
@@ -22,7 +27,7 @@ jobs:
           python-version: "3.11"
 
       # TEMPORARY — verify secrets wiring ONLY
-      # REMOVE AFTER FIRST SUCCESS
+      # SAFE TO REMOVE after confirmation
       - name: Debug R2 endpoint (temporary)
         env:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
@@ -60,7 +65,7 @@ jobs:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-        run: python -m spine.jobs.validate_ir_diff_canonical 
+        run: python -m spine.jobs.validate_ir_diff_canonical
 
       - name: Print run context
         shell: bash
@@ -71,4 +76,3 @@ jobs:
           echo "[CTX] run_id=${GITHUB_RUN_ID}"
           echo "[CTX] actor=${GITHUB_ACTOR}"
           echo "[CTX] event=${GITHUB_EVENT_NAME}"
-
