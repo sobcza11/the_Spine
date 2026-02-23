@@ -1,0 +1,56 @@
+name: fx_spot_update_t2
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # Weekdays at 06:20 UTC (01:20 America/Detroit during EST) — adjust if you prefer
+    - cron: "20 22 * * 1-5"
+
+jobs:
+  fx_spot_update_t2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run FX Spot UPDATE (T2)
+        env:
+          TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
+
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+          # Optional overrides
+          # FX_END_DATE: "2026-02-23"
+          # FX_ALLOWED_LAG_DAYS: "5"
+        run: |
+          python -m spine.jobs.fx.build_fx_spot_update_t2
+
+      - name: Run FX Spot VALIDATE (T2)
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+          # Optional overrides
+          # FX_ALLOWED_LAG_DAYS: "5"
+          # FX_MIN_ROWS_PER_SYMBOL: "250"
+        run: |
+          python -m spine.jobs.fx.validate_fx_spot_t2
+
+
