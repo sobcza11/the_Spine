@@ -123,34 +123,25 @@ def _tiingo_headers() -> Dict[str, str]:
     return {"Authorization": f"Token {token}"}
 
 
-def _fetch_tiingo_fx_prices(
-    ticker: str,
-    start_date: str,
-    end_date: str | None = None,
-    resample_freq: str = RESAMPLE_FREQ,
-) -> pd.DataFrame:
-    params: Dict[str, Any] = {"startDate": start_date, "resampleFreq": resample_freq}
-    if end_date:
-        params["endDate"] = end_date
+import time
 
-    url = f"{TIINGO_BASE}/{ticker.lower()}/prices"
-
-    for attempt in range(6):
-        r = requests.get(url, headers=_tiingo_headers(), params=params, timeout=60)
-
-        if r.status_code == 200:
-            data = r.json()
-            return pd.DataFrame(data) if data else pd.DataFrame()
-
-        if r.status_code == 429:
-            sleep_s = int(2**attempt)
-            print(f"Tiingo 429 rate limit for {ticker}; backoff {sleep_s}s (attempt {attempt+1}/6)")
-            time.sleep(sleep_s)
-            continue
-
-        raise RuntimeError(f"Tiingo request failed ({ticker}) {r.status_code}: {r.text[:500]}")
-
-    raise RuntimeError(f"Tiingo request failed ({ticker}) 429: rate limit exceeded after retries")
+def _fetch_tiingo_fx_prices(symbol, start_date, end_date, resample_freq):
+    retries = 6
+    backoff = 1  # Start with 1 second
+    for attempt in range(retries):
+        try:
+            # Make the Tiingo request here
+            # (replace this with actual request logic)
+            response = tiingo.get_fx_prices(symbol, start_date, end_date, resample_freq)
+            return response
+        except requests.exceptions.RequestException as e:
+            if '429' in str(e):  # Check for rate-limit exceeded error
+                print(f"Tiingo rate limit exceeded for {symbol}. Backing off for {backoff} seconds.")
+                time.sleep(backoff)  # Exponential backoff
+                backoff *= 2  # Double the backoff time after each retry
+            else:
+                raise  # Re-raise if it's another kind of error
+    raise RuntimeError(f"Tiingo request failed ({symbol}) 429: rate limit exceeded after retries")
 
 
 def _normalize_fx_schema(df_raw: pd.DataFrame, symbol: str) -> pd.DataFrame:
