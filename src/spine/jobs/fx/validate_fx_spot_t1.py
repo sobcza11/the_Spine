@@ -65,11 +65,27 @@ def _r2_client():
     )
 
 
+def _bucket_name() -> str:
+    # Backward-compatible: prefer R2_BUCKET, fall back to R2_BUCKET_NAME
+    return os.getenv("R2_BUCKET", "").strip() or _env("R2_BUCKET_NAME", True)
+
+
 def _read_parquet_from_r2(key: str) -> pd.DataFrame:
-    bucket = _env("R2_BUCKET", True)
+    bucket = _bucket_name()
     s3 = _r2_client()
     obj = s3.get_object(Bucket=bucket, Key=key)
     return pd.read_parquet(io.BytesIO(obj["Body"].read()))
+
+
+def _upload_parquet_to_r2(df: pd.DataFrame, key: str) -> None:
+    bucket = _bucket_name()
+    s3 = _r2_client()
+
+    buf = io.BytesIO()
+    df.to_parquet(buf, index=False)
+    buf.seek(0)
+
+    s3.put_object(Bucket=bucket, Key=key, Body=buf.getvalue())
 
 
 def _utc_today_date() -> pd.Timestamp:
