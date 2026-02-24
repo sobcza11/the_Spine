@@ -1,7 +1,6 @@
 name: fx_spot_update_t2
 
 on:
-  workflow_dispatch:  # Allows manual triggering
   schedule:
     - cron: "20 22 * * 1-5"  # This schedule is every weekday at 22:20 UTC
 
