@@ -28,7 +28,7 @@ jobs:
 
       - name: Install spine module
         run: |
-          pip install -e ./src  # Install the spine module from the src directory
+          pip install -e ./  # Install the spine module from the root directory
 
       - name: Set PYTHONPATH and Run Update
         working-directory: ${{ github.workspace }}
@@ -39,8 +39,6 @@ jobs:
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
           PYTHONPATH: ${{ github.workspace }}/src:$PYTHONPATH
         run: |
-          echo "Current directory: $(pwd)"
-          echo "PYTHONPATH: $PYTHONPATH"
           python -m spine.jobs.fx.build_fx_cross_update_t2
 
       - name: Validate NZDAUD cross (T2-derived)
