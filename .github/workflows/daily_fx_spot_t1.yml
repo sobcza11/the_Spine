@@ -1,8 +1,8 @@
-name: Daily FX Spot T1 Update
+name: fx_spot_update_t1
 
 on:
   schedule:
-    - cron: "15 22 * * 1-5"
+    - cron: "15 22 * * 1-5"  # Ensure the same as T2
   workflow_dispatch: {}
 
 concurrency:
@@ -11,56 +11,33 @@ concurrency:
 
 env:
   PYTHONPATH: ${{ github.workspace }}/src
-
-  # Canonical env var expected by code
   R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
-
-  # Optional: keep the "name" version too (harmless)
   R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
   R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
   R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
   TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
 
 jobs:
-  fx-spot-t1-daily:
+  fx_spot_update_t1:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    env:
-      PYTHONPATH: ${{ github.workspace }}/src
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
-      - name: Install dependencies
+          python-version: "3.12"  # Same Python version as T2
+          cache: "pip"
+          cache-dependency-path: requirements.ci.txt
+      - name: Install dependencies (CI)
         run: |
+          set -e
+          python -V
           python -m pip install --upgrade pip
-          python -m pip install --no-cache-dir -r ./requirements.ci.lock.txt
-
-      - name: FX Spot T1 Update
-        env:
-          TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          python -m pip install --no-cache-dir -r "${{ github.workspace }}/requirements.ci.txt"
+          python -m pip show boto3
+          python -c "import boto3; print('boto3 ok:', boto3.__version__)"
+      - name: Run FX Spot UPDATE (T1)
         run: python -m spine.jobs.fx.build_fx_spot_update_t1
-
-      - name: Print run context
-        shell: bash
-        run: |
-          echo "[CTX] ref=${GITHUB_REF}"
-          echo "[CTX] sha=${GITHUB_SHA}"
-          echo "[CTX] workflow=${GITHUB_WORKFLOW}"
-          echo "[CTX] run_id=${GITHUB_RUN_ID}"
-          echo "[CTX] actor=${GITHUB_ACTOR}"
-          echo "[CTX] event=${GITHUB_EVENT_NAME}"
-
+      - name: Run FX Spot VALIDATE (T1)
+        run: python -m spine.jobs.fx.validate_fx_spot_t1
