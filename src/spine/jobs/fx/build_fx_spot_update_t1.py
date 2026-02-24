@@ -93,25 +93,6 @@ def _bucket_name() -> str:
     return os.getenv("R2_BUCKET", "").strip() or _env("R2_BUCKET_NAME", True)
 
 
-def _bucket_name() -> str:
-    # Backward-compatible: prefer R2_BUCKET, fall back to R2_BUCKET_NAME
-    return os.getenv("R2_BUCKET", "").strip() or _env("R2_BUCKET_NAME", True)
-
-
-def _bucket_name() -> str:
-    # Backward-compatible: prefer R2_BUCKET, fall back to R2_BUCKET_NAME
-    return os.getenv("R2_BUCKET", "").strip() or _env("R2_BUCKET_NAME", True)
-
-
-def _bucket_name() -> str:
-    # Backward-compatible: prefer R2_BUCKET, fall back to R2_BUCKET_NAME
-    return os.getenv("R2_BUCKET", "").strip() or _env("R2_BUCKET_NAME", True)
-
-
-def _bucket_name() -> str:
-    # Backward-compatible: prefer R2_BUCKET, fall back to R2_BUCKET_NAME
-    return os.getenv("R2_BUCKET", "").strip() or _env("R2_BUCKET_NAME", True)
-
 
 def _read_parquet_from_r2(key: str) -> pd.DataFrame:
     bucket = _bucket_name()
