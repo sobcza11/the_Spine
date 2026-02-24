@@ -26,14 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.ci.txt
 
-      - name: List Python directories and check modules
+      - name: Install spine module
         run: |
-          echo "Current directory: $(pwd)"
-          echo "PYTHONPATH: $PYTHONPATH"
-          echo "Python sys.path:"
-          python -c "import sys; print(sys.path)"  # List directories Python is searching in
-          echo "Installed modules:"
-          python -m pip show spine  # Check if spine is installed
+          pip install -e ./src  # Install the spine module from the src directory
 
       - name: Set PYTHONPATH and Run Update
         # Run from the root directory (not src)
