@@ -34,7 +34,7 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          PYTHONPATH: ${{ github.workspace }}/src  # Ensure PYTHONPATH points to src from the root
+          PYTHONPATH: ${{ github.workspace }}/src:$PYTHONPATH  # Add src to PYTHONPATH explicitly
         run: |
           echo "Current directory: $(pwd)"
           echo "PYTHONPATH: $PYTHONPATH"
@@ -48,7 +48,7 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          PYTHONPATH: ${{ github.workspace }}/src
+          PYTHONPATH: ${{ github.workspace }}/src:$PYTHONPATH
         run: |
           echo "Current directory: $(pwd)"
           echo "PYTHONPATH: $PYTHONPATH"
