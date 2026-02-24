@@ -9,6 +9,20 @@ concurrency:
   group: fx-spot-t1-daily-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  PYTHONPATH: ${{ github.workspace }}/src
+
+  # Canonical env var expected by code
+  R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+
+  # Optional: keep the "name" version too (harmless)
+  R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
+
 jobs:
   fx-spot-t1-daily:
     if: github.ref == 'refs/heads/main'
@@ -50,4 +64,3 @@ jobs:
           echo "[CTX] actor=${GITHUB_ACTOR}"
           echo "[CTX] event=${GITHUB_EVENT_NAME}"
 
-          

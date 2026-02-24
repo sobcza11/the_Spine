@@ -1,13 +1,25 @@
 name: fx_spot_update_t2
 
-
-
 on:
   workflow_dispatch:
 
   schedule:
     # Weekdays at 06:20 UTC (01:20 America/Detroit during EST) — adjust if you prefer
     - cron: "20 22 * * 1-5"
+
+env:
+  PYTHONPATH: ${{ github.workspace }}/src
+
+  # Canonical env var expected by code
+  R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+
+  # Optional: keep the "name" version too (harmless)
+  R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
 
 jobs:
   fx_spot_update_t2:
