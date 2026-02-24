@@ -6,7 +6,6 @@ on:
     types: [completed]
 
 jobs:
-jobs:
   update_cross:
     runs-on: ubuntu-latest
     if: |
@@ -27,22 +26,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.ci.txt
 
-      - name: Update NZDAUD cross (T2-derived)
-        working-directory: ./src  # Ensure the correct working directory
+      - name: Set PYTHONPATH and Run Update
         env:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          PYTHONPATH: ./src
         run: |
           python -m spine.jobs.fx.build_fx_cross_update_t2
 
       - name: Validate NZDAUD cross (T2-derived)
-        working-directory: ./src  # Ensure the correct working directory
         env:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          PYTHONPATH: ./src
         run: |
           python -m spine.jobs.fx.validate_fx_cross_t2
