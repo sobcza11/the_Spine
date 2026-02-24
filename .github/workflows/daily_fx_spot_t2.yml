@@ -1,5 +1,7 @@
 name: fx_spot_update_t2
 
+
+
 on:
   workflow_dispatch:
 
@@ -25,6 +27,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+
+      - name: Run FX Spot T2 update
+        run: |
+          python -V
+          echo "PYTHONPATH=$PYTHONPATH"
+          python -c "import sys; print(sys.path[:5])"
+          python -c "import spine; print('spine import ok')"
+          python -m spine.jobs.fx.build_fx_spot_update_t2
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
+
       - name: Run FX Spot UPDATE (T2)
         env:
           TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
@@ -46,7 +59,7 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-
+          
           # Optional overrides
           # FX_ALLOWED_LAG_DAYS: "5"
           # FX_MIN_ROWS_PER_SYMBOL: "250"
