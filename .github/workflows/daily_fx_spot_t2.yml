@@ -2,90 +2,49 @@ name: fx_spot_update_t2
 
 on:
   workflow_dispatch:
-
   schedule:
-    # Weekdays at 06:20 UTC (01:20 America/Detroit during EST) — adjust if you prefer
+    # Weekdays at 22:20 UTC (≈17:20 America/Detroit during EST) — adjust as desired
     - cron: "20 22 * * 1-5"
 
 env:
   PYTHONPATH: ${{ github.workspace }}/src
 
-  # Canonical env var expected by code
+  # R2 (S3-compatible) credentials
   R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
-
-  # Optional: keep the "name" version too (harmless)
-  R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-
+  R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }} # optional alias
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
   R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
   R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+
+  # Tiingo
   TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
 
 jobs:
-
-
   fx_spot_update_t2:
     runs-on: ubuntu-latest
-    env:
-      TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run FX spot update t2
-        run: python -m spine.jobs.fx.build_fx_spot_update_t2
 
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
+      - name: Install dependencies (CI)
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-
-      - name: Run FX Spot T2 update
-        run: |
+          set -e
           python -V
-          echo "PYTHONPATH=$PYTHONPATH"
-          python -c "import sys; print(sys.path[:5])"
-          python -c "import spine; print('spine import ok')"
-          python -m spine.jobs.fx.build_fx_spot_update_t2
-        env:
-          PYTHONPATH: ${{ github.workspace }}/src
+          which python
+          python -c "import sys; print(sys.executable)"
+          python -m pip install --upgrade pip
+          python -m pip --version
+          python -m pip install --no-cache-dir -r "${{ github.workspace }}/requirements.ci.txt"
+          python -m pip show boto3
+          python -c "import boto3; print('boto3 ok:', boto3.__version__)"
 
       - name: Run FX Spot UPDATE (T2)
-        env:
-          TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
-
-          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-
-          # Optional overrides
-          # FX_END_DATE: "2026-02-23"
-          # FX_ALLOWED_LAG_DAYS: "5"
-        run: |
-          python -m spine.jobs.fx.build_fx_spot_update_t2
+        run: python -m spine.jobs.fx.build_fx_spot_update_t2
 
       - name: Run FX Spot VALIDATE (T2)
-        env:
-          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          
-          # Optional overrides
-          # FX_ALLOWED_LAG_DAYS: "5"
-          # FX_MIN_ROWS_PER_SYMBOL: "250"
-        run: |
-          python -m spine.jobs.fx.validate_fx_spot_t2
+        run: python -m spine.jobs.fx.validate_fx_spot_t2
 
 
