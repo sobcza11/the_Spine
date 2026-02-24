@@ -27,6 +27,7 @@ jobs:
           pip install -r requirements.ci.txt
 
       - name: Set PYTHONPATH and Run Update
+        working-directory: ./src  # Ensure we are in the correct directory
         env:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -37,6 +38,7 @@ jobs:
           python -m spine.jobs.fx.build_fx_cross_update_t2
 
       - name: Validate NZDAUD cross (T2-derived)
+        working-directory: ./src  # Ensure we are in the correct directory
         env:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
