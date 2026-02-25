@@ -30,11 +30,13 @@ jobs:
         run: |
           pip install -e ./  # Install the spine module from the root directory
 
-      - name: Check sys.path and import spine
+      - name: Check sys.path, pip list and import spine
         run: |
           echo "Current directory: $(pwd)"
           echo "PYTHONPATH: $PYTHONPATH"
-          python -c "import sys; print('sys.path:', sys.path); import spine"  # Debug Python paths and module import
+          python -c "import sys; print('sys.path:', sys.path)"  # Debug Python paths
+          pip list  # List installed modules
+          python -c "import spine"  # Try importing the spine module
 
       - name: Set PYTHONPATH and Run Update
         working-directory: ${{ github.workspace }}
