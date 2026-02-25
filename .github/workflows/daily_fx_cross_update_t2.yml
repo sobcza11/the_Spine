@@ -12,6 +12,7 @@ concurrency:
 jobs:
   update_cross:
     runs-on: ubuntu-latest
+    environment: production
     if: |
       github.event.workflow_run.conclusion == 'success' &&
       github.event.workflow_run.head_branch == 'main'
@@ -23,12 +24,21 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.12"
 
       - name: Install deps (CI)
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
         run: |
+          set -e
           python -m pip install --upgrade pip
-          pip install -r requirements.ci.txt
+          python -m pip install --no-cache-dir -r "${{ github.workspace }}/requirements.ci.txt"
+
+      - name: Debug R2 wiring
+        env:
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          echo "R2_BUCKET present? $([ -n "${R2_BUCKET}" ] && echo yes || echo no)"
 
       - name: Update NZDAUD cross
         env:
