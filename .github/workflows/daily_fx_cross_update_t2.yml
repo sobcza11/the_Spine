@@ -5,6 +5,10 @@ on:
     workflows: ["fx_spot_update_t2"]
     types: [completed]
 
+concurrency:
+  group: fx-cross-t2
+  cancel-in-progress: false
+
 jobs:
   update_cross:
     runs-on: ubuntu-latest
@@ -13,49 +17,35 @@ jobs:
       github.event.workflow_run.head_branch == 'main'
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python 3.13
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
-      - name: Install dependencies
+      - name: Install deps (CI)
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.ci.txt
 
-      - name: Install spine module
-        run: |
-          pip install -e ./  # Install the spine module from the root directory
-
-      - name: Check sys.path, pip list and import spine
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "PYTHONPATH: $PYTHONPATH"
-          python -c "import sys; print('sys.path:', sys.path)"  # Debug Python paths
-          pip list  # List installed modules
-          python -c "import spine"  # Try importing the spine module
-
-      - name: Set PYTHONPATH and Run Update
-        working-directory: ${{ github.workspace }}
+      - name: Update NZDAUD cross
         env:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          PYTHONPATH: ${{ github.workspace }}/src:$PYTHONPATH
+          PYTHONPATH: ${{ github.workspace }}/src
         run: |
           python -m spine.jobs.fx.build_fx_cross_update_t2
 
-      - name: Validate NZDAUD cross (T2-derived)
-        working-directory: ${{ github.workspace }}
+      - name: Validate NZDAUD cross
         env:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          PYTHONPATH: ${{ github.workspace }}/src:$PYTHONPATH
+          PYTHONPATH: ${{ github.workspace }}/src
         run: |
           python -m spine.jobs.fx.validate_fx_cross_t2
