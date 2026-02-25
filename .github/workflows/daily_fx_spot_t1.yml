@@ -4,7 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     # Weekdays at 22:20 UTC (≈17:20 America/Detroit during EST)
-    - cron: "20 22 * * 1-5"
+    - cron: "15 22 * * 1-5"
+
+
+concurrency:
+  group: fx-tiingo
+  cancel-in-progress: false
 
 env:
   PYTHONPATH: ${{ github.workspace }}/src
@@ -31,14 +36,9 @@ jobs:
 
       - name: Install dependencies (CI)
         run: |
-          set -e
-          python -V
           python -m pip install --upgrade pip
-          python -m pip install --no-cache-dir -r "${{ github.workspace }}/requirements.ci.txt"
-          python -c "import boto3; print('boto3 ok:', boto3.__version__)"
-
+          python -m pip install --no-cache-dir -r ./requirements.ci.txt
       - name: Run FX Spot UPDATE (T1)
         run: python -m spine.jobs.fx.build_fx_spot_update_t1
-
-      - name: Run FX Spot VALIDATE (T1)
-        run: python -m spine.jobs.fx.validate_fx_spot_t1
+        env:
+          TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}

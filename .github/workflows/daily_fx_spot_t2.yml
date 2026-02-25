@@ -4,7 +4,11 @@ on:
   workflow_dispatch:
   schedule:
     # Weekdays at 22:20 UTC (≈17:20 America/Detroit during EST) — adjust as desired
-    - cron: "20 22 * * 1-5"
+    - cron: "25 22 * * 1-5"
+
+concurrency:
+  group: fx-tiingo
+  cancel-in-progress: false
 
 env:
   PYTHONPATH: ${{ github.workspace }}/src
