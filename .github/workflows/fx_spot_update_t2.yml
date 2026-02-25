@@ -2,31 +2,34 @@ name: fx_spot_update_t2
 
 on:
   schedule:
-    - cron: "20 22 * * 1-5"  # This schedule is every weekday at 22:20 UTC
+    - cron: "20 22 * * 1-5"
 
 jobs:
-  update_fx_spot:
+  fx_spot_update_t2:
     runs-on: ubuntu-latest
 
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Python 3.13
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Install dependencies (CI)
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.ci.txt
+          python -m pip install --no-cache-dir -r "${{ github.workspace }}/requirements.ci.txt"
 
-      - name: Run FX Spot Update Tier 2
-        env:
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-        run: |
-          python -m spine.jobs.fx.build_fx_spot_update_t2
+      - name: Run FX Spot UPDATE (T2)
+        run: python -m spine.jobs.fx.build_fx_spot_update_t2
+
+      - name: Run FX Spot VALIDATE (T2)
+        run: python -m spine.jobs.fx.validate_fx_spot_t2
