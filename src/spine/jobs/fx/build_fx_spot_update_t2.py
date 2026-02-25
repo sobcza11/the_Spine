@@ -26,7 +26,7 @@ from typing import Any, Dict, List
 
 import boto3
 import pandas as pd
-import requests
+import requests 
 
 
 T2_PAIRS: List[str] = [
@@ -44,6 +44,8 @@ T2_PAIRS: List[str] = [
 R2_FX_SPOT_T2_KEY = "spine_us/us_fx_spot_canonical_t2.parquet"
 
 TIINGO_BASE = "https://api.tiingo.com/tiingo/fx"
+
+
 
 START_FLOOR = "2020-01-01"
 RESAMPLE_FREQ = "1day"
@@ -122,27 +124,36 @@ def _tiingo_headers() -> Dict[str, str]:
     token = _env("TIINGO_API_KEY", True)
     return {"Authorization": f"Token {token}"}
 
+def _fetch_tiingo_fx_prices(symbol: str, start_date: str, end_date: str | None, resample_freq: str):
+    headers = _tiingo_headers()
 
-import time
+    params = {
+        "startDate": start_date,
+        "resampleFreq": resample_freq,
+    }
 
-def _fetch_tiingo_fx_prices(symbol, start_date, end_date, resample_freq):
+    if end_date:
+        params["endDate"] = end_date
+
+    url = f"{TIINGO_BASE}/{symbol}/prices"
+
     retries = 6
-    backoff = 1  # Start with 1 second
+    backoff = 1
+
     for attempt in range(retries):
         try:
-            # Make the Tiingo request here
-            # (replace this with actual request logic)
-            response = tiingo.get_fx_prices(symbol, start_date, end_date, resample_freq)
-            return response
-        except requests.exceptions.RequestException as e:
-            if '429' in str(e):  # Check for rate-limit exceeded error
-                print(f"Tiingo rate limit exceeded for {symbol}. Backing off for {backoff} seconds.")
-                time.sleep(backoff)  # Exponential backoff
-                backoff *= 2  # Double the backoff time after each retry
+            response = requests.get(url, headers=headers, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            return pd.DataFrame(data)
+        except requests.exceptions.HTTPError as e:
+            if response.status_code == 429:
+                print(f"Tiingo rate limit hit for {symbol}. Sleeping {backoff}s")
+                time.sleep(backoff)
+                backoff *= 2
             else:
-                raise  # Re-raise if it's another kind of error
-    raise RuntimeError(f"Tiingo request failed ({symbol}) 429: rate limit exceeded after retries")
-
+                raise
+    raise RuntimeError(f"Tiingo request failed after retries for {symbol}")
 
 def _normalize_fx_schema(df_raw: pd.DataFrame, symbol: str) -> pd.DataFrame:
     if df_raw.empty:
