@@ -17,45 +17,27 @@ jobs:
       github.event.workflow_run.conclusion == 'success' &&
       github.event.workflow_run.head_branch == 'main'
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install deps (CI)
-        env:
-          PYTHONPATH: ${{ github.workspace }}/src
         run: |
-          set -e
           python -m pip install --upgrade pip
-          python -m pip install --no-cache-dir -r "${{ github.workspace }}/requirements.ci.txt"
-
-      - name: Debug R2 wiring
-        env:
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-        run: |
-          echo "R2_BUCKET present? $([ -n "${R2_BUCKET}" ] && echo yes || echo no)"
+          python -m pip install --no-cache-dir -r requirements.ci.txt
 
       - name: Update NZDAUD cross
-        env:
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          PYTHONPATH: ${{ github.workspace }}/src
-        run: |
-          python -m spine.jobs.fx.build_fx_cross_update_t2
+        run: python -m spine.jobs.fx.build_fx_cross_update_t2
 
       - name: Validate NZDAUD cross
-        env:
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          PYTHONPATH: ${{ github.workspace }}/src
-        run: |
-          python -m spine.jobs.fx.validate_fx_cross_t2
+        run: python -m spine.jobs.fx.validate_fx_cross_t2
