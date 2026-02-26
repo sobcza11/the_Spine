@@ -4,25 +4,20 @@ on:
   workflow_run:
     workflows: ["fx_spot_update_t2"]
     types: [completed]
-
-concurrency:
-  group: fx-cross-t2
-  cancel-in-progress: false
+  workflow_dispatch: {}
 
 jobs:
-  update_cross:
+  build_cross:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment: production
-    if: |
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.head_branch == 'main'
 
     env:
-      PYTHONPATH: ${{ github.workspace }}/src
-      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      # Prefer vars for non-sensitive strings; secrets for credentials
+      R2_BUCKET: ${{ vars.R2_BUCKET }}
+      R2_ENDPOINT_URL: ${{ vars.R2_ENDPOINT_URL }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -31,13 +26,18 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install deps (CI)
+      - name: Preflight env contract
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install --no-cache-dir -r requirements.ci.txt
+          set -euo pipefail
+          test -n "${R2_BUCKET}" || (echo "::error::R2_BUCKET missing/empty" && exit 1)
+          test -n "${R2_ENDPOINT_URL}" || (echo "::error::R2_ENDPOINT_URL missing/empty" && exit 1)
+          test -n "${AWS_ACCESS_KEY_ID}" || (echo "::error::AWS_ACCESS_KEY_ID missing/empty" && exit 1)
+          test -n "${AWS_SECRET_ACCESS_KEY}" || (echo "::error::AWS_SECRET_ACCESS_KEY missing/empty" && exit 1)
+          echo "R2 env contract present (bucket length: ${#R2_BUCKET})."
 
-      - name: Update NZDAUD cross
-        run: python -m spine.jobs.fx.build_fx_cross_update_t2
+      - name: Run cross build
+        run: python -m spine.fx.cross_t2
 
-      - name: Validate NZDAUD cross
-        run: python -m spine.jobs.fx.validate_fx_cross_t2
+      - name: Validate artifact
+        run: python -m spine.validators.fx_cross_t2
