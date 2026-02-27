@@ -4,40 +4,49 @@ on:
   workflow_run:
     workflows: ["fx_spot_update_t2"]
     types: [completed]
-  workflow_dispatch: {}
+  workflow_dispatch:
+
+concurrency:
+  group: fx-cross-t2
+  cancel-in-progress: false
 
 jobs:
   build_cross:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    environment: production
+
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main')
 
     env:
-      # Prefer vars for non-sensitive strings; secrets for credentials
-      R2_BUCKET: ${{ vars.R2_BUCKET }}
-      R2_ENDPOINT_URL: ${{ vars.R2_ENDPOINT_URL }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      PYTHONPATH: ${{ github.workspace }}/src
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Preflight env contract
-        shell: bash
+      - name: Install dependencies (CI)
         run: |
           set -euo pipefail
-          test -n "${R2_BUCKET}" || (echo "::error::R2_BUCKET missing/empty" && exit 1)
-          test -n "${R2_ENDPOINT_URL}" || (echo "::error::R2_ENDPOINT_URL missing/empty" && exit 1)
-          test -n "${AWS_ACCESS_KEY_ID}" || (echo "::error::AWS_ACCESS_KEY_ID missing/empty" && exit 1)
-          test -n "${AWS_SECRET_ACCESS_KEY}" || (echo "::error::AWS_SECRET_ACCESS_KEY missing/empty" && exit 1)
-          echo "R2 env contract present (bucket length: ${#R2_BUCKET})."
+          python -m pip install --upgrade pip
+          python -m pip install --no-cache-dir -r requirements.ci.txt
 
-      - name: Run cross build
-        run: python -m spine.fx.cross_t2
+      - name: Build NZDAUD cross
+        run: |
+          set -euo pipefail
+          python -m spine.jobs.fx.build_fx_cross_update_t2
 
-      - name: Validate artifact
-        run: python -m spine.validators.fx_cross_t2
+      - name: Validate NZDAUD cross
+        run: |
+          set -euo pipefail
+          python -m spine.jobs.fx.validate_fx_cross_t2
