@@ -27,8 +27,9 @@ jobs:
       R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
 
-      R2_BUCKET: ${{ secrets.R2_BUCKET }}
-      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET }}
+      # prefer R2_BUCKET_NAME, fallback to R2_BUCKET
+      R2_BUCKET: ${{ secrets.R2_BUCKET_NAME || secrets.R2_BUCKET }}
+      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME || secrets.R2_BUCKET }}
 
       TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
 
@@ -45,28 +46,11 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r requirements.ci.txt
 
-      - name: Debug context
-        run: |
-          set -euo pipefail
-          echo "repo=${GITHUB_REPOSITORY}"
-          echo "ref=${GITHUB_REF}"
-          echo "sha=${GITHUB_SHA}"
-          echo "actor=${GITHUB_ACTOR}"
-
-      - name: Debug secrets resolution
-        env:
-          TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET }}
-        run: |
-          set -euo pipefail
-          echo "TIINGO_API_KEY.len=${#TIINGO_API_KEY}"
-          echo "R2_BUCKET.len=${#R2_BUCKET}"
-          echo "R2_BUCKET_NAME.len=${#R2_BUCKET_NAME}"
-
       - name: Debug bucket wiring (hard fail)
         run: |
           set -euo pipefail
+          echo "R2_BUCKET.len=${#R2_BUCKET}"
+          echo "R2_BUCKET_NAME.len=${#R2_BUCKET_NAME}"
           test -n "${R2_BUCKET}" || (echo "R2_BUCKET empty" && exit 1)
 
       - name: Build NZDAUD cross
