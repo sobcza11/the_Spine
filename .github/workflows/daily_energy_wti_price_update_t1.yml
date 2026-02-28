@@ -1,0 +1,48 @@
+name: daily_energy_wti_price_update_t1
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 08:05 AM America/Detroit (approx; GitHub cron is UTC)
+    - cron: "5 13 * * 1-5"
+
+concurrency:
+  group: energy-wti-price-t1
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -e .
+
+      - name: Update WTI Price T1
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_REGION: ${{ secrets.R2_REGION }}
+        run: |
+          python -m spine.jobs.energy.build_energy_wti_price_update_t1
+          python -m spine.jobs.energy.validate_energy_wti_price_t1
+
+          
