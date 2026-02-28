@@ -1,0 +1,52 @@
+name: daily_equity_index_update_t1
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekdays at 22:35 UTC (≈17:35 America/Detroit during EST)
+    - cron: "35 22 * * 1-5"
+
+concurrency:
+  group: equity-tiingo
+  cancel-in-progress: false
+
+env:
+  PYTHONPATH: ${{ github.workspace }}/src
+
+  # R2
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  R2_BUCKET: ${{ secrets.R2_BUCKET }}
+  R2_BUCKET_NAME: ${{ secrets.R2_BUCKET }}
+
+  # Tiingo
+  TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
+
+jobs:
+  update_equity_index_t1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies (CI)
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install --no-cache-dir -r "${{ github.workspace }}/requirements.ci.txt"
+
+      - name: Update US Equity Index ETFs (T1)
+        run: |
+          set -euo pipefail
+          python -m spine.jobs.equity.build_equity_index_update_t1
+
+      - name: Validate US Equity Index ETFs (T1)
+        run: |
+          set -euo pipefail
+          python -m spine.jobs.equity.validate_equity_index_t1
+
+          
