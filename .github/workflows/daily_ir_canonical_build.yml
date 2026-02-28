@@ -1,4 +1,4 @@
-name: Daily IR Canonical Build
+name: daily_ir_update_t1
 
 on:
   schedule:
@@ -60,3 +60,5 @@ jobs:
           echo "[CTX] run_id=${GITHUB_RUN_ID}"
           echo "[CTX] actor=${GITHUB_ACTOR}"
           echo "[CTX] event=${GITHUB_EVENT_NAME}"
+
+    
