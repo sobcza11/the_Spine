@@ -36,7 +36,7 @@ jobs:
           R2_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY }}
           R2_SECRET_KEY: ${{ secrets.R2_SECRET_KEY }}
           R2_BUCKET_US:  ${{ secrets.R2_BUCKET_US }}
-        run: python -m spine.jobs.upload_wti_leaf_to_r2
+        rrun: python -m spine.jobs.energy.upload_wti_leaf_to_r2
 
       - name: Sanity check US_TeaPlant import
         env:

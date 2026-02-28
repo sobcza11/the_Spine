@@ -52,7 +52,7 @@ jobs:
 
       # Step 1: Upload WTI leaf to R2
       - name: Upload WTI leaf to R2
-        run: python -m spine.jobs.upload_wti_leaf_to_r2
+        rrun: python -m spine.jobs.energy.upload_wti_leaf_to_r2
 
       # Step 2: Rebuild Spine-US Core
       - name: Rebuild Spine-US Core
