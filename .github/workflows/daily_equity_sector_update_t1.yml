@@ -17,8 +17,10 @@ env:
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
   R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
   R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-  R2_BUCKET: ${{ secrets.R2_BUCKET }}
-  R2_BUCKET_NAME: ${{ secrets.R2_BUCKET }}
+
+  # Single source of truth
+  R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+  R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
 
   # Tiingo
   TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
@@ -48,4 +50,3 @@ jobs:
         run: |
           set -euo pipefail
           python -m spine.jobs.equity.validate_equity_sector_t1
-          
