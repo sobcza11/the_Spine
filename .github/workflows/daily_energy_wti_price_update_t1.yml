@@ -19,11 +19,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ runner.os }}-${{ github.workflow }}-${{ github.job }}-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            pip-${{ runner.os }}-${{ github.workflow }}-${{ github.job }}-
+            pip-${{ runner.os }}-${{ github.workflow }}-
+            pip-${{ runner.os }}-
+
+      - name: Install deps
+        run: pip install -r requirements.txt 
 
       - name: Install dependencies
         run: |
@@ -37,12 +49,10 @@ jobs:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_REGION: ${{ secrets.R2_REGION }}
         run: |
           python -m spine.jobs.energy.build_energy_wti_price_update_t1
           python -m spine.jobs.energy.validate_energy_wti_price_t1
 
-          
