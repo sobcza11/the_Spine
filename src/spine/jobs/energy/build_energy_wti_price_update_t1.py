@@ -1,15 +1,15 @@
 import os
-import requests
-import pandas as pd
-import boto3
 from io import BytesIO
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, UTC
+
+import boto3
+import botocore
+import pandas as pd
 
 from spine.jobs.energy.energy_constants import (
-    EIA_WTI_SERIES_ID,
-    WTI_SYMBOL,
     R2_WTI_PRICE_T1_KEY,
-    EIA_API_KEY_ENV,
+    WTI_SYMBOL,
+    WTI_MAX_LAG_DAYS,
     R2_ACCESS_KEY_ID_ENV,
     R2_SECRET_ACCESS_KEY_ENV,
     R2_BUCKET_ENV,
@@ -18,20 +18,16 @@ from spine.jobs.energy.energy_constants import (
 )
 
 # ============================================================
-# INCREMENTAL UPDATE — WTI PRICE T1
+# WTI PRICE T1 — VALIDATION
+# NOTE: WTI can be negative (measurement must reflect reality).
+# We enforce bounded sanity, not positivity.
 # ============================================================
 
-UPDATE_BUFFER_DAYS = 45
+WTI_MIN_CLOSE = -200.0
+WTI_MAX_CLOSE = 1000.0
 
 
-def get_eia_api_key():
-    key = os.getenv(EIA_API_KEY_ENV)
-    if not key:
-        raise ValueError("EIA_API_KEY not set")
-    return key
-
-
-def get_s3_client():
+def _s3_client():
     return boto3.client(
         "s3",
         endpoint_url=os.getenv(R2_ENDPOINT_ENV),
@@ -41,86 +37,83 @@ def get_s3_client():
     )
 
 
-def read_existing_leaf():
-    s3 = get_s3_client()
+def _read_leaf() -> pd.DataFrame:
+    s3 = _s3_client()
     bucket = os.getenv(R2_BUCKET_ENV)
+    if not bucket:
+        raise ValueError("R2_BUCKET not set")
 
     try:
         obj = s3.get_object(Bucket=bucket, Key=R2_WTI_PRICE_T1_KEY)
-        df = pd.read_parquet(BytesIO(obj["Body"].read()))
-        return df
-    except s3.exceptions.NoSuchKey:
-        return pd.DataFrame()
+        return pd.read_parquet(BytesIO(obj["Body"].read()))
+    except botocore.exceptions.ClientError as e:
+        code = e.response.get("Error", {}).get("Code", "")
+        if code in ("NoSuchKey", "404"):
+            raise FileNotFoundError(f"Leaf not found in R2: {R2_WTI_PRICE_T1_KEY}") from e
+        raise
 
 
-def fetch_incremental(start_date: datetime):
-    api_key = get_eia_api_key()
-
-    url = (
-        f"https://api.eia.gov/v2/seriesid/{EIA_WTI_SERIES_ID}"
-        f"?api_key={api_key}"
-    )
-
-    r = requests.get(url, timeout=30)
-    r.raise_for_status()
-
-    data = r.json()
-
-    records = data["response"]["data"]
-    df = pd.DataFrame(records)
-
-    df = df.rename(columns={
-        "period": "date",
-        "value": "close"
-    })
-
-    df["date"] = pd.to_datetime(df["date"])
-    df = df[df["date"] >= start_date]
-
-    df["symbol"] = WTI_SYMBOL
-
-    df = df[["symbol", "date", "close"]]
-    df = df.sort_values("date")
-
-    return df
-
-
-def upload_to_r2(df: pd.DataFrame):
-    buffer = BytesIO()
-    df.to_parquet(buffer, index=False)
-    buffer.seek(0)
-
-    s3 = get_s3_client()
-    bucket = os.getenv(R2_BUCKET_ENV)
-
-    s3.put_object(
-        Bucket=bucket,
-        Key=R2_WTI_PRICE_T1_KEY,
-        Body=buffer.getvalue(),
-    )
+def _require_cols(df: pd.DataFrame, cols: list[str]) -> None:
+    missing = [c for c in cols if c not in df.columns]
+    if missing:
+        raise KeyError(f"Missing required columns: {missing}. Found: {list(df.columns)}")
 
 
 def main():
-    existing = read_existing_leaf()
+    df = _read_leaf().copy()
 
-    if existing.empty:
-        raise RuntimeError(
-            "No existing leaf found. Run HIST build first."
+    # Schema
+    _require_cols(df, ["symbol", "date", "close"])
+
+    # Types
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    df["close"] = pd.to_numeric(df["close"], errors="coerce")
+
+    # Nulls
+    if df["symbol"].isna().any():
+        raise ValueError("Nulls found in symbol")
+    if df["date"].isna().any():
+        raise ValueError("Nulls/invalid found in date")
+    if df["close"].isna().any():
+        raise ValueError("Nulls/invalid found in close")
+
+    # Symbol constraint
+    bad_sym = df.loc[df["symbol"] != WTI_SYMBOL, "symbol"].unique().tolist()
+    if bad_sym:
+        raise ValueError(f"Unexpected symbols found (expected only {WTI_SYMBOL}): {bad_sym}")
+
+    # Duplicates
+    dupes = df.duplicated(subset=["symbol", "date"]).sum()
+    if dupes:
+        raise ValueError(f"Duplicate rows found on (symbol,date): {int(dupes)}")
+
+    df = df.sort_values(["symbol", "date"]).reset_index(drop=True)
+
+    # Sanity bounds (allow negatives)
+    if (df["close"] < WTI_MIN_CLOSE).any():
+        mn = float(df["close"].min())
+        raise ValueError(f"WTI close below sanity bound: min={mn} < {WTI_MIN_CLOSE}")
+    if (df["close"] > WTI_MAX_CLOSE).any():
+        mx = float(df["close"].max())
+        raise ValueError(f"WTI close above sanity bound: max={mx} > {WTI_MAX_CLOSE}")
+
+    # Freshness (allow publication lag)
+    last_dt = pd.to_datetime(df["date"].max()).to_pydatetime()
+    if last_dt.tzinfo is None:
+        last_dt = last_dt.replace(tzinfo=UTC)
+
+    now_utc = datetime.now(UTC)
+    lag_days = (now_utc - last_dt).days
+
+    # PASS when lag_days == allowed; FAIL only when lag_days > allowed
+    if lag_days > int(WTI_MAX_LAG_DAYS):
+        raise ValueError(
+            f"WTI T1 freshness failed. last_date={last_dt.date()} "
+            f"now_utc={now_utc.date()} lag_days={lag_days} allowed={WTI_MAX_LAG_DAYS}"
         )
 
-    last_date = existing["date"].max()
-    start_date = last_date - timedelta(days=UPDATE_BUFFER_DAYS)
-
-    incremental = fetch_incremental(start_date)
-
-    combined = pd.concat([existing, incremental], ignore_index=True)
-    combined = combined.drop_duplicates(subset=["symbol", "date"])
-    combined = combined.sort_values("date")
-
-    upload_to_r2(combined)
-
-    print("WTI T1 UPDATE complete.")
-    print(f"Total rows: {len(combined)}")
+    print("✅ validate_energy_wti_price_t1 PASSED")
+    print(f"Rows: {len(df)} | Last date: {last_dt.date()} | lag_days={lag_days} | allowed={WTI_MAX_LAG_DAYS}")
 
 
 if __name__ == "__main__":
