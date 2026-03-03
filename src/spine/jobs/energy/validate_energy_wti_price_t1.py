@@ -1,6 +1,6 @@
 import os
 from io import BytesIO
-from datetime import datetime, timedelta, UTC
+from datetime import datetime, UTC
 
 import boto3
 import botocore
@@ -97,32 +97,23 @@ def main():
         mx = float(df["close"].max())
         raise ValueError(f"WTI close above sanity bound: max={mx} > {WTI_MAX_CLOSE}")
 
-    # ------------------------------------------------------------
-    # Freshness (allow publication lag) — timezone-safe
-    # ------------------------------------------------------------
-    last_dt = pd.to_datetime(df["date"].max())
-    if pd.isna(last_dt):
-        raise ValueError("Freshness check failed: last_dt is NaT")
-
-    # Ensure last_dt is UTC-aware
+    # Freshness (allow publication lag)
+    last_dt = pd.to_datetime(df["date"].max()).to_pydatetime()
     if last_dt.tzinfo is None:
-        last_dt = last_dt.tz_localize("UTC")
-    else:
-        last_dt = last_dt.tz_convert("UTC")
+        last_dt = last_dt.replace(tzinfo=UTC)
 
     now_utc = datetime.now(UTC)
+    lag_days = (now_utc - last_dt).days
 
-    last_py = last_dt.to_pydatetime()
-    if (now_utc - last_py) > timedelta(days=int(WTI_MAX_LAG_DAYS)):
-        lag_days = (now_utc - last_py).days
+    # PASS when lag_days == allowed; FAIL only when lag_days > allowed
+    if lag_days > int(WTI_MAX_LAG_DAYS):
         raise ValueError(
             f"WTI T1 freshness failed. last_date={last_dt.date()} "
-            f"now_utc={now_utc.date()} lag_days={lag_days} "
-            f"allowed={WTI_MAX_LAG_DAYS}"
+            f"now_utc={now_utc.date()} lag_days={lag_days} allowed={WTI_MAX_LAG_DAYS}"
         )
 
     print("✅ validate_energy_wti_price_t1 PASSED")
-    print(f"Rows: {len(df)} | Last date: {last_dt.date()}")
+    print(f"Rows: {len(df)} | Last date: {last_dt.date()} | lag_days={lag_days} | allowed={WTI_MAX_LAG_DAYS}")
 
 
 if __name__ == "__main__":
