@@ -5,11 +5,16 @@ from datetime import datetime, timedelta, UTC
 import boto3
 import botocore
 import pandas as pd
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 from spine.jobs.energy.energy_constants import (
     R2_WTI_PRICE_T1_KEY,
     WTI_SYMBOL,
+    WTI_EIA_SERIES_ID,
     WTI_MAX_LAG_DAYS,
+    EIA_API_KEY_ENV,
     R2_ACCESS_KEY_ID_ENV,
     R2_SECRET_ACCESS_KEY_ENV,
     R2_BUCKET_ENV,
@@ -17,14 +22,36 @@ from spine.jobs.energy.energy_constants import (
     R2_REGION_ENV,
 )
 
-# ============================================================
-# WTI PRICE T1 — VALIDATION
-# NOTE: WTI can be negative (measurement must reflect reality).
-# We enforce bounded sanity, not positivity.
-# ============================================================
+# ----------------------------
+# Networking controls (CPMAI)
+# ----------------------------
+HTTP_CONNECT_TIMEOUT_S = 10
+HTTP_READ_TIMEOUT_S = 90
+HTTP_RETRIES_TOTAL = 6
+HTTP_BACKOFF_FACTOR = 1.2
+HTTP_STATUS_FORCELIST = (429, 500, 502, 503, 504)
 
-WTI_MIN_CLOSE = -200.0
-WTI_MAX_CLOSE = 1000.0
+# ----------------------------
+# Deterministic overlap fetch
+# ----------------------------
+OVERLAP_DAYS = 14  # re-pull last N days to catch late EIA publications
+
+
+def _requests_session() -> requests.Session:
+    s = requests.Session()
+    retry = Retry(
+        total=HTTP_RETRIES_TOTAL,
+        connect=HTTP_RETRIES_TOTAL,
+        read=HTTP_RETRIES_TOTAL,
+        status=HTTP_RETRIES_TOTAL,
+        backoff_factor=HTTP_BACKOFF_FACTOR,
+        status_forcelist=HTTP_STATUS_FORCELIST,
+        allowed_methods=frozenset(["GET"]),
+        raise_on_status=False,
+    )
+    s.mount("https://", HTTPAdapter(max_retries=retry))
+    s.mount("http://", HTTPAdapter(max_retries=retry))
+    return s
 
 
 def _s3_client():
@@ -37,7 +64,7 @@ def _s3_client():
     )
 
 
-def _read_leaf() -> pd.DataFrame:
+def read_existing_leaf() -> pd.DataFrame:
     s3 = _s3_client()
     bucket = os.getenv(R2_BUCKET_ENV)
     if not bucket:
@@ -49,74 +76,124 @@ def _read_leaf() -> pd.DataFrame:
     except botocore.exceptions.ClientError as e:
         code = e.response.get("Error", {}).get("Code", "")
         if code in ("NoSuchKey", "404"):
-            raise FileNotFoundError(f"Leaf not found in R2: {R2_WTI_PRICE_T1_KEY}") from e
+            return pd.DataFrame(columns=["symbol", "date", "close"])
         raise
 
 
-def _require_cols(df: pd.DataFrame, cols: list[str]) -> None:
-    missing = [c for c in cols if c not in df.columns]
-    if missing:
-        raise KeyError(f"Missing required columns: {missing}. Found: {list(df.columns)}")
+def write_leaf(df: pd.DataFrame) -> None:
+    s3 = _s3_client()
+    bucket = os.getenv(R2_BUCKET_ENV)
+    if not bucket:
+        raise ValueError("R2_BUCKET not set")
+
+    buf = BytesIO()
+    df.to_parquet(buf, index=False)
+    buf.seek(0)
+    s3.put_object(Bucket=bucket, Key=R2_WTI_PRICE_T1_KEY, Body=buf.getvalue())
 
 
-def main():
-    df = _read_leaf().copy()
+def _eia_url(start_date: str) -> str:
+    api_key = os.getenv(EIA_API_KEY_ENV)
+    if not api_key:
+        raise ValueError("EIA_API_KEY not set")
 
-    # Schema
-    _require_cols(df, ["symbol", "date", "close"])
+    return (
+        "https://api.eia.gov/v2/seriesid/"
+        f"{WTI_EIA_SERIES_ID}/data/?api_key={api_key}"
+        f"&frequency=daily&data[0]=value&start={start_date}&sort[0][column]=period&sort[0][direction]=asc"
+    )
 
-    # Types
+
+def fetch_incremental(start_date: str) -> pd.DataFrame:
+    url = _eia_url(start_date)
+    s = _requests_session()
+
+    r = s.get(url, timeout=(HTTP_CONNECT_TIMEOUT_S, HTTP_READ_TIMEOUT_S))
+    r.raise_for_status()
+
+    js = r.json()
+    data = js.get("response", {}).get("data", [])
+    if not data:
+        return pd.DataFrame(columns=["symbol", "date", "close"])
+
+    df = pd.DataFrame(data)
+    if "period" not in df.columns or "value" not in df.columns:
+        raise ValueError(f"Unexpected EIA payload columns: {list(df.columns)}")
+
+    df = df.rename(columns={"period": "date", "value": "close"})
+    df["symbol"] = WTI_SYMBOL
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df["close"] = pd.to_numeric(df["close"], errors="coerce")
 
-    # Nulls
-    if df["symbol"].isna().any():
-        raise ValueError("Nulls found in symbol")
-    if df["date"].isna().any():
-        raise ValueError("Nulls/invalid found in date")
-    if df["close"].isna().any():
-        raise ValueError("Nulls/invalid found in close")
+    df = df.dropna(subset=["symbol", "date", "close"])
+    df = (
+        df.sort_values(["symbol", "date"])
+        .drop_duplicates(["symbol", "date"], keep="last")
+        .reset_index(drop=True)
+    )
 
-    # Symbol constraint
-    bad_sym = df.loc[df["symbol"] != WTI_SYMBOL, "symbol"].unique().tolist()
-    if bad_sym:
-        raise ValueError(f"Unexpected symbols found (expected only {WTI_SYMBOL}): {bad_sym}")
+    return df[["symbol", "date", "close"]]
 
-    # Duplicates
-    dupes = df.duplicated(subset=["symbol", "date"]).sum()
-    if dupes:
-        raise ValueError(f"Duplicate rows found on (symbol,date): {int(dupes)}")
 
-    df = df.sort_values(["symbol", "date"]).reset_index(drop=True)
+def _last_existing_date(existing: pd.DataFrame):
+    if existing.empty or "date" not in existing.columns:
+        return None
+    dt = pd.to_datetime(existing["date"], errors="coerce").max()
+    if pd.isna(dt):
+        return None
+    return dt.to_pydatetime().replace(tzinfo=UTC)
 
-    # Sanity bounds (allow negatives)
-    if (df["close"] < WTI_MIN_CLOSE).any():
-        mn = float(df["close"].min())
-        raise ValueError(f"WTI close below sanity bound: min={mn} < {WTI_MIN_CLOSE}")
-    if (df["close"] > WTI_MAX_CLOSE).any():
-        mx = float(df["close"].max())
-        raise ValueError(f"WTI close above sanity bound: max={mx} > {WTI_MAX_CLOSE}")
 
-    # Freshness (allow publication lag)
-    last_dt = pd.to_datetime(df["date"].max()).to_pydatetime()
-    if last_dt.tzinfo is None:
-        last_dt = last_dt.replace(tzinfo=UTC)
+def main():
+    existing = read_existing_leaf().copy()
+    existing["date"] = pd.to_datetime(
+        existing.get("date", pd.Series([], dtype="datetime64[ns]")),
+        errors="coerce",
+    )
+    existing["close"] = pd.to_numeric(
+        existing.get("close", pd.Series([], dtype="float64")),
+        errors="coerce",
+    )
+
+    last_dt = _last_existing_date(existing)
+
+    # Overlap window prevents "stuck leaf" when EIA publishes late/holes occur.
+    if last_dt is None:
+        start_date = "2000-01-01"
+    else:
+        start_date = (last_dt.date() - timedelta(days=OVERLAP_DAYS)).isoformat()
 
     now_utc = datetime.now(UTC)
-    lag_days = (now_utc - last_dt).days
 
-    # PASS when lag_days == allowed; FAIL only when lag_days > allowed
+    incremental = fetch_incremental(start_date)
+
+    # Combine + dedupe ensures determinism even with overlap pull.
+    combined = pd.concat([existing[["symbol", "date", "close"]], incremental], ignore_index=True)
+    combined["date"] = pd.to_datetime(combined["date"], errors="coerce")
+    combined["close"] = pd.to_numeric(combined["close"], errors="coerce")
+
+    combined = (
+        combined.dropna(subset=["symbol", "date", "close"])
+        .sort_values(["symbol", "date"])
+        .drop_duplicates(["symbol", "date"], keep="last")
+        .reset_index(drop=True)
+    )
+
+    write_leaf(combined)
+
+    new_last_dt = pd.to_datetime(combined["date"].max()).to_pydatetime().replace(tzinfo=UTC)
+    lag_days = (now_utc - new_last_dt).days
+
+    # Governance: fail if still stale after refresh attempt
     if lag_days > int(WTI_MAX_LAG_DAYS):
         raise ValueError(
-            f"WTI T1 freshness failed. last_date={last_dt.date()} "
+            f"WTI T1 freshness failed. last_date={new_last_dt.date()} "
             f"now_utc={now_utc.date()} lag_days={lag_days} allowed={WTI_MAX_LAG_DAYS}"
         )
 
-    print("✅ validate_energy_wti_price_t1 PASSED")
-    print(f"Rows: {len(df)} | Last date: {last_dt.date()} | lag_days={lag_days} | allowed={WTI_MAX_LAG_DAYS}")
+    print("WTI T1 UPDATE complete.")
+    print(f"Total rows: {len(combined)} | Last date: {new_last_dt.date()} | lag_days={lag_days}")
 
 
 if __name__ == "__main__":
     main()
-
-    
