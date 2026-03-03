@@ -145,6 +145,7 @@ def _last_existing_date(existing: pd.DataFrame):
 
 
 def main():
+    print("WTI T1 UPDATE: build_energy_wti_price_update_t1.py v-overlap-debug")
     existing = read_existing_leaf().copy()
     existing["date"] = pd.to_datetime(
         existing.get("date", pd.Series([], dtype="datetime64[ns]")),
@@ -166,6 +167,16 @@ def main():
     now_utc = datetime.now(UTC)
 
     incremental = fetch_incremental(start_date)
+
+    print(f"WTI UPDATE request start_date={start_date}")
+
+    print(f"WTI UPDATE EIA rows={len(incremental)}")
+    if not incremental.empty:
+        print(f"WTI UPDATE EIA max_date={pd.to_datetime(incremental['date'].max()).date()}")
+
+    # after combine/dedupe
+    print(f"WTI UPDATE combined rows={len(combined)}")
+    print(f"WTI UPDATE combined max_date={pd.to_datetime(combined['date'].max()).date()}")
 
     # Combine + dedupe ensures determinism even with overlap pull.
     combined = pd.concat([existing[["symbol", "date", "close"]], incremental], ignore_index=True)
