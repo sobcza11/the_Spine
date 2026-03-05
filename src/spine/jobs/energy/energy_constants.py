@@ -9,7 +9,11 @@ import os
 # -----------------------------
 # Daily Cushing WTI Spot Price (USD per Barrel)
 # Official EIA Series ID
-EIA_WTI_SERIES_ID = "PET.RWTC.D"
+WTI_EIA_SERIES_ID = "PET.RWTC.D"
+
+# Compatibility aliases (prevent job import failures)
+EIA_WTI_SERIES_ID = WTI_EIA_SERIES_ID
+WTI_SERIES_ID = WTI_EIA_SERIES_ID
 
 # -----------------------------
 # Canonical Symbols
@@ -38,4 +42,3 @@ R2_BUCKET_ENV = "R2_BUCKET"
 R2_BUCKET_NAME_ENV = "R2_BUCKET_NAME"
 R2_ENDPOINT_ENV = "R2_ENDPOINT"
 R2_REGION_ENV = "R2_REGION"
-
