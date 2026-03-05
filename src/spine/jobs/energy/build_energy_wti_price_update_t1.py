@@ -9,26 +9,30 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from spine.jobs.energy.energy_constants import (
-    WTI_EIA_SERIES_ID,
-    WTI_MAX_LAG_DAYS,
-    WTI_SYMBOL,
-    R2_WTI_PRICE_T1_KEY,
-    EIA_API_KEY_ENV,
+import spine.jobs.energy.energy_constants as ec
+
+WTI_EIA_SERIES_ID = getattr(
+    ec,
+    "WTI_EIA_SERIES_ID",
+    getattr(
+        ec,
+        "EIA_WTI_SERIES_ID",
+        getattr(ec, "WTI_SERIES_ID", "PET.RWTC.D"),
+    ),
 )
 
-from spine.jobs.energy.energy_constants import (
-    R2_WTI_PRICE_T1_KEY,
-    WTI_SYMBOL,
-    WTI_EIA_SERIES_ID,
-    WTI_MAX_LAG_DAYS,
-    EIA_API_KEY_ENV,
-    R2_ACCESS_KEY_ID_ENV,
-    R2_SECRET_ACCESS_KEY_ENV,
-    R2_BUCKET_ENV,
-    R2_ENDPOINT_ENV,
-    R2_REGION_ENV,
-)
+WTI_SYMBOL = ec.WTI_SYMBOL
+R2_WTI_PRICE_T1_KEY = ec.R2_WTI_PRICE_T1_KEY
+WTI_MAX_LAG_DAYS = ec.WTI_MAX_LAG_DAYS
+EIA_API_KEY_ENV = ec.EIA_API_KEY_ENV
+R2_ACCOUNT_ID_ENV = ec.R2_ACCOUNT_ID_ENV
+R2_ACCESS_KEY_ID_ENV = ec.R2_ACCESS_KEY_ID_ENV
+R2_SECRET_ACCESS_KEY_ENV = ec.R2_SECRET_ACCESS_KEY_ENV
+R2_BUCKET_ENV = ec.R2_BUCKET_ENV
+R2_BUCKET_NAME_ENV = ec.R2_BUCKET_NAME_ENV
+R2_ENDPOINT_ENV = ec.R2_ENDPOINT_ENV
+R2_REGION_ENV = ec.R2_REGION_ENV
+
 
 # ----------------------------
 # Networking controls (CPMAI)
