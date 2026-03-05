@@ -7,13 +7,9 @@ import os
 # -----------------------------
 # EIA Series Identifiers
 # -----------------------------
-# Daily Cushing WTI Spot Price (USD per Barrel)
-# Official EIA Series ID
 WTI_EIA_SERIES_ID = "PET.RWTC.D"
-
-# Compatibility aliases (prevent job import failures)
-EIA_WTI_SERIES_ID = WTI_EIA_SERIES_ID
-WTI_SERIES_ID = WTI_EIA_SERIES_ID
+EIA_WTI_SERIES_ID = "PET.RWTC.D"
+WTI_SERIES_ID = "PET.RWTC.D"
 
 # -----------------------------
 # Canonical Symbols
