@@ -111,8 +111,8 @@ def _eia_url(start_date: str) -> str:
 
     return (
         "https://api.eia.gov/v2/seriesid/"
-        f"{WTI_EIA_SERIES_ID}/data/?api_key={api_key}"
-        f"&frequency=daily&data[0]=value&start={start_date}&sort[0][column]=period&sort[0][direction]=asc"
+        f"{WTI_EIA_SERIES_ID}?api_key={api_key}"
+        f"&out=json&start={start_date}&sort[0][column]=period&sort[0][direction]=asc"
     )
 
 
