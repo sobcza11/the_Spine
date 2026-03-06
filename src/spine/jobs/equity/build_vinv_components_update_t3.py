@@ -11,6 +11,17 @@ import boto3
 import pandas as pd
 import requests
 
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+TIINGO_INTER_SYMBOL_SLEEP_S = 1.5
+TIINGO_429_SLEEP_SCHEDULE = [5, 15, 30, 60]
+HTTP_CONNECT_TIMEOUT_S = 10
+HTTP_READ_TIMEOUT_S = 60
+HTTP_RETRIES_TOTAL = 5
+HTTP_BACKOFF_FACTOR = 1.0
+HTTP_STATUS_FORCELIST = (429, 500, 502, 503, 504)
+
 VINV_TICKERS: List[str] = sorted(
     set(
         [
@@ -80,6 +91,22 @@ CANON_COLS = ["symbol", "date", "open", "high", "low", "close", "volume", "sourc
 TIINGO_DAILY_BASE = "https://api.tiingo.com/tiingo/daily"
 
 
+def _requests_session() -> requests.Session:
+    s = requests.Session()
+    retry = Retry(
+        total=HTTP_RETRIES_TOTAL,
+        connect=HTTP_RETRIES_TOTAL,
+        read=HTTP_RETRIES_TOTAL,
+        status=HTTP_RETRIES_TOTAL,
+        backoff_factor=HTTP_BACKOFF_FACTOR,
+        status_forcelist=HTTP_STATUS_FORCELIST,
+        allowed_methods=frozenset(["GET"]),
+        raise_on_status=False,
+    )
+    s.mount("https://", HTTPAdapter(max_retries=retry))
+    s.mount("http://", HTTPAdapter(max_retries=retry))
+    return s
+
 def _env(name: str, required: bool = True) -> str:
     v = os.getenv(name, "").strip()
     if required and not v:
@@ -125,24 +152,72 @@ def _tiingo_headers() -> Dict[str, str]:
     return {"Authorization": f"Token {_env('TIINGO_API_KEY', True)}"}
 
 
-def _fetch_tiingo_daily(symbol: str, start_date: str, end_date: Optional[str]) -> pd.DataFrame:
-    url = f"{TIINGO_DAILY_BASE}/{symbol}/prices"
-    params: Dict[str, str] = {"startDate": start_date}
+def _fetch_tiingo_daily(symbol: str, start_date: str, end_date: str | None = None) -> pd.DataFrame:
+    api_key = os.getenv("TIINGO_API_KEY")
+    if not api_key:
+        raise ValueError("TIINGO_API_KEY not set")
+
+    url = f"https://api.tiingo.com/tiingo/daily/{symbol}/prices"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Token {api_key}",
+    }
+    params = {"startDate": start_date, "format": "json"}
     if end_date:
         params["endDate"] = end_date
 
-    retries = 6
-    backoff = 1
-    for _ in range(retries):
-        r = requests.get(url, headers=_tiingo_headers(), params=params, timeout=30)
-        if r.status_code == 429:
-            time.sleep(backoff)
-            backoff *= 2
-            continue
-        r.raise_for_status()
-        return pd.DataFrame(r.json())
+    session = _requests_session()
+    response = None
 
-    raise RuntimeError(f"Tiingo 429 persisted after retries for {symbol}")
+    for attempt, sleep_s in enumerate([0] + TIINGO_429_SLEEP_SCHEDULE, start=1):
+        if sleep_s > 0:
+            print(f"WARNING: Tiingo 429 for {symbol}; sleeping {sleep_s}s before retry {attempt}")
+            time.sleep(sleep_s)
+
+        response = session.get(
+            url,
+            headers=headers,
+            params=params,
+            timeout=(HTTP_CONNECT_TIMEOUT_S, HTTP_READ_TIMEOUT_S),
+        )
+
+        if response.status_code != 429:
+            break
+
+    if response is None:
+        raise RuntimeError(f"Tiingo request failed before response for {symbol}")
+
+    if response.status_code == 429:
+        raise RuntimeError(f"Tiingo 429 persisted after retries for {symbol}")
+
+    response.raise_for_status()
+
+    data = response.json()
+    if not data:
+        return pd.DataFrame(columns=["symbol", "date", "close"])
+
+    df = pd.DataFrame(data)
+    if "date" not in df.columns:
+        raise ValueError(f"Unexpected Tiingo payload for {symbol}: {list(df.columns)}")
+
+    close_col = "adjClose" if "adjClose" in df.columns else "close"
+    if close_col not in df.columns:
+        raise ValueError(f"Expected close field missing for {symbol}: {list(df.columns)}")
+
+    df = df.rename(columns={close_col: "close"})
+    df["symbol"] = symbol
+    df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.tz_localize(None)
+    df["close"] = pd.to_numeric(df["close"], errors="coerce")
+
+    df = (
+        df[["symbol", "date", "close"]]
+        .dropna(subset=["symbol", "date", "close"])
+        .sort_values(["symbol", "date"])
+        .drop_duplicates(["symbol", "date"], keep="last")
+        .reset_index(drop=True)
+    )
+
+    return df
 
 
 def _normalize_equity_schema(df_raw: pd.DataFrame, symbol: str) -> pd.DataFrame:
@@ -254,3 +329,11 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"ERROR: {e}", file=sys.stderr)
         raise
+
+
+
+
+
+
+
+
