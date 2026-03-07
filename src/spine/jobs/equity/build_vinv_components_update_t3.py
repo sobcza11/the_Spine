@@ -204,10 +204,10 @@ def _fetch_tiingo_daily(symbol: str, start_date: str, end_date: str | None = Non
     if close_col not in df.columns:
         raise ValueError(f"Expected close field missing for {symbol}: {list(df.columns)}")
 
-    df = df.rename(columns={close_col: "close"})
     df["symbol"] = symbol
     df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.tz_localize(None)
-    df["close"] = pd.to_numeric(df["close"], errors="coerce")
+    
+    df["close"] = pd.to_numeric(df[close_col], errors="coerce")
 
     df = (
         df[["symbol", "date", "close"]]
