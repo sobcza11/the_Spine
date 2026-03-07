@@ -207,6 +207,12 @@ def _fetch_tiingo_daily(symbol: str, start_date: str, end_date: str | None = Non
     df["symbol"] = symbol
     df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.tz_localize(None)
     
+    if isinstance(df[close_col], pd.DataFrame):
+        raise ValueError(
+            f"Duplicate close-like columns detected for {symbol}. "
+            f"close_col={close_col} columns={list(df.columns)}"
+        )
+
     df["close"] = pd.to_numeric(df[close_col], errors="coerce")
 
     df = (
