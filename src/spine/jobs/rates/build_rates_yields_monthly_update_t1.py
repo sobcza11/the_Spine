@@ -81,7 +81,12 @@ def _fetch_fred_series(symbol: str, series_id: str, observation_start: str) -> p
     }
 
     r = requests.get(url, params=params, timeout=60)
-    r.raise_for_status()
+
+    if not r.ok:
+        raise RuntimeError(
+            f"FRED request failed for {symbol} ({series_id}) "
+            f"status={r.status_code} url={r.url} body={r.text}"
+        )
 
     observations = r.json().get("observations", [])
     df = pd.DataFrame(observations)
@@ -150,4 +155,3 @@ if __name__ == "__main__":
     main()
 
 
-    
