@@ -43,13 +43,13 @@ jobs:
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
       - name: Build IR Yields Canonical
-        run: python -m spine.jobs.rates.build_ir_yields_canonical
+        run: python -m spine.jobs.rates.canonical.build_ir_yields_canonical
 
       - name: Build IR Differential Canonical
-        run: python -m spine.jobs.rates.build_ir_diff_canonical
+        run: python -m spine.jobs.rates.canonical.build_ir_diff_canonical
 
       - name: Validate IR Differential Canonical
-        run: python -m spine.jobs.rates.validate_ir_diff_canonical
+        run: python -m spine.jobs.rates.canonical.validate_ir_diff_canonical
 
       - name: Print run context
         shell: bash

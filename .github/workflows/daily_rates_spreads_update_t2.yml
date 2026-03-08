@@ -37,6 +37,6 @@ jobs:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_REGION: ${{ secrets.R2_REGION }}
         run: |
-          python -m spine.jobs.rates.build_rates_spreads_t2
-          python -m spine.jobs.rates.validate_rates_spreads_t2
+          python -m spine.jobs.rates.derive.build_rates_spreads_t2
+          python -m spine.jobs.rates.validate.validate_rates_spreads_t2
 

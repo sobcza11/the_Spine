@@ -38,6 +38,6 @@ jobs:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_REGION: ${{ secrets.R2_REGION }}
         run: |
-          python -m spine.jobs.rates.build_rates_yields_daily_update_t1
-          python -m spine.jobs.rates.validate_rates_yields_daily_t1
+          python -m spine.jobs.rates.ingest.build_rates_yields_daily_update_t1
+          python -m spine.jobs.rates.validate.validate_rates_yields_daily_t1
           
