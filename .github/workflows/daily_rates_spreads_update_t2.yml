@@ -36,35 +36,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
-      - name: Debug package tree
-        shell: bash
-        run: |
-          echo "[PWD]"
-          pwd
-          echo "[ROOT]"
-          ls -la
-          echo "[SRC]"
-          ls -la src
-          echo "[SPINE]"
-          ls -la src/spine
-          echo "[JOBS]"
-          ls -la src/spine/jobs
-          echo "[RATES]"
-          ls -la src/spine/jobs/rates
-          echo "[DERIVE]"
-          ls -la src/spine/jobs/rates/derive
-          echo "[SYS.PATH]"
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -c "import sys; print(sys.path)"
-          echo "[IMPORT TEST]"
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -c "import spine, spine.jobs, spine.jobs.rates, spine.jobs.rates.derive; print('IMPORT_OK')"
-
       - name: Build spreads
         shell: bash
         run: |
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -m spine.jobs.rates.derive.build_rates_spreads_t2
+          PYTHONPATH="${GITHUB_WORKSPACE}/src" python src/spine/jobs/rates/derive/build_rates_spreads_t2.py
 
       - name: Validate spreads
         shell: bash
         run: |
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -m spine.jobs.rates.validate.validate_rates_spreads_t2
-
+          PYTHONPATH="${GITHUB_WORKSPACE}/src" python src/spine/jobs/rates/validate/validate_rates_spreads_t2.py

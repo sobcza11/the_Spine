@@ -37,28 +37,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
-      - name: Debug package tree
-        shell: bash
-        run: |
-          echo "[PWD]"
-          pwd
-          echo "[ROOT]"
-          ls -la
-          echo "[SRC]"
-          ls -la src
-          echo "[SPINE]"
-          ls -la src/spine
-          echo "[JOBS]"
-          ls -la src/spine/jobs
-          echo "[RATES]"
-          ls -la src/spine/jobs/rates
-          echo "[INGEST]"
-          ls -la src/spine/jobs/rates/ingest
-          echo "[SYS.PATH]"
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -c "import sys; print(sys.path)"
-          echo "[IMPORT TEST]"
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -c "import spine, spine.jobs, spine.jobs.rates, spine.jobs.rates.ingest; print('IMPORT_OK')"
-
       - name: Build monthly yields
         shell: bash
         run: |
