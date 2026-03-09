@@ -29,6 +29,9 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Marker
+        run: echo "NEW FILE PATH VERSION"
+
       - name: Build rates spreads T2
         shell: bash
         env:
