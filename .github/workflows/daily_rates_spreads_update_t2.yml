@@ -1,21 +1,31 @@
 name: daily_rates_spreads_update_t2
 
 on:
-  workflow_dispatch: {}
   schedule:
-    - cron: "25 13 * * 1-5"
+    - cron: "15 11 * * 1-5"
+  workflow_dispatch: {}
 
 concurrency:
-  group: rates-spreads-t2
+  group: rates-spreads-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   run:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -26,17 +36,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pip install -e .
+          python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
-      - name: Build rates spreads T2
-        env:
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-          R2_REGION: ${{ secrets.R2_REGION }}
-        run: |
-          python -m spine.jobs.rates.derive.build_rates_spreads_t2
-          python -m spine.jobs.rates.validate.validate_rates_spreads_t2
+      - name: Build spreads
+        run: python -m spine.jobs.rates.derive.build_rates_spreads_t2
+
+      - name: Validate spreads
+        run: python -m spine.jobs.rates.validate.validate_rates_spreads_t2
 
