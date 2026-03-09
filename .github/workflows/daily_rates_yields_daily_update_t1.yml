@@ -59,13 +59,12 @@ jobs:
           echo "[IMPORT TEST]"
           PYTHONPATH="${GITHUB_WORKSPACE}/src" python -c "import spine, spine.jobs, spine.jobs.rates, spine.jobs.rates.ingest; print('IMPORT_OK')"
 
-      - name: Build daily yields
+      - name: Build spreads
         shell: bash
         run: |
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -m spine.jobs.rates.ingest.build_rates_yields_daily_update_t1
+          PYTHONPATH="${GITHUB_WORKSPACE}/src" python src/spine/jobs/rates/derive/build_rates_spreads_t2.py
 
-      - name: Validate daily yields
+      - name: Validate spreads
         shell: bash
         run: |
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python -m spine.jobs.rates.validate.validate_rates_yields_daily_t1
-
+          PYTHONPATH="${GITHUB_WORKSPACE}/src" python src/spine/jobs/rates/validate/validate_rates_spreads_t2.py
