@@ -64,3 +64,4 @@ def main() -> None:
 
     print("✅ validate_rates_yields_monthly_t1 PASSED")
     print(f"Rows: {len(df)} | Symbols: {df['symbol'].nunique()} | Last date: {last_date.date()}")
+    
