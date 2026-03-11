@@ -1,3 +1,4 @@
+
 import os
 from io import BytesIO
 from datetime import datetime, timedelta, UTC
@@ -23,7 +24,7 @@ WTI_EIA_SERIES_ID = getattr(
 
 WTI_SYMBOL = ec.WTI_SYMBOL
 R2_WTI_PRICE_T1_KEY = ec.R2_WTI_PRICE_T1_KEY
-WTI_MAX_LAG_DAYS = ec.WTI_MAX_LAG_DAYS
+WTI_MAX_LAG_DAYS = getattr(ec, "WTI_MAX_LAG_DAYS", 10)
 EIA_API_KEY_ENV = ec.EIA_API_KEY_ENV
 R2_ACCOUNT_ID_ENV = ec.R2_ACCOUNT_ID_ENV
 R2_ACCESS_KEY_ID_ENV = ec.R2_ACCESS_KEY_ID_ENV
@@ -169,7 +170,7 @@ def main():
 
     last_dt = _last_existing_date(existing)
 
-    # Overlap window prevents "stuck leaf" when EIA publishes late/holes occur.
+    # Overlap window prevents "stuck leaf" when EIA publishes late / holes occur.
     if last_dt is None:
         start_date = "2000-01-01"
     else:
@@ -179,10 +180,11 @@ def main():
 
     incremental = fetch_incremental(start_date)
 
-    
-
     # Combine + dedupe ensures determinism even with overlap pull.
-    combined = pd.concat([existing[["symbol", "date", "close"]], incremental], ignore_index=True)
+    combined = pd.concat(
+        [existing[["symbol", "date", "close"]], incremental],
+        ignore_index=True,
+    )
     combined["date"] = pd.to_datetime(combined["date"], errors="coerce")
     combined["close"] = pd.to_numeric(combined["close"], errors="coerce")
 
@@ -193,12 +195,17 @@ def main():
         .reset_index(drop=True)
     )
 
+    if combined.empty:
+        raise ValueError("WTI T1 refresh produced no rows.")
+
     write_leaf(combined)
 
     new_last_dt = pd.to_datetime(combined["date"].max()).to_pydatetime().replace(tzinfo=UTC)
     lag_days = (now_utc - new_last_dt).days
 
-    # Governance: fail if still stale after refresh attempt
+    # Governance: fail if still stale after refresh attempt.
+    # WTI source publication can legitimately lag across weekends / publication timing,
+    # so allow a wider governed tolerance.
     if lag_days > int(WTI_MAX_LAG_DAYS):
         raise ValueError(
             f"WTI T1 freshness failed. last_date={new_last_dt.date()} "

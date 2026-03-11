@@ -24,7 +24,7 @@ R2_WTI_PRICE_T1_KEY = "spine_us/leaves/energy/wti_price_t1.parquet"
 # -----------------------------
 # Freshness Expectations
 # -----------------------------
-WTI_MAX_LAG_DAYS = 7  # allow weekends + EIA publication lag
+WTI_MAX_LAG_DAYS = 10  # allow weekends + EIA publication lag
 
 # -----------------------------
 # Environment Variables (Explicit)
