@@ -6,6 +6,13 @@ from macro.ft_gmi.ft_gmi_reader import read_ft_gmi_latest
 from macro.ft_gmi.prompt_templates import DRIVER_TEXT, REGIME_TEXT, VALIDATOR_TEXT
 from macro.ft_gmi.regime_explainer import infer_regime_bucket
 
+from .ft_gmi_reader import load_ft_gmi
+from .feature_engineering import build_features
+from .regime_explainer import regime_bucket
+from .prompt_templates import narrative_template
+
+
+
 
 COMPONENTS = [
     "rates_stress",
@@ -22,7 +29,6 @@ FWD_COMPONENTS = [
     "equity_stress_fwd45d",
     "credit_stress_fwd45d",
 ]
-
 
 def _safe_float(v: Any, default: float = 0.0) -> float:
     try:
@@ -100,7 +106,37 @@ def build_macro_narrative() -> str:
     return narrative.strip()
 
 
-if __name__ == "__main__":
+def build_macro_narrative():
+
+    df = load_ft_gmi()
+
+    df = build_features(df)
+
+    latest = df.iloc[-1]
+
+    regime = regime_bucket(latest["ft_gmi_score"])
+
+    drivers = f"""
+Rates: {latest['rates_stress']:.1f}
+FX: {latest['fx_stress']:.1f}
+Energy: {latest['energy_stress']:.1f}
+Equity: {latest['equity_stress']:.1f}
+Credit: {latest['credit_stress']:.1f}
+"""
+
+    narrative = narrative_template(
+        latest["ft_gmi_score"],
+        regime,
+        drivers,
+    )
+
+    return narrative
+
+
+def main():
     print(build_macro_narrative())
 
-    
+
+if __name__ == "__main__":
+    main()
+

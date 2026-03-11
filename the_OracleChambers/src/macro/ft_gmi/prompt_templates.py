@@ -19,3 +19,15 @@ VALIDATOR_TEXT = {
     "FAIL": "Validator status is fail, meaning this signal should not be relied on for narrative use.",
 }
 
+def narrative_template(score, regime, drivers):
+
+    return f"""
+Macro stress is elevated & worth monitoring.
+
+FT-GMI score: {score:.1f}
+Regime: {regime}
+
+Dominant drivers:
+{drivers}
+"""
+

@@ -24,3 +24,26 @@ def find_optimal_lag(signal: pd.Series, target: pd.Series):
     
     return best_lag, best_corr
 
+def compute_lag_correlation(series, target, max_lag=90):
+
+    results = []
+
+    for lag in range(1, max_lag):
+
+        shifted = series.shift(lag)
+
+        corr = shifted.corr(target)
+
+        results.append(
+            {
+                "lag": lag,
+                "correlation": corr,
+            }
+        )
+
+    df = pd.DataFrame(results)
+
+    best = df.iloc[df["correlation"].abs().idxmax()]
+
+    return df, best
+

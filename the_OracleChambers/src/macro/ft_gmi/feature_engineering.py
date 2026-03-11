@@ -12,6 +12,20 @@ COMPONENT_COLS = [
     "credit_stress",
 ]
 
+def build_features(df):
+
+    df = df.copy()
+
+    df["ft_gmi_change_1d"] = df["ft_gmi_score"].diff()
+    df["ft_gmi_change_5d"] = df["ft_gmi_score"].diff(5)
+
+    df["ft_gmi_ma_5"] = df["ft_gmi_score"].rolling(5).mean()
+    df["ft_gmi_ma_20"] = df["ft_gmi_score"].rolling(20).mean()
+
+    df["stress_acceleration"] = df["ft_gmi_change_5d"].diff()
+
+    return df
+
 
 def add_ft_gmi_features(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
