@@ -8,12 +8,10 @@ from io import BytesIO
 import boto3
 import botocore
 import pandas as pd
-from datetime import datetime
 
 
 from spine.jobs.rates.rates_constants import (
     DAILY_RATES_MAX_LAG_DAYS,
-    MONTHLY_RATES_MAX_LAG_DAYS,
     R2_ACCESS_KEY_ID_ENV,
     R2_BUCKET_ENV,
     R2_ENDPOINT_ENV,
@@ -25,6 +23,7 @@ from spine.jobs.rates.rates_constants import (
     RATES_SPREADS_DAILY,
     RATES_SPREADS_MONTHLY,
 )
+
 
 def allowed_lag_days_for_monthly(last_date: pd.Timestamp) -> int:
     # monthly macro/rates series should tolerate normal publication lag
@@ -43,6 +42,7 @@ def validate_monthly_freshness(last_date) -> None:
             f"monthly spreads freshness failed. "
             f"last_date={last_date.date()} lag_days={lag_days} allowed={allowed}"
         )
+
 
 def _s3_client():
     return boto3.client(
@@ -186,12 +186,7 @@ def main() -> None:
             )
 
     if last_monthly is not None:
-        lag_monthly = (now - last_monthly).days
-        if lag_monthly > MONTHLY_RATES_MAX_LAG_DAYS:
-            raise ValueError(
-                f"monthly spreads freshness failed. last_date={last_monthly.date()} "
-                f"lag_days={lag_monthly} allowed={MONTHLY_RATES_MAX_LAG_DAYS}"
-            )
+        validate_monthly_freshness(last_monthly)
 
     print("RATES SPREADS T2 UPDATE complete.")
     print(
@@ -203,5 +198,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
     
