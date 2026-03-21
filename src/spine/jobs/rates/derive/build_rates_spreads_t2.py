@@ -8,6 +8,8 @@ from io import BytesIO
 import boto3
 import botocore
 import pandas as pd
+from datetime import datetime
+
 
 from spine.jobs.rates.rates_constants import (
     DAILY_RATES_MAX_LAG_DAYS,
@@ -24,6 +26,23 @@ from spine.jobs.rates.rates_constants import (
     RATES_SPREADS_MONTHLY,
 )
 
+def allowed_lag_days_for_monthly(last_date: pd.Timestamp) -> int:
+    # monthly macro/rates series should tolerate normal publication lag
+    # while still failing genuinely stale inputs
+    return 62
+
+
+def validate_monthly_freshness(last_date) -> None:
+    last_date = pd.to_datetime(last_date).normalize()
+    today = pd.Timestamp.utcnow().normalize().tz_localize(None)
+    lag_days = (today - last_date).days
+    allowed = allowed_lag_days_for_monthly(last_date)
+
+    if lag_days > allowed:
+        raise ValueError(
+            f"monthly spreads freshness failed. "
+            f"last_date={last_date.date()} lag_days={lag_days} allowed={allowed}"
+        )
 
 def _s3_client():
     return boto3.client(
