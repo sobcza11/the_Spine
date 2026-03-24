@@ -8,7 +8,6 @@ import requests
 
 from spine.jobs.rates.rates_constants import (
     FRED_API_KEY_ENV,
-    MONTHLY_RATES_MAX_LAG_DAYS,
     MONTHLY_RATES_SERIES,
     R2_ACCESS_KEY_ID_ENV,
     R2_BUCKET_ENV,
@@ -17,6 +16,24 @@ from spine.jobs.rates.rates_constants import (
     R2_RATES_YIELDS_MONTHLY_T1_KEY,
     R2_SECRET_ACCESS_KEY_ENV,
 )
+
+
+def allowed_lag_days_for_monthly(last_date: pd.Timestamp) -> int:
+    # monthly series should tolerate normal publication lag
+    return 62
+
+
+def validate_monthly_freshness(last_date) -> None:
+    last_date = pd.to_datetime(last_date).normalize()
+    today = pd.Timestamp.utcnow().normalize().tz_localize(None)
+    lag_days = (today - last_date).days
+    allowed = allowed_lag_days_for_monthly(last_date)
+
+    if lag_days > allowed:
+        raise ValueError(
+            f"rates_yields_monthly_t1 freshness failed. "
+            f"last_date={last_date.date()} lag_days={lag_days} allowed={allowed}"
+        )
 
 
 def _fred_api_key() -> str:
@@ -139,13 +156,11 @@ def main() -> None:
     _write_leaf(combined)
 
     last_date = pd.to_datetime(combined["date"], errors="coerce").max()
-    lag_days = (pd.Timestamp.utcnow().tz_localize(None) - last_date).days
 
-    if lag_days > MONTHLY_RATES_MAX_LAG_DAYS:
-        raise ValueError(
-            f"rates_yields_monthly_t1 freshness failed. "
-            f"last_date={last_date.date()} lag_days={lag_days} allowed={MONTHLY_RATES_MAX_LAG_DAYS}"
-        )
+    if last_date is not None:
+        validate_monthly_freshness(last_date)
+
+    lag_days = (pd.Timestamp.utcnow().tz_localize(None) - last_date).days
 
     print("RATES YIELDS MONTHLY T1 UPDATE complete.")
     print(f"Rows: {len(combined)} | Last date: {last_date.date()} | lag_days={lag_days}")
