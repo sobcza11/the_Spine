@@ -204,15 +204,14 @@ def _fetch_tiingo_daily(symbol: str, start_date: str, end_date: str | None = Non
     if close_col not in df.columns:
         raise ValueError(f"Expected close field missing for {symbol}: {list(df.columns)}")
 
-    df["symbol"] = symbol
-    df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.tz_localize(None)
-    
     if isinstance(df[close_col], pd.DataFrame):
         raise ValueError(
             f"Duplicate close-like columns detected for {symbol}. "
             f"close_col={close_col} columns={list(df.columns)}"
         )
 
+    df["symbol"] = symbol
+    df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.tz_localize(None)
     df["close"] = pd.to_numeric(df[close_col], errors="coerce")
 
     df = (
@@ -306,11 +305,28 @@ def main() -> int:
     starts = _compute_start_dates(df_existing)
 
     frames: List[pd.DataFrame] = []
+    failed_symbols: List[str] = []
+
     for sym in VINV_TICKERS:
-        raw = _fetch_tiingo_daily(sym, start_date=starts[sym], end_date=end_date)
-        norm = _normalize_equity_schema(raw, symbol=sym)
-        if not norm.empty:
-            frames.append(norm)
+        try:
+            raw = _fetch_tiingo_daily(sym, start_date=starts[sym], end_date=end_date)
+            norm = _normalize_equity_schema(raw, symbol=sym)
+            if not norm.empty:
+                frames.append(norm)
+
+            time.sleep(TIINGO_INTER_SYMBOL_SLEEP_S)
+
+        except RuntimeError as e:
+            print(f"WARNING: skipping {sym} due to Tiingo failure: {e}")
+            failed_symbols.append(sym)
+            continue
+
+    # fail only if too many tickers break
+    if len(failed_symbols) > 5:
+        raise RuntimeError(f"Too many Tiingo failures: {failed_symbols}")
+
+    if failed_symbols:
+        print(f"Completed with partial failures: {failed_symbols}")
 
     if not frames:
         print("No new data returned from Tiingo; leaving components leaf unchanged.")
@@ -327,7 +343,6 @@ def main() -> int:
     print("symbols:", int(df_out["symbol"].nunique()))
     print("max_date:", df_out["date"].max())
     return 0
-
 
 if __name__ == "__main__":
     try:
