@@ -7,6 +7,12 @@ import botocore
 import pandas as pd
 import requests
 
+import random
+import time
+
+
+
+
 from spine.jobs.rates.rates_constants import (
     DAILY_RATES_MAX_LAG_DAYS,
     DAILY_RATES_SERIES,
@@ -82,33 +88,51 @@ def _fetch_fred_series(symbol: str, series_id: str, observation_start: str) -> p
         "file_type": "json",
         "observation_start": observation_start,
     }
+    headers = {
+        "User-Agent": "the_Spine/1.0 (+GitHub Actions; deterministic rates ingest)",
+        "Accept": "application/json",
+    }
 
-    r = requests.get(url, params=params, timeout=60)
+    for sleep_s in [0, 5, 15, 30]:
+        if sleep_s > 0:
+            time.sleep(sleep_s + random.uniform(0, 1.5))
 
-    if not r.ok:
-        raise RuntimeError(
-            f"FRED request failed for {symbol} ({series_id}) "
-            f"status={r.status_code} url={r.url} body={r.text}"
+        r = requests.get(url, params=params, headers=headers, timeout=60)
+
+        if r.status_code == 403:
+            print(f"WARNING: FRED 403 for {symbol} ({series_id}); retrying")
+            continue
+
+        if r.status_code == 429:
+            print(f"WARNING: FRED 429 for {symbol} ({series_id}); retrying")
+            continue
+
+        if not r.ok:
+            raise RuntimeError(
+                f"FRED request failed for {symbol} ({series_id}) "
+                f"status={r.status_code} url={r.url} body={r.text}"
+            )
+
+        observations = r.json().get("observations", [])
+        df = pd.DataFrame(observations)
+        if df.empty:
+            return pd.DataFrame(columns=["symbol", "date", "value"])
+
+        df["symbol"] = symbol
+        df["date"] = pd.to_datetime(df["date"], errors="coerce")
+        df["value"] = pd.to_numeric(df["value"], errors="coerce")
+
+        return (
+            df[["symbol", "date", "value"]]
+            .dropna(subset=["symbol", "date", "value"])
+            .sort_values(["symbol", "date"])
+            .drop_duplicates(["symbol", "date"], keep="last")
+            .reset_index(drop=True)
         )
 
-    observations = r.json().get("observations", [])
-    df = pd.DataFrame(observations)
-    if df.empty:
-        return pd.DataFrame(columns=["symbol", "date", "value"])
+    raise RuntimeError(f"FRED access persisted after retries for {symbol} ({series_id})")
 
-    df["symbol"] = symbol
-    df["date"] = pd.to_datetime(df["date"], errors="coerce")
-    df["value"] = pd.to_numeric(df["value"], errors="coerce")
-
-    df = (
-        df[["symbol", "date", "value"]]
-        .dropna(subset=["symbol", "date", "value"])
-        .sort_values(["symbol", "date"])
-        .drop_duplicates(["symbol", "date"], keep="last")
-        .reset_index(drop=True)
-    )
-    return df
-
+failed_symbols = []
 
 def main() -> None:
     existing = _read_existing_leaf()
@@ -122,9 +146,21 @@ def main() -> None:
             last_dt = pd.to_datetime(symbol_existing["date"], errors="coerce").max()
             start_date = (last_dt - timedelta(days=OVERLAP_DAYS)).date().isoformat()
 
-        df = _fetch_fred_series(symbol=symbol, series_id=series_id, observation_start=start_date)
-        if not df.empty:
-            parts.append(df)
+        try:
+            df = _fetch_fred_series(symbol=symbol, series_id=series_id, observation_start=start_date)
+            if not df.empty:
+                parts.append(df)
+            time.sleep(FRED_INTER_SYMBOL_SLEEP_S)
+        except RuntimeError as e:
+            print(f"WARNING: skipping {symbol} due to FRED failure: {e}")
+            failed_symbols.append(symbol)
+            continue
+
+    if len(failed_symbols) > FRED_MAX_FAILED_SYMBOLS:
+        raise RuntimeError(f"Too many FRED fetch failures: {failed_symbols}")
+
+    if failed_symbols:
+        print(f"Completed with partial FRED failures: {failed_symbols}")
 
     combined = (
         pd.concat(parts, ignore_index=True)
@@ -149,6 +185,9 @@ def main() -> None:
             f"rates_yields_daily_t1 freshness failed. "
             f"last_date={last_date.date()} lag_days={lag_days} allowed={DAILY_RATES_MAX_LAG_DAYS}"
         )
+    
+    if last_date is not None:
+        validate_monthly_freshness(last_date)
 
     print("RATES YIELDS DAILY T1 UPDATE complete.")
     print(f"Rows: {len(combined)} | Last date: {last_date.date()} | lag_days={lag_days}")
@@ -156,3 +195,20 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+def allowed_lag_days_for_monthly(last_date: pd.Timestamp) -> int:
+    # monthly series should tolerate normal publication lag
+    return 62
+
+
+def validate_monthly_freshness(last_date) -> None:
+    last_date = pd.to_datetime(last_date).normalize()
+    today = pd.Timestamp.utcnow().normalize().tz_localize(None)
+    lag_days = (today - last_date).days
+    allowed = allowed_lag_days_for_monthly(last_date)
+
+    if lag_days > allowed:
+        raise ValueError(
+            f"rates_yields_monthly_t1 freshness failed. "
+            f"last_date={last_date.date()} lag_days={lag_days} allowed={allowed}"
+        )
