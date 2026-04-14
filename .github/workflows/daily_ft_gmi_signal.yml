@@ -1,0 +1,75 @@
+name: daily_ft_gmi_signal
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "35 15 * * 1-5"
+
+concurrency:
+  group: ft-gmi-daily
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -e .
+
+      - name: Build & validate FT-GMI
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_REGION: ${{ secrets.R2_REGION }}
+          R2_FT_GMI_KEY: lab/ft_gmi/ft_gmi_daily.parquet
+        run: |
+          python -m spine.lab.ft_gmi.build_ft_gmi_signal
+          python -m spine.lab.ft_gmi.validate_ft_gmi_signal
+
+      - name: Build FT-GMI
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_REGION: ${{ secrets.R2_REGION }}
+        run: |
+          python -m spine.lab.ft_gmi.build_ft_gmi_signal
+
+      - name: Validate FT-GMI
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_REGION: ${{ secrets.R2_REGION }}
+        run: |
+          python -m spine.lab.ft_gmi.validate_ft_gmi_signal
+
+      - name: Publish FT-GMI artifact
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_REGION: ${{ secrets.R2_REGION }}
+          R2_FT_GMI_KEY: lab/ft_gmi/ft_gmi_daily.parquet
+        run: |
+          python -m spine.lab.ft_gmi.publish_ft_gmi_signal          
+

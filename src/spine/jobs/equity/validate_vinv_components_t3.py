@@ -86,4 +86,4 @@ if __name__ == "__main__":
         print(f"ERROR: {e}", file=sys.stderr)
         raise
 
-    
+# For reference, here are the 2024-06-14 VinV components (from build_vinv_components_update_t3.py):

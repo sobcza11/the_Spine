@@ -153,7 +153,7 @@ def _fetch_tiingo_fx_prices(symbol: str, start_date: str, end_date: str | None, 
                 backoff *= 2
             else:
                 raise
-    raise RuntimeError(f"Tiingo request failed after retries for {symbol}")
+    raise RuntimeError(f"Tiingo request failed after retries for {symbol}") 
 
 def _normalize_fx_schema(df_raw: pd.DataFrame, symbol: str) -> pd.DataFrame:
     if df_raw.empty:
