@@ -34,10 +34,10 @@ def main():
     if df.empty:
         raise RuntimeError("WTI inventory parquet empty.")
 
-    df["date"] = pd.to_datetime(df["date"])
-    df = df.sort_values("date")
+    # df["date"] = pd.to_datetime(df["date"])
+    # df = df.sort_values("date")
 
-    # 15Y rolling seasonal normalization
+    # 3Y rolling normalization
     possible_cols = ["value", "close", "inventory", "stocks", "level", "inventory_value", "stock_level", "crude_stocks", "cushing_stocks"]
 
     date_cols = ["date", "as_of_date", "observation_date", "week"]
@@ -70,6 +70,7 @@ def main():
     df["rolling_mean"] = df[col].rolling(WINDOW, min_periods=100).mean()
     df["rolling_std"]  = df[col].rolling(WINDOW, min_periods=100).std()
 
+    df["rolling_std"] = df["rolling_std"].replace(0, np.nan)
     df["z"] = (df[col] - df["rolling_mean"]) / df["rolling_std"]
 
     # Drop NaNs once
@@ -106,8 +107,7 @@ def main():
     )
 
     print("WTI OC overlay export complete.")
-    print(f"as_of={payload['meta']['as_of_date']}")
-    print("WTI columns:", df.columns.tolist())
+    print(f"as_of={payload['meta']['as_of_date']}")    
     print("WTI raw rows:", len(df))
 
 if __name__ == "__main__":
