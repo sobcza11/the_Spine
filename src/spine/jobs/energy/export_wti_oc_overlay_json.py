@@ -36,10 +36,11 @@ def main():
     df = df.sort_values("date")
 
     # 15Y rolling seasonal normalization
-    df["rolling_mean"] = df["value"].rolling(52 * 15, min_periods=52).mean()
-    df["rolling_std"]  = df["value"].rolling(52 * 15, min_periods=52).std()
+    col = "value" if "value" in df.columns else "close"
 
-    df["z"] = (df["value"] - df["rolling_mean"]) / df["rolling_std"]
+    df["rolling_mean"] = df[col].rolling(52 * 15, min_periods=52).mean()
+    df["rolling_std"]  = df[col].rolling(52 * 15, min_periods=52).std()
+    df["z"] = (df[col] - df["rolling_mean"]) / df["rolling_std"]
 
     latest = df.dropna(subset=["z"]).tail(1)
 
@@ -70,6 +71,7 @@ def main():
 
     print("WTI OC overlay export complete.")
     print(f"as_of={payload['meta']['as_of_date']}")
+    print("WTI columns:", df.columns.tolist())
 
 if __name__ == "__main__":
     main()
