@@ -257,14 +257,17 @@ def build_sigma_payload(df):
 
 
 def main():
-    price_key = FX_SPOT_KEY
+    price_key = f"{FX_SPOT_KEY} + {FX_SPOT_T2_KEY}"
     spreads_key = FX_SPREADS_KEY
-    sigma_key = FX_SPOT_KEY
+    sigma_key = price_key
 
-    price_df = read_parquet(price_key)
+    price_df_t1 = read_parquet(FX_SPOT_KEY)
+    price_df_t2 = read_parquet(FX_SPOT_T2_KEY)
+
+    price_df = pd.concat([price_df_t1, price_df_t2], ignore_index=True)
     spreads_df = read_parquet(spreads_key)
     sigma_df = price_df
-        
+
     price_payload = build_price_payload(price_df)
     spreads_payload = build_spreads_payload(spreads_df)
     sigma_payload = build_sigma_payload(sigma_df)
