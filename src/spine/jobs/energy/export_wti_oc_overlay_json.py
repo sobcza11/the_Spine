@@ -38,11 +38,20 @@ def main():
     # 15Y rolling seasonal normalization
     col = "value" if "value" in df.columns else "close"
 
-    df["rolling_mean"] = df[col].rolling(52 * 15, min_periods=52).mean()
-    df["rolling_std"]  = df[col].rolling(52 * 15, min_periods=52).std()
+    WINDOW = 252 * 3   # ~3 years of trading days
+
+    df["rolling_mean"] = df[col].rolling(WINDOW, min_periods=100).mean()
+    df["rolling_std"]  = df[col].rolling(WINDOW, min_periods=100).std()
+
     df["z"] = (df[col] - df["rolling_mean"]) / df["rolling_std"]
 
-    latest = df.dropna(subset=["z"]).tail(1)
+    # Drop NaNs once
+    df_clean = df.dropna(subset=["z"])
+
+    if df_clean.empty:
+        raise RuntimeError("WTI OC overlay produced empty dataframe after rolling calc.")
+
+    latest = df_clean.tail(1)
 
     if latest.empty:
         raise RuntimeError("No overlay data available.")
@@ -72,6 +81,7 @@ def main():
     print("WTI OC overlay export complete.")
     print(f"as_of={payload['meta']['as_of_date']}")
     print("WTI columns:", df.columns.tolist())
+    print("WTI raw rows:", len(df))
 
 if __name__ == "__main__":
     main()
