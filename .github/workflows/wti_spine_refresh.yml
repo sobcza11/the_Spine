@@ -53,5 +53,10 @@ jobs:
           python -m spine.jobs.energy.export_wti_serving_json
 
       - name: Export WTI OC Overlay JSON
+        env:
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
         run: python -m spine.jobs.energy.export_wti_oc_overlay_json
           
