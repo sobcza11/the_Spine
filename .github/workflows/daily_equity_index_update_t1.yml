@@ -77,3 +77,6 @@ jobs:
 
       - name: Export Equity Serving JSON
         run: python -m spine.jobs.equities.export_equity_index_serving_json
+
+      - name: Export Equities Sigma Rank JSON
+        run: python -m spine.jobs.equities.export_equities_sigma_rank_json
