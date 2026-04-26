@@ -8,9 +8,17 @@ import json
 WINDOW = 20
 
 def s3():
+    endpoint = os.environ.get("R2_ENDPOINT")
+
+    if not endpoint:
+        account_id = os.environ.get("R2_ACCOUNT_ID")
+        if not account_id:
+            raise RuntimeError("Missing R2_ENDPOINT or R2_ACCOUNT_ID")
+        endpoint = f"https://{account_id}.r2.cloudflarestorage.com"
+
     return boto3.client(
         "s3",
-        endpoint_url=os.environ["R2_ENDPOINT"],
+        endpoint_url=endpoint,
         aws_access_key_id=os.environ["R2_ACCESS_KEY_ID"],
         aws_secret_access_key=os.environ["R2_SECRET_ACCESS_KEY"],
     )
