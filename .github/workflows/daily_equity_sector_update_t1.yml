@@ -50,3 +50,9 @@ jobs:
         run: |
           set -euo pipefail
           python -m spine.jobs.equity.validate_equity_sector_t1
+
+      - name: Export Equity Sector Serving JSON
+        run: |
+          set -euo pipefail
+          python -m spine.jobs.equities.export_equity_sector_serving_json
+

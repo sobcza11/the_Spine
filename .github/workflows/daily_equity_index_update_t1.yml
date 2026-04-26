@@ -69,3 +69,11 @@ jobs:
         shell: bash
         run: |
           PYTHONPATH="${GITHUB_WORKSPACE}/src" python src/spine/jobs/rates/canonical/validate_ir_diff_canonical.py
+
+      - name: Export Equity Index Serving JSON
+        run: |
+          set -euo pipefail
+          python -m spine.jobs.equities.export_equity_index_serving_json
+
+
+          
