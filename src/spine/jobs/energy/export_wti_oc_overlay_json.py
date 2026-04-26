@@ -40,6 +40,21 @@ def main():
     # 15Y rolling seasonal normalization
     possible_cols = ["value", "close", "inventory", "stocks", "level", "inventory_value", "stock_level", "crude_stocks", "cushing_stocks"]
 
+    date_cols = ["date", "as_of_date", "observation_date", "week"]
+
+    date_col = None
+    for c in date_cols:
+        if c in df.columns:
+            date_col = c
+            break
+
+    if date_col is None:
+        raise RuntimeError(f"No valid date column found. Columns: {df.columns.tolist()}")
+
+    df[date_col] = pd.to_datetime(df[date_col])
+    df = df.sort_values(date_col)
+
+
     col = None
     for c in possible_cols:
         if c in df.columns:
@@ -73,7 +88,7 @@ def main():
     payload = {
         "meta": {
             "source": "EIA",
-            "as_of_date": r["date"].strftime("%Y-%m-%d")
+            "as_of_date": r[date_col].strftime("%Y-%m-%d")
         },
         "overlay": {
             "z": float(r["z"]),
