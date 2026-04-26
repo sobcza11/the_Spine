@@ -107,6 +107,11 @@ def main():
         ],
     }
 
+    inv_legacy_rows = inv_payload["series"]
+
+    write_json(OUT_DIR / "wti_inventory_data.json", inv_legacy_rows)
+    upload_json("spine_us/serving/wti/wti_inventory_data.json", inv_legacy_rows)
+
     panel_payload = {
         "panel": "wti_panel",
         "source": "the_Spine",
