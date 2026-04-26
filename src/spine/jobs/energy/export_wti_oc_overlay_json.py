@@ -24,10 +24,12 @@ def read_parquet(key):
     obj = s3().get_object(Bucket=bucket(), Key=key)
     return pd.read_parquet(io.BytesIO(obj["Body"].read()))
 
+
 def main():
     KEY = "spine_us/leaves/energy/crude_stocks_ex_spr_t2.parquet"
 
     df = read_parquet(KEY)
+    print("WTI columns:", df.columns.tolist())
 
     if df.empty:
         raise RuntimeError("WTI inventory parquet empty.")
@@ -36,7 +38,17 @@ def main():
     df = df.sort_values("date")
 
     # 15Y rolling seasonal normalization
-    col = "value" if "value" in df.columns else "close"
+    possible_cols = ["value", "close", "inventory", "stocks", "level", "inventory_value", "stock_level", "crude_stocks", "cushing_stocks"]
+
+    col = None
+    for c in possible_cols:
+        if c in df.columns:
+            col = c
+            break
+
+    if col is None:
+        raise RuntimeError(f"No valid value column found. Columns: {df.columns.tolist()}")
+
 
     WINDOW = 252 * 3   # ~3 years of trading days
 
