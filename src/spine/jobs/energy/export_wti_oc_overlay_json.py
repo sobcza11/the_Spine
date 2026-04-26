@@ -7,14 +7,21 @@ import json
 
 def s3():
     endpoint = os.environ.get("R2_ENDPOINT")
+    access_key = os.environ.get("R2_ACCESS_KEY_ID")
+    secret_key = os.environ.get("R2_SECRET_ACCESS_KEY")
+    bucket = os.environ.get("R2_BUCKET_NAME")
+
     if not endpoint:
-        endpoint = f"https://{os.environ['R2_ACCOUNT_ID']}.r2.cloudflarestorage.com"
+        raise RuntimeError("R2_ENDPOINT not set in environment")
+
+    if not access_key or not secret_key or not bucket:
+        raise RuntimeError("Missing R2 credentials in environment")
 
     return boto3.client(
         "s3",
         endpoint_url=endpoint,
-        aws_access_key_id=os.environ["R2_ACCESS_KEY_ID"],
-        aws_secret_access_key=os.environ["R2_SECRET_ACCESS_KEY"],
+        aws_access_key_id=access_key,
+        aws_secret_access_key=secret_key,
     )
 
 def bucket():
