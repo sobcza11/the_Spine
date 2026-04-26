@@ -112,6 +112,34 @@ def main():
     write_json(OUT_DIR / "wti_inventory_data.json", inv_legacy_rows)
     upload_json("spine_us/serving/wti/wti_inventory_data.json", inv_legacy_rows)
 
+
+    oc_overlay_payload = {
+        "meta": {
+            "source": "EIA",
+            "series_id": "WCESTUS1",
+            "current_year": int(inv["date"].max().year),
+            "latest_week": int(inv["date"].max().isocalendar().week),
+            "latest_observation_date": inv_latest,
+        },
+        "rows": [
+            {
+                "week": int(row["date"].isocalendar().week),
+                "current": float(row["value"]),
+                "min": None,
+                "avg": None,
+                "max": None,
+            }
+            for _, row in inv.iterrows()
+            if int(row["date"].year) == int(inv["date"].max().year)
+        ],
+    }
+
+    write_json(OUT_DIR / "wti_inventory_oc_overlay.json", oc_overlay_payload)
+    upload_json(
+        "spine_us/serving/wti/wti_inventory_oc_overlay.json",
+        oc_overlay_payload
+    )
+
     panel_payload = {
         "panel": "wti_panel",
         "source": "the_Spine",
