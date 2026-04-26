@@ -56,3 +56,6 @@ jobs:
           python -m spine.jobs.energy.build_energy_crude_stocks_ex_spr_update_t2
           python -m spine.jobs.energy.validate_energy_crude_stocks_ex_spr_t2
 
+      - name: Export WTI Inventory Serving
+        run: |
+          python -m spine.jobs.energy.export_wti_serving_json

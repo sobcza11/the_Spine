@@ -56,3 +56,7 @@ jobs:
           python -m spine.jobs.energy.build_energy_wti_price_update_t1
           python -m spine.jobs.energy.validate_energy_wti_price_t1
 
+      - name: Export WTI Serving
+        run: |
+          python -m spine.jobs.energy.export_wti_serving_json
+
