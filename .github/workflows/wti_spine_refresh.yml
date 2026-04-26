@@ -52,5 +52,6 @@ jobs:
         run: |
           python -m spine.jobs.energy.export_wti_serving_json
 
-
+      - name: Export WTI OC Overlay JSON
+        run: python -m spine.jobs.energy.export_wti_oc_overlay_json
           
