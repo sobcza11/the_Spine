@@ -75,5 +75,5 @@ jobs:
           set -euo pipefail
           python -m spine.jobs.equities.export_equity_index_serving_json
 
-
-          
+      - name: Export Equity Serving JSON
+        run: python -m spine.jobs.equities.export_equity_index_serving_json
