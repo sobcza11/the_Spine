@@ -1,0 +1,85 @@
+name: Daily GeoScen Beige Book Leaf
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 14 * * 1-5"
+
+jobs:
+  build_geoscen_beige_book_leaf:
+    runs-on: ubuntu-latest
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_REGION: ${{ secrets.R2_REGION }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas pyarrow requests beautifulsoup4 boto3
+
+      - name: Show run context
+        run: |
+          echo "ref=${GITHUB_REF}"
+          echo "sha=${GITHUB_SHA}"
+          echo "run_id=${GITHUB_RUN_ID}"
+          echo "workspace=${GITHUB_WORKSPACE}"
+
+      - name: Build modern Beige Book canonical
+        run: python -m spine.jobs.geoscen.beige_book.ingest_beige_book_t1
+
+      - name: Validate modern Beige Book canonical
+        run: python -m spine.jobs.geoscen.beige_book.validate_beige_book_t1
+
+      - name: Build historical Beige Book canonical
+        run: python -m spine.jobs.geoscen.beige_book.historical.ingest_beige_book_historical_t1
+
+      - name: Validate historical Beige Book canonical
+        run: python -m spine.jobs.geoscen.beige_book.historical.validate_beige_book_historical_t1
+
+      - name: Build combined Beige Book canonical
+        run: python -m spine.jobs.geoscen.beige_book.build_beige_book_combined_canonical_v1
+
+      - name: Validate combined Beige Book canonical
+        run: python -m spine.jobs.geoscen.beige_book.validate_beige_book_combined_canonical_v1
+
+      - name: Build Beige Book district segments
+        run: python -m spine.jobs.geoscen.beige_book.build_beige_book_district_segments_v1
+
+      - name: Validate Beige Book district segments
+        run: python -m spine.jobs.geoscen.beige_book.validate_beige_book_district_segments_v1
+
+      - name: Build Beige Book modern mentions
+        run: python -m spine.jobs.geoscen.beige_book.build_beige_book_modern_mentions_v1
+
+      - name: Validate Beige Book modern mentions
+        run: python -m spine.jobs.geoscen.beige_book.validate_beige_book_modern_mentions_v1
+
+      - name: Build GeoScen Beige Book signals
+        run: python -m spine.jobs.geoscen.signals.build_geoscen_beige_book_signals_v1
+
+      - name: Validate GeoScen Beige Book signals
+        run: python -m spine.jobs.geoscen.signals.validate_geoscen_beige_book_signals_v1
+
+      - name: Build GeoScen Beige Book monthly aggregates
+        run: python -m spine.jobs.geoscen.signals.build_geoscen_beige_book_monthly_aggregates_v1
+
+      - name: Validate GeoScen Beige Book monthly aggregates
+        run: python -m spine.jobs.geoscen.signals.validate_geoscen_beige_book_monthly_aggregates_v1
+
+      - name: Upload changed GeoScen leaves to R2
+        run: python -m spine.jobs.geoscen.upload_geoscen_leaves_to_r2
+
