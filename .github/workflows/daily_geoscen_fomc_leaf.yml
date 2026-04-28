@@ -1,0 +1,64 @@
+name: Daily GeoScen FOMC Leaf
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "40 14 * * 1-5"
+
+jobs:
+  build_geoscen_fomc_leaf:
+    runs-on: ubuntu-latest
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_REGION: ${{ secrets.R2_REGION }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas pyarrow requests beautifulsoup4 boto3 pypdf
+
+      - name: Show run context
+        run: |
+          echo "ref=${GITHUB_REF}"
+          echo "sha=${GITHUB_SHA}"
+          echo "run_id=${GITHUB_RUN_ID}"
+          echo "workspace=${GITHUB_WORKSPACE}"
+
+      - name: Build modern FOMC minutes canonical
+        run: python -m spine.jobs.geoscen.fomc.ingest_fomc_minutes_t1
+
+      - name: Validate modern FOMC minutes canonical
+        run: python -m spine.jobs.geoscen.fomc.validate_fomc_minutes_t1
+
+      - name: Build FOMC historical materials canonical
+        run: python -m spine.jobs.geoscen.fomc.historical.ingest_fomc_historical_materials_t1
+
+      - name: Validate FOMC historical materials canonical
+        run: python -m spine.jobs.geoscen.fomc.historical.validate_fomc_historical_materials_t1
+
+      - name: Extract FOMC historical PDF text
+        run: python -m spine.jobs.geoscen.fomc.historical.extract_fomc_historical_pdf_text_v2
+
+      - name: Validate FOMC historical PDF text
+        run: python -m spine.jobs.geoscen.fomc.historical.validate_fomc_historical_pdf_text_v2
+
+      - name: Upload FOMC modern minutes to R2
+        run: python -m spine.jobs.geoscen.fomc.upload_fomc_minutes_to_r2
+
+      - name: Upload FOMC historical materials to R2
+        run: python -m spine.jobs.geoscen.fomc.historical.upload_fomc_historical_materials_to_r2
+
