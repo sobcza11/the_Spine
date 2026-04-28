@@ -21,7 +21,6 @@ from urllib.parse import urljoin
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from sqlalchemy import label
 
 from spine.jobs.geoscen.fomc.historical.fomc_historical_constants import (
     DOCUMENT_FAMILY,
