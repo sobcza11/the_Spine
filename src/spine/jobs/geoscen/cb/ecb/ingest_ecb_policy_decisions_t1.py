@@ -60,7 +60,11 @@ def parse_policy_page(url):
     soup = BeautifulSoup(r.text, "html.parser")
 
     title = soup.find("h1")
-    date = soup.find("time")
+    title_text = title.get_text(" ", strip=True) if title else ""
+
+    page_text = soup.get_text(" ", strip=True)
+
+    date_value = extract_ecb_date(url, title_text, page_text)
 
     paragraphs = soup.select("main p") or soup.select("p")
     text = " ".join(p.get_text(" ", strip=True) for p in paragraphs)
@@ -72,7 +76,7 @@ def parse_policy_page(url):
         "currency": ECB_CURRENCY,
         "document_type": "policy_decision",
         "title": title.get_text(" ", strip=True) if title else None,
-        "date": date.get("datetime") if date else None,
+        "date": date_value,
         "url": url,
         "text": text,
         "text_chars": len(text),
@@ -89,6 +93,17 @@ def run():
     df.to_parquet(ECB_OUTPUT_POLICY_PATH, index=False)
 
     print("ECB Policy Decisions rows:", len(df))
+
+def extract_ecb_date(url, title_text, page_text):
+    match = re.search(r"(?:mp|pr)(\d{6})", url)
+    if match:
+        return pd.to_datetime(match.group(1), format="%y%m%d").date().isoformat()
+
+    match = re.search(r"\b(\d{1,2} \w+ \d{4})\b", title_text + " " + page_text)
+    if match:
+        return pd.to_datetime(match.group(1), errors="coerce").date().isoformat()
+
+    return None
 
 
 if __name__ == "__main__":
