@@ -2,6 +2,7 @@ import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
+from spine.jobs.llm.validation.adjustor_semantic_filter_v1 import evaluate_text
 
 
 ROOT = Path.cwd()
@@ -77,10 +78,12 @@ def main():
         if phrase.lower() not in brief_norm:
             failures.append(f"Missing required rule phrase: {phrase}")
 
-    for term in FORBIDDEN_TERMS:
-        if term in brief_norm:
-            failures.append(f"Forbidden term found: {term}")
+    adjustor_result = evaluate_text(brief_text)
 
+    if adjustor_result["violations"] > 0:
+        failures.append(
+            f"Adjustor detected {adjustor_result['violations']} predictive violations"
+        )
     approved_inputs = packet.get("approved_signal_summary", {})
 
     if not approved_inputs:
@@ -107,6 +110,10 @@ def main():
         "failures": failures,
     }
 
+    event["adjustor_summary"] = {
+        "total_sentences": adjustor_result["total_sentences"],
+        "violations": adjustor_result["violations"]
+    }
     write_jsonl(EVENT_PATH, event)
     write_jsonl(LOG_PATH, event)
 
