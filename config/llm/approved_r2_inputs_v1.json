@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "layer": "oraclechambers_llm_inputs",
+  "approved_inputs": {
+    "macro_cb_signals": "geoscen/signals/macro_cb_signals_v1.parquet",
+    "macro_cb_oc_signals": "geoscen/signals/macro_cb_oc_signals_v1.parquet",
+    "isovector_macro_cb_view": "isovector/macro_cb_view/isovector_macro_cb_view_v1.parquet",
+    "isovector_macro_cb_rates_join": "isovector/macro_cb_rates_join/isovector_macro_cb_rates_join_v1.parquet",
+    "pmi_geoscen_zt_input": "geoscen/pmi/signals/pmi_geoscen_zt_input_v1.parquet"
+  }
+}
