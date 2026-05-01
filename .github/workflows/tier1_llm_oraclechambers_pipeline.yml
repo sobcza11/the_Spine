@@ -1,0 +1,51 @@
+name: Tier 1 LLM OracleChambers Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tier1-llm-oraclechambers:
+    runs-on: ubuntu-latest
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_REGION: ${{ secrets.R2_REGION }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pandas pyarrow boto3 botocore
+
+      - name: Load approved R2 inputs
+        run: |
+          python -m spine.jobs.llm.read_approved_r2_inputs_v1
+
+      - name: Build QuaLayer packet
+        run: |
+          python -m spine.jobs.llm.qualayer.build_qualayer_v1
+
+      - name: Build OracleChambers brief
+        run: |
+          python -m spine.jobs.llm.oraclechambers.build_oraclechambers_brief_v1
+
+      - name: Validate OracleChambers brief
+        run: |
+          python -m spine.jobs.llm.validation.validate_oraclechambers_v1
+
+      - name: Upload LLM outputs to R2
+        run: |
+          python -m spine.jobs.llm.upload_llm_outputs_to_r2_v1
+
