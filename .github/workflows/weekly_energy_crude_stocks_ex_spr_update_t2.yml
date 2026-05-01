@@ -59,3 +59,4 @@ jobs:
       - name: Export WTI Inventory Serving
         run: |
           python -m spine.jobs.energy.export_wti_serving_json
+

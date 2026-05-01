@@ -1,0 +1,32 @@
+name: WTI Inventory Refresh
+
+on:
+  schedule:
+    - cron: "20 17 * * 3"
+  workflow_dispatch:
+
+jobs:
+  refresh_wti_inventory:
+    runs-on: ubuntu-latest
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_REGION: ${{ secrets.R2_REGION }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install pandas pyarrow openpyxl boto3 xlrd
+
+      - run: python -m spine.jobs.energy.wti.build_wti_inventory
+
+      - run: python -m spine.jobs.energy.wti.build_wti_inventory_oc_overlay
+      
