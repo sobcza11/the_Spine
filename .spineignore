@@ -1,0 +1,28 @@
+﻿# system
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# temp / locks
+~$
+*.tmp
+*.log
+*.lock
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+
+# envs
+.venv/
+.venv-ml/
+.venv_ci/
+.venv_fed_ci/
+.venv_tmp/
+
+# git
+.git/
+
+# debug
+_debug_isovector_live/
