@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://isovector.io/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IsoVector (IV)</title>
+  <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;circle cx=%2250%22 cy=%2250%22 r=%2235%22 fill=%22white%22/&gt;&lt;/svg&gt;">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="view-what-is">
+  <div class="app-shell">
+    <header class="topbar">
+  <div class="brand-wrap">
+    <div class="brand">
+      <span class="iso">Iso</span><span class="vector">Vector</span> • IV
+    </div>
+    <div class="brand-subtitle">System State Diagnostics</div>
+  </div>
+
+  <!-- ✅ NEW TOP NAV -->
+<div class="top-nav">
+  <button class="top-nav-item active" type="button" data-view="what-is"><span class="dot"></span>ABOUT</button>
+  <button class="top-nav-item" type="button" data-view="macro"><span class="dot"></span>MACRO</button>
+  <button class="top-nav-item" type="button" data-view="equities"><span class="dot"></span>EQUITIES</button>
+  <button class="top-nav-item" type="button" data-view="wti"><span class="dot"></span>WTI</button>
+  <button class="top-nav-item" type="button" data-view="fx"><span class="dot"></span>FX</button>
+  <button class="top-nav-item" type="button" data-view="rates"><span class="dot"></span>RATES</button>
+  <button class="top-nav-item oc-tab" type="button" data-view="oc">OC</button>
+  <button class="top-nav-item" type="button" disabled="">EVENT MONITOR</button>
+  <button class="top-nav-item" type="button" disabled="">LOGS</button>
+</div>  
+  <div class="release-tag">Tier 1</div>
+</header>
+
+<main class="main-grid">
+  <aside class="sidebar-panel">
+    <div class="panel-kicker">IV SYSTEM LAYERS</div>
+
+    <nav class="sidebar-nav" aria-label="IsoVector About Navigation">
+
+      <button class="nav-item nav-parent active" data-view="what-is" data-parent="what-is" type="button">
+        <span>What IsoVector Is</span>
+        <span class="nav-meta">LIVE</span>
+      </button>
+
+      <div class="subnav open" data-subnav="what-is">
+        <button class="nav-item nav-child" data-view="what-is-vector" type="button">
+          <span>Vector</span>
+        </button>
+        <button class="nav-item nav-child" data-view="what-is-iso" type="button">
+          <span>Iso</span>
+        </button>
+      </div>
+
+      <button class="nav-item" data-view="what-is-not" type="button">
+        <span>What IsoVector Is NOT</span>
+      </button>
+
+      <button class="nav-item" data-view="core-model" type="button">
+        <span>Core Model</span>
+      </button>
+
+      <div class="subnav" data-subnav="system-architecture">
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>Equities</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>WTI</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>FX</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>RATES</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>OC</span>
+        </button>
+      </div>
+
+      <button class="nav-item nav-parent" data-view="metrics-defined" type="button">
+        <span>Metrics Defined</span>
+      </button>
+
+      <div class="subnav" data-subnav="metrics-defined">
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>Equities</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>WTI</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>FX</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>RATES</span>
+        </button>
+        <button class="nav-item nav-child locked" type="button" disabled="">
+          <span>OC</span>
+        </button>
+      </div>
+
+      <button class="nav-item" data-view="intended-interpretation" type="button">
+        <span>Intended Interpretation</span>
+      </button>
+
+      <button class="nav-item" data-view="cpmai-alignment" type="button">
+        <span>CPMAI Alignment</span>
+      </button>
+
+      <!-- ✅ SYSTEM ARCHITECT MOVED TO BOTTOM -->
+      <button class="nav-item" data-view="system-architect" type="button">
+        <span>Architect</span>
+      </button>
+
+    </nav>
+  </aside>
+
+
+  <div class="content-view active" id="view-what-is">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — System State Diagnostics</div>
+              <h1>
+                <span class="iso">Iso</span><span class="vector">Vector</span> is a System-State Diagnostic Model
+              </h1>
+            </div>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="lead">
+                IsoVector (ī-sō-vek-tor) measures the internal condition of the macro-financial system across multiple interacting dimensions.
+              </p>
+
+              <div class="formula-card">
+                <div class="formula-main">IV[t] = [P, F, L, D, M, X, C, S]</div>
+                <div class="formula-sub">
+                  Pressure • Fragility • Liquidity • Dispersion • Momentum • Cross-Asset Stress • Coherence • Systemicity
+                </div>
+              </div>
+
+              <div class="list-card">
+                <div class="section-label">Key Characteristics</div>
+                <ul class="clean-list">
+                  <li>Multi-dimensional state representation (not a single indicator)</li>
+                  <li>Measures buildup, strain, &amp; structural alignment</li>
+                  <li>Tracks condition evolution over time</li>
+                  <li>Compares current state to historical stress configurations</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="stack-graphic">
+                <div class="stack-layer l1"></div>
+                <div class="stack-layer l2"></div>
+                <div class="stack-layer l3"></div>
+                <div class="stack-layer l4"></div>
+                <div class="stack-layer l5"></div>
+                <div class="stack-layer l6"></div>
+                <div class="stack-layer l7"></div>
+                <div class="stack-layer l8"></div>
+                <div class="stack-axis"></div>
+              </div>
+              <div class="visual-caption">Representation Layer</div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+<div class="content-view" id="view-equities">
+  <div class="content-header">
+    <div>
+      <div class="content-kicker">IV SYSTEM LAYERS — Equities Diagnostics</div>
+      <h1>EQUITIES — Cross-Market System Diagnostics</h1>
+    </div>
+  </div>
+
+    <div class="fx-toolbar">
+  <div class="fx-control-group">
+    <label for="equities-region">Region</label>
+    <select id="equities-region">
+      <option selected="">USA</option>
+      <option>Europe (coming soon)</option>
+      <option>Asia (coming soon)</option>
+      <option>Global (coming soon)</option>
+    </select>
+  </div>
+
+  <div class="fx-control-group">
+    <label for="equities-etf-focus">Equity Focus</label>
+    <select id="equities-etf-focus">
+      <optgroup label="Market Indexes">
+        <option value="SPY" selected="">SPY</option>
+        <option value="QQQ">QQQ</option>
+        <option value="DIA">DIA</option>
+        <option value="ITOT">ITOT</option>
+        <option value="MDY">MDY</option>
+        <option value="IWM">IWM</option>
+      </optgroup>
+      <optgroup label="Industry / Sectors">
+        <option value="XLB">XLB</option>
+        <option value="XLC">XLC</option>
+        <option value="XLE">XLE</option>
+        <option value="XLF">XLF</option>
+        <option value="XLI">XLI</option>
+        <option value="XLK">XLK</option>
+        <option value="XLP">XLP</option>
+        <option value="XLRE">XLRE</option>
+        <option value="XLU">XLU</option>
+        <option value="XLV">XLV</option>
+        <option value="XLY">XLY</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div class="fx-control-group">
+    <label for="equities-horizon">View Horizon</label>
+    <select id="equities-horizon">
+      <option>5D</option>
+      <option>15D</option>
+      <option selected="">30D</option>
+      <option>45D</option>
+    </select>
+  </div>
+
+  <div class="fx-control-group">
+    <label for="equities-top-right-mode">Top-Right Metric</label>
+    <select id="equities-top-right-mode">
+      <option selected="">Market Breadth (coming soon)</option>
+      <option>Vol Structure (coming soon)</option>
+      <option>Liquidity / Flows (coming soon)</option>
+    </select>
+  </div>
+
+  <div class="fx-control-group">
+    <label for="equities-geoscen-mode">GeoScen</label>
+    <select id="equities-geoscen-mode">
+      <option selected="">Home</option>
+      <option>Systemic</option>
+    </select>
+  </div>
+</div>
+
+  <div class="equities-main-grid">
+    <div class="fx-panel equities-index-panel">
+      <div class="panel-head">
+        <div class="panel-head-copy">
+          <div class="panel-title">Equity Indexes</div>
+        </div>
+        <div class="panel-badge" id="equities-index-badge">USA • 30D</div>
+      </div>
+
+      <div class="chart-shell">
+        <div class="chart-header-row">
+          <div class="chart-stat">
+            <span class="chart-stat-label">Focus</span>
+            <span class="chart-stat-value" id="equities-index-focus">SPY / QQQ / DIA / ITOT / MDY / IWM</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">State</span>
+            <span class="chart-stat-value" id="equities-index-state">Skeleton</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">Mode</span>
+            <span class="chart-stat-value" id="equities-index-mode">Multi-Index</span>
+          </div>
+        </div>
+
+        <div id="equities-index-chart" class="fx-chart">
+          <div class="panel-placeholder">Equity index panel skeleton.</div>
+        </div>
+
+        <div class="panel-source panel-footnote-price" id="equities-index-source">
+          Source: Tiingo | the_Spine | As of <span id="equities-index-date">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fx-panel equities-industry-panel">
+      <div class="panel-head">
+        <div class="panel-head-copy">
+          <div class="panel-title">Industry Indexes</div>
+          <div class="panel-subtitle" id="equities-industry-subtitle">PMI Breadth Signal — SPY Aligned</div>
+        </div>
+        <div class="panel-badge" id="equities-industry-badge">PMI Breadth Signal</div>
+      </div>
+
+      <div class="chart-shell">
+        <div class="chart-header-row">
+          <div class="chart-stat">
+            <span class="chart-stat-label">Composite</span>
+            <span class="chart-stat-value" id="equities-industry-pmi">--</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">Bias</span>
+            <span class="chart-stat-value" id="equities-industry-bias">--</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">State</span>
+            <span class="chart-stat-value" id="equities-industry-state">Awaiting Data</span>
+          </div>
+        </div>
+
+        <div id="equities-industry-chart" class="fx-chart">
+          <div class="panel-placeholder">Loading PMI Composite Signal.</div>
+        </div>
+
+        <div class="panel-source panel-footnote-price" id="equities-industry-source">
+          Source: Monthly ISM PMI + ETF Proxy Mapping (OC) | Manually Curated | Showing <span id="equities-industry-date">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fx-panel equities-top-right-panel">
+      <div class="panel-head">
+        <div class="panel-head-copy">
+          <div class="panel-title">Market Breadth</div>
+          <div class="panel-subtitle" id="equities-top-right-subtitle">Default entry state</div>
+        </div>
+        <div class="panel-badge" id="equities-top-right-badge">Option A</div>
+      </div>
+
+      <div class="chart-shell">
+        <div class="chart-header-row">
+          <div class="chart-stat">
+            <span class="chart-stat-label">Primary</span>
+            <span class="chart-stat-value" id="equities-top-right-primary">% Above 200D</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">Secondary</span>
+            <span class="chart-stat-value" id="equities-top-right-secondary">Adv / Dec</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">State</span>
+            <span class="chart-stat-value" id="equities-top-right-state">Skeleton</span>
+          </div>
+        </div>
+
+        <div id="equities-top-right-chart" class="fx-chart">
+          <div class="panel-placeholder">Top-right option skeleton.</div>
+        </div>
+
+        <div class="panel-source panel-footnote-price" id="equities-top-right-source">
+          Source: Approved Market Data | the_Spine | As of <span id="equities-top-right-date">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fx-panel fx-geoscen equities-geoscen-panel">
+      <div class="panel-title" data-equities-geoscen-toolbar-label="">GeoScen | OC | Home, Countries</div>
+      <div class="panel-placeholder">
+        GeoScen Context (Home / Systemic)
+      </div>
+      <div class="panel-footnote">
+        Source: GeoScen (OC) | Context only | No impact on system-state scoring
+      </div>
+    </div>
+
+    <div class="fx-panel equities-sigma-panel">
+      <div class="panel-head">
+        <div class="panel-title">Sigma Rank</div>
+        <div class="panel-badge" id="equities-sigma-badge">Cross-Index Z Context</div>
+      </div>
+
+      <div class="chart-shell">
+        <div class="chart-header-row">
+          <div class="chart-stat">
+  <span class="chart-stat-label">Index</span>
+  <span class="chart-stat-value" id="equities-sigma-selected">SPY</span>
+</div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">Z-Score</span>
+            <span class="chart-stat-value" id="equities-sigma-z">--</span>
+          </div>
+          <div class="chart-stat">
+            <span class="chart-stat-label">Rank</span>
+            <span class="chart-stat-value" id="equities-sigma-rank">--</span>
+          </div>
+        </div>
+
+        <div id="equities-sigma-chart" class="fx-chart fx-chart-bars">
+          <div class="panel-placeholder">No sigma data available.</div>
+        </div>
+
+        <div class="panel-source panel-footnote-price" id="equities-sigma-source">
+          Source: Approved Market Data | Computed by the_Spine | As of <span id="equities-sigma-date">--</span>
+        </div>
+      </div>
+
+      <div class="panel-footnote">
+        Tier 1 ease rank: lower realized vol = higher ease.
+      </div>
+    </div>
+
+    <div class="fx-panel equities-reserved-panel">
+      <div class="panel-title">Reserved — Final Equity Metric</div>
+      <div class="panel-placeholder"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+        <div class="content-view" id="view-what-is-vector">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — System Representation</div>
+              <h1>Vector (Model) — System Representation</h1>
+            </div>
+          </div>
+
+          <div class="two-column">
+            <div class="stacked-cards">
+              <div class="info-card">
+                <p class="lead compact">
+                  IsoVector encodes macro-financial system state as a bounded, normalized vector
+                  across interacting dimensions.
+                </p>
+                <p class="body-copy">
+                  The system is not represented by a single signal. It is defined by the simultaneous
+                  interaction of multiple measured conditions within a unified state space.
+                </p>
+              </div>
+
+              <div class="formula-card large">
+                <div class="formula-main">IV[t] ∈ R<sup>8</sup></div>
+                <div class="formula-main secondary">IV[t] = [P, F, L, D, M, X, C, S]</div>
+                <div class="formula-sub">All components are normalized &amp; bounded to preserve comparability across time &amp; regimes.</div>
+              </div>
+
+              <div class="formula-card">
+                <div class="section-label">Dimensional Structure</div>
+                <div class="formula-main small">IV<sub>score</sub>[t] = ∑ w<sub>i</sub> · X<sub>i</sub>[t]</div>
+                <div class="formula-sub">X<sub>i</sub>[t] = normalized component states • w<sub>i</sub> = governed weights</div>
+              </div>
+            </div>
+
+            <div class="stacked-cards">
+              <div class="info-card">
+                <div class="section-label">Key Insight</div>
+                <ul class="clean-list tight">
+                  <li>The system is not described by one signal.</li>
+                  <li>It is defined by the interaction of all components simultaneously.</li>
+                  <li>Vector form preserves structural relationships that scalar summaries alone would obscure.</li>
+                </ul>
+              </div>
+
+              <div class="quote-card">
+                <div class="quote-text">
+                  System state is encoded, not narrated.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-view" id="view-what-is-iso">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — Interpretive Discipline</div>
+              <h1>Iso (Philosophy) — Interpretive Discipline</h1>
+            </div>
+          </div>
+
+          <div class="two-column">
+            <div class="stacked-cards">
+              <div class="quote-card japanese">
+                <div class="jp-line">急がば回れ (Isogaba maware)</div>
+                <div class="quote-sub">“When in haste, take the longer way around.”</div>
+              </div>
+
+              <div class="info-card">
+                <div class="section-label">Operational Discipline</div>
+                <ul class="clean-list tight">
+                  <li>Condition, not prediction</li>
+                  <li>Structure, not narrative</li>
+                  <li>Diagnosis, not reaction</li>
+                </ul>
+              </div>
+
+              <div class="info-card">
+                <div class="section-label">Interpretive Boundary</div>
+                <ul class="clean-list tight">
+                  <li>Does not answer what will happen</li>
+                  <li>Does not answer when an event will occur</li>
+                  <li>Does not assign outcome probabilities</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="stacked-cards">
+              <div class="comparison-card">
+                <div class="comparison-column positive">
+                  <div class="section-label">Defines</div>
+                  <ul class="icon-list">
+                    <li>Whether pressure is building</li>
+                    <li>Whether fragility is elevated</li>
+                    <li>Whether system structure resembles prior stress regimes</li>
+                  </ul>
+                </div>
+
+                <div class="comparison-column negative">
+                  <div class="section-label">Does Not Define</div>
+                  <ul class="icon-list negative-list">
+                    <li>Market will crash</li>
+                    <li>Event X will happen</li>
+                    <li>Probability = Y%</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="quote-card">
+                <div class="quote-text">
+                  Do not try to predict a forest fire.<br>
+                  Measure the dryness of the forest floor.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-view" id="view-what-is-not">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — Boundary Conditions</div>
+              <h1>
+                What <span class="iso">Iso</span><span class="vector">Vector</span> Is NOT
+              </h1>
+            </div>
+          </div>
+
+          <div class="two-column">
+            <div class="info-card full-height">
+              <ul class="clean-list">
+                <li>NOT a forecasting model</li>
+                <li>NOT a price prediction system</li>
+                <li>NOT sentiment-driven</li>
+                <li>NOT a single-indicator signal</li>
+                <li>NOT a substitute for governed measurement in the_Spine</li>
+                <li>NOT a write-back layer into OracleChambers</li>
+              </ul>
+            </div>
+
+            <div class="info-card full-height">
+              <div class="section-label">Boundary Rule</div>
+              <p class="lead compact">
+                <span class="iso">Iso</span><span class="vector">Vector</span> reads from governed measurement outputs &amp; renders state.
+                It does not originate raw measurement logic &amp; it does not authorize prediction.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-view" id="view-core-model">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — Core State Encoding</div>
+              <h1>Core Model</h1>
+            </div>
+          </div>
+
+          <div class="stacked-cards">
+            <div class="formula-card large">
+              <div class="formula-main">IV[t] = [P, F, L, D, M, X, C, S]</div>
+              <div class="formula-sub">State vector derived from governed component measurements</div>
+            </div>
+
+            <div class="metric-detail-grid">
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>P</strong>
+                  <span>Pressure</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures the aggregate buildup of macro-financial stress across the system.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: Rising rates, wider credit spreads, &amp; tighter liquidity conditions signal elevated pressure.
+                </p>
+              </div>
+
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>F</strong>
+                  <span>Fragility</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures how sensitive the system is to shocks once stress is already present.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: High leverage, weak balance sheets, &amp; unstable funding structures indicate elevated fragility.
+                </p>
+              </div>
+
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>L</strong>
+                  <span>Liquidity</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures the ease or difficulty of funding, flow, &amp; market functioning across the system.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: Wider funding spreads, lower market depth, &amp; tighter financial conditions indicate weaker liquidity.
+                </p>
+              </div>
+
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>D</strong>
+                  <span>Dispersion</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures the degree of divergence in behavior across assets, sectors, or macro signals.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: Defensive assets rising while cyclicals fall &amp; macro series move out of sync signals higher dispersion.
+                </p>
+              </div>
+
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>M</strong>
+                  <span>Momentum</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures the persistence of directional movement in system conditions over time.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: A sustained deterioration in risk conditions across multiple periods indicates negative momentum.
+                </p>
+              </div>
+
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>X</strong>
+                  <span>Cross-Asset Stress</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures how stress is transmitting across equities, rates, commodities, credit, &amp; FX.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: Simultaneous pressure in bonds, equities, credit, &amp; commodities signals elevated cross-asset stress.
+                </p>
+              </div>
+
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>C</strong>
+                  <span>Coherence</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures how closely the current system state aligns with known macro regime structures.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: When inflation, growth, liquidity, &amp; market behavior move in a historically consistent pattern, coherence is higher.
+                </p>
+              </div>
+
+              <div class="metric-detail-card">
+                <div class="metric-detail-head">
+                  <strong>S</strong>
+                  <span>Systemicity</span>
+                </div>
+                <p class="metric-detail-body">
+                  Measures the degree to which localized stress has the potential to propagate into system-wide instability.
+                </p>
+                <p class="metric-detail-example">
+                  Ex: Stress concentrated in one market becomes more systemic when it spreads through funding, credit, &amp; cross-asset channels.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+<div class="content-view" id="view-metrics-defined">
+  <div class="content-header">
+    <div>
+      <div class="content-kicker">IV SYSTEM LAYERS — Measurement Definitions</div>
+      <h1>Metrics Defined</h1>
+    </div>
+  </div>
+
+  <div class="stacked-cards">
+    <div class="formula-card large">
+      <div class="formula-main">Tier 1 Metrics</div>
+      <div class="formula-sub">WTI • FX • EQUITIES • RATES • System Notes</div>
+    </div>
+
+    <div class="metric-detail-grid">
+      <div class="metric-detail-card">
+        <div class="metric-detail-head">
+          <strong>WTI</strong>
+          <span>Energy</span>
+        </div>
+        <p class="metric-detail-body">
+          U.S.-reported WTI crude price with global macro relevance across inflation, production costs, transportation, &amp; risk sentiment.
+        </p>
+        <p class="metric-detail-example">Metrics: Price • EMA (20) • SMA (150) • Trend</p>
+      </div>
+
+      <div class="metric-detail-card">
+        <div class="metric-detail-head">
+          <strong>FX</strong>
+          <span>Foreign Exchange</span>
+        </div>
+        <p class="metric-detail-body">
+          Measures currency relationships, pair direction, cross rates, &amp; comparative spread behavior across macro-linked currency pairs.
+        </p>
+        <p class="metric-detail-example">
+          Comparative Spread identifies structural imbalances rather than isolated price movement.
+        </p>
+      </div>
+
+      <div class="metric-detail-card">
+        <div class="metric-detail-head">
+          <strong>EQ</strong>
+          <span>Equities</span>
+        </div>
+        <p class="metric-detail-body">
+          Tracks PMI, New Orders, monthly sector ranking, composite activity, &amp; industry aggregation.
+        </p>
+        <p class="metric-detail-example">
+          Idx shows current level; 3M Δ &amp; 6M Δ show short- &amp; medium-term momentum.
+        </p>
+      </div>
+
+      <div class="metric-detail-card">
+        <div class="metric-detail-head">
+          <strong>RT</strong>
+          <span>Rates</span>
+        </div>
+        <p class="metric-detail-body">
+          Measures sovereign curve structure through 2Y / 10Y yields, curve spread, sigma rank, &amp; policy pressure where usable data exists.
+        </p>
+        <p class="metric-detail-example">
+          China is handled as a hybrid proxy structure, not a standard 2Y / 10Y curve country.
+        </p>
+      </div>
+
+      <div class="metric-detail-card">
+        <div class="metric-detail-head">
+          <strong>Δ</strong>
+          <span>Data Timing</span>
+        </div>
+        <p class="metric-detail-body">
+          Metrics reflect latest available data based on source-specific release schedules. Some inputs are published with inherent delays.
+        </p>
+        <p class="metric-detail-example">
+          Reported values may reference earlier periods rather than real-time conditions.
+        </p>
+      </div>
+
+      <div class="metric-detail-card">
+        <div class="metric-detail-head">
+          <strong>OC</strong>
+          <span>OracleChambers Overlay</span>
+        </div>
+        <p class="metric-detail-body">
+          A separate interpretive layer that contextualizes outputs using policy signals, narrative analysis, &amp; cross-domain synthesis.
+        </p>
+        <p class="metric-detail-example">
+          The overlay does not alter underlying measurements.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</div>        
+        <div class="content-view" id="view-intended-interpretation">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — Intended Interpretation</div>
+              <h1>Intended Interpretation</h1>
+            </div>
+          </div>
+
+          <div class="two-column">
+            <div class="info-card full-height">
+              <ul class="clean-list">
+                  <li>Interpret as condition, not direction</li>
+                  <li>Read as structural state, not event timing</li>
+                  <li>Use as a representation layer between measurement &amp; interpretation</li>
+                  <li>Assess similarity to historical stress configurations without implying certainty</li>
+              </ul>
+            </div>
+
+            <div class="quote-card full-height">
+              <div class="quote-text">
+                Measure first.<br>
+                Interpret second.<br>
+                Never mix the two.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+<div class="content-view" id="view-cpmai-alignment">
+  <div class="content-header">
+    <div>
+      <div class="content-kicker">IV SYSTEM LAYERS — Governance Alignment</div>
+      <h1>CPMAI Alignment</h1>
+    </div>
+  </div>
+
+  <div class="stacked-cards">
+    <div class="info-card">
+      <p class="lead compact">
+        FT-GMI &amp; its system family are aligned with PMI CPMAI standards for responsible Artificial Intelligence (AI) &amp; Machine Learning (ML) governance.
+      </p>
+      <p class="body-copy">
+        To address layman concerns regarding black-box AI &amp; ML operations (AI/MLOps), our system Guardrails are stated clearly below.
+      </p>
+    </div>
+
+    <div class="cpmai-grid cpmai-grid-expanded">
+      <div class="cpmai-card">
+        <strong>Controlled</strong>
+        <span>AI/MLOps, NLP, parsing, &amp; interpretive tooling are contained within <i>the_OracleChambers</i>.</span>
+      </div>
+
+      <div class="cpmai-card">
+        <strong>Provenance</strong>
+        <span><i>the_Spine</i>-generated measurements maintain full source-to-output lineage.</span>
+      </div>
+
+      <div class="cpmai-card">
+        <strong>Measurable</strong>
+        <span><i>the_Spine</i> produces deterministic, quantitative measurements.</span>
+      </div>
+
+      <div class="cpmai-card">
+        <strong>Auditable</strong>
+        <span><i>the_Spine</i> pipelines are deterministic &amp; reproducible.</span>
+      </div>
+
+      <div class="cpmai-card">
+        <strong>Isolated</strong>
+        <span><i>the_Spine</i> handles measurement, <span class="iso">Iso</span><span class="vector">Vector</span> handles representation, &amp; <i>the_OracleChambers</i> handles interpretation.</span>
+      </div>
+
+      <div class="cpmai-card">
+        <strong>Read-Only</strong>
+        <span><i>the_OracleChambers</i> can ingest &amp; interpret <i>the_Spine</i> outputs, but cannot write back into the measurement layer.</span>
+      </div>
+    </div>
+  </div>
+</div> <!-- END view-cpmai-alignment -->
+
+<div class="content-view" id="view-system-architect">
+  <div class="content-header">
+    <div>
+      <div class="content-kicker">IV SYSTEM LAYERS — Authorship</div>
+      <h1>System Architect</h1>
+    </div>
+  </div>
+
+  <section class="about-container">
+    <div class="about-card">
+
+      <div class="about-left">
+        <img 
+          src="https://github.com/sobcza11/the_Spine/blob/main/_support/assets/Rand_Sobczak_v2.png?raw=true"
+          class="about-photo"
+        />
+      </div>
+
+      <div class="about-right">
+        <h2 class="about-name">
+          <span class="name-part">Rand Sobczak Jr.</span>
+          <span class="divider">|</span>
+          <span class="role-part">
+            <span class="iso-part">Iso</span><span class="vector-part">Vector</span> Architect & Creator
+          </span>
+        </h2>
+
+        <p class="about-summary">
+          STEM-trained Data Scientist specializing in econometric systems, AI evaluation, &amp; deterministic analytics • guided by PMI AI governance principles &amp; Eagle Scout leadership • architect of 
+          <span class="iso-part">Iso</span><span class="vector-part">Vector</span>, 
+          a system-state diagnostics model for global macro risk across cross-asset markets • builder of FT-GMI, a deterministic macro constraint layer enforcing bounded system evaluation &amp; preventing narrative drift.
+        </p>
+
+        <div class="about-meta">
+          <div><span class="meta-label">Global Residency</span> <span class="meta-detail">| U.S. • China • Singapore • Hong Kong</span></div>
+          <div><span class="meta-label">19-Country Footprint</span> <span class="meta-detail">| Cross-Market System Execution</span></div>
+          <div><span class="meta-label">Bi-lingual</span> <span class="meta-detail">| English • Mandarin</span></div>
+        </div>
+
+        <div class="about-education">
+          <div><span class="meta-label">M.S. Data Science</span> <span class="meta-detail">| University of Pittsburgh, Exp. ’26</span></div>
+          <div><span class="meta-label">B.A. Economics</span> <span class="meta-detail">| Michigan State University</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<div class="content-view" id="view-macro">
+  <div class="content-header">
+    <h1>MACRO — System Diagnostics</h1>
+  </div>
+
+  <div class="macro-main-grid">
+
+    <div class="fx-panel macro-drivers-panel">Drivers</div>
+    <div class="fx-panel macro-transmission-panel">Transmission</div>
+    <div class="fx-panel macro-lag-panel">Lag Structure</div>
+
+    <div class="fx-panel macro-exposure-panel">Exposure</div>
+    <div class="fx-panel macro-impact-panel">Impact</div>
+
+<div class="fx-panel macro-riskstack-panel">
+
+  <div class="iv-header">
+  <span class="iv-title-main">
+    <span class="iso-part">Iso</span><span class="vector-part">Vector</span>
+  </span>
+  <div class="brand-subtitle"><span class="iv-title-sub">System State Diagnostics</span></div>
+</div>
+
+  <!-- GROUP 1 -->
+  <div class="iv-contract-group iv-group-pressure">
+    <div class="iv-group-title">System Pressure Layer</div>
+    <div class="macro-metric-stack">
+      <div class="macro-metric-tile"><span>Pressure</span><strong>--</strong></div>
+      <div class="macro-metric-tile"><span>Liquidity</span><strong>--</strong></div>
+      <div class="macro-metric-tile"><span>Momentum</span><strong>--</strong></div>
+    </div>
+  </div>
+
+  <!-- GROUP 2 -->
+  <div class="iv-contract-group iv-group-fragility">
+    <div class="iv-group-title">Structural Fragility Layer</div>
+    <div class="macro-metric-stack">
+      <div class="macro-metric-tile"><span>Fragility</span><strong>--</strong></div>
+      <div class="macro-metric-tile"><span>Dispersion</span><strong>--</strong></div>
+    </div>
+  </div>
+
+  <!-- GROUP 3 -->
+  <div class="iv-contract-group iv-group-transmission">
+    <div class="iv-group-title">Cross-Asset Transmission Layer</div>
+    <div class="macro-metric-stack">
+      <div class="macro-metric-tile"><span>Cross-Asset Stress</span><strong>--</strong></div>
+      <div class="macro-metric-tile"><span>Coherence</span><strong>--</strong></div>
+    </div>
+  </div>
+
+  <!-- GROUP 4 -->
+  <div class="iv-contract-group iv-group-outcome">
+    <div class="iv-group-title">System Outcome Layer</div>
+    <div class="macro-metric-stack">
+      <div class="macro-metric-tile"><span>Systemicity</span><strong>--</strong></div>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</div>
+
+<div class="content-view" id="view-fx">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — FX Diagnostics</div>
+              <h1>FX — Cross-Currency System Diagnostics</h1>
+            </div>
+          </div>
+
+          <div class="fx-toolbar">
+
+            <div class="fx-control-group">
+              <label for="fx-pair">Pair</label>
+              <select id="fx-pair"><option value="AUD/USD">AUD/USD</option><option value="EUR/USD">EUR/USD</option><option value="GBP/USD">GBP/USD</option><option value="USD/CAD">USD/CAD</option><option value="USD/CHF">USD/CHF</option><option value="USD/JPY">USD/JPY</option></select>
+            </div>
+
+            <div class="fx-control-group">
+              <label for="fx-horizon">View Horizon</label>
+              <select id="fx-horizon">
+                <option>5D</option>
+                <option>15D</option>
+                <option selected="">30D</option>
+                <option>45D</option>
+              </select>
+            </div>
+
+            <div class="fx-control-group fx-toolbar-spreads">
+              <label for="fx-spreads">Spreads</label>
+              <select id="fx-spreads">
+                <option selected="">Comparative Spread</option>
+                <option>Bond Spread Lens</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="fx-main-grid">
+            <div class="fx-panel fx-price-panel">
+              <div class="panel-head">
+                <div class="panel-head-copy">
+                  <div class="panel-title">FX Price</div>
+                </div>
+                <div class="panel-badge" id="fx-price-badge">AUD/USD • 30D</div>
+              </div>
+
+              <div class="chart-shell">
+                <div class="chart-header-row">
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Last</span>
+                    <span class="chart-stat-value" id="fx-price-last">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Change</span>
+                    <span class="chart-stat-value" id="fx-price-change">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Range</span>
+                    <span class="chart-stat-value" id="fx-price-range">--</span>
+                  </div>
+                </div>
+
+                <div id="fx-price-chart" class="fx-chart"></div>
+
+                <div class="panel-source panel-footnote-price" id="fx-price-source">
+                  Source: Tiingo | the_Spine | As of <span id="fx-price-date"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="fx-panel fx-sigma-panel">
+              <div class="panel-head">
+                <div class="panel-head-copy">
+                  <div class="panel-title">Sigma Rank</div>
+                </div>
+                <div class="panel-badge" id="fx-sigma-badge">Cross-Pair Z Context</div>
+              </div>
+
+              <div class="chart-shell">
+                <div class="chart-header-row">
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Index</span>
+                    <span class="chart-stat-value" id="fx-sigma-selected">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Z-Score</span>
+                    <span class="chart-stat-value" id="fx-sigma-z">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Rank</span>
+                    <span class="chart-stat-value" id="fx-sigma-rank">--</span>
+                  </div>
+                </div>
+
+                <div id="fx-sigma-chart" class="fx-chart fx-chart-bars"></div>
+
+                <div class="panel-source panel-footnote-price" id="fx-sigma-source">
+                  Source: Tiingo | Computed by the_Spine | As of <span id="fx-sigma-date"></span>
+                </div>
+              </div>
+
+              <div class="panel-footnote">
+                Tier 1 ease rank: lower realized vol = higher ease.
+              </div>
+            </div>
+
+            <div class="fx-panel fx-spread-panel">
+              <div class="panel-head">
+                <div class="panel-head-copy">
+                  <div class="panel-title">Spreads</div>
+                  <div class="panel-subtitle" id="fx-spread-subtitle">10Y sovereign differential</div>
+                </div>
+                <div class="panel-badge" id="fx-spread-badge">Comparative Spread</div>
+              </div>
+
+              <div class="chart-shell">
+                <div class="chart-header-row">
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Mode</span>
+                    <span class="chart-stat-value" id="fx-spread-mode">Comparative</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Last</span>
+                    <span class="chart-stat-value" id="fx-spread-last">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Avg</span>
+                    <span class="chart-stat-value" id="fx-spread-avg">--</span>
+                  </div>
+                </div>
+
+                <div id="fx-spread-chart" class="fx-chart"></div>
+
+                <div class="panel-source panel-footnote-spread" id="fx-spread-source">
+                  Source: FRED | the_Spine | As of <span id="fx-spread-date"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="fx-panel fx-geoscen fx-geoscen-panel">
+              <div class="panel-title" data-geoscen-toolbar-label="">GeoScen | OC | Home, Countries</div>
+              <div class="panel-placeholder">
+                GeoScen Context (Home / Systemic)
+              </div>
+              <div class="panel-footnote">
+                Source: GeoScen (OC) | Context only | No impact on system-state scoring
+              </div>
+            </div>
+
+            <div class="fx-panel fx-reserved-panel">
+              <div class="panel-title">Reserved — Final FX Metric</div>
+              <div class="panel-placeholder"></div>
+            </div>
+          </div>
+        </div>
+
+<div class="content-view" id="view-rates">
+  <div class="content-header">
+    <div>
+      <div class="content-kicker">IV SYSTEM LAYERS — Rates Diagnostics</div>
+      <h1>RATES — Yield Curve &amp; Policy Diagnostics</h1>
+      <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">
+        B.R.E.A.M. | <i>Bonds Rule Everything Around Me</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="fx-toolbar">
+
+    <div class="fx-control-group">
+      <label for="rates-country">Country</label>
+      <select id="rates-country">
+        <option value="US" selected="">United States</option>
+        <option value="AU">Australia</option>
+        <option value="CA">Canada</option>
+        <option value="DE">Germany</option>
+        <option value="JP">Japan</option>
+        <option value="UK">United Kingdom</option>
+        <option value="CH">Switzerland</option>
+        <option value="IT">Italy</option>
+        <option value="CN">China</option>
+      </select>
+    </div>
+
+    <div class="fx-control-group">
+      <label for="rates-geoscen-mode">GeoScen</label>
+      <select id="rates-geoscen-mode">
+        <option value="home" selected="">Home</option>
+        <option value="systemic">Systemic</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="rates-main-grid">
+
+    <div class="fx-panel rates-curve-panel">
+      <div class="panel-head">
+        <div class="panel-title">Yield Curve</div>
+      </div>
+      <div class="chart-shell">
+        <div id="rates-curve-chart" class="fx-chart">
+          <div class="panel-placeholder">Loading curve...</div>
+        </div>
+      <div class="panel-source panel-footnote-price" id="rates-curve-source">
+        Source: FRED | the_Spine | As of <span id="rates-curve-date">--</span>
+      </div>        
+      </div>
+    </div>
+
+    <div class="fx-panel rates-spread-panel">
+      <div class="panel-head">
+        <div class="panel-title">Curve Spread</div>
+      </div>
+      <div class="chart-shell">
+        <div class="chart-header-row">
+          <div class="chart-stat">
+            <span class="chart-stat-label">Last</span>
+            <span class="chart-stat-value" id="rates-spread-state">--</span>
+          </div>
+        </div>
+        <div id="rates-spread-chart" class="fx-chart">
+          <div class="panel-placeholder">Loading spread...</div>
+        </div>
+        <div class="panel-source panel-footnote-price" id="rates-spread-source">
+          Source: FRED | the_Spine | As of <span id="rates-spread-date">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fx-panel rates-policy-panel">
+      <div class="panel-head">
+        <div class="panel-title">Policy Pressure (T1)</div>
+      </div>
+      <div class="chart-shell">
+        <div class="chart-header-row">
+          <div class="chart-stat">
+            <span class="chart-stat-label">State</span>
+            <span class="chart-stat-value" id="rates-policy-state">--</span>
+          </div>
+        </div>
+        <div id="rates-policy-chart" class="fx-chart">
+          <div class="panel-placeholder">Loading policy...</div>
+        </div>
+        <div class="panel-source panel-footnote-price" id="rates-policy-source">
+          Source: FRED | the_Spine | As of <span id="rates-policy-date">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fx-panel fx-geoscen rates-geoscen-panel">
+      <div class="panel-title" data-rates-geoscen-toolbar-label="">GeoScen | OC | Home, Countries</div>
+      <div class="panel-placeholder">GeoScen Context (Home / Systemic)</div>
+      <div class="panel-footnote">
+        Source: GeoScen (OC) | Context only | No impact on system-state scoring
+      </div>
+    </div>
+
+    <div class="fx-panel rates-sigma-panel">
+      <div class="panel-head">
+        <div class="panel-title">Sigma Rank</div>
+      </div>
+      <div id="rates-sigma-chart" class="fx-chart">
+        <div class="panel-placeholder">Sigma coming</div>
+      </div>
+      <div class="panel-source panel-footnote-price" id="rates-sigma-source">
+        Source: FRED | Computed by the_Spine | As of <span id="rates-sigma-date">--</span>
+      </div>
+    </div>
+
+    <div class="fx-panel rates-reserved-right-panel">
+      <div class="panel-title">Reserved — Final Rates Composite</div>
+      <div class="panel-placeholder">Composite metric under development</div>
+    </div>
+
+  </div>
+</div>
+
+
+        <div class="content-view" id="view-wti">
+          <div class="content-header">
+            <div>
+              <div class="content-kicker">IV SYSTEM LAYERS — WTI Diagnostics</div>
+              <h1>WTI — Energy System Diagnostics</h1>
+            </div>
+          </div>
+
+            <div class="fx-toolbar">
+  <div class="fx-control-group">
+    <label for="wti-horizon">View Horizon</label>
+    <select id="wti-horizon">
+      <option>5D</option>
+      <option>15D</option>
+      <option selected="">30D</option>
+      <option>45D</option>
+    </select>
+  </div>
+
+  <div class="fx-control-group">
+    <label for="wti-geoscen-mode">GeoScen</label>
+    <select id="wti-geoscen-mode">
+      <option selected="">Home</option>
+      <option>Systemic</option>
+    </select>
+  </div>
+
+  <div class="fx-control-group">
+    <label for="wti-oc-overlay">OC Overlay</label>
+    <select id="wti-oc-overlay">
+      <option selected="" value="off">Off</option>
+      <option value="on">On</option>
+    </select>
+  </div>
+</div>
+
+          <div class="wti-main-grid">
+            <div class="fx-panel wti-inventory-panel">
+              <div class="panel-head">
+                <div class="panel-head-copy">
+                  <div class="panel-title">Inventory Index</div>
+                </div>
+                <div class="panel-badge" id="wti-inventory-badge">30D</div>
+              </div>
+
+              <div class="chart-shell">
+                <div class="chart-header-row">
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Last</span>
+                    <span class="chart-stat-value" id="wti-inventory-last">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Change</span>
+                    <span class="chart-stat-value" id="wti-inventory-change">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Range</span>
+                    <span class="chart-stat-value" id="wti-inventory-range">--</span>
+                  </div>
+                </div>
+
+                <div id="wti-inventory-chart" class="fx-chart">
+                  <div class="panel-placeholder">No inventory data available.</div>
+                </div>
+
+                <div class="panel-source panel-footnote-price" id="wti-inventory-source" data-source-prefix="Source: EIA | the_Spine | As of ">
+                  <span id="wti-inventory-source-prefix">Source: EIA | the_Spine | As of </span><span id="wti-inventory-date">--</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="fx-panel wti-price-panel">
+              <div class="panel-head">
+                <div class="panel-head-copy">
+                  <div class="panel-title">WTI Price</div>
+                </div>
+                <div class="panel-badge" id="wti-price-badge">WTI • 30D</div>
+              </div>
+
+              <div class="chart-shell">
+                <div class="chart-header-row">
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Last</span>
+                    <span class="chart-stat-value" id="wti-price-last">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Change</span>
+                    <span class="chart-stat-value" id="wti-price-change">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Range</span>
+                    <span class="chart-stat-value" id="wti-price-range">--</span>
+                  </div>
+                </div>
+
+                <div id="wti-price-chart" class="fx-chart">
+                  <div class="panel-placeholder">No active WTI price data.</div>
+                </div>
+
+                <div class="panel-source panel-footnote-price" id="wti-price-source">
+                  Source: EIA | the_Spine | As of <span id="wti-price-date">--</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="fx-panel wti-macro-panel">
+              <div class="panel-head">
+                <div class="panel-head-copy">
+                  <div class="panel-title">Inflation Pressure</div>
+                </div>
+                <div class="panel-badge" id="wti-macro-badge">CPI / Macro</div>
+              </div>
+
+              <div class="chart-shell">
+                <div class="chart-header-row">
+                  <div class="chart-stat">
+  <span class="chart-stat-label">Pressure Z</span>
+  <span class="chart-stat-value" id="wti-macro-cpi">--</span>
+</div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Trend</span>
+                    <span class="chart-stat-value" id="wti-macro-trend">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">State</span>
+                    <span class="chart-stat-value" id="wti-macro-state">--</span>
+                  </div>
+                </div>
+
+                <div id="wti-macro-chart" class="fx-chart">
+                  <div class="panel-placeholder">No inflation data available.</div>
+                </div>
+
+                <div class="panel-source panel-footnote-price" id="wti-macro-source">
+                  Source: FRED | the_Spine | As of <span id="wti-macro-date">--</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="fx-panel fx-geoscen wti-geoscen-panel">
+              <div class="panel-title" data-wti-geoscen-toolbar-label="">GeoScen | OC | Home, Countries</div>
+              <div class="panel-placeholder">
+                GeoScen Context (Home / Systemic)
+              </div>
+              <div class="panel-footnote">
+                Source: GeoScen (OC) | Context only | No impact on system-state scoring
+              </div>
+            </div>
+
+            <div class="fx-panel wti-sigma-panel">
+              <div class="panel-head">
+                <div class="panel-title">Sigma Rank</div>
+                <div class="panel-badge" id="wti-sigma-badge">Cross-Series Z Context</div>
+              </div>
+
+              <div class="chart-shell">
+                <div class="chart-header-row">
+                  <div class="chart-stat">
+  <span class="chart-stat-label">Index</span>
+  <span class="chart-stat-value" id="wti-sigma-selected">WTI</span>
+</div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Z-Score</span>
+                    <span class="chart-stat-value" id="wti-sigma-z">--</span>
+                  </div>
+                  <div class="chart-stat">
+                    <span class="chart-stat-label">Rank</span>
+                    <span class="chart-stat-value" id="wti-sigma-rank">--</span>
+                  </div>
+                </div>
+
+                <div id="wti-sigma-chart" class="fx-chart fx-chart-bars">
+                  <div class="panel-placeholder">No sigma data available.</div>
+                </div>
+
+                <div class="panel-source panel-footnote-price" id="wti-sigma-source">
+                  Source: EIA | Computed by the_Spine | As of <span id="wti-sigma-date">--</span>
+                </div>
+              </div>
+
+              <div class="panel-footnote">
+                Tier 1 ease rank: lower realized vol = higher ease.
+              </div>
+            </div>
+
+            <div class="fx-panel fx-reserved-panel">
+              <div class="panel-title">Reserved — Final Energy Metric</div>
+              <div class="panel-placeholder"></div>
+            </div>
+          </div>
+        </div>
+
+<div class="content-view" id="view-oc">
+  <div class="content-header">
+    <div>
+      <div class="content-kicker">IV SYSTEM LAYERS — OracleChambers</div>
+      <h1>the<i> OracleChambers</i> • OC</h1>
+    </div>
+  </div>
+
+  <div class="oc-view">
+    <div class="oc-content">
+      <img
+        src="https://github.com/sobcza11/the_Spine/blob/main/_support/assets/main_photo2.png?raw=true"
+        class="oc-image"
+        alt=""
+      />
+
+      <div class="oc-text">
+        the Oracle is Preparing •|• LABS
+      </div>
+    </div>
+  </div>
+</div>
+
+        <footer class="content-footer">
+          <span class="footer-label">Disclaimer</span>
+          <span>System outputs represent measured conditions, not predictions.</span>
+        </footer>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+
+
+</body></html>
