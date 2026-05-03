@@ -1009,7 +1009,7 @@ async function loadActiveData() {
         if (document.body.classList.contains("view-fx")) renderFX();
         if (document.body.classList.contains("view-equities")) renderEquities();
         if (document.body.classList.contains("view-rates")) renderRates();
-        if (document.body.classList.contains("view-wti")) renderWTI();
+        if (document.body.classList.contains("view-wti")) runWTIRenderSafe();
 
       } catch (err) {
         console.error("Refresh failed:", err);
@@ -1536,6 +1536,20 @@ if (!dedupedSigma.length) {
 }
 }
 
+function runWTIRenderSafe() {
+  try {
+    bindWTIControls();
+
+    Promise.resolve(renderWTI()).catch((err) => {
+      console.error("WTI RENDER FAILURE:", err);
+      renderWTIFallback();
+    });
+  } catch (err) {
+    console.error("WTI HARD FAILURE:", err);
+    renderWTIFallback();
+  }
+}
+
 function showView(viewName) {
   contentViews.forEach((view) => view.classList.remove("active"));
   viewButtons.forEach((button) => button.classList.remove("active"));
@@ -1562,14 +1576,23 @@ function showView(viewName) {
     renderFXDeferred();
   }
 
-  if (viewName === "wti") {
+if (viewName === "wti") {
+  try {
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        void renderWTI();
+if (viewName === "wti") {
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      runWTIRenderSafe();
+    });
+  });
+}
       });
     });
+  } catch (err) {
+    console.error("WTI HARD FAILURE:", err);
   }
-
+}
   if (viewName === "equities") {
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
@@ -3342,7 +3365,7 @@ if (ocOverlayOn) {
         if (document.body.classList.contains("view-wti")) {
           window.requestAnimationFrame(() => {
             window.requestAnimationFrame(() => {
-              void renderWTI();
+              runWTIRenderSafe();
             });
           });
         }
@@ -3394,7 +3417,7 @@ Object.values(ratesControls).forEach((el) => {
 
     if (target.id === "wti-inventory-view" || target.id === "wti-inventory-regime") {
       if (document.body.classList.contains("view-wti")) {
-        void renderWTI();
+        runWTIRenderSafe();
       }
     }
   });
@@ -3407,7 +3430,7 @@ window.addEventListener("resize", () => {
   if (document.body.classList.contains("view-wti")) {
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        void renderWTI();
+        runWTIRenderSafe();
       });
     });
   }
