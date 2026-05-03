@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("APP BOOT OK — WTI SAFE BUILD");
+
+  window.__WTI_SAFE_BUILD__ = true;
+  
   const viewButtons = document.querySelectorAll("[data-view]");
   const contentViews = document.querySelectorAll(".content-view");
   const navParents = document.querySelectorAll(".nav-parent");
