@@ -1786,6 +1786,47 @@ body.about-sidebar-hidden .main-grid {
   font-weight: 700;
 }
 
+.iv-contract-group {
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid rgba(126, 153, 196, 0.12);
+  border-radius: 12px;
+  background: rgba(8, 17, 28, 0.34);
+}
+
+.iv-group-title {
+  margin-bottom: 8px;
+  color: #9fb3c8;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.iv-contract-group .macro-metric-stack {
+  gap: 8px;
+}
+
+.iv-contract-group .macro-metric-tile {
+  min-height: 42px;
+  padding: 8px 11px;
+}
+
+.iv-group-pressure {
+  border-left: 3px solid rgba(142, 201, 163, 0.7);
+}
+
+.iv-group-fragility {
+  border-left: 3px solid rgba(126, 155, 196, 0.7);
+}
+
+.iv-group-transmission {
+  border-left: 3px solid rgba(213, 179, 124, 0.75);
+}
+
+.iv-group-outcome {
+  border-left: 3px solid rgba(160, 170, 185, 0.75);
+}
+
 @media (max-width: 1200px) {
   .macro-main-grid {
     grid-template-columns: 1fr 1fr;
@@ -2675,3 +2716,338 @@ body.view-oc .main-grid {
   font-size: 12px;
 }
 
+.content-view {
+  display: none;
+}
+
+.content-view.active {
+  display: block;
+}
+
+.oc-placeholder-card {
+  min-height: 320px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(15, 23, 42, 0.72);
+  padding: 24px;
+}
+
+#view-oc .content-header {
+  margin-bottom: 18px;
+}
+
+#view-oc .oc-view {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#view-oc .oc-content {
+  width: 100%;
+  max-width: 840px;
+  text-align: center;
+}
+
+#view-oc .oc-image {
+  display: block;
+  width: 100%;
+  max-width: 840px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 14px;
+  opacity: 0.94;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+#view-oc .oc-text {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  color: rgba(200, 210, 230, 0.78);
+  text-transform: uppercase;
+}
+
+
+.macro-riskstack-panel .panel-title {
+  margin-bottom: 12px;
+}
+
+#macro-isovector-contract {
+  gap: 8px;
+}
+
+#macro-isovector-contract .macro-metric-tile {
+  min-height: 44px;
+  padding: 9px 12px;
+}
+
+/* ===== HEADER ===== */
+
+.iv-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(126, 153, 196, 0.14);
+}
+
+.iv-title-main {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #f2f5fa;
+}
+
+.iv-title-main .iso-part {
+  color: #ffffff;
+}
+
+.iv-title-main .vector-part {
+  color: #9aa6b2; /* steel grey */
+}
+
+.iv-title-sub {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #d5b37c;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ===== GROUP CONTAINER ===== */
+
+.iv-contract-group {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(126, 153, 196, 0.12);
+
+  background: linear-gradient(
+    180deg,
+    rgba(10, 18, 30, 0.65),
+    rgba(8, 14, 24, 0.85)
+  );
+
+  backdrop-filter: blur(6px);
+}
+
+/* ===== GROUP TITLE ===== */
+
+.iv-group-title {
+  margin-bottom: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9fb3c8;
+}
+
+/* ===== METRIC STACK ===== */
+
+.iv-contract-group .macro-metric-stack {
+  gap: 8px;
+}
+
+.iv-contract-group .macro-metric-tile {
+  min-height: 42px;
+  padding: 8px 11px;
+}
+
+/* ===== LEFT ACCENT BARS ===== */
+
+.iv-group-pressure {
+  border-left: 3px solid rgba(142, 201, 163, 0.55);
+}
+
+.iv-group-fragility {
+  border-left: 3px solid rgba(126, 155, 196, 0.55);
+}
+
+.iv-group-transmission {
+  border-left: 3px solid rgba(213, 179, 124, 0.6);
+}
+
+.iv-group-outcome {
+  border-left: 3px solid rgba(160, 170, 185, 0.65);
+}
+
+.iso-part {
+  color: #ffffff;
+}
+
+
+.fx-geoscen .panel-placeholder {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid rgba(160, 170, 185, 0.65);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.about-card {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background: #0f1115;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  gap: 18px;              /* 🔥 tighter */
+}
+
+.about-left {
+  flex: 0 0 175px;        /* was 140px → +25% */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-photo {
+  width: 160px;           /* was 130px → +23% */
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+
+.about-right {
+  flex: 1;
+  color: #e6e8eb;
+}
+
+/* Match font of section header (System Architect) */
+about-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 2px;   /* tight spacing */
+}
+
+.about-role {
+  font-family: "Cormorant Garamond", serif;  /* same font */
+  font-size: 16.5px;   /* same as your role-part */
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+}
+
+.vector-part {
+  color: #8f9aac;
+}
+
+/* 🔹 Larger name */
+.about-name .name-part {
+  font-size: 30px;   /* +1 step */
+}
+
+/* 🔹 Divider */
+.about-name .divider {
+  font-size: 18px;
+  color: #9aa4af;
+  margin: 0 6px;
+}
+
+/* 🔹 IsoVector + title → match summary size */
+.about-name .role-part {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;   /* ← now white */
+}
+
+/* Branding */
+.about-name .iso-part {
+  color: #ffffff;
+}
+
+.about-name .vector-part {
+  color: #8f9aac;
+}
+
+.about-title {
+  font-weight: 400;
+  color: #9aa4af;
+  font-size: 18px;
+}
+
+.about-summary {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #c7cdd6;
+  margin-bottom: 20px;
+}
+
+.about-meta {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #9aa4af;
+}
+
+.about-meta div {
+  margin-bottom: 6px;
+}
+
+.about-education {
+  font-size: 14px;
+  color: #9aa4af;
+}
+
+.about-education div {
+  margin-bottom: 4px;
+}
+
+.about-container {
+  margin-top: 28px;
+}
+
+/* REPLACE with this */
+.about-meta {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #9aa4af;
+}
+
+.about-meta div {
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.meta-label {
+.meta-label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.meta-detail {
+  color: #9aa4af;
+  font-weight: 500;
+}
+
+.about-meta div,
+.about-education div {
+  letter-spacing: 0.01em;
+}
+
+.meta-label {
+  color: #ffffff;     /* same as name */
+  font-weight: 600;   /* slight emphasis */
+} }
+
+.meta-label {
+    color: #ffffff;
+    font-weight: 600; /* Optional: makes the white text pop more */
+    letter-spacing: 0.05em;
+}
+
+/* Keeps the details (U.S., China, etc.) slightly dimmed for hierarchy */
+.meta-detail {
+    color: rgba(255, 255, 255, 0.7); 
+}

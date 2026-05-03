@@ -1075,7 +1075,7 @@ async function loadActiveData() {
     const lagPanel = macroView.querySelector(".macro-lag-panel");
     const exposurePanel = macroView.querySelector(".macro-exposure-panel");
     const impactPanel = macroView.querySelector(".macro-impact-panel");
-    const riskValue = macroView.querySelector(".macro-riskstack-panel strong");
+    const riskStackPanel = macroView.querySelector(".macro-riskstack-panel");
 
     if (driversPanel) {
       driversPanel.innerHTML = `
@@ -1111,11 +1111,48 @@ async function loadActiveData() {
         <div class="panel-placeholder">${dataMode}</div>
       `;
     }
+if (riskStackPanel) {
+  riskStackPanel.innerHTML = `
+    <div class="iv-header">
+  <span class="iv-title-main">
+    <span class="iso-part">Iso</span><span class="vector-part">Vector</span>
+  </span>
+  <span class="iv-title-sub"> • System Diagnostics Contract</span>
+</div>
 
-    if (riskValue) {
-      riskValue.textContent = "--";
-    }
-  }
+    <div class="iv-contract-group iv-group-pressure">
+      <div class="iv-group-title">System Pressure Layer</div>
+      <div class="macro-metric-stack">
+        <div class="macro-metric-tile"><span>Pressure</span><strong>--</strong></div>
+        <div class="macro-metric-tile"><span>Liquidity</span><strong>--</strong></div>
+        <div class="macro-metric-tile"><span>Momentum</span><strong>--</strong></div>
+      </div>
+    </div>
+
+    <div class="iv-contract-group iv-group-fragility">
+      <div class="iv-group-title">Structural Fragility Layer</div>
+      <div class="macro-metric-stack">
+        <div class="macro-metric-tile"><span>Fragility</span><strong>--</strong></div>
+        <div class="macro-metric-tile"><span>Dispersion</span><strong>--</strong></div>
+      </div>
+    </div>
+
+    <div class="iv-contract-group iv-group-transmission">
+      <div class="iv-group-title">Cross-Asset Transmission Layer</div>
+      <div class="macro-metric-stack">
+        <div class="macro-metric-tile"><span>Cross-Asset Stress</span><strong>--</strong></div>
+        <div class="macro-metric-tile"><span>Coherence</span><strong>--</strong></div>
+      </div>
+    </div>
+
+    <div class="iv-contract-group iv-group-outcome">
+      <div class="iv-group-title">System Outcome Layer</div>
+      <div class="macro-metric-stack">
+        <div class="macro-metric-tile"><span>Systemicity</span><strong>--</strong></div>
+      </div>
+    </div>
+  `;
+}  }
 
 
 function setBodyViewClass(viewName) {
@@ -1764,13 +1801,14 @@ function renderWtiInventoryOcOverlayChart(container, payload) {
   };
 
   const seriesValues = usable
-    .flatMap((row) => [
-      Number(row.min),
-      Number(row.avg),
-      Number(row.max),
-      Number(row.current)
-    ])
-    .filter(Number.isFinite);
+  .flatMap((row) => [
+    row.min,
+    row.avg,
+    row.max,
+    row.current
+  ])
+  .filter((v) => v !== null && v !== undefined && Number.isFinite(Number(v)))
+  .map(Number);
 
   const minVal = Math.min(...seriesValues);
   const maxVal = Math.max(...seriesValues);
@@ -2791,6 +2829,35 @@ function renderAssetSigmaChart(container, rows, selectedKey) {
     renderSigmaChart(document.getElementById("fx-sigma-chart"), sigmaRows, pair);
   }
 
+function renderWtiOcSignal(container, overlay, meta) {
+  if (!container) return;
+
+  const z = Number(overlay?.z);
+  const state = String(overlay?.state || "neutral").toUpperCase();
+  const asOfDate = meta?.as_of_date || "--";
+  const source = meta?.source || "EIA";
+
+  container.innerHTML = `
+    <div class="panel-placeholder">
+      <div>
+        <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #7c5cff;">
+          OC Overlay Active
+        </div>
+        <div style="margin-top: 12px; font-size: 1.8rem; font-weight: 700; color: #eef3fa;">
+          Z: ${Number.isFinite(z) ? z.toFixed(2) : "--"}
+        </div>
+        <div style="margin-top: 8px; font-size: 1rem; color: #d9e2ef;">
+          State: ${state}
+        </div>
+        <div style="margin-top: 8px; font-size: 0.78rem; color: #7f8ea3;">
+          ${source} | ${asOfDate}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
   async function renderWTI() {
     updateWTIGeoScenToolbarLabel();
 
@@ -2928,7 +2995,7 @@ if (sigmaBadge) sigmaBadge.textContent = "Cross-Series Z Context";
 
     ensureWtiInventoryControls();
 
-    const selectedOcOverlay = wtiControls.ocOverlay?.value || "off";
+    const selectedOcOverlay = String(wtiControls.ocOverlay?.value || "off").toLowerCase();
     const ocOverlayOn = selectedOcOverlay === "on";
 
     const inventoryPanelEl = document.querySelector(".wti-inventory-panel");
@@ -3053,53 +3120,44 @@ const inventoryChartNode = document.getElementById("wti-inventory-chart");
 
 if (ocOverlayOn) {
   const ocPayload = await loadWtiInventoryOcOverlay();
+
   const ocRows = Array.isArray(ocPayload?.rows) ? ocPayload.rows : [];
+  const ocOverlay = ocPayload?.overlay || {};
   const ocMeta = ocPayload?.meta || {};
 
-  if (ocRows.length && ocRows.some(r => Number.isFinite(Number(r.current)))) {
-    renderWtiInventoryOcOverlayChart(inventoryChartNode, ocPayload);
-
-    const inventoryTitle = document.querySelector("#view-wti .wti-inventory-panel .panel-title");
-    if (inventoryTitle) {
-      inventoryTitle.textContent = "Inventory Index";
-    }
-
-    const inventorySubtitle = document.getElementById("wti-inventory-subtitle");
-    if (inventorySubtitle) {
-      inventorySubtitle.textContent = `15Y Min / Avg / Max vs ${ocMeta.current_year || "Current Year"}`;
-    }
-
-    updateStatValue(
-      document.getElementById("wti-inventory-last"),
-      ocMeta.current_year ? String(ocMeta.current_year) : "Current"
-    );
-    updateStatValue(
-      document.getElementById("wti-inventory-change"),
-      `W${ocMeta.latest_week ?? "--"}`
-    );
-    updateStatValue(
-      document.getElementById("wti-inventory-range"),
-      `15Y Window`
-    );
-
-    if (inventoryDate) {
-      inventoryDate.textContent = ocMeta.latest_observation_date
-        ? formatUTC(ocMeta.latest_observation_date)
-        : "--";
-    }
-
-    if (inventorySourcePrefixEl) {
-      inventorySourcePrefixEl.textContent = "Source: EIA | the_Spine (+ OC Overlay) | As of ";
-    }
+  if (ocRows.length) {
+    renderWtiInventoryOcOverlayChart(inventoryChartNode, {
+      rows: ocRows
+    });
   } else {
-  setChartPlaceholder("wti-inventory-chart", "OC Overlay: No valid current-year data.");
+    setChartPlaceholder("wti-inventory-chart", "OC Overlay: No seasonal rows available.");
+  }
 
-  updateStatValue(document.getElementById("wti-inventory-last"), "--");
-  updateStatValue(document.getElementById("wti-inventory-change"), "--");
-  updateStatValue(document.getElementById("wti-inventory-range"), "--");
+  updateStatValue(
+    document.getElementById("wti-inventory-last"),
+    Number.isFinite(Number(ocOverlay.z)) ? Number(ocOverlay.z).toFixed(2) : "--"
+  );
 
-  if (inventoryDate) inventoryDate.textContent = "--";
-}
+  updateStatValue(
+    document.getElementById("wti-inventory-change"),
+    ocOverlay.state ? String(ocOverlay.state).toUpperCase() : "--"
+  );
+
+  updateStatValue(
+    document.getElementById("wti-inventory-range"),
+    "15Y RANGE"
+  );
+
+  if (inventoryDate) {
+    inventoryDate.textContent = ocMeta.as_of_date
+      ? formatUTC(ocMeta.as_of_date)
+      : "--";
+  }
+
+  if (inventorySourcePrefixEl) {
+    inventorySourcePrefixEl.textContent =
+      "Source: EIA | the_Spine | 15Y Seasonal Overlay | As of ";
+  }
 } else {
   const inventoryRows = visible
     .map((row) => ({
