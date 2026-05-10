@@ -26,5 +26,5 @@ jobs:
 
       - run: pip install pandas pyarrow boto3
 
-      - run: python -m spine.jobs.wti.derive.build_wti_inventory_oc_overlay
+      - run: python -m spine.jobs.energy.wti.build_wti_inventory_oc_overlay
       
