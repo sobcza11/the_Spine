@@ -5,6 +5,7 @@ import boto3
 import botocore
 import pandas as pd
 import requests
+import time
 
 from spine.jobs.rates.rates_constants import (
     FRED_API_KEY_ENV,
@@ -91,37 +92,45 @@ def _fetch_fred_series(symbol: str, series_id: str, observation_start: str) -> p
     url = "https://api.stlouisfed.org/fred/series/observations"
     params = {
         "series_id": series_id,
-        "api_key": _fred_api_key(),
+        "api_key": os.environ["FRED_API_KEY"],
         "file_type": "json",
         "observation_start": observation_start,
         "frequency": "m",
     }
 
-    r = requests.get(url, params=params, timeout=60)
+    last_error = None
 
-    if not r.ok:
-        raise RuntimeError(
-            f"FRED request failed for {symbol} ({series_id}) "
-            f"status={r.status_code} url={r.url} body={r.text}"
-        )
+    for attempt in range(1, 4):
+        try:
+            r = requests.get(url, params=params, timeout=30)
 
-    observations = r.json().get("observations", [])
-    df = pd.DataFrame(observations)
-    if df.empty:
-        return pd.DataFrame(columns=["symbol", "date", "value"])
+            if r.status_code == 200:
+                js = r.json()
+                obs = js.get("observations", [])
 
-    df["symbol"] = symbol
-    df["date"] = pd.to_datetime(df["date"], errors="coerce")
-    df["value"] = pd.to_numeric(df["value"], errors="coerce")
+                rows = []
+                for o in obs:
+                    val = o.get("value")
+                    if val in (None, ".", ""):
+                        continue
+                    rows.append({
+                        "date": pd.to_datetime(o["date"]),
+                        "symbol": symbol,
+                        "series_id": series_id,
+                        "value": float(val),
+                    })
 
-    df = (
-        df[["symbol", "date", "value"]]
-        .dropna(subset=["symbol", "date", "value"])
-        .sort_values(["symbol", "date"])
-        .drop_duplicates(["symbol", "date"], keep="last")
-        .reset_index(drop=True)
-    )
-    return df
+                return pd.DataFrame(rows)
+
+            last_error = f"status={r.status_code} body={r.text[:500]}"
+
+        except Exception as e:
+            last_error = repr(e)
+
+        time.sleep(2 * attempt)
+
+    print(f"WARNING: FRED request failed after retries for {symbol} ({series_id}): {last_error}")
+    return pd.DataFrame(columns=["date", "symbol", "series_id", "value"])
 
 
 def main() -> None:
