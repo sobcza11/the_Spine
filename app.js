@@ -534,7 +534,7 @@ function getMonthlyIdxExtremes(rows, targetDate, bucket) {
 function renderIndustryPanelTable(container, rows, etfFocus) {
   if (!container) return;
 
-  const etfRows = rows.filter((r) => String(r.etf || "").toUpperCase() === etfFocus);
+  const etfRows = filterIndustryRowsForEtf(rows, etfFocus);
 
   if (!etfRows.length) {
     container.innerHTML = `<div class="panel-placeholder">No industry panel data available for ${etfFocus}.</div>`;
@@ -2097,9 +2097,7 @@ async function renderEquities() {
 
       if (isSectorEtf(etfFocus)) {
         const panelRows = Array.isArray(equitiesData.industryPanel) ? equitiesData.industryPanel : [];
-        const etfRows = panelRows.filter(
-          (r) => String(r.etf || "").toUpperCase() === etfFocus
-        );
+        const etfRows = filterIndustryRowsForEtf(panelRows, etfFocus);
 
         if (industrySubtitle) {
           industrySubtitle.textContent = `${etfFocus} | ${getEquitiesTickerLabel(etfFocus)}`;
@@ -3477,4 +3475,5 @@ window.addEventListener("resize", () => {
     showView("what-is");
   })();
 });
+
 
