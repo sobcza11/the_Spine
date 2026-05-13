@@ -71,7 +71,12 @@ def _extract_links(index_url: str) -> tuple[set[str], set[str]]:
 
 
 def _discover_minutes_links() -> list[str]:
-    seed_pages = {CURRENT_CALENDAR_URL, HISTORICAL_YEAR_URL}
+    current_year = datetime.now().year
+
+    seed_pages = {
+        f"https://www.federalreserve.gov/monetarypolicy/fomccalendars{year}.htm"
+        for year in range(2020, current_year + 1)
+    }
     visited: set[str] = set()
     minutes_links: set[str] = set()
 
@@ -81,7 +86,15 @@ def _discover_minutes_links() -> list[str]:
             continue
 
         visited.add(url)
-        found_minutes, found_indexes = _extract_links(url)
+
+        try:
+            found_minutes, found_indexes = _extract_links(url)
+        except requests.HTTPError as exc:
+            print(f"[WARN] Failed to fetch {url}: {exc}")
+            continue
+        except Exception as exc:
+            print(f"[WARN] Unexpected error for {url}: {exc}")
+            continue
 
         minutes_links.update(found_minutes)
 
