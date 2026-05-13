@@ -32,7 +32,13 @@ def _get_html(url: str) -> str:
     response = requests.get(
         url,
         timeout=30,
-        headers={"User-Agent": "the_Spine GeoScen FOMC v1.1"},
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0 Safari/537.36"
+            )
+        },
     )
     response.raise_for_status()
     return response.text
@@ -71,11 +77,10 @@ def _extract_links(index_url: str) -> tuple[set[str], set[str]]:
 
 
 def _discover_minutes_links() -> list[str]:
-    current_year = datetime.now().year
-
     seed_pages = {
-        f"https://www.federalreserve.gov/monetarypolicy/fomccalendars{year}.htm"
-        for year in range(2020, current_year + 1)
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.federalreserve.gov/monetarypolicy/materials/",
+        "https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm",
     }
     visited: set[str] = set()
     minutes_links: set[str] = set()
