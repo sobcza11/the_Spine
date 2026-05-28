@@ -1,0 +1,10 @@
+{
+  "artifact": "build_phase_b_cflow_plane_v1",
+  "site_name": "oc-cflow-local",
+  "title": "OracleChambers C_FLOW Plane",
+  "run_ts": "2026-05-10T21:08:57.718848+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "domain": "C_FLOW",
+  "plane": "institutional_commodity_flow_cognition"
+}

@@ -1,0 +1,73 @@
+{
+    "timestamp_utc": "2026-05-08T03:20:19.326736+00:00",
+    "artifact": "geoscen_rbl_synthesis_v1",
+    "temperature": "COOL",
+    "temperature_score": 0.24382493582092146,
+    "rbl_text": "GeoScen Tier 1 is operating in a Balanced / Monitoring Tier 1 Regime with cool macro temperature. C_FLOW v5 reads as Balanced Capital Flow, with fund-flow pressure at 0.56, indicating that capital-flow pressure is now active rather than placeholder-driven. Equity participation remains anchored by Healthy Breadth / Risk-On Participation with breadth factor score at 0.81. Rates pressure is classified as Low-Conviction / Monitoring Regime, while FX stress is classified as Low-Conviction / Monitoring Regime. WTI is classified as WTI Operational Commodity Monitoring, which should be read as commodity-pressure context feeding the capital-flow channel. ISM / PMI context is split between manufacturing (Weakening Manufacturing Regime | strongest: Textile Mills, Nonmetallic Mineral Products, Miscellaneous Manufacturing, Fabricated Metal Products, Plastics & Rubber Products | weakest: Petroleum & Coal Products, Food, Beverage & Tobacco Products, Primary Metals, Chemical Products, Computer & Electronic Products) & services (Strong Services Expansion | strongest: Real Estate, Rental & Leasing, Health Care & Social Assistance, Mining, Other Services, Utilities | weakest: Agriculture, Forestry, Fishing & Hunting, Transportation & Warehousing, Finance & Insurance, Accommodation & Food Services, Management of Companies & Support Services), supporting the qualitative RBL layer. Central bank tone is classified as Federal Reserve: Hawkish Policy Tone, elevated uncertainty, with policy divergence flagged (hawkish=70, dovish=13, uncertainty=43)., adding policy-language context to the OC interpretation layer. Overall, the regime reads as deployable & monitored rather than unresolved: the infrastructure is clean, while the narrative layer should continue expanding toward richer CB and PMI qualitative evidence.",
+    "source_route": [
+        "GeoScen Tier 1 Overlay",
+        "C_FLOW v5",
+        "Breadth / Factor Serving"
+    ],
+    "signals": {
+        "geoscen_state": "Balanced / Monitoring Tier 1 Regime",
+        "geoscen_score": 0.20950000000000005,
+        "c_flow_state": "Balanced Capital Flow",
+        "c_flow_score": 0.07779229959726108,
+        "fund_flow_pressure": 0.5577443120894945,
+        "breadth_score": 0.807430390111868,
+        "breadth_state": "Healthy Breadth / Risk-On Participation",
+        "rates_pressure": 3.5602724233025733e-06,
+        "rates_state": "Low-Conviction / Monitoring Regime",
+        "fx_pressure": 3.5602724233025733e-06,
+        "fx_state": "Low-Conviction / Monitoring Regime",
+        "wti_pressure": 0.0,
+        "wti_state": "WTI Operational Commodity Monitoring",
+        "ism_manufacturing_state": "Weakening Manufacturing Regime | strongest: Textile Mills, Nonmetallic Mineral Products, Miscellaneous Manufacturing, Fabricated Metal Products, Plastics & Rubber Products | weakest: Petroleum & Coal Products, Food, Beverage & Tobacco Products, Primary Metals, Chemical Products, Computer & Electronic Products",
+        "ism_services_state": "Strong Services Expansion | strongest: Real Estate, Rental & Leasing, Health Care & Social Assistance, Mining, Other Services, Utilities | weakest: Agriculture, Forestry, Fishing & Hunting, Transportation & Warehousing, Finance & Insurance, Accommodation & Food Services, Management of Companies & Support Services",
+        "cb_tone_state": "Federal Reserve: Hawkish Policy Tone, elevated uncertainty, with policy divergence flagged (hawkish=70, dovish=13, uncertainty=43).",
+        "temperature_score": 0.24382493582092146,
+        "temperature": "COOL",
+        "rates_rbl": "Rates: Yield curve & policy signals indicate low-conviction / balanced. Overall: No decisive shift in rate regime; consistent with monitoring conditions.",
+        "fx_rbl": "FX: Currency conditions are mixed / range-bound, driven by central-bank divergence & macro pressure signals. Overall: No extreme dislocation; monitoring regime.",
+        "wti_rbl": "WTI panel is operational with price context as of 2026-04-27 & inventory context as of 2026-04-24."
+    },
+    "input_status": {
+        "geoscen": {
+            "available": true,
+            "path": "data\\serving\\geoscen\\geoscen_tier1_overlay_v1.parquet"
+        },
+        "c_flow": {
+            "available": true,
+            "path": "data\\serving\\c_flow\\c_flow_serving_v5.parquet"
+        },
+        "breadth": {
+            "available": true,
+            "path": "data\\serving\\equities\\breadth_factor_serving_v1.parquet"
+        },
+        "rates": {
+            "available": true,
+            "path": "data\\serving\\rates\\rates_serving_v2.parquet"
+        },
+        "fx": {
+            "available": true,
+            "path": "data\\serving\\fx\\fx_serving_v2.parquet"
+        },
+        "wti": {
+            "available": true,
+            "path": "data\\serving\\wti\\wti_panel.json"
+        },
+        "ism_manu": {
+            "available": true,
+            "path": "data\\processed\\ism\\ism_industry_regime_summary_v1.parquet"
+        },
+        "ism_services": {
+            "available": true,
+            "path": "data\\processed\\ism\\ism_services_regime_summary_v1.parquet"
+        },
+        "cb_tone": {
+            "available": true,
+            "path": "data\\geoscen\\signals\\macro_cb_oc_signals_v1.parquet"
+        }
+    }
+}

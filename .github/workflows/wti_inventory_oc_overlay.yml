@@ -28,3 +28,5 @@ jobs:
 
       - run: python -m spine.jobs.energy.wti.build_wti_inventory_oc_overlay
       
+      - name: Build WTI canonical input
+        run: python -m spine.jobs.energy.wti.build_us_wti_inventory_canonical

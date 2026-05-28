@@ -1,0 +1,10 @@
+{
+  "artifact": "phase_d_visual_plane_manifest_v1",
+  "site_name": "oc-contradiction-matrix-local",
+  "domain": "CONTRADICTION_MATRIX",
+  "title": "Contradiction Matrix Plane",
+  "run_ts": "2026-05-10T21:55:41.345779+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "phase": "PHASE_D_VISUAL_INTELLIGENCE"
+}

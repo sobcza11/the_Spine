@@ -1,0 +1,740 @@
+{
+  "component": "payload_compression_engine_v1",
+  "generated_at_utc": "2026-05-22T17:01:43.817075+00:00",
+  "compressed_file_count": 122,
+  "files": [
+    {
+      "source": "config/geoscen_routes.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/geoscen_routes.json.gz",
+      "source_bytes": 1380,
+      "compressed_bytes": 388
+    },
+    {
+      "source": "config/geoscen_runtime_normalization_summary_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/geoscen_runtime_normalization_summary_v1.json.gz",
+      "source_bytes": 2916,
+      "compressed_bytes": 470
+    },
+    {
+      "source": "config/langroid_runtime_normalization_summary_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/langroid_runtime_normalization_summary_v1.json.gz",
+      "source_bytes": 249,
+      "compressed_bytes": 219
+    },
+    {
+      "source": "config/oc_segment_registry_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/oc_segment_registry_v1.json.gz",
+      "source_bytes": 4931,
+      "compressed_bytes": 632
+    },
+    {
+      "source": "config/offline_asset_registry.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/offline_asset_registry.json.gz",
+      "source_bytes": 1119,
+      "compressed_bytes": 452
+    },
+    {
+      "source": "config/route_metadata.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/route_metadata.json.gz",
+      "source_bytes": 1902,
+      "compressed_bytes": 632
+    },
+    {
+      "source": "config/runtime_contract_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/runtime_contract_v1.json.gz",
+      "source_bytes": 419,
+      "compressed_bytes": 248
+    },
+    {
+      "source": "config/runtime_manifest_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/config/runtime_manifest_v1.json.gz",
+      "source_bytes": 35142,
+      "compressed_bytes": 2592
+    },
+    {
+      "source": "deploy_manifest/executive_cognitive_runtime_completion_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/executive_cognitive_runtime_completion_v1.json.gz",
+      "source_bytes": 848,
+      "compressed_bytes": 456
+    },
+    {
+      "source": "deploy_manifest/executive_deployment_validation_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/executive_deployment_validation_v1.json.gz",
+      "source_bytes": 248,
+      "compressed_bytes": 211
+    },
+    {
+      "source": "deploy_manifest/executive_operational_readiness_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/executive_operational_readiness_v1.json.gz",
+      "source_bytes": 846,
+      "compressed_bytes": 332
+    },
+    {
+      "source": "deploy_manifest/finstate_operationalization_summary_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/finstate_operationalization_summary_v1.json.gz",
+      "source_bytes": 728,
+      "compressed_bytes": 418
+    },
+    {
+      "source": "deploy_manifest/foundation_validation_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/foundation_validation_v1.json.gz",
+      "source_bytes": 255,
+      "compressed_bytes": 207
+    },
+    {
+      "source": "deploy_manifest/offline_runtime_stability_validation_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/offline_runtime_stability_validation_v1.json.gz",
+      "source_bytes": 430,
+      "compressed_bytes": 295
+    },
+    {
+      "source": "deploy_manifest/runtime_route_validation_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/runtime_route_validation_v1.json.gz",
+      "source_bytes": 208,
+      "compressed_bytes": 192
+    },
+    {
+      "source": "deploy_manifest/static_offline_build_structure_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/static_offline_build_structure_v1.json.gz",
+      "source_bytes": 433,
+      "compressed_bytes": 265
+    },
+    {
+      "source": "deploy_manifest/survivability_governance_validation_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/deploy_manifest/survivability_governance_validation_v1.json.gz",
+      "source_bytes": 418,
+      "compressed_bytes": 291
+    },
+    {
+      "source": "executive_runtime/dynamic_regime_probability_engine_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/executive_runtime/dynamic_regime_probability_engine_v1.json.gz",
+      "source_bytes": 428,
+      "compressed_bytes": 303
+    },
+    {
+      "source": "executive_runtime/executive_regime_transition_engine_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/executive_runtime/executive_regime_transition_engine_v1.json.gz",
+      "source_bytes": 544,
+      "compressed_bytes": 338
+    },
+    {
+      "source": "executive_runtime/executive_runtime_control_center_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/executive_runtime/executive_runtime_control_center_v1.json.gz",
+      "source_bytes": 399,
+      "compressed_bytes": 298
+    },
+    {
+      "source": "executive_runtime/global_systemic_pressure_engine_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/executive_runtime/global_systemic_pressure_engine_v1.json.gz",
+      "source_bytes": 1256,
+      "compressed_bytes": 427
+    },
+    {
+      "source": "executive_runtime/macro_corporate_commodity_fusion_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/executive_runtime/macro_corporate_commodity_fusion_v1.json.gz",
+      "source_bytes": 1108,
+      "compressed_bytes": 414
+    },
+    {
+      "source": "executive_runtime/multi_route_synchronization_engine_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/executive_runtime/multi_route_synchronization_engine_v1.json.gz",
+      "source_bytes": 925,
+      "compressed_bytes": 366
+    },
+    {
+      "source": "executive_runtime/runtime_governance_layer_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/executive_runtime/runtime_governance_layer_v1.json.gz",
+      "source_bytes": 516,
+      "compressed_bytes": 323
+    },
+    {
+      "source": "finstate_payloads/corporate_contagion_engine_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/corporate_contagion_engine_v1.json.gz",
+      "source_bytes": 568,
+      "compressed_bytes": 312
+    },
+    {
+      "source": "finstate_payloads/finstate_executive_synthesis_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/finstate_executive_synthesis_v1.json.gz",
+      "source_bytes": 1769,
+      "compressed_bytes": 537
+    },
+    {
+      "source": "finstate_payloads/i2_survivability_loader_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/i2_survivability_loader_v1.json.gz",
+      "source_bytes": 5150,
+      "compressed_bytes": 1160
+    },
+    {
+      "source": "finstate_payloads/quarterly_deterioration_propagation_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/quarterly_deterioration_propagation_v1.json.gz",
+      "source_bytes": 1431,
+      "compressed_bytes": 473
+    },
+    {
+      "source": "finstate_payloads/recursive_pressure_conditioning_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/recursive_pressure_conditioning_v1.json.gz",
+      "source_bytes": 952,
+      "compressed_bytes": 402
+    },
+    {
+      "source": "finstate_payloads/recursive_survivability_graph_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/recursive_survivability_graph_v1.json.gz",
+      "source_bytes": 80420,
+      "compressed_bytes": 2915
+    },
+    {
+      "source": "finstate_payloads/sector_survivability_ranking_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/sector_survivability_ranking_v1.json.gz",
+      "source_bytes": 476,
+      "compressed_bytes": 302
+    },
+    {
+      "source": "finstate_payloads/survivability_memory_system_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_payloads/survivability_memory_system_v1.json.gz",
+      "source_bytes": 637,
+      "compressed_bytes": 294
+    },
+    {
+      "source": "finstate_runtime/finstate_runtime_registry_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/finstate_runtime/finstate_runtime_registry_v1.json.gz",
+      "source_bytes": 410,
+      "compressed_bytes": 284
+    },
+    {
+      "source": "geoscen_runtime/geoscen_contradiction_engine_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_contradiction_engine_v1.json.gz",
+      "source_bytes": 900,
+      "compressed_bytes": 460
+    },
+    {
+      "source": "geoscen_runtime/geoscen_contradiction_engine_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_contradiction_engine_v1_normalized.json.gz",
+      "source_bytes": 1201,
+      "compressed_bytes": 542
+    },
+    {
+      "source": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_cross_country_policy_cognition_v1.json.gz",
+      "source_bytes": 4473,
+      "compressed_bytes": 1324
+    },
+    {
+      "source": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_cross_country_policy_cognition_v1_normalized.json.gz",
+      "source_bytes": 4968,
+      "compressed_bytes": 1401
+    },
+    {
+      "source": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_frontend_intelligence_layer_v1.json.gz",
+      "source_bytes": 836099,
+      "compressed_bytes": 52057
+    },
+    {
+      "source": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_frontend_intelligence_layer_v1_normalized.json.gz",
+      "source_bytes": 910164,
+      "compressed_bytes": 51606
+    },
+    {
+      "source": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_historical_narrative_drift_engine_v1.json.gz",
+      "source_bytes": 1677,
+      "compressed_bytes": 491
+    },
+    {
+      "source": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_historical_narrative_drift_engine_v1_normalized.json.gz",
+      "source_bytes": 2088,
+      "compressed_bytes": 577
+    },
+    {
+      "source": "geoscen_runtime/geoscen_macro_ingestion_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_macro_ingestion_v1.json.gz",
+      "source_bytes": 589,
+      "compressed_bytes": 338
+    },
+    {
+      "source": "geoscen_runtime/geoscen_macro_ingestion_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_macro_ingestion_v1_normalized.json.gz",
+      "source_bytes": 873,
+      "compressed_bytes": 418
+    },
+    {
+      "source": "geoscen_runtime/geoscen_macro_registry_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_macro_registry_v1.json.gz",
+      "source_bytes": 772,
+      "compressed_bytes": 430
+    },
+    {
+      "source": "geoscen_runtime/geoscen_macro_registry_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_macro_registry_v1_normalized.json.gz",
+      "source_bytes": 1073,
+      "compressed_bytes": 517
+    },
+    {
+      "source": "geoscen_runtime/geoscen_rbl_synthesis_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_rbl_synthesis_v1.json.gz",
+      "source_bytes": 5570,
+      "compressed_bytes": 1806
+    },
+    {
+      "source": "geoscen_runtime/geoscen_rbl_synthesis_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_rbl_synthesis_v1_normalized.json.gz",
+      "source_bytes": 5650,
+      "compressed_bytes": 1881
+    },
+    {
+      "source": "geoscen_runtime/geoscen_structural_macro_layer_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_structural_macro_layer_v1.json.gz",
+      "source_bytes": 1530,
+      "compressed_bytes": 568
+    },
+    {
+      "source": "geoscen_runtime/geoscen_structural_macro_layer_v1_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/geoscen_runtime/geoscen_structural_macro_layer_v1_normalized.json.gz",
+      "source_bytes": 1889,
+      "compressed_bytes": 648
+    },
+    {
+      "source": "langroid_runtime/langroid_runtime_export.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/langroid_runtime/langroid_runtime_export.json.gz",
+      "source_bytes": 11807,
+      "compressed_bytes": 1327
+    },
+    {
+      "source": "langroid_runtime/langroid_runtime_export_normalized.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/langroid_runtime/langroid_runtime_export_normalized.json.gz",
+      "source_bytes": 12909,
+      "compressed_bytes": 1468
+    },
+    {
+      "source": "routes/cflow/route.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/routes/cflow/route.json.gz",
+      "source_bytes": 525,
+      "compressed_bytes": 263
+    },
+    {
+      "source": "routes/equities_industry/route.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/routes/equities_industry/route.json.gz",
+      "source_bytes": 547,
+      "compressed_bytes": 289
+    },
+    {
+      "source": "routes/equities_sector/route.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/routes/equities_sector/route.json.gz",
+      "source_bytes": 400,
+      "compressed_bytes": 236
+    },
+    {
+      "source": "routes/executive/route.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/routes/executive/route.json.gz",
+      "source_bytes": 615,
+      "compressed_bytes": 278
+    },
+    {
+      "source": "routes/finstate/route.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/routes/finstate/route.json.gz",
+      "source_bytes": 535,
+      "compressed_bytes": 274
+    },
+    {
+      "source": "routes/fx/route.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/routes/fx/route.json.gz",
+      "source_bytes": 374,
+      "compressed_bytes": 233
+    },
+    {
+      "source": "routes/rates/route.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/routes/rates/route.json.gz",
+      "source_bytes": 417,
+      "compressed_bytes": 260
+    },
+    {
+      "source": "payloads/manifests/cflow_manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/payloads/manifests/cflow_manifest.json.gz",
+      "source_bytes": 222,
+      "compressed_bytes": 165
+    },
+    {
+      "source": "payloads/manifests/executive_manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/payloads/manifests/executive_manifest.json.gz",
+      "source_bytes": 389,
+      "compressed_bytes": 222
+    },
+    {
+      "source": "payloads/manifests/finstate_manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/payloads/manifests/finstate_manifest.json.gz",
+      "source_bytes": 226,
+      "compressed_bytes": 167
+    },
+    {
+      "source": "payloads/manifests/quarterly_survivability_manifest_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/payloads/manifests/quarterly_survivability_manifest_v1.json.gz",
+      "source_bytes": 736,
+      "compressed_bytes": 316
+    },
+    {
+      "source": "oc_segments/oc-attention-routing-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-attention-routing-local/manifest.json.gz",
+      "source_bytes": 384,
+      "compressed_bytes": 292
+    },
+    {
+      "source": "oc_segments/oc-cb-divergence-map-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-cb-divergence-map-local/manifest.json.gz",
+      "source_bytes": 339,
+      "compressed_bytes": 275
+    },
+    {
+      "source": "oc_segments/oc-cflow-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-cflow-local/manifest.json.gz",
+      "source_bytes": 323,
+      "compressed_bytes": 252
+    },
+    {
+      "source": "oc_segments/oc-contradiction-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-contradiction-local/manifest.json.gz",
+      "source_bytes": 402,
+      "compressed_bytes": 302
+    },
+    {
+      "source": "oc_segments/oc-contradiction-matrix-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-contradiction-matrix-local/manifest.json.gz",
+      "source_bytes": 344,
+      "compressed_bytes": 279
+    },
+    {
+      "source": "oc_segments/oc-core-runtime-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-core-runtime-local/manifest.json.gz",
+      "source_bytes": 582,
+      "compressed_bytes": 368
+    },
+    {
+      "source": "oc_segments/oc-earnings-tone-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-earnings-tone-local/manifest.json.gz",
+      "source_bytes": 249,
+      "compressed_bytes": 215
+    },
+    {
+      "source": "oc_segments/oc-equities-index-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-equities-index-local/manifest.json.gz",
+      "source_bytes": 355,
+      "compressed_bytes": 267
+    },
+    {
+      "source": "oc_segments/oc-equities-sector-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-equities-sector-local/manifest.json.gz",
+      "source_bytes": 360,
+      "compressed_bytes": 268
+    },
+    {
+      "source": "oc_segments/oc-executive-command-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-executive-command-local/manifest.json.gz",
+      "source_bytes": 603,
+      "compressed_bytes": 371
+    },
+    {
+      "source": "oc_segments/oc-executive-dashboard-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-executive-dashboard-local/manifest.json.gz",
+      "source_bytes": 341,
+      "compressed_bytes": 276
+    },
+    {
+      "source": "oc_segments/oc-fedspeak-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-fedspeak-local/manifest.json.gz",
+      "source_bytes": 234,
+      "compressed_bytes": 204
+    },
+    {
+      "source": "oc_segments/oc-final-metric-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-final-metric-local/manifest.json.gz",
+      "source_bytes": 389,
+      "compressed_bytes": 301
+    },
+    {
+      "source": "oc_segments/oc-fx-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-fx-local/manifest.json.gz",
+      "source_bytes": 297,
+      "compressed_bytes": 238
+    },
+    {
+      "source": "oc_segments/oc-governance-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-governance-local/manifest.json.gz",
+      "source_bytes": 398,
+      "compressed_bytes": 300
+    },
+    {
+      "source": "oc_segments/oc-historical-memory-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-historical-memory-local/manifest.json.gz",
+      "source_bytes": 394,
+      "compressed_bytes": 300
+    },
+    {
+      "source": "oc_segments/oc-langroid-agent-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-langroid-agent-local/manifest.json.gz",
+      "source_bytes": 252,
+      "compressed_bytes": 218
+    },
+    {
+      "source": "oc_segments/oc-liquidity-stress-map-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-liquidity-stress-map-local/manifest.json.gz",
+      "source_bytes": 338,
+      "compressed_bytes": 275
+    },
+    {
+      "source": "oc_segments/oc-macro-heatmap-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-macro-heatmap-local/manifest.json.gz",
+      "source_bytes": 323,
+      "compressed_bytes": 265
+    },
+    {
+      "source": "oc_segments/oc-narrative-drift-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-narrative-drift-local/manifest.json.gz",
+      "source_bytes": 255,
+      "compressed_bytes": 217
+    },
+    {
+      "source": "oc_segments/oc-pmi-linkage-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-pmi-linkage-local/manifest.json.gz",
+      "source_bytes": 243,
+      "compressed_bytes": 212
+    },
+    {
+      "source": "oc_segments/oc-rag-context-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-rag-context-local/manifest.json.gz",
+      "source_bytes": 243,
+      "compressed_bytes": 212
+    },
+    {
+      "source": "oc_segments/oc-rates-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-rates-local/manifest.json.gz",
+      "source_bytes": 312,
+      "compressed_bytes": 242
+    },
+    {
+      "source": "oc_segments/oc-rbl-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-rbl-local/manifest.json.gz",
+      "source_bytes": 396,
+      "compressed_bytes": 303
+    },
+    {
+      "source": "oc_segments/oc-regime-timeline-local/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-regime-timeline-local/manifest.json.gz",
+      "source_bytes": 329,
+      "compressed_bytes": 266
+    },
+    {
+      "source": "oc_segments/oc-regime-timeline-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-regime-timeline-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-rbl-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-rbl-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-rates-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-rates-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-rag-context-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-rag-context-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-pmi-linkage-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-pmi-linkage-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-narrative-drift-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-narrative-drift-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-macro-heatmap-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-macro-heatmap-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-liquidity-stress-map-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-liquidity-stress-map-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-langroid-agent-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-langroid-agent-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-historical-memory-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-historical-memory-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-governance-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-governance-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-fx-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-fx-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-final-metric-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-final-metric-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-fedspeak-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-fedspeak-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-executive-dashboard-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-executive-dashboard-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-executive-command-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-executive-command-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-equities-sector-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-equities-sector-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-equities-index-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-equities-index-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-earnings-tone-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-earnings-tone-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-core-runtime-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-core-runtime-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-contradiction-matrix-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-contradiction-matrix-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-contradiction-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-contradiction-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-cflow-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-cflow-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-cb-divergence-map-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-cb-divergence-map-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_segments/oc-attention-routing-local/payloads/oc_local_site_hydration_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_segments/oc-attention-routing-local/payloads/oc_local_site_hydration_v1.json.gz",
+      "source_bytes": 6315,
+      "compressed_bytes": 1582
+    },
+    {
+      "source": "oc_ai_components/c_flow/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/c_flow/manifest.json.gz",
+      "source_bytes": 271,
+      "compressed_bytes": 220
+    },
+    {
+      "source": "oc_ai_components/equities_industry/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/equities_industry/manifest.json.gz",
+      "source_bytes": 305,
+      "compressed_bytes": 244
+    },
+    {
+      "source": "oc_ai_components/equities_sector/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/equities_sector/manifest.json.gz",
+      "source_bytes": 299,
+      "compressed_bytes": 236
+    },
+    {
+      "source": "oc_ai_components/fx/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/fx/manifest.json.gz",
+      "source_bytes": 260,
+      "compressed_bytes": 212
+    },
+    {
+      "source": "oc_ai_components/rates/manifest.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/rates/manifest.json.gz",
+      "source_bytes": 269,
+      "compressed_bytes": 216
+    },
+    {
+      "source": "oc_ai_components/rates/payloads/rates_ai_components_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/rates/payloads/rates_ai_components_v1.json.gz",
+      "source_bytes": 3692,
+      "compressed_bytes": 1313
+    },
+    {
+      "source": "oc_ai_components/fx/payloads/fx_ai_components_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/fx/payloads/fx_ai_components_v1.json.gz",
+      "source_bytes": 3587,
+      "compressed_bytes": 1234
+    },
+    {
+      "source": "oc_ai_components/equities_sector/payloads/equities_sector_ai_components_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/equities_sector/payloads/equities_sector_ai_components_v1.json.gz",
+      "source_bytes": 3747,
+      "compressed_bytes": 1268
+    },
+    {
+      "source": "oc_ai_components/equities_industry/payloads/equities_industry_ai_components_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/equities_industry/payloads/equities_industry_ai_components_v1.json.gz",
+      "source_bytes": 3975,
+      "compressed_bytes": 1307
+    },
+    {
+      "source": "oc_ai_components/c_flow/payloads/cflow_ai_components_v1.json",
+      "compressed": "cloudflare/bundles/compressed_payloads/oc_ai_components/c_flow/payloads/cflow_ai_components_v1.json.gz",
+      "source_bytes": 3727,
+      "compressed_bytes": 1253
+    }
+  ],
+  "status": "payload_compression_ready"
+}

@@ -1,0 +1,15 @@
+{
+  "component": "survivability_governance_validation_v1",
+  "generated_at_utc": "2026-05-22T16:29:17.063465+00:00",
+  "required_count": 10,
+  "existing_count": 10,
+  "missing_count": 0,
+  "missing": [],
+  "governance": {
+    "finstate_route_ready": true,
+    "manifest_registered": true,
+    "runtime_payloads_present": true,
+    "offline_ready": true
+  },
+  "status": "survivability_governance_valid"
+}

@@ -1,0 +1,15 @@
+{
+  "component": "offline_runtime_release_governance_v1",
+  "generated_at_utc": "2026-05-22T17:18:06.147991+00:00",
+  "release_rules": {
+    "foundation_validation_required": true,
+    "route_validation_required": true,
+    "finstate_validation_required": true,
+    "executive_validation_required": true,
+    "runtime_stability_required": true,
+    "payload_integrity_required": true,
+    "secure_export_required": true
+  },
+  "approval_state": "release_candidate_governed",
+  "status": "offline_runtime_release_governance_ready"
+}

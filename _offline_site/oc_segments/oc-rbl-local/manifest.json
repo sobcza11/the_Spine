@@ -1,0 +1,10 @@
+{
+  "artifact": "phase_a_offline_cognition_site_manifest_v1",
+  "site_name": "oc-rbl-local",
+  "title": "RBL Executive Interpretation",
+  "description": "Renders executive RBL summary, regime explanation, & decision bias.",
+  "run_ts": "2026-05-10T20:36:09.913160+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "phase": "PHASE_A_CORE_COGNITION_RENDERING"
+}

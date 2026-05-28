@@ -1,0 +1,48 @@
+{
+  "component": "geoscen_runtime_normalization_v1",
+  "generated_at_utc": "2026-05-22T15:50:08.452699+00:00",
+  "normalized_count": 8,
+  "results": [
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_contradiction_engine_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_contradiction_engine_v1_normalized.json",
+      "status": "normalized"
+    },
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_cross_country_policy_cognition_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_cross_country_policy_cognition_v1_normalized.json",
+      "status": "normalized"
+    },
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_frontend_intelligence_layer_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_frontend_intelligence_layer_v1_normalized.json",
+      "status": "normalized"
+    },
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_historical_narrative_drift_engine_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_historical_narrative_drift_engine_v1_normalized.json",
+      "status": "normalized"
+    },
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_macro_ingestion_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_macro_ingestion_v1_normalized.json",
+      "status": "normalized"
+    },
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_macro_registry_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_macro_registry_v1_normalized.json",
+      "status": "normalized"
+    },
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_rbl_synthesis_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_rbl_synthesis_v1_normalized.json",
+      "status": "normalized"
+    },
+    {
+      "path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_structural_macro_layer_v1.json",
+      "output": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\geoscen_runtime\\geoscen_structural_macro_layer_v1_normalized.json",
+      "status": "normalized"
+    }
+  ],
+  "status": "geoscen_runtime_normalization_complete"
+}

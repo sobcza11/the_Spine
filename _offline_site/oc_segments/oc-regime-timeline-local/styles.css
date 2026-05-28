@@ -1,0 +1,21 @@
+body{margin:0;background:#020617;color:#e5e7eb;font-family:Arial,sans-serif}
+.shell{padding:32px}
+.hero{background:#0f172a;border:1px solid #334155;border-radius:18px;padding:24px;margin-bottom:24px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:#94a3b8;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#111827;border:1px solid #334155;border-radius:18px;padding:20px}
+.wide{margin-top:16px}
+pre{white-space:pre-wrap;line-height:1.5;color:#cbd5e1}
+.heatmap{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.tile{border-radius:14px;padding:18px;border:1px solid #334155;background:#172554}
+.tile.warn{background:#422006}
+.tile.risk{background:#450a0a}
+.timeline{display:flex;gap:12px;align-items:stretch}
+.node{flex:1;border-radius:14px;padding:18px;border:1px solid #334155;background:#0f172a}
+.node.active{background:#1e293b;border-color:#f59e0b}
+.matrix{display:grid;grid-template-columns:160px repeat(5,1fr);gap:8px}
+.cell{padding:12px;border:1px solid #334155;border-radius:10px;background:#0f172a;text-align:center}
+.cell.header{background:#1e293b;color:#cbd5e1}
+.cell.hot{background:#7f1d1d}
+.cell.mid{background:#78350f}
+.cell.low{background:#064e3b}

@@ -1,0 +1,10 @@
+{
+  "artifact": "phase_a_offline_cognition_site_manifest_v1",
+  "site_name": "oc-historical-memory-local",
+  "title": "Historical Memory",
+  "description": "Renders historical analogs, top match, & similarity structure.",
+  "run_ts": "2026-05-10T20:36:09.924887+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "phase": "PHASE_A_CORE_COGNITION_RENDERING"
+}

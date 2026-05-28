@@ -1,0 +1,10 @@
+{
+  "artifact": "phase_d_visual_plane_manifest_v1",
+  "site_name": "oc-regime-timeline-local",
+  "domain": "REGIME_TIMELINE",
+  "title": "Regime Timeline Plane",
+  "run_ts": "2026-05-10T21:55:41.343786+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "phase": "PHASE_D_VISUAL_INTELLIGENCE"
+}

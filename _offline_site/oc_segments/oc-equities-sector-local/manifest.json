@@ -1,0 +1,10 @@
+{
+  "artifact": "build_phase_b_equities_sector_plane_v1",
+  "site_name": "oc-equities-sector-local",
+  "title": "OracleChambers EQUITIES_SECTOR Plane",
+  "run_ts": "2026-05-10T21:13:04.719255+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "domain": "EQUITIES_SECTOR",
+  "plane": "institutional_equity_sector_cognition"
+}

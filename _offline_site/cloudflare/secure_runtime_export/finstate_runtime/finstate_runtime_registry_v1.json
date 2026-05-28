@@ -1,0 +1,20 @@
+{
+  "component": "finstate_runtime_registry_v1",
+  "generated_at_utc": "2026-05-22T16:15:22.036508+00:00",
+  "domains": [
+    "survivability",
+    "fragility",
+    "deterioration",
+    "systemicity",
+    "recursive_pressure",
+    "antifragility"
+  ],
+  "integration_targets": [
+    "GeoScen",
+    "I2",
+    "C_FLOW",
+    "RATES",
+    "FX"
+  ],
+  "status": "finstate_runtime_registry_ready"
+}

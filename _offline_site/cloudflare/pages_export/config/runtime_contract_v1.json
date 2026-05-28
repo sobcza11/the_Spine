@@ -1,0 +1,24 @@
+{
+  "contract_version": "v1",
+  "required_fields": [
+    "component",
+    "version",
+    "built_at_utc",
+    "status"
+  ],
+  "optional_fields": [
+    "signals",
+    "narrative",
+    "runtime",
+    "graph",
+    "payload",
+    "temperature",
+    "regime"
+  ],
+  "governance": {
+    "registry_first": true,
+    "source_provenance_required": true,
+    "ai_last": true,
+    "explainable": true
+  }
+}

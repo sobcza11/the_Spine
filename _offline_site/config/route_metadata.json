@@ -1,0 +1,47 @@
+{
+  "component": "route_metadata_v1",
+  "routes": {
+    "/equities-industry": {
+      "label": "EQUITIES - INDUSTRY",
+      "description": "Industry-level equity zeitgeist, recursive balance logic, and systemic equity-market OC cognition.",
+      "tier": "offline_structure",
+      "primary_state": "equity_industry_runtime_ready"
+    },
+    "/equities-sector": {
+      "label": "EQUITIES - SECTOR",
+      "description": "Sector-level equity zeitgeist and recursive sector OC interpretation.",
+      "tier": "offline_structure",
+      "primary_state": "equity_sector_runtime_ready"
+    },
+    "/cflow": {
+      "label": "C_FLOW",
+      "description": "Commodity flow zeitgeist, commodity OC interpretation, and systemic commodity-flow pressure routing.",
+      "tier": "offline_structure",
+      "primary_state": "cflow_runtime_ready"
+    },
+    "/finstate": {
+      "label": "FINSTATE",
+      "description": "Financial survivability, I2 durability cognition, balance-sheet fragility, and systemic deterioration topology.",
+      "tier": "offline_structure",
+      "primary_state": "finstate_runtime_ready"
+    },
+    "/fx": {
+      "label": "FX",
+      "description": "FX zeitgeist and systemic FX fragmentation / cross-border liquidity cognition.",
+      "tier": "offline_structure",
+      "primary_state": "fx_runtime_ready"
+    },
+    "/rates": {
+      "label": "RATES",
+      "description": "Bond-market zeitgeist, rates topology, duration stress, and systemic rates OC cognition.",
+      "tier": "offline_structure",
+      "primary_state": "rates_runtime_ready"
+    },
+    "/executive": {
+      "label": "EXECUTIVE",
+      "description": "Executive synthesis center for escalation, contradiction, drift, propagation, and institutional runtime governance.",
+      "tier": "command_layer",
+      "primary_state": "executive_runtime_ready"
+    }
+  }
+}

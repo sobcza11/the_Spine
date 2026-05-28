@@ -1,0 +1,22 @@
+{
+  "route": "/cflow",
+  "label": "C_FLOW",
+  "panels": [
+    {
+      "title": "Z? • Commodity Flow • zeitgeist",
+      "type": "zeitgeist",
+      "source": "C_FLOW v5 / WTI / Commodity Pressure"
+    },
+    {
+      "title": "RBL • Commodities • OC",
+      "type": "rbl",
+      "source": "Commodity Flow RBL"
+    },
+    {
+      "title": "RBL • Commodities (Systemic) • OC",
+      "type": "systemic",
+      "source": "Commodity Propagation / Inflation Stress"
+    }
+  ],
+  "status": "cflow_route_ready"
+}

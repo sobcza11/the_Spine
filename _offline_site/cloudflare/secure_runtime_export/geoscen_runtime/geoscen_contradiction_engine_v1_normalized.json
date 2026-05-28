@@ -1,0 +1,36 @@
+{
+  "component": "GeoScen Contradiction Engine",
+  "version": "v1",
+  "built_at_utc": "2026-05-08T15:01:08.155625+00:00",
+  "status": "normalized_runtime_available",
+  "source_file": "geoscen_contradiction_engine_v1.json",
+  "payload": {
+    "component": "GeoScen Contradiction Engine",
+    "version": "v1",
+    "built_at_utc": "2026-05-08T15:01:08.155625+00:00",
+    "contradiction_score": 0.0,
+    "contradiction_severity": "none",
+    "active_contradiction_count": 0,
+    "active_rules": [],
+    "divergence_matrix": [],
+    "temperature_adjustment": {
+      "adjustment": 0.0,
+      "reason": "No active contradiction pressure."
+    },
+    "rbl_contradiction_paragraph": "No institutionally meaningful contradiction is currently detected. GeoScen remains in monitored synthesis mode.",
+    "source_evidence": {
+      "frontend_available": true,
+      "rbl_available": true,
+      "cb_available": true,
+      "c_flow_available": true,
+      "breadth_available": true
+    },
+    "governance": {
+      "rules_based": true,
+      "ai_last": true,
+      "explainable": true,
+      "source_provenance_required": true,
+      "frontend_highlight_ready": true
+    }
+  }
+}

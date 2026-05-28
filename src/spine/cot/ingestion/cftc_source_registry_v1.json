@@ -1,0 +1,14 @@
+{
+  "legacy_futures": {
+    "base_url": "https://www.cftc.gov/files/dea/history",
+    "description": "Legacy futures-only COT reports"
+  },
+  "disaggregated": {
+    "base_url": "https://www.cftc.gov/dea/newcot",
+    "description": "Disaggregated COT reports"
+  },
+  "financial_futures": {
+    "base_url": "https://www.cftc.gov/dea/financialfutures",
+    "description": "Financial futures reports"
+  }
+}

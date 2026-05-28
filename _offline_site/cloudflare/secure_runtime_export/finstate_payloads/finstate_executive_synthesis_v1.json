@@ -1,0 +1,45 @@
+{
+  "component": "finstate_executive_synthesis_v1",
+  "generated_at_utc": "2026-05-22T16:25:48.419583+00:00",
+  "component_count": 7,
+  "components": [
+    {
+      "file": "corporate_contagion_engine_v1.json",
+      "component": "corporate_contagion_engine_v1",
+      "status": "corporate_contagion_engine_ready"
+    },
+    {
+      "file": "i2_survivability_loader_v1.json",
+      "component": "i2_survivability_loader_v1",
+      "status": "i2_survivability_loader_ready"
+    },
+    {
+      "file": "quarterly_deterioration_propagation_v1.json",
+      "component": "quarterly_deterioration_propagation_v1",
+      "status": "quarterly_deterioration_propagation_ready"
+    },
+    {
+      "file": "recursive_pressure_conditioning_v1.json",
+      "component": "recursive_pressure_conditioning_v1",
+      "status": "recursive_pressure_conditioning_ready"
+    },
+    {
+      "file": "recursive_survivability_graph_v1.json",
+      "component": "recursive_survivability_graph_v1",
+      "status": "recursive_survivability_graph_ready"
+    },
+    {
+      "file": "sector_survivability_ranking_v1.json",
+      "component": "sector_survivability_ranking_v1",
+      "status": "sector_survivability_ranking_ready"
+    },
+    {
+      "file": "survivability_memory_system_v1.json",
+      "component": "survivability_memory_system_v1",
+      "status": "survivability_memory_system_ready"
+    }
+  ],
+  "executive_state": "finstate_survivability_runtime_operational",
+  "interpretation": "FINSTATE is operating as the corporate survivability cognition layer, linking I2 quarterly deterioration, recursive fragility, contagion, persistence, anti-fragility, systemicity, and GeoScen coupling.",
+  "status": "finstate_executive_synthesis_ready"
+}

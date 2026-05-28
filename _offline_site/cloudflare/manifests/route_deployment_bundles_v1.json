@@ -1,0 +1,43 @@
+{
+  "component": "route_deployment_bundles_v1",
+  "generated_at_utc": "2026-05-22T17:01:43.911630+00:00",
+  "route_count": 7,
+  "routes": [
+    {
+      "route": "executive",
+      "bundle_path": "cloudflare/bundles/routes/executive",
+      "route_json_exists": true
+    },
+    {
+      "route": "finstate",
+      "bundle_path": "cloudflare/bundles/routes/finstate",
+      "route_json_exists": true
+    },
+    {
+      "route": "cflow",
+      "bundle_path": "cloudflare/bundles/routes/cflow",
+      "route_json_exists": true
+    },
+    {
+      "route": "fx",
+      "bundle_path": "cloudflare/bundles/routes/fx",
+      "route_json_exists": true
+    },
+    {
+      "route": "rates",
+      "bundle_path": "cloudflare/bundles/routes/rates",
+      "route_json_exists": true
+    },
+    {
+      "route": "equities_industry",
+      "bundle_path": "cloudflare/bundles/routes/equities_industry",
+      "route_json_exists": true
+    },
+    {
+      "route": "equities_sector",
+      "bundle_path": "cloudflare/bundles/routes/equities_sector",
+      "route_json_exists": true
+    }
+  ],
+  "status": "route_deployment_bundles_ready"
+}

@@ -1,0 +1,78 @@
+{
+  "component": "GeoScen Historical Narrative Drift Engine",
+  "version": "v1",
+  "built_at_utc": "2026-05-08T15:34:40.047123+00:00",
+  "status": "normalized_runtime_available",
+  "source_file": "geoscen_historical_narrative_drift_engine_v1.json",
+  "payload": {
+    "component": "GeoScen Historical Narrative Drift Engine",
+    "version": "v1",
+    "built_at_utc": "2026-05-08T15:34:40.047123+00:00",
+    "latest_date": "2026-04-16 00:00:00",
+    "drift_score": 0.15,
+    "drift_regime": "Low Narrative Drift",
+    "active_drift_count": 3,
+    "drift_rows": [
+      {
+        "signal_family": "growth",
+        "term_count": 1,
+        "term_delta": 1.0,
+        "drift_state": "mild_shift"
+      },
+      {
+        "signal_family": "inflation",
+        "term_count": 1,
+        "term_delta": 1.0,
+        "drift_state": "mild_shift"
+      },
+      {
+        "signal_family": "policy",
+        "term_count": 1,
+        "term_delta": 1.0,
+        "drift_state": "mild_shift"
+      },
+      {
+        "signal_family": "risk",
+        "term_count": 0,
+        "term_delta": 0.0,
+        "drift_state": "stable"
+      },
+      {
+        "signal_family": "uncertainty",
+        "term_count": 0,
+        "term_delta": 0.0,
+        "drift_state": "stable"
+      }
+    ],
+    "active_drift": [
+      {
+        "signal_family": "growth",
+        "term_count": 1,
+        "term_delta": 1.0,
+        "drift_state": "mild_shift"
+      },
+      {
+        "signal_family": "inflation",
+        "term_count": 1,
+        "term_delta": 1.0,
+        "drift_state": "mild_shift"
+      },
+      {
+        "signal_family": "policy",
+        "term_count": 1,
+        "term_delta": 1.0,
+        "drift_state": "mild_shift"
+      }
+    ],
+    "cb_cognition_available": true,
+    "contradiction_available": true,
+    "oraclechambers_ready": true,
+    "governance": {
+      "rules_based": true,
+      "ai_last": true,
+      "explainable": true,
+      "historical_drift_ready": true,
+      "source_provenance_required": true
+    }
+  }
+}

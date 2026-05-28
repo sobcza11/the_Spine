@@ -1,0 +1,17 @@
+{
+  "route": "/equities-sector",
+  "label": "EQUITIES - SECTOR",
+  "panels": [
+    {
+      "title": "Z? • Equity - Sector • zeitgeist",
+      "type": "zeitgeist",
+      "source": "Sector Breadth / Sector Rotation"
+    },
+    {
+      "title": "RBL • Equity Sectors • OC",
+      "type": "rbl",
+      "source": "Sector OC Runtime"
+    }
+  ],
+  "status": "equities_sector_route_ready"
+}

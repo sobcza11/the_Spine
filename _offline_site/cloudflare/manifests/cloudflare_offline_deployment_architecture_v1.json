@@ -1,0 +1,26 @@
+{
+  "component": "cloudflare_offline_deployment_architecture_v1",
+  "deployment_target": "Cloudflare Pages",
+  "runtime_mode": "static_offline_runtime",
+  "entrypoint": "index.html",
+  "site_root": "_offline_site",
+  "required_layers": [
+    "config",
+    "core",
+    "css",
+    "components",
+    "geoscen_runtime",
+    "finstate_payloads",
+    "executive_runtime",
+    "langroid_runtime",
+    "payloads",
+    "deploy_manifest"
+  ],
+  "governance": {
+    "local_machine_not_required": true,
+    "static_payloads_only": true,
+    "api_optional_later": true,
+    "offline_first": true
+  },
+  "status": "cloudflare_offline_architecture_ready"
+}

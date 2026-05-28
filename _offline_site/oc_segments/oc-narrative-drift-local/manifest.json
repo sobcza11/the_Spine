@@ -1,0 +1,8 @@
+{
+  "artifact": "build_phase_c_narrative_drift_plane_v1",
+  "site_name": "oc-narrative-drift-local",
+  "domain": "NARRATIVE_DRIFT",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "run_ts": "2026-05-10T21:24:35.229823+00:00"
+}

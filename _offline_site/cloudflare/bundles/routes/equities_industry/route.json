@@ -1,0 +1,22 @@
+{
+  "route": "/equities-industry",
+  "label": "EQUITIES - INDUSTRY",
+  "panels": [
+    {
+      "title": "Z? • Equity Mrkt • zeitgeist",
+      "type": "zeitgeist",
+      "source": "ISM / Breadth / Equity Participation"
+    },
+    {
+      "title": "RBL • Equity Mrkt • OC",
+      "type": "rbl",
+      "source": "GeoScen RBL Synthesis"
+    },
+    {
+      "title": "RBL • Equity Mrkt (Systemic) • OC",
+      "type": "systemic",
+      "source": "Langroid Escalation Graph"
+    }
+  ],
+  "status": "equities_industry_route_ready"
+}

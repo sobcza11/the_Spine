@@ -1,0 +1,193 @@
+/* =========================
+   BASE
+   ========================= */
+
+:root {
+  --bg: #03070d;
+  --panel: #08121d;
+  --border: #1f2a38;
+  --text: #e6ecf5;
+  --text-soft: #9fb3c8;
+  --text-muted: #7e899b;
+  --accent: #d5b37c;
+  --good: #16a34a;
+  --bad: #dc2626;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, sans-serif;
+}
+
+/* =========================
+   GRID SYSTEMS
+   ========================= */
+
+/* FX */
+.fx-main-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr;
+  grid-template-areas:
+    "price price spread"
+    "geoscen sigma reserved";
+  gap: 18px;
+}
+
+/* WTI */
+.wti-main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "inventory price macro"
+    "geoscen sigma reserved";
+  gap: 18px;
+}
+
+/* EQUITIES */
+.equities-main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "index industry top"
+    "geoscen sigma reserved";
+  gap: 18px;
+}
+
+/* =========================
+   PANEL PLACEMENT
+   ========================= */
+
+/* FX */
+.fx-price-panel { grid-area: price; }
+.fx-spread-panel { grid-area: spread; }
+.fx-geoscen-panel { grid-area: geoscen; }
+.fx-sigma-panel { grid-area: sigma; }
+.fx-reserved-panel { grid-area: reserved; }
+
+/* WTI */
+.wti-inventory-panel { grid-area: inventory; }
+.wti-price-panel { grid-area: price; }
+.wti-macro-panel { grid-area: macro; }
+.wti-geoscen-panel { grid-area: geoscen; }
+.wti-sigma-panel { grid-area: sigma; }
+
+/* EQUITIES */
+.equities-index-panel { grid-area: index; }
+.equities-industry-panel { grid-area: industry; }
+.equities-top-right-panel { grid-area: top; }
+.equities-geoscen-panel { grid-area: geoscen; }
+.equities-sigma-panel { grid-area: sigma; }
+.equities-reserved-panel { grid-area: reserved; }
+
+/* =========================
+   PANELS
+   ========================= */
+
+.fx-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 260px;
+}
+
+.panel-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+.panel-placeholder {
+  border: 1px dashed #223347;
+  border-radius: 8px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f7388;
+}
+
+.panel-source {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* =========================
+   TOOLBAR
+   ========================= */
+
+.fx-toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.fx-control-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.fx-control-group label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.fx-control-group select {
+  background: #08121d;
+  color: white;
+  border: 1px solid #1f2a38;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 820px) {
+
+  .fx-main-grid,
+  .wti-main-grid,
+  .equities-main-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "price"
+      "spread"
+      "geoscen"
+      "sigma"
+      "reserved";
+  }
+
+  .equities-main-grid {
+    grid-template-areas:
+      "index"
+      "industry"
+      "top"
+      "geoscen"
+      "sigma"
+      "reserved";
+  }
+}
+
+/* =========================
+   CRITICAL FIX (YOUR BUG)
+   ========================= */
+
+/* THIS ensures desktop NEVER falls into mobile */
+
+@media (min-width: 821px) {
+
+  .equities-main-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-areas:
+      "index industry top"
+      "geoscen sigma reserved";
+  }
+
+}

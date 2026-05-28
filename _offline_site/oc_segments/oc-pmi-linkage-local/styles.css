@@ -1,0 +1,36 @@
+
+body{
+margin:0;
+background:#020617;
+color:#e5e7eb;
+font-family:Arial,sans-serif;
+}
+.shell{padding:32px;}
+.hero{
+background:#0f172a;
+border:1px solid #334155;
+border-radius:18px;
+padding:24px;
+margin-bottom:24px;
+}
+.eyebrow{
+font-size:12px;
+letter-spacing:.12em;
+color:#94a3b8;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+.card{
+background:#111827;
+border:1px solid #334155;
+border-radius:18px;
+padding:20px;
+}
+.wide{margin-top:16px;}
+pre{
+white-space:pre-wrap;
+line-height:1.5;
+}

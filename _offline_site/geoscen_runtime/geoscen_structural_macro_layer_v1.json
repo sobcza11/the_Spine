@@ -1,0 +1,56 @@
+{
+  "component": "GeoScen Structural Macro Layer",
+  "version": "v1",
+  "built_at_utc": "2026-05-08T15:41:39.558943+00:00",
+  "structural_pressure_score": 0.5,
+  "structural_regime": "Moderate Structural Monitoring",
+  "signal_family_count": 6,
+  "signal_rows": [
+    {
+      "signal_family": "inflation",
+      "macro_state": "active_monitoring",
+      "source": "WTI inflation pressure / RBL",
+      "available": true
+    },
+    {
+      "signal_family": "growth",
+      "macro_state": "stable_growth",
+      "source": "PMI / ISM qualitative RBL",
+      "available": true
+    },
+    {
+      "signal_family": "labor",
+      "macro_state": "pending_source",
+      "source": "NFP / unemployment not yet connected",
+      "available": false
+    },
+    {
+      "signal_family": "liquidity",
+      "macro_state": "active_monitoring",
+      "source": "C_FLOW v5",
+      "available": true
+    },
+    {
+      "signal_family": "rates",
+      "macro_state": "active_monitoring",
+      "source": "Rates Z\u209c",
+      "available": true
+    },
+    {
+      "signal_family": "consumer",
+      "macro_state": "pending_source",
+      "source": "consumer sentiment not yet connected",
+      "available": false
+    }
+  ],
+  "drift_available": true,
+  "contradiction_available": true,
+  "oraclechambers_ready": true,
+  "governance": {
+    "rules_based": true,
+    "ai_last": true,
+    "explainable": true,
+    "uses_existing_serving_sources": true,
+    "full_macro_panel_required": false
+  }
+}

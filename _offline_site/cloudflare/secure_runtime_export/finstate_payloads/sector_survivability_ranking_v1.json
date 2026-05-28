@@ -1,0 +1,16 @@
+{
+  "component": "sector_survivability_ranking_v1",
+  "generated_at_utc": "2026-05-22T16:21:30.851524+00:00",
+  "sector_column": "sector_proxy",
+  "pressure_column": "q_credit_cycle_survivability_pressure",
+  "sector_count": 1,
+  "top_sectors": [
+    {
+      "sector_proxy": "unclassified_sector",
+      "avg_survivability_pressure": 0.036085370283571595,
+      "symbol_count": 4419,
+      "rank": 1
+    }
+  ],
+  "status": "sector_survivability_ranking_ready"
+}

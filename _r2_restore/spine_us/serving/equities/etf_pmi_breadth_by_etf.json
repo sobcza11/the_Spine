@@ -1,0 +1,3152 @@
+[
+  {
+    "date": "2020-01-01",
+    "etf": "SPY",
+    "composite_signal": 0.2,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-02-01",
+    "etf": "SPY",
+    "composite_signal": 5.1,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-03-01",
+    "etf": "SPY",
+    "composite_signal": 2.1,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-04-01",
+    "etf": "SPY",
+    "composite_signal": -5.1,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-05-01",
+    "etf": "SPY",
+    "composite_signal": -3.7,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-06-01",
+    "etf": "SPY",
+    "composite_signal": 1.9,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-07-01",
+    "etf": "SPY",
+    "composite_signal": 2.8,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-08-01",
+    "etf": "SPY",
+    "composite_signal": 7.8,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-09-20",
+    "etf": "SPY",
+    "composite_signal": 6.2,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-10-01",
+    "etf": "SPY",
+    "composite_signal": 7.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-11-01",
+    "etf": "SPY",
+    "composite_signal": 7.2,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-12-01",
+    "etf": "SPY",
+    "composite_signal": 8.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-01-01",
+    "etf": "SPY",
+    "composite_signal": 10.6,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-02-01",
+    "etf": "SPY",
+    "composite_signal": 10.1,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-03-01",
+    "etf": "SPY",
+    "composite_signal": 10.1,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-04-01",
+    "etf": "SPY",
+    "composite_signal": 10.7,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-05-01",
+    "etf": "SPY",
+    "composite_signal": 8.3,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-06-01",
+    "etf": "SPY",
+    "composite_signal": 10.6,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-07-01",
+    "etf": "SPY",
+    "composite_signal": 7.6,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-08-01",
+    "etf": "SPY",
+    "composite_signal": 9.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-09-01",
+    "etf": "SPY",
+    "composite_signal": 8.2,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-10-01",
+    "etf": "SPY",
+    "composite_signal": 6.9,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-11-01",
+    "etf": "SPY",
+    "composite_signal": 5.7,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-12-01",
+    "etf": "SPY",
+    "composite_signal": 5.7,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-01-01",
+    "etf": "SPY",
+    "composite_signal": 5.2,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-02-01",
+    "etf": "SPY",
+    "composite_signal": 8.3,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-03-01",
+    "etf": "SPY",
+    "composite_signal": 6.8,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-04-01",
+    "etf": "SPY",
+    "composite_signal": 9.9,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-05-01",
+    "etf": "SPY",
+    "composite_signal": 6.9,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-06-01",
+    "etf": "SPY",
+    "composite_signal": 6.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-07-01",
+    "etf": "SPY",
+    "composite_signal": 1.3,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-08-01",
+    "etf": "SPY",
+    "composite_signal": 1.8,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-09-01",
+    "etf": "SPY",
+    "composite_signal": 1.9,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-10-01",
+    "etf": "SPY",
+    "composite_signal": -1.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-11-01",
+    "etf": "SPY",
+    "composite_signal": -3.4,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-12-01",
+    "etf": "SPY",
+    "composite_signal": -6.2,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-01-01",
+    "etf": "SPY",
+    "composite_signal": -5.8,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-02-01",
+    "etf": "SPY",
+    "composite_signal": -4.4,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-03-01",
+    "etf": "SPY",
+    "composite_signal": -2.6,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-04-01",
+    "etf": "SPY",
+    "composite_signal": -3.2,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-05-01",
+    "etf": "SPY",
+    "composite_signal": -4.7,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-06-01",
+    "etf": "SPY",
+    "composite_signal": -3.7,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-07-01",
+    "etf": "SPY",
+    "composite_signal": -8.2,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-08-01",
+    "etf": "SPY",
+    "composite_signal": -4.6,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-09-01",
+    "etf": "SPY",
+    "composite_signal": -3.3,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-10-01",
+    "etf": "SPY",
+    "composite_signal": -4.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-11-01",
+    "etf": "SPY",
+    "composite_signal": -5.6,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-12-01",
+    "etf": "SPY",
+    "composite_signal": -5.4,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-01-01",
+    "etf": "SPY",
+    "composite_signal": -4.8,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-02-01",
+    "etf": "SPY",
+    "composite_signal": 0.3,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-03-01",
+    "etf": "SPY",
+    "composite_signal": 0.8,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-04-01",
+    "etf": "SPY",
+    "composite_signal": 0.6,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-05-01",
+    "etf": "SPY",
+    "composite_signal": -0.7,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-06-01",
+    "etf": "SPY",
+    "composite_signal": -1.7,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-07-01",
+    "etf": "SPY",
+    "composite_signal": -6.2,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-08-01",
+    "etf": "SPY",
+    "composite_signal": -3.1,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-09-01",
+    "etf": "SPY",
+    "composite_signal": -4.6,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-10-01",
+    "etf": "SPY",
+    "composite_signal": -3.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-11-01",
+    "etf": "SPY",
+    "composite_signal": -3.9,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-12-01",
+    "etf": "SPY",
+    "composite_signal": 0.2,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-01-01",
+    "etf": "SPY",
+    "composite_signal": 1.1,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-02-01",
+    "etf": "SPY",
+    "composite_signal": 2.6,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-03-01",
+    "etf": "SPY",
+    "composite_signal": 0.6,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-04-01",
+    "etf": "SPY",
+    "composite_signal": 1.9,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-05-01",
+    "etf": "SPY",
+    "composite_signal": -0.4,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-06-01",
+    "etf": "SPY",
+    "composite_signal": 0.0,
+    "bias": "Neutral",
+    "state": "Neutral"
+  },
+  {
+    "date": "2025-07-01",
+    "etf": "SPY",
+    "composite_signal": -3.2,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-08-01",
+    "etf": "SPY",
+    "composite_signal": -3.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-09-01",
+    "etf": "SPY",
+    "composite_signal": -2.9,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-10-01",
+    "etf": "SPY",
+    "composite_signal": -0.2,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-11-01",
+    "etf": "SPY",
+    "composite_signal": -1.6,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-12-01",
+    "etf": "SPY",
+    "composite_signal": 0.2,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-01-01",
+    "etf": "SPY",
+    "composite_signal": 2.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-02-01",
+    "etf": "SPY",
+    "composite_signal": 4.3,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-03-01",
+    "etf": "SPY",
+    "composite_signal": 5.1,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-01-01",
+    "etf": "QQQ",
+    "composite_signal": -0.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-02-01",
+    "etf": "QQQ",
+    "composite_signal": 4.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-03-01",
+    "etf": "QQQ",
+    "composite_signal": 1.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-04-01",
+    "etf": "QQQ",
+    "composite_signal": -6.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-05-01",
+    "etf": "QQQ",
+    "composite_signal": -4.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-06-01",
+    "etf": "QQQ",
+    "composite_signal": 2.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-07-01",
+    "etf": "QQQ",
+    "composite_signal": 1.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-08-01",
+    "etf": "QQQ",
+    "composite_signal": 6.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-09-20",
+    "etf": "QQQ",
+    "composite_signal": 5.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-10-01",
+    "etf": "QQQ",
+    "composite_signal": 5.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-11-01",
+    "etf": "QQQ",
+    "composite_signal": 8.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-12-01",
+    "etf": "QQQ",
+    "composite_signal": 8.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-01-01",
+    "etf": "QQQ",
+    "composite_signal": 10.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-02-01",
+    "etf": "QQQ",
+    "composite_signal": 10.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-03-01",
+    "etf": "QQQ",
+    "composite_signal": 15.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-04-01",
+    "etf": "QQQ",
+    "composite_signal": 13.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-05-01",
+    "etf": "QQQ",
+    "composite_signal": 9.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-06-01",
+    "etf": "QQQ",
+    "composite_signal": 15.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-07-01",
+    "etf": "QQQ",
+    "composite_signal": 9.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-08-01",
+    "etf": "QQQ",
+    "composite_signal": 12.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-09-01",
+    "etf": "QQQ",
+    "composite_signal": 14.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-10-01",
+    "etf": "QQQ",
+    "composite_signal": 11.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-11-01",
+    "etf": "QQQ",
+    "composite_signal": 10.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-12-01",
+    "etf": "QQQ",
+    "composite_signal": 7.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-01-01",
+    "etf": "QQQ",
+    "composite_signal": 7.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-02-01",
+    "etf": "QQQ",
+    "composite_signal": 9.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-03-01",
+    "etf": "QQQ",
+    "composite_signal": 8.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-04-01",
+    "etf": "QQQ",
+    "composite_signal": 12.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-05-01",
+    "etf": "QQQ",
+    "composite_signal": 8.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-06-01",
+    "etf": "QQQ",
+    "composite_signal": 11.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-07-01",
+    "etf": "QQQ",
+    "composite_signal": 4.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-08-01",
+    "etf": "QQQ",
+    "composite_signal": 3.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-09-01",
+    "etf": "QQQ",
+    "composite_signal": 3.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-10-01",
+    "etf": "QQQ",
+    "composite_signal": 1.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-11-01",
+    "etf": "QQQ",
+    "composite_signal": -2.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-12-01",
+    "etf": "QQQ",
+    "composite_signal": -5.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-01-01",
+    "etf": "QQQ",
+    "composite_signal": -4.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-02-01",
+    "etf": "QQQ",
+    "composite_signal": -1.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-03-01",
+    "etf": "QQQ",
+    "composite_signal": -1.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-04-01",
+    "etf": "QQQ",
+    "composite_signal": -5.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-05-01",
+    "etf": "QQQ",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-06-01",
+    "etf": "QQQ",
+    "composite_signal": -4.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-07-01",
+    "etf": "QQQ",
+    "composite_signal": -6.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-08-01",
+    "etf": "QQQ",
+    "composite_signal": -4.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-09-01",
+    "etf": "QQQ",
+    "composite_signal": -4.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-10-01",
+    "etf": "QQQ",
+    "composite_signal": -9.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-11-01",
+    "etf": "QQQ",
+    "composite_signal": -10.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-12-01",
+    "etf": "QQQ",
+    "composite_signal": -7.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-01-01",
+    "etf": "QQQ",
+    "composite_signal": -8.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-02-01",
+    "etf": "QQQ",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-03-01",
+    "etf": "QQQ",
+    "composite_signal": -3.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-04-01",
+    "etf": "QQQ",
+    "composite_signal": -0.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-05-01",
+    "etf": "QQQ",
+    "composite_signal": -3.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-06-01",
+    "etf": "QQQ",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-07-01",
+    "etf": "QQQ",
+    "composite_signal": -6.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-08-01",
+    "etf": "QQQ",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-09-01",
+    "etf": "QQQ",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-10-01",
+    "etf": "QQQ",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-11-01",
+    "etf": "QQQ",
+    "composite_signal": -0.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-12-01",
+    "etf": "QQQ",
+    "composite_signal": 0.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-01-01",
+    "etf": "QQQ",
+    "composite_signal": 0.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-02-01",
+    "etf": "QQQ",
+    "composite_signal": 0.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-03-01",
+    "etf": "QQQ",
+    "composite_signal": 2.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-04-01",
+    "etf": "QQQ",
+    "composite_signal": 5.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-05-01",
+    "etf": "QQQ",
+    "composite_signal": 1.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-06-01",
+    "etf": "QQQ",
+    "composite_signal": 2.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-07-01",
+    "etf": "QQQ",
+    "composite_signal": -4.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-08-01",
+    "etf": "QQQ",
+    "composite_signal": -4.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-09-01",
+    "etf": "QQQ",
+    "composite_signal": -2.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-10-01",
+    "etf": "QQQ",
+    "composite_signal": -3.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-11-01",
+    "etf": "QQQ",
+    "composite_signal": 1.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-12-01",
+    "etf": "QQQ",
+    "composite_signal": 0.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-01-01",
+    "etf": "QQQ",
+    "composite_signal": 0.0,
+    "bias": "Neutral",
+    "state": "Neutral"
+  },
+  {
+    "date": "2026-02-01",
+    "etf": "QQQ",
+    "composite_signal": 4.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-03-01",
+    "etf": "QQQ",
+    "composite_signal": 7.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-01-01",
+    "etf": "DIA",
+    "composite_signal": -0.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-02-01",
+    "etf": "DIA",
+    "composite_signal": 3.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-03-01",
+    "etf": "DIA",
+    "composite_signal": 1.166667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-04-01",
+    "etf": "DIA",
+    "composite_signal": -5.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-05-01",
+    "etf": "DIA",
+    "composite_signal": -5.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-06-01",
+    "etf": "DIA",
+    "composite_signal": -0.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-07-01",
+    "etf": "DIA",
+    "composite_signal": 0.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-08-01",
+    "etf": "DIA",
+    "composite_signal": 6.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-09-20",
+    "etf": "DIA",
+    "composite_signal": 5.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-10-01",
+    "etf": "DIA",
+    "composite_signal": 7.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-11-01",
+    "etf": "DIA",
+    "composite_signal": 7.166667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-12-01",
+    "etf": "DIA",
+    "composite_signal": 9.166667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-01-01",
+    "etf": "DIA",
+    "composite_signal": 12.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-02-01",
+    "etf": "DIA",
+    "composite_signal": 11.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-03-01",
+    "etf": "DIA",
+    "composite_signal": 8.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-04-01",
+    "etf": "DIA",
+    "composite_signal": 10.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-05-01",
+    "etf": "DIA",
+    "composite_signal": 6.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-06-01",
+    "etf": "DIA",
+    "composite_signal": 9.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-07-01",
+    "etf": "DIA",
+    "composite_signal": 8.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-08-01",
+    "etf": "DIA",
+    "composite_signal": 8.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-09-01",
+    "etf": "DIA",
+    "composite_signal": 8.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-10-01",
+    "etf": "DIA",
+    "composite_signal": 5.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-11-01",
+    "etf": "DIA",
+    "composite_signal": 3.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-12-01",
+    "etf": "DIA",
+    "composite_signal": 4.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-01-01",
+    "etf": "DIA",
+    "composite_signal": 5.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-02-01",
+    "etf": "DIA",
+    "composite_signal": 9.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-03-01",
+    "etf": "DIA",
+    "composite_signal": 6.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-04-01",
+    "etf": "DIA",
+    "composite_signal": 8.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-05-01",
+    "etf": "DIA",
+    "composite_signal": 6.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-06-01",
+    "etf": "DIA",
+    "composite_signal": 4.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-07-01",
+    "etf": "DIA",
+    "composite_signal": 0.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-08-01",
+    "etf": "DIA",
+    "composite_signal": 1.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-09-01",
+    "etf": "DIA",
+    "composite_signal": 1.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-10-01",
+    "etf": "DIA",
+    "composite_signal": -1.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-11-01",
+    "etf": "DIA",
+    "composite_signal": -3.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-12-01",
+    "etf": "DIA",
+    "composite_signal": -6.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-01-01",
+    "etf": "DIA",
+    "composite_signal": -5.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-02-01",
+    "etf": "DIA",
+    "composite_signal": -4.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-03-01",
+    "etf": "DIA",
+    "composite_signal": -1.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-04-01",
+    "etf": "DIA",
+    "composite_signal": -2.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-05-01",
+    "etf": "DIA",
+    "composite_signal": -4.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-06-01",
+    "etf": "DIA",
+    "composite_signal": -2.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-07-01",
+    "etf": "DIA",
+    "composite_signal": -6.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-08-01",
+    "etf": "DIA",
+    "composite_signal": -4.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-09-01",
+    "etf": "DIA",
+    "composite_signal": -3.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-10-01",
+    "etf": "DIA",
+    "composite_signal": -5.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-11-01",
+    "etf": "DIA",
+    "composite_signal": -5.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-12-01",
+    "etf": "DIA",
+    "composite_signal": -5.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-01-01",
+    "etf": "DIA",
+    "composite_signal": -3.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-02-01",
+    "etf": "DIA",
+    "composite_signal": 1.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-03-01",
+    "etf": "DIA",
+    "composite_signal": 2.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-04-01",
+    "etf": "DIA",
+    "composite_signal": 0.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-05-01",
+    "etf": "DIA",
+    "composite_signal": 0.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-06-01",
+    "etf": "DIA",
+    "composite_signal": -1.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-07-01",
+    "etf": "DIA",
+    "composite_signal": -6.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-08-01",
+    "etf": "DIA",
+    "composite_signal": -2.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-09-01",
+    "etf": "DIA",
+    "composite_signal": -5.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-10-01",
+    "etf": "DIA",
+    "composite_signal": -5.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-11-01",
+    "etf": "DIA",
+    "composite_signal": -5.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-12-01",
+    "etf": "DIA",
+    "composite_signal": -0.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-01-01",
+    "etf": "DIA",
+    "composite_signal": 2.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-02-01",
+    "etf": "DIA",
+    "composite_signal": 2.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-03-01",
+    "etf": "DIA",
+    "composite_signal": 1.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-04-01",
+    "etf": "DIA",
+    "composite_signal": -0.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-05-01",
+    "etf": "DIA",
+    "composite_signal": -1.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-06-01",
+    "etf": "DIA",
+    "composite_signal": -1.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-07-01",
+    "etf": "DIA",
+    "composite_signal": -5.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-08-01",
+    "etf": "DIA",
+    "composite_signal": -4.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-09-01",
+    "etf": "DIA",
+    "composite_signal": -2.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-10-01",
+    "etf": "DIA",
+    "composite_signal": -0.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-11-01",
+    "etf": "DIA",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-12-01",
+    "etf": "DIA",
+    "composite_signal": 0.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-01-01",
+    "etf": "DIA",
+    "composite_signal": 4.166667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-02-01",
+    "etf": "DIA",
+    "composite_signal": 5.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-03-01",
+    "etf": "DIA",
+    "composite_signal": 6.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-01-01",
+    "etf": "ITOT",
+    "composite_signal": 1.416667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-02-01",
+    "etf": "ITOT",
+    "composite_signal": 6.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-03-01",
+    "etf": "ITOT",
+    "composite_signal": 2.083333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-04-01",
+    "etf": "ITOT",
+    "composite_signal": -5.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-05-01",
+    "etf": "ITOT",
+    "composite_signal": -2.583333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-06-01",
+    "etf": "ITOT",
+    "composite_signal": 3.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-07-01",
+    "etf": "ITOT",
+    "composite_signal": 4.416667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-08-01",
+    "etf": "ITOT",
+    "composite_signal": 7.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-09-20",
+    "etf": "ITOT",
+    "composite_signal": 7.166667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-10-01",
+    "etf": "ITOT",
+    "composite_signal": 7.583333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-11-01",
+    "etf": "ITOT",
+    "composite_signal": 7.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-12-01",
+    "etf": "ITOT",
+    "composite_signal": 9.083333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-01-01",
+    "etf": "ITOT",
+    "composite_signal": 9.75,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-02-01",
+    "etf": "ITOT",
+    "composite_signal": 9.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-03-01",
+    "etf": "ITOT",
+    "composite_signal": 9.416667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-04-01",
+    "etf": "ITOT",
+    "composite_signal": 10.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-05-01",
+    "etf": "ITOT",
+    "composite_signal": 8.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-06-01",
+    "etf": "ITOT",
+    "composite_signal": 10.416667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-07-01",
+    "etf": "ITOT",
+    "composite_signal": 7.916667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-08-01",
+    "etf": "ITOT",
+    "composite_signal": 9.083333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-09-01",
+    "etf": "ITOT",
+    "composite_signal": 8.166667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-10-01",
+    "etf": "ITOT",
+    "composite_signal": 6.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-11-01",
+    "etf": "ITOT",
+    "composite_signal": 5.75,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-12-01",
+    "etf": "ITOT",
+    "composite_signal": 5.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-01-01",
+    "etf": "ITOT",
+    "composite_signal": 5.416667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-02-01",
+    "etf": "ITOT",
+    "composite_signal": 7.416667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-03-01",
+    "etf": "ITOT",
+    "composite_signal": 6.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-04-01",
+    "etf": "ITOT",
+    "composite_signal": 8.833333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-05-01",
+    "etf": "ITOT",
+    "composite_signal": 5.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-06-01",
+    "etf": "ITOT",
+    "composite_signal": 4.75,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-07-01",
+    "etf": "ITOT",
+    "composite_signal": 0.0,
+    "bias": "Neutral",
+    "state": "Neutral"
+  },
+  {
+    "date": "2022-08-01",
+    "etf": "ITOT",
+    "composite_signal": 0.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-09-01",
+    "etf": "ITOT",
+    "composite_signal": 0.583333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-10-01",
+    "etf": "ITOT",
+    "composite_signal": -2.416667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-11-01",
+    "etf": "ITOT",
+    "composite_signal": -4.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-12-01",
+    "etf": "ITOT",
+    "composite_signal": -6.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-01-01",
+    "etf": "ITOT",
+    "composite_signal": -7.083333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-02-01",
+    "etf": "ITOT",
+    "composite_signal": -5.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-03-01",
+    "etf": "ITOT",
+    "composite_signal": -3.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-04-01",
+    "etf": "ITOT",
+    "composite_signal": -4.416667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-05-01",
+    "etf": "ITOT",
+    "composite_signal": -4.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-06-01",
+    "etf": "ITOT",
+    "composite_signal": -3.916667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-07-01",
+    "etf": "ITOT",
+    "composite_signal": -7.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-08-01",
+    "etf": "ITOT",
+    "composite_signal": -5.083333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-09-01",
+    "etf": "ITOT",
+    "composite_signal": -4.083333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-10-01",
+    "etf": "ITOT",
+    "composite_signal": -4.916667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-11-01",
+    "etf": "ITOT",
+    "composite_signal": -5.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-12-01",
+    "etf": "ITOT",
+    "composite_signal": -5.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-01-01",
+    "etf": "ITOT",
+    "composite_signal": -5.833333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-02-01",
+    "etf": "ITOT",
+    "composite_signal": -0.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-03-01",
+    "etf": "ITOT",
+    "composite_signal": 0.166667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2024-04-01",
+    "etf": "ITOT",
+    "composite_signal": -0.25,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-05-01",
+    "etf": "ITOT",
+    "composite_signal": -1.416667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-06-01",
+    "etf": "ITOT",
+    "composite_signal": -1.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-07-01",
+    "etf": "ITOT",
+    "composite_signal": -5.333333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-08-01",
+    "etf": "ITOT",
+    "composite_signal": -2.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-09-01",
+    "etf": "ITOT",
+    "composite_signal": -4.583333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-10-01",
+    "etf": "ITOT",
+    "composite_signal": -2.916667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-11-01",
+    "etf": "ITOT",
+    "composite_signal": -3.666667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-12-01",
+    "etf": "ITOT",
+    "composite_signal": 0.916667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-01-01",
+    "etf": "ITOT",
+    "composite_signal": 0.083333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-02-01",
+    "etf": "ITOT",
+    "composite_signal": 2.333333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-03-01",
+    "etf": "ITOT",
+    "composite_signal": -0.416667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-04-01",
+    "etf": "ITOT",
+    "composite_signal": 0.666667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-05-01",
+    "etf": "ITOT",
+    "composite_signal": -0.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-06-01",
+    "etf": "ITOT",
+    "composite_signal": 0.0,
+    "bias": "Neutral",
+    "state": "Neutral"
+  },
+  {
+    "date": "2025-07-01",
+    "etf": "ITOT",
+    "composite_signal": -3.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-08-01",
+    "etf": "ITOT",
+    "composite_signal": -4.166667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-09-01",
+    "etf": "ITOT",
+    "composite_signal": -3.916667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-10-01",
+    "etf": "ITOT",
+    "composite_signal": -1.583333,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-11-01",
+    "etf": "ITOT",
+    "composite_signal": -2.416667,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-12-01",
+    "etf": "ITOT",
+    "composite_signal": -0.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2026-01-01",
+    "etf": "ITOT",
+    "composite_signal": 0.916667,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-02-01",
+    "etf": "ITOT",
+    "composite_signal": 3.083333,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-03-01",
+    "etf": "ITOT",
+    "composite_signal": 4.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-01-01",
+    "etf": "MDY",
+    "composite_signal": 0.857143,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-02-01",
+    "etf": "MDY",
+    "composite_signal": 6.571429,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-03-01",
+    "etf": "MDY",
+    "composite_signal": -0.285714,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-04-01",
+    "etf": "MDY",
+    "composite_signal": -9.571429,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-05-01",
+    "etf": "MDY",
+    "composite_signal": -3.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-06-01",
+    "etf": "MDY",
+    "composite_signal": 3.285714,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-07-01",
+    "etf": "MDY",
+    "composite_signal": 4.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-08-01",
+    "etf": "MDY",
+    "composite_signal": 6.714286,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-09-20",
+    "etf": "MDY",
+    "composite_signal": 7.428571,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-10-01",
+    "etf": "MDY",
+    "composite_signal": 8.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-11-01",
+    "etf": "MDY",
+    "composite_signal": 8.285714,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-12-01",
+    "etf": "MDY",
+    "composite_signal": 10.857143,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-01-01",
+    "etf": "MDY",
+    "composite_signal": 10.714286,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-02-01",
+    "etf": "MDY",
+    "composite_signal": 8.857143,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-03-01",
+    "etf": "MDY",
+    "composite_signal": 9.714286,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-04-01",
+    "etf": "MDY",
+    "composite_signal": 11.285714,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-05-01",
+    "etf": "MDY",
+    "composite_signal": 9.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-06-01",
+    "etf": "MDY",
+    "composite_signal": 12.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-07-01",
+    "etf": "MDY",
+    "composite_signal": 7.428571,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-08-01",
+    "etf": "MDY",
+    "composite_signal": 9.571429,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-09-01",
+    "etf": "MDY",
+    "composite_signal": 7.857143,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-10-01",
+    "etf": "MDY",
+    "composite_signal": 7.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-11-01",
+    "etf": "MDY",
+    "composite_signal": 6.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-12-01",
+    "etf": "MDY",
+    "composite_signal": 7.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-01-01",
+    "etf": "MDY",
+    "composite_signal": 6.428571,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-02-01",
+    "etf": "MDY",
+    "composite_signal": 7.285714,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-03-01",
+    "etf": "MDY",
+    "composite_signal": 7.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-04-01",
+    "etf": "MDY",
+    "composite_signal": 8.714286,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-05-01",
+    "etf": "MDY",
+    "composite_signal": 4.714286,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-06-01",
+    "etf": "MDY",
+    "composite_signal": 5.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-07-01",
+    "etf": "MDY",
+    "composite_signal": -0.285714,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-08-01",
+    "etf": "MDY",
+    "composite_signal": 0.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-09-01",
+    "etf": "MDY",
+    "composite_signal": 1.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-10-01",
+    "etf": "MDY",
+    "composite_signal": -1.571429,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-11-01",
+    "etf": "MDY",
+    "composite_signal": -4.714286,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-12-01",
+    "etf": "MDY",
+    "composite_signal": -7.857143,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-01-01",
+    "etf": "MDY",
+    "composite_signal": -7.857143,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-02-01",
+    "etf": "MDY",
+    "composite_signal": -4.428571,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-03-01",
+    "etf": "MDY",
+    "composite_signal": -3.714286,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-04-01",
+    "etf": "MDY",
+    "composite_signal": -5.428571,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-05-01",
+    "etf": "MDY",
+    "composite_signal": -2.428571,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-06-01",
+    "etf": "MDY",
+    "composite_signal": -4.285714,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-07-01",
+    "etf": "MDY",
+    "composite_signal": -5.857143,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-08-01",
+    "etf": "MDY",
+    "composite_signal": -5.571429,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-09-01",
+    "etf": "MDY",
+    "composite_signal": -5.714286,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-10-01",
+    "etf": "MDY",
+    "composite_signal": -6.285714,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-11-01",
+    "etf": "MDY",
+    "composite_signal": -4.428571,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-12-01",
+    "etf": "MDY",
+    "composite_signal": -7.285714,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-01-01",
+    "etf": "MDY",
+    "composite_signal": -7.714286,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-02-01",
+    "etf": "MDY",
+    "composite_signal": -1.285714,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-03-01",
+    "etf": "MDY",
+    "composite_signal": -2.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-04-01",
+    "etf": "MDY",
+    "composite_signal": -1.142857,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-05-01",
+    "etf": "MDY",
+    "composite_signal": -3.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-06-01",
+    "etf": "MDY",
+    "composite_signal": -3.857143,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-07-01",
+    "etf": "MDY",
+    "composite_signal": -6.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-08-01",
+    "etf": "MDY",
+    "composite_signal": -5.142857,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-09-01",
+    "etf": "MDY",
+    "composite_signal": -5.857143,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-10-01",
+    "etf": "MDY",
+    "composite_signal": -3.857143,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-11-01",
+    "etf": "MDY",
+    "composite_signal": -4.428571,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-12-01",
+    "etf": "MDY",
+    "composite_signal": 0.571429,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-01-01",
+    "etf": "MDY",
+    "composite_signal": -0.714286,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-02-01",
+    "etf": "MDY",
+    "composite_signal": 1.714286,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-03-01",
+    "etf": "MDY",
+    "composite_signal": -0.714286,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-04-01",
+    "etf": "MDY",
+    "composite_signal": 0.857143,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-05-01",
+    "etf": "MDY",
+    "composite_signal": 1.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-06-01",
+    "etf": "MDY",
+    "composite_signal": 0.142857,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-07-01",
+    "etf": "MDY",
+    "composite_signal": -2.142857,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-08-01",
+    "etf": "MDY",
+    "composite_signal": -5.714286,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-09-01",
+    "etf": "MDY",
+    "composite_signal": -5.142857,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-10-01",
+    "etf": "MDY",
+    "composite_signal": -2.285714,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-11-01",
+    "etf": "MDY",
+    "composite_signal": -3.142857,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-12-01",
+    "etf": "MDY",
+    "composite_signal": -1.642857,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2026-01-01",
+    "etf": "MDY",
+    "composite_signal": -0.142857,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2026-02-01",
+    "etf": "MDY",
+    "composite_signal": 2.714286,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-03-01",
+    "etf": "MDY",
+    "composite_signal": 4.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-01-01",
+    "etf": "IWM",
+    "composite_signal": -0.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-02-01",
+    "etf": "IWM",
+    "composite_signal": 8.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-03-01",
+    "etf": "IWM",
+    "composite_signal": 1.875,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-04-01",
+    "etf": "IWM",
+    "composite_signal": -9.25,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-05-01",
+    "etf": "IWM",
+    "composite_signal": -1.875,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2020-06-01",
+    "etf": "IWM",
+    "composite_signal": 7.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-07-01",
+    "etf": "IWM",
+    "composite_signal": 7.125,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-08-01",
+    "etf": "IWM",
+    "composite_signal": 7.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-09-20",
+    "etf": "IWM",
+    "composite_signal": 4.625,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-10-01",
+    "etf": "IWM",
+    "composite_signal": 7.875,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-11-01",
+    "etf": "IWM",
+    "composite_signal": 8.875,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2020-12-01",
+    "etf": "IWM",
+    "composite_signal": 10.125,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-01-01",
+    "etf": "IWM",
+    "composite_signal": 7.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-02-01",
+    "etf": "IWM",
+    "composite_signal": 7.125,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-03-01",
+    "etf": "IWM",
+    "composite_signal": 9.75,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-04-01",
+    "etf": "IWM",
+    "composite_signal": 10.125,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-05-01",
+    "etf": "IWM",
+    "composite_signal": 7.625,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-06-01",
+    "etf": "IWM",
+    "composite_signal": 8.625,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-07-01",
+    "etf": "IWM",
+    "composite_signal": 9.375,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-08-01",
+    "etf": "IWM",
+    "composite_signal": 6.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-09-01",
+    "etf": "IWM",
+    "composite_signal": 8.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-10-01",
+    "etf": "IWM",
+    "composite_signal": 9.625,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-11-01",
+    "etf": "IWM",
+    "composite_signal": 5.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2021-12-01",
+    "etf": "IWM",
+    "composite_signal": 8.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-01-01",
+    "etf": "IWM",
+    "composite_signal": 5.375,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-02-01",
+    "etf": "IWM",
+    "composite_signal": 7.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-03-01",
+    "etf": "IWM",
+    "composite_signal": 6.75,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-04-01",
+    "etf": "IWM",
+    "composite_signal": 9.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-05-01",
+    "etf": "IWM",
+    "composite_signal": 6.5,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-06-01",
+    "etf": "IWM",
+    "composite_signal": 7.75,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-07-01",
+    "etf": "IWM",
+    "composite_signal": 1.75,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2022-08-01",
+    "etf": "IWM",
+    "composite_signal": -0.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-09-01",
+    "etf": "IWM",
+    "composite_signal": -0.375,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-10-01",
+    "etf": "IWM",
+    "composite_signal": -2.625,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-11-01",
+    "etf": "IWM",
+    "composite_signal": -6.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2022-12-01",
+    "etf": "IWM",
+    "composite_signal": -6.375,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-01-01",
+    "etf": "IWM",
+    "composite_signal": -9.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-02-01",
+    "etf": "IWM",
+    "composite_signal": -7.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-03-01",
+    "etf": "IWM",
+    "composite_signal": -4.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-04-01",
+    "etf": "IWM",
+    "composite_signal": -2.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-05-01",
+    "etf": "IWM",
+    "composite_signal": -5.875,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-06-01",
+    "etf": "IWM",
+    "composite_signal": -3.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-07-01",
+    "etf": "IWM",
+    "composite_signal": -8.25,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-08-01",
+    "etf": "IWM",
+    "composite_signal": -6.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-09-01",
+    "etf": "IWM",
+    "composite_signal": -5.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-10-01",
+    "etf": "IWM",
+    "composite_signal": -7.125,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-11-01",
+    "etf": "IWM",
+    "composite_signal": -6.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2023-12-01",
+    "etf": "IWM",
+    "composite_signal": -11.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-01-01",
+    "etf": "IWM",
+    "composite_signal": -5.625,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-02-01",
+    "etf": "IWM",
+    "composite_signal": -0.125,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-03-01",
+    "etf": "IWM",
+    "composite_signal": -0.25,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-04-01",
+    "etf": "IWM",
+    "composite_signal": -0.25,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-05-01",
+    "etf": "IWM",
+    "composite_signal": -1.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-06-01",
+    "etf": "IWM",
+    "composite_signal": -2.625,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-07-01",
+    "etf": "IWM",
+    "composite_signal": -2.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-08-01",
+    "etf": "IWM",
+    "composite_signal": -5.625,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-09-01",
+    "etf": "IWM",
+    "composite_signal": -5.875,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-10-01",
+    "etf": "IWM",
+    "composite_signal": -3.375,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-11-01",
+    "etf": "IWM",
+    "composite_signal": -4.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2024-12-01",
+    "etf": "IWM",
+    "composite_signal": -1.5,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-01-01",
+    "etf": "IWM",
+    "composite_signal": -0.125,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-02-01",
+    "etf": "IWM",
+    "composite_signal": 0.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-03-01",
+    "etf": "IWM",
+    "composite_signal": -0.125,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-04-01",
+    "etf": "IWM",
+    "composite_signal": 2.25,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-05-01",
+    "etf": "IWM",
+    "composite_signal": 0.375,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-06-01",
+    "etf": "IWM",
+    "composite_signal": 0.625,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2025-07-01",
+    "etf": "IWM",
+    "composite_signal": -1.125,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-08-01",
+    "etf": "IWM",
+    "composite_signal": -2.0,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-09-01",
+    "etf": "IWM",
+    "composite_signal": -4.25,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-10-01",
+    "etf": "IWM",
+    "composite_signal": -5.75,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-11-01",
+    "etf": "IWM",
+    "composite_signal": -4.875,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2025-12-01",
+    "etf": "IWM",
+    "composite_signal": -1.9375,
+    "bias": "Negative",
+    "state": "Contraction"
+  },
+  {
+    "date": "2026-01-01",
+    "etf": "IWM",
+    "composite_signal": 1.0,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-02-01",
+    "etf": "IWM",
+    "composite_signal": 3.375,
+    "bias": "Positive",
+    "state": "Expansion"
+  },
+  {
+    "date": "2026-03-01",
+    "etf": "IWM",
+    "composite_signal": 3.625,
+    "bias": "Positive",
+    "state": "Expansion"
+  }
+]

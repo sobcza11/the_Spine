@@ -1,0 +1,9 @@
+{
+  "artifact": "oc_ai_component_viewer_manifest_v1",
+  "site": "c_flow",
+  "title": "C_FLOW AI Components",
+  "payload": "cflow_ai_components_v1.json",
+  "run_ts": "2026-05-11T16:08:28.328248+00:00",
+  "viewer_ready": true,
+  "online_transition_allowed": false
+}

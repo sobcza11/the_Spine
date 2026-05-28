@@ -1,0 +1,35 @@
+{
+  "component": "GeoScen Macro Registry",
+  "version": "v1",
+  "built_at_utc": "2026-05-08T16:41:53.222677+00:00",
+  "signal_count": 45,
+  "free_signal_count": 27,
+  "internal_signal_count": 8,
+  "existing_serving_count": 14,
+  "subscription_required_count": 4,
+  "geoscen_ready_count": 43,
+  "sections": [
+    "Capital Flow",
+    "Cognition",
+    "Commodities",
+    "Consumer",
+    "Cross-Asset",
+    "Equities",
+    "FX",
+    "Growth",
+    "Housing",
+    "Industrial",
+    "Inflation",
+    "Labor",
+    "Liquidity",
+    "Rates",
+    "Rates / Credit"
+  ],
+  "governance": {
+    "registry_first": true,
+    "ai_last": true,
+    "source_provenance_required": true,
+    "release_calendar_aware": true,
+    "serving_layer_ready": true
+  }
+}

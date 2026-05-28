@@ -1,0 +1,10 @@
+{
+  "artifact": "build_phase_b_equities_index_plane_v1",
+  "site_name": "oc-equities-index-local",
+  "title": "OracleChambers EQUITIES_INDEX Plane",
+  "run_ts": "2026-05-10T21:10:56.055833+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "domain": "EQUITIES_INDEX",
+  "plane": "institutional_equity_index_cognition"
+}

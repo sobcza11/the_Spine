@@ -1,0 +1,21 @@
+{
+  "component": "GeoScen Macro Ingestion Contract",
+  "version": "v1",
+  "built_at_utc": "2026-05-08T16:58:05.691344+00:00",
+  "signal_count": 45,
+  "fred_ready_count": 27,
+  "existing_available_count": 7,
+  "derived_ready_count": 2,
+  "external_pending_count": 2,
+  "mapped_later_count": 7,
+  "missing_existing_count": 0,
+  "ingestion_ready_count": 36,
+  "governance": {
+    "registry_driven": true,
+    "source_provenance_required": true,
+    "ai_last": true,
+    "fred_first": true,
+    "existing_serving_reused": true,
+    "external_sources_not_forced": true
+  }
+}

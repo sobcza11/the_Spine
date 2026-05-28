@@ -1,0 +1,8 @@
+{
+  "component": "deployment_promotion_pipeline_v1",
+  "generated_at_utc": "2026-05-22T17:18:06.067056+00:00",
+  "source": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\cloudflare\\pages_export",
+  "production_candidate": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\cloudflare\\production_candidate",
+  "file_count": 131,
+  "status": "deployment_promotion_candidate_ready"
+}

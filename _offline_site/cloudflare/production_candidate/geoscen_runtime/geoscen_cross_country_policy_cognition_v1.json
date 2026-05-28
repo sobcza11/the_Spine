@@ -1,0 +1,116 @@
+{
+  "component": "GeoScen Cross-Country Policy Cognition",
+  "version": "v1",
+  "built_at_utc": "2026-05-08T15:21:40.116447+00:00",
+  "source": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\data\\serving\\geoscen\\cb\\geoscen_multi_cb_hierarchy_v1.json",
+  "active_cb_count": 2,
+  "tracked_cb_count": 5,
+  "cognition_rows": [
+    {
+      "bank_code": "FED",
+      "zone": "United States",
+      "available": true,
+      "missing_source_tracked": false,
+      "cb_weight": 0.4,
+      "policy_classification": "Hawkish / Uncertain",
+      "policy_tone": 57.0,
+      "uncertainty": 43.0,
+      "policy_behavior_model": "Labor / inflation / financial-conditions reaction function",
+      "dominant_transmission": [
+        "rates",
+        "credit",
+        "equities",
+        "USD"
+      ],
+      "cognition_state": "restrictive_uncertain",
+      "cognition_note": "FED interpretation anchors global liquidity and risk appetite."
+    },
+    {
+      "bank_code": "ECB",
+      "zone": "Euro Area",
+      "available": true,
+      "missing_source_tracked": false,
+      "cb_weight": 0.22,
+      "policy_classification": "Hawkish / Uncertain",
+      "policy_tone": 187.0,
+      "uncertainty": 76.0,
+      "policy_behavior_model": "Inflation credibility + sovereign fragmentation management",
+      "dominant_transmission": [
+        "sovereign spreads",
+        "EUR",
+        "banks",
+        "periphery risk"
+      ],
+      "cognition_state": "restrictive_uncertain",
+      "cognition_note": "ECB interpretation must account for multi-country coordination and fragmentation pressure."
+    },
+    {
+      "bank_code": "BOJ",
+      "zone": "Japan",
+      "available": false,
+      "missing_source_tracked": true,
+      "cb_weight": null,
+      "policy_classification": "Unavailable",
+      "policy_tone": null,
+      "uncertainty": null,
+      "policy_behavior_model": "Deflation legacy + yield control + FX sensitivity",
+      "dominant_transmission": [
+        "JPY",
+        "JGBs",
+        "carry trade",
+        "global duration"
+      ],
+      "cognition_state": "missing_source_tracked",
+      "cognition_note": "BOJ interpretation is culturally and structurally shaped by deflation history and yield stability."
+    },
+    {
+      "bank_code": "PBOC",
+      "zone": "China",
+      "available": false,
+      "missing_source_tracked": true,
+      "cb_weight": null,
+      "policy_classification": "Unavailable",
+      "policy_tone": null,
+      "uncertainty": null,
+      "policy_behavior_model": "State-guided liquidity + growth stabilization + property-cycle sensitivity",
+      "dominant_transmission": [
+        "CNY",
+        "credit impulse",
+        "commodities",
+        "EM risk"
+      ],
+      "cognition_state": "missing_source_tracked",
+      "cognition_note": "PBOC interpretation should be read through managed liquidity, growth support, and state-directed credit channels."
+    },
+    {
+      "bank_code": "BOE",
+      "zone": "United Kingdom",
+      "available": false,
+      "missing_source_tracked": true,
+      "cb_weight": null,
+      "policy_classification": "Unavailable",
+      "policy_tone": null,
+      "uncertainty": null,
+      "policy_behavior_model": "Inflation credibility + housing sensitivity + imported inflation",
+      "dominant_transmission": [
+        "GBP",
+        "gilts",
+        "mortgage channel",
+        "consumer pressure"
+      ],
+      "cognition_state": "missing_source_tracked",
+      "cognition_note": "BOE interpretation is highly sensitive to inflation credibility, housing costs, and FX pass-through."
+    }
+  ],
+  "interpretation_summary": "FED (United States): restrictive_uncertain \u2014 FED interpretation anchors global liquidity and risk appetite. ECB (Euro Area): restrictive_uncertain \u2014 ECB interpretation must account for multi-country coordination and fragmentation pressure. BOJ (Japan): source missing but tracked for future weighted routing. PBOC (China): source missing but tracked for future weighted routing. BOE (United Kingdom): source missing but tracked for future weighted routing.",
+  "historical_drift_ready": true,
+  "oraclechambers_ready": true,
+  "governance": {
+    "rules_based": true,
+    "ai_last": true,
+    "explainable": true,
+    "cultural_policy_context": true,
+    "full_country_macro_model": false,
+    "lightweight_v1_before_historical_drift": true
+  }
+}

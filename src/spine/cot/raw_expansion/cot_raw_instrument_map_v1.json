@@ -1,0 +1,30 @@
+{
+  "equity_index": [
+    "ES",
+    "NQ",
+    "RTY"
+  ],
+  "fx": [
+    "USD",
+    "EUR",
+    "JPY",
+    "GBP",
+    "CAD",
+    "AUD",
+    "CHF"
+  ],
+  "rates": [
+    "US2Y",
+    "US10Y",
+    "SOFR"
+  ],
+  "metals": [
+    "GOLD",
+    "SILVER",
+    "COPPER"
+  ],
+  "energy": [
+    "WTI",
+    "NAT_GAS"
+  ]
+}

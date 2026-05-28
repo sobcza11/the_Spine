@@ -1,0 +1,10 @@
+{
+  "artifact": "build_phase_b_rates_plane_v1",
+  "site_name": "oc-rates-local",
+  "title": "OracleChambers RATES Plane",
+  "run_ts": "2026-05-10T21:01:03.899812+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "domain": "RATES",
+  "plane": "institutional_rates_cognition"
+}

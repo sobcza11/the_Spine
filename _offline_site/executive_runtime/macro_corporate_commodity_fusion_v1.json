@@ -1,0 +1,34 @@
+{
+  "component": "macro_corporate_commodity_fusion_v1",
+  "generated_at_utc": "2026-05-22T16:40:05.039193+00:00",
+  "fusion_domains": [
+    "macro",
+    "corporate_survivability",
+    "commodity_flow"
+  ],
+  "component_count": 4,
+  "components": [
+    {
+      "file": "geoscen_rbl_synthesis_v1_normalized.json",
+      "component": "geoscen_rbl_synthesis_v1",
+      "status": "normalized_runtime_available"
+    },
+    {
+      "file": "finstate_executive_synthesis_v1.json",
+      "component": "finstate_executive_synthesis_v1",
+      "status": "finstate_executive_synthesis_ready"
+    },
+    {
+      "file": "geoscen_structural_macro_layer_v1_normalized.json",
+      "component": "GeoScen Structural Macro Layer",
+      "status": "normalized_runtime_available"
+    },
+    {
+      "file": "geoscen_frontend_intelligence_layer_v1_normalized.json",
+      "component": "GeoScen Frontend Intelligence Layer",
+      "status": "normalized_runtime_available"
+    }
+  ],
+  "fusion_state": "macro_corporate_commodity_fusion_ready",
+  "status": "macro_corporate_commodity_fusion_ready"
+}

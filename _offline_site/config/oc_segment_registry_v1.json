@@ -1,0 +1,188 @@
+{
+  "component": "oc_segment_registry_v1",
+  "generated_at_utc": "2026-05-22T15:50:08.641636+00:00",
+  "segment_count": 30,
+  "segments": [
+    {
+      "name": "oc-attention-routing-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-attention-routing-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-cb-divergence-map-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-cb-divergence-map-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-cflow-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-cflow-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-contradiction-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-contradiction-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-contradiction-matrix-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-contradiction-matrix-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-core-runtime-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-core-runtime-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-earnings-tone-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-earnings-tone-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-equities-index-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-equities-index-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-equities-sector-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-equities-sector-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-executive-command-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-executive-command-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-executive-dashboard-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-executive-dashboard-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-fedspeak-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-fedspeak-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-final-metric-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-final-metric-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-fx-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-fx-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-governance-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-governance-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-historical-memory-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-historical-memory-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-langroid-agent-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-langroid-agent-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-liquidity-stress-map-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-liquidity-stress-map-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-macro-heatmap-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-macro-heatmap-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-narrative-drift-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-narrative-drift-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-pmi-linkage-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-pmi-linkage-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-rag-context-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-rag-context-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-rates-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-rates-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-rbl-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-rbl-local",
+      "file_count": 5
+    },
+    {
+      "name": "oc-regime-timeline-local",
+      "type": "oc_segment",
+      "path": "oc_segments/oc-regime-timeline-local",
+      "file_count": 5
+    },
+    {
+      "name": "c_flow",
+      "type": "oc_ai_component",
+      "path": "oc_ai_components/c_flow",
+      "file_count": 5
+    },
+    {
+      "name": "equities_industry",
+      "type": "oc_ai_component",
+      "path": "oc_ai_components/equities_industry",
+      "file_count": 5
+    },
+    {
+      "name": "equities_sector",
+      "type": "oc_ai_component",
+      "path": "oc_ai_components/equities_sector",
+      "file_count": 5
+    },
+    {
+      "name": "fx",
+      "type": "oc_ai_component",
+      "path": "oc_ai_components/fx",
+      "file_count": 5
+    },
+    {
+      "name": "rates",
+      "type": "oc_ai_component",
+      "path": "oc_ai_components/rates",
+      "file_count": 5
+    }
+  ],
+  "status": "oc_segment_registry_complete"
+}

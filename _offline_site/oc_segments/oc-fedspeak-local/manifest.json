@@ -1,0 +1,8 @@
+{
+  "artifact": "build_phase_c_fedspeak_plane_v1",
+  "site_name": "oc-fedspeak-local",
+  "domain": "FEDSPEAK",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "run_ts": "2026-05-10T21:24:35.315472+00:00"
+}

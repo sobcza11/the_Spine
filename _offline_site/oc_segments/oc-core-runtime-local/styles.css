@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background: #020617;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+.shell {
+  padding: 32px;
+}
+
+.hero {
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 24px;
+  background: #0f172a;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #94a3b8;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 20px;
+  background: #111827;
+}
+
+.wide {
+  margin-top: 16px;
+}
+
+pre {
+  white-space: pre-wrap;
+  color: #cbd5e1;
+}

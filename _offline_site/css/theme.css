@@ -1,0 +1,125 @@
+:root{
+    --bg:#0b0f14;
+    --panel:#111827;
+    --panel2:#0f172a;
+    --border:#263244;
+    --text:#e5edf5;
+    --muted:#cbd5e1;
+    --blue:#7dd3fc;
+    --green:#a7f3d0;
+    --yellow:#facc15;
+    --red:#f87171;
+    --purple:#c4b5fd;
+}
+
+body{
+    background:radial-gradient(circle at top,#172033,var(--bg) 58%);
+}
+
+a{
+    color:var(--blue);
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid var(--border);
+    background:var(--panel);
+    border-radius:999px;
+    padding:6px 10px;
+    color:var(--muted);
+}
+
+.panel{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px;
+}
+
+.dashboard-layout{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:22px;
+    padding:24px;
+}
+
+.executive-panel{
+    background:rgba(15,23,42,.92);
+    border:1px solid #334155;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
+}
+
+.executive-panel h2{
+    margin-top:0;
+    color:#7dd3fc;
+}
+
+@media(max-width:900px){
+
+    .dashboard-layout{
+        grid-template-columns:1fr;
+    }
+
+    .executive-header{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .route-nav{
+        width:100%;
+    }
+}
+
+.status-bar-wrap{
+    margin-bottom:18px;
+}
+
+.status-bar-label{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+    color:#cbd5e1;
+}
+
+.status-bar-bg{
+    height:12px;
+    border-radius:999px;
+    overflow:hidden;
+    background:#172033;
+}
+
+.status-bar-fill{
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #7dd3fc,
+        #a7f3d0,
+        #facc15
+    );
+}
+
+.alert-critical{
+    border-left:4px solid #ef4444;
+    background:#1e1111;
+    padding:16px;
+    margin-bottom:14px;
+    border-radius:10px;
+}
+
+.alert-warning{
+    border-left:4px solid #facc15;
+    background:#1f1b0d;
+    padding:16px;
+    margin-bottom:14px;
+    border-radius:10px;
+}
+
+.alert-stable{
+    border-left:4px solid #22c55e;
+    background:#0f1b13;
+    padding:16px;
+    margin-bottom:14px;
+    border-radius:10px;
+}

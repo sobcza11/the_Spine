@@ -1,0 +1,22 @@
+{
+  "component": "geoscen_isovector_offline_operational_deployment_v1",
+  "generated_at_utc": "2026-05-22T17:20:30.802943+00:00",
+  "production_ready": true,
+  "readiness_status": "executive_production_ready",
+  "deployment_package": "cloudflare/package/isovector_geoscen_cloudflare_pages_package_v1.zip",
+  "cloudflare_target": "Cloudflare Pages",
+  "local_machine_dependency": false,
+  "capabilities": [
+    "static offline runtime",
+    "route selector",
+    "executive cognition runtime",
+    "FINSTATE survivability cognition",
+    "GeoScen cross-asset cognition",
+    "Cloudflare Pages package",
+    "payload integrity verification",
+    "runtime backup",
+    "release governance",
+    "production manifest"
+  ],
+  "status": "geoscen_isovector_offline_operational_deployment_complete"
+}

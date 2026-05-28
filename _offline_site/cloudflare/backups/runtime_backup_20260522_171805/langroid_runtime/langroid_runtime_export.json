@@ -1,0 +1,422 @@
+{
+  "escalation_graph": {
+    "rates_to_regime": 1,
+    "fx_to_relationship": 1,
+    "credit_to_geoscen": 1,
+    "cb_to_regime": 1,
+    "relationship_to_executive": 1,
+    "italy_germany_to_geoscen": 1,
+    "ism_to_regime": 1,
+    "ism_to_equities": 1,
+    "ism_to_geoscen": 1,
+    "fx_divergence_to_relationship": 1,
+    "fx_divergence_to_geoscen": 1,
+    "commodity_to_regime": 1,
+    "commodity_to_geoscen": 1
+  },
+  "message_bus": [
+    {
+      "sender": "RatesAgent",
+      "target": "RegimeAgent",
+      "message_type": "rates_regime_signal",
+      "payload": {
+        "focus": [
+          "curve_regime",
+          "policy_pressure",
+          "duration_stress",
+          "cross_asset_transmission"
+        ]
+      }
+    },
+    {
+      "sender": "FXAgent",
+      "target": "RelationshipAgent",
+      "message_type": "fx_fragmentation_signal",
+      "payload": {
+        "focus": [
+          "fx_fragmentation",
+          "carry_unwind",
+          "usd_liquidity",
+          "rates_divergence"
+        ]
+      }
+    },
+    {
+      "sender": "RelationshipAgent",
+      "target": "ExecutiveSynthesisAgent",
+      "message_type": "fragmentation_signal",
+      "payload": {
+        "focus": [
+          "cross_asset_transmission",
+          "relationship_decay",
+          "contradiction_detection",
+          "fragmentation_risk"
+        ]
+      }
+    },
+    {
+      "sender": "CBNarrativeAgent",
+      "target": "RegimeAgent",
+      "message_type": "cb_contradiction_signal",
+      "payload": {
+        "focus": [
+          "hawkish_dovish_drift",
+          "credibility_stress",
+          "policy_contradiction",
+          "market_policy_divergence"
+        ]
+      }
+    },
+    {
+      "sender": "CreditStressAgent",
+      "target": "GeoScenAgent",
+      "message_type": "credit_fragility_signal",
+      "payload": {
+        "focus": [
+          "credit_spread_stress",
+          "funding_pressure",
+          "refinancing_fragility",
+          "systemic_credit_risk"
+        ]
+      }
+    },
+    {
+      "sender": "ItalyGermanySpreadAgent",
+      "target": "GeoScenAgent",
+      "message_type": "euro_fragmentation_signal",
+      "payload": {
+        "focus": [
+          "delta_btp_bund_spread",
+          "spread_acceleration",
+          "peripheral_stress_momentum",
+          "eurozone_fragmentation_risk",
+          "sovereign_contagion_pressure"
+        ]
+      }
+    },
+    {
+      "sender": "ISMIndustryTransitionAgent",
+      "target": "RegimeAgent",
+      "message_type": "macro_deterioration_signal",
+      "payload": {
+        "focus": [
+          {
+            "industry": "Apparel, Leather & Allied Products",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -8.0,
+            "rank_change_6m": 11.0,
+            "momentum_shift": -19.0
+          },
+          {
+            "industry": "Printing & Related Support Activities",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -9.0,
+            "rank_change_6m": 8.0,
+            "momentum_shift": -17.0
+          },
+          {
+            "industry": "Retail Trade",
+            "pmi_Idx": -3.0,
+            "rank_change_3m": -14.0,
+            "rank_change_6m": -1.0,
+            "momentum_shift": -13.0
+          },
+          {
+            "industry": "Mining",
+            "pmi_Idx": 7.0,
+            "rank_change_3m": 1.0,
+            "rank_change_6m": 14.0,
+            "momentum_shift": -13.0
+          },
+          {
+            "industry": "Paper Products",
+            "pmi_Idx": 5.0,
+            "rank_change_3m": 5.0,
+            "rank_change_6m": 14.0,
+            "momentum_shift": -9.0
+          },
+          {
+            "industry": "Furniture & Related Products",
+            "pmi_Idx": 1.0,
+            "rank_change_3m": 3.0,
+            "rank_change_6m": 11.0,
+            "momentum_shift": -8.0
+          },
+          {
+            "industry": "Arts, Entertainment & Recreation",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -7.0,
+            "rank_change_6m": 0.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Machinery",
+            "pmi_Idx": 7.0,
+            "rank_change_3m": 3.0,
+            "rank_change_6m": 10.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Chemical Products",
+            "pmi_Idx": 2.0,
+            "rank_change_3m": -1.0,
+            "rank_change_6m": 6.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Finance & Insurance",
+            "pmi_Idx": 11.0,
+            "rank_change_3m": 1.0,
+            "rank_change_6m": 8.0,
+            "momentum_shift": -7.0
+          }
+        ]
+      }
+    },
+    {
+      "sender": "ISMIndustryTransitionAgent",
+      "target": "EquitiesAgent",
+      "message_type": "industry_deterioration_signal",
+      "payload": {
+        "focus": [
+          {
+            "industry": "Apparel, Leather & Allied Products",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -8.0,
+            "rank_change_6m": 11.0,
+            "momentum_shift": -19.0
+          },
+          {
+            "industry": "Printing & Related Support Activities",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -9.0,
+            "rank_change_6m": 8.0,
+            "momentum_shift": -17.0
+          },
+          {
+            "industry": "Retail Trade",
+            "pmi_Idx": -3.0,
+            "rank_change_3m": -14.0,
+            "rank_change_6m": -1.0,
+            "momentum_shift": -13.0
+          },
+          {
+            "industry": "Mining",
+            "pmi_Idx": 7.0,
+            "rank_change_3m": 1.0,
+            "rank_change_6m": 14.0,
+            "momentum_shift": -13.0
+          },
+          {
+            "industry": "Paper Products",
+            "pmi_Idx": 5.0,
+            "rank_change_3m": 5.0,
+            "rank_change_6m": 14.0,
+            "momentum_shift": -9.0
+          },
+          {
+            "industry": "Furniture & Related Products",
+            "pmi_Idx": 1.0,
+            "rank_change_3m": 3.0,
+            "rank_change_6m": 11.0,
+            "momentum_shift": -8.0
+          },
+          {
+            "industry": "Arts, Entertainment & Recreation",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -7.0,
+            "rank_change_6m": 0.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Machinery",
+            "pmi_Idx": 7.0,
+            "rank_change_3m": 3.0,
+            "rank_change_6m": 10.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Chemical Products",
+            "pmi_Idx": 2.0,
+            "rank_change_3m": -1.0,
+            "rank_change_6m": 6.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Finance & Insurance",
+            "pmi_Idx": 11.0,
+            "rank_change_3m": 1.0,
+            "rank_change_6m": 8.0,
+            "momentum_shift": -7.0
+          }
+        ]
+      }
+    },
+    {
+      "sender": "ISMIndustryTransitionAgent",
+      "target": "GeoScenAgent",
+      "message_type": "macro_transition_signal",
+      "payload": {
+        "focus": [
+          {
+            "industry": "Apparel, Leather & Allied Products",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -8.0,
+            "rank_change_6m": 11.0,
+            "momentum_shift": -19.0
+          },
+          {
+            "industry": "Printing & Related Support Activities",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -9.0,
+            "rank_change_6m": 8.0,
+            "momentum_shift": -17.0
+          },
+          {
+            "industry": "Retail Trade",
+            "pmi_Idx": -3.0,
+            "rank_change_3m": -14.0,
+            "rank_change_6m": -1.0,
+            "momentum_shift": -13.0
+          },
+          {
+            "industry": "Mining",
+            "pmi_Idx": 7.0,
+            "rank_change_3m": 1.0,
+            "rank_change_6m": 14.0,
+            "momentum_shift": -13.0
+          },
+          {
+            "industry": "Paper Products",
+            "pmi_Idx": 5.0,
+            "rank_change_3m": 5.0,
+            "rank_change_6m": 14.0,
+            "momentum_shift": -9.0
+          },
+          {
+            "industry": "Furniture & Related Products",
+            "pmi_Idx": 1.0,
+            "rank_change_3m": 3.0,
+            "rank_change_6m": 11.0,
+            "momentum_shift": -8.0
+          },
+          {
+            "industry": "Arts, Entertainment & Recreation",
+            "pmi_Idx": 0.0,
+            "rank_change_3m": -7.0,
+            "rank_change_6m": 0.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Machinery",
+            "pmi_Idx": 7.0,
+            "rank_change_3m": 3.0,
+            "rank_change_6m": 10.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Chemical Products",
+            "pmi_Idx": 2.0,
+            "rank_change_3m": -1.0,
+            "rank_change_6m": 6.0,
+            "momentum_shift": -7.0
+          },
+          {
+            "industry": "Finance & Insurance",
+            "pmi_Idx": 11.0,
+            "rank_change_3m": 1.0,
+            "rank_change_6m": 8.0,
+            "momentum_shift": -7.0
+          }
+        ]
+      }
+    },
+    {
+      "sender": "FXDivergenceAgent",
+      "target": "RelationshipAgent",
+      "message_type": "fx_divergence_signal",
+      "payload": {
+        "focus": [
+          "fx_divergence",
+          "policy_divergence",
+          "cross_border_liquidity",
+          "currency_fragmentation"
+        ]
+      }
+    },
+    {
+      "sender": "FXDivergenceAgent",
+      "target": "GeoScenAgent",
+      "message_type": "currency_fragmentation_signal",
+      "payload": {
+        "focus": [
+          "fx_divergence",
+          "policy_divergence",
+          "cross_border_liquidity",
+          "currency_fragmentation"
+        ]
+      }
+    },
+    {
+      "sender": "CommodityTransitionAgent",
+      "target": "RegimeAgent",
+      "message_type": "commodity_transition_signal",
+      "payload": {
+        "focus": [
+          "commodity_transition",
+          "inflation_acceleration",
+          "demand_fragility",
+          "supply_shock"
+        ]
+      }
+    },
+    {
+      "sender": "CommodityTransitionAgent",
+      "target": "GeoScenAgent",
+      "message_type": "inflation_propagation_signal",
+      "payload": {
+        "focus": [
+          "commodity_transition",
+          "inflation_acceleration",
+          "demand_fragility",
+          "supply_shock"
+        ]
+      }
+    }
+  ],
+  "agent_count": 15,
+  "active_agents": [
+    "RatesAgent",
+    "FXAgent",
+    "RelationshipAgent",
+    "RegimeAgent",
+    "ExecutiveSynthesisAgent",
+    "GeoScenAgent",
+    "CBNarrativeAgent",
+    "EquitiesAgent",
+    "CommoditiesAgent",
+    "CreditStressAgent",
+    "COTPositioningAgent",
+    "ItalyGermanySpreadAgent",
+    "ISMIndustryTransitionAgent",
+    "FXDivergenceAgent",
+    "CommodityTransitionAgent"
+  ],
+  "memory_status": {
+    "RatesAgent": 1,
+    "FXAgent": 1,
+    "RelationshipAgent": 1,
+    "RegimeAgent": 1,
+    "ExecutiveSynthesisAgent": 1,
+    "GeoScenAgent": 1,
+    "CBNarrativeAgent": 1,
+    "EquitiesAgent": 1,
+    "CommoditiesAgent": 1,
+    "CreditStressAgent": 1,
+    "COTPositioningAgent": 1,
+    "ItalyGermanySpreadAgent": 1,
+    "ISMIndustryTransitionAgent": 1,
+    "FXDivergenceAgent": 1,
+    "CommodityTransitionAgent": 1
+  }
+}

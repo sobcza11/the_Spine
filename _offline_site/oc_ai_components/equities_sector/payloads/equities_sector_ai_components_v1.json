@@ -1,0 +1,113 @@
+{
+  "zt": {
+    "artifact": "oc_equities_sector_zt_zeitgeist_v1",
+    "plane": "EQUITIES_SECTOR",
+    "component": "Z_t",
+    "label": "Z_t \u2022 Equity - Sector \u2022 zeitgeist",
+    "run_ts": "2026-05-11T15:56:08.095180+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "zeitgeist": {
+      "regime": "Fragmented Cross-Asset Regime",
+      "sector_rotation": "Unstable",
+      "breadth_confirmation": "Incomplete",
+      "defensive_leadership": "Elevated",
+      "cyclical_strength": "Mixed",
+      "dispersion_pressure": true,
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "deterministic_output": true,
+      "ai_may_assist_interpretation": true,
+      "ai_may_not_own_runtime_truth": true
+    }
+  },
+  "rbl": {
+    "artifact": "oc_equities_sector_rbl_interpretation_v1",
+    "plane": "EQUITIES_SECTOR",
+    "component": "RBL",
+    "label": "RBL \u2022 Equity Sectors \u2022 Interpretation (OC)",
+    "run_ts": "2026-05-11T15:56:08.095196+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "source_artifact": "oc_equities_sector_zt_zeitgeist_v1",
+    "interpretation": {
+      "summary": "Sector cognition indicates unstable rotation, incomplete breadth confirmation, and elevated defensive leadership. Equity participation remains fragmented, suggesting institutional caution toward broad risk-on interpretation.",
+      "risk_posture": "Selective participation awareness",
+      "decision_bias": "Avoid treating narrow leadership or isolated sector rallies as durable macro confirmation.",
+      "watch_items": [
+        "Sector breadth participation",
+        "Defensive vs cyclical rotation",
+        "Mega-cap concentration risk",
+        "Cross-sector confirmation quality"
+      ],
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "rbl_is_interpretive": true,
+      "zt_is_source_signal": true,
+      "ai_may_not_mutate_zt": true
+    }
+  },
+  "analytics": {
+    "z_t_composite": 0.67,
+    "signal_strength": "Moderate",
+    "stress_score": 0.52,
+    "dispersion_score": 0.74,
+    "contradiction_score": 0.44,
+    "momentum_score": 0.62,
+    "confidence_score": 0.895,
+    "conviction_score": 0.6694,
+    "model_mode": "Deterministic AI cognition component",
+    "ml_readiness": "Feature-ready; not trained ML"
+  },
+  "feature_vector": [
+    {
+      "feature": "Sector breadth participation",
+      "weight": 0.23,
+      "direction": "confirmation_negative"
+    },
+    {
+      "feature": "Defensive/cyclical rotation",
+      "weight": 0.2,
+      "direction": "dispersion_positive"
+    },
+    {
+      "feature": "Leadership concentration",
+      "weight": 0.22,
+      "direction": "fragility_positive"
+    },
+    {
+      "feature": "Cross-sector confirmation",
+      "weight": 0.18,
+      "direction": "confirmation_negative"
+    }
+  ],
+  "historical_analogs": [
+    {
+      "regime": "1999 Narrow Leadership",
+      "similarity": 0.61,
+      "why": "Leadership concentration"
+    },
+    {
+      "regime": "2020 Growth Leadership",
+      "similarity": 0.55,
+      "why": "Sector concentration & dispersion"
+    },
+    {
+      "regime": "2022 Rotation Shock",
+      "similarity": 0.53,
+      "why": "Rates-sensitive sector rotation"
+    }
+  ],
+  "executive_decision_layer": {
+    "risk_posture": "Selective participation awareness",
+    "confirmation_status": "Fragmented",
+    "action_bias": "Do not treat narrow leadership as broad confirmation",
+    "fragility_level": "Moderate"
+  },
+  "client_visible_intelligence": true,
+  "analytics_version": "institutional_analytics_v1"
+}

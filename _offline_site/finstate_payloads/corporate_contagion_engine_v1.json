@@ -1,0 +1,18 @@
+{
+  "component": "corporate_contagion_engine_v1",
+  "generated_at_utc": "2026-05-22T16:17:37.700254+00:00",
+  "rows": 17068,
+  "symbols": 4419,
+  "contagion_columns": [
+    "q_recursive_drift_2q",
+    "q_recursive_transition_state",
+    "q_recursive_propagation_pressure",
+    "q_recursive_survivability_propagation",
+    "q_recursive_survivability_state",
+    "q_contagion_synchronization",
+    "q_quarterly_systemicity_overlay",
+    "q_quarterly_systemicity_state"
+  ],
+  "contagion_column_count": 8,
+  "status": "corporate_contagion_engine_ready"
+}

@@ -1,0 +1,20 @@
+{
+  "component": "survivability_memory_system_v1",
+  "generated_at_utc": "2026-05-22T16:17:38.420586+00:00",
+  "rows": 17068,
+  "memory_columns": [
+    "q_interest_coverage_drift",
+    "q_interest_coverage_drift_norm",
+    "q_recursive_drift_2q",
+    "q_survivability_drift",
+    "q_survivability_drift_v2",
+    "q_survivability_drift_v3",
+    "q_survivability_memory_4q",
+    "q_survivability_memory_max_4q",
+    "q_survivability_persistence_count_4q",
+    "q_survivability_persistence_score",
+    "q_survivability_persistence_state"
+  ],
+  "memory_column_count": 11,
+  "status": "survivability_memory_system_ready"
+}

@@ -1,0 +1,13 @@
+{
+  "component": "dynamic_regime_probability_engine_v1",
+  "generated_at_utc": "2026-05-22T16:44:48.144725+00:00",
+  "source_average_systemic_pressure": 0.1488,
+  "probabilities": {
+    "stable_monitoring": 0.8512,
+    "fragility_building": 0.186,
+    "recursive_deterioration": 0.1265,
+    "systemic_escalation": 0.0818
+  },
+  "dominant_regime": "stable_monitoring",
+  "status": "dynamic_regime_probability_ready"
+}

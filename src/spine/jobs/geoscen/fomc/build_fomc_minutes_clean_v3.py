@@ -1,0 +1,139 @@
+from pathlib import Path
+import hashlib
+import re
+import pandas as pd
+
+
+REPO_ROOT = Path.cwd()
+
+INPUT_PATH = REPO_ROOT / "data/geoscen/fomc/fomc_minutes_text_canonical_v2.parquet"
+OUTPUT_PATH = REPO_ROOT / "data/geoscen/fomc/fomc_minutes_clean_v3.parquet"
+
+
+REPLACEMENTS = {
+    "Ã¯Â»Â¿": "",
+    "Ã¢Â€Â“": "–",
+    "Ã¢Â€Â”": "—",
+    "Ã¢Â€Â™": "'",
+    "Ã¢Â€Âœ": '"',
+    "Ã¢Â€Â": '"',
+    "Ã‚": "",
+    "Â®": "®",
+    "Â©": "©",
+    "Â": "",
+}
+
+
+START_MARKERS = [
+    r"Minutes of the Federal Open Market Committee",
+    r"FOMC Minutes,",
+]
+
+END_MARKERS = [
+    r"Back to Top",
+    r"Last Update:",
+    r"Board of Governors of the Federal Reserve System About the Fed",
+    r"Return to text",
+]
+
+
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8", errors="ignore")).hexdigest()
+
+
+def fix_encoding(text: str) -> str:
+    if not isinstance(text, str):
+        return ""
+
+    out = text
+    for bad, good in REPLACEMENTS.items():
+        out = out.replace(bad, good)
+
+    out = re.sub(r"\s+", " ", out).strip()
+    return out
+
+
+def isolate_minutes_body(text: str) -> str:
+    if not text:
+        return ""
+
+    start_idx = None
+    for marker in START_MARKERS:
+        m = re.search(marker, text, flags=re.IGNORECASE)
+        if m:
+            start_idx = m.start()
+            break
+
+    if start_idx is None:
+        start_idx = 0
+
+    body = text[start_idx:]
+
+    end_candidates = []
+    for marker in END_MARKERS:
+        m = re.search(marker, body, flags=re.IGNORECASE)
+        if m:
+            end_candidates.append(m.start())
+
+    if end_candidates:
+        body = body[: min(end_candidates)]
+
+    body = re.sub(r"\s+", " ", body).strip()
+    return body
+
+
+def quality_flag(text: str) -> str:
+    if not text:
+        return "empty"
+    if text.startswith("%PDF") or "endstream" in text[:5000]:
+        return "pdf_binary"
+    if len(text) < 5000:
+        return "too_short"
+    if "Minutes of the Federal Open Market Committee" not in text:
+        return "missing_minutes_marker"
+    return "clean_candidate"
+
+
+def main():
+    df = pd.read_parquet(INPUT_PATH).copy()
+
+    if "clean_text" not in df.columns:
+        raise KeyError("Missing required column: clean_text")
+
+    df["clean_text_v3"] = (
+        df["clean_text"]
+        .fillna("")
+        .apply(fix_encoding)
+        .apply(isolate_minutes_body)
+    )
+
+    df["text_quality_flag_v3"] = df["clean_text_v3"].apply(quality_flag)
+    df["text_chars_v3"] = df["clean_text_v3"].str.len()
+    df["text_sha256_v3"] = df["clean_text_v3"].apply(sha256_text)
+
+    df["source_layer"] = "fomc_minutes_clean_v3"
+    df["version"] = "v3"
+
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    df.to_parquet(OUTPUT_PATH, index=False)
+
+    print("OK | FOMC minutes clean v3")
+    print("input:", INPUT_PATH)
+    print("output:", OUTPUT_PATH)
+    print("rows:", len(df))
+    print(df["text_quality_flag_v3"].value_counts(dropna=False))
+    print(
+        df[
+            [
+                "date",
+                "title",
+                "raw_text_bad_flag",
+                "text_quality_flag_v3",
+                "text_chars_v3",
+            ]
+        ].tail(10)
+    )
+
+
+if __name__ == "__main__":
+    main()

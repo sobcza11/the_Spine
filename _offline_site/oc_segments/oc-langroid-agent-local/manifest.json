@@ -1,0 +1,8 @@
+{
+  "artifact": "build_phase_c_langroid_agent_plane_v1",
+  "site_name": "oc-langroid-agent-local",
+  "domain": "LANGROID_AGENT",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "run_ts": "2026-05-10T21:26:44.951875+00:00"
+}

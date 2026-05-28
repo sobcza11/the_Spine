@@ -1,0 +1,9 @@
+{
+  "route": "/finstate",
+  "payloads": [
+    "runtime/zt_finstate_zeitgeist.json",
+    "runtime/rbl_finstate_oc.json",
+    "runtime/rbl_finstate_systemic_oc.json"
+  ],
+  "status": "finstate_payload_manifest_ready"
+}

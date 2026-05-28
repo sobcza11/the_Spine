@@ -1,0 +1,22 @@
+{
+  "route": "/finstate",
+  "label": "FINSTATE",
+  "panels": [
+    {
+      "title": "Z? • FinState • zeitgeist",
+      "type": "zeitgeist",
+      "source": "I2 / Survivability / Financial Durability"
+    },
+    {
+      "title": "RBL • FinState • OC",
+      "type": "rbl",
+      "source": "Quarterly Survivability Intelligence"
+    },
+    {
+      "title": "RBL • FinState (Systemic) • OC",
+      "type": "systemic",
+      "source": "Corporate Fragility Propagation"
+    }
+  ],
+  "status": "finstate_route_ready"
+}

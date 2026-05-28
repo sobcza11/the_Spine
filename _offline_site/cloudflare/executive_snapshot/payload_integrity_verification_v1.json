@@ -1,0 +1,663 @@
+{
+  "component": "payload_integrity_verification_v1",
+  "generated_at_utc": "2026-05-22T17:08:10.575165+00:00",
+  "file_count": 131,
+  "files": [
+    {
+      "path": "index.html",
+      "size_bytes": 5788,
+      "sha256": "9a7a38f9d7d97737445adff8ce038c382b7161b01900afc46c491ee85b7d74eb"
+    },
+    {
+      "path": "styles.css",
+      "size_bytes": 1200,
+      "sha256": "e3d7696e64fa79fbba05a81573b6b967a18ccffab7802c4e27ec582df4e4e2e6"
+    },
+    {
+      "path": "config/geoscen_routes.json",
+      "size_bytes": 1380,
+      "sha256": "fce750898ef6ec2909e74140c30221091e058a2cacaf4a3290d43a36ecfd639d"
+    },
+    {
+      "path": "config/geoscen_runtime_normalization_summary_v1.json",
+      "size_bytes": 2916,
+      "sha256": "6f6713398576e4881fc6b50222d54a860e371d5c3f149d3f8f3e99648a24bf18"
+    },
+    {
+      "path": "config/langroid_runtime_normalization_summary_v1.json",
+      "size_bytes": 249,
+      "sha256": "763b88420c86de4af5007dc9f5aa0040563bf3cd75c92b0577bd95fd1c563569"
+    },
+    {
+      "path": "config/oc_segment_registry_v1.json",
+      "size_bytes": 4931,
+      "sha256": "a054e05f2cd564fd36e1561b9e316be27236aa0bc6bbe1591e613c42233ed969"
+    },
+    {
+      "path": "config/offline_asset_registry.json",
+      "size_bytes": 1119,
+      "sha256": "877075be4e579e24e45997a9725f2bb16248604ba050c17d87a682272b915065"
+    },
+    {
+      "path": "config/route_metadata.json",
+      "size_bytes": 1902,
+      "sha256": "0892f4eaa92b12d5b3f57729eed2b08a4d3c7529fa3729fe723b54c13c6e1912"
+    },
+    {
+      "path": "config/runtime_contract_v1.json",
+      "size_bytes": 419,
+      "sha256": "d6cc75136eb45ff8eb7a5e7d9d2692b4e3a61be24afc1efd2a8a9da06da4a8de"
+    },
+    {
+      "path": "config/runtime_manifest_v1.json",
+      "size_bytes": 35142,
+      "sha256": "0f876c0e632cce0fb372958e31ed0f215ec425a1bbd511736c8e1dae1771cbda"
+    },
+    {
+      "path": "core/executive_runtime_loader.js",
+      "size_bytes": 1008,
+      "sha256": "bfb3868352de21543a906bd00128e450b7b3ffcd83447490d1e7870e9cb1a842"
+    },
+    {
+      "path": "core/executive_session.js",
+      "size_bytes": 524,
+      "sha256": "5d23ff950f23c5e83dd324ffbe9acf15097babee36475184d876052232886e2c"
+    },
+    {
+      "path": "core/executive_telemetry.js",
+      "size_bytes": 705,
+      "sha256": "7866e8303e28710b2bd02207d8aebe25bbd7c0c87c53862dceb44b70b4ea6b42"
+    },
+    {
+      "path": "core/finstate_runtime_loader.js",
+      "size_bytes": 1100,
+      "sha256": "a434cf1f11863fa923f04bec2f863880edeae95fefe2cb4e4524c2a8433e0faa"
+    },
+    {
+      "path": "core/navigation.js",
+      "size_bytes": 786,
+      "sha256": "318086318812561356057a5fb118f01237e0beaf1396bdddbc3bb72a0da1b16e"
+    },
+    {
+      "path": "core/offline_auth_gateway.js",
+      "size_bytes": 689,
+      "sha256": "471ebb82826f7066f3113a6277b5209a00cf5d385339e6c2b01ff9bfd15824d3"
+    },
+    {
+      "path": "core/offline_bootstrap_loader.js",
+      "size_bytes": 1128,
+      "sha256": "cb46a1bd6020b7bf8798e70262246cb03949649c303d9ac0aa2d97bb4d1adbea"
+    },
+    {
+      "path": "core/payload_validator.js",
+      "size_bytes": 542,
+      "sha256": "b5655c9b5033ab6ad798b0bbfdfc49128fd8f182b57e9bd2b09fc2afbff426e6"
+    },
+    {
+      "path": "core/recursive_runtime_logging.js",
+      "size_bytes": 941,
+      "sha256": "0714d474392be1d2d9b1c63a3b5e030ce2d771f2815f1869e25037c8cbf1d6a8"
+    },
+    {
+      "path": "core/route_modernization_loader.js",
+      "size_bytes": 1550,
+      "sha256": "11d4386815e74d6d1ad68f1e38fe4ec9bb1f25c8459d0e5ff65569d090d4c191"
+    },
+    {
+      "path": "core/route_specific_runtime_loaders.js",
+      "size_bytes": 1295,
+      "sha256": "926f068812ee62957c05d714762bdbbc90ff34b28c5c02fab71cedbf3c7deac6"
+    },
+    {
+      "path": "core/route_state_engine.js",
+      "size_bytes": 1224,
+      "sha256": "bdc23ad017c3c2a833c129eccab115aa31f93e714815b69c2fd9042afee89480"
+    },
+    {
+      "path": "core/runtime_guard.js",
+      "size_bytes": 563,
+      "sha256": "aea89c4f1db7043a0892d5cdc49cdf167bd16378790021d162f3b9c633c80ca8"
+    },
+    {
+      "path": "core/runtime_hydration.js",
+      "size_bytes": 1341,
+      "sha256": "eaca4035915a406dfe5e3260535037736acc2e65aae570bad0ede1f77b97192e"
+    },
+    {
+      "path": "core/runtime_loader.js",
+      "size_bytes": 951,
+      "sha256": "1cf4407359eb89ce8a11dd79dc937c33e6c2243367a217715de6e774badd6e25"
+    },
+    {
+      "path": "core/runtime_performance_monitoring.js",
+      "size_bytes": 688,
+      "sha256": "f19bde0f60b45c7e1a78d708ca3be02ccb033cbe7fbfa9c4b9016ca1d0ade5da"
+    },
+    {
+      "path": "core/runtime_recovery_fallback.js",
+      "size_bytes": 552,
+      "sha256": "bc04c8d4c4a955fa985ceab4155e49a5d90338d7189dd57c578c50858fc6283d"
+    },
+    {
+      "path": "css/global.css",
+      "size_bytes": 2699,
+      "sha256": "2d9ff22504d78dc5ad75f31a1e81f6a83aa630e171c0c69eb58c1398078f3959"
+    },
+    {
+      "path": "css/site.css",
+      "size_bytes": 898,
+      "sha256": "d6e22280c2914e73f5fb357584c66b1ddf77830cb88d74dca1724b6822a0cc7c"
+    },
+    {
+      "path": "css/theme.css",
+      "size_bytes": 2181,
+      "sha256": "9d73dd8579c4a44cb7ff4d3b38945a253af52e34471714d95aadfe967ad0c7f1"
+    },
+    {
+      "path": "deploy_manifest/executive_cognitive_runtime_completion_v1.json",
+      "size_bytes": 848,
+      "sha256": "e9e175e2cf910ffe086b9904772144a8eb658aeb80e4d414d12c1fe7dcf9ba7c"
+    },
+    {
+      "path": "deploy_manifest/executive_cognitive_runtime_completion_v1.md",
+      "size_bytes": 838,
+      "sha256": "cde7a839391d21377d48d49ccb92c450534a81007d4914dd145deb3c5d083b04"
+    },
+    {
+      "path": "deploy_manifest/executive_deployment_validation_v1.json",
+      "size_bytes": 248,
+      "sha256": "3ffbb48d4a5496edba3c92a3bb3f4a4d0181170e9f2e6ebd5fea0ae7fc0db2ba"
+    },
+    {
+      "path": "deploy_manifest/executive_operational_readiness_v1.json",
+      "size_bytes": 846,
+      "sha256": "5ec0e6237e7b51f1cb39dedc6622c1c345e37657349bbcaef813c5d1923542dd"
+    },
+    {
+      "path": "deploy_manifest/executive_operational_readiness_v1.md",
+      "size_bytes": 529,
+      "sha256": "dd16fe0ca2b8a643d9736f37cc32ac22d1d7597df495fad7aab928d87bae56f8"
+    },
+    {
+      "path": "deploy_manifest/finstate_operationalization_summary_v1.json",
+      "size_bytes": 728,
+      "sha256": "a2e35c9b48a824e68b2355bf8608c89401c5000d16994b2dd747fa54d1e2afd7"
+    },
+    {
+      "path": "deploy_manifest/finstate_operationalization_summary_v1.md",
+      "size_bytes": 724,
+      "sha256": "bab53863fc9b9bdd58e05de576ea817191a4c252fb4aa65b5e198de2d61cbcb0"
+    },
+    {
+      "path": "deploy_manifest/foundation_validation_v1.json",
+      "size_bytes": 255,
+      "sha256": "022c5b61ee16738a2d0a4ee249eaae76201f2aeed4b0a3f4b9f5a8dd4a7d6e47"
+    },
+    {
+      "path": "deploy_manifest/foundation_validation_v1.md",
+      "size_bytes": 261,
+      "sha256": "c137cb466e62e8ca79879509b27a3787a8da19c81ee219b22263243d06100708"
+    },
+    {
+      "path": "deploy_manifest/offline_runtime_stability_validation_v1.json",
+      "size_bytes": 430,
+      "sha256": "d64d2195a6f0de0754e3f88f6578a5a4a8a9c3e887fc7c13ee6e326f55bbbef6"
+    },
+    {
+      "path": "deploy_manifest/runtime_route_validation_v1.json",
+      "size_bytes": 208,
+      "sha256": "ea0a1809dca7dc8007aa51a1563d8ec066f5754689f2a7fa51ce23e73e5a6fc7"
+    },
+    {
+      "path": "deploy_manifest/static_offline_build_structure_v1.json",
+      "size_bytes": 433,
+      "sha256": "902c2326f1b9b815873c3d50c78e7cd3a8afbf08486649c7a61aa47626f74ad3"
+    },
+    {
+      "path": "deploy_manifest/survivability_governance_validation_v1.json",
+      "size_bytes": 418,
+      "sha256": "5e3ec505148381acb43bb7ea46920942a8832e25ed4f17a90d96201173537ef1"
+    },
+    {
+      "path": "executive_runtime/dynamic_regime_probability_engine_v1.json",
+      "size_bytes": 428,
+      "sha256": "e2562675c8f1f8b185e7d181070920af458feb55d4156cd64e55b382a26afe2c"
+    },
+    {
+      "path": "executive_runtime/executive_regime_transition_engine_v1.json",
+      "size_bytes": 544,
+      "sha256": "1149b8f5501b06550395b4da7921b3658239c07e1583f02e9308e8152abed700"
+    },
+    {
+      "path": "executive_runtime/executive_runtime_control_center_v1.json",
+      "size_bytes": 399,
+      "sha256": "baa96abea392db371902e33437c1226dbd147f12ce17076884626825df79e461"
+    },
+    {
+      "path": "executive_runtime/global_systemic_pressure_engine_v1.json",
+      "size_bytes": 1256,
+      "sha256": "9a5df33f50c7192eddd8b0c957c39068c30f6f14b652d57f690e192136c160ee"
+    },
+    {
+      "path": "executive_runtime/macro_corporate_commodity_fusion_v1.json",
+      "size_bytes": 1108,
+      "sha256": "9fd973eb991db2138938b2d3698ed13c7fb1a5700059f603ac5f80778d3ee5d5"
+    },
+    {
+      "path": "executive_runtime/multi_route_synchronization_engine_v1.json",
+      "size_bytes": 925,
+      "sha256": "dbf51bb5c9178bf200ed01d5debc2b8adbcbe7192399f3fc2ae59e95320fec76"
+    },
+    {
+      "path": "executive_runtime/runtime_governance_layer_v1.json",
+      "size_bytes": 516,
+      "sha256": "5e3c0ab5e0d22c5d0895dd8e6a4bf3a6365e8fa8ece2b3d5113ebbfdfab5c600"
+    },
+    {
+      "path": "finstate_payloads/corporate_contagion_engine_v1.json",
+      "size_bytes": 568,
+      "sha256": "3114c5d100c03978fb0fb16894ed052cf40ff593116423f683242c6414f5d13a"
+    },
+    {
+      "path": "finstate_payloads/finstate_executive_synthesis_v1.json",
+      "size_bytes": 1769,
+      "sha256": "992f97e6270b758d4f3b21c8dcab5ae1bf6a95b06a014e84934b9946020cdbda"
+    },
+    {
+      "path": "finstate_payloads/i2_survivability_loader_v1.json",
+      "size_bytes": 5150,
+      "sha256": "41f111ef8ee611a7bb54d8af400a03e80bcec34627bb57f909d2e599413511c9"
+    },
+    {
+      "path": "finstate_payloads/quarterly_deterioration_propagation_v1.json",
+      "size_bytes": 1431,
+      "sha256": "fb80a12c4c3d01e282f253daed7f5d49653c7ba78cf6be4b603a310b18b479fa"
+    },
+    {
+      "path": "finstate_payloads/recursive_pressure_conditioning_v1.json",
+      "size_bytes": 952,
+      "sha256": "c3cd1f2b6eda1425c771643290ad567eb2e2725a03ff0a761c13e200519945dd"
+    },
+    {
+      "path": "finstate_payloads/recursive_survivability_graph_v1.json",
+      "size_bytes": 80420,
+      "sha256": "b0d70699258a04c447bdef42e7cabc16af7f08ebe5e4cfe59d7d9dac0c0423ed"
+    },
+    {
+      "path": "finstate_payloads/sector_survivability_ranking_v1.json",
+      "size_bytes": 476,
+      "sha256": "2b35346591bc0251dd5f8f23b31e2dd3e558073dc9d76726212e6008fd66044c"
+    },
+    {
+      "path": "finstate_payloads/survivability_memory_system_v1.json",
+      "size_bytes": 637,
+      "sha256": "b1cfff1c93e3761a39959d33e7ce42344bcba4b38bad82a30ea6a6794429b6c2"
+    },
+    {
+      "path": "finstate_runtime/finstate_runtime_registry_v1.json",
+      "size_bytes": 410,
+      "sha256": "ce53f009ade06e29a4e8f8869e8cc285a030f6b6ff35e3eb36ab074b33fd446a"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_contradiction_engine_v1.json",
+      "size_bytes": 900,
+      "sha256": "b4c02c2119261d9a4c8b4974765b8d2574f09f6bb7c8a1d7a879b4505b3d92c9"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_contradiction_engine_v1_normalized.json",
+      "size_bytes": 1201,
+      "sha256": "d9b76fd853f089b1599ca5a5d685529a97eea66561b39a016fd711ed603cbc93"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1.json",
+      "size_bytes": 4473,
+      "sha256": "b90486ec7849c2efdd17f0e63c8bdfb3d0a623c2f90589525c8423432e93bf4c"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1_normalized.json",
+      "size_bytes": 4968,
+      "sha256": "ec57d11158598128a5c669a70038fd5b4c52164d1b2fda3540666d940987b767"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1.json",
+      "size_bytes": 836099,
+      "sha256": "826fe108b45376018dbb2bb5e3c8e9f0390a57f902005242f58151b593562443"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1_normalized.json",
+      "size_bytes": 910164,
+      "sha256": "ebdbbfb5815ef2028d03dfb8cfefb227f1535be684325f93c6143a27b00b7b1f"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1.json",
+      "size_bytes": 1677,
+      "sha256": "8bf01b368ad7ff932f756fd3351b3a9f44a47f4f835a2c863fb17172f57a7718"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1_normalized.json",
+      "size_bytes": 2088,
+      "sha256": "5d2551e15e78d09e0d9bcfbd98fb5bccf985e8abab04bbf2637008ce6f5cfee6"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_ingestion_v1.json",
+      "size_bytes": 589,
+      "sha256": "5c148cebea36851fe6f202c46b36cefb5b0e89bd0a93cae43e4e7005eb926623"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_ingestion_v1_normalized.json",
+      "size_bytes": 873,
+      "sha256": "fe56e48a7177279fefb2e81e1d1fccd29f3205eef1ebca63541a0f97a97dd3d8"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_registry_v1.json",
+      "size_bytes": 772,
+      "sha256": "fbf1a7c20c6708410cc85ec619a6fd449d06f5210f58a35ec5abdfb7d50c0783"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_registry_v1_normalized.json",
+      "size_bytes": 1073,
+      "sha256": "1e65ddb759a1c3da087cee0ec00a35fb79c5d9cf02ce3868c5c586b79d348af7"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_rbl_synthesis_v1.json",
+      "size_bytes": 5570,
+      "sha256": "bba8ddfb5c3649a65352fdd7fcadf967dc90fe5773412510346f7e4217242e98"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_rbl_synthesis_v1_normalized.json",
+      "size_bytes": 5650,
+      "sha256": "05f8b2b1d778a3a9b86bb1b2cee8eae164b84a7a8e4c47defa563e07d708aeb9"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_structural_macro_layer_v1.json",
+      "size_bytes": 1530,
+      "sha256": "a97df7b8083972347be3d85693e09d8bc55b3204e82f63ff6dee9c95529a7426"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_structural_macro_layer_v1_normalized.json",
+      "size_bytes": 1889,
+      "sha256": "b98d5afa0400f0353fd970e6b199a60ff4589535b17f4360430bdd06816a2302"
+    },
+    {
+      "path": "langroid_runtime/index.html",
+      "size_bytes": 7766,
+      "sha256": "e86e6fa8ac707042f441ae63d13e01c31c95b05d6d4d089bc9192ace9a54e3d5"
+    },
+    {
+      "path": "langroid_runtime/langroid_runtime_export.json",
+      "size_bytes": 11807,
+      "sha256": "63f1234999831b036f083f5f95beef500258aac86bd273637c2d0157d5c2d9d1"
+    },
+    {
+      "path": "langroid_runtime/langroid_runtime_export_normalized.json",
+      "size_bytes": 12909,
+      "sha256": "b0e55fe182996d08c1a43e2e6501d4c9076450465a5125ef62e8d0b72c605e64"
+    },
+    {
+      "path": "payloads/manifests/cflow_manifest.json",
+      "size_bytes": 222,
+      "sha256": "c9b26d3c68e5d3bab89c590dbba211056a32d293abc6f81fc3b86e35fa361ed4"
+    },
+    {
+      "path": "payloads/manifests/executive_manifest.json",
+      "size_bytes": 389,
+      "sha256": "c60534f63e48b2424960cdc5b62b9b921ba58a1a60a5c3f5fb6d87de0b221975"
+    },
+    {
+      "path": "payloads/manifests/finstate_manifest.json",
+      "size_bytes": 226,
+      "sha256": "e0aca2ac8f8d83792c20d2ca5e8bfe239a2130be8d41e7f2edf6b7330b068b86"
+    },
+    {
+      "path": "payloads/manifests/quarterly_survivability_manifest_v1.json",
+      "size_bytes": 736,
+      "sha256": "db54e9e2c00ca2b6129d330fb33fdb0cfd8a341289dc1915badc103e62ac9642"
+    },
+    {
+      "path": "components/cards/executive_cards.js",
+      "size_bytes": 796,
+      "sha256": "6752fe00588ed8bc94789e85d39840ebf518f2a5ff7a1cf5afe77f6550e06fb5"
+    },
+    {
+      "path": "components/cards/executive_status_bars.js",
+      "size_bytes": 1231,
+      "sha256": "9085eeb388e004624b06914887e6f636a0ae4a1907421ce5b847585dbec70480"
+    },
+    {
+      "path": "components/cards/metric_card.js",
+      "size_bytes": 347,
+      "sha256": "5756289d63b53687f5bba30194c01294aa6bff26213a528a8b8d7027e8df44b5"
+    },
+    {
+      "path": "components/cards/metric_cards.js",
+      "size_bytes": 586,
+      "sha256": "cb554e39b4ec1bc8c654f63bc6c8b87d0f0a54e50322457b51c884337b4774ad"
+    },
+    {
+      "path": "components/dashboard/executive_runtime_dashboard.js",
+      "size_bytes": 1644,
+      "sha256": "a5f982a36a4c077eccd8f58510c25cce882197ba8f4e9a42824da0096eb51d47"
+    },
+    {
+      "path": "components/dashboard/finstate_dashboard.js",
+      "size_bytes": 1767,
+      "sha256": "fcf596f612698a4bcbadbe4a9bece4f8682a6832f74476b76f83a04fcdeadc62"
+    },
+    {
+      "path": "components/dashboard/institutional_dashboard.js",
+      "size_bytes": 1542,
+      "sha256": "952e7aa9055014f5efffdd6db5671ad0b81652c630dfa906077ddf1125ad81b4"
+    },
+    {
+      "path": "components/executive_header/executive_header.js",
+      "size_bytes": 482,
+      "sha256": "2833dca51822864b7f38cc26f2e9190565595e4960c378027d54da4b45c6d1b5"
+    },
+    {
+      "path": "components/graphs/escalation_graph.js",
+      "size_bytes": 597,
+      "sha256": "daa6c8362b8ece3861be9df7ce4bee5e1433a0bb3941f8686e96f74a31b54730"
+    },
+    {
+      "path": "components/graphs/executive_fragility_topology.js",
+      "size_bytes": 654,
+      "sha256": "1cae5c82499b8c9c18fb94d3fe931e4b79e7bdc2a9311f7ae9319ec73f15bb18"
+    },
+    {
+      "path": "components/graphs/graph_engine.js",
+      "size_bytes": 636,
+      "sha256": "b4269a97db1afaedd56067f7ed2010f96fc8d4586ee7a9d65ab3a443ab9a1920"
+    },
+    {
+      "path": "components/graphs/propagation_overlay.js",
+      "size_bytes": 719,
+      "sha256": "1ac0ceadef479327ef938bc59c5d3ec0d5f4bd0e259587d26508e499ece72a32"
+    },
+    {
+      "path": "components/heatmaps/antifragility_layer.js",
+      "size_bytes": 511,
+      "sha256": "d8e3546f446694b1f7cc840ada96cc86ea174dc781f6d01db01dac9e7afb53a9"
+    },
+    {
+      "path": "components/heatmaps/contradiction_escalation_matrix.js",
+      "size_bytes": 551,
+      "sha256": "c4ce21636f2b272337c499ed4b6062c9d588cb744461913d2bf67935f750d280"
+    },
+    {
+      "path": "components/heatmaps/contradiction_overlay.js",
+      "size_bytes": 690,
+      "sha256": "8b0e5bd897887cc33a8cfe933a29ac487f2cb2a8edb559c63736bc1c75f00756"
+    },
+    {
+      "path": "components/heatmaps/corporate_systemicity_overlay.js",
+      "size_bytes": 590,
+      "sha256": "43e35ff84f565f3f24ff4ef099086ae53ecbbb6b93b9d24259ecd72e856c9833"
+    },
+    {
+      "path": "components/heatmaps/cross_asset_cognition.js",
+      "size_bytes": 552,
+      "sha256": "8473287a0386c575e33eba41d21cb997647bb8891ea8c88b8b97d1efd30d9071"
+    },
+    {
+      "path": "components/heatmaps/cross_market_escalation_sync.js",
+      "size_bytes": 601,
+      "sha256": "c1f224fbf34c417a8cb707a75187b265da6ec41dd5cf84bd3ea3871a4c6bd3b7"
+    },
+    {
+      "path": "components/heatmaps/heatmap_engine.js",
+      "size_bytes": 655,
+      "sha256": "417d5a3cdc615e7c20670912c8260b110c5b2d3f4c5abe1aa9f9fce744c314d2"
+    },
+    {
+      "path": "components/heatmaps/historical_regime_playback.js",
+      "size_bytes": 507,
+      "sha256": "d2e8e033a8c0ce65b20dd736d7279a9bcc7abef8bad5b7bce8232eb6977f1933"
+    },
+    {
+      "path": "components/heatmaps/institutional_deterioration_heatmap.js",
+      "size_bytes": 621,
+      "sha256": "0d14ab3db5994baa662628b7b81afccc197e04a7855dd60e02b32e1eeef2ac7d"
+    },
+    {
+      "path": "components/heatmaps/macro_regime_visualization.js",
+      "size_bytes": 790,
+      "sha256": "4a353f4be8601712e526bef6bd4a82f6cacb2eb33cdb71ec3686c0e5bb6db044"
+    },
+    {
+      "path": "components/heatmaps/persistence_escalation.js",
+      "size_bytes": 518,
+      "sha256": "fc7bb7643ee04a3463c6fbde6c688f17b8d39181ae16ab06b67279f3c90b2318"
+    },
+    {
+      "path": "components/heatmaps/recursive_deterioration_monitoring.js",
+      "size_bytes": 631,
+      "sha256": "e89903eab385d64483aa0d6861798a96f4adb3e64d5e4b407d71f418689421da"
+    },
+    {
+      "path": "components/heatmaps/recursive_fragility_overlay.js",
+      "size_bytes": 510,
+      "sha256": "03f288c7b150caa89110f55df20a73321825e7c625410dc8c8c483518ea731b0"
+    },
+    {
+      "path": "components/heatmaps/recursive_heatmap.js",
+      "size_bytes": 578,
+      "sha256": "aaa1eeead5d488a4226a7c6bc78f52b752a085202558e36009f4f781559d43d8"
+    },
+    {
+      "path": "components/heatmaps/recursive_risk_escalation.js",
+      "size_bytes": 613,
+      "sha256": "f4cc0fe3c99454b248f5b717b4e71dccfff8c495a6195901f06718c798fac82d"
+    },
+    {
+      "path": "components/heatmaps/sector_deterioration_sync.js",
+      "size_bytes": 521,
+      "sha256": "51ed3a490f90212aa5f835a31bcafac1856fc773d58b9716e7d25810a8c2822f"
+    },
+    {
+      "path": "components/heatmaps/survivability_drift.js",
+      "size_bytes": 509,
+      "sha256": "e7b5e9d74385af38860c4ba62246bd42cbc99033a48bb8e9c6b4cf5c79756bd7"
+    },
+    {
+      "path": "components/heatmaps/survivability_layer.js",
+      "size_bytes": 821,
+      "sha256": "cfb8944dd52c3123da8f00da04e3cda36add0d77b187472ff63a7ae371c33d43"
+    },
+    {
+      "path": "components/heatmaps/systemicity_widget.js",
+      "size_bytes": 633,
+      "sha256": "85b78c409279697bcfd95e923e4000a9e2376125108f3cf66304de18fab4197d"
+    },
+    {
+      "path": "components/heatmaps/systemic_deterioration.js",
+      "size_bytes": 560,
+      "sha256": "847a2d7994b6b379b0dbd471cacd4dc5c459b023c901cffb7423f58e54bf015d"
+    },
+    {
+      "path": "components/narratives/executive_alerts.js",
+      "size_bytes": 1368,
+      "sha256": "58d5dc5f837d1fa24717c87b98919be5e8330fc19aa4d7a20ab47473ef10d625"
+    },
+    {
+      "path": "components/narratives/executive_command_console.js",
+      "size_bytes": 678,
+      "sha256": "90736b65b18f469f667b32dfae87f44e8b065fe7f0c5a4d62dc96074e9dbdb22"
+    },
+    {
+      "path": "components/narratives/executive_narrative_compression.js",
+      "size_bytes": 787,
+      "sha256": "c2171a071795ec9c2468edbf40fa1129767816fe99fd5b43b0fceb661978bd47"
+    },
+    {
+      "path": "components/narratives/narrative_block.js",
+      "size_bytes": 174,
+      "sha256": "2e3b8d72ce9d46f11bc1fdb7817c33113d139c2547a8424e39edf2b95f332404"
+    },
+    {
+      "path": "components/narratives/narrative_engine.js",
+      "size_bytes": 570,
+      "sha256": "4ac856b8aa782b68398e2a7a752fee418255fc1b274013b65720629ce25cbc0b"
+    },
+    {
+      "path": "components/narratives/runtime_narratives.js",
+      "size_bytes": 454,
+      "sha256": "f3d3fe1ef3060cd869ed9b865fa2fa0614c98c6b5aa476333d5857dd62e59f95"
+    },
+    {
+      "path": "components/narratives/survivability_command_layer.js",
+      "size_bytes": 667,
+      "sha256": "00b57de5d459462a06a090cd0cc14bc616b0257001140bea15e76c8ebcf8c7fb"
+    },
+    {
+      "path": "components/tables/balance_sheet_topology.js",
+      "size_bytes": 730,
+      "sha256": "c9494728a5cad34a7ef8b95f8cf2206c3657bf4ea9901d9a940eb025086ca3f6"
+    },
+    {
+      "path": "components/tables/cross_asset_sync.js",
+      "size_bytes": 569,
+      "sha256": "0f7093cfef001f0962302e1758ba2949419bfe0fff3794c7d4e833664feeaf5b"
+    },
+    {
+      "path": "components/tables/executive_overlay_routing.js",
+      "size_bytes": 468,
+      "sha256": "17c1fa73b79dda7c90173da40c7d60f6441a65be113f288dd4fbe2b4d388fcba"
+    },
+    {
+      "path": "components/tables/executive_timeline.js",
+      "size_bytes": 449,
+      "sha256": "9d5938756c0382822cbe10951f297ecb65d178549811110c1bb16b7f918f5590"
+    },
+    {
+      "path": "components/tables/geoscen_finstate_hooks.js",
+      "size_bytes": 570,
+      "sha256": "be24e2ffcb3a1a2152a51b0fd65161f4dbe8024b0f79ac8c486c50d3cba908ff"
+    },
+    {
+      "path": "components/tables/global_runtime_status.js",
+      "size_bytes": 452,
+      "sha256": "254fbf5a9861e3d244e50cc210b2f2f83914c9b7a73c986764e53ef5330c6242"
+    },
+    {
+      "path": "components/tables/institutional_tables.js",
+      "size_bytes": 1660,
+      "sha256": "72bb73ee16092c577a9ff0ffbedb24c310b355d2fa3d3cd0fe9219395d7c4177"
+    },
+    {
+      "path": "components/tables/recursive_attention_routing.js",
+      "size_bytes": 762,
+      "sha256": "d706e18ea689f664bc707886392c2c4b7cc65f99b73ea0c2fdaa066f9ce6ff6b"
+    },
+    {
+      "path": "components/tables/signal_prioritization.js",
+      "size_bytes": 748,
+      "sha256": "aa083c511b565e1ad570cbe14c14c86387b6556e31b720d6dff22f73781ff174"
+    },
+    {
+      "path": "components/tables/table_engine.js",
+      "size_bytes": 610,
+      "sha256": "359e6ca132a5aecfa73af4c3cdc41c08fbcf807f3e75534adaf501a25c44098c"
+    }
+  ],
+  "status": "payload_integrity_verified"
+}

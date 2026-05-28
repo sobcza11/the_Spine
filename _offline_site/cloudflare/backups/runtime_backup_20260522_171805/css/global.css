@@ -1,0 +1,169 @@
+body{
+    background:#0b0f14;
+    color:#e5edf5;
+    font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background:#111827;
+    border-bottom:1px solid #263244;
+    padding:20px;
+}
+
+.route-title{
+    color:#7dd3fc;
+    font-size:28px;
+    font-weight:700;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:18px;
+    padding:24px;
+}
+
+.metric-card{
+    background:#111827;
+    border:1px solid #263244;
+    border-radius:14px;
+    padding:18px;
+}
+
+.metric-title{
+    color:#93c5fd;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.metric-value{
+    color:#facc15;
+    font-size:34px;
+    font-weight:700;
+}
+
+.metric-state{
+    margin-top:10px;
+    color:#a7f3d0;
+}
+
+.narrative-block{
+    background:#111827;
+    border:1px solid #263244;
+    border-radius:14px;
+    padding:22px;
+    margin:24px;
+    line-height:1.7;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border-bottom:1px solid #263244;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    color:#93c5fd;
+}
+
+.executive-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:28px;
+    border-bottom:1px solid #263244;
+    background:linear-gradient(135deg,#111827,#0b0f14);
+}
+
+.executive-header h1{
+    margin:0;
+    color:#e5edf5;
+    font-size:34px;
+}
+
+.executive-header p{
+    color:#cbd5e1;
+    margin-top:8px;
+}
+
+.executive-status{
+    border:1px solid #334155;
+    border-radius:999px;
+    padding:10px 14px;
+    background:#111827;
+    text-align:right;
+}
+
+.executive-status span{
+    color:#a7f3d0;
+    display:block;
+    font-weight:700;
+}
+
+.executive-status small{
+    color:#94a3b8;
+}
+
+.heatmap-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;
+    margin-top:14px;
+}
+
+.heatmap-cell{
+    border:1px solid #263244;
+    border-radius:12px;
+    padding:14px;
+    background:#111827;
+}
+
+.heatmap-cell span{
+    display:block;
+    color:#cbd5e1;
+    margin-bottom:8px;
+}
+
+.heatmap-cell strong{
+    font-size:24px;
+}
+
+.heatmap-cell.low strong{
+    color:#a7f3d0;
+}
+
+.heatmap-cell.medium strong{
+    color:#facc15;
+}
+
+.heatmap-cell.high strong{
+    color:#f87171;
+}
+
+.route-nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:14px;
+}
+
+.route-button{
+    background:#111827;
+    color:#e5edf5;
+    border:1px solid #334155;
+    border-radius:999px;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.route-button:hover{
+    border-color:#7dd3fc;
+    color:#7dd3fc;
+}

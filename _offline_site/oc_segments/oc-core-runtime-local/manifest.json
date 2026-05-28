@@ -1,0 +1,13 @@
+{
+  "artifact": "oc_segment_offline_site_manifest_v1",
+  "segment_id": "core_runtime",
+  "site_name": "oc-core-runtime-local",
+  "title": "OC Core Runtime Local",
+  "role": "Core hydration, runtime state, API health, refresh control.",
+  "online_mirror": "oc-core-runtime-online",
+  "run_ts": "2026-05-10T20:22:35.596666+00:00",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "source_payload": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\data\\serving\\oraclechambers\\oc_local_site_hydration_v1.json",
+  "payload_deployment_ready": true
+}

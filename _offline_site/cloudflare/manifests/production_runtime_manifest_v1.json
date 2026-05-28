@@ -1,0 +1,535 @@
+{
+  "component": "production_runtime_manifest_v1",
+  "generated_at_utc": "2026-05-22T17:18:06.238788+00:00",
+  "production_candidate": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\cloudflare\\production_candidate",
+  "file_count": 131,
+  "total_bytes": 2028416,
+  "entrypoint_exists": true,
+  "files": [
+    {
+      "path": "index.html",
+      "size_bytes": 5788
+    },
+    {
+      "path": "styles.css",
+      "size_bytes": 1200
+    },
+    {
+      "path": "config/geoscen_routes.json",
+      "size_bytes": 1380
+    },
+    {
+      "path": "config/geoscen_runtime_normalization_summary_v1.json",
+      "size_bytes": 2916
+    },
+    {
+      "path": "config/langroid_runtime_normalization_summary_v1.json",
+      "size_bytes": 249
+    },
+    {
+      "path": "config/oc_segment_registry_v1.json",
+      "size_bytes": 4931
+    },
+    {
+      "path": "config/offline_asset_registry.json",
+      "size_bytes": 1119
+    },
+    {
+      "path": "config/route_metadata.json",
+      "size_bytes": 1902
+    },
+    {
+      "path": "config/runtime_contract_v1.json",
+      "size_bytes": 419
+    },
+    {
+      "path": "config/runtime_manifest_v1.json",
+      "size_bytes": 35142
+    },
+    {
+      "path": "core/executive_runtime_loader.js",
+      "size_bytes": 1008
+    },
+    {
+      "path": "core/executive_session.js",
+      "size_bytes": 524
+    },
+    {
+      "path": "core/executive_telemetry.js",
+      "size_bytes": 705
+    },
+    {
+      "path": "core/finstate_runtime_loader.js",
+      "size_bytes": 1100
+    },
+    {
+      "path": "core/navigation.js",
+      "size_bytes": 786
+    },
+    {
+      "path": "core/offline_auth_gateway.js",
+      "size_bytes": 689
+    },
+    {
+      "path": "core/offline_bootstrap_loader.js",
+      "size_bytes": 1128
+    },
+    {
+      "path": "core/payload_validator.js",
+      "size_bytes": 542
+    },
+    {
+      "path": "core/recursive_runtime_logging.js",
+      "size_bytes": 941
+    },
+    {
+      "path": "core/route_modernization_loader.js",
+      "size_bytes": 1550
+    },
+    {
+      "path": "core/route_specific_runtime_loaders.js",
+      "size_bytes": 1295
+    },
+    {
+      "path": "core/route_state_engine.js",
+      "size_bytes": 1224
+    },
+    {
+      "path": "core/runtime_guard.js",
+      "size_bytes": 563
+    },
+    {
+      "path": "core/runtime_hydration.js",
+      "size_bytes": 1341
+    },
+    {
+      "path": "core/runtime_loader.js",
+      "size_bytes": 951
+    },
+    {
+      "path": "core/runtime_performance_monitoring.js",
+      "size_bytes": 688
+    },
+    {
+      "path": "core/runtime_recovery_fallback.js",
+      "size_bytes": 552
+    },
+    {
+      "path": "css/global.css",
+      "size_bytes": 2699
+    },
+    {
+      "path": "css/site.css",
+      "size_bytes": 898
+    },
+    {
+      "path": "css/theme.css",
+      "size_bytes": 2181
+    },
+    {
+      "path": "deploy_manifest/executive_cognitive_runtime_completion_v1.json",
+      "size_bytes": 848
+    },
+    {
+      "path": "deploy_manifest/executive_cognitive_runtime_completion_v1.md",
+      "size_bytes": 838
+    },
+    {
+      "path": "deploy_manifest/executive_deployment_validation_v1.json",
+      "size_bytes": 248
+    },
+    {
+      "path": "deploy_manifest/executive_operational_readiness_v1.json",
+      "size_bytes": 846
+    },
+    {
+      "path": "deploy_manifest/executive_operational_readiness_v1.md",
+      "size_bytes": 529
+    },
+    {
+      "path": "deploy_manifest/finstate_operationalization_summary_v1.json",
+      "size_bytes": 728
+    },
+    {
+      "path": "deploy_manifest/finstate_operationalization_summary_v1.md",
+      "size_bytes": 724
+    },
+    {
+      "path": "deploy_manifest/foundation_validation_v1.json",
+      "size_bytes": 255
+    },
+    {
+      "path": "deploy_manifest/foundation_validation_v1.md",
+      "size_bytes": 261
+    },
+    {
+      "path": "deploy_manifest/offline_runtime_stability_validation_v1.json",
+      "size_bytes": 430
+    },
+    {
+      "path": "deploy_manifest/runtime_route_validation_v1.json",
+      "size_bytes": 208
+    },
+    {
+      "path": "deploy_manifest/static_offline_build_structure_v1.json",
+      "size_bytes": 433
+    },
+    {
+      "path": "deploy_manifest/survivability_governance_validation_v1.json",
+      "size_bytes": 418
+    },
+    {
+      "path": "executive_runtime/dynamic_regime_probability_engine_v1.json",
+      "size_bytes": 428
+    },
+    {
+      "path": "executive_runtime/executive_regime_transition_engine_v1.json",
+      "size_bytes": 544
+    },
+    {
+      "path": "executive_runtime/executive_runtime_control_center_v1.json",
+      "size_bytes": 399
+    },
+    {
+      "path": "executive_runtime/global_systemic_pressure_engine_v1.json",
+      "size_bytes": 1256
+    },
+    {
+      "path": "executive_runtime/macro_corporate_commodity_fusion_v1.json",
+      "size_bytes": 1108
+    },
+    {
+      "path": "executive_runtime/multi_route_synchronization_engine_v1.json",
+      "size_bytes": 925
+    },
+    {
+      "path": "executive_runtime/runtime_governance_layer_v1.json",
+      "size_bytes": 516
+    },
+    {
+      "path": "finstate_payloads/corporate_contagion_engine_v1.json",
+      "size_bytes": 568
+    },
+    {
+      "path": "finstate_payloads/finstate_executive_synthesis_v1.json",
+      "size_bytes": 1769
+    },
+    {
+      "path": "finstate_payloads/i2_survivability_loader_v1.json",
+      "size_bytes": 5150
+    },
+    {
+      "path": "finstate_payloads/quarterly_deterioration_propagation_v1.json",
+      "size_bytes": 1431
+    },
+    {
+      "path": "finstate_payloads/recursive_pressure_conditioning_v1.json",
+      "size_bytes": 952
+    },
+    {
+      "path": "finstate_payloads/recursive_survivability_graph_v1.json",
+      "size_bytes": 80420
+    },
+    {
+      "path": "finstate_payloads/sector_survivability_ranking_v1.json",
+      "size_bytes": 476
+    },
+    {
+      "path": "finstate_payloads/survivability_memory_system_v1.json",
+      "size_bytes": 637
+    },
+    {
+      "path": "finstate_runtime/finstate_runtime_registry_v1.json",
+      "size_bytes": 410
+    },
+    {
+      "path": "geoscen_runtime/geoscen_contradiction_engine_v1.json",
+      "size_bytes": 900
+    },
+    {
+      "path": "geoscen_runtime/geoscen_contradiction_engine_v1_normalized.json",
+      "size_bytes": 1201
+    },
+    {
+      "path": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1.json",
+      "size_bytes": 4473
+    },
+    {
+      "path": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1_normalized.json",
+      "size_bytes": 4968
+    },
+    {
+      "path": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1.json",
+      "size_bytes": 836099
+    },
+    {
+      "path": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1_normalized.json",
+      "size_bytes": 910164
+    },
+    {
+      "path": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1.json",
+      "size_bytes": 1677
+    },
+    {
+      "path": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1_normalized.json",
+      "size_bytes": 2088
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_ingestion_v1.json",
+      "size_bytes": 589
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_ingestion_v1_normalized.json",
+      "size_bytes": 873
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_registry_v1.json",
+      "size_bytes": 772
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_registry_v1_normalized.json",
+      "size_bytes": 1073
+    },
+    {
+      "path": "geoscen_runtime/geoscen_rbl_synthesis_v1.json",
+      "size_bytes": 5570
+    },
+    {
+      "path": "geoscen_runtime/geoscen_rbl_synthesis_v1_normalized.json",
+      "size_bytes": 5650
+    },
+    {
+      "path": "geoscen_runtime/geoscen_structural_macro_layer_v1.json",
+      "size_bytes": 1530
+    },
+    {
+      "path": "geoscen_runtime/geoscen_structural_macro_layer_v1_normalized.json",
+      "size_bytes": 1889
+    },
+    {
+      "path": "langroid_runtime/index.html",
+      "size_bytes": 7766
+    },
+    {
+      "path": "langroid_runtime/langroid_runtime_export.json",
+      "size_bytes": 11807
+    },
+    {
+      "path": "langroid_runtime/langroid_runtime_export_normalized.json",
+      "size_bytes": 12909
+    },
+    {
+      "path": "payloads/manifests/cflow_manifest.json",
+      "size_bytes": 222
+    },
+    {
+      "path": "payloads/manifests/executive_manifest.json",
+      "size_bytes": 389
+    },
+    {
+      "path": "payloads/manifests/finstate_manifest.json",
+      "size_bytes": 226
+    },
+    {
+      "path": "payloads/manifests/quarterly_survivability_manifest_v1.json",
+      "size_bytes": 736
+    },
+    {
+      "path": "components/cards/executive_cards.js",
+      "size_bytes": 796
+    },
+    {
+      "path": "components/cards/executive_status_bars.js",
+      "size_bytes": 1231
+    },
+    {
+      "path": "components/cards/metric_card.js",
+      "size_bytes": 347
+    },
+    {
+      "path": "components/cards/metric_cards.js",
+      "size_bytes": 586
+    },
+    {
+      "path": "components/dashboard/executive_runtime_dashboard.js",
+      "size_bytes": 1644
+    },
+    {
+      "path": "components/dashboard/finstate_dashboard.js",
+      "size_bytes": 1767
+    },
+    {
+      "path": "components/dashboard/institutional_dashboard.js",
+      "size_bytes": 1542
+    },
+    {
+      "path": "components/executive_header/executive_header.js",
+      "size_bytes": 482
+    },
+    {
+      "path": "components/graphs/escalation_graph.js",
+      "size_bytes": 597
+    },
+    {
+      "path": "components/graphs/executive_fragility_topology.js",
+      "size_bytes": 654
+    },
+    {
+      "path": "components/graphs/graph_engine.js",
+      "size_bytes": 636
+    },
+    {
+      "path": "components/graphs/propagation_overlay.js",
+      "size_bytes": 719
+    },
+    {
+      "path": "components/heatmaps/antifragility_layer.js",
+      "size_bytes": 511
+    },
+    {
+      "path": "components/heatmaps/contradiction_escalation_matrix.js",
+      "size_bytes": 551
+    },
+    {
+      "path": "components/heatmaps/contradiction_overlay.js",
+      "size_bytes": 690
+    },
+    {
+      "path": "components/heatmaps/corporate_systemicity_overlay.js",
+      "size_bytes": 590
+    },
+    {
+      "path": "components/heatmaps/cross_asset_cognition.js",
+      "size_bytes": 552
+    },
+    {
+      "path": "components/heatmaps/cross_market_escalation_sync.js",
+      "size_bytes": 601
+    },
+    {
+      "path": "components/heatmaps/heatmap_engine.js",
+      "size_bytes": 655
+    },
+    {
+      "path": "components/heatmaps/historical_regime_playback.js",
+      "size_bytes": 507
+    },
+    {
+      "path": "components/heatmaps/institutional_deterioration_heatmap.js",
+      "size_bytes": 621
+    },
+    {
+      "path": "components/heatmaps/macro_regime_visualization.js",
+      "size_bytes": 790
+    },
+    {
+      "path": "components/heatmaps/persistence_escalation.js",
+      "size_bytes": 518
+    },
+    {
+      "path": "components/heatmaps/recursive_deterioration_monitoring.js",
+      "size_bytes": 631
+    },
+    {
+      "path": "components/heatmaps/recursive_fragility_overlay.js",
+      "size_bytes": 510
+    },
+    {
+      "path": "components/heatmaps/recursive_heatmap.js",
+      "size_bytes": 578
+    },
+    {
+      "path": "components/heatmaps/recursive_risk_escalation.js",
+      "size_bytes": 613
+    },
+    {
+      "path": "components/heatmaps/sector_deterioration_sync.js",
+      "size_bytes": 521
+    },
+    {
+      "path": "components/heatmaps/survivability_drift.js",
+      "size_bytes": 509
+    },
+    {
+      "path": "components/heatmaps/survivability_layer.js",
+      "size_bytes": 821
+    },
+    {
+      "path": "components/heatmaps/systemicity_widget.js",
+      "size_bytes": 633
+    },
+    {
+      "path": "components/heatmaps/systemic_deterioration.js",
+      "size_bytes": 560
+    },
+    {
+      "path": "components/narratives/executive_alerts.js",
+      "size_bytes": 1368
+    },
+    {
+      "path": "components/narratives/executive_command_console.js",
+      "size_bytes": 678
+    },
+    {
+      "path": "components/narratives/executive_narrative_compression.js",
+      "size_bytes": 787
+    },
+    {
+      "path": "components/narratives/narrative_block.js",
+      "size_bytes": 174
+    },
+    {
+      "path": "components/narratives/narrative_engine.js",
+      "size_bytes": 570
+    },
+    {
+      "path": "components/narratives/runtime_narratives.js",
+      "size_bytes": 454
+    },
+    {
+      "path": "components/narratives/survivability_command_layer.js",
+      "size_bytes": 667
+    },
+    {
+      "path": "components/tables/balance_sheet_topology.js",
+      "size_bytes": 730
+    },
+    {
+      "path": "components/tables/cross_asset_sync.js",
+      "size_bytes": 569
+    },
+    {
+      "path": "components/tables/executive_overlay_routing.js",
+      "size_bytes": 468
+    },
+    {
+      "path": "components/tables/executive_timeline.js",
+      "size_bytes": 449
+    },
+    {
+      "path": "components/tables/geoscen_finstate_hooks.js",
+      "size_bytes": 570
+    },
+    {
+      "path": "components/tables/global_runtime_status.js",
+      "size_bytes": 452
+    },
+    {
+      "path": "components/tables/institutional_tables.js",
+      "size_bytes": 1660
+    },
+    {
+      "path": "components/tables/recursive_attention_routing.js",
+      "size_bytes": 762
+    },
+    {
+      "path": "components/tables/signal_prioritization.js",
+      "size_bytes": 748
+    },
+    {
+      "path": "components/tables/table_engine.js",
+      "size_bytes": 610
+    }
+  ],
+  "status": "production_runtime_manifest_ready"
+}

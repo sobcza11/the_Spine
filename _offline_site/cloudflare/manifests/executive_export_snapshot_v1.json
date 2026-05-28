@@ -1,0 +1,14 @@
+{
+  "component": "executive_export_snapshot_v1",
+  "generated_at_utc": "2026-05-22T17:18:05.885406+00:00",
+  "snapshot_path": "C:\\Users\\Rand Sobczak Jr\\_rts\\3_AI\\the_Spine\\_offline_site\\cloudflare\\executive_snapshot",
+  "copied_count": 5,
+  "copied": [
+    "executive_cognitive_runtime_completion_v1.md",
+    "executive_operational_readiness_v1.md",
+    "finstate_operationalization_summary_v1.md",
+    "runtime_cdn_asset_registry_v1.json",
+    "payload_integrity_verification_v1.json"
+  ],
+  "status": "executive_export_snapshot_ready"
+}

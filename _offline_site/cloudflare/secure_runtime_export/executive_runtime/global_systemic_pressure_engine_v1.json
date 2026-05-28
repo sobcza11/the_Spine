@@ -1,0 +1,39 @@
+{
+  "component": "global_systemic_pressure_engine_v1",
+  "generated_at_utc": "2026-05-22T16:35:53.860030+00:00",
+  "component_count": 5,
+  "average_systemic_pressure": 0.1488,
+  "components": [
+    {
+      "file": "geoscen_rbl_synthesis_v1_normalized.json",
+      "component": "geoscen_rbl_synthesis_v1",
+      "score": 0.24382493582092146,
+      "status": "normalized_runtime_available"
+    },
+    {
+      "file": "geoscen_structural_macro_layer_v1_normalized.json",
+      "component": "GeoScen Structural Macro Layer",
+      "score": 0.5,
+      "status": "normalized_runtime_available"
+    },
+    {
+      "file": "geoscen_contradiction_engine_v1_normalized.json",
+      "component": "GeoScen Contradiction Engine",
+      "score": 0.0,
+      "status": "normalized_runtime_available"
+    },
+    {
+      "file": "finstate_executive_synthesis_v1.json",
+      "component": "finstate_executive_synthesis_v1",
+      "score": 0.0,
+      "status": "finstate_executive_synthesis_ready"
+    },
+    {
+      "file": "langroid_runtime_export_normalized.json",
+      "component": "langroid_runtime_export",
+      "score": 0.0,
+      "status": "normalized_runtime_available"
+    }
+  ],
+  "status": "global_systemic_pressure_ready"
+}

@@ -1,0 +1,9 @@
+{
+  "artifact": "oc_ai_component_viewer_manifest_v1",
+  "site": "rates",
+  "title": "RATES AI Components",
+  "payload": "rates_ai_components_v1.json",
+  "run_ts": "2026-05-11T16:08:28.324433+00:00",
+  "viewer_ready": true,
+  "online_transition_allowed": false
+}

@@ -1,0 +1,17 @@
+{
+  "route": "/fx",
+  "label": "FX",
+  "panels": [
+    {
+      "title": "Z? • FX zeitgeist",
+      "type": "zeitgeist",
+      "source": "FX Z? / USD Liquidity / Divergence"
+    },
+    {
+      "title": "RBL • FX (Systemic) • OC",
+      "type": "systemic",
+      "source": "FX Fragmentation / Cross-Border Liquidity"
+    }
+  ],
+  "status": "fx_route_ready"
+}

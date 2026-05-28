@@ -1,0 +1,19 @@
+{
+  "component": "executive_regime_transition_engine_v1",
+  "generated_at_utc": "2026-05-22T16:31:55.491794+00:00",
+  "regime_states": [
+    "stable_expansion",
+    "fragility_building",
+    "recursive_deterioration",
+    "systemic_fragmentation",
+    "liquidity_stress",
+    "cross_asset_contagion"
+  ],
+  "transition_logic": {
+    "macro_pressure": true,
+    "survivability_deterioration": true,
+    "cross_asset_sync": true,
+    "contradiction_escalation": true
+  },
+  "status": "executive_regime_transition_engine_ready"
+}

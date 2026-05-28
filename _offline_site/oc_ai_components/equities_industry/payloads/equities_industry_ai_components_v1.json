@@ -1,0 +1,114 @@
+{
+  "zt": {
+    "artifact": "oc_equities_industry_zt_zeitgeist_v1",
+    "plane": "EQUITIES_INDUSTRY",
+    "component": "Z_t",
+    "label": "Z_t \u2022 Equity - Industry \u2022 zeitgeist",
+    "run_ts": "2026-05-11T15:56:08.169653+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "zeitgeist": {
+      "regime": "Fragmented Cross-Asset Regime",
+      "industry_participation": "Uneven",
+      "leadership_concentration": "Elevated",
+      "cyclical_industry_confirmation": "Incomplete",
+      "defensive_industry_resilience": "Moderate",
+      "dispersion_pressure": true,
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "deterministic_output": true,
+      "ai_may_assist_interpretation": true,
+      "ai_may_not_own_runtime_truth": true
+    }
+  },
+  "rbl": {
+    "artifact": "oc_equities_industry_rbl_interpretation_v1",
+    "plane": "EQUITIES_INDUSTRY",
+    "component": "RBL",
+    "label": "RBL \u2022 Equity Mrkt \u2022 Interpretation (OC)",
+    "run_ts": "2026-05-11T15:56:08.169674+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "source_artifact": "oc_equities_industry_zt_zeitgeist_v1",
+    "interpretation": {
+      "summary": "Industry cognition indicates uneven participation beneath the equity surface, with elevated leadership concentration and incomplete cyclical industry confirmation. The market may appear constructive at the index level while industry-level confirmation remains fragmented.",
+      "risk_posture": "Industry-level confirmation discipline",
+      "decision_bias": "Do not treat headline index strength as broad market confirmation until industry participation, cyclicals, and dispersion stabilize.",
+      "watch_items": [
+        "Industry breadth participation",
+        "Leadership concentration",
+        "Cyclical industry confirmation",
+        "Defensive industry resilience",
+        "Industry dispersion pressure"
+      ],
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "rbl_is_interpretive": true,
+      "zt_is_source_signal": true,
+      "ai_may_not_mutate_zt": true
+    }
+  },
+  "analytics": {
+    "z_t_composite": 0.65,
+    "signal_strength": "Moderate",
+    "stress_score": 0.5,
+    "dispersion_score": 0.77,
+    "contradiction_score": 0.41,
+    "momentum_score": 0.6,
+    "confidence_score": 0.895,
+    "conviction_score": 0.6694,
+    "model_mode": "Deterministic AI cognition component",
+    "ml_readiness": "Feature-ready; not trained ML"
+  },
+  "feature_vector": [
+    {
+      "feature": "Industry breadth participation",
+      "weight": 0.24,
+      "direction": "confirmation_negative"
+    },
+    {
+      "feature": "Leadership concentration",
+      "weight": 0.23,
+      "direction": "fragility_positive"
+    },
+    {
+      "feature": "Cyclical industry confirmation",
+      "weight": 0.2,
+      "direction": "confirmation_negative"
+    },
+    {
+      "feature": "Industry dispersion pressure",
+      "weight": 0.19,
+      "direction": "dispersion_positive"
+    }
+  ],
+  "historical_analogs": [
+    {
+      "regime": "1999 Industry Concentration",
+      "similarity": 0.6,
+      "why": "Narrow leadership beneath index strength"
+    },
+    {
+      "regime": "2021 Reopening Rotation",
+      "similarity": 0.49,
+      "why": "Cyclical confirmation instability"
+    },
+    {
+      "regime": "2022 Dispersion Shock",
+      "similarity": 0.56,
+      "why": "Industry dispersion & rates sensitivity"
+    }
+  ],
+  "executive_decision_layer": {
+    "risk_posture": "Industry-level confirmation discipline",
+    "confirmation_status": "Incomplete",
+    "action_bias": "Wait for industry breadth before confirming broad market strength",
+    "fragility_level": "Moderate"
+  },
+  "client_visible_intelligence": true,
+  "analytics_version": "institutional_analytics_v1"
+}

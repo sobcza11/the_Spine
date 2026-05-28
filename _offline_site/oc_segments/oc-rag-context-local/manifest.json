@@ -1,0 +1,8 @@
+{
+  "artifact": "build_phase_c_rag_context_plane_v1",
+  "site_name": "oc-rag-context-local",
+  "domain": "RAG_CONTEXT",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "run_ts": "2026-05-10T21:27:39.504414+00:00"
+}

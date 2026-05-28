@@ -1,0 +1,16 @@
+{
+  "component": "quarterly_survivability_payload_manifest_v1",
+  "route": "/finstate",
+  "payloads": [
+    "finstate_runtime/finstate_runtime_registry_v1.json",
+    "finstate_payloads/i2_survivability_loader_v1.json",
+    "finstate_payloads/quarterly_deterioration_propagation_v1.json",
+    "finstate_payloads/corporate_contagion_engine_v1.json",
+    "finstate_payloads/survivability_memory_system_v1.json",
+    "finstate_payloads/recursive_pressure_conditioning_v1.json",
+    "finstate_payloads/sector_survivability_ranking_v1.json",
+    "finstate_payloads/recursive_survivability_graph_v1.json",
+    "finstate_payloads/finstate_executive_synthesis_v1.json"
+  ],
+  "status": "quarterly_survivability_manifest_ready"
+}

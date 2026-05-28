@@ -1,0 +1,9 @@
+{
+  "route": "/cflow",
+  "payloads": [
+    "runtime/zt_commodity_flow.json",
+    "runtime/rbl_commodities_oc.json",
+    "runtime/rbl_commodities_systemic_oc.json"
+  ],
+  "status": "cflow_payload_manifest_ready"
+}

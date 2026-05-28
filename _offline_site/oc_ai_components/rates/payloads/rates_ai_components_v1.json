@@ -1,0 +1,113 @@
+{
+  "zt": {
+    "artifact": "oc_rates_zt_zeitgeist_v1",
+    "plane": "RATES",
+    "component": "Z_t",
+    "label": "Z_t \u2022 Bond Market \u2022 zeitgeist",
+    "run_ts": "2026-05-11T15:56:07.951611+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "zeitgeist": {
+      "regime": "Fragmented Cross-Asset Regime",
+      "duration_pressure": "Elevated",
+      "curve_state": "Unstable Flattening Bias",
+      "policy_pressure": "Restrictive",
+      "liquidity_stress": "Moderate-to-Elevated",
+      "term_premium_pressure": true,
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "deterministic_output": true,
+      "ai_may_assist_interpretation": true,
+      "ai_may_not_own_runtime_truth": true
+    }
+  },
+  "rbl": {
+    "artifact": "oc_rates_rbl_interpretation_v1",
+    "plane": "RATES",
+    "component": "RBL",
+    "label": "RBL \u2022 Bond Mrkt \u2022 Interpretation (OC)",
+    "run_ts": "2026-05-11T15:56:07.951628+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "source_artifact": "oc_rates_zt_zeitgeist_v1",
+    "interpretation": {
+      "summary": "Rates cognition indicates persistent duration pressure, unstable curve behavior, and restrictive policy conditions. Cross-asset confirmation remains incomplete, implying that bond-market stress still carries macro-fragility risk.",
+      "risk_posture": "Defensive duration awareness",
+      "decision_bias": "Avoid interpreting isolated equity strength as durable while rates instability and policy pressure persist.",
+      "watch_items": [
+        "Yield curve instability",
+        "Duration repricing risk",
+        "Treasury liquidity stress",
+        "Central-bank policy divergence"
+      ],
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "rbl_is_interpretive": true,
+      "zt_is_source_signal": true,
+      "ai_may_not_mutate_zt": true
+    }
+  },
+  "analytics": {
+    "z_t_composite": 0.69,
+    "signal_strength": "Moderate-High",
+    "stress_score": 0.76,
+    "dispersion_score": 0.61,
+    "contradiction_score": 0.48,
+    "momentum_score": 0.55,
+    "confidence_score": 0.895,
+    "conviction_score": 0.6694,
+    "model_mode": "Deterministic AI cognition component",
+    "ml_readiness": "Feature-ready; not trained ML"
+  },
+  "feature_vector": [
+    {
+      "feature": "Duration pressure",
+      "weight": 0.25,
+      "direction": "stress_positive"
+    },
+    {
+      "feature": "Curve instability",
+      "weight": 0.21,
+      "direction": "fragility_positive"
+    },
+    {
+      "feature": "Policy restriction",
+      "weight": 0.2,
+      "direction": "liquidity_negative"
+    },
+    {
+      "feature": "Term premium pressure",
+      "weight": 0.16,
+      "direction": "risk_positive"
+    }
+  ],
+  "historical_analogs": [
+    {
+      "regime": "2022 Tightening Cycle",
+      "similarity": 0.67,
+      "why": "Restrictive policy & duration repricing"
+    },
+    {
+      "regime": "1994 Bond Shock",
+      "similarity": 0.59,
+      "why": "Rates volatility & curve stress"
+    },
+    {
+      "regime": "2008 Liquidity Stress",
+      "similarity": 0.52,
+      "why": "Liquidity pressure & flight-to-quality risk"
+    }
+  ],
+  "executive_decision_layer": {
+    "risk_posture": "Defensive duration awareness",
+    "confirmation_status": "Incomplete",
+    "action_bias": "Do not overtrust equity strength while rates pressure persists",
+    "fragility_level": "Moderate"
+  },
+  "client_visible_intelligence": true,
+  "analytics_version": "institutional_analytics_v1"
+}

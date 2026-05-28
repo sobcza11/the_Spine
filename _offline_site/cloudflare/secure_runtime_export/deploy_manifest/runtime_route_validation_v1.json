@@ -1,0 +1,8 @@
+{
+  "component": "runtime_route_validation_v1",
+  "generated_at_utc": "2026-05-22T16:11:46.282342+00:00",
+  "route_count": 7,
+  "missing_count": 0,
+  "missing": [],
+  "status": "runtime_routes_valid"
+}

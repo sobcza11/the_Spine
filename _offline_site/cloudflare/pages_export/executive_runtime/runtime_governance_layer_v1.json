@@ -1,0 +1,22 @@
+{
+  "component": "runtime_governance_layer_v1",
+  "generated_at_utc": "2026-05-22T16:51:17.544034+00:00",
+  "rules": {
+    "registry_first": true,
+    "ai_last": true,
+    "offline_first": true,
+    "source_provenance_required": true,
+    "runtime_validation_required": true,
+    "executive_outputs_required": true
+  },
+  "governed_domains": [
+    "GeoScen",
+    "FINSTATE",
+    "C_FLOW",
+    "FX",
+    "RATES",
+    "Equities",
+    "Executive"
+  ],
+  "status": "runtime_governance_layer_ready"
+}

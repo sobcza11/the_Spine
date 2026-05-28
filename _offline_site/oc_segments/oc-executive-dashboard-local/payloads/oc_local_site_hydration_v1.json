@@ -1,0 +1,180 @@
+{
+  "artifact": "oc_local_site_hydration_v1",
+  "system": "OracleChambers",
+  "layer": "OC Local Site Hydration",
+  "version": "v1",
+  "run_ts": "2026-05-09T18:37:06.499869+00:00",
+  "deployment_ready": true,
+  "site_payload": {
+    "site_title": "OracleChambers | GeoScen",
+    "site_mode": "offline_first",
+    "runtime_mode": "high_confidence_tracking",
+    "deployment_ready": true,
+    "headline": {
+      "regime": "Fragmented Cross-Asset Regime",
+      "confidence": 0.895,
+      "conviction": 0.6694,
+      "macro_temperature": "NEUTRAL",
+      "risk_posture": "Constructive",
+      "decision_bias": "Neutral"
+    },
+    "dashboard": {
+      "header": {
+        "dashboard_title": "OracleChambers Executive Intelligence",
+        "dashboard_mode": "conviction_layout",
+        "focus_panel": "rbl_panel",
+        "executive_monitoring_mode": true,
+        "offline_first_mode": true
+      },
+      "layout_regions": {
+        "top_left": "rbl_panel",
+        "top_right": "regime_panel",
+        "bottom_left": "metric_panel",
+        "bottom_right": "historical_memory_panel",
+        "focus_panel": "rbl_panel"
+      },
+      "overlay_regions": [
+        {
+          "overlay_name": "contradiction_overlay_runtime",
+          "enabled": false,
+          "priority": 1,
+          "opacity": 0.7,
+          "render_mode": "layered"
+        },
+        {
+          "overlay_name": "historical_overlay_runtime",
+          "enabled": true,
+          "priority": 2,
+          "opacity": 0.55,
+          "render_mode": "layered"
+        },
+        {
+          "overlay_name": "cb_divergence_overlay_runtime",
+          "enabled": false,
+          "priority": 3,
+          "opacity": 0.6,
+          "render_mode": "layered"
+        }
+      ],
+      "chart_regions": {
+        "primary_chart_region": {
+          "chart_id": "regime_confidence_timeseries",
+          "render_priority": 1,
+          "adaptive_enabled": true
+        },
+        "secondary_chart_region": {
+          "chart_id": "cross_asset_signal_map",
+          "render_priority": 2,
+          "adaptive_enabled": true
+        },
+        "tertiary_chart_region": {
+          "chart_id": "historical_similarity_map",
+          "render_priority": 3,
+          "adaptive_enabled": false
+        },
+        "adaptive_chart_scaling": true
+      }
+    },
+    "frontend": {
+      "layout_mode": "conviction_layout",
+      "focus_panel": "rbl_panel",
+      "overlay_priority": [
+        {
+          "overlay_name": "contradiction_overlay_runtime",
+          "enabled": false,
+          "priority": 1,
+          "opacity": 0.7
+        },
+        {
+          "overlay_name": "historical_overlay_runtime",
+          "enabled": true,
+          "priority": 2,
+          "opacity": 0.55
+        },
+        {
+          "overlay_name": "cb_divergence_overlay_runtime",
+          "enabled": false,
+          "priority": 3,
+          "opacity": 0.6
+        }
+      ],
+      "chart_layout": {
+        "primary_chart": {
+          "chart_id": "regime_confidence_timeseries",
+          "render_priority": 1,
+          "adaptive_enabled": true
+        },
+        "secondary_chart": {
+          "chart_id": "cross_asset_signal_map",
+          "render_priority": 2,
+          "adaptive_enabled": true
+        },
+        "tertiary_chart": {
+          "chart_id": "historical_similarity_map",
+          "render_priority": 3,
+          "adaptive_enabled": false
+        },
+        "adaptive_chart_scaling": true,
+        "cross_asset_overlay_enabled": true,
+        "historical_overlay_enabled": true
+      }
+    },
+    "narrative": {
+      "executive_summary": "GeoScen identifies the current macro state as Fragmented Cross-Asset Regime, with confidence at 0.90, conviction at 0.67, & instability risk at 0.15. Macro temperature is classified as NEUTRAL. The closest historical reference pattern is 1998 FX Contagion.",
+      "rbl_summary": "Read Between the Lines: the regime signal points to Fragmented Cross-Asset Regime with a mixed tone. Cross-compartment contradiction is 0.00, narrative drift is 0.35, & CB divergence pressure is 0.16. The system should treat this as a governed synthesis layer, not an LLM-owned interpretation."
+    },
+    "historical_memory": {
+      "top_match": {
+        "historical_regime": "1998 FX Contagion",
+        "regime_type": "fragmented_cross_asset",
+        "similarity_score": 0.65,
+        "description": "Fragmented global liquidity & FX instability."
+      },
+      "matches": [
+        {
+          "historical_regime": "1998 FX Contagion",
+          "regime_type": "fragmented_cross_asset",
+          "similarity_score": 0.65,
+          "description": "Fragmented global liquidity & FX instability."
+        },
+        {
+          "historical_regime": "2008 Liquidity Stress",
+          "regime_type": "liquidity_stress",
+          "similarity_score": 0.1,
+          "description": "Systemic liquidity deterioration & cross-asset stress."
+        },
+        {
+          "historical_regime": "1970s Inflation Shock",
+          "regime_type": "late_cycle_tightening",
+          "similarity_score": 0.1,
+          "description": "Persistent inflationary pressure & restrictive policy response."
+        },
+        {
+          "historical_regime": "2020 Liquidity Shock",
+          "regime_type": "liquidity_stress",
+          "similarity_score": 0.1,
+          "description": "Rapid global liquidity seizure & emergency stabilization."
+        },
+        {
+          "historical_regime": "2022 Tightening Cycle",
+          "regime_type": "late_cycle_tightening",
+          "similarity_score": 0.1,
+          "description": "Aggressive policy normalization & duration stress."
+        }
+      ]
+    }
+  },
+  "routing": {
+    "local_site_ready": true,
+    "offline_first": true,
+    "online_runtime_ready": false,
+    "frontend_hydration_ready": true,
+    "executive_dashboard_ready": true,
+    "ai_dependency": false
+  },
+  "provenance": {
+    "source_payload": "data\\serving\\oraclechambers\\oc_local_deployment_manifest_v1.json",
+    "source_artifact": "oc_local_deployment_manifest_v1",
+    "source_run_ts": "2026-05-09T18:37:05.512272+00:00"
+  }
+}

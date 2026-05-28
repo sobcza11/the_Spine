@@ -1,0 +1,8 @@
+{
+  "artifact": "build_phase_c_earnings_tone_plane_v1",
+  "site_name": "oc-earnings-tone-local",
+  "domain": "EARNINGS_TONE",
+  "offline_site_ready": true,
+  "online_transition_allowed": false,
+  "run_ts": "2026-05-10T21:24:35.405676+00:00"
+}

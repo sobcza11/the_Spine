@@ -1,0 +1,8 @@
+{
+  "component": "langroid_runtime_normalization_v1",
+  "generated_at_utc": "2026-05-22T15:50:08.547726+00:00",
+  "agent_count": 15,
+  "message_count": 13,
+  "escalation_path_count": 13,
+  "status": "langroid_runtime_normalization_complete"
+}

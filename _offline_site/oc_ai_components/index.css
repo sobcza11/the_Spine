@@ -1,0 +1,8 @@
+body{margin:0;background:#020617;color:#e5e7eb;font-family:Arial,sans-serif}
+.shell{padding:32px}
+.hero{background:#0f172a;border:1px solid #334155;border-radius:18px;padding:24px;margin-bottom:24px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:#94a3b8;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tile{display:block;background:#111827;border:1px solid #334155;border-radius:18px;padding:20px;text-decoration:none;color:#e5e7eb}
+.tile:hover{border-color:#93c5fd}
+.tile p{color:#cbd5e1;line-height:1.5}

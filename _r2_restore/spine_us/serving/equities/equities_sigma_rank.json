@@ -1,0 +1,56 @@
+[
+  {
+    "symbol": "IWM",
+    "pair": "IWM",
+    "as_of_date": "2026-05-11",
+    "realized_vol_20d": 0.1679026716254506,
+    "z": 1.3978214462781957,
+    "rank": 1,
+    "state": "easy"
+  },
+  {
+    "symbol": "QQQ",
+    "pair": "QQQ",
+    "as_of_date": "2026-05-11",
+    "realized_vol_20d": 0.15619894788966948,
+    "z": 0.931332484973867,
+    "rank": 2,
+    "state": "easy"
+  },
+  {
+    "symbol": "MDY",
+    "pair": "MDY",
+    "as_of_date": "2026-05-11",
+    "realized_vol_20d": 0.14500709184564664,
+    "z": 0.48524563100257107,
+    "rank": 3,
+    "state": "easy"
+  },
+  {
+    "symbol": "DIA",
+    "pair": "DIA",
+    "as_of_date": "2026-05-11",
+    "realized_vol_20d": 0.12048001598365132,
+    "z": -0.4923586256422505,
+    "rank": 4,
+    "state": "tight"
+  },
+  {
+    "symbol": "ITOT",
+    "pair": "ITOT",
+    "as_of_date": "2026-05-11",
+    "realized_vol_20d": 0.10494552221729268,
+    "z": -1.1115350540213977,
+    "rank": 5,
+    "state": "tight"
+  },
+  {
+    "symbol": "SPY",
+    "pair": "SPY",
+    "as_of_date": "2026-05-11",
+    "realized_vol_20d": 0.10246244687883016,
+    "z": -1.2105058825909827,
+    "rank": 6,
+    "state": "tight"
+  }
+]

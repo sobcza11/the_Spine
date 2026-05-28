@@ -1,0 +1,3010 @@
+{
+  "component": "recursive_survivability_graph_v1",
+  "generated_at_utc": "2026-05-22T16:25:48.184480+00:00",
+  "symbols": 4419,
+  "edge_count": 8838,
+  "pressure_column": "q_dynamic_survivability_conditioning",
+  "sample_edges": [
+    {
+      "source_node": "A",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1364
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1364
+    },
+    {
+      "source_node": "A21",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0972
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0972
+    },
+    {
+      "source_node": "AA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.093
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.093
+    },
+    {
+      "source_node": "AAC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0801
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0801
+    },
+    {
+      "source_node": "AACG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0771
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0771
+    },
+    {
+      "source_node": "AACI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0643
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0643
+    },
+    {
+      "source_node": "AACT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0763
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0763
+    },
+    {
+      "source_node": "AAGH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0817
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0817
+    },
+    {
+      "source_node": "AAIC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0976
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0976
+    },
+    {
+      "source_node": "AAL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0876
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0876
+    },
+    {
+      "source_node": "AAM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0745
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0745
+    },
+    {
+      "source_node": "AAMC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0867
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0867
+    },
+    {
+      "source_node": "AAN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0851
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0851
+    },
+    {
+      "source_node": "AAOI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0885
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0885
+    },
+    {
+      "source_node": "AAON",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0821
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0821
+    },
+    {
+      "source_node": "AAP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0909
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0909
+    },
+    {
+      "source_node": "AAPL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.124
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.124
+    },
+    {
+      "source_node": "AAT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1098
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1098
+    },
+    {
+      "source_node": "AAWH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1212
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1212
+    },
+    {
+      "source_node": "AAWW",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0911
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0911
+    },
+    {
+      "source_node": "ABBV",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1774
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1774
+    },
+    {
+      "source_node": "ABCL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0844
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0844
+    },
+    {
+      "source_node": "ABEO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0902
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0902
+    },
+    {
+      "source_node": "ABG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0816
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0816
+    },
+    {
+      "source_node": "ABIO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0725
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0725
+    },
+    {
+      "source_node": "ABIT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0744
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0744
+    },
+    {
+      "source_node": "ABM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0822
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0822
+    },
+    {
+      "source_node": "ABMC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0926
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0926
+    },
+    {
+      "source_node": "ABMD",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0652
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0652
+    },
+    {
+      "source_node": "ABML",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1077
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1077
+    },
+    {
+      "source_node": "ABNB",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0927
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0927
+    },
+    {
+      "source_node": "ABOS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1415
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1415
+    },
+    {
+      "source_node": "ABR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1212
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1212
+    },
+    {
+      "source_node": "ABSI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0879
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0879
+    },
+    {
+      "source_node": "ABT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0987
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0987
+    },
+    {
+      "source_node": "ABTL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0659
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0659
+    },
+    {
+      "source_node": "ABUS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0848
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0848
+    },
+    {
+      "source_node": "ABVC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1008
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1008
+    },
+    {
+      "source_node": "AC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1048
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1048
+    },
+    {
+      "source_node": "ACA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1216
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1216
+    },
+    {
+      "source_node": "ACAC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0966
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0966
+    },
+    {
+      "source_node": "ACAD",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0847
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0847
+    },
+    {
+      "source_node": "ACAH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0763
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0763
+    },
+    {
+      "source_node": "ACAN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0979
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0979
+    },
+    {
+      "source_node": "ACAQ",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0848
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0848
+    },
+    {
+      "source_node": "ACBA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0769
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0769
+    },
+    {
+      "source_node": "ACC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0648
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0648
+    },
+    {
+      "source_node": "ACCD",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0852
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0852
+    },
+    {
+      "source_node": "ACCO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0819
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0819
+    },
+    {
+      "source_node": "ACEL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0759
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0759
+    },
+    {
+      "source_node": "ACER",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.081
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.081
+    },
+    {
+      "source_node": "ACET",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.098
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.098
+    },
+    {
+      "source_node": "ACHC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0966
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0966
+    },
+    {
+      "source_node": "ACHR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0973
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0973
+    },
+    {
+      "source_node": "ACHV",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1301
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1301
+    },
+    {
+      "source_node": "ACI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0963
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0963
+    },
+    {
+      "source_node": "ACIA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "ACIW",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0747
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0747
+    },
+    {
+      "source_node": "ACLS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0791
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0791
+    },
+    {
+      "source_node": "ACLX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1172
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1172
+    },
+    {
+      "source_node": "ACM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0828
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0828
+    },
+    {
+      "source_node": "ACMR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0915
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0915
+    },
+    {
+      "source_node": "ACN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1206
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1206
+    },
+    {
+      "source_node": "ACOR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0881
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0881
+    },
+    {
+      "source_node": "ACR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0606
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0606
+    },
+    {
+      "source_node": "ACRE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1416
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1416
+    },
+    {
+      "source_node": "ACRO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1006
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1006
+    },
+    {
+      "source_node": "ACRS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0849
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0849
+    },
+    {
+      "source_node": "ACRV",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0953
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0953
+    },
+    {
+      "source_node": "ACRX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1033
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1033
+    },
+    {
+      "source_node": "ACST",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0668
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0668
+    },
+    {
+      "source_node": "ACTG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1032
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1032
+    },
+    {
+      "source_node": "ACU",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.084
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.084
+    },
+    {
+      "source_node": "ACVA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0903
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0903
+    },
+    {
+      "source_node": "ACXP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0867
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0867
+    },
+    {
+      "source_node": "ADAG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0822
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0822
+    },
+    {
+      "source_node": "ADAP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.092
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.092
+    },
+    {
+      "source_node": "ADBE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1279
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1279
+    },
+    {
+      "source_node": "ADC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0767
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0767
+    },
+    {
+      "source_node": "ADCT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1095
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1095
+    },
+    {
+      "source_node": "ADER",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.079
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.079
+    },
+    {
+      "source_node": "ADES",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0956
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0956
+    },
+    {
+      "source_node": "ADEX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0764
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0764
+    },
+    {
+      "source_node": "ADI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0936
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0936
+    },
+    {
+      "source_node": "ADIL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0816
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0816
+    },
+    {
+      "source_node": "ADM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1094
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1094
+    },
+    {
+      "source_node": "ADMA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0847
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0847
+    },
+    {
+      "source_node": "ADMP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0946
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0946
+    },
+    {
+      "source_node": "ADMS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0653
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0653
+    },
+    {
+      "source_node": "ADN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0873
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0873
+    },
+    {
+      "source_node": "ADNT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0966
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0966
+    },
+    {
+      "source_node": "ADOM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1253
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1253
+    },
+    {
+      "source_node": "ADP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0905
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0905
+    },
+    {
+      "source_node": "ADPT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0987
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0987
+    },
+    {
+      "source_node": "ADRA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1149
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1149
+    },
+    {
+      "source_node": "ADRT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0869
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0869
+    },
+    {
+      "source_node": "ADSK",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1084
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1084
+    },
+    {
+      "source_node": "ADT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0752
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0752
+    },
+    {
+      "source_node": "ADTN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0895
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0895
+    },
+    {
+      "source_node": "ADUS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0805
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0805
+    },
+    {
+      "source_node": "ADV",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1032
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1032
+    },
+    {
+      "source_node": "ADVM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1071
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1071
+    },
+    {
+      "source_node": "ADXS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0997
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0997
+    },
+    {
+      "source_node": "AE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0819
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0819
+    },
+    {
+      "source_node": "AEE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0872
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0872
+    },
+    {
+      "source_node": "AEHA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0756
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0756
+    },
+    {
+      "source_node": "AEHR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0677
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0677
+    },
+    {
+      "source_node": "AEI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "AEIS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0685
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0685
+    },
+    {
+      "source_node": "AEMD",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0863
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0863
+    },
+    {
+      "source_node": "AEO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0733
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0733
+    },
+    {
+      "source_node": "AEP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0891
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0891
+    },
+    {
+      "source_node": "AERC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1082
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1082
+    },
+    {
+      "source_node": "AERG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0968
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0968
+    },
+    {
+      "source_node": "AERI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0686
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0686
+    },
+    {
+      "source_node": "AESE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1577
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1577
+    },
+    {
+      "source_node": "AEVA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1365
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1365
+    },
+    {
+      "source_node": "AEYE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0916
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0916
+    },
+    {
+      "source_node": "AFCG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0746
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0746
+    },
+    {
+      "source_node": "AFGS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1
+    },
+    {
+      "source_node": "AFI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0735
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0735
+    },
+    {
+      "source_node": "AFIB",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0712
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0712
+    },
+    {
+      "source_node": "AFRM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1159
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1159
+    },
+    {
+      "source_node": "AFTC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0784
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0784
+    },
+    {
+      "source_node": "AGCO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0876
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0876
+    },
+    {
+      "source_node": "AGE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1399
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1399
+    },
+    {
+      "source_node": "AGEN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1145
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1145
+    },
+    {
+      "source_node": "AGFS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1083
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1083
+    },
+    {
+      "source_node": "AGIO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.086
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.086
+    },
+    {
+      "source_node": "AGL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0975
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0975
+    },
+    {
+      "source_node": "AGM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0885
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0885
+    },
+    {
+      "source_node": "AGMH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.07
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.07
+    },
+    {
+      "source_node": "AGNC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0746
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0746
+    },
+    {
+      "source_node": "AGR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0899
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0899
+    },
+    {
+      "source_node": "AGS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0873
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0873
+    },
+    {
+      "source_node": "AGTI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0742
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0742
+    },
+    {
+      "source_node": "AGX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0764
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0764
+    },
+    {
+      "source_node": "AGYS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0872
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0872
+    },
+    {
+      "source_node": "AH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0958
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0958
+    },
+    {
+      "source_node": "AHCO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0762
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0762
+    },
+    {
+      "source_node": "AHFC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1165
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1165
+    },
+    {
+      "source_node": "AHH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0788
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0788
+    },
+    {
+      "source_node": "AHPI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1039
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1039
+    },
+    {
+      "source_node": "AHR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1116
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1116
+    },
+    {
+      "source_node": "AHT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0677
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0677
+    },
+    {
+      "source_node": "AI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0929
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0929
+    },
+    {
+      "source_node": "AILIM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0837
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0837
+    },
+    {
+      "source_node": "AIM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1161
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1161
+    },
+    {
+      "source_node": "AIMC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0826
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0826
+    },
+    {
+      "source_node": "AIMD",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0611
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0611
+    },
+    {
+      "source_node": "AIN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0819
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0819
+    },
+    {
+      "source_node": "AINC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0842
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0842
+    },
+    {
+      "source_node": "AINV",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0693
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0693
+    },
+    {
+      "source_node": "AIP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0812
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0812
+    },
+    {
+      "source_node": "AIR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.066
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.066
+    },
+    {
+      "source_node": "AIRC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0757
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0757
+    },
+    {
+      "source_node": "AIRG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0837
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0837
+    },
+    {
+      "source_node": "AIRI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0937
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0937
+    },
+    {
+      "source_node": "AIRS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0825
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0825
+    },
+    {
+      "source_node": "AIRTP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0893
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0893
+    },
+    {
+      "source_node": "AIT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0741
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0741
+    },
+    {
+      "source_node": "AITX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "AIV",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0749
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0749
+    },
+    {
+      "source_node": "AJG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0772
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0772
+    },
+    {
+      "source_node": "AJRD",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0746
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0746
+    },
+    {
+      "source_node": "AKA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.091
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.091
+    },
+    {
+      "source_node": "AKAM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1325
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1325
+    },
+    {
+      "source_node": "AKLI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1134
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1134
+    },
+    {
+      "source_node": "AKOM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0892
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0892
+    },
+    {
+      "source_node": "AKR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0793
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0793
+    },
+    {
+      "source_node": "AKRO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1137
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1137
+    },
+    {
+      "source_node": "AKTS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0963
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0963
+    },
+    {
+      "source_node": "AKTX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0895
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0895
+    },
+    {
+      "source_node": "AKU",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1145
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1145
+    },
+    {
+      "source_node": "AKYA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1309
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1309
+    },
+    {
+      "source_node": "AL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1252
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1252
+    },
+    {
+      "source_node": "ALB",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1397
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1397
+    },
+    {
+      "source_node": "ALBO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1116
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1116
+    },
+    {
+      "source_node": "ALC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0775
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0775
+    },
+    {
+      "source_node": "ALCC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1286
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1286
+    },
+    {
+      "source_node": "ALCO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0766
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0766
+    },
+    {
+      "source_node": "ALDX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1078
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1078
+    },
+    {
+      "source_node": "ALE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0868
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0868
+    },
+    {
+      "source_node": "ALEC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0942
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0942
+    },
+    {
+      "source_node": "ALEX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0736
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0736
+    },
+    {
+      "source_node": "ALG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0748
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0748
+    },
+    {
+      "source_node": "ALGM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0885
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0885
+    },
+    {
+      "source_node": "ALGN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0771
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0771
+    },
+    {
+      "source_node": "ALGS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1089
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1089
+    },
+    {
+      "source_node": "ALGT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.096
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.096
+    },
+    {
+      "source_node": "ALHC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1193
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1193
+    },
+    {
+      "source_node": "ALIM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1251
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1251
+    },
+    {
+      "source_node": "ALIT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0847
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0847
+    },
+    {
+      "source_node": "ALJJ",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1007
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1007
+    },
+    {
+      "source_node": "ALKS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0834
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0834
+    },
+    {
+      "source_node": "ALKT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0934
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0934
+    },
+    {
+      "source_node": "ALLE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0909
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0909
+    },
+    {
+      "source_node": "ALLK",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.104
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.104
+    },
+    {
+      "source_node": "ALLO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1078
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1078
+    },
+    {
+      "source_node": "ALLR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.102
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.102
+    },
+    {
+      "source_node": "ALLT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0851
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0851
+    },
+    {
+      "source_node": "ALMU",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0597
+    },
+    {
+      "source_node": "ALNA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1037
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1037
+    },
+    {
+      "source_node": "ALNY",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1414
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1414
+    },
+    {
+      "source_node": "ALOT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0813
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0813
+    },
+    {
+      "source_node": "ALPA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0912
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0912
+    },
+    {
+      "source_node": "ALPN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0728
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0728
+    },
+    {
+      "source_node": "ALRM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1235
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1235
+    },
+    {
+      "source_node": "ALRN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1031
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1031
+    },
+    {
+      "source_node": "ALSK",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.064
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.064
+    },
+    {
+      "source_node": "ALSN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0879
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0879
+    },
+    {
+      "source_node": "ALT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0806
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0806
+    },
+    {
+      "source_node": "ALTG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1021
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1021
+    },
+    {
+      "source_node": "ALTI",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0763
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0763
+    },
+    {
+      "source_node": "ALTM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1081
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1081
+    },
+    {
+      "source_node": "ALTO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0859
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0859
+    },
+    {
+      "source_node": "ALTR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0718
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0718
+    },
+    {
+      "source_node": "ALUR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.085
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.085
+    },
+    {
+      "source_node": "ALV",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0822
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0822
+    },
+    {
+      "source_node": "ALVR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1294
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1294
+    },
+    {
+      "source_node": "ALX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1038
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1038
+    },
+    {
+      "source_node": "ALXN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.06
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.06
+    },
+    {
+      "source_node": "ALXO",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1049
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1049
+    },
+    {
+      "source_node": "ALZN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1062
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1062
+    },
+    {
+      "source_node": "AMAM",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0986
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0986
+    },
+    {
+      "source_node": "AMAT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.134
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.134
+    },
+    {
+      "source_node": "AMBA",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0863
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0863
+    },
+    {
+      "source_node": "AMBQ",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0762
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0762
+    },
+    {
+      "source_node": "AMC",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1263
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1263
+    },
+    {
+      "source_node": "AMCIU",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.077
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.077
+    },
+    {
+      "source_node": "AMCR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0787
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0787
+    },
+    {
+      "source_node": "AMCX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1042
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1042
+    },
+    {
+      "source_node": "AMD",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1196
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1196
+    },
+    {
+      "source_node": "AME",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0801
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0801
+    },
+    {
+      "source_node": "AMED",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.076
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.076
+    },
+    {
+      "source_node": "AMG",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0922
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0922
+    },
+    {
+      "source_node": "AMGN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1264
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1264
+    },
+    {
+      "source_node": "AMH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0896
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0896
+    },
+    {
+      "source_node": "AMHCU",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1027
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1027
+    },
+    {
+      "source_node": "AMK",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0741
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0741
+    },
+    {
+      "source_node": "AMKR",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1112
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1112
+    },
+    {
+      "source_node": "AMLX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0945
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0945
+    },
+    {
+      "source_node": "AMN",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0915
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0915
+    },
+    {
+      "source_node": "AMOT",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0779
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0779
+    },
+    {
+      "source_node": "AMP",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0947
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0947
+    },
+    {
+      "source_node": "AMPE",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.1104
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.1104
+    },
+    {
+      "source_node": "AMPH",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0956
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0956
+    },
+    {
+      "source_node": "AMPL",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0938
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0938
+    },
+    {
+      "source_node": "AMPS",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.0653
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.0653
+    },
+    {
+      "source_node": "AMPX",
+      "target_node": "FINSTATE",
+      "edge_type": "survivability_conditioning",
+      "edge_pressure": 0.088
+    },
+    {
+      "source_node": "FINSTATE",
+      "target_node": "GeoScen",
+      "edge_type": "macro_corporate_coupling",
+      "edge_pressure": 0.088
+    }
+  ],
+  "status": "recursive_survivability_graph_ready"
+}

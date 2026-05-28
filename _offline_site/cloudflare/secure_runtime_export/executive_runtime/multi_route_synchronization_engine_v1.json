@@ -1,0 +1,43 @@
+{
+  "component": "multi_route_synchronization_engine_v1",
+  "generated_at_utc": "2026-05-22T16:35:53.712648+00:00",
+  "route_count": 7,
+  "routes": [
+    {
+      "route": "/equities-industry",
+      "label": "EQUITIES - INDUSTRY",
+      "component_count": 3
+    },
+    {
+      "route": "/equities-sector",
+      "label": "EQUITIES - SECTOR",
+      "component_count": 2
+    },
+    {
+      "route": "/cflow",
+      "label": "C_FLOW",
+      "component_count": 3
+    },
+    {
+      "route": "/finstate",
+      "label": "FINSTATE",
+      "component_count": 3
+    },
+    {
+      "route": "/fx",
+      "label": "FX",
+      "component_count": 2
+    },
+    {
+      "route": "/rates",
+      "label": "RATES",
+      "component_count": 2
+    },
+    {
+      "route": "/executive",
+      "label": "EXECUTIVE",
+      "component_count": 4
+    }
+  ],
+  "status": "multi_route_synchronization_ready"
+}

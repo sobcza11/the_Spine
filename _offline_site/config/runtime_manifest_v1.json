@@ -1,0 +1,1106 @@
+{
+  "component": "offline_site_runtime_manifest_v1",
+  "generated_at_utc": "2026-05-22T15:50:08.179091+00:00",
+  "asset_count": 183,
+  "assets": [
+    {
+      "path": "geoscen_runtime/geoscen_contradiction_engine_v1.json",
+      "suffix": ".json",
+      "size_bytes": 900,
+      "modified_utc": "2026-05-08T15:01:08.155625+00:00"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1.json",
+      "suffix": ".json",
+      "size_bytes": 4473,
+      "modified_utc": "2026-05-08T15:21:40.116448+00:00"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1.json",
+      "suffix": ".json",
+      "size_bytes": 836099,
+      "modified_utc": "2026-05-08T14:54:55.731868+00:00"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1.json",
+      "suffix": ".json",
+      "size_bytes": 1677,
+      "modified_utc": "2026-05-08T15:34:40.047123+00:00"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_ingestion_v1.json",
+      "suffix": ".json",
+      "size_bytes": 589,
+      "modified_utc": "2026-05-08T16:58:05.693336+00:00"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_registry_v1.json",
+      "suffix": ".json",
+      "size_bytes": 772,
+      "modified_utc": "2026-05-08T16:41:53.222678+00:00"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_rbl_synthesis_v1.json",
+      "suffix": ".json",
+      "size_bytes": 5570,
+      "modified_utc": "2026-05-08T03:20:19.326736+00:00"
+    },
+    {
+      "path": "geoscen_runtime/geoscen_structural_macro_layer_v1.json",
+      "suffix": ".json",
+      "size_bytes": 1530,
+      "modified_utc": "2026-05-08T15:41:39.558944+00:00"
+    },
+    {
+      "path": "langroid_runtime/index.html",
+      "suffix": ".html",
+      "size_bytes": 7766,
+      "modified_utc": "2026-05-18T17:22:30.244992+00:00"
+    },
+    {
+      "path": "langroid_runtime/langroid_runtime_export.json",
+      "suffix": ".json",
+      "size_bytes": 11807,
+      "modified_utc": "2026-05-18T15:52:26.169813+00:00"
+    },
+    {
+      "path": "oc_ai_components/client_dashboard.css",
+      "suffix": ".css",
+      "size_bytes": 953,
+      "modified_utc": "2026-05-11T16:43:49.364790+00:00"
+    },
+    {
+      "path": "oc_ai_components/client_dashboard.html",
+      "suffix": ".html",
+      "size_bytes": 1023,
+      "modified_utc": "2026-05-11T16:56:29.316944+00:00"
+    },
+    {
+      "path": "oc_ai_components/client_dashboard.js",
+      "suffix": ".js",
+      "size_bytes": 4361,
+      "modified_utc": "2026-05-11T16:54:14.636520+00:00"
+    },
+    {
+      "path": "oc_ai_components/index.css",
+      "suffix": ".css",
+      "size_bytes": 563,
+      "modified_utc": "2026-05-11T16:08:28.334972+00:00"
+    },
+    {
+      "path": "oc_ai_components/index.html",
+      "suffix": ".html",
+      "size_bytes": 1401,
+      "modified_utc": "2026-05-11T16:08:28.334342+00:00"
+    },
+    {
+      "path": "oc_ai_components/oc_ai_components.zip",
+      "suffix": ".zip",
+      "size_bytes": 24143,
+      "modified_utc": "2026-05-22T15:24:27.685204+00:00"
+    },
+    {
+      "path": "oc_ai_components/c_flow/app.js",
+      "suffix": ".js",
+      "size_bytes": 1593,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/c_flow/index.html",
+      "suffix": ".html",
+      "size_bytes": 1394,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/c_flow/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 271,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/c_flow/styles.css",
+      "suffix": ".css",
+      "size_bytes": 951,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_industry/app.js",
+      "suffix": ".js",
+      "size_bytes": 1593,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_industry/index.html",
+      "suffix": ".html",
+      "size_bytes": 1429,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_industry/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 305,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_industry/styles.css",
+      "suffix": ".css",
+      "size_bytes": 951,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_sector/app.js",
+      "suffix": ".js",
+      "size_bytes": 1593,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_sector/index.html",
+      "suffix": ".html",
+      "size_bytes": 1424,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_sector/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 299,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_sector/styles.css",
+      "suffix": ".css",
+      "size_bytes": 951,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/fx/app.js",
+      "suffix": ".js",
+      "size_bytes": 1593,
+      "modified_utc": "2026-05-11T16:08:28.316549+00:00"
+    },
+    {
+      "path": "oc_ai_components/fx/index.html",
+      "suffix": ".html",
+      "size_bytes": 1358,
+      "modified_utc": "2026-05-11T16:08:28.302971+00:00"
+    },
+    {
+      "path": "oc_ai_components/fx/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 260,
+      "modified_utc": "2026-05-11T16:08:28.318566+00:00"
+    },
+    {
+      "path": "oc_ai_components/fx/styles.css",
+      "suffix": ".css",
+      "size_bytes": 951,
+      "modified_utc": "2026-05-11T16:08:28.302971+00:00"
+    },
+    {
+      "path": "oc_ai_components/rates/app.js",
+      "suffix": ".js",
+      "size_bytes": 1593,
+      "modified_utc": "2026-05-11T16:08:28.318566+00:00"
+    },
+    {
+      "path": "oc_ai_components/rates/index.html",
+      "suffix": ".html",
+      "size_bytes": 1387,
+      "modified_utc": "2026-05-11T16:08:28.318566+00:00"
+    },
+    {
+      "path": "oc_ai_components/rates/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 269,
+      "modified_utc": "2026-05-11T16:08:28.324408+00:00"
+    },
+    {
+      "path": "oc_ai_components/rates/styles.css",
+      "suffix": ".css",
+      "size_bytes": 951,
+      "modified_utc": "2026-05-11T16:08:28.318566+00:00"
+    },
+    {
+      "path": "oc_ai_components/rates/payloads/rates_ai_components_v1.json",
+      "suffix": ".json",
+      "size_bytes": 3692,
+      "modified_utc": "2026-05-11T16:43:49.252552+00:00"
+    },
+    {
+      "path": "oc_ai_components/fx/payloads/fx_ai_components_v1.json",
+      "suffix": ".json",
+      "size_bytes": 3587,
+      "modified_utc": "2026-05-11T16:43:49.252552+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_sector/payloads/equities_sector_ai_components_v1.json",
+      "suffix": ".json",
+      "size_bytes": 3747,
+      "modified_utc": "2026-05-11T16:43:49.252552+00:00"
+    },
+    {
+      "path": "oc_ai_components/equities_industry/payloads/equities_industry_ai_components_v1.json",
+      "suffix": ".json",
+      "size_bytes": 3975,
+      "modified_utc": "2026-05-11T16:43:49.252552+00:00"
+    },
+    {
+      "path": "oc_ai_components/c_flow/payloads/cflow_ai_components_v1.json",
+      "suffix": ".json",
+      "size_bytes": 3727,
+      "modified_utc": "2026-05-11T16:43:49.252552+00:00"
+    },
+    {
+      "path": "oc_segments/oc_segments.zip",
+      "suffix": ".zip",
+      "size_bytes": 117960,
+      "modified_utc": "2026-05-22T15:24:54.312588+00:00"
+    },
+    {
+      "path": "oc_segments/oc-attention-routing-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3344,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-attention-routing-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1061,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-attention-routing-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 384,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-attention-routing-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 683,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cb-divergence-map-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 2955,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cb-divergence-map-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1060,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cb-divergence-map-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 339,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cb-divergence-map-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 970,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cflow-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 2268,
+      "modified_utc": "2026-05-10T21:08:57.719890+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cflow-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1443,
+      "modified_utc": "2026-05-10T21:08:57.703961+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cflow-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 323,
+      "modified_utc": "2026-05-10T21:08:57.719890+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cflow-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 774,
+      "modified_utc": "2026-05-10T21:08:57.719890+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3344,
+      "modified_utc": "2026-05-10T20:36:09.920735+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1089,
+      "modified_utc": "2026-05-10T20:36:09.920735+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 402,
+      "modified_utc": "2026-05-10T20:36:09.923105+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 683,
+      "modified_utc": "2026-05-10T20:36:09.920735+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-matrix-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3194,
+      "modified_utc": "2026-05-10T21:55:41.344912+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-matrix-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1079,
+      "modified_utc": "2026-05-10T21:55:41.344912+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-matrix-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 344,
+      "modified_utc": "2026-05-10T21:55:41.346931+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-matrix-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 1253,
+      "modified_utc": "2026-05-10T21:55:41.344912+00:00"
+    },
+    {
+      "path": "oc_segments/oc-core-runtime-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 1381,
+      "modified_utc": "2026-05-10T20:22:35.582490+00:00"
+    },
+    {
+      "path": "oc_segments/oc-core-runtime-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1148,
+      "modified_utc": "2026-05-10T20:22:35.582490+00:00"
+    },
+    {
+      "path": "oc_segments/oc-core-runtime-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 582,
+      "modified_utc": "2026-05-10T20:22:35.598512+00:00"
+    },
+    {
+      "path": "oc_segments/oc-core-runtime-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 684,
+      "modified_utc": "2026-05-10T20:22:35.582490+00:00"
+    },
+    {
+      "path": "oc_segments/oc-earnings-tone-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 840,
+      "modified_utc": "2026-05-10T21:24:35.406670+00:00"
+    },
+    {
+      "path": "oc_segments/oc-earnings-tone-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 966,
+      "modified_utc": "2026-05-10T21:24:35.406670+00:00"
+    },
+    {
+      "path": "oc_segments/oc-earnings-tone-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 249,
+      "modified_utc": "2026-05-10T21:24:35.406670+00:00"
+    },
+    {
+      "path": "oc_segments/oc-earnings-tone-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 545,
+      "modified_utc": "2026-05-10T21:24:35.406670+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-index-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 2261,
+      "modified_utc": "2026-05-10T21:10:56.045316+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-index-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1446,
+      "modified_utc": "2026-05-10T21:10:56.045316+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-index-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 355,
+      "modified_utc": "2026-05-10T21:10:56.061234+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-index-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 774,
+      "modified_utc": "2026-05-10T21:10:56.045316+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-sector-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 2319,
+      "modified_utc": "2026-05-10T21:13:04.721691+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-sector-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1428,
+      "modified_utc": "2026-05-10T21:13:04.705696+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-sector-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 360,
+      "modified_utc": "2026-05-10T21:13:04.721691+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-sector-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 774,
+      "modified_utc": "2026-05-10T21:13:04.705696+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-command-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 1381,
+      "modified_utc": "2026-05-10T20:22:35.598512+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-command-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1159,
+      "modified_utc": "2026-05-10T20:22:35.598512+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-command-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 603,
+      "modified_utc": "2026-05-10T20:22:35.607156+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-command-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 684,
+      "modified_utc": "2026-05-10T20:22:35.598512+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-dashboard-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 2955,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-dashboard-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1102,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-dashboard-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 341,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-dashboard-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 970,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fedspeak-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 820,
+      "modified_utc": "2026-05-10T21:24:35.311924+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fedspeak-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 950,
+      "modified_utc": "2026-05-10T21:24:35.311924+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fedspeak-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 234,
+      "modified_utc": "2026-05-10T21:24:35.311924+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fedspeak-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 545,
+      "modified_utc": "2026-05-10T21:24:35.311924+00:00"
+    },
+    {
+      "path": "oc_segments/oc-final-metric-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3344,
+      "modified_utc": "2026-05-10T20:36:09.926268+00:00"
+    },
+    {
+      "path": "oc_segments/oc-final-metric-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1066,
+      "modified_utc": "2026-05-10T20:36:09.926268+00:00"
+    },
+    {
+      "path": "oc_segments/oc-final-metric-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 389,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-final-metric-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 683,
+      "modified_utc": "2026-05-10T20:36:09.926268+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fx-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 1999,
+      "modified_utc": "2026-05-10T20:57:32.101171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fx-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1523,
+      "modified_utc": "2026-05-10T20:57:32.101171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fx-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 297,
+      "modified_utc": "2026-05-10T20:57:32.101171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fx-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 798,
+      "modified_utc": "2026-05-10T20:57:32.101171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-governance-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3344,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-governance-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1088,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-governance-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 398,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-governance-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 683,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-historical-memory-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3344,
+      "modified_utc": "2026-05-10T20:36:09.926268+00:00"
+    },
+    {
+      "path": "oc_segments/oc-historical-memory-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1071,
+      "modified_utc": "2026-05-10T20:36:09.925513+00:00"
+    },
+    {
+      "path": "oc_segments/oc-historical-memory-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 394,
+      "modified_utc": "2026-05-10T20:36:09.926268+00:00"
+    },
+    {
+      "path": "oc_segments/oc-historical-memory-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 683,
+      "modified_utc": "2026-05-10T20:36:09.926268+00:00"
+    },
+    {
+      "path": "oc_segments/oc-langroid-agent-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 834,
+      "modified_utc": "2026-05-10T21:26:44.944711+00:00"
+    },
+    {
+      "path": "oc_segments/oc-langroid-agent-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 984,
+      "modified_utc": "2026-05-10T21:26:44.944711+00:00"
+    },
+    {
+      "path": "oc_segments/oc-langroid-agent-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 252,
+      "modified_utc": "2026-05-10T21:26:44.944711+00:00"
+    },
+    {
+      "path": "oc_segments/oc-langroid-agent-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 545,
+      "modified_utc": "2026-05-10T21:26:44.944711+00:00"
+    },
+    {
+      "path": "oc_segments/oc-liquidity-stress-map-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 2955,
+      "modified_utc": "2026-05-10T22:29:50.601173+00:00"
+    },
+    {
+      "path": "oc_segments/oc-liquidity-stress-map-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1063,
+      "modified_utc": "2026-05-10T22:29:50.601173+00:00"
+    },
+    {
+      "path": "oc_segments/oc-liquidity-stress-map-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 338,
+      "modified_utc": "2026-05-10T22:29:50.601173+00:00"
+    },
+    {
+      "path": "oc_segments/oc-liquidity-stress-map-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 970,
+      "modified_utc": "2026-05-10T22:29:50.601173+00:00"
+    },
+    {
+      "path": "oc_segments/oc-macro-heatmap-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3194,
+      "modified_utc": "2026-05-10T21:55:41.340301+00:00"
+    },
+    {
+      "path": "oc_segments/oc-macro-heatmap-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1076,
+      "modified_utc": "2026-05-10T21:55:41.340301+00:00"
+    },
+    {
+      "path": "oc_segments/oc-macro-heatmap-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 323,
+      "modified_utc": "2026-05-10T21:55:41.340301+00:00"
+    },
+    {
+      "path": "oc_segments/oc-macro-heatmap-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 1253,
+      "modified_utc": "2026-05-10T21:55:41.340301+00:00"
+    },
+    {
+      "path": "oc_segments/oc-narrative-drift-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 887,
+      "modified_utc": "2026-05-10T21:24:35.216891+00:00"
+    },
+    {
+      "path": "oc_segments/oc-narrative-drift-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 982,
+      "modified_utc": "2026-05-10T21:24:35.216891+00:00"
+    },
+    {
+      "path": "oc_segments/oc-narrative-drift-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 255,
+      "modified_utc": "2026-05-10T21:24:35.232765+00:00"
+    },
+    {
+      "path": "oc_segments/oc-narrative-drift-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 543,
+      "modified_utc": "2026-05-10T21:24:35.216891+00:00"
+    },
+    {
+      "path": "oc_segments/oc-pmi-linkage-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 834,
+      "modified_utc": "2026-05-10T21:26:44.762422+00:00"
+    },
+    {
+      "path": "oc_segments/oc-pmi-linkage-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 981,
+      "modified_utc": "2026-05-10T21:26:44.762422+00:00"
+    },
+    {
+      "path": "oc_segments/oc-pmi-linkage-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 243,
+      "modified_utc": "2026-05-10T21:26:44.771196+00:00"
+    },
+    {
+      "path": "oc_segments/oc-pmi-linkage-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 545,
+      "modified_utc": "2026-05-10T21:26:44.762422+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rag-context-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 835,
+      "modified_utc": "2026-05-10T21:27:39.497226+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rag-context-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 968,
+      "modified_utc": "2026-05-10T21:27:39.497226+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rag-context-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 243,
+      "modified_utc": "2026-05-10T21:27:39.497226+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rag-context-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 545,
+      "modified_utc": "2026-05-10T21:27:39.497226+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rates-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 2149,
+      "modified_utc": "2026-05-10T21:01:03.886716+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rates-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1379,
+      "modified_utc": "2026-05-10T21:01:03.886716+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rates-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 312,
+      "modified_utc": "2026-05-10T21:01:03.902560+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rates-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 774,
+      "modified_utc": "2026-05-10T21:01:03.886716+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rbl-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3344,
+      "modified_utc": "2026-05-10T20:36:09.906663+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rbl-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1098,
+      "modified_utc": "2026-05-10T20:36:09.906663+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rbl-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 396,
+      "modified_utc": "2026-05-10T20:36:09.918721+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rbl-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 683,
+      "modified_utc": "2026-05-10T20:36:09.906663+00:00"
+    },
+    {
+      "path": "oc_segments/oc-regime-timeline-local/app.js",
+      "suffix": ".js",
+      "size_bytes": 3194,
+      "modified_utc": "2026-05-10T21:55:41.344912+00:00"
+    },
+    {
+      "path": "oc_segments/oc-regime-timeline-local/index.html",
+      "suffix": ".html",
+      "size_bytes": 1074,
+      "modified_utc": "2026-05-10T21:55:41.340301+00:00"
+    },
+    {
+      "path": "oc_segments/oc-regime-timeline-local/manifest.json",
+      "suffix": ".json",
+      "size_bytes": 329,
+      "modified_utc": "2026-05-10T21:55:41.344912+00:00"
+    },
+    {
+      "path": "oc_segments/oc-regime-timeline-local/styles.css",
+      "suffix": ".css",
+      "size_bytes": 1253,
+      "modified_utc": "2026-05-10T21:55:41.340301+00:00"
+    },
+    {
+      "path": "oc_segments/oc-regime-timeline-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:55:41.344912+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rbl-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:36:09.920735+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rates-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:01:03.902560+00:00"
+    },
+    {
+      "path": "oc_segments/oc-rag-context-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:27:39.497226+00:00"
+    },
+    {
+      "path": "oc_segments/oc-pmi-linkage-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:26:44.771196+00:00"
+    },
+    {
+      "path": "oc_segments/oc-narrative-drift-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:24:35.232765+00:00"
+    },
+    {
+      "path": "oc_segments/oc-macro-heatmap-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:55:41.340301+00:00"
+    },
+    {
+      "path": "oc_segments/oc-liquidity-stress-map-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-langroid-agent-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:26:44.944711+00:00"
+    },
+    {
+      "path": "oc_segments/oc-historical-memory-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:36:09.926268+00:00"
+    },
+    {
+      "path": "oc_segments/oc-governance-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fx-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:57:32.101171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-final-metric-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "oc_segments/oc-fedspeak-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:24:35.311924+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-dashboard-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-executive-command-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:22:35.607156+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-sector-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:13:04.721691+00:00"
+    },
+    {
+      "path": "oc_segments/oc-equities-index-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:10:56.061234+00:00"
+    },
+    {
+      "path": "oc_segments/oc-earnings-tone-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:24:35.406670+00:00"
+    },
+    {
+      "path": "oc_segments/oc-core-runtime-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:22:35.598512+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-matrix-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:55:41.346931+00:00"
+    },
+    {
+      "path": "oc_segments/oc-contradiction-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:36:09.923105+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cflow-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T21:08:57.719890+00:00"
+    },
+    {
+      "path": "oc_segments/oc-cb-divergence-map-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T22:29:50.611460+00:00"
+    },
+    {
+      "path": "oc_segments/oc-attention-routing-local/payloads/oc_local_site_hydration_v1.json",
+      "suffix": ".json",
+      "size_bytes": 6315,
+      "modified_utc": "2026-05-10T20:36:09.938171+00:00"
+    },
+    {
+      "path": "config/geoscen_routes.json",
+      "suffix": ".json",
+      "size_bytes": 1380,
+      "modified_utc": "2026-05-22T15:39:56.554057+00:00"
+    },
+    {
+      "path": "config/offline_asset_registry.json",
+      "suffix": ".json",
+      "size_bytes": 1119,
+      "modified_utc": "2026-05-22T15:42:46.234965+00:00"
+    },
+    {
+      "path": "config/runtime_contract_v1.json",
+      "suffix": ".json",
+      "size_bytes": 419,
+      "modified_utc": "2026-05-22T15:39:56.549547+00:00"
+    },
+    {
+      "path": "core/navigation.js",
+      "suffix": ".js",
+      "size_bytes": 786,
+      "modified_utc": "2026-05-22T15:42:46.223420+00:00"
+    },
+    {
+      "path": "core/payload_validator.js",
+      "suffix": ".js",
+      "size_bytes": 542,
+      "modified_utc": "2026-05-22T15:42:46.230501+00:00"
+    },
+    {
+      "path": "core/route_state_engine.js",
+      "suffix": ".js",
+      "size_bytes": 1224,
+      "modified_utc": "2026-05-22T15:42:46.225052+00:00"
+    },
+    {
+      "path": "core/runtime_guard.js",
+      "suffix": ".js",
+      "size_bytes": 563,
+      "modified_utc": "2026-05-22T15:42:46.232623+00:00"
+    },
+    {
+      "path": "core/runtime_loader.js",
+      "suffix": ".js",
+      "size_bytes": 951,
+      "modified_utc": "2026-05-22T15:39:56.555057+00:00"
+    },
+    {
+      "path": "components/cards/metric_card.js",
+      "suffix": ".js",
+      "size_bytes": 347,
+      "modified_utc": "2026-05-22T15:39:56.578450+00:00"
+    },
+    {
+      "path": "components/cards/metric_cards.js",
+      "suffix": ".js",
+      "size_bytes": 586,
+      "modified_utc": "2026-05-22T15:50:08.074395+00:00"
+    },
+    {
+      "path": "components/executive_header/executive_header.js",
+      "suffix": ".js",
+      "size_bytes": 482,
+      "modified_utc": "2026-05-22T15:46:13.328157+00:00"
+    },
+    {
+      "path": "components/graphs/graph_engine.js",
+      "suffix": ".js",
+      "size_bytes": 636,
+      "modified_utc": "2026-05-22T15:46:13.335548+00:00"
+    },
+    {
+      "path": "components/heatmaps/heatmap_engine.js",
+      "suffix": ".js",
+      "size_bytes": 655,
+      "modified_utc": "2026-05-22T15:46:13.331624+00:00"
+    },
+    {
+      "path": "components/narratives/narrative_block.js",
+      "suffix": ".js",
+      "size_bytes": 174,
+      "modified_utc": "2026-05-22T15:39:56.579452+00:00"
+    },
+    {
+      "path": "components/narratives/narrative_engine.js",
+      "suffix": ".js",
+      "size_bytes": 570,
+      "modified_utc": "2026-05-22T15:46:13.329612+00:00"
+    },
+    {
+      "path": "components/tables/table_engine.js",
+      "suffix": ".js",
+      "size_bytes": 610,
+      "modified_utc": "2026-05-22T15:46:13.334136+00:00"
+    }
+  ],
+  "status": "runtime_manifest_complete"
+}

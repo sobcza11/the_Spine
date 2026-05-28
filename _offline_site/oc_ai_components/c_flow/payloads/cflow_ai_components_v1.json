@@ -1,0 +1,113 @@
+{
+  "zt": {
+    "artifact": "oc_cflow_zt_zeitgeist_v1",
+    "plane": "C_FLOW",
+    "component": "Z_t",
+    "label": "Z_t \u2022 Commodity Flow \u2022 zeitgeist",
+    "run_ts": "2026-05-11T15:56:08.022812+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "zeitgeist": {
+      "regime": "Fragmented Cross-Asset Regime",
+      "commodity_pressure": "Mixed Inflationary Pressure",
+      "energy_flow": "Elevated monitoring",
+      "industrial_metal_signal": "Weakening growth confirmation",
+      "inflation_persistence": "Moderate",
+      "supply_fragmentation": true,
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "deterministic_output": true,
+      "ai_may_assist_interpretation": true,
+      "ai_may_not_own_runtime_truth": true
+    }
+  },
+  "rbl": {
+    "artifact": "oc_cflow_rbl_interpretation_v1",
+    "plane": "C_FLOW",
+    "component": "RBL",
+    "label": "RBL \u2022 Commodities \u2022 Interpretation (OC)",
+    "run_ts": "2026-05-11T15:56:08.022828+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "source_artifact": "oc_cflow_zt_zeitgeist_v1",
+    "interpretation": {
+      "summary": "Commodity-flow cognition indicates fragmented inflation pressure, elevated energy sensitivity, and weakening industrial-growth confirmation. Cross-commodity structure suggests macro stabilization remains incomplete.",
+      "risk_posture": "Inflation-sensitive monitoring",
+      "decision_bias": "Avoid assuming full disinflation confirmation while energy and supply fragmentation pressures remain active.",
+      "watch_items": [
+        "WTI & energy volatility",
+        "Industrial metals weakness",
+        "Supply-chain fragmentation",
+        "Commodity inflation persistence"
+      ],
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "rbl_is_interpretive": true,
+      "zt_is_source_signal": true,
+      "ai_may_not_mutate_zt": true
+    }
+  },
+  "analytics": {
+    "z_t_composite": 0.64,
+    "signal_strength": "Moderate",
+    "stress_score": 0.66,
+    "dispersion_score": 0.71,
+    "contradiction_score": 0.39,
+    "momentum_score": 0.49,
+    "confidence_score": 0.895,
+    "conviction_score": 0.6694,
+    "model_mode": "Deterministic AI cognition component",
+    "ml_readiness": "Feature-ready; not trained ML"
+  },
+  "feature_vector": [
+    {
+      "feature": "Energy volatility",
+      "weight": 0.23,
+      "direction": "inflation_positive"
+    },
+    {
+      "feature": "Industrial metals weakness",
+      "weight": 0.18,
+      "direction": "growth_negative"
+    },
+    {
+      "feature": "Supply fragmentation",
+      "weight": 0.21,
+      "direction": "stress_positive"
+    },
+    {
+      "feature": "Commodity inflation persistence",
+      "weight": 0.17,
+      "direction": "inflation_positive"
+    }
+  ],
+  "historical_analogs": [
+    {
+      "regime": "1970s Inflation Shock",
+      "similarity": 0.5,
+      "why": "Commodity pressure & supply stress"
+    },
+    {
+      "regime": "2022 Energy Shock",
+      "similarity": 0.62,
+      "why": "Energy sensitivity & inflation persistence"
+    },
+    {
+      "regime": "2008 Commodity Reversal",
+      "similarity": 0.47,
+      "why": "Growth pressure & flow reversal risk"
+    }
+  ],
+  "executive_decision_layer": {
+    "risk_posture": "Inflation-sensitive monitoring",
+    "confirmation_status": "Mixed",
+    "action_bias": "Avoid assuming full disinflation confirmation",
+    "fragility_level": "Moderate"
+  },
+  "client_visible_intelligence": true,
+  "analytics_version": "institutional_analytics_v1"
+}

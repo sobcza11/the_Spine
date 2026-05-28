@@ -1,0 +1,18 @@
+{
+  "component": "static_offline_build_structure_v1",
+  "site_root": "_offline_site",
+  "cloudflare_ready": true,
+  "entrypoint": "index.html",
+  "required_dirs": [
+    "config",
+    "core",
+    "css",
+    "components",
+    "geoscen_runtime",
+    "langroid_runtime",
+    "oc_ai_components",
+    "oc_segments"
+  ],
+  "deployment_mode": "static_cloudflare_pages",
+  "status": "static_offline_build_structure_ready"
+}

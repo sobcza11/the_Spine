@@ -1,0 +1,505 @@
+{
+  "component": "static_payload_compilation_v1",
+  "generated_at_utc": "2026-05-22T17:01:42.188749+00:00",
+  "json_payload_count": 124,
+  "total_json_bytes": 2146462,
+  "payloads": [
+    {
+      "path": "config/geoscen_routes.json",
+      "size_bytes": 1380
+    },
+    {
+      "path": "config/geoscen_runtime_normalization_summary_v1.json",
+      "size_bytes": 2916
+    },
+    {
+      "path": "config/langroid_runtime_normalization_summary_v1.json",
+      "size_bytes": 249
+    },
+    {
+      "path": "config/oc_segment_registry_v1.json",
+      "size_bytes": 4931
+    },
+    {
+      "path": "config/offline_asset_registry.json",
+      "size_bytes": 1119
+    },
+    {
+      "path": "config/route_metadata.json",
+      "size_bytes": 1902
+    },
+    {
+      "path": "config/runtime_contract_v1.json",
+      "size_bytes": 419
+    },
+    {
+      "path": "config/runtime_manifest_v1.json",
+      "size_bytes": 35142
+    },
+    {
+      "path": "deploy_manifest/executive_cognitive_runtime_completion_v1.json",
+      "size_bytes": 848
+    },
+    {
+      "path": "deploy_manifest/executive_deployment_validation_v1.json",
+      "size_bytes": 248
+    },
+    {
+      "path": "deploy_manifest/executive_operational_readiness_v1.json",
+      "size_bytes": 846
+    },
+    {
+      "path": "deploy_manifest/finstate_operationalization_summary_v1.json",
+      "size_bytes": 728
+    },
+    {
+      "path": "deploy_manifest/foundation_validation_v1.json",
+      "size_bytes": 255
+    },
+    {
+      "path": "deploy_manifest/offline_runtime_stability_validation_v1.json",
+      "size_bytes": 430
+    },
+    {
+      "path": "deploy_manifest/runtime_route_validation_v1.json",
+      "size_bytes": 208
+    },
+    {
+      "path": "deploy_manifest/static_offline_build_structure_v1.json",
+      "size_bytes": 433
+    },
+    {
+      "path": "deploy_manifest/survivability_governance_validation_v1.json",
+      "size_bytes": 418
+    },
+    {
+      "path": "executive_runtime/dynamic_regime_probability_engine_v1.json",
+      "size_bytes": 428
+    },
+    {
+      "path": "executive_runtime/executive_regime_transition_engine_v1.json",
+      "size_bytes": 544
+    },
+    {
+      "path": "executive_runtime/executive_runtime_control_center_v1.json",
+      "size_bytes": 399
+    },
+    {
+      "path": "executive_runtime/global_systemic_pressure_engine_v1.json",
+      "size_bytes": 1256
+    },
+    {
+      "path": "executive_runtime/macro_corporate_commodity_fusion_v1.json",
+      "size_bytes": 1108
+    },
+    {
+      "path": "executive_runtime/multi_route_synchronization_engine_v1.json",
+      "size_bytes": 925
+    },
+    {
+      "path": "executive_runtime/runtime_governance_layer_v1.json",
+      "size_bytes": 516
+    },
+    {
+      "path": "finstate_payloads/corporate_contagion_engine_v1.json",
+      "size_bytes": 568
+    },
+    {
+      "path": "finstate_payloads/finstate_executive_synthesis_v1.json",
+      "size_bytes": 1769
+    },
+    {
+      "path": "finstate_payloads/i2_survivability_loader_v1.json",
+      "size_bytes": 5150
+    },
+    {
+      "path": "finstate_payloads/quarterly_deterioration_propagation_v1.json",
+      "size_bytes": 1431
+    },
+    {
+      "path": "finstate_payloads/recursive_pressure_conditioning_v1.json",
+      "size_bytes": 952
+    },
+    {
+      "path": "finstate_payloads/recursive_survivability_graph_v1.json",
+      "size_bytes": 80420
+    },
+    {
+      "path": "finstate_payloads/sector_survivability_ranking_v1.json",
+      "size_bytes": 476
+    },
+    {
+      "path": "finstate_payloads/survivability_memory_system_v1.json",
+      "size_bytes": 637
+    },
+    {
+      "path": "finstate_runtime/finstate_runtime_registry_v1.json",
+      "size_bytes": 410
+    },
+    {
+      "path": "geoscen_runtime/geoscen_contradiction_engine_v1.json",
+      "size_bytes": 900
+    },
+    {
+      "path": "geoscen_runtime/geoscen_contradiction_engine_v1_normalized.json",
+      "size_bytes": 1201
+    },
+    {
+      "path": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1.json",
+      "size_bytes": 4473
+    },
+    {
+      "path": "geoscen_runtime/geoscen_cross_country_policy_cognition_v1_normalized.json",
+      "size_bytes": 4968
+    },
+    {
+      "path": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1.json",
+      "size_bytes": 836099
+    },
+    {
+      "path": "geoscen_runtime/geoscen_frontend_intelligence_layer_v1_normalized.json",
+      "size_bytes": 910164
+    },
+    {
+      "path": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1.json",
+      "size_bytes": 1677
+    },
+    {
+      "path": "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1_normalized.json",
+      "size_bytes": 2088
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_ingestion_v1.json",
+      "size_bytes": 589
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_ingestion_v1_normalized.json",
+      "size_bytes": 873
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_registry_v1.json",
+      "size_bytes": 772
+    },
+    {
+      "path": "geoscen_runtime/geoscen_macro_registry_v1_normalized.json",
+      "size_bytes": 1073
+    },
+    {
+      "path": "geoscen_runtime/geoscen_rbl_synthesis_v1.json",
+      "size_bytes": 5570
+    },
+    {
+      "path": "geoscen_runtime/geoscen_rbl_synthesis_v1_normalized.json",
+      "size_bytes": 5650
+    },
+    {
+      "path": "geoscen_runtime/geoscen_structural_macro_layer_v1.json",
+      "size_bytes": 1530
+    },
+    {
+      "path": "geoscen_runtime/geoscen_structural_macro_layer_v1_normalized.json",
+      "size_bytes": 1889
+    },
+    {
+      "path": "langroid_runtime/langroid_runtime_export.json",
+      "size_bytes": 11807
+    },
+    {
+      "path": "langroid_runtime/langroid_runtime_export_normalized.json",
+      "size_bytes": 12909
+    },
+    {
+      "path": "routes/cflow/route.json",
+      "size_bytes": 525
+    },
+    {
+      "path": "routes/equities_industry/route.json",
+      "size_bytes": 547
+    },
+    {
+      "path": "routes/equities_sector/route.json",
+      "size_bytes": 400
+    },
+    {
+      "path": "routes/executive/route.json",
+      "size_bytes": 615
+    },
+    {
+      "path": "routes/finstate/route.json",
+      "size_bytes": 535
+    },
+    {
+      "path": "routes/fx/route.json",
+      "size_bytes": 374
+    },
+    {
+      "path": "routes/rates/route.json",
+      "size_bytes": 417
+    },
+    {
+      "path": "payloads/manifests/cflow_manifest.json",
+      "size_bytes": 222
+    },
+    {
+      "path": "payloads/manifests/executive_manifest.json",
+      "size_bytes": 389
+    },
+    {
+      "path": "payloads/manifests/finstate_manifest.json",
+      "size_bytes": 226
+    },
+    {
+      "path": "payloads/manifests/quarterly_survivability_manifest_v1.json",
+      "size_bytes": 736
+    },
+    {
+      "path": "oc_segments/oc-attention-routing-local/manifest.json",
+      "size_bytes": 384
+    },
+    {
+      "path": "oc_segments/oc-cb-divergence-map-local/manifest.json",
+      "size_bytes": 339
+    },
+    {
+      "path": "oc_segments/oc-cflow-local/manifest.json",
+      "size_bytes": 323
+    },
+    {
+      "path": "oc_segments/oc-contradiction-local/manifest.json",
+      "size_bytes": 402
+    },
+    {
+      "path": "oc_segments/oc-contradiction-matrix-local/manifest.json",
+      "size_bytes": 344
+    },
+    {
+      "path": "oc_segments/oc-core-runtime-local/manifest.json",
+      "size_bytes": 582
+    },
+    {
+      "path": "oc_segments/oc-earnings-tone-local/manifest.json",
+      "size_bytes": 249
+    },
+    {
+      "path": "oc_segments/oc-equities-index-local/manifest.json",
+      "size_bytes": 355
+    },
+    {
+      "path": "oc_segments/oc-equities-sector-local/manifest.json",
+      "size_bytes": 360
+    },
+    {
+      "path": "oc_segments/oc-executive-command-local/manifest.json",
+      "size_bytes": 603
+    },
+    {
+      "path": "oc_segments/oc-executive-dashboard-local/manifest.json",
+      "size_bytes": 341
+    },
+    {
+      "path": "oc_segments/oc-fedspeak-local/manifest.json",
+      "size_bytes": 234
+    },
+    {
+      "path": "oc_segments/oc-final-metric-local/manifest.json",
+      "size_bytes": 389
+    },
+    {
+      "path": "oc_segments/oc-fx-local/manifest.json",
+      "size_bytes": 297
+    },
+    {
+      "path": "oc_segments/oc-governance-local/manifest.json",
+      "size_bytes": 398
+    },
+    {
+      "path": "oc_segments/oc-historical-memory-local/manifest.json",
+      "size_bytes": 394
+    },
+    {
+      "path": "oc_segments/oc-langroid-agent-local/manifest.json",
+      "size_bytes": 252
+    },
+    {
+      "path": "oc_segments/oc-liquidity-stress-map-local/manifest.json",
+      "size_bytes": 338
+    },
+    {
+      "path": "oc_segments/oc-macro-heatmap-local/manifest.json",
+      "size_bytes": 323
+    },
+    {
+      "path": "oc_segments/oc-narrative-drift-local/manifest.json",
+      "size_bytes": 255
+    },
+    {
+      "path": "oc_segments/oc-pmi-linkage-local/manifest.json",
+      "size_bytes": 243
+    },
+    {
+      "path": "oc_segments/oc-rag-context-local/manifest.json",
+      "size_bytes": 243
+    },
+    {
+      "path": "oc_segments/oc-rates-local/manifest.json",
+      "size_bytes": 312
+    },
+    {
+      "path": "oc_segments/oc-rbl-local/manifest.json",
+      "size_bytes": 396
+    },
+    {
+      "path": "oc_segments/oc-regime-timeline-local/manifest.json",
+      "size_bytes": 329
+    },
+    {
+      "path": "oc_segments/oc-regime-timeline-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-rbl-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-rates-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-rag-context-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-pmi-linkage-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-narrative-drift-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-macro-heatmap-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-liquidity-stress-map-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-langroid-agent-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-historical-memory-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-governance-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-fx-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-final-metric-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-fedspeak-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-executive-dashboard-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-executive-command-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-equities-sector-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-equities-index-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-earnings-tone-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-core-runtime-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-contradiction-matrix-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-contradiction-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-cflow-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-cb-divergence-map-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_segments/oc-attention-routing-local/payloads/oc_local_site_hydration_v1.json",
+      "size_bytes": 6315
+    },
+    {
+      "path": "oc_ai_components/c_flow/manifest.json",
+      "size_bytes": 271
+    },
+    {
+      "path": "oc_ai_components/equities_industry/manifest.json",
+      "size_bytes": 305
+    },
+    {
+      "path": "oc_ai_components/equities_sector/manifest.json",
+      "size_bytes": 299
+    },
+    {
+      "path": "oc_ai_components/fx/manifest.json",
+      "size_bytes": 260
+    },
+    {
+      "path": "oc_ai_components/rates/manifest.json",
+      "size_bytes": 269
+    },
+    {
+      "path": "oc_ai_components/rates/payloads/rates_ai_components_v1.json",
+      "size_bytes": 3692
+    },
+    {
+      "path": "oc_ai_components/fx/payloads/fx_ai_components_v1.json",
+      "size_bytes": 3587
+    },
+    {
+      "path": "oc_ai_components/equities_sector/payloads/equities_sector_ai_components_v1.json",
+      "size_bytes": 3747
+    },
+    {
+      "path": "oc_ai_components/equities_industry/payloads/equities_industry_ai_components_v1.json",
+      "size_bytes": 3975
+    },
+    {
+      "path": "oc_ai_components/c_flow/payloads/cflow_ai_components_v1.json",
+      "size_bytes": 3727
+    },
+    {
+      "path": "cloudflare/manifests/cloudflare_offline_deployment_architecture_v1.json",
+      "size_bytes": 668
+    },
+    {
+      "path": "cloudflare/manifests/secure_runtime_export_v1.json",
+      "size_bytes": 423
+    }
+  ],
+  "status": "static_payload_compilation_ready"
+}

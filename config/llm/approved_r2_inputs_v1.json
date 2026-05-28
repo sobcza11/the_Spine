@@ -1,11 +1,64 @@
 {
-  "version": "v1",
-  "layer": "oraclechambers_llm_inputs",
-  "approved_inputs": {
-    "macro_cb_signals": "geoscen/signals/macro_cb_signals_v1.parquet",
-    "macro_cb_oc_signals": "geoscen/signals/macro_cb_oc_signals_v1.parquet",
-    "isovector_macro_cb_view": "isovector/macro_cb_view/isovector_macro_cb_view_v1.parquet",
-    "isovector_macro_cb_rates_join": "isovector/macro_cb_rates_join/isovector_macro_cb_rates_join_v1.parquet",
-    "pmi_geoscen_zt_input": "geoscen/pmi/signals/pmi_geoscen_zt_input_v1.parquet"
+  "manifest_version": "v1",
+  "system": "the_Spine",
+  "layer": "llm_input_manifest",
+  "mode": "offline_first",
+  "rules": {
+    "approved_inputs_only": true,
+    "no_forecasting": true,
+    "no_signal_creation": true,
+    "no_narrative_generation": true,
+    "qualayer_is_structured_rbl_only": true,
+    "oraclechambers_is_final_explanation_only": true
+  },
+  "inputs": [
+    {
+      "input_id": "isovector_macro_cb_view",
+      "component": "IsoVector",
+      "path": "data/llm/approved_inputs/isovector_macro_cb_view.parquet",
+      "format": "parquet",
+      "required": true,
+      "allowed_fields": [
+        "date",
+        "bank_code",
+        "policy_tone",
+        "uncertainty"
+      ],
+      "used_by": ["QuaLayer", "OracleChambers"]
+    },
+    {
+      "input_id": "pmi_geoscen_zt_input",
+      "component": "GeoScen",
+      "path": "data/llm/approved_inputs/pmi_geoscen_zt_input.parquet",
+      "format": "parquet",
+      "required": true,
+      "allowed_fields": [
+        "date",
+        "pmi_geoscen_zt_input",
+        "tag_labor",
+        "tag_inflation",
+        "tag_demand"
+      ],
+      "used_by": ["QuaLayer", "Zt"]
+    },
+    {
+      "input_id": "isovector_macro_cb_rates_join",
+      "component": "IsoVector",
+      "path": "data/llm/approved_inputs/isovector_macro_cb_rates_join.parquet",
+      "format": "parquet",
+      "required": true,
+      "allowed_fields": [
+        "date",
+        "bank_code",
+        "policy_tone",
+        "uncertainty",
+        "it_de_10y_spread",
+        "it_de_10y_spread_z"
+      ],
+      "used_by": ["QuaLayer", "Zt"]
+    }
+  ],
+  "outputs": {
+    "qualayer_packet": "data/llm/qualayer/qualayer_packet_v1.json"
   }
 }

@@ -1,0 +1,27 @@
+{
+  "route": "/executive",
+  "label": "EXECUTIVE",
+  "panels": [
+    {
+      "title": "Executive Synthesis",
+      "type": "synthesis",
+      "source": "GeoScen RBL / Runtime Summary"
+    },
+    {
+      "title": "Escalation Graph",
+      "type": "graph",
+      "source": "Langroid Runtime"
+    },
+    {
+      "title": "Contradiction Engine",
+      "type": "governance",
+      "source": "GeoScen Contradiction Engine"
+    },
+    {
+      "title": "Narrative Drift",
+      "type": "drift",
+      "source": "Historical Narrative Drift Engine"
+    }
+  ],
+  "status": "executive_route_ready"
+}

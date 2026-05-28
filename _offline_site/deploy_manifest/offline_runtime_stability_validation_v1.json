@@ -1,0 +1,15 @@
+{
+  "component": "offline_runtime_stability_validation_v1",
+  "generated_at_utc": "2026-05-22T16:51:17.680276+00:00",
+  "checks": {
+    "index_exists": true,
+    "core_js_count": 10,
+    "component_js_count": 49,
+    "json_payload_count": 119,
+    "has_routes": true,
+    "has_runtime_manifest": true,
+    "has_finstate_summary": true,
+    "has_executive_validation": true
+  },
+  "status": "offline_runtime_stable"
+}

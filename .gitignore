@@ -157,3 +157,5 @@ src/US_TeaPlant/data/**
 .venv_ci/
 .venv_fed_ci/
 .venv_tmp/
+
+.venv310/

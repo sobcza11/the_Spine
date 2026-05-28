@@ -1,0 +1,112 @@
+{
+  "zt": {
+    "artifact": "oc_fx_zt_zeitgeist_v1",
+    "plane": "FX",
+    "component": "Z_t",
+    "label": "Z_t \u2022 FX zeitgeist",
+    "run_ts": "2026-05-11T15:56:07.881481+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "zeitgeist": {
+      "regime": "Fragmented Cross-Asset Regime",
+      "dollar_pressure": "Elevated Dollar Liquidity Stress",
+      "carry_stress": "Carry instability elevated",
+      "cb_divergence": "Elevated",
+      "liquidity_fragmentation": true,
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "deterministic_output": true,
+      "ai_may_assist_interpretation": true,
+      "ai_may_not_own_runtime_truth": true
+    }
+  },
+  "rbl": {
+    "artifact": "oc_fx_rbl_interpretation_v1",
+    "plane": "FX",
+    "component": "RBL",
+    "label": "RBL \u2022 FX \u2022 Interpretation (OC)",
+    "run_ts": "2026-05-11T15:56:07.881511+00:00",
+    "ai_component_ready": true,
+    "online_transition_allowed": false,
+    "source_artifact": "oc_fx_zt_zeitgeist_v1",
+    "interpretation": {
+      "summary": "FX cognition indicates a fragmented liquidity posture with elevated dollar pressure, unstable carry conditions, and central-bank divergence. The correct institutional stance is defensive monitoring, not broad risk confirmation.",
+      "risk_posture": "Defensive monitoring",
+      "decision_bias": "Do not over-confirm risk appetite from FX while liquidity fragmentation persists.",
+      "watch_items": [
+        "USD funding pressure",
+        "carry unwind risk",
+        "Fed / ECB / BoJ / China policy divergence",
+        "cross-asset liquidity confirmation"
+      ],
+      "confidence": 0.895,
+      "conviction": 0.6694
+    },
+    "governance": {
+      "rbl_is_interpretive": true,
+      "zt_is_source_signal": true,
+      "ai_may_not_mutate_zt": true
+    }
+  },
+  "analytics": {
+    "z_t_composite": 0.72,
+    "signal_strength": "High",
+    "stress_score": 0.81,
+    "dispersion_score": 0.63,
+    "contradiction_score": 0.42,
+    "momentum_score": 0.58,
+    "confidence_score": 0.895,
+    "conviction_score": 0.6694,
+    "model_mode": "Deterministic AI cognition component",
+    "ml_readiness": "Feature-ready; not trained ML"
+  },
+  "feature_vector": [
+    {
+      "feature": "USD funding pressure",
+      "weight": 0.24,
+      "direction": "stress_positive"
+    },
+    {
+      "feature": "Carry unwind risk",
+      "weight": 0.19,
+      "direction": "stress_positive"
+    },
+    {
+      "feature": "Central-bank divergence",
+      "weight": 0.22,
+      "direction": "fragmentation_positive"
+    },
+    {
+      "feature": "Cross-asset liquidity confirmation",
+      "weight": 0.17,
+      "direction": "confirmation_negative"
+    }
+  ],
+  "historical_analogs": [
+    {
+      "regime": "1998 FX Contagion",
+      "similarity": 0.65,
+      "why": "FX fragmentation & liquidity stress"
+    },
+    {
+      "regime": "2008 Liquidity Stress",
+      "similarity": 0.58,
+      "why": "Funding pressure & risk compression"
+    },
+    {
+      "regime": "2022 Tightening Cycle",
+      "similarity": 0.54,
+      "why": "Policy divergence & USD pressure"
+    }
+  ],
+  "executive_decision_layer": {
+    "risk_posture": "Defensive monitoring",
+    "confirmation_status": "Fragmented",
+    "action_bias": "Monitor / avoid broad risk confirmation",
+    "fragility_level": "Moderate-High"
+  },
+  "client_visible_intelligence": true,
+  "analytics_version": "institutional_analytics_v1"
+}

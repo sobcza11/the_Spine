@@ -1,0 +1,17 @@
+{
+  "route": "/rates",
+  "label": "RATES",
+  "panels": [
+    {
+      "title": "Z? • Bond Market • zeitgeist",
+      "type": "zeitgeist",
+      "source": "Rates Z? / Curve / Policy / Duration"
+    },
+    {
+      "title": "RBL • Bond Mrkt (Systemic) • OC",
+      "type": "systemic",
+      "source": "Rates Propagation / Sovereign Stress / Funding Topology"
+    }
+  ],
+  "status": "rates_route_ready"
+}

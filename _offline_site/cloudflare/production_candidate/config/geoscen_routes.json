@@ -1,0 +1,73 @@
+{
+  "routes": [
+
+    {
+      "route": "/equities-industry",
+      "label": "EQUITIES - INDUSTRY",
+      "components": [
+        "zt_equity_zeitgeist",
+        "rbl_equity_oc",
+        "rbl_equity_systemic_oc"
+      ]
+    },
+
+    {
+      "route": "/equities-sector",
+      "label": "EQUITIES - SECTOR",
+      "components": [
+        "zt_sector_zeitgeist",
+        "rbl_sector_oc"
+      ]
+    },
+
+    {
+      "route": "/cflow",
+      "label": "C_FLOW",
+      "components": [
+        "zt_commodity_flow",
+        "rbl_commodities_oc",
+        "rbl_commodities_systemic_oc"
+      ]
+    },
+
+    {
+      "route": "/finstate",
+      "label": "FINSTATE",
+      "components": [
+        "zt_finstate_zeitgeist",
+        "rbl_finstate_oc",
+        "rbl_finstate_systemic_oc"
+      ]
+    },
+
+    {
+      "route": "/fx",
+      "label": "FX",
+      "components": [
+        "zt_fx_zeitgeist",
+        "rbl_fx_systemic_oc"
+      ]
+    },
+
+    {
+      "route": "/rates",
+      "label": "RATES",
+      "components": [
+        "zt_bond_market_zeitgeist",
+        "rbl_rates_systemic_oc"
+      ]
+    },
+
+    {
+      "route": "/executive",
+      "label": "EXECUTIVE",
+      "components": [
+        "executive_synthesis",
+        "escalation_graph",
+        "contradiction_engine",
+        "narrative_drift"
+      ]
+    }
+
+  ]
+}

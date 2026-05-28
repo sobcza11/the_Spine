@@ -1,0 +1,38 @@
+{
+  "registry_version": "v1",
+  "site_root": "_offline_site",
+  "config": [
+    "config/runtime_contract_v1.json",
+    "config/geoscen_routes.json"
+  ],
+  "core": [
+    "core/runtime_loader.js",
+    "core/navigation.js",
+    "core/route_state_engine.js",
+    "core/payload_validator.js",
+    "core/runtime_guard.js"
+  ],
+  "components": [
+    "components/cards/metric_card.js",
+    "components/narratives/narrative_block.js"
+  ],
+  "runtime_sources": [
+    "geoscen_runtime/geoscen_frontend_intelligence_layer_v1.json",
+    "geoscen_runtime/geoscen_rbl_synthesis_v1.json",
+    "geoscen_runtime/geoscen_contradiction_engine_v1.json",
+    "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1.json",
+    "geoscen_runtime/geoscen_structural_macro_layer_v1.json",
+    "geoscen_runtime/geoscen_cross_country_policy_cognition_v1.json",
+    "langroid_runtime/langroid_runtime_export.json"
+  ],
+  "routes": [
+    "equities-industry",
+    "equities-sector",
+    "cflow",
+    "finstate",
+    "fx",
+    "rates",
+    "executive"
+  ],
+  "status": "offline_asset_registry_initialized"
+}

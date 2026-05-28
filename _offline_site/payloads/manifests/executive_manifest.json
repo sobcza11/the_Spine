@@ -1,0 +1,10 @@
+{
+  "route": "/executive",
+  "payloads": [
+    "geoscen_runtime/geoscen_rbl_synthesis_v1_normalized.json",
+    "geoscen_runtime/geoscen_contradiction_engine_v1_normalized.json",
+    "geoscen_runtime/geoscen_historical_narrative_drift_engine_v1_normalized.json",
+    "langroid_runtime/langroid_runtime_export_normalized.json"
+  ],
+  "status": "executive_payload_manifest_ready"
+}
