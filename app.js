@@ -2750,6 +2750,129 @@ function renderAssetSigmaChart(container, rows, selectedKey) {
     }
   }
 
+function getFXDepthMetricPayload(pair, metricName) {
+  const pairPayload = fxDepthData?.[pair];
+
+  if (!pairPayload || typeof pairPayload !== "object") return null;
+
+  if (
+    pairPayload.metrics &&
+    pairPayload.metrics[metricName] &&
+    Array.isArray(pairPayload.metrics[metricName].rows)
+  ) {
+    return pairPayload.metrics[metricName];
+  }
+
+  if (pairPayload.metric === metricName && Array.isArray(pairPayload.rows)) {
+    return pairPayload;
+  }
+
+  return null;
+}
+
+function renderWtiInventorySeasonalChart(container, rows) {
+  if (!container || !Array.isArray(rows) || !rows.length) return;
+
+  const latest = rows[rows.length - 1];
+  const latestYear = Number(String(latest.date).slice(0, 4));
+  const profileByWeek = new Map();
+
+  rows.forEach((row) => {
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) return;
+
+    profileByWeek.set(week, {
+      week,
+      high: Number(row.hist_max),
+      avg: Number(row.hist_avg),
+      low: Number(row.hist_min)
+    });
+  });
+
+  const currentRows = rows
+    .filter((row) => Number(String(row.date).slice(0, 4)) === latestYear)
+    .map((row) => ({
+      week: Number(row.week),
+      current: Number(row.inventory_mmbbl)
+    }))
+    .filter((row) => Number.isFinite(row.week) && Number.isFinite(row.current));
+
+  const seasonalRows = Array.from({ length: 52 }, (_, i) => {
+    const week = i + 1;
+    const profile = profileByWeek.get(week) || {};
+    const current = currentRows.find((row) => row.week === week);
+
+    return {
+      week,
+      high: profile.high,
+      avg: profile.avg,
+      low: profile.low,
+      current: current?.current
+    };
+  });
+
+  const values = seasonalRows
+    .flatMap((row) => [row.high, row.avg, row.low, row.current])
+    .filter(Number.isFinite);
+
+  if (!values.length) return;
+
+  const width = Math.max(container.clientWidth || 320, 320);
+  const height = Math.max(container.clientHeight || 230, 230);
+  const padding = { top: 18, right: 20, bottom: 34, left: 28 };
+
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const range = Math.max(max - min, 1e-9);
+
+  const innerW = width - padding.left - padding.right;
+  const innerH = height - padding.top - padding.bottom;
+
+  const xForWeek = (week) =>
+    padding.left + ((week - 1) / 51) * innerW;
+
+  const yForValue = (value) =>
+    padding.top + ((max - value) / range) * innerH;
+
+  const makePath = (key) => {
+    const pts = seasonalRows
+      .filter((row) => Number.isFinite(row[key]))
+      .map((row) => ({
+        x: xForWeek(row.week),
+        y: yForValue(row[key])
+      }));
+
+    return createLinePath(pts);
+  };
+
+  const labelWeeks = [1, 13, 26, 39, 52]
+    .map((week) => `
+      <text class="fx-axis-label" x="${xForWeek(week)}" y="${height - 10}" text-anchor="middle">
+        ${week}
+      </text>
+    `)
+    .join("");
+
+  container.innerHTML = `
+    <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" aria-label="WTI Inventory Seasonal Chart">
+      <line class="fx-grid-line" x1="${padding.left}" y1="${padding.top}" x2="${width - padding.right}" y2="${padding.top}"></line>
+      <line class="fx-grid-line" x1="${padding.left}" y1="${height - padding.bottom}" x2="${width - padding.right}" y2="${height - padding.bottom}"></line>
+
+      <path class="fx-depth-seasonal-line high" d="${makePath("high")}"></path>
+      <path class="fx-depth-seasonal-line avg" d="${makePath("avg")}"></path>
+      <path class="fx-depth-seasonal-line low" d="${makePath("low")}"></path>
+      <path class="fx-depth-seasonal-line current" d="${makePath("current")}"></path>
+
+      <text class="fx-depth-seasonal-label" x="${padding.left}" y="${padding.top + 12}">5Y High</text>
+      <text class="fx-depth-seasonal-label" x="${padding.left}" y="${padding.top + 28}">5Y Avg</text>
+      <text class="fx-depth-seasonal-label" x="${padding.left}" y="${padding.top + 44}">5Y Low</text>
+      <text class="fx-depth-seasonal-label current" x="${padding.left}" y="${padding.top + 60}">Current</text>
+
+      ${labelWeeks}
+    </svg>
+  `;
+}
+
   async function renderFX() {
     updateGeoScenToolbarLabel();
 
