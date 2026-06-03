@@ -1,0 +1,42 @@
+name: FX Depth Daily Refresh
+
+on:
+  schedule:
+    - cron: "20 11 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  build_fx_depth:
+    runs-on: ubuntu-latest
+
+    env:
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_REGION: ${{ secrets.R2_REGION }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install pandas pyarrow requests fredapi boto3
+
+      - name: Build FX Depth spreads
+        run: |
+          python src/spine/research/fx_depth/build_fx_depth_2y_spreads.py
+
+      - name: Build FX Depth serving JSON
+        run: |
+          python src/spine/research/fx_depth/build_fx_depth_serving.py
+
+      - name: Upload FX Depth serving JSON to R2
+        run: |
+          python src/spine/research/fx_depth/upload_fx_depth_serving_to_r2.py
+
