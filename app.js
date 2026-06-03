@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("APP BOOT OK — WTI SAFE BUILD");
+﻿document.addEventListener("DOMContentLoaded", () => {
+  console.log("APP BOOT OK â€” WTI SAFE BUILD");
 
   window.__WTI_SAFE_BUILD__ = true;
   
@@ -509,15 +509,15 @@ function renderIndustryCards(rows) {
           <div class="industry-row">
             <span class="industry-label">PMI</span>
             <span>${formatInt(row.pmi_Idx)}</span>
-            <span>${formatSignedInt(row["pmi_3M_Δ"])}</span>
-            <span>${formatSignedInt(row["pmi_6M_Δ"])}</span>
+            <span>${formatSignedInt(row["pmi_3M_Î”"])}</span>
+            <span>${formatSignedInt(row["pmi_6M_Î”"])}</span>
           </div>
 
           <div class="industry-row">
             <span class="industry-label">Orders</span>
             <span>${formatInt(row.no_Idx)}</span>
-            <span>${formatSignedInt(row["no_3M_Δ"])}</span>
-            <span>${formatSignedInt(row["no_6M_Δ"])}</span>
+            <span>${formatSignedInt(row["no_3M_Î”"])}</span>
+            <span>${formatSignedInt(row["no_6M_Î”"])}</span>
           </div>
 
           <div class="industry-footer">
@@ -659,12 +659,12 @@ function renderIndustryPanelTable(container, rows, etfFocus) {
               </tr>
               <tr>
                 <th class="center-text pmi-col">Idx</th>
-                <th class="center-text pmi-col">3M Δ</th>
-                <th class="center-text pmi-col">6M Δ</th>
+                <th class="center-text pmi-col">3M Î”</th>
+                <th class="center-text pmi-col">6M Î”</th>
 
                 <th class="group-sep-left center-text orders-col">Idx</th>
-                <th class="center-text orders-col">3M Δ</th>
-                <th class="center-text orders-col">6M Δ</th>
+                <th class="center-text orders-col">3M Î”</th>
+                <th class="center-text orders-col">6M Î”</th>
 
                 <th class="group-sep-left center-text">Sig</th>
                 <th class="center-text">Wt</th>
@@ -1107,14 +1107,14 @@ async function loadActiveData() {
     if (driversPanel) {
       driversPanel.innerHTML = `
         <div class="panel-title">Macro Drivers</div>
-        <div class="panel-placeholder">${region} • ${horizon}</div>
+        <div class="panel-placeholder">${region} â€¢ ${horizon}</div>
       `;
     }
 
     if (transmissionPanel) {
       transmissionPanel.innerHTML = `
         <div class="panel-title">Transmission</div>
-        <div class="panel-placeholder">Rates → CPI → USD → Oil</div>
+        <div class="panel-placeholder">Rates â†’ CPI â†’ USD â†’ Oil</div>
       `;
     }
 
@@ -1144,7 +1144,7 @@ if (riskStackPanel) {
   <span class="iv-title-main">
     <span class="iso-part">Iso</span><span class="vector-part">Vector</span>
   </span>
-  <span class="iv-title-sub"> • System Diagnostics Contract</span>
+  <span class="iv-title-sub"> â€¢ System Diagnostics Contract</span>
 </div>
 
     <div class="iv-contract-group iv-group-pressure">
@@ -1300,7 +1300,7 @@ function getRatesCountryCode(row) {
     ""
   ).toUpperCase();
 
-  // HARD MAP FIRST — avoid broad includes like AUS -> US
+  // HARD MAP FIRST â€” avoid broad includes like AUS -> US
   if (symbol.includes("RBCNBIS") || symbol.includes("INTDSRCNM193N")) return "CN";
 
 if (/^(US|US_)/.test(symbol)) return "US";
@@ -1369,7 +1369,7 @@ const selectedCountry = normalizeRatesCountry(
         ? sigmaRaw.rows
         : [];
         
-// ✅ LINE ~ (same location — replace ONLY the filter line)
+// âœ… LINE ~ (same location â€” replace ONLY the filter line)
 
 const countryRows = panelRows
   .filter((r) => {
@@ -2029,7 +2029,7 @@ async function renderEquities() {
   const topRightDate = document.getElementById("equities-top-right-date");
   const sigmaDate = document.getElementById("equities-sigma-date");
 
-  if (indexBadge) indexBadge.textContent = `${region} • ${horizon}`;
+  if (indexBadge) indexBadge.textContent = `${region} â€¢ ${horizon}`;
 
   const regionIsLive = region === "USA";
 
@@ -2179,7 +2179,7 @@ async function renderEquities() {
         const cfg = EQUITIES_LENS_CONFIG[etfFocus];
 
         if (industrySubtitle) {
-          industrySubtitle.textContent = `Lens Structure — ${etfFocus} | ${getEquitiesTickerLabel(etfFocus)}`;
+          industrySubtitle.textContent = `Lens Structure â€” ${etfFocus} | ${getEquitiesTickerLabel(etfFocus)}`;
         }
 
         updateStatValue(document.getElementById("equities-industry-pmi"), cfg?.lens_primary || "--");
@@ -2420,7 +2420,7 @@ function getEquitiesTickerLabel(symbol) {
     if (mode === "Bond Spread Lens") {
       return {
         badge: "Bond Spread Lens",
-        modeLabel: "Δ 10Y Diff",
+        modeLabel: "Î” 10Y Diff",
         subtitle: "Change in 10Y sovereign differential",
         transform: "delta"
       };
@@ -2750,7 +2750,7 @@ function renderAssetSigmaChart(container, rows, selectedKey) {
     }
   }
 
-  function renderFX() {
+async function renderFX() {
     updateGeoScenToolbarLabel();
 
     if (!activeDataLoaded) {
@@ -2801,7 +2801,7 @@ function renderAssetSigmaChart(container, rows, selectedKey) {
     const spreadSubtitle = document.getElementById("fx-spread-subtitle");
     const sigmaBadge = document.getElementById("fx-sigma-badge");
 
-    if (priceBadge) priceBadge.textContent = `${pair} • ${horizon}`;
+    if (priceBadge) priceBadge.textContent = `${pair} â€¢ ${horizon}`;
     if (spreadBadge) spreadBadge.textContent = spreadConfig.badge;
     if (spreadSubtitle) spreadSubtitle.textContent = spreadConfig.subtitle;
     if (sigmaBadge) sigmaBadge.textContent = "Cross-Pair Z Context";
@@ -3037,7 +3037,7 @@ function renderWtiOcSignal(container, overlay, meta) {
     const sigmaBadge = document.getElementById("wti-sigma-badge");
 
 if (inventoryBadge) inventoryBadge.textContent = horizon;
-if (priceBadge) priceBadge.textContent = `WTI • ${horizon}`;
+if (priceBadge) priceBadge.textContent = `WTI â€¢ ${horizon}`;
 if (macroBadge) macroBadge.textContent = "Pressure / Macro";
 if (sigmaBadge) sigmaBadge.textContent = "Cross-Series Z Context";
 
@@ -3427,7 +3427,7 @@ Object.values(equitiesControls).forEach((el) => {
 Object.values(ratesControls).forEach((el) => {
   if (el) {
     el.addEventListener("change", () => {
-      updateRatesGeoScenToolbarLabel(); // 🔥 THIS IS THE FIX
+      updateRatesGeoScenToolbarLabel(); // ðŸ”¥ THIS IS THE FIX
 
       if (document.body.classList.contains("view-rates")) {
         renderRates();
