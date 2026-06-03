@@ -2751,7 +2751,8 @@ function renderAssetSigmaChart(container, rows, selectedKey) {
   }
 
 function getFXDepthMetricPayload(pair, metricName) {
-  const pairPayload = fxDepthData?.[pair];
+  const root = fxDepthData?.pairs || fxDepthData || {};
+  const pairPayload = root?.[pair];
 
   if (!pairPayload || typeof pairPayload !== "object") return null;
 
