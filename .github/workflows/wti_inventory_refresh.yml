@@ -38,3 +38,5 @@ jobs:
 
       - name: Upload FX depth serving to R2
         run: python -m spine.jobs.fx_depth.upload_fx_depth_serving_to_r2
+
+        
