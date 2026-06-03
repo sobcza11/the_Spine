@@ -4215,7 +4215,7 @@ function renderFXDepth(pair) {
     } else {
       chart.innerHTML = `
         <div class="fx-depth-live-summary">
-          <div class="fx-depth-live-title">${metric.name}</div>
+          <div class="fx-depth-live-title">LIVE SIGNAL</div>
 
           <div class="fx-depth-live-value ${Number(latest.value) >= 0 ? "positive" : "negative"}">
             ${Number(latest.value).toFixed(2)}
@@ -5438,6 +5438,7 @@ window.addEventListener("resize", () => {
     showView("what-is");
   })();
 });
+
 
 
 
