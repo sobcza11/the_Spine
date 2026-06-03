@@ -56,6 +56,19 @@ def build_usdcad_wti_inventory_depth():
 
         surplus_3yr = value - avg_3yr
 
+        std_3yr = float(trailing_3yr["value"].std(ddof=0))
+        std_from_3yr_avg = 0.0 if std_3yr == 0 else surplus_3yr / std_3yr
+
+        prior_rows = df[df["date"] < row["date"]].sort_values("date")
+        prior_value = float(prior_rows.iloc[-1]["value"]) if len(prior_rows) else value
+
+        if value > prior_value:
+            inventory_direction = "↑"
+        elif value < prior_value:
+            inventory_direction = "↓"
+        else:
+            inventory_direction = "→"
+
         denom = hist_max - hist_min
         weekly_index = 100.0 if denom == 0 else ((value - hist_min) / denom) * 100.0
 
@@ -65,7 +78,11 @@ def build_usdcad_wti_inventory_depth():
             "year": year,
             "value": round(weekly_index, 4),
             "inventory_mmbbl": round(value, 4),
+            "inventory_display": f"{value:.1f}k inv.",
+            "inventory_direction": inventory_direction,
             "inventory_surplus_3yr": round(surplus_3yr, 4),
+            "std_3yr": round(std_3yr, 4),
+            "std_from_3yr_avg": round(std_from_3yr_avg, 4),
             "avg_3yr": round(avg_3yr, 4),
             "hist_avg": round(hist_avg, 4),
             "hist_min": round(hist_min, 4),
@@ -92,4 +109,3 @@ def build_usdcad_wti_inventory_depth():
 
 if __name__ == "__main__":
     build_usdcad_wti_inventory_depth()
-    

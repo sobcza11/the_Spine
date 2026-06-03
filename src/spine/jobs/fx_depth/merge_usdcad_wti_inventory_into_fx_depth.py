@@ -30,6 +30,10 @@ def main():
                 "change": row["inventory_surplus_3yr"],
                 "week": row["week"],
                 "inventory_mmbbl": row["inventory_mmbbl"],
+                "inventory_display": row.get("inventory_display"),
+                "inventory_direction": row.get("inventory_direction", "→"),
+                "std_3yr": row.get("std_3yr"),
+                "std_from_3yr_avg": row.get("std_from_3yr_avg"),
                 "avg_3yr": row["avg_3yr"],
                 "hist_avg": row["hist_avg"],
                 "hist_min": row["hist_min"],
@@ -38,6 +42,7 @@ def main():
             for row in wti_payload["rows"]
         ]
     }
+
 
     FX_DEPTH_PATH.write_text(json.dumps(fx_payload, indent=2), encoding="utf-8")
 
