@@ -36,6 +36,5 @@ jobs:
       - name: Merge USD/CAD WTI inventory into FX depth
         run: python src/spine/jobs/fx_depth/merge_usdcad_wti_inventory_into_fx_depth.py
 
-      - name: Upload core module outputs to R2
-        run: python -m spine.jobs.r2.upload_core_module_outputs
-
+      - name: Upload FX depth serving to R2
+        run: python -m spine.jobs.fx_depth.upload_fx_depth_serving_to_r2
