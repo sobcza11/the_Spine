@@ -2750,7 +2750,7 @@ function renderAssetSigmaChart(container, rows, selectedKey) {
     }
   }
 
-  function renderFX() {
+  async function renderFX() {
     updateGeoScenToolbarLabel();
 
     if (!activeDataLoaded) {
