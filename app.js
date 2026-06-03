@@ -4187,7 +4187,7 @@ function renderFXDepth(pair) {
 
       chart.innerHTML = `
         <div class="fx-depth-live-summary">
-          <div class="fx-depth-live-title">${metric.name}</div>
+          <div class="fx-depth-live-title">LIVE SIGNAL</div>
 
           <div class="fx-depth-live-value">
             ${formatWtiInventoryDisplay(latest)} ${direction}
@@ -4249,7 +4249,7 @@ function renderFXDepth(pair) {
   } else {
     chart.innerHTML = `
       <div class="fx-depth-selected-metric">
-        ${metric.name}
+        Select a supporting metric to confirm the future data pipe.
       </div>
     `;
   }
@@ -5438,7 +5438,6 @@ window.addEventListener("resize", () => {
     showView("what-is");
   })();
 });
-
 
 
 
