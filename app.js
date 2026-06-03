@@ -4145,6 +4145,12 @@ function renderFXDepth(pair) {
   );
 
   function setActiveMetric(metric) {
+    if (description) {
+        description.textContent =
+          metric.description ||
+          "Select a supporting metric to confirm the future data pipe.";
+      }
+
     buttonRow.querySelectorAll(".fx-depth-metric-button").forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.metric === metric.name);
     });
@@ -4249,7 +4255,7 @@ function renderFXDepth(pair) {
   } else {
     chart.innerHTML = `
       <div class="fx-depth-selected-metric">
-        Select a supporting metric to confirm the future data pipe.
+        Future data pipe pending.
       </div>
     `;
   }
@@ -5438,8 +5444,6 @@ window.addEventListener("resize", () => {
     showView("what-is");
   })();
 });
-
-
 
 
 
