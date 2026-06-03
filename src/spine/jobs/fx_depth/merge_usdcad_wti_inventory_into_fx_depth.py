@@ -7,7 +7,13 @@ FX_DEPTH_PATH = REPO_ROOT / "data" / "serving" / "fx" / "fx_depth_serving_v1.jso
 WTI_DEPTH_PATH = REPO_ROOT / "data" / "serving" / "fx" / "usdcad_wti_inventory_depth.json"
 
 def main():
-    fx_payload = json.loads(FX_DEPTH_PATH.read_text(encoding="utf-8"))
+    if FX_DEPTH_PATH.exists():
+        fx_payload = json.loads(FX_DEPTH_PATH.read_text(encoding="utf-8"))
+    else:
+        fx_payload = {
+            "source": "the_Spine | FX DEPTH",
+            "pairs": {}
+        }
     wti_payload = json.loads(WTI_DEPTH_PATH.read_text(encoding="utf-8"))
 
     fx_payload.setdefault("pairs", {})
