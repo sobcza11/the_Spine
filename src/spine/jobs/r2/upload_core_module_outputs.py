@@ -27,6 +27,12 @@ UPLOADS = {
     # EQUITIES
     "data/serving/equities/equities_zt.parquet": "spine_us/serving/equities/equities_zt.parquet",
     "data/serving/equities/equities_risk_expression_panel.parquet": "spine_us/serving/equities/equities_risk_expression_panel.parquet",
+
+    #WTI-Inv.
+    "data/serving/fx/fx_depth_serving_v1.json": "spine_us/serving/fx/fx_depth_serving_v1.json",
+    "data/serving/fx/fx_zt_v1.parquet": "spine_us/serving/fx/fx_zt_v1.parquet",
+    "data/serving/fx/fx_latest.json": "spine_us/serving/fx/fx_latest.json",
+
 }
 
 
