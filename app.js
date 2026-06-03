@@ -2877,6 +2877,108 @@ function renderAssetSigmaChart(container, rows, selectedKey) {
     renderSigmaChart(document.getElementById("fx-sigma-chart"), sigmaRows, pair);
   }
 
+function renderFXDepthLiveLineChart(container, rows, pair, metricName) {
+  if (!container || !Array.isArray(rows) || !rows.length) return;
+
+  const cleanRows = getFXDepthHorizonRows(rows)
+    .map((row) => ({
+      date: row.date,
+      value: Number(row.value),
+      change: Number(row.change)
+    }))
+    .filter((row) => row.date && Number.isFinite(row.value));
+
+  if (!cleanRows.length) return;
+
+  const width = Math.max(container.clientWidth || 320, 320);
+  const height = Math.max(container.clientHeight || 230, 230);
+  const padding = { top: 18, right: 18, bottom: 34, left: 18 };
+
+  const values = cleanRows.map((row) => row.value);
+  const min = Math.min(...values, 0);
+  const max = Math.max(...values, 0);
+  const range = Math.max(max - min, 1e-9);
+
+  const innerW = width - padding.left - padding.right;
+  const innerH = height - padding.top - padding.bottom;
+
+  const valueToY = (value) =>
+    padding.top + ((max - value) / range) * innerH;
+
+  const points = cleanRows.map((row, idx) => ({
+    x: padding.left + (idx / Math.max(cleanRows.length - 1, 1)) * innerW,
+    y: valueToY(row.value)
+  }));
+
+  const latest = cleanRows[cleanRows.length - 1];
+  const lastPoint = points[points.length - 1];
+  const zeroY = valueToY(0);
+  const fillClass = latest.value >= 0 ? "positive" : "negative";
+
+  function buildAreaPath(points, values, zeroY, positive = true) {
+    const pathPoints = points.map((pt, i) => {
+      const value = values[i];
+
+      if ((positive && value >= 0) || (!positive && value <= 0)) {
+        return { x: pt.x, y: pt.y };
+      }
+
+      return { x: pt.x, y: zeroY };
+    });
+
+    return `
+      M ${pathPoints[0].x.toFixed(2)} ${zeroY.toFixed(2)}
+      ${pathPoints.map((p) => `L ${p.x.toFixed(2)} ${p.y.toFixed(2)}`).join(" ")}
+      L ${pathPoints[pathPoints.length - 1].x.toFixed(2)} ${zeroY.toFixed(2)}
+      Z
+    `;
+  }
+
+  const positiveAreaPath = buildAreaPath(points, values, zeroY, true);
+  const negativeAreaPath = buildAreaPath(points, values, zeroY, false);
+
+  const labelIdx = [
+    0,
+    Math.floor((cleanRows.length - 1) / 2),
+    cleanRows.length - 1
+  ];
+
+  const xLabels = [...new Set(labelIdx)]
+    .map((idx) => {
+      const x =
+        padding.left +
+        (idx / Math.max(cleanRows.length - 1, 1)) * innerW;
+
+      return `
+        <text class="fx-axis-label" x="${x}" y="${height - 10}" text-anchor="middle">
+          ${formatCompactDateLabel(cleanRows[idx].date)}
+        </text>
+      `;
+    })
+    .join("");
+
+  container.innerHTML = `
+    <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" aria-label="${pair} ${metricName}">
+      <line class="fx-grid-line" x1="${padding.left}" y1="${padding.top}" x2="${width - padding.right}" y2="${padding.top}"></line>
+      <line class="fx-zero-line" x1="${padding.left}" y1="${zeroY}" x2="${width - padding.right}" y2="${zeroY}"></line>
+      <line class="fx-grid-line" x1="${padding.left}" y1="${height - padding.bottom}" x2="${width - padding.right}" y2="${height - padding.bottom}"></line>
+
+      <path class="fx-depth-live-area-positive" d="${positiveAreaPath}"></path>
+      <path class="fx-depth-live-area-negative" d="${negativeAreaPath}"></path>
+
+      <path class="fx-depth-live-line ${fillClass}" d="${createLinePath(points)}"></path>
+
+      <circle class="fx-point-last" cx="${lastPoint.x}" cy="${lastPoint.y}" r="4"></circle>
+
+      <text class="fx-depth-live-label" x="${Math.max(lastPoint.x - 50, padding.left)}" y="${lastPoint.y - 10}">
+        ${formatNumber(latest.value, 2)}
+      </text>
+
+      ${xLabels}
+    </svg>
+  `;
+}
+
 function renderWtiOcSignal(container, overlay, meta) {
   if (!container) return;
 
