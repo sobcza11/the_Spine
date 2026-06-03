@@ -30,3 +30,8 @@ jobs:
 
       - run: python -m spine.jobs.energy.wti.build_wti_inventory_oc_overlay
       
+      - name: Build USD/CAD WTI inventory depth
+        run: python src/spine/jobs/fx_depth/build_usdcad_wti_inventory_depth.py
+
+      - name: Merge USD/CAD WTI inventory into FX depth
+        run: python src/spine/jobs/fx_depth/merge_usdcad_wti_inventory_into_fx_depth.py
