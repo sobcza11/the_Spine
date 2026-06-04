@@ -1,0 +1,36 @@
+name: FX Depth Next Steps Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 11 * * 1-5"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
+      EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: spine_us
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install pandas requests boto3 python-dotenv
+
+      - name: Build FX Depth next-step metrics
+        run: python scripts/build_fx_depth_next_steps.py
+
+      - name: Upload to R2
+        run: python scripts/upload_fx_depth_next_steps_to_r2.py
+
+        

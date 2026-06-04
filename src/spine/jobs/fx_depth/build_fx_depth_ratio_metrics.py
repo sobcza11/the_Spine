@@ -21,6 +21,13 @@ CONFIG = [
         "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "copper.parquet",
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "gold.parquet",
         "method": "Copper divided by Gold"
+    },
+    {
+        "pair": "USD/CAD",
+        "metric": "WTI vs. NatGas",
+        "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "wti.parquet",
+        "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "natgas.parquet",
+        "method": "WTI divided by Henry Hub Natural Gas"
     }
 ]
 
@@ -106,4 +113,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-    
