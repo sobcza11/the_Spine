@@ -27,10 +27,9 @@ jobs:
       - name: Install deps
         run: pip install pandas requests boto3 python-dotenv
 
-      - name: Build FX Depth next-step metrics
-        run: python scripts/build_fx_depth_next_steps.py
+      - name: Build FX Depth Next Steps
+        run: python scripts/FX/build_fx_depth_next_steps.py
 
       - name: Upload to R2
-        run: python scripts/upload_fx_depth_next_steps_to_r2.py
+        run: python scripts/FX/upload_fx_depth_next_steps_to_r2.py
 
-        
