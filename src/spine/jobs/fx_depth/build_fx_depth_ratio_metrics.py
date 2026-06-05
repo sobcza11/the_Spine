@@ -78,6 +78,50 @@ def build_ratio_rows(left_path, right_path):
     df = left.merge(right, on="date", how="inner")
     df = df[df["right"] != 0].copy()
 
+    df["raw_value"] = df["left"] / df["right"]
+
+    df["mean_252"] = df["raw_value"].rolling(252).mean()
+    df["std_252"] = df["raw_value"].rolling(252).std()
+
+    df["z_score"] = (
+        (df["raw_value"] - df["mean_252"]) / df["std_252"]
+    )
+
+    df["percentile_756"] = (
+        df["raw_value"]
+        .rolling(756)
+        .apply(lambda x: (x <= x.iloc[-1]).mean() * 100, raw=False)
+    )
+
+    df["value"] = df["z_score"]
+    df["change"] = df["value"].diff()
+
+    df = df.dropna(subset=["value"])
+
+    return [
+        {
+            "date": row["date"].strftime("%Y-%m-%d"),
+            "value": round(float(row["value"]), 6),
+            "raw_value": round(float(row["raw_value"]), 6),
+            "z_score": round(float(row["z_score"]), 6),
+            "percentile": round(float(row["percentile_756"]), 2)
+            if pd.notna(row["percentile_756"])
+            else None,
+            "change": round(float(row["change"]), 6)
+            if pd.notna(row["change"])
+            else 0.0,
+        }
+        for _, row in df.iterrows()
+    ]
+
+
+def build_ratio_rows(left_path, right_path):
+    left = load_series(left_path).rename(columns={"value": "left"})
+    right = load_series(right_path).rename(columns={"value": "right"})
+
+    df = left.merge(right, on="date", how="inner")
+    df = df[df["right"] != 0].copy()
+
     df["value"] = df["left"] / df["right"]
     df["change"] = df["value"].diff()
 
