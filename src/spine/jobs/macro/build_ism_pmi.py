@@ -9,7 +9,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 SHEET_PAIRS = [
-    ("manu", "manu_pmi", "manu_no"),
+    ("manu", "m_pmi", "m_no"),
     ("serv", "serv_pmi", "serv_no"),
 ]
 

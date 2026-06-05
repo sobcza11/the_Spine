@@ -31,7 +31,7 @@ R2_ISM_MANU_NO_KEY = "spine_us/us_ism_manu_no_by_industry_canonical.parquet"
 
 def _load_manu_no_excel(
     excel_path: str,
-    sheet_name: str = "manu_no",
+    sheet_name: str = "m_no",
 ) -> pd.DataFrame:
     if not os.path.exists(excel_path):
         raise FileNotFoundError(
@@ -91,7 +91,7 @@ def _reshape_manu_no_to_canonical(df_raw: pd.DataFrame) -> pd.DataFrame:
 
 def build_us_ism_manu_no_by_industry_canonical(
     excel_path: str,
-    sheet_name: str = "manu_no",
+    sheet_name: str = "m_no",
 ) -> pd.DataFrame:
     print(
         f"[ISM-MANU-NO] Loading manu_no from {excel_path} (sheet={sheet_name}) …"
@@ -104,7 +104,25 @@ def build_us_ism_manu_no_by_industry_canonical(
     )
     df_canonical = _reshape_manu_no_to_canonical(df_raw)
 
-    write_parquet_to_r2(df_canonical, R2_ISM_MANU_NO_KEY, index=False)
+    LOCAL_OUT = "data/ism/us_ism_manu_no_by_industry_canonical.parquet"
+
+    os.makedirs("data/ism", exist_ok=True)
+
+    df_canonical.to_parquet(
+        LOCAL_OUT,
+        index=False
+    )
+
+    print(
+        f"[LOCAL] Wrote {LOCAL_OUT} "
+        f"(rows={len(df_canonical)})"
+    )
+
+    write_parquet_to_r2(
+        df_canonical,
+        R2_ISM_MANU_NO_KEY,
+        index=False
+    )
 
     print(
         f"[ISM-MANU-NO] Wrote canonical US ISM Manufacturing New Orders-by-industry leaf "

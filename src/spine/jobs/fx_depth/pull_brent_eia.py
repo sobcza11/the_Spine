@@ -8,9 +8,9 @@ OUT = REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "brent.parquet"
 
 EIA_API_KEY = os.environ["EIA_API_KEY"]
 
-url = "https://api.eia.gov/v2/petroleum/pri/spt/data/"
+URL = "https://api.eia.gov/v2/petroleum/pri/spt/data/"
 
-params = {
+PARAMS = {
     "api_key": EIA_API_KEY,
     "frequency": "daily",
     "data[0]": "value",
@@ -20,20 +20,15 @@ params = {
     "length": 5000,
 }
 
-r = requests.get(url, params=params, timeout=60)
+r = requests.get(URL, params=PARAMS, timeout=60)
 r.raise_for_status()
 
-rows = r.json()["response"]["data"]
+df = pd.DataFrame(r.json()["response"]["data"])
 
-df = pd.DataFrame(rows)
 df["date"] = pd.to_datetime(df["period"])
 df["value"] = pd.to_numeric(df["value"], errors="coerce")
 
-df = (
-    df[["date", "value"]]
-    .dropna()
-    .sort_values("date")
-)
+df = df[["date", "value"]].dropna().sort_values("date")
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 df.to_parquet(OUT, index=False)

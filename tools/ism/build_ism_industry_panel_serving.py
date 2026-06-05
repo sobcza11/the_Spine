@@ -32,6 +32,14 @@ def load_leaf(path, value_col, pmi_type):
 
     df["date"] = pd.to_datetime(df["date"])
     df["industry"] = df["industry"].astype(str).str.strip()
+
+    df["industry"] = (
+        df["industry"]
+        .str.replace("_pmi", "", regex=False)
+        .str.replace("_no", "", regex=False)
+        .str.strip()
+    )
+
     df["pmi_type"] = pmi_type
 
     return df[["date", "industry", value_col, "pmi_type"]]

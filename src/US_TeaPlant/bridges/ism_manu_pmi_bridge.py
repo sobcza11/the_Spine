@@ -4,7 +4,7 @@ from __future__ import annotations
 US_TeaPlant.bridges.ism_manu_pmi_bridge
 
 Builds the canonical US ISM Manufacturing PMI-by-industry leaf for the_Spine
-from the local Excel workbook ism_pmi_transp.xlsx (sheet: manu_pmi).
+from the local Excel workbook ism_pmi_transp.xlsx (sheet: m_pmi).
 
 Schema written to R2 at spine_us/us_ism_manu_pmi_by_industry_canonical.parquet:
 
@@ -111,7 +111,25 @@ def build_us_ism_manu_pmi_by_industry_canonical(
     )
     df_canonical = _reshape_manu_pmi_to_canonical(df_raw)
 
-    write_parquet_to_r2(df_canonical, R2_ISM_MANU_PMI_KEY, index=False)
+    LOCAL_OUT = "data/ism/us_ism_manu_pmi_by_industry_canonical.parquet"
+
+    os.makedirs("data/ism", exist_ok=True)
+
+    df_canonical.to_parquet(
+        LOCAL_OUT,
+        index=False
+    )
+
+    print(
+        f"[LOCAL] Wrote {LOCAL_OUT} "
+        f"(rows={len(df_canonical)})"
+    )
+
+    write_parquet_to_r2(
+        df_canonical,
+        R2_ISM_MANU_PMI_KEY,
+        index=False
+    )
 
     print(
         f"[ISM-MANU-PMI] Wrote canonical US ISM Manufacturing PMI-by-industry leaf "

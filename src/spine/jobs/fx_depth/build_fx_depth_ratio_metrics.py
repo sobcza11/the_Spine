@@ -166,6 +166,33 @@ def build_ratio_rows(left_path, right_path):
         for _, row in df.iterrows()
     ]
 
+def build_level_rows(path):
+    df = load_series(path)
+
+    df["mean_252"] = df["value"].rolling(252).mean()
+    df["std_252"] = df["value"].rolling(252).std()
+
+    df["z_score"] = (
+        (df["value"] - df["mean_252"])
+        / df["std_252"]
+    )
+
+    df["change"] = df["z_score"].diff()
+
+    df = df.dropna(subset=["z_score"])
+
+    return [
+        {
+            "date": row["date"].strftime("%Y-%m-%d"),
+            "value": round(float(row["z_score"]), 6),
+            "raw_value": round(float(row["value"]), 6),
+            "z_score": round(float(row["z_score"]), 6),
+            "change": round(float(row["change"]), 6)
+            if pd.notna(row["change"])
+            else 0.0,
+        }
+        for _, row in df.iterrows()
+    ]
 
 def main():
     payload = (

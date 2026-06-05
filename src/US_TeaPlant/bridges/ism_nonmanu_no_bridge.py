@@ -58,7 +58,25 @@ def build_us_ism_nonmanu_no_by_industry_canonical(
     print("[ISM-NONMANU-NO] Reshaping to canonical …")
     df_final = _reshape(df_raw)
 
-    write_parquet_to_r2(df_final, R2_KEY, index=False)
+    LOCAL_OUT = "data/ism/us_ism_nonmanu_no_by_industry_canonical.parquet"
+
+    os.makedirs("data/ism", exist_ok=True)
+
+    df_final.to_parquet(
+        LOCAL_OUT,
+        index=False
+    )
+
+    print(
+        f"[LOCAL] Wrote {LOCAL_OUT} "
+        f"(rows={len(df_final)})"
+    )
+
+    write_parquet_to_r2(
+        df_final,
+        R2_KEY,
+        index=False
+    )
 
     print(
         f"[ISM-NONMANU-NO] Wrote canonical Services New Orders-by-industry to R2 "
@@ -66,4 +84,3 @@ def build_us_ism_nonmanu_no_by_industry_canonical(
     )
 
     return df_final
-

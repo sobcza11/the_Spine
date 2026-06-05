@@ -2,7 +2,7 @@
 scripts/build_ism_manu_no_canonical.py
 
 Builds US ISM Manufacturing New Orders-by-industry canonical leaf
-from data/ism/ism_pmi_transp.xlsx (sheet=manu_no).
+from data/ism/ism_pmi_transp.xlsx (sheet=m_no).
 """
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ from US_TeaPlant.bridges.ism_manu_no_bridge import (
 
 def main() -> int:
     excel_path = os.path.join("data", "ism", "ism_pmi_transp.xlsx")
-    sheet_name = "manu_no"
+    sheet_name = "m_no"
 
     print("[SCRIPT-ISM-MANU-NO] Building US ISM Manu New Orders-by-industry …")
     df = build_us_ism_manu_no_by_industry_canonical(
