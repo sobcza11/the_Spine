@@ -16,6 +16,7 @@ CONFIG = [
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "eurusd.parquet",
         "method": "XAU/USD divided by EUR/USD",
     },
+
     {
         "pair": "AUD/USD",
         "metric": "Copper/Gold",
@@ -23,6 +24,7 @@ CONFIG = [
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "gold.parquet",
         "method": "Copper divided by Gold",
     },
+
     {
         "pair": "USD/CAD",
         "metric": "WTI vs. NatGas",
@@ -30,6 +32,7 @@ CONFIG = [
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "natgas.parquet",
         "method": "WTI divided by Henry Hub Natural Gas",
     },
+
     {
         "pair": "GBP/USD",
         "metric": "FTSE vs. SPX",
@@ -37,6 +40,7 @@ CONFIG = [
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "spx_proxy.parquet",
         "method": "EWU divided by SPY",
     },
+
     {
     "pair": "USD/JPY",
     "metric": "Brent Crude",
@@ -44,6 +48,14 @@ CONFIG = [
     "right": None,
     "method": "Brent Crude level",
     "mode": "level",
+    },
+
+    {
+        "pair": "USD/JPY",
+        "metric": "BCOM vs. Nikkei",
+        "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "bcom.parquet",
+        "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "nikkei.parquet",
+        "method": "DBC divided by EWJ",
     },
 
 ]
