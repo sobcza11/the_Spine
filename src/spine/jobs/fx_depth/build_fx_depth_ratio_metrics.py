@@ -87,6 +87,13 @@ def main():
     payload.setdefault("pairs", {})
 
     for cfg in CONFIG:
+        if not cfg["left"].exists() or not cfg["right"].exists():
+            print(
+                f"SKIP: {cfg['pair']} | {cfg['metric']} | "
+                f"missing left={cfg['left'].exists()} right={cfg['right'].exists()}"
+            )
+            continue
+
         rows = build_ratio_rows(cfg["left"], cfg["right"])
 
         pair_payload = payload["pairs"].setdefault(cfg["pair"], {
