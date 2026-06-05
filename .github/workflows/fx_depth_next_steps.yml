@@ -25,11 +25,11 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: pip install pandas requests boto3 python-dotenv
+        run: pip install pandas pyarrow boto3 python-dotenv
 
-      - name: Build FX Depth Next Steps
-        run: python scripts/FX/build_fx_depth_next_steps.py
+      - name: Build FX Depth Ratio Metrics
+        run: python src/spine/jobs/fx_depth/build_fx_depth_ratio_metrics.py
 
-      - name: Upload to R2
-        run: python scripts/FX/upload_fx_depth_next_steps_to_r2.py
+      - name: Upload FX Depth Serving to R2
+        run: python src/spine/jobs/fx_depth/upload_fx_depth_serving_to_r2.py
 
