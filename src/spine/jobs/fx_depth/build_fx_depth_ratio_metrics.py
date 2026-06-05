@@ -37,6 +37,14 @@ CONFIG = [
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "spx_proxy.parquet",
         "method": "EWU divided by SPY",
     },
+    {
+    "pair": "USD/JPY",
+    "metric": "Brent Crude",
+    "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "brent.parquet",
+    "right": None,
+    "method": "Brent Crude level",
+    "mode": "level",
+    },
 
 ]
 
@@ -114,6 +122,28 @@ def build_ratio_rows(left_path, right_path):
         for _, row in df.iterrows()
     ]
 
+def build_level_rows(path):
+    df = load_series(path)
+
+    df["mean_252"] = df["value"].rolling(252).mean()
+    df["std_252"] = df["value"].rolling(252).std()
+    df["z_score"] = (df["value"] - df["mean_252"]) / df["std_252"]
+    df["change"] = df["z_score"].diff()
+
+    df = df.dropna(subset=["z_score"])
+
+    return [
+        {
+            "date": row["date"].strftime("%Y-%m-%d"),
+            "value": round(float(row["z_score"]), 6),
+            "raw_value": round(float(row["value"]), 6),
+            "z_score": round(float(row["z_score"]), 6),
+            "change": round(float(row["change"]), 6)
+            if pd.notna(row["change"])
+            else 0.0,
+        }
+        for _, row in df.iterrows()
+    ]
 
 def build_ratio_rows(left_path, right_path):
     left = load_series(left_path).rename(columns={"value": "left"})
@@ -150,14 +180,29 @@ def main():
     payload.setdefault("pairs", {})
 
     for cfg in CONFIG:
-        if not cfg["left"].exists() or not cfg["right"].exists():
-            print(
-                f"SKIP: {cfg['pair']} | {cfg['metric']} | "
-                f"missing left={cfg['left'].exists()} right={cfg['right'].exists()}"
-            )
-            continue
 
-        rows = build_ratio_rows(cfg["left"], cfg["right"])
+        mode = cfg.get("mode", "ratio")
+
+        if mode == "level":
+
+            if not cfg["left"].exists():
+                print(
+                    f"SKIP: {cfg['pair']} | {cfg['metric']} | missing left=False"
+                )
+                continue
+
+            rows = build_level_rows(cfg["left"])
+
+        else:
+
+            if not cfg["left"].exists() or not cfg["right"].exists():
+                print(
+                    f"SKIP: {cfg['pair']} | {cfg['metric']} | "
+                    f"missing left={cfg['left'].exists()} right={cfg['right'].exists()}"
+                )
+                continue
+
+            rows = build_ratio_rows(cfg["left"], cfg["right"])
 
         pair_payload = payload["pairs"].setdefault(
             cfg["pair"],

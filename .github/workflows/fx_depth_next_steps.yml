@@ -29,9 +29,11 @@ jobs:
       - name: Install deps
         run: pip install pandas pyarrow requests boto3 python-dotenv
         
+      - name: Pull Brent Crude
+        run: python src/spine/jobs/fx_depth/pull_brent_eia.py
+
       - name: Build FX Depth Ratio Metrics
         run: python src/spine/jobs/fx_depth/build_fx_depth_ratio_metrics.py
 
       - name: Upload FX Depth Serving to R2
         run: python src/spine/jobs/fx_depth/upload_fx_depth_serving_to_r2.py
-        
