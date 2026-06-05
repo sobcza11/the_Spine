@@ -1,4 +1,5 @@
-# src\spine\jobs\fx_depth\build_fx_depth_ratio_metrics.py
+# src/spine/jobs/fx_depth/build_fx_depth_ratio_metrics.py
+
 from pathlib import Path
 import json
 import pandas as pd
@@ -13,22 +14,30 @@ CONFIG = [
         "metric": "XAU/EUR",
         "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "gold.parquet",
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "eurusd.parquet",
-        "method": "XAU/USD divided by EUR/USD"
+        "method": "XAU/USD divided by EUR/USD",
     },
     {
         "pair": "AUD/USD",
         "metric": "Copper/Gold",
         "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "copper.parquet",
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "gold.parquet",
-        "method": "Copper divided by Gold"
+        "method": "Copper divided by Gold",
     },
     {
         "pair": "USD/CAD",
         "metric": "WTI vs. NatGas",
         "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "wti.parquet",
         "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "natgas.parquet",
-        "method": "WTI divided by Henry Hub Natural Gas"
-    }
+        "method": "WTI divided by Henry Hub Natural Gas",
+    },
+    {
+        "pair": "GBP/USD",
+        "metric": "FTSE vs. SPX",
+        "left": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "ftse_proxy.parquet",
+        "right": REPO_ROOT / "data" / "fx" / "fx_depth" / "raw" / "spx_proxy.parquet",
+        "method": "EWU divided by SPY",
+    },
+
 ]
 
 
@@ -36,14 +45,18 @@ def value_col(df):
     for col in ["value", "close", "price", "PX_LAST"]:
         if col in df.columns:
             return col
+
     nums = df.select_dtypes("number").columns.tolist()
+
     if not nums:
         raise ValueError(f"No numeric value column found: {list(df.columns)}")
+
     return nums[0]
 
 
 def load_series(path):
     df = pd.read_parquet(path).copy()
+
     if "date" not in df.columns:
         raise KeyError(f"{path} missing date column. Found: {list(df.columns)}")
 
@@ -70,19 +83,25 @@ def build_ratio_rows(left_path, right_path):
 
     return [
         {
-            "date": r["date"].strftime("%Y-%m-%d"),
-            "value": round(float(r["value"]), 6),
-            "change": round(float(r["change"]), 6) if pd.notna(r["change"]) else 0.0
+            "date": row["date"].strftime("%Y-%m-%d"),
+            "value": round(float(row["value"]), 6),
+            "change": round(float(row["change"]), 6)
+            if pd.notna(row["change"])
+            else 0.0,
         }
-        for _, r in df.iterrows()
+        for _, row in df.iterrows()
     ]
 
 
 def main():
-    payload = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {
-        "source": "the_Spine | FX DEPTH",
-        "pairs": {}
-    }
+    payload = (
+        json.loads(OUT.read_text(encoding="utf-8"))
+        if OUT.exists()
+        else {
+            "source": "the_Spine | FX DEPTH",
+            "pairs": {},
+        }
+    )
 
     payload.setdefault("pairs", {})
 
@@ -96,10 +115,13 @@ def main():
 
         rows = build_ratio_rows(cfg["left"], cfg["right"])
 
-        pair_payload = payload["pairs"].setdefault(cfg["pair"], {
-            "source": f"Source: the_Spine | FX DEPTH | {cfg['pair']}",
-            "metrics": {}
-        })
+        pair_payload = payload["pairs"].setdefault(
+            cfg["pair"],
+            {
+                "source": f"Source: the_Spine | FX DEPTH | {cfg['pair']}",
+                "metrics": {},
+            },
+        )
 
         pair_payload.setdefault("metrics", {})
 
@@ -108,12 +130,17 @@ def main():
             "source": f"Source: the_Spine | FX DEPTH | {cfg['metric']} | {cfg['method']}",
             "method": cfg["method"],
             "as_of_date": rows[-1]["date"] if rows else None,
-            "rows": rows
+            "rows": rows,
         }
 
-        print(f"BUILT: {cfg['pair']} | {cfg['metric']} | rows={len(rows)} | as_of={rows[-1]['date'] if rows else '--'}")
+        print(
+            f"BUILT: {cfg['pair']} | {cfg['metric']} | "
+            f"rows={len(rows)} | as_of={rows[-1]['date'] if rows else '--'}"
+        )
 
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
     print(f"MERGED INTO: {OUT}")
 
 

@@ -29,6 +29,9 @@ jobs:
       - name: Install deps
         run: pip install pandas pyarrow boto3 python-dotenv
 
+      - name: Pull FTSE vs SPX proxies
+        run: python src/spine/jobs/fx_depth/pull_ftse_spx_tiingo.py
+
       - name: Build FX Depth Ratio Metrics
         run: python src/spine/jobs/fx_depth/build_fx_depth_ratio_metrics.py
 
