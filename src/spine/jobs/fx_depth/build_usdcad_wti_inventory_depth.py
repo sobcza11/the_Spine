@@ -57,8 +57,13 @@ def build_usdcad_wti_inventory_depth():
 
     output_rows = []
 
-    for _, row in current_year.iterrows():
-        week = int(row["week"])
+    current_by_week = {
+    int(r["week"]): r
+    for _, r in current_year.iterrows()
+}
+
+    for week in range(1, 53):
+        row = current_by_week.get(week)
 
         seasonal_window = df[
             (df["week"] == week) &
@@ -66,47 +71,32 @@ def build_usdcad_wti_inventory_depth():
             (df["year"] < year)
         ]
 
-        seasonal_hist = df[
-            (df["week"] == week) &
-            (df["year"] < year)
-        ]
+        if seasonal_window.empty:
+            continue
 
-        value_index_wk1 = float(row["seasonal_index_wk1"])
-
-        overlay_source = (
-            seasonal_window
-            if not seasonal_window.empty
-            else seasonal_hist
+        value_index_wk1 = (
+            float(row["seasonal_index_wk1"])
+            if row is not None
+            else None
         )
 
-        hist_avg_index_wk1 = float(
-            seasonal_hist["seasonal_index_wk1"].mean()
-        )
-
-        hist_min_index_wk1 = float(
-            overlay_source["seasonal_index_wk1"].min()
-        )
-
-        hist_max_index_wk1 = float(
-            overlay_source["seasonal_index_wk1"].max()
-        )
+        hist_avg_index_wk1 = float(seasonal_window["seasonal_index_wk1"].mean())
+        hist_min_index_wk1 = float(seasonal_window["seasonal_index_wk1"].min())
+        hist_max_index_wk1 = float(seasonal_window["seasonal_index_wk1"].max())
 
         output_rows.append({
-            "date": row["date"].strftime("%Y-%m-%d"),
+            "date": row["date"].strftime("%Y-%m-%d") if row is not None else None,
             "week": week,
             "year": year,
-            "value": round(value_index_wk1, 4),
-            "inventory_mmbbl": round(float(row["value"]), 4),
-            "inventory_display": f"{float(row['value']):.1f}k inv.",
+            "value": round(value_index_wk1, 4) if value_index_wk1 is not None else None,
+            "inventory_mmbbl": round(float(row["value"]), 4) if row is not None else None,
+            "inventory_display": f"{float(row['value']):.1f}k inv." if row is not None else None,
             "hist_avg_index_wk1": round(hist_avg_index_wk1, 4),
             "hist_min_index_wk1": round(hist_min_index_wk1, 4),
             "hist_max_index_wk1": round(hist_max_index_wk1, 4),
         })
 
-    output_rows = [
-        r for r in output_rows
-        if r["value"] is not None
-    ]
+    output_rows.sort(key=lambda r: r["week"])
 
     latest_date = current_year["date"].max()
 
