@@ -36,19 +36,27 @@ def main():
 
     wti_rows = [
         {
-            "date": row["date"],
-            "value": row["value"],
-            "change": row["inventory_surplus_3yr"],
-            "week": row["week"],
-            "inventory_mmbbl": row["inventory_mmbbl"],
+            "date": row.get("date"),
+            "value": row.get("value"),
+            "change": row.get("inventory_surplus_3yr", 0),
+
+            "week": row.get("week"),
+            "year": row.get("year"),
+            "inventory_mmbbl": row.get("inventory_mmbbl"),
             "inventory_display": row.get("inventory_display"),
             "inventory_direction": row.get("inventory_direction", "→"),
+
             "std_3yr": row.get("std_3yr"),
             "std_from_3yr_avg": row.get("std_from_3yr_avg"),
-            "avg_3yr": row["avg_3yr"],
-            "hist_avg": row["hist_avg"],
-            "hist_min": row["hist_min"],
-            "hist_max": row["hist_max"]
+
+            "avg_3yr": row.get("avg_3yr"),
+            "hist_avg": row.get("hist_avg"),
+            "hist_min": row.get("hist_min"),
+            "hist_max": row.get("hist_max"),
+
+            "hist_avg_index_wk1": row.get("hist_avg_index_wk1"),
+            "hist_min_index_wk1": row.get("hist_min_index_wk1"),
+            "hist_max_index_wk1": row.get("hist_max_index_wk1"),
         }
         for row in wti_payload["rows"]
     ]
