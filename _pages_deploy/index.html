@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IsoVector Offline | Tier 1</title>
+  <link rel="stylesheet" href="./css/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span>Iso</span>Vector</div>
+    <nav>
+      <button data-view="macro">MACRO</button>
+      <button data-view="equities">EQUITIES</button>
+      <button data-view="commflow">COMMFLOW</button>
+      <button data-view="fx">FX</button>
+      <button data-view="rates">RATES</button>
+      <button data-view="oc">OC</button>
+    </nav>
+    <div class="tag">OFFLINE TIER 1</div>
+  </header>
+
+  <main>
+    <section id="view-macro" class="view active"><h1>MACRO</h1><div class="grid"><div class="panel"><h2>Z?</h2><div id="macro-zt">Loading...</div></div><div class="panel"><h2>Graph Area</h2><div id="macro-graph"></div></div><div class="panel"><h2>RBL</h2><div id="macro-rbl"></div></div><div class="panel"><h2>Final Metric</h2><div id="macro-score"></div></div></div></section>
+    <section id="view-equities" class="view"><h1>EQUITIES</h1><div class="grid"><div class="panel"><h2>Z?</h2><div id="equities-zt"></div></div><div class="panel"><h2>Graph Area</h2><div id="equities-graph"></div></div><div class="panel"><h2>RBL</h2><div id="equities-rbl"></div></div><div class="panel"><h2>Final Metric</h2><div id="equities-score"></div></div></div></section>
+    <section id="view-commflow" class="view"><h1>COMMFLOW</h1><div class="grid"><div class="panel"><h2>Z?</h2><div id="commflow-zt"></div></div><div class="panel"><h2>Graph Area</h2><div id="commflow-graph"></div></div><div class="panel"><h2>RBL</h2><div id="commflow-rbl"></div></div><div class="panel"><h2>Final Metric</h2><div id="commflow-score"></div></div></div></section>
+    <section id="view-fx" class="view"><h1>FX</h1><div class="panel">FX offline shell active.</div></section>
+    <section id="view-rates" class="view"><h1>RATES</h1><div class="panel">Rates offline shell active.</div></section>
+    <section id="view-oc" class="view"><h1>OC</h1><div class="panel">OracleChambers offline shell active.</div></section>
+  </main>
+
+  <script src="./app.js?v=finstate-global-lite-20260609-3"></script>
+</body>
+</html>
