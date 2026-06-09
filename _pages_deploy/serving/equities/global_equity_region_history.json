@@ -1,0 +1,6107 @@
+{
+  "meta": {
+    "name": "global_equity_region_history",
+    "source": "Tiingo",
+    "method": "ETF daily close scaled to 100 from View Horizon start point.",
+    "rows": 760,
+    "unique_dates": 45,
+    "symbols": [
+      "AAXJ",
+      "EUFN",
+      "EWA",
+      "EWH",
+      "EWJ",
+      "EXI",
+      "FXI",
+      "VGK"
+    ],
+    "horizons": [
+      "5D",
+      "15D",
+      "30D",
+      "45D"
+    ]
+  },
+  "rows": [
+    {
+      "date": "2026-05-19",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 111.4,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 113.23,
+      "horizon": "15D",
+      "scaled_index": 101.6427
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.24,
+      "horizon": "15D",
+      "scaled_index": 102.5494
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.08,
+      "horizon": "15D",
+      "scaled_index": 102.4057
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.44,
+      "horizon": "15D",
+      "scaled_index": 106.3196
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.5,
+      "horizon": "15D",
+      "scaled_index": 106.3734
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.96,
+      "horizon": "15D",
+      "scaled_index": 106.7864
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 119.06,
+      "horizon": "15D",
+      "scaled_index": 106.8761
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 122.28,
+      "horizon": "15D",
+      "scaled_index": 109.7666
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 123.46,
+      "horizon": "15D",
+      "scaled_index": 110.8259
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 122.15,
+      "horizon": "15D",
+      "scaled_index": 109.6499
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 120.59,
+      "horizon": "15D",
+      "scaled_index": 108.2496
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.04,
+      "horizon": "15D",
+      "scaled_index": 100.5745
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "15D",
+      "scaled_index": 102.711
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "15D",
+      "scaled_index": 102.711
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 107.82,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 107.54,
+      "horizon": "30D",
+      "scaled_index": 99.7403
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 109.87,
+      "horizon": "30D",
+      "scaled_index": 101.9013
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 110.14,
+      "horizon": "30D",
+      "scaled_index": 102.1517
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 110.39,
+      "horizon": "30D",
+      "scaled_index": 102.3836
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.58,
+      "horizon": "30D",
+      "scaled_index": 104.4148
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 116.39,
+      "horizon": "30D",
+      "scaled_index": 107.9484
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 115.07,
+      "horizon": "30D",
+      "scaled_index": 106.7242
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 117.5,
+      "horizon": "30D",
+      "scaled_index": 108.9779
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 117.59,
+      "horizon": "30D",
+      "scaled_index": 109.0614
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 113.74,
+      "horizon": "30D",
+      "scaled_index": 105.4906
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 116.8,
+      "horizon": "30D",
+      "scaled_index": 108.3287
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 117.05,
+      "horizon": "30D",
+      "scaled_index": 108.5606
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.78,
+      "horizon": "30D",
+      "scaled_index": 104.6003
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.68,
+      "horizon": "30D",
+      "scaled_index": 104.5075
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 111.4,
+      "horizon": "30D",
+      "scaled_index": 103.3203
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 113.23,
+      "horizon": "30D",
+      "scaled_index": 105.0176
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.24,
+      "horizon": "30D",
+      "scaled_index": 105.9544
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.08,
+      "horizon": "30D",
+      "scaled_index": 105.806
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.44,
+      "horizon": "30D",
+      "scaled_index": 109.8497
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.5,
+      "horizon": "30D",
+      "scaled_index": 109.9054
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.96,
+      "horizon": "30D",
+      "scaled_index": 110.332
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 119.06,
+      "horizon": "30D",
+      "scaled_index": 110.4248
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 122.28,
+      "horizon": "30D",
+      "scaled_index": 113.4112
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 123.46,
+      "horizon": "30D",
+      "scaled_index": 114.5057
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 122.15,
+      "horizon": "30D",
+      "scaled_index": 113.2907
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 120.59,
+      "horizon": "30D",
+      "scaled_index": 111.8438
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.04,
+      "horizon": "30D",
+      "scaled_index": 103.9139
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "30D",
+      "scaled_index": 106.1213
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "30D",
+      "scaled_index": 106.1213
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 97.52,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 102.78,
+      "horizon": "45D",
+      "scaled_index": 105.3938
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 102.41,
+      "horizon": "45D",
+      "scaled_index": 105.0144
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 102.61,
+      "horizon": "45D",
+      "scaled_index": 105.2194
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 103.42,
+      "horizon": "45D",
+      "scaled_index": 106.05
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 105.57,
+      "horizon": "45D",
+      "scaled_index": 108.2547
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 105.51,
+      "horizon": "45D",
+      "scaled_index": 108.1932
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 106.14,
+      "horizon": "45D",
+      "scaled_index": 108.8392
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 108.09,
+      "horizon": "45D",
+      "scaled_index": 110.8388
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 107.52,
+      "horizon": "45D",
+      "scaled_index": 110.2543
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 106.13,
+      "horizon": "45D",
+      "scaled_index": 108.829
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 108.42,
+      "horizon": "45D",
+      "scaled_index": 111.1772
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 106.54,
+      "horizon": "45D",
+      "scaled_index": 109.2494
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 109.07,
+      "horizon": "45D",
+      "scaled_index": 111.8437
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 108.99,
+      "horizon": "45D",
+      "scaled_index": 111.7617
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 107.82,
+      "horizon": "45D",
+      "scaled_index": 110.5619
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 107.54,
+      "horizon": "45D",
+      "scaled_index": 110.2748
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 109.87,
+      "horizon": "45D",
+      "scaled_index": 112.6641
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 110.14,
+      "horizon": "45D",
+      "scaled_index": 112.9409
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 110.39,
+      "horizon": "45D",
+      "scaled_index": 113.1973
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.58,
+      "horizon": "45D",
+      "scaled_index": 115.443
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 116.39,
+      "horizon": "45D",
+      "scaled_index": 119.3499
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 115.07,
+      "horizon": "45D",
+      "scaled_index": 117.9963
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 117.5,
+      "horizon": "45D",
+      "scaled_index": 120.4881
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 117.59,
+      "horizon": "45D",
+      "scaled_index": 120.5804
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 113.74,
+      "horizon": "45D",
+      "scaled_index": 116.6325
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 116.8,
+      "horizon": "45D",
+      "scaled_index": 119.7703
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 117.05,
+      "horizon": "45D",
+      "scaled_index": 120.0267
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.78,
+      "horizon": "45D",
+      "scaled_index": 115.6481
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.68,
+      "horizon": "45D",
+      "scaled_index": 115.5455
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 111.4,
+      "horizon": "45D",
+      "scaled_index": 114.233
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 113.23,
+      "horizon": "45D",
+      "scaled_index": 116.1095
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.24,
+      "horizon": "45D",
+      "scaled_index": 117.1452
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.08,
+      "horizon": "45D",
+      "scaled_index": 116.9811
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.44,
+      "horizon": "45D",
+      "scaled_index": 121.452
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.5,
+      "horizon": "45D",
+      "scaled_index": 121.5135
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 118.96,
+      "horizon": "45D",
+      "scaled_index": 121.9852
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 119.06,
+      "horizon": "45D",
+      "scaled_index": 122.0878
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 122.28,
+      "horizon": "45D",
+      "scaled_index": 125.3897
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 123.46,
+      "horizon": "45D",
+      "scaled_index": 126.5997
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 122.15,
+      "horizon": "45D",
+      "scaled_index": 125.2564
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 120.59,
+      "horizon": "45D",
+      "scaled_index": 123.6567
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.04,
+      "horizon": "45D",
+      "scaled_index": 114.8893
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "45D",
+      "scaled_index": 117.3298
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "45D",
+      "scaled_index": 117.3298
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 122.15,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 120.59,
+      "horizon": "5D",
+      "scaled_index": 98.7229
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 112.04,
+      "horizon": "5D",
+      "scaled_index": 91.7233
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "5D",
+      "scaled_index": 93.6717
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "close": 114.42,
+      "horizon": "5D",
+      "scaled_index": 93.6717
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.53,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.9,
+      "horizon": "15D",
+      "scaled_index": 101.2969
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.99,
+      "horizon": "15D",
+      "scaled_index": 101.6123
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.78,
+      "horizon": "15D",
+      "scaled_index": 100.8763
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.95,
+      "horizon": "15D",
+      "scaled_index": 101.4721
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.93,
+      "horizon": "15D",
+      "scaled_index": 101.402
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.97,
+      "horizon": "15D",
+      "scaled_index": 101.5422
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.25,
+      "horizon": "15D",
+      "scaled_index": 102.5237
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.13,
+      "horizon": "15D",
+      "scaled_index": 102.103
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.47,
+      "horizon": "15D",
+      "scaled_index": 103.2948
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.14,
+      "horizon": "15D",
+      "scaled_index": 102.1381
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.04,
+      "horizon": "15D",
+      "scaled_index": 101.7876
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.06,
+      "horizon": "15D",
+      "scaled_index": 98.3526
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.07,
+      "horizon": "15D",
+      "scaled_index": 98.3877
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.25,
+      "horizon": "15D",
+      "scaled_index": 99.0186
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.07,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.62,
+      "horizon": "30D",
+      "scaled_index": 98.452
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.49,
+      "horizon": "30D",
+      "scaled_index": 101.4448
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.27,
+      "horizon": "30D",
+      "scaled_index": 100.688
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.88,
+      "horizon": "30D",
+      "scaled_index": 99.3464
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.19,
+      "horizon": "30D",
+      "scaled_index": 100.4128
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 30.12,
+      "horizon": "30D",
+      "scaled_index": 103.612
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.48,
+      "horizon": "30D",
+      "scaled_index": 101.4104
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.54,
+      "horizon": "30D",
+      "scaled_index": 101.6168
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.59,
+      "horizon": "30D",
+      "scaled_index": 101.7888
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.32,
+      "horizon": "30D",
+      "scaled_index": 100.86
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.12,
+      "horizon": "30D",
+      "scaled_index": 100.172
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.28,
+      "horizon": "30D",
+      "scaled_index": 100.7224
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.72,
+      "horizon": "30D",
+      "scaled_index": 98.796
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.81,
+      "horizon": "30D",
+      "scaled_index": 99.1056
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.53,
+      "horizon": "30D",
+      "scaled_index": 98.1424
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.9,
+      "horizon": "30D",
+      "scaled_index": 99.4152
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.99,
+      "horizon": "30D",
+      "scaled_index": 99.7248
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.78,
+      "horizon": "30D",
+      "scaled_index": 99.0024
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.95,
+      "horizon": "30D",
+      "scaled_index": 99.5872
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.93,
+      "horizon": "30D",
+      "scaled_index": 99.5184
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.97,
+      "horizon": "30D",
+      "scaled_index": 99.656
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.25,
+      "horizon": "30D",
+      "scaled_index": 100.6192
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.13,
+      "horizon": "30D",
+      "scaled_index": 100.2064
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.47,
+      "horizon": "30D",
+      "scaled_index": 101.376
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.14,
+      "horizon": "30D",
+      "scaled_index": 100.2408
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.04,
+      "horizon": "30D",
+      "scaled_index": 99.8968
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.06,
+      "horizon": "30D",
+      "scaled_index": 96.5256
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.07,
+      "horizon": "30D",
+      "scaled_index": 96.56
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.25,
+      "horizon": "30D",
+      "scaled_index": 97.1792
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.54,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.52,
+      "horizon": "45D",
+      "scaled_index": 103.4338
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.77,
+      "horizon": "45D",
+      "scaled_index": 104.3097
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.84,
+      "horizon": "45D",
+      "scaled_index": 104.555
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 30.15,
+      "horizon": "45D",
+      "scaled_index": 105.6412
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 30.18,
+      "horizon": "45D",
+      "scaled_index": 105.7463
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 30.26,
+      "horizon": "45D",
+      "scaled_index": 106.0266
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.93,
+      "horizon": "45D",
+      "scaled_index": 104.8704
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 30.21,
+      "horizon": "45D",
+      "scaled_index": 105.8514
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 30.05,
+      "horizon": "45D",
+      "scaled_index": 105.2908
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.48,
+      "horizon": "45D",
+      "scaled_index": 103.2936
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.43,
+      "horizon": "45D",
+      "scaled_index": 103.1184
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.27,
+      "horizon": "45D",
+      "scaled_index": 102.5578
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.17,
+      "horizon": "45D",
+      "scaled_index": 102.2074
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.19,
+      "horizon": "45D",
+      "scaled_index": 102.2775
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.07,
+      "horizon": "45D",
+      "scaled_index": 101.857
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.62,
+      "horizon": "45D",
+      "scaled_index": 100.2803
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.49,
+      "horizon": "45D",
+      "scaled_index": 103.3287
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.27,
+      "horizon": "45D",
+      "scaled_index": 102.5578
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.88,
+      "horizon": "45D",
+      "scaled_index": 101.1913
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.19,
+      "horizon": "45D",
+      "scaled_index": 102.2775
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 30.12,
+      "horizon": "45D",
+      "scaled_index": 105.5361
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.48,
+      "horizon": "45D",
+      "scaled_index": 103.2936
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.54,
+      "horizon": "45D",
+      "scaled_index": 103.5039
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.59,
+      "horizon": "45D",
+      "scaled_index": 103.679
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.32,
+      "horizon": "45D",
+      "scaled_index": 102.733
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.12,
+      "horizon": "45D",
+      "scaled_index": 102.0322
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.28,
+      "horizon": "45D",
+      "scaled_index": 102.5929
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.72,
+      "horizon": "45D",
+      "scaled_index": 100.6307
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.81,
+      "horizon": "45D",
+      "scaled_index": 100.946
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.53,
+      "horizon": "45D",
+      "scaled_index": 99.965
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.9,
+      "horizon": "45D",
+      "scaled_index": 101.2614
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.99,
+      "horizon": "45D",
+      "scaled_index": 101.5767
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.78,
+      "horizon": "45D",
+      "scaled_index": 100.8409
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.95,
+      "horizon": "45D",
+      "scaled_index": 101.4366
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.93,
+      "horizon": "45D",
+      "scaled_index": 101.3665
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.97,
+      "horizon": "45D",
+      "scaled_index": 101.5067
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.25,
+      "horizon": "45D",
+      "scaled_index": 102.4877
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.13,
+      "horizon": "45D",
+      "scaled_index": 102.0673
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.47,
+      "horizon": "45D",
+      "scaled_index": 103.2586
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.14,
+      "horizon": "45D",
+      "scaled_index": 102.1023
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.04,
+      "horizon": "45D",
+      "scaled_index": 101.7519
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.06,
+      "horizon": "45D",
+      "scaled_index": 98.3181
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.07,
+      "horizon": "45D",
+      "scaled_index": 98.3532
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.25,
+      "horizon": "45D",
+      "scaled_index": 98.9839
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.14,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 29.04,
+      "horizon": "5D",
+      "scaled_index": 99.6568
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.06,
+      "horizon": "5D",
+      "scaled_index": 96.2938
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.07,
+      "horizon": "5D",
+      "scaled_index": 96.3281
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWA",
+      "region": "Australia",
+      "close": 28.25,
+      "horizon": "5D",
+      "scaled_index": 96.9458
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.28,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.24,
+      "horizon": "15D",
+      "scaled_index": 99.8897
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.89,
+      "horizon": "15D",
+      "scaled_index": 98.925
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.52,
+      "horizon": "15D",
+      "scaled_index": 97.9052
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.75,
+      "horizon": "15D",
+      "scaled_index": 98.5391
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.32,
+      "horizon": "15D",
+      "scaled_index": 97.3539
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.99,
+      "horizon": "15D",
+      "scaled_index": 96.4443
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.05,
+      "horizon": "15D",
+      "scaled_index": 96.6097
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.34,
+      "horizon": "15D",
+      "scaled_index": 97.409
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.36,
+      "horizon": "15D",
+      "scaled_index": 100.2205
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.54,
+      "horizon": "15D",
+      "scaled_index": 97.9603
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.47,
+      "horizon": "15D",
+      "scaled_index": 97.7674
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.75,
+      "horizon": "15D",
+      "scaled_index": 95.7828
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.68,
+      "horizon": "15D",
+      "scaled_index": 95.5899
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.69,
+      "horizon": "15D",
+      "scaled_index": 95.6174
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.25,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.34,
+      "horizon": "30D",
+      "scaled_index": 100.2483
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.79,
+      "horizon": "30D",
+      "scaled_index": 101.4897
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.81,
+      "horizon": "30D",
+      "scaled_index": 101.5448
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.55,
+      "horizon": "30D",
+      "scaled_index": 100.8276
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.49,
+      "horizon": "30D",
+      "scaled_index": 100.6621
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.49,
+      "horizon": "30D",
+      "scaled_index": 103.4207
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.19,
+      "horizon": "30D",
+      "scaled_index": 102.5931
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.24,
+      "horizon": "30D",
+      "scaled_index": 102.731
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.47,
+      "horizon": "30D",
+      "scaled_index": 103.3655
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.33,
+      "horizon": "30D",
+      "scaled_index": 102.9793
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 38.26,
+      "horizon": "30D",
+      "scaled_index": 105.5448
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.24,
+      "horizon": "30D",
+      "scaled_index": 102.731
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.2,
+      "horizon": "30D",
+      "scaled_index": 99.8621
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.16,
+      "horizon": "30D",
+      "scaled_index": 99.7517
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.28,
+      "horizon": "30D",
+      "scaled_index": 100.0828
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.24,
+      "horizon": "30D",
+      "scaled_index": 99.9724
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.89,
+      "horizon": "30D",
+      "scaled_index": 99.0069
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.52,
+      "horizon": "30D",
+      "scaled_index": 97.9862
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.75,
+      "horizon": "30D",
+      "scaled_index": 98.6207
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.32,
+      "horizon": "30D",
+      "scaled_index": 97.4345
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.99,
+      "horizon": "30D",
+      "scaled_index": 96.5241
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.05,
+      "horizon": "30D",
+      "scaled_index": 96.6897
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.34,
+      "horizon": "30D",
+      "scaled_index": 97.4897
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.36,
+      "horizon": "30D",
+      "scaled_index": 100.3034
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.54,
+      "horizon": "30D",
+      "scaled_index": 98.0414
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.47,
+      "horizon": "30D",
+      "scaled_index": 97.8483
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.75,
+      "horizon": "30D",
+      "scaled_index": 95.8621
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.68,
+      "horizon": "30D",
+      "scaled_index": 95.669
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.69,
+      "horizon": "30D",
+      "scaled_index": 95.6966
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.48,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.35,
+      "horizon": "45D",
+      "scaled_index": 102.4521
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.29,
+      "horizon": "45D",
+      "scaled_index": 102.283
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.25,
+      "horizon": "45D",
+      "scaled_index": 102.1702
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.46,
+      "horizon": "45D",
+      "scaled_index": 102.7621
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.89,
+      "horizon": "45D",
+      "scaled_index": 103.9741
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.88,
+      "horizon": "45D",
+      "scaled_index": 103.9459
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.23,
+      "horizon": "45D",
+      "scaled_index": 104.9324
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.6,
+      "horizon": "45D",
+      "scaled_index": 105.9752
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.66,
+      "horizon": "45D",
+      "scaled_index": 106.1443
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.11,
+      "horizon": "45D",
+      "scaled_index": 104.5941
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.97,
+      "horizon": "45D",
+      "scaled_index": 104.1995
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.49,
+      "horizon": "45D",
+      "scaled_index": 102.8467
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.86,
+      "horizon": "45D",
+      "scaled_index": 103.8895
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.45,
+      "horizon": "45D",
+      "scaled_index": 102.7339
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.25,
+      "horizon": "45D",
+      "scaled_index": 102.1702
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.34,
+      "horizon": "45D",
+      "scaled_index": 102.4239
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.79,
+      "horizon": "45D",
+      "scaled_index": 103.6922
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.81,
+      "horizon": "45D",
+      "scaled_index": 103.7486
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.55,
+      "horizon": "45D",
+      "scaled_index": 103.0158
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.49,
+      "horizon": "45D",
+      "scaled_index": 102.8467
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.49,
+      "horizon": "45D",
+      "scaled_index": 105.6652
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.19,
+      "horizon": "45D",
+      "scaled_index": 104.8196
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.24,
+      "horizon": "45D",
+      "scaled_index": 104.9605
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.47,
+      "horizon": "45D",
+      "scaled_index": 105.6088
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.33,
+      "horizon": "45D",
+      "scaled_index": 105.2142
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 38.26,
+      "horizon": "45D",
+      "scaled_index": 107.8354
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 37.24,
+      "horizon": "45D",
+      "scaled_index": 104.9605
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.2,
+      "horizon": "45D",
+      "scaled_index": 102.0293
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.16,
+      "horizon": "45D",
+      "scaled_index": 101.9166
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.28,
+      "horizon": "45D",
+      "scaled_index": 102.2548
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.24,
+      "horizon": "45D",
+      "scaled_index": 102.1421
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.89,
+      "horizon": "45D",
+      "scaled_index": 101.1556
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.52,
+      "horizon": "45D",
+      "scaled_index": 100.1127
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.75,
+      "horizon": "45D",
+      "scaled_index": 100.761
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.32,
+      "horizon": "45D",
+      "scaled_index": 99.549
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.99,
+      "horizon": "45D",
+      "scaled_index": 98.6189
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.05,
+      "horizon": "45D",
+      "scaled_index": 98.788
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.34,
+      "horizon": "45D",
+      "scaled_index": 99.6054
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 36.36,
+      "horizon": "45D",
+      "scaled_index": 102.4803
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.54,
+      "horizon": "45D",
+      "scaled_index": 100.1691
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.47,
+      "horizon": "45D",
+      "scaled_index": 99.9718
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.75,
+      "horizon": "45D",
+      "scaled_index": 97.9425
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.68,
+      "horizon": "45D",
+      "scaled_index": 97.7452
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.69,
+      "horizon": "45D",
+      "scaled_index": 97.7734
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.54,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 35.47,
+      "horizon": "5D",
+      "scaled_index": 99.803
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.75,
+      "horizon": "5D",
+      "scaled_index": 97.7772
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.68,
+      "horizon": "5D",
+      "scaled_index": 97.5802
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "close": 34.69,
+      "horizon": "5D",
+      "scaled_index": 97.6083
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.3,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.36,
+      "horizon": "15D",
+      "scaled_index": 102.8418
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.5,
+      "horizon": "15D",
+      "scaled_index": 103.2172
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.16,
+      "horizon": "15D",
+      "scaled_index": 102.3056
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.89,
+      "horizon": "15D",
+      "scaled_index": 104.2627
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.81,
+      "horizon": "15D",
+      "scaled_index": 104.0483
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.34,
+      "horizon": "15D",
+      "scaled_index": 102.7882
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.51,
+      "horizon": "15D",
+      "scaled_index": 103.244
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.29,
+      "horizon": "15D",
+      "scaled_index": 102.6542
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.44,
+      "horizon": "15D",
+      "scaled_index": 103.0563
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.66,
+      "horizon": "15D",
+      "scaled_index": 100.9651
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.04,
+      "horizon": "15D",
+      "scaled_index": 101.9839
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.35,
+      "horizon": "15D",
+      "scaled_index": 100.134
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.49,
+      "horizon": "15D",
+      "scaled_index": 100.5094
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.7,
+      "horizon": "15D",
+      "scaled_index": 101.0724
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.51,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 36.99,
+      "horizon": "30D",
+      "scaled_index": 98.6137
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.71,
+      "horizon": "30D",
+      "scaled_index": 100.5332
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.63,
+      "horizon": "30D",
+      "scaled_index": 100.3199
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 36.71,
+      "horizon": "30D",
+      "scaled_index": 97.8672
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.11,
+      "horizon": "30D",
+      "scaled_index": 98.9336
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.48,
+      "horizon": "30D",
+      "scaled_index": 102.586
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.67,
+      "horizon": "30D",
+      "scaled_index": 100.4266
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.05,
+      "horizon": "30D",
+      "scaled_index": 101.4396
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.94,
+      "horizon": "30D",
+      "scaled_index": 101.1464
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.55,
+      "horizon": "30D",
+      "scaled_index": 100.1066
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.6,
+      "horizon": "30D",
+      "scaled_index": 100.2399
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.56,
+      "horizon": "30D",
+      "scaled_index": 100.1333
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.05,
+      "horizon": "30D",
+      "scaled_index": 98.7737
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.77,
+      "horizon": "30D",
+      "scaled_index": 100.6931
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.3,
+      "horizon": "30D",
+      "scaled_index": 99.4401
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.36,
+      "horizon": "30D",
+      "scaled_index": 102.2661
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.5,
+      "horizon": "30D",
+      "scaled_index": 102.6393
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.16,
+      "horizon": "30D",
+      "scaled_index": 101.7329
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.89,
+      "horizon": "30D",
+      "scaled_index": 103.679
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.81,
+      "horizon": "30D",
+      "scaled_index": 103.4657
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.34,
+      "horizon": "30D",
+      "scaled_index": 102.2127
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.51,
+      "horizon": "30D",
+      "scaled_index": 102.666
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.29,
+      "horizon": "30D",
+      "scaled_index": 102.0794
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.44,
+      "horizon": "30D",
+      "scaled_index": 102.4793
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.66,
+      "horizon": "30D",
+      "scaled_index": 100.3999
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.04,
+      "horizon": "30D",
+      "scaled_index": 101.413
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.35,
+      "horizon": "30D",
+      "scaled_index": 99.5734
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.49,
+      "horizon": "30D",
+      "scaled_index": 99.9467
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.7,
+      "horizon": "30D",
+      "scaled_index": 100.5065
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 35.62,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.17,
+      "horizon": "45D",
+      "scaled_index": 104.3515
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.22,
+      "horizon": "45D",
+      "scaled_index": 104.4919
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.35,
+      "horizon": "45D",
+      "scaled_index": 104.8568
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.87,
+      "horizon": "45D",
+      "scaled_index": 106.3167
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.29,
+      "horizon": "45D",
+      "scaled_index": 107.4958
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.41,
+      "horizon": "45D",
+      "scaled_index": 107.8327
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.1,
+      "horizon": "45D",
+      "scaled_index": 106.9624
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.87,
+      "horizon": "45D",
+      "scaled_index": 109.1241
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.66,
+      "horizon": "45D",
+      "scaled_index": 108.5345
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.89,
+      "horizon": "45D",
+      "scaled_index": 106.3728
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.88,
+      "horizon": "45D",
+      "scaled_index": 106.3448
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.15,
+      "horizon": "45D",
+      "scaled_index": 104.2953
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.45,
+      "horizon": "45D",
+      "scaled_index": 105.1376
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.41,
+      "horizon": "45D",
+      "scaled_index": 105.0253
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.51,
+      "horizon": "45D",
+      "scaled_index": 105.306
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 36.99,
+      "horizon": "45D",
+      "scaled_index": 103.8462
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.71,
+      "horizon": "45D",
+      "scaled_index": 105.8675
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.63,
+      "horizon": "45D",
+      "scaled_index": 105.6429
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 36.71,
+      "horizon": "45D",
+      "scaled_index": 103.0601
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.11,
+      "horizon": "45D",
+      "scaled_index": 104.183
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.48,
+      "horizon": "45D",
+      "scaled_index": 108.0292
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.67,
+      "horizon": "45D",
+      "scaled_index": 105.7552
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.05,
+      "horizon": "45D",
+      "scaled_index": 106.822
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.94,
+      "horizon": "45D",
+      "scaled_index": 106.5132
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.55,
+      "horizon": "45D",
+      "scaled_index": 105.4183
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.6,
+      "horizon": "45D",
+      "scaled_index": 105.5587
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.56,
+      "horizon": "45D",
+      "scaled_index": 105.4464
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.05,
+      "horizon": "45D",
+      "scaled_index": 104.0146
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.77,
+      "horizon": "45D",
+      "scaled_index": 106.0359
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.3,
+      "horizon": "45D",
+      "scaled_index": 104.7165
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.36,
+      "horizon": "45D",
+      "scaled_index": 107.6923
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.5,
+      "horizon": "45D",
+      "scaled_index": 108.0853
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.16,
+      "horizon": "45D",
+      "scaled_index": 107.1308
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.89,
+      "horizon": "45D",
+      "scaled_index": 109.1802
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.81,
+      "horizon": "45D",
+      "scaled_index": 108.9556
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.34,
+      "horizon": "45D",
+      "scaled_index": 107.6362
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.51,
+      "horizon": "45D",
+      "scaled_index": 108.1134
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.29,
+      "horizon": "45D",
+      "scaled_index": 107.4958
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.44,
+      "horizon": "45D",
+      "scaled_index": 107.9169
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.66,
+      "horizon": "45D",
+      "scaled_index": 105.7271
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.04,
+      "horizon": "45D",
+      "scaled_index": 106.7939
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.35,
+      "horizon": "45D",
+      "scaled_index": 104.8568
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.49,
+      "horizon": "45D",
+      "scaled_index": 105.2499
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.7,
+      "horizon": "45D",
+      "scaled_index": 105.8394
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.66,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 38.04,
+      "horizon": "5D",
+      "scaled_index": 101.009
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.35,
+      "horizon": "5D",
+      "scaled_index": 99.1768
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.49,
+      "horizon": "5D",
+      "scaled_index": 99.5486
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "close": 37.7,
+      "horizon": "5D",
+      "scaled_index": 100.1062
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 190.03,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.82,
+      "horizon": "15D",
+      "scaled_index": 101.4682
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.69,
+      "horizon": "15D",
+      "scaled_index": 101.3998
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.05,
+      "horizon": "15D",
+      "scaled_index": 101.5892
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.52,
+      "horizon": "15D",
+      "scaled_index": 103.4153
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.77,
+      "horizon": "15D",
+      "scaled_index": 103.0206
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.7512,
+      "horizon": "15D",
+      "scaled_index": 103.0107
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.8,
+      "horizon": "15D",
+      "scaled_index": 102.5101
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.56,
+      "horizon": "15D",
+      "scaled_index": 101.8576
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.83,
+      "horizon": "15D",
+      "scaled_index": 102.5259
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.42,
+      "horizon": "15D",
+      "scaled_index": 102.3102
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.02,
+      "horizon": "15D",
+      "scaled_index": 103.1521
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.83,
+      "horizon": "15D",
+      "scaled_index": 101.4735
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.73,
+      "horizon": "15D",
+      "scaled_index": 101.4208
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.3711,
+      "horizon": "15D",
+      "scaled_index": 101.7582
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 191.9723,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 190.38,
+      "horizon": "30D",
+      "scaled_index": 99.1706
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.9,
+      "horizon": "30D",
+      "scaled_index": 102.046
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.55,
+      "horizon": "30D",
+      "scaled_index": 101.3427
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.1,
+      "horizon": "30D",
+      "scaled_index": 100.0665
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.2,
+      "horizon": "30D",
+      "scaled_index": 101.6813
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 200.76,
+      "horizon": "30D",
+      "scaled_index": 104.5776
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.96,
+      "horizon": "30D",
+      "scaled_index": 102.5981
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 197.23,
+      "horizon": "30D",
+      "scaled_index": 102.7388
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 197.7581,
+      "horizon": "30D",
+      "scaled_index": 103.0139
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.39,
+      "horizon": "30D",
+      "scaled_index": 102.3012
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.75,
+      "horizon": "30D",
+      "scaled_index": 102.4887
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.64,
+      "horizon": "30D",
+      "scaled_index": 102.4314
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.64,
+      "horizon": "30D",
+      "scaled_index": 100.3478
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.4581,
+      "horizon": "30D",
+      "scaled_index": 100.2531
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 190.03,
+      "horizon": "30D",
+      "scaled_index": 98.9882
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.82,
+      "horizon": "30D",
+      "scaled_index": 100.4416
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.69,
+      "horizon": "30D",
+      "scaled_index": 100.3739
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.05,
+      "horizon": "30D",
+      "scaled_index": 100.5614
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.52,
+      "horizon": "30D",
+      "scaled_index": 102.3689
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.77,
+      "horizon": "30D",
+      "scaled_index": 101.9783
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.7512,
+      "horizon": "30D",
+      "scaled_index": 101.9685
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.8,
+      "horizon": "30D",
+      "scaled_index": 101.473
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.56,
+      "horizon": "30D",
+      "scaled_index": 100.827
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.83,
+      "horizon": "30D",
+      "scaled_index": 101.4886
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.42,
+      "horizon": "30D",
+      "scaled_index": 101.275
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.02,
+      "horizon": "30D",
+      "scaled_index": 102.1085
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.83,
+      "horizon": "30D",
+      "scaled_index": 100.4468
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.73,
+      "horizon": "30D",
+      "scaled_index": 100.3947
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.3711,
+      "horizon": "30D",
+      "scaled_index": 100.7286
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 184.55,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.03,
+      "horizon": "45D",
+      "scaled_index": 104.595
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.8,
+      "horizon": "45D",
+      "scaled_index": 105.0122
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.22,
+      "horizon": "45D",
+      "scaled_index": 104.6979
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.35,
+      "horizon": "45D",
+      "scaled_index": 105.3102
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.66,
+      "horizon": "45D",
+      "scaled_index": 106.02
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.07,
+      "horizon": "45D",
+      "scaled_index": 105.1585
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.11,
+      "horizon": "45D",
+      "scaled_index": 104.6383
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.32,
+      "horizon": "45D",
+      "scaled_index": 106.3777
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.25,
+      "horizon": "45D",
+      "scaled_index": 106.3397
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.08,
+      "horizon": "45D",
+      "scaled_index": 104.0802
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.72,
+      "horizon": "45D",
+      "scaled_index": 104.427
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.0,
+      "horizon": "45D",
+      "scaled_index": 105.1206
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.03,
+      "horizon": "45D",
+      "scaled_index": 105.1368
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.49,
+      "horizon": "45D",
+      "scaled_index": 104.8442
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 191.9723,
+      "horizon": "45D",
+      "scaled_index": 104.0218
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 190.38,
+      "horizon": "45D",
+      "scaled_index": 103.159
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.9,
+      "horizon": "45D",
+      "scaled_index": 106.1501
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.55,
+      "horizon": "45D",
+      "scaled_index": 105.4186
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.1,
+      "horizon": "45D",
+      "scaled_index": 104.091
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.2,
+      "horizon": "45D",
+      "scaled_index": 105.7708
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 200.76,
+      "horizon": "45D",
+      "scaled_index": 108.7835
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.96,
+      "horizon": "45D",
+      "scaled_index": 106.7245
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 197.23,
+      "horizon": "45D",
+      "scaled_index": 106.8708
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 197.7581,
+      "horizon": "45D",
+      "scaled_index": 107.1569
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.39,
+      "horizon": "45D",
+      "scaled_index": 106.4156
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.75,
+      "horizon": "45D",
+      "scaled_index": 106.6107
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.64,
+      "horizon": "45D",
+      "scaled_index": 106.5511
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.64,
+      "horizon": "45D",
+      "scaled_index": 104.3836
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.4581,
+      "horizon": "45D",
+      "scaled_index": 104.2851
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 190.03,
+      "horizon": "45D",
+      "scaled_index": 102.9694
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.82,
+      "horizon": "45D",
+      "scaled_index": 104.4812
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.69,
+      "horizon": "45D",
+      "scaled_index": 104.4107
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.05,
+      "horizon": "45D",
+      "scaled_index": 104.6058
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.52,
+      "horizon": "45D",
+      "scaled_index": 106.486
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.77,
+      "horizon": "45D",
+      "scaled_index": 106.0797
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 195.7512,
+      "horizon": "45D",
+      "scaled_index": 106.0695
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.8,
+      "horizon": "45D",
+      "scaled_index": 105.5541
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.56,
+      "horizon": "45D",
+      "scaled_index": 104.8821
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.83,
+      "horizon": "45D",
+      "scaled_index": 105.5703
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.42,
+      "horizon": "45D",
+      "scaled_index": 105.3481
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.02,
+      "horizon": "45D",
+      "scaled_index": 106.2151
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.83,
+      "horizon": "45D",
+      "scaled_index": 104.4866
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.73,
+      "horizon": "45D",
+      "scaled_index": 104.4324
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.3711,
+      "horizon": "45D",
+      "scaled_index": 104.7798
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 194.42,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 196.02,
+      "horizon": "5D",
+      "scaled_index": 100.823
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.83,
+      "horizon": "5D",
+      "scaled_index": 99.1822
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 192.73,
+      "horizon": "5D",
+      "scaled_index": 99.1307
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EXI",
+      "region": "Europe+",
+      "close": 193.3711,
+      "horizon": "5D",
+      "scaled_index": 99.4605
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.41,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.24,
+      "horizon": "15D",
+      "scaled_index": 102.1178
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.76,
+      "horizon": "15D",
+      "scaled_index": 102.7196
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.46,
+      "horizon": "15D",
+      "scaled_index": 102.3724
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.48,
+      "horizon": "15D",
+      "scaled_index": 103.5528
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.32,
+      "horizon": "15D",
+      "scaled_index": 103.3677
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.03,
+      "horizon": "15D",
+      "scaled_index": 103.0321
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.01,
+      "horizon": "15D",
+      "scaled_index": 103.0089
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.52,
+      "horizon": "15D",
+      "scaled_index": 102.4418
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.96,
+      "horizon": "15D",
+      "scaled_index": 102.951
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.9,
+      "horizon": "15D",
+      "scaled_index": 101.7243
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.89,
+      "horizon": "15D",
+      "scaled_index": 102.87
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.13,
+      "horizon": "15D",
+      "scaled_index": 100.8332
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.52,
+      "horizon": "15D",
+      "scaled_index": 101.2846
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.88,
+      "horizon": "15D",
+      "scaled_index": 101.7012
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.16,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 85.14,
+      "horizon": "30D",
+      "scaled_index": 98.8162
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.14,
+      "horizon": "30D",
+      "scaled_index": 101.1374
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.15,
+      "horizon": "30D",
+      "scaled_index": 101.149
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 85.51,
+      "horizon": "30D",
+      "scaled_index": 99.2456
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.87,
+      "horizon": "30D",
+      "scaled_index": 100.824
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.23,
+      "horizon": "30D",
+      "scaled_index": 103.5631
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.28,
+      "horizon": "30D",
+      "scaled_index": 101.2999
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.12,
+      "horizon": "30D",
+      "scaled_index": 102.2748
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.82,
+      "horizon": "30D",
+      "scaled_index": 101.9266
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.11,
+      "horizon": "30D",
+      "scaled_index": 101.1026
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.6,
+      "horizon": "30D",
+      "scaled_index": 101.6713
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.47,
+      "horizon": "30D",
+      "scaled_index": 101.5204
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 85.79,
+      "horizon": "30D",
+      "scaled_index": 99.5706
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.11,
+      "horizon": "30D",
+      "scaled_index": 101.1026
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.41,
+      "horizon": "30D",
+      "scaled_index": 100.2902
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.24,
+      "horizon": "30D",
+      "scaled_index": 102.4141
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.76,
+      "horizon": "30D",
+      "scaled_index": 103.0176
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.46,
+      "horizon": "30D",
+      "scaled_index": 102.6695
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.48,
+      "horizon": "30D",
+      "scaled_index": 103.8533
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.32,
+      "horizon": "30D",
+      "scaled_index": 103.6676
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.03,
+      "horizon": "30D",
+      "scaled_index": 103.331
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.01,
+      "horizon": "30D",
+      "scaled_index": 103.3078
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.52,
+      "horizon": "30D",
+      "scaled_index": 102.7391
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.96,
+      "horizon": "30D",
+      "scaled_index": 103.2498
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.9,
+      "horizon": "30D",
+      "scaled_index": 102.0195
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.89,
+      "horizon": "30D",
+      "scaled_index": 103.1685
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.13,
+      "horizon": "30D",
+      "scaled_index": 101.1258
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.52,
+      "horizon": "30D",
+      "scaled_index": 101.5785
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.88,
+      "horizon": "30D",
+      "scaled_index": 101.9963
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 83.53,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.74,
+      "horizon": "45D",
+      "scaled_index": 103.8429
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.76,
+      "horizon": "45D",
+      "scaled_index": 103.8669
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.06,
+      "horizon": "45D",
+      "scaled_index": 104.226
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.64,
+      "horizon": "45D",
+      "scaled_index": 104.9204
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.37,
+      "horizon": "45D",
+      "scaled_index": 105.7943
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.03,
+      "horizon": "45D",
+      "scaled_index": 105.3873
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.71,
+      "horizon": "45D",
+      "scaled_index": 105.0042
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.07,
+      "horizon": "45D",
+      "scaled_index": 106.6323
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.84,
+      "horizon": "45D",
+      "scaled_index": 106.357
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.9,
+      "horizon": "45D",
+      "scaled_index": 104.0345
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.14,
+      "horizon": "45D",
+      "scaled_index": 104.3218
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.47,
+      "horizon": "45D",
+      "scaled_index": 103.5197
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.05,
+      "horizon": "45D",
+      "scaled_index": 104.2141
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.55,
+      "horizon": "45D",
+      "scaled_index": 103.6155
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.16,
+      "horizon": "45D",
+      "scaled_index": 103.1486
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 85.14,
+      "horizon": "45D",
+      "scaled_index": 101.9275
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.14,
+      "horizon": "45D",
+      "scaled_index": 104.3218
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.15,
+      "horizon": "45D",
+      "scaled_index": 104.3338
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 85.51,
+      "horizon": "45D",
+      "scaled_index": 102.3704
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.87,
+      "horizon": "45D",
+      "scaled_index": 103.9986
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.23,
+      "horizon": "45D",
+      "scaled_index": 106.8239
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.28,
+      "horizon": "45D",
+      "scaled_index": 104.4894
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.12,
+      "horizon": "45D",
+      "scaled_index": 105.495
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.82,
+      "horizon": "45D",
+      "scaled_index": 105.1359
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.11,
+      "horizon": "45D",
+      "scaled_index": 104.2859
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.6,
+      "horizon": "45D",
+      "scaled_index": 104.8725
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.47,
+      "horizon": "45D",
+      "scaled_index": 104.7169
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 85.79,
+      "horizon": "45D",
+      "scaled_index": 102.7056
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.11,
+      "horizon": "45D",
+      "scaled_index": 104.2859
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 86.41,
+      "horizon": "45D",
+      "scaled_index": 103.4479
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.24,
+      "horizon": "45D",
+      "scaled_index": 105.6387
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.76,
+      "horizon": "45D",
+      "scaled_index": 106.2612
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.46,
+      "horizon": "45D",
+      "scaled_index": 105.9021
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.48,
+      "horizon": "45D",
+      "scaled_index": 107.1232
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.32,
+      "horizon": "45D",
+      "scaled_index": 106.9316
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.03,
+      "horizon": "45D",
+      "scaled_index": 106.5845
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 89.01,
+      "horizon": "45D",
+      "scaled_index": 106.5605
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.52,
+      "horizon": "45D",
+      "scaled_index": 105.9739
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.96,
+      "horizon": "45D",
+      "scaled_index": 106.5007
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.9,
+      "horizon": "45D",
+      "scaled_index": 105.2317
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.89,
+      "horizon": "45D",
+      "scaled_index": 106.4169
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.13,
+      "horizon": "45D",
+      "scaled_index": 104.3098
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.52,
+      "horizon": "45D",
+      "scaled_index": 104.7767
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.88,
+      "horizon": "45D",
+      "scaled_index": 105.2077
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.9,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 88.89,
+      "horizon": "5D",
+      "scaled_index": 101.1263
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.13,
+      "horizon": "5D",
+      "scaled_index": 99.124
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.52,
+      "horizon": "5D",
+      "scaled_index": 99.5677
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "VGK",
+      "region": "Europe+",
+      "close": 87.88,
+      "horizon": "5D",
+      "scaled_index": 99.9772
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.65,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.88,
+      "horizon": "15D",
+      "scaled_index": 100.9725
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.83,
+      "horizon": "15D",
+      "scaled_index": 100.7611
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.49,
+      "horizon": "15D",
+      "scaled_index": 99.3235
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.34,
+      "horizon": "15D",
+      "scaled_index": 98.6892
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.1,
+      "horizon": "15D",
+      "scaled_index": 97.6744
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.07,
+      "horizon": "15D",
+      "scaled_index": 97.5476
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.11,
+      "horizon": "15D",
+      "scaled_index": 97.7167
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.01,
+      "horizon": "15D",
+      "scaled_index": 97.2939
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.17,
+      "horizon": "15D",
+      "scaled_index": 97.9704
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.81,
+      "horizon": "15D",
+      "scaled_index": 96.4482
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.52,
+      "horizon": "15D",
+      "scaled_index": 95.222
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.82,
+      "horizon": "15D",
+      "scaled_index": 92.2622
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.85,
+      "horizon": "15D",
+      "scaled_index": 92.389
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.59,
+      "horizon": "15D",
+      "scaled_index": 91.2896
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.27,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.33,
+      "horizon": "30D",
+      "scaled_index": 100.2578
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.72,
+      "horizon": "30D",
+      "scaled_index": 101.9338
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.78,
+      "horizon": "30D",
+      "scaled_index": 102.1917
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.44,
+      "horizon": "30D",
+      "scaled_index": 100.7306
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.71,
+      "horizon": "30D",
+      "scaled_index": 101.8908
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.39,
+      "horizon": "30D",
+      "scaled_index": 104.8131
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.34,
+      "horizon": "30D",
+      "scaled_index": 104.5982
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.28,
+      "horizon": "30D",
+      "scaled_index": 104.3404
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.32,
+      "horizon": "30D",
+      "scaled_index": 104.5122
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.18,
+      "horizon": "30D",
+      "scaled_index": 103.9106
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.55,
+      "horizon": "30D",
+      "scaled_index": 105.5006
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.42,
+      "horizon": "30D",
+      "scaled_index": 104.942
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.06,
+      "horizon": "30D",
+      "scaled_index": 103.3949
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.97,
+      "horizon": "30D",
+      "scaled_index": 103.0082
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.65,
+      "horizon": "30D",
+      "scaled_index": 101.633
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.88,
+      "horizon": "30D",
+      "scaled_index": 102.6214
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.83,
+      "horizon": "30D",
+      "scaled_index": 102.4065
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.49,
+      "horizon": "30D",
+      "scaled_index": 100.9454
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.34,
+      "horizon": "30D",
+      "scaled_index": 100.3008
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.1,
+      "horizon": "30D",
+      "scaled_index": 99.2694
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.07,
+      "horizon": "30D",
+      "scaled_index": 99.1405
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.11,
+      "horizon": "30D",
+      "scaled_index": 99.3124
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.01,
+      "horizon": "30D",
+      "scaled_index": 98.8827
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.17,
+      "horizon": "30D",
+      "scaled_index": 99.5703
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.81,
+      "horizon": "30D",
+      "scaled_index": 98.0232
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.52,
+      "horizon": "30D",
+      "scaled_index": 96.777
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.82,
+      "horizon": "30D",
+      "scaled_index": 93.7688
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.85,
+      "horizon": "30D",
+      "scaled_index": 93.8977
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.59,
+      "horizon": "30D",
+      "scaled_index": 92.7804
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.25,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.77,
+      "horizon": "45D",
+      "scaled_index": 102.2366
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.84,
+      "horizon": "45D",
+      "scaled_index": 102.5376
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.88,
+      "horizon": "45D",
+      "scaled_index": 102.7097
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.72,
+      "horizon": "45D",
+      "scaled_index": 102.0215
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.87,
+      "horizon": "45D",
+      "scaled_index": 102.6667
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.61,
+      "horizon": "45D",
+      "scaled_index": 101.5484
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.39,
+      "horizon": "45D",
+      "scaled_index": 100.6022
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.47,
+      "horizon": "45D",
+      "scaled_index": 100.9462
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.52,
+      "horizon": "45D",
+      "scaled_index": 101.1613
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.28,
+      "horizon": "45D",
+      "scaled_index": 100.129
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.5,
+      "horizon": "45D",
+      "scaled_index": 101.0753
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.26,
+      "horizon": "45D",
+      "scaled_index": 100.043
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.36,
+      "horizon": "45D",
+      "scaled_index": 100.4731
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.33,
+      "horizon": "45D",
+      "scaled_index": 100.3441
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.27,
+      "horizon": "45D",
+      "scaled_index": 100.086
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.33,
+      "horizon": "45D",
+      "scaled_index": 100.3441
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.72,
+      "horizon": "45D",
+      "scaled_index": 102.0215
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.78,
+      "horizon": "45D",
+      "scaled_index": 102.2796
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.44,
+      "horizon": "45D",
+      "scaled_index": 100.8172
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.71,
+      "horizon": "45D",
+      "scaled_index": 101.9785
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.39,
+      "horizon": "45D",
+      "scaled_index": 104.9032
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.34,
+      "horizon": "45D",
+      "scaled_index": 104.6882
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.28,
+      "horizon": "45D",
+      "scaled_index": 104.4301
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.32,
+      "horizon": "45D",
+      "scaled_index": 104.6022
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.18,
+      "horizon": "45D",
+      "scaled_index": 104.0
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.55,
+      "horizon": "45D",
+      "scaled_index": 105.5914
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.42,
+      "horizon": "45D",
+      "scaled_index": 105.0323
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 24.06,
+      "horizon": "45D",
+      "scaled_index": 103.4839
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.97,
+      "horizon": "45D",
+      "scaled_index": 103.0968
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.65,
+      "horizon": "45D",
+      "scaled_index": 101.7204
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.88,
+      "horizon": "45D",
+      "scaled_index": 102.7097
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.83,
+      "horizon": "45D",
+      "scaled_index": 102.4946
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.49,
+      "horizon": "45D",
+      "scaled_index": 101.0323
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.34,
+      "horizon": "45D",
+      "scaled_index": 100.3871
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.1,
+      "horizon": "45D",
+      "scaled_index": 99.3548
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.07,
+      "horizon": "45D",
+      "scaled_index": 99.2258
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.11,
+      "horizon": "45D",
+      "scaled_index": 99.3978
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.01,
+      "horizon": "45D",
+      "scaled_index": 98.9677
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 23.17,
+      "horizon": "45D",
+      "scaled_index": 99.6559
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.81,
+      "horizon": "45D",
+      "scaled_index": 98.1075
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.52,
+      "horizon": "45D",
+      "scaled_index": 96.8602
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.82,
+      "horizon": "45D",
+      "scaled_index": 93.8495
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.85,
+      "horizon": "45D",
+      "scaled_index": 93.9785
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.59,
+      "horizon": "45D",
+      "scaled_index": 92.8602
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.81,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 22.52,
+      "horizon": "5D",
+      "scaled_index": 98.7286
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.82,
+      "horizon": "5D",
+      "scaled_index": 95.6598
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.85,
+      "horizon": "5D",
+      "scaled_index": 95.7913
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "close": 21.59,
+      "horizon": "5D",
+      "scaled_index": 94.6515
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.29,
+      "horizon": "15D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.21,
+      "horizon": "15D",
+      "scaled_index": 101.0189
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.37,
+      "horizon": "15D",
+      "scaled_index": 101.1961
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.61,
+      "horizon": "15D",
+      "scaled_index": 101.462
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.9,
+      "horizon": "15D",
+      "scaled_index": 102.8907
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.29,
+      "horizon": "15D",
+      "scaled_index": 102.2151
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.7,
+      "horizon": "15D",
+      "scaled_index": 102.6692
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.96,
+      "horizon": "15D",
+      "scaled_index": 102.9571
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.93,
+      "horizon": "15D",
+      "scaled_index": 102.9239
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.58,
+      "horizon": "15D",
+      "scaled_index": 103.6438
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.94,
+      "horizon": "15D",
+      "scaled_index": 104.0425
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 94.13,
+      "horizon": "15D",
+      "scaled_index": 104.253
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.72,
+      "horizon": "15D",
+      "scaled_index": 100.4762
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.95,
+      "horizon": "15D",
+      "scaled_index": 101.8385
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.95,
+      "horizon": "15D",
+      "scaled_index": 100.731
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 87.56,
+      "horizon": "30D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 86.81,
+      "horizon": "30D",
+      "scaled_index": 99.1434
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.1,
+      "horizon": "30D",
+      "scaled_index": 101.7588
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 88.3,
+      "horizon": "30D",
+      "scaled_index": 100.8451
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 88.12,
+      "horizon": "30D",
+      "scaled_index": 100.6396
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.26,
+      "horizon": "30D",
+      "scaled_index": 101.9415
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.68,
+      "horizon": "30D",
+      "scaled_index": 104.7053
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.99,
+      "horizon": "30D",
+      "scaled_index": 103.9173
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.22,
+      "horizon": "30D",
+      "scaled_index": 105.3221
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.26,
+      "horizon": "30D",
+      "scaled_index": 105.3677
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.06,
+      "horizon": "30D",
+      "scaled_index": 105.1393
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.09,
+      "horizon": "30D",
+      "scaled_index": 106.3157
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.06,
+      "horizon": "30D",
+      "scaled_index": 105.1393
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.07,
+      "horizon": "30D",
+      "scaled_index": 104.0087
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.92,
+      "horizon": "30D",
+      "scaled_index": 103.8374
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.29,
+      "horizon": "30D",
+      "scaled_index": 103.1179
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.21,
+      "horizon": "30D",
+      "scaled_index": 104.1686
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.37,
+      "horizon": "30D",
+      "scaled_index": 104.3513
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.61,
+      "horizon": "30D",
+      "scaled_index": 104.6254
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.9,
+      "horizon": "30D",
+      "scaled_index": 106.0987
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.29,
+      "horizon": "30D",
+      "scaled_index": 105.402
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.7,
+      "horizon": "30D",
+      "scaled_index": 105.8703
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.96,
+      "horizon": "30D",
+      "scaled_index": 106.1672
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.93,
+      "horizon": "30D",
+      "scaled_index": 106.1329
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.58,
+      "horizon": "30D",
+      "scaled_index": 106.8753
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.94,
+      "horizon": "30D",
+      "scaled_index": 107.2864
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 94.13,
+      "horizon": "30D",
+      "scaled_index": 107.5034
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.72,
+      "horizon": "30D",
+      "scaled_index": 103.609
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.95,
+      "horizon": "30D",
+      "scaled_index": 105.0137
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.95,
+      "horizon": "30D",
+      "scaled_index": 103.8716
+    },
+    {
+      "date": "2026-04-07",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 85.51,
+      "horizon": "45D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-04-08",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.41,
+      "horizon": "45D",
+      "scaled_index": 104.5609
+    },
+    {
+      "date": "2026-04-09",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 88.22,
+      "horizon": "45D",
+      "scaled_index": 103.1692
+    },
+    {
+      "date": "2026-04-10",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 88.13,
+      "horizon": "45D",
+      "scaled_index": 103.064
+    },
+    {
+      "date": "2026-04-13",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 88.35,
+      "horizon": "45D",
+      "scaled_index": 103.3212
+    },
+    {
+      "date": "2026-04-14",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.41,
+      "horizon": "45D",
+      "scaled_index": 104.5609
+    },
+    {
+      "date": "2026-04-15",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.07,
+      "horizon": "45D",
+      "scaled_index": 104.1633
+    },
+    {
+      "date": "2026-04-16",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.41,
+      "horizon": "45D",
+      "scaled_index": 104.5609
+    },
+    {
+      "date": "2026-04-17",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.19,
+      "horizon": "45D",
+      "scaled_index": 105.473
+    },
+    {
+      "date": "2026-04-20",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.33,
+      "horizon": "45D",
+      "scaled_index": 104.4673
+    },
+    {
+      "date": "2026-04-21",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 87.14,
+      "horizon": "45D",
+      "scaled_index": 101.9062
+    },
+    {
+      "date": "2026-04-22",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 87.76,
+      "horizon": "45D",
+      "scaled_index": 102.6313
+    },
+    {
+      "date": "2026-04-23",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 87.07,
+      "horizon": "45D",
+      "scaled_index": 101.8243
+    },
+    {
+      "date": "2026-04-24",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 87.32,
+      "horizon": "45D",
+      "scaled_index": 102.1167
+    },
+    {
+      "date": "2026-04-27",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 87.68,
+      "horizon": "45D",
+      "scaled_index": 102.5377
+    },
+    {
+      "date": "2026-04-28",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 87.56,
+      "horizon": "45D",
+      "scaled_index": 102.3974
+    },
+    {
+      "date": "2026-04-29",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 86.81,
+      "horizon": "45D",
+      "scaled_index": 101.5203
+    },
+    {
+      "date": "2026-04-30",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.1,
+      "horizon": "45D",
+      "scaled_index": 104.1983
+    },
+    {
+      "date": "2026-05-01",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 88.3,
+      "horizon": "45D",
+      "scaled_index": 103.2628
+    },
+    {
+      "date": "2026-05-04",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 88.12,
+      "horizon": "45D",
+      "scaled_index": 103.0523
+    },
+    {
+      "date": "2026-05-05",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 89.26,
+      "horizon": "45D",
+      "scaled_index": 104.3855
+    },
+    {
+      "date": "2026-05-06",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.68,
+      "horizon": "45D",
+      "scaled_index": 107.2155
+    },
+    {
+      "date": "2026-05-07",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.99,
+      "horizon": "45D",
+      "scaled_index": 106.4086
+    },
+    {
+      "date": "2026-05-08",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.22,
+      "horizon": "45D",
+      "scaled_index": 107.847
+    },
+    {
+      "date": "2026-05-11",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.26,
+      "horizon": "45D",
+      "scaled_index": 107.8938
+    },
+    {
+      "date": "2026-05-12",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.06,
+      "horizon": "45D",
+      "scaled_index": 107.6599
+    },
+    {
+      "date": "2026-05-13",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.09,
+      "horizon": "45D",
+      "scaled_index": 108.8645
+    },
+    {
+      "date": "2026-05-14",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.06,
+      "horizon": "45D",
+      "scaled_index": 107.6599
+    },
+    {
+      "date": "2026-05-15",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.07,
+      "horizon": "45D",
+      "scaled_index": 106.5022
+    },
+    {
+      "date": "2026-05-18",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.92,
+      "horizon": "45D",
+      "scaled_index": 106.3267
+    },
+    {
+      "date": "2026-05-19",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.29,
+      "horizon": "45D",
+      "scaled_index": 105.59
+    },
+    {
+      "date": "2026-05-20",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.21,
+      "horizon": "45D",
+      "scaled_index": 106.6659
+    },
+    {
+      "date": "2026-05-21",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.37,
+      "horizon": "45D",
+      "scaled_index": 106.853
+    },
+    {
+      "date": "2026-05-22",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.61,
+      "horizon": "45D",
+      "scaled_index": 107.1337
+    },
+    {
+      "date": "2026-05-26",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.9,
+      "horizon": "45D",
+      "scaled_index": 108.6423
+    },
+    {
+      "date": "2026-05-27",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.29,
+      "horizon": "45D",
+      "scaled_index": 107.9289
+    },
+    {
+      "date": "2026-05-28",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.7,
+      "horizon": "45D",
+      "scaled_index": 108.4084
+    },
+    {
+      "date": "2026-05-29",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.96,
+      "horizon": "45D",
+      "scaled_index": 108.7124
+    },
+    {
+      "date": "2026-06-01",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 92.93,
+      "horizon": "45D",
+      "scaled_index": 108.6773
+    },
+    {
+      "date": "2026-06-02",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.58,
+      "horizon": "45D",
+      "scaled_index": 109.4375
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.94,
+      "horizon": "45D",
+      "scaled_index": 109.8585
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 94.13,
+      "horizon": "45D",
+      "scaled_index": 110.0807
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.72,
+      "horizon": "45D",
+      "scaled_index": 106.0929
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.95,
+      "horizon": "45D",
+      "scaled_index": 107.5313
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.95,
+      "horizon": "45D",
+      "scaled_index": 106.3618
+    },
+    {
+      "date": "2026-06-03",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 93.94,
+      "horizon": "5D",
+      "scaled_index": 100.0
+    },
+    {
+      "date": "2026-06-04",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 94.13,
+      "horizon": "5D",
+      "scaled_index": 100.2023
+    },
+    {
+      "date": "2026-06-05",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.72,
+      "horizon": "5D",
+      "scaled_index": 96.5723
+    },
+    {
+      "date": "2026-06-08",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 91.95,
+      "horizon": "5D",
+      "scaled_index": 97.8816
+    },
+    {
+      "date": "2026-06-09",
+      "symbol": "EWJ",
+      "region": "Japan",
+      "close": 90.95,
+      "horizon": "5D",
+      "scaled_index": 96.8171
+    }
+  ]
+}
