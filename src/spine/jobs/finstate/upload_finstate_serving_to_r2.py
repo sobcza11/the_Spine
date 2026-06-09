@@ -25,10 +25,14 @@ def main():
         region_name=region,
     )
 
+    uploaded = 0
+
     for name in FILES:
         local = ROOT / "data" / "serving" / "finstate" / name
+
         if not local.exists():
-            raise FileNotFoundError(f"Missing file: {local}")
+            print(f"SKIP MISSING: {local}")
+            continue
 
         key = f"spine_us/serving/finstate/{name}"
 
@@ -39,9 +43,11 @@ def main():
             ExtraArgs={"ContentType": "application/json"},
         )
 
+        uploaded += 1
         print(f"UPLOADED: {local} -> {key}")
+
+    if uploaded == 0:
+        raise FileNotFoundError("No FINSTATE serving files found to upload.")
 
 if __name__ == "__main__":
     main()
-
-    
