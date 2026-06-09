@@ -3,7 +3,7 @@ name: Daily Global Equity Region Update T1
 on:
   workflow_dispatch:
   schedule:
-    - cron: "35 22 * * 1-5"
+    - cron: "0 10 * * 1-5"
 
 jobs:
   update_global_equity_region:
