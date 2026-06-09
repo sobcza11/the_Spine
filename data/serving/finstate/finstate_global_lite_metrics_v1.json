@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "name": "finstate_global_lite_metrics_v1",
+    "rows": 10,
+    "source": "SimFin START manual alias bridge"
+  },
+  "rows": [
+    {
+      "ticker": "WDS",
+      "source_ticker": "WDS",
+      "company": "Woodside Energy",
+      "country": "Australia",
+      "region": "Asia-Pacific",
+      "finstate_sector": "Energy",
+      "as_of_date": "2024-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 0.485
+    },
+    {
+      "ticker": "RIO",
+      "source_ticker": "RIO",
+      "company": "Rio Tinto",
+      "country": "Australia",
+      "region": "Asia-Pacific",
+      "finstate_sector": "Mining",
+      "as_of_date": "2022-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 0.234
+    },
+    {
+      "ticker": "7267",
+      "source_ticker": "HMC",
+      "company": "Honda Motor",
+      "country": "Japan",
+      "region": "Asia-Pacific",
+      "finstate_sector": "Autos",
+      "as_of_date": "2025-03-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 0.596
+    },
+    {
+      "ticker": "7203",
+      "source_ticker": "TM",
+      "company": "Toyota Motor",
+      "country": "Japan",
+      "region": "Asia-Pacific",
+      "finstate_sector": "Autos",
+      "as_of_date": "2025-03-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 1.064
+    },
+    {
+      "ticker": "TTE",
+      "source_ticker": "TTE",
+      "company": "TotalEnergies",
+      "country": "France",
+      "region": "Europe+",
+      "finstate_sector": "Energy",
+      "as_of_date": "2022-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 0.53
+    },
+    {
+      "ticker": "SU",
+      "source_ticker": "SU",
+      "company": "Schneider Electric",
+      "country": "France",
+      "region": "Europe+",
+      "finstate_sector": "Industrials",
+      "as_of_date": "2021-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 0.432
+    },
+    {
+      "ticker": "MC",
+      "source_ticker": "MC",
+      "company": "LVMH",
+      "country": "France",
+      "region": "Europe+",
+      "finstate_sector": "Luxury",
+      "as_of_date": "2024-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": NaN
+    },
+    {
+      "ticker": "ALV",
+      "source_ticker": "ALV",
+      "company": "Allianz",
+      "country": "Germany",
+      "region": "Europe+",
+      "finstate_sector": "Insurance",
+      "as_of_date": "2024-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 0.835
+    },
+    {
+      "ticker": "ROG",
+      "source_ticker": "ROG",
+      "company": "Roche",
+      "country": "Switzerland",
+      "region": "Europe+",
+      "finstate_sector": "Pharma",
+      "as_of_date": "2024-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": 0.02
+    },
+    {
+      "ticker": "BP",
+      "source_ticker": "BP",
+      "company": "BP",
+      "country": "UK",
+      "region": "Europe+",
+      "finstate_sector": "Energy",
+      "as_of_date": "2021-12-31",
+      "fcf_b_qrt": 0.0,
+      "debt_eq_qrt": NaN
+    }
+  ]
+}
