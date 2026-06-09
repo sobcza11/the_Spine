@@ -2390,24 +2390,25 @@ async function loadActiveData() {
     });
   }
 
-  document.querySelectorAll(
-    ".top-nav-item[data-view], .sidebar-nav .nav-item[data-view], .module-tab[data-view]"
-  ).forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest(
+      ".top-nav-item[data-view], .sidebar-nav .nav-item[data-view], .module-tab[data-view]"
+    );
 
-      if (button.disabled || button.dataset.locked === "true") return;
+    if (!button) return;
 
-      const viewName = button.dataset.view;
-      if (!viewName) return;
+    event.preventDefault();
 
-      try {
-        showView(viewName);
-      } catch (err) {
-        console.error("Toolbar navigation failed:", viewName, err);
-      }
-    });
+    if (button.disabled || button.dataset.locked === "true") return;
+
+    const viewName = button.dataset.view;
+    if (!viewName) return;
+
+    try {
+      showView(viewName);
+    } catch (err) {
+      console.error("Navigation failed:", viewName, err);
+    }
   });
 
   function createLinePath(points) {
