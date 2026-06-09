@@ -39,4 +39,24 @@ jobs:
       - name: Upload FX depth serving to R2
         run: python -m spine.jobs.fx_depth.upload_fx_depth_serving_to_r2
 
-        
+      - name: Verify FX spreads serving JSON exists
+        run: |
+          ls -la data/serving/fx || true
+
+          if [ ! -f data/serving/fx/fx_spreads_data.json ]; then
+            echo "Missing fx_spreads_data.json in runner."
+            echo "Available FX serving files:"
+            find data/serving/fx -maxdepth 1 -type f -print
+            exit 1
+          fi
+
+      - name: Upload FINSTATE serving files to R2
+        run: python -m spine.jobs.finstate.upload_finstate_serving_to_r2
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_REGION: ${{ secrets.R2_REGION }}        
+          
