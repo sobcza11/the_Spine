@@ -1255,6 +1255,12 @@ const DATA_ENDPOINTS = {
   equitiesSigma: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/equities/equities_sigma_rank.json",
   equitiesIndustryPanel: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/equities/industry_panel_serving.json",
   finstateSigma: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/finstate/finstate_sigma_rank.json",
+
+    globalEquityRegionPanel:
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/equities/global_equity_region_panel.json",
+
+    globalEquityRegionLatest:
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/equities/global_equity_region_latest.json",
   finstateUniverse: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/finstate/finstate_universe_metrics_v1.json",
   wtiInventoryOcOverlay: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/wti/wti_inventory_oc_overlay.json",
   wtiPrice: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/wti/wti_price_data.json",
@@ -3381,6 +3387,87 @@ function updateRatesGeoScenToolbarLabel() {
     chartEl.innerHTML = `<div class="panel-placeholder">Market breadth skeleton.</div>`;
   }
 
+
+function normalizeGlobalEquityRegionPayload(payload) {
+  return Array.isArray(payload?.rows) ? payload.rows : [];
+}
+
+function filterGlobalEquityRowsByRegion(rows, region) {
+  if (region === "Europe+") return rows.filter((r) => r.region === "Europe+");
+
+  if (region === "Asia-Pacific") {
+    return rows.filter((r) =>
+      ["Asia-Pacific", "Japan", "Australia", "Hong Kong", "China Gateway"].includes(r.region)
+    );
+  }
+
+  return [];
+}
+
+function renderGlobalEquityRegionTable(container, rows, region) {
+  if (!container) return;
+
+  if (!rows.length) {
+    container.innerHTML = `<div class="panel-placeholder">No global equity region data available for ${region}.</div>`;
+    return;
+  }
+
+  container.innerHTML = `
+    <table class="equities-industry-table">
+      <thead>
+        <tr>
+          <th>Region</th><th>ETF</th><th>Date</th><th>Close</th>
+          <th>20D</th><th>60D</th><th>Score</th><th>State</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map((r) => `
+          <tr>
+            <td>${r.region ?? "--"}</td>
+            <td>${r.symbol ?? "--"}</td>
+            <td>${r.date ?? "--"}</td>
+            <td>${formatNumber(r.close, 2)}</td>
+            <td>${formatNumber(Number(r.ret_20d) * 100, 2)}%</td>
+            <td>${formatNumber(Number(r.ret_60d) * 100, 2)}%</td>
+            <td>${formatNumber(r.equity_region_score, 2)}</td>
+            <td>${r.state ?? "--"}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+}
+
+async function renderGlobalEquityRegion(region, horizon) {
+  const payload = await fetchJsonWithBust(DATA_ENDPOINTS.globalEquityRegionPanel);
+  const rows = filterGlobalEquityRowsByRegion(
+    normalizeGlobalEquityRegionPayload(payload),
+    region
+  );
+
+  renderGlobalEquityRegionTable(
+    document.getElementById("equities-index-chart"),
+    rows,
+    region
+  );
+
+  updateStatValue(document.getElementById("equities-index-focus"), region);
+  updateStatValue(document.getElementById("equities-index-state"), "Live");
+  updateStatValue(document.getElementById("equities-index-mode"), "Global Region ETF");
+
+  const latestDate = rows.map((r) => r.date).filter(Boolean).sort().slice(-1)[0] || "--";
+  const indexDate = document.getElementById("equities-index-date");
+  if (indexDate) indexDate.textContent = latestDate;
+
+  renderEquitiesIndexPlaceholder(
+    "equities-industry-chart",
+    `${region} PMI composite not wired yet. Region ETF diagnostics are live.`
+  );
+
+  updateStatValue(document.getElementById("equities-industry-state"), "Region ETF Live");
+  renderEquitiesTopRightSkeleton(equitiesControls.topRightMode?.value || "Market Breadth");
+}
+
 async function renderEquities() {
   updateEquitiesGeoScenToolbarLabel();
   renderEquitiesVector();
@@ -3403,10 +3490,7 @@ async function renderEquities() {
   const regionIsLive = region === "USA";
 
   if (!regionIsLive) {
-    renderEquitiesIndexPlaceholder("equities-index-chart", `${region} is not live yet.`);
-    renderEquitiesIndexPlaceholder("equities-industry-chart", `${region} PMI composite is not live yet.`);
-    updateStatValue(document.getElementById("equities-index-state"), "Coming Soon");
-    updateStatValue(document.getElementById("equities-industry-state"), "Coming Soon");
+    await renderGlobalEquityRegion(region, horizon);
     return;
   }
 
