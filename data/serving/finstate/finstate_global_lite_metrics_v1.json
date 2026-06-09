@@ -2,7 +2,8 @@
   "meta": {
     "name": "finstate_global_lite_metrics_v1",
     "rows": 10,
-    "source": "SimFin START manual alias bridge"
+    "source": "SimFin START manual alias bridge",
+    "method": "Deterministic fragility from leverage, FCF stress, and cash buffer."
   },
   "rows": [
     {
@@ -13,8 +14,10 @@
       "region": "Asia-Pacific",
       "finstate_sector": "Energy",
       "as_of_date": "2024-12-31",
+      "fragility_pct_qrt": 9.71,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 0.485
+      "debt_eq_qrt": 0.485,
+      "cash_b_qrt": 4.108
     },
     {
       "ticker": "RIO",
@@ -24,8 +27,10 @@
       "region": "Asia-Pacific",
       "finstate_sector": "Mining",
       "as_of_date": "2022-12-31",
+      "fragility_pct_qrt": 4.99,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 0.234
+      "debt_eq_qrt": 0.234,
+      "cash_b_qrt": 6.775
     },
     {
       "ticker": "7267",
@@ -35,8 +40,10 @@
       "region": "Asia-Pacific",
       "finstate_sector": "Autos",
       "as_of_date": "2025-03-31",
+      "fragility_pct_qrt": 9.27,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 0.596
+      "debt_eq_qrt": 0.596,
+      "cash_b_qrt": 31.039
     },
     {
       "ticker": "7203",
@@ -46,8 +53,10 @@
       "region": "Asia-Pacific",
       "finstate_sector": "Autos",
       "as_of_date": "2025-03-31",
+      "fragility_pct_qrt": 16.05,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 1.064
+      "debt_eq_qrt": 1.064,
+      "cash_b_qrt": 104.296
     },
     {
       "ticker": "TTE",
@@ -57,8 +66,10 @@
       "region": "Europe+",
       "finstate_sector": "Energy",
       "as_of_date": "2022-12-31",
+      "fragility_pct_qrt": 8.25,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 0.53
+      "debt_eq_qrt": 0.53,
+      "cash_b_qrt": 34.077
     },
     {
       "ticker": "SU",
@@ -68,8 +79,10 @@
       "region": "Europe+",
       "finstate_sector": "Industrials",
       "as_of_date": "2021-12-31",
+      "fragility_pct_qrt": 11.01,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 0.432
+      "debt_eq_qrt": 0.432,
+      "cash_b_qrt": 2.205
     },
     {
       "ticker": "MC",
@@ -79,8 +92,10 @@
       "region": "Europe+",
       "finstate_sector": "Luxury",
       "as_of_date": "2024-12-31",
+      "fragility_pct_qrt": 21.56,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": NaN
+      "debt_eq_qrt": 0.0,
+      "cash_b_qrt": 0.464
     },
     {
       "ticker": "ALV",
@@ -90,8 +105,10 @@
       "region": "Europe+",
       "finstate_sector": "Insurance",
       "as_of_date": "2024-12-31",
+      "fragility_pct_qrt": 42.83,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 0.835
+      "debt_eq_qrt": 0.835,
+      "cash_b_qrt": 0.33
     },
     {
       "ticker": "ROG",
@@ -101,8 +118,10 @@
       "region": "Europe+",
       "finstate_sector": "Pharma",
       "as_of_date": "2024-12-31",
+      "fragility_pct_qrt": 62.87,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": 0.02
+      "debt_eq_qrt": 0.02,
+      "cash_b_qrt": 0.16
     },
     {
       "ticker": "BP",
@@ -112,8 +131,10 @@
       "region": "Europe+",
       "finstate_sector": "Energy",
       "as_of_date": "2021-12-31",
+      "fragility_pct_qrt": 10.47,
       "fcf_b_qrt": 0.0,
-      "debt_eq_qrt": NaN
+      "debt_eq_qrt": 0.676,
+      "cash_b_qrt": 30.681
     }
   ]
 }
