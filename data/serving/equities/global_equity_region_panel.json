@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "name": "global_equity_region_latest",
+    "source": "Tiingo",
+    "source_r2_key": "spine_us/global_equity_region_t1.parquet",
+    "method": "Momentum z-score minus volatility penalty by ETF.",
+    "rows": 8
+  },
+  "rows": [
+    {
+      "symbol": "EXI",
+      "region": "Europe+",
+      "date": "2026-06-08",
+      "close": 192.73,
+      "ret_20d": -0.0228,
+      "ret_60d": 0.0411,
+      "vol_20d": 0.0092,
+      "momentum_z": -1.0534,
+      "vol_z": -0.1422,
+      "equity_region_score": -1.0036,
+      "state": "Risk-Off / Weak",
+      "source": "Tiingo"
+    },
+    {
+      "symbol": "EWJ",
+      "region": "Japan",
+      "date": "2026-06-08",
+      "close": 91.95,
+      "ret_20d": -0.0029,
+      "ret_60d": 0.0922,
+      "vol_20d": 0.0112,
+      "momentum_z": -0.523,
+      "vol_z": -0.4425,
+      "equity_region_score": -0.3682,
+      "state": "Cautious",
+      "source": "Tiingo"
+    },
+    {
+      "symbol": "EUFN",
+      "region": "Europe+",
+      "date": "2026-06-08",
+      "close": 37.49,
+      "ret_20d": -0.0147,
+      "ret_60d": 0.0962,
+      "vol_20d": 0.0129,
+      "momentum_z": -0.6405,
+      "vol_z": 0.2944,
+      "equity_region_score": -0.7435,
+      "state": "Cautious",
+      "source": "Tiingo"
+    },
+    {
+      "symbol": "AAXJ",
+      "region": "Asia-Pacific",
+      "date": "2026-06-08",
+      "close": 114.42,
+      "ret_20d": -0.0262,
+      "ret_60d": 0.1726,
+      "vol_20d": 0.0248,
+      "momentum_z": -1.2229,
+      "vol_z": 2.6593,
+      "equity_region_score": -2.1537,
+      "state": "Risk-Off / Weak",
+      "source": "Tiingo"
+    },
+    {
+      "symbol": "EWH",
+      "region": "Hong Kong",
+      "date": "2026-06-08",
+      "close": 21.85,
+      "ret_20d": -0.1001,
+      "ret_60d": -0.045,
+      "vol_20d": 0.0104,
+      "momentum_z": -3.2729,
+      "vol_z": -0.0088,
+      "equity_region_score": -3.2698,
+      "state": "Risk-Off / Weak",
+      "source": "Tiingo"
+    },
+    {
+      "symbol": "EWA",
+      "region": "Australia",
+      "date": "2026-06-08",
+      "close": 28.07,
+      "ret_20d": -0.0498,
+      "ret_60d": -0.0123,
+      "vol_20d": 0.011,
+      "momentum_z": -1.5442,
+      "vol_z": 0.201,
+      "equity_region_score": -1.6145,
+      "state": "Risk-Off / Weak",
+      "source": "Tiingo"
+    },
+    {
+      "symbol": "FXI",
+      "region": "China Gateway",
+      "date": "2026-06-08",
+      "close": 34.68,
+      "ret_20d": -0.0687,
+      "ret_60d": -0.0409,
+      "vol_20d": 0.0149,
+      "momentum_z": -1.7731,
+      "vol_z": 1.1943,
+      "equity_region_score": -2.1911,
+      "state": "Risk-Off / Weak",
+      "source": "Tiingo"
+    },
+    {
+      "symbol": "VGK",
+      "region": "Europe+",
+      "date": "2026-06-08",
+      "close": 87.52,
+      "ret_20d": -0.0068,
+      "ret_60d": 0.0507,
+      "vol_20d": 0.0107,
+      "momentum_z": -0.5389,
+      "vol_z": 0.4059,
+      "equity_region_score": -0.681,
+      "state": "Cautious",
+      "source": "Tiingo"
+    }
+  ]
+}
