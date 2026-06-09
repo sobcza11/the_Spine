@@ -3051,3 +3051,15 @@ about-name {
 .meta-detail {
     color: rgba(255, 255, 255, 0.7); 
 }
+
+.fx-depth-live-area-positive {
+  fill: rgba(142, 201, 163, 0.22);
+  stroke: none;
+}
+
+.fx-depth-live-area-negative {
+  fill: rgba(209, 121, 121, 0.22);
+  stroke: none;
+}
+
+
