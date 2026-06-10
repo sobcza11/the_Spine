@@ -1261,6 +1261,9 @@ const DATA_ENDPOINTS = {
 
     globalEquityRegionLatest:
       "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/equities/global_equity_region_latest.json",
+
+    globalEquityRegionHistory:
+      "./serving/equities/global_equity_region_history.json",
   finstateUniverse: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/finstate/finstate_universe_metrics_v1.json",
   wtiInventoryOcOverlay: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/wti/wti_inventory_oc_overlay.json",
   wtiPrice: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/wti/wti_price_data.json",
@@ -3439,37 +3442,210 @@ function renderGlobalEquityRegionTable(container, rows, region) {
   `;
 }
 
-async function renderGlobalEquityRegion(region, horizon) {
-  const payload = await fetchJsonWithBust(DATA_ENDPOINTS.globalEquityRegionPanel);
-  const rows = filterGlobalEquityRowsByRegion(
-    normalizeGlobalEquityRegionPayload(payload),
-    region
+
+function renderGlobalEquityRegionIndexChart(container, rows, region, horizon) {
+  if (!container) return;
+
+  if (!Array.isArray(rows) || !rows.length) {
+    container.innerHTML = `<div class="panel-placeholder">No ${region} index history for ${horizon}.</div>`;
+    return;
+  }
+
+  const grouped = {};
+
+  rows.forEach((row) => {
+    const symbol = String(row.symbol || "").toUpperCase();
+    if (!symbol) return;
+    if (!grouped[symbol]) grouped[symbol] = [];
+
+    grouped[symbol].push({
+      date: row.date,
+      value: Number(row.scaled_index),
+      close: Number(row.close),
+      region: row.region
+    });
+  });
+
+  Object.keys(grouped).forEach((symbol) => {
+    grouped[symbol] = grouped[symbol]
+      .filter((r) => r.date && Number.isFinite(r.value))
+      .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+  });
+
+  const symbols = Object.keys(grouped).filter((s) => grouped[s].length);
+
+  if (!symbols.length) {
+    container.innerHTML = `<div class="panel-placeholder">No renderable ${region} index series.</div>`;
+    return;
+  }
+
+  const width = Math.max(container.clientWidth || 320, 320);
+  const height = Math.max(container.clientHeight || 240, 240);
+  const padding = { top: 26, right: 34, bottom: 34, left: 22 };
+
+  const allValues = symbols.flatMap((s) => grouped[s].map((r) => r.value));
+  const min = Math.min(...allValues, 100);
+  const max = Math.max(...allValues, 100);
+  const range = Math.max(max - min, 1e-9);
+
+  const innerW = width - padding.left - padding.right;
+  const innerH = height - padding.top - padding.bottom;
+
+  const valueToY = (value) => padding.top + ((max - value) / range) * innerH;
+
+  const paths = symbols.map((symbol) => {
+    const series = grouped[symbol];
+    const color = GLOBAL_EQUITY_COLOR_MAP?.[region]?.[symbol] || "#6B7280";
+
+    const points = series.map((row, idx) => ({
+      x: padding.left + (idx / Math.max(series.length - 1, 1)) * innerW,
+      y: valueToY(row.value)
+    }));
+
+    const last = points[points.length - 1];
+
+    return `
+      <path d="${createLinePath(points)}" fill="none" stroke="${color}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="${last.x}" cy="${last.y}" r="3.8" fill="${color}"></circle>
+      <text x="${Math.min(last.x + 6, width - padding.right)}" y="${last.y - 6}" fill="${color}" font-size="10" font-weight="700">${symbol}</text>
+    `;
+  }).join("");
+
+  const zeroY = valueToY(100);
+  const reference = grouped[symbols[0]];
+  const labelIdx = [0, Math.floor((reference.length - 1) / 2), reference.length - 1];
+
+  const xLabels = [...new Set(labelIdx)].map((idx) => {
+    const safeIdx = Math.min(idx, reference.length - 1);
+    const x = padding.left + (safeIdx / Math.max(reference.length - 1, 1)) * innerW;
+    return `<text class="fx-axis-label" x="${x}" y="${height - 10}" text-anchor="middle">${formatCompactDateLabel(reference[safeIdx].date)}</text>`;
+  }).join("");
+
+  const legend = symbols.map((symbol) => {
+    const color = GLOBAL_EQUITY_COLOR_MAP?.[region]?.[symbol] || "#6B7280";
+    return `<span class="global-equity-legend-item"><span class="equity-color-dot" style="background:${color}"></span>${symbol}</span>`;
+  }).join("");
+
+  container.innerHTML = `
+    <div class="global-equity-chart-wrap">
+      <div class="global-equity-chart-title">${region} Index • ${horizon} • Base = 100</div>
+      <div class="global-equity-legend">${legend}</div>
+      <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">
+        <line class="fx-grid-line" x1="${padding.left}" y1="${padding.top}" x2="${width - padding.right}" y2="${padding.top}"></line>
+        <line class="fx-zero-line" x1="${padding.left}" y1="${zeroY}" x2="${width - padding.right}" y2="${zeroY}"></line>
+        <line class="fx-grid-line" x1="${padding.left}" y1="${height - padding.bottom}" x2="${width - padding.right}" y2="${height - padding.bottom}"></line>
+        <text class="fx-axis-label" x="${width - padding.right}" y="${padding.top - 6}" text-anchor="end">${formatNumber(max, 1)}</text>
+        <text class="fx-axis-label" x="${width - padding.right}" y="${zeroY - 6}" text-anchor="end">100.0</text>
+        <text class="fx-axis-label" x="${width - padding.right}" y="${height - padding.bottom - 6}" text-anchor="end">${formatNumber(min, 1)}</text>
+        ${paths}
+        ${xLabels}
+      </svg>
+    </div>
+  `;
+}
+
+function getGlobalEquityScopedHistoryRows(rows, region, horizon) {
+  return rows.filter((r) => {
+    if (String(r.horizon) !== String(horizon)) return false;
+
+    if (region === "Europe+") {
+      return ["EXI", "EUFN", "VGK"].includes(String(r.symbol).toUpperCase());
+    }
+
+    if (region === "Asia-Pacific") {
+      return ["EWJ", "AAXJ", "EWH", "EWA", "FXI"].includes(String(r.symbol).toUpperCase());
+    }
+
+    return false;
+  });
+}
+
+function renderGlobalEquityRegionLatestTable(rows, region, horizon) {
+  const container = document.getElementById("equities-industry-chart");
+  if (!container) return;
+
+  const latestBySymbol = {};
+
+  rows.forEach((row) => {
+    const symbol = String(row.symbol || "").toUpperCase();
+    if (!latestBySymbol[symbol] || String(row.date) > String(latestBySymbol[symbol].date)) {
+      latestBySymbol[symbol] = row;
+    }
+  });
+
+  const latestRows = Object.values(latestBySymbol).sort((a, b) =>
+    String(a.symbol).localeCompare(String(b.symbol))
   );
 
-  renderGlobalEquityRegionTable(
+  container.innerHTML = `
+    <table class="equities-industry-table">
+      <thead>
+        <tr>
+          <th>ETF</th>
+          <th>Region</th>
+          <th>Date</th>
+          <th>Close</th>
+          <th>${horizon} Index</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${latestRows.map((r) => {
+          const symbol = String(r.symbol || "").toUpperCase();
+          const color = GLOBAL_EQUITY_COLOR_MAP?.[region]?.[symbol] || "#6B7280";
+          return `
+            <tr>
+              <td><span class="equity-color-dot" style="background:${color}"></span>${symbol}</td>
+              <td>${r.region ?? "--"}</td>
+              <td>${r.date ?? "--"}</td>
+              <td>${formatNumber(r.close, 2)}</td>
+              <td>${formatNumber(r.scaled_index, 2)}</td>
+            </tr>
+          `;
+        }).join("")}
+      </tbody>
+    </table>
+  `;
+
+  updateStatValue(document.getElementById("equities-industry-pmi"), horizon);
+  updateStatValue(document.getElementById("equities-industry-bias"), "Base = 100");
+  updateStatValue(document.getElementById("equities-industry-state"), "History Live");
+}
+
+async function renderGlobalEquityRegion(region, horizon) {
+  const payload = await fetchJsonWithBust(DATA_ENDPOINTS.globalEquityRegionHistory);
+
+  const allRows = Array.isArray(payload)
+    ? payload
+    : Array.isArray(payload.rows)
+      ? payload.rows
+      : [];
+
+  const scopedRows = getGlobalEquityScopedHistoryRows(allRows, region, horizon);
+
+  renderGlobalEquityRegionIndexChart(
     document.getElementById("equities-index-chart"),
-    rows,
-    region
+    scopedRows,
+    region,
+    horizon
   );
+
+  renderGlobalEquityRegionLatestTable(scopedRows, region, horizon);
+
+  const latestDate =
+    scopedRows.map((r) => r.date).filter(Boolean).sort().slice(-1)[0] || "--";
 
   updateStatValue(document.getElementById("equities-index-focus"), region);
   updateStatValue(document.getElementById("equities-index-state"), "Live");
-  updateStatValue(document.getElementById("equities-index-mode"), "Global Region ETF");
+  updateStatValue(document.getElementById("equities-index-mode"), "Global Region Index");
 
-  const latestDate = rows.map((r) => r.date).filter(Boolean).sort().slice(-1)[0] || "--";
   const indexDate = document.getElementById("equities-index-date");
   if (indexDate) indexDate.textContent = latestDate;
 
-  renderEquitiesIndexPlaceholder(
-    "equities-industry-chart",
-    `${region} PMI composite not wired yet. Region ETF diagnostics are live.`
-  );
-
-  updateStatValue(document.getElementById("equities-industry-state"), "Region ETF Live");
-  renderEquitiesTopRightSkeleton(equitiesControls.topRightMode?.value || "Market Breadth");
+  const industryDate = document.getElementById("equities-industry-date");
+  if (industryDate) industryDate.textContent = latestDate;
 }
 
-async function renderEquities() {
+  async function renderEquities() {
   updateEquitiesGeoScenToolbarLabel();
   renderEquitiesVector();
 
