@@ -2147,11 +2147,41 @@ body.about-sidebar-hidden .main-grid {
 }
 
 body.view-oc .sidebar-panel {
-  display: none !important;
+  display: block !important;
 }
 
 body.view-oc .main-grid {
-  grid-template-columns: 1fr !important;
+  grid-template-columns: 360px minmax(0, 1fr) !important;
+}
+
+#view-oc {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#view-oc .oc-view {
+  width: 100%;
+  min-height: 520px;
+  max-height: calc(100vh - 170px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#view-oc .oc-content {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#view-oc .oc-image {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  max-height: 420px;
+  object-fit: contain;
 }
 
 .content-panel {
