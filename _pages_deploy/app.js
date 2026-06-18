@@ -30,6 +30,89 @@ const equitiesControls = {
 };
 
 
+const CFLOW_MENU = {
+  physical: {
+    label: "Physical Economy",
+    subsystems: {
+      activity: {
+        label: "Economic Activity",
+        metrics: [
+          { value: "weekly-economic-index", label: "WEI" },
+          { value: "industrial-production", label: "Industrial Production" },
+          { value: "real-personal-income", label: "Real Personal Income" },
+          { value: "retail-sales", label: "Retail Sales" },
+          { value: "building-permits", label: "Building Permits" },
+          { value: "capacity-utilization", label: "Capacity Utilization" },
+          { value: "consumer-sentiment", label: "Consumer Sentiment" },
+        ],
+      },
+
+      labor: {
+        label: "Labor Transmission",
+        metrics: [
+          { value: "jolts-openings", label: "JOLTS Openings" },
+          { value: "initial-jobless-claims", label: "Initial Claims" },
+          { value: "weekly-hours-worked", label: "Weekly Hours Worked" },
+        ],
+      },
+
+      inflation: {
+        label: "Inflation Transmission",
+        metrics: [
+          { value: "core-pce", label: "Core PCE" },
+          { value: "core-cpi", label: "Core CPI" },
+          { value: "ppi-finished-goods", label: "PPI Finished Goods" },
+        ],
+      },
+
+      energy: {
+        label: "Energy Demand",
+        metrics: [
+          { value: "diesel-demand", label: "Diesel Demand" },
+          { value: "distillate-inventories", label: "Distillate Inventories" },
+        ],
+      },
+
+      logistics: {
+        label: "Logistics / Freight",
+        metrics: [
+          { value: "rail-carloads", label: "Rail Traffic" },
+          { value: "port-throughput", label: "Port Throughput" },
+          { value: "truck-tonnage", label: "Truck Tonnage (TBD)", disabled: true },
+          { value: "cass-freight", label: "Cass Freight (TBD)", disabled: true },
+          { value: "baltic-dry-index", label: "Baltic Dry Index (TBD)", disabled: true },
+        ],
+      },
+    },
+  },
+
+  financial: {
+    label: "Financial Transmission",
+    subsystems: {
+      funding: {
+        label: "Funding",
+        metrics: [
+          { value: "sofr-funding", label: "SOFR Funding Stress" },
+        ],
+      },
+
+      credit: {
+        label: "Credit",
+        metrics: [
+          { value: "hy-oas", label: "High Yield OAS" },
+        ],
+      },
+
+      positioning: {
+        label: "Positioning",
+        metrics: [
+          { value: "cot-positioning", label: "COT Positioning" },
+        ],
+      },
+    },
+  },
+};
+
   const wtiControls = {
     horizon: document.getElementById("wti-horizon"),
     geoscen: document.getElementById("wti-geoscen-mode"),
@@ -1273,7 +1356,53 @@ const DATA_ENDPOINTS = {
   ratesSpreads: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/rates/rates_spread_data.json",
   ratesPolicy: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/rates/rates_policy_pressure_data.json",
   ratesSigma: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/rates/rates_sigma_rank.json",
-  fxDepth: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/fx/fx_depth_serving_v1.json",  
+  fxDepth: "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/fx/fx_depth_serving_v1.json",
+  
+  cflow: {
+    "weekly-economic-index":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/weekly_economic_index_serving.json",
+
+    "core-pce":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/core_pce_serving.json",
+
+    "industrial-production":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/industrial_production_serving.json",
+
+    "building-permits":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/building_permits_serving.json",
+
+    "jolts-openings":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/jolts_openings_serving.json",
+
+    "initial-jobless-claims":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/initial_jobless_claims_serving.json",
+
+    "weekly-hours-worked":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/weekly_hours_worked_serving.json",
+
+    "capacity-utilization":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/capacity_utilization_serving.json",
+
+    "retail-sales":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/retail_sales_serving.json",
+
+    "consumer-sentiment":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/consumer_sentiment_serving.json",
+
+    "core-cpi":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/core_cpi_serving.json",
+
+    "ppi-finished-goods":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/ppi_finished_goods_serving.json",
+
+    "real-personal-income":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/real_personal_income_serving.json",
+      
+    "cflow-state-engine":
+      "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_state_engine_serving.json",
+  
+    },
+
 };
 
 
