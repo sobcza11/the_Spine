@@ -1574,7 +1574,7 @@ const CFLOW_MENU = {
       activity: {
         label: "Economic Activity",
         metrics: [
-          { value: "weekly-economic-index", label: "WEI" },
+          { value: "weekly-economic-index", label: "Redbook" },
           { value: "industrial-production", label: "Industrial Production" },
           { value: "real-personal-income", label: "Real Personal Income" },
           { value: "retail-sales", label: "Retail Sales" },
@@ -1626,41 +1626,49 @@ const CFLOW_MENU = {
           },
         },
 
-      financial: {
-        label: "Financial Transmission",
-        subsystems: {
+financial: {
+  label: "Financial Transmission",
+  subsystems: {
 
-          funding: {
-            label: "Funding",
-            metrics: [
-              { value: "sofr-funding", label: "SOFR Funding Stress" },
-              { value: "funding-stress-composite", label: "Funding Stress Composite" },
-            ],
-          },
+    composite: {
+      label: "Composite",
+      metrics: [
+        { value: "financial-transmission-composite", label: "Financial Transmission Composite" },
+      ],
+    },
 
-          credit: {
-            label: "Credit",
-            metrics: [
-              { value: "hy-oas", label: "High Yield OAS" },
-              { value: "credit-transmission-composite", label: "Credit Transmission Composite" },
-            ],
-          },
+    funding: {
+      label: "Funding",
+      metrics: [
+        { value: "sofr-funding", label: "SOFR Funding Stress" },
+        { value: "funding-stress-composite", label: "Funding Stress Composite" },
+      ],
+    },
 
-          liquidity: {
-            label: "Liquidity",
-            metrics: [
-              { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" },
-            ],
-          },
+    credit: {
+      label: "Credit",
+      metrics: [
+        { value: "hy-oas", label: "High Yield OAS" },
+        { value: "credit-transmission-composite", label: "Credit Transmission Composite" },
+      ],
+    },
 
-          positioning: {
-            label: "Positioning",
-            metrics: [
-              { value: "cot-positioning", label: "COT Positioning" },
-            ],
-          },
-        },
-      },
+    liquidity: {
+      label: "Liquidity",
+      metrics: [
+        { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" },
+      ],
+    },
+
+    positioning: {
+      label: "Positioning",
+      metrics: [
+        { value: "cot-positioning", label: "COT Positioning" },
+      ],
+    },
+
+  },
+},
       };
 
   const FINSTATE_IV_VECTOR_SKELETON = [
@@ -2269,6 +2277,9 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
 
       "liquidity-constraint-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/liquidity_constraint_composite_serving.json",
+
+      "financial-transmission-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/financial_transmission_composite_serving.json",
 
       },
   };
@@ -7530,8 +7541,6 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
-
-
 
 
 
