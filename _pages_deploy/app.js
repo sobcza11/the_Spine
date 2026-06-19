@@ -1621,37 +1621,39 @@ const CFLOW_MENU = {
           { value: "rail-freight-intermodal", label: "Rail Freight Intermodal" },
           { value: "container-shipping-index", label: "Container Shipping Index" },
           { value: "baltic-dry-index", label: "Baltic Dry Proxy" },
-        ],
-      },
-    },
-  },
+            ],
+            },
+          },
+        },
 
-  financial: {
-    label: "Financial Transmission",
-    subsystems: {
-      funding: {
-        label: "Funding",
-        metrics: [
-          { value: "sofr-funding", label: "SOFR Funding Stress" },
-        ],
-      },
+      financial: {
+        label: "Financial Transmission",
+        subsystems: {
 
-      credit: {
-        label: "Credit",
-        metrics: [
-          { value: "hy-oas", label: "High Yield OAS" },
-        ],
-      },
+          funding: {
+            label: "Funding",
+            metrics: [
+              { value: "sofr-funding", label: "SOFR Funding Stress" },
+              { value: "funding-stress-composite", label: "Funding Stress Composite" },
+            ],
+          },
 
-      positioning: {
-        label: "Positioning",
-        metrics: [
-          { value: "cot-positioning", label: "COT Positioning" },
-        ],
+          credit: {
+            label: "Credit",
+            metrics: [
+              { value: "hy-oas", label: "High Yield OAS" },
+            ],
+          },
+
+          positioning: {
+            label: "Positioning",
+            metrics: [
+              { value: "cot-positioning", label: "COT Positioning" },
+            ],
+          },
+        },
       },
-    },
-  },
-};
+      };
 
 
   const FINSTATE_IV_VECTOR_SKELETON = [
@@ -2243,9 +2245,11 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "energy-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/energy_composite_serving.json",
 
+      "funding-stress-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/funding_stress_composite_serving.json",
+
       },
   };
-
 
 
   const EQUITIES_MARKET_INDEXES = ["SPY", "QQQ", "DIA", "ITOT", "MDY", "IWM"];
@@ -7504,6 +7508,21 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
