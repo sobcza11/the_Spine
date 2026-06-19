@@ -7,10 +7,12 @@ import io
 import json
 
 
+CURRENT_YEAR = datetime.now(UTC).year
+
 LIVE_SOURCES = {
-    "legacy_futures_live": "https://www.cftc.gov/files/dea/history/deacot2025.zip",
-    "financial_futures_live": "https://www.cftc.gov/files/dea/history/com_fin_txt_2025.zip",
-    "disaggregated_commodities_live": "https://www.cftc.gov/files/dea/history/fut_disagg_txt_2025.zip",
+    "legacy_futures_live": f"https://www.cftc.gov/files/dea/history/deacot{CURRENT_YEAR}.zip",
+    "financial_futures_live": f"https://www.cftc.gov/files/dea/history/com_fin_txt_{CURRENT_YEAR}.zip",
+    "disaggregated_commodities_live": f"https://www.cftc.gov/files/dea/history/fut_disagg_txt_{CURRENT_YEAR}.zip",
 }
 
 
@@ -25,7 +27,9 @@ def download_cftc_zip(url: str) -> pd.DataFrame:
         ]
 
         if not data_files:
-            raise ValueError(f"No CSV/TXT found in ZIP payload. Found: {zf.namelist()}")
+            raise ValueError(
+                f"No CSV/TXT found in ZIP payload. Found: {zf.namelist()}"
+            )
 
         with zf.open(data_files[0]) as f:
             df = pd.read_csv(
@@ -121,3 +125,5 @@ def build_cot_weekly_update_engine_v1():
 
 if __name__ == "__main__":
     build_cot_weekly_update_engine_v1()
+
+    
