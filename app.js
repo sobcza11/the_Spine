@@ -2248,6 +2248,9 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "funding-stress-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/funding_stress_composite_serving.json",
 
+	"sofr-funding":
+  		"https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/sofr_funding_stress_serving.json",
+
       },
   };
 
