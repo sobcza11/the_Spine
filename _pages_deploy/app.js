@@ -1642,6 +1642,14 @@ const CFLOW_MENU = {
             label: "Credit",
             metrics: [
               { value: "hy-oas", label: "High Yield OAS" },
+              { value: "credit-transmission-composite", label: "Credit Transmission Composite" },
+            ],
+          },
+
+          liquidity: {
+            label: "Liquidity",
+            metrics: [
+              { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" },
             ],
           },
 
@@ -1654,7 +1662,6 @@ const CFLOW_MENU = {
         },
       },
       };
-
 
   const FINSTATE_IV_VECTOR_SKELETON = [
     {
@@ -2110,7 +2117,7 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
   let finstateUniverseData = [];
   let finstateGlobalLiteMetricsData = [];
 
-  const DATA_ENDPOINTS = {
+    const DATA_ENDPOINTS = {
     price:
       "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/fx_price_data.json",
     spreads:
@@ -2212,9 +2219,6 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "cflow-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_composite_serving.json",
 
-      "baltic-dry-index":
-        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/baltic_dry_proxy_serving.json",
-
       "container-shipping-index":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/container_shipping_index_serving.json",
 
@@ -2248,8 +2252,20 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "funding-stress-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/funding_stress_composite_serving.json",
 
-	"sofr-funding":
-  		"https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/sofr_funding_stress_serving.json",
+      "sofr-funding":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/sofr_funding_stress_serving.json",
+
+      "hy-oas":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/high_yield_oas_serving.json",
+
+      "credit-transmission-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/credit_transmission_composite_serving.json",
+
+      "baltic-dry":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/baltic_dry_proxy_serving.json",
+
+      "cot-positioning":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/financial/cot_positioning_serving.json",
 
       },
   };
@@ -7511,7 +7527,6 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
-
 
 
 
