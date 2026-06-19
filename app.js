@@ -2117,7 +2117,7 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
   let finstateUniverseData = [];
   let finstateGlobalLiteMetricsData = [];
 
-    const DATA_ENDPOINTS = {
+  const DATA_ENDPOINTS = {
     price:
       "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/fx_price_data.json",
     spreads:
@@ -2266,6 +2266,9 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
 
       "cot-positioning":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cot_positioning_serving.json",
+
+      "liquidity-constraint-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/liquidity_constraint_composite_serving.json",
 
       },
   };
