@@ -2265,7 +2265,7 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/baltic_dry_proxy_serving.json",
 
       "cot-positioning":
-        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/financial/cot_positioning_serving.json",
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cot_positioning_serving.json",
 
       },
   };
