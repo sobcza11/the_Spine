@@ -1566,11 +1566,12 @@ function remapFinStateRowByPeriod(row, period) {
       direction: "→",
     },
   ];
-
 const CFLOW_MENU = {
+
   physical: {
     label: "Physical Economy",
     subsystems: {
+
       activity: {
         label: "Economic Activity",
         metrics: [
@@ -1584,30 +1585,31 @@ const CFLOW_MENU = {
         ],
       },
 
-    labor: {
-      label: "Labor Transmission",
-      metrics: [
-        { value: "labor-composite", label: "Labor Composite" },
-        { value: "jolts-openings", label: "JOLTS Openings" },
-        { value: "initial-jobless-claims", label: "Initial Claims" },
-        { value: "weekly-hours-worked", label: "Weekly Hours Worked" },
-      ],
-    },
+      labor: {
+        label: "Labor Transmission",
+        metrics: [
+          { value: "labor-composite", label: "Labor Composite" },                // ✅
+          { value: "jolts-openings", label: "JOLTS Openings" },
+          { value: "initial-jobless-claims", label: "Initial Claims" },
+          { value: "weekly-hours-worked", label: "Weekly Hours Worked" },
+        ],
+      },
+
       inflation: {
         label: "Inflation Transmission",
         metrics: [
-            { value: "inflation-composite", label: "Inflation Composite" },
-            { value: "core-pce", label: "Core PCE" },
-            { value: "core-cpi", label: "Core CPI" },
-            { value: "ppi-finished-goods", label: "PPI Finished Goods" },
-          ],
-        },
+          { value: "inflation-composite", label: "Inflation Composite" },        // ✅
+          { value: "core-pce", label: "Core PCE" },
+          { value: "core-cpi", label: "Core CPI" },
+          { value: "ppi-finished-goods", label: "PPI Finished Goods" },
+        ],
+      },
 
       energy: {
         label: "Energy Demand",
         metrics: [
-          { value: "energy-composite", label: "Energy Composite" },
-          { value: "diesel-demand", label: "Diesel Demand" },
+          { value: "energy-composite", label: "Energy Composite" },              // ✅
+          { value: "diesel-demand", label: "Diesel Demand" },                    // 🚧
           { value: "distillate-inventories", label: "Distillate Inventories" },
         ],
       },
@@ -1615,61 +1617,70 @@ const CFLOW_MENU = {
       logistics: {
         label: "Logistics / Freight",
         metrics: [
-          { value: "cass-freight-shipments", label: "Cass Freight Shipments" },
+          { value: "cass-freight-shipments", label: "Cass Freight Shipments" },  // 🚧
           { value: "freight-transportation-services", label: "Freight Transportation Services" },
           { value: "rail-freight-carloads", label: "Rail Freight Carloads" },
           { value: "rail-freight-intermodal", label: "Rail Freight Intermodal" },
-          { value: "container-shipping-index", label: "Container Shipping Index" },
-          { value: "baltic-dry-index", label: "Baltic Dry Proxy" },
-            ],
-            },
-          },
-        },
+          { value: "container-shipping-index", label: "Container Shipping Index" }, // 🚧
+          { value: "baltic-dry-index", label: "Baltic Dry Proxy" },                 // 🚧
+        ],
+      },
 
-financial: {
-  label: "Financial Transmission",
-  subsystems: {
-
-    composite: {
-      label: "Composite",
-      metrics: [
-        { value: "financial-transmission-composite", label: "Financial Transmission Composite" },
-      ],
     },
-
-    funding: {
-      label: "Funding",
-      metrics: [
-        { value: "sofr-funding", label: "SOFR Funding Stress" },
-        { value: "funding-stress-composite", label: "Funding Stress Composite" },
-      ],
-    },
-
-    credit: {
-      label: "Credit",
-      metrics: [
-        { value: "hy-oas", label: "High Yield OAS" },
-        { value: "credit-transmission-composite", label: "Credit Transmission Composite" },
-      ],
-    },
-
-    liquidity: {
-      label: "Liquidity",
-      metrics: [
-        { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" },
-      ],
-    },
-
-    positioning: {
-      label: "Positioning",
-      metrics: [
-        { value: "cot-positioning", label: "COT Positioning" },
-      ],
-    },
-
   },
-},
-      };
+
+  financial: {
+    label: "Financial Transmission",
+    subsystems: {
+
+      composite: {
+        label: "Composite",
+        metrics: [
+          { value: "financial-transmission-composite", label: "Financial Transmission Composite" }, // ✅
+        ],
+      },
+
+      funding: {
+        label: "Funding",
+        metrics: [
+          { value: "sofr-funding", label: "SOFR Funding Stress" },               // ✅
+          { value: "funding-stress-composite", label: "Funding Stress Composite" }, // ✅
+        ],
+      },
+
+      credit: {
+        label: "Credit",
+        metrics: [
+          { value: "hy-oas", label: "High Yield OAS" },                          // ✅
+          { value: "credit-transmission-composite", label: "Credit Transmission Composite" }, // ✅
+        ],
+      },
+
+      liquidity: {
+        label: "Liquidity",
+        metrics: [
+          { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" }, // ✅
+        ],
+      },
+
+      positioning: {
+        label: "Positioning",
+        metrics: [
+          { value: "cot-positioning", label: "COT Positioning" },                // ✅
+        ],
+      },
+
+      ivt: {
+        label: "IV[t] Routing",
+        metrics: [
+          { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" }, // ✅
+        ],
+      },
+
+    },
+  },
+
+};
 
   const FINSTATE_IV_VECTOR_SKELETON = [
     {
@@ -2280,6 +2291,9 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
 
       "financial-transmission-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/financial_transmission_composite_serving.json",
+
+      "cflow-iv-vector-contribution":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_iv_vector_contribution_serving.json",
 
       },
   };
