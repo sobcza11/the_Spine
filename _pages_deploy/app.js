@@ -2234,11 +2234,18 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "inflation-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/inflation_composite_serving.json",
 
+      "diesel-demand":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/diesel_demand_serving.json",
+
+      "distillate-inventories":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/distillate_inventories_serving.json",
+
       "energy-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/energy_composite_serving.json",
 
       },
   };
+
 
 
   const EQUITIES_MARKET_INDEXES = ["SPY", "QQQ", "DIA", "ITOT", "MDY", "IWM"];
