@@ -1596,15 +1596,17 @@ const CFLOW_MENU = {
       inflation: {
         label: "Inflation Transmission",
         metrics: [
-          { value: "core-pce", label: "Core PCE" },
-          { value: "core-cpi", label: "Core CPI" },
-          { value: "ppi-finished-goods", label: "PPI Finished Goods" },
-        ],
-      },
+            { value: "inflation-composite", label: "Inflation Composite" },
+            { value: "core-pce", label: "Core PCE" },
+            { value: "core-cpi", label: "Core CPI" },
+            { value: "ppi-finished-goods", label: "PPI Finished Goods" },
+          ],
+        },
 
       energy: {
         label: "Energy Demand",
         metrics: [
+          { value: "energy-composite", label: "Energy Composite" },
           { value: "diesel-demand", label: "Diesel Demand" },
           { value: "distillate-inventories", label: "Distillate Inventories" },
         ],
@@ -2228,6 +2230,12 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
         
       "labor-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/labor_composite_serving.json",
+
+      "inflation-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/inflation_composite_serving.json",
+
+      "energy-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/energy_composite_serving.json",
 
       },
   };
@@ -7489,6 +7497,17 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
