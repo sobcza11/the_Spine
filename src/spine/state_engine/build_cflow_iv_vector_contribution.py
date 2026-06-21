@@ -9,6 +9,9 @@ TRANSPORT = ROOT / "data/serving/cflow/transport_transmission_composite_serving.
 ECON = ROOT / "data/serving/cflow/econ_composite_serving.json"
 CAPITAL = ROOT / "data/serving/cflow/capital_composite_serving.json"
 
+FRAGILITY = ROOT / "data/serving/cflow/fragility_composite_serving.json"
+DISPERSION = ROOT / "data/serving/cflow/dispersion_composite_serving.json"
+
 OUTPUT = ROOT / "data/serving/c_flow/cflow_iv_vector_contribution_serving.json"
 
 
@@ -34,6 +37,12 @@ def main():
     econ_latest, _ = load_latest(ECON)
     capital_latest, _ = load_latest(CAPITAL)
 
+    fragility_latest, _ = load_latest(FRAGILITY)
+    dispersion_latest, _ = load_latest(DISPERSION)
+
+    fragility_score = float(fragility_latest["score"])
+    dispersion_score = float(dispersion_latest["score"])
+
     financial_score = float(financial_latest["score"])
     liquidity_score = float(liquidity_latest["score"])
     transport_score = float(transport_latest["score"])
@@ -43,6 +52,9 @@ def main():
     iv_p = round((0.60 * transport_score) + (0.40 * econ_score), 2)
     iv_m = round((0.50 * transport_score) + (0.50 * econ_score), 2)
     iv_l = round((0.70 * liquidity_score) + (0.30 * financial_score), 2)
+
+    iv_f = fragility_score
+    iv_d = dispersion_score
 
     iv_x = round((0.50 * transport_score) + (0.50 * financial_score), 2)
 
@@ -60,7 +72,7 @@ def main():
         2,
     )
 
-    composite_score = round((iv_p + iv_m + iv_l + iv_x + iv_c + iv_s) / 6, 2)
+    composite_score = round((iv_p + iv_f + iv_l + iv_d + iv_m + iv_x + iv_c + iv_s) / 8, 2)
 
 
     latest_date = max(
@@ -136,6 +148,26 @@ def main():
                     "liquidity_constraint": 0.20,
                 },
             },
+
+            "F": {
+                "name": "Fragility",
+                "score": iv_f,
+                "state": classify(iv_f),
+                "source_weighting": {
+                    "fragility_composite": 1.0
+                }
+            },
+
+            "D": {
+                "name": "Dispersion",
+                "score": iv_d,
+                "state": classify(iv_d),
+                "source_weighting": {
+                    "dispersion_composite": 1.0
+                }
+            },
+
+
             "S": {
                 "name": "Systemicity",
                 "score": iv_s,
@@ -153,6 +185,8 @@ def main():
             "transport_transmission_composite": transport_latest,
             "econ_composite": econ_latest,
             "capital_composite": capital_latest,
+            "fragility_composite": fragility_latest,
+            "dispersion_composite": dispersion_latest,
         },
     }
 
