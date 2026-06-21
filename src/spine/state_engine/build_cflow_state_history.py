@@ -9,6 +9,8 @@ OUT_DIR = ROOT / "data" / "serving" / "cflow"
 
 OUT_JSON = OUT_DIR / "cflow_state_history_serving.json"
 
+IV_VECTOR = ROOT / "data/serving/c_flow/cflow_iv_vector_contribution_serving.json"
+
 STATE_FILES = {
     "weekly_economic_index": "weekly_economic_index_serving.json",
     "core_pce": "core_pce_serving.json",
@@ -98,6 +100,9 @@ def score_from_signal(value, neutral=0.0, scale=2.0):
 
     return clamp(2.5 + ((float(value) - neutral) / scale))
 
+def load_latest_json(path: Path):
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return payload["latest"], payload
 
 def classify_state(letter, score):
     if score is None:
@@ -225,6 +230,8 @@ def build_cflow_state_history():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     histories = build_indicator_history()
+    iv_latest, iv_payload = load_latest_json(IV_VECTOR)
+    iv = iv_payload.get("iv_vector", {})
 
     all_dates = sorted({
         row["date"]
@@ -252,6 +259,38 @@ def build_cflow_state_history():
             else None
         )
 
+
+
+        live_row = {
+            "date": str(iv_latest["date"]),
+
+            "P": iv.get("P", {}).get("score"),
+            "P_state": iv.get("P", {}).get("state", "Insufficient Data"),
+
+            "F": iv.get("F", {}).get("score"),
+            "F_state": iv.get("F", {}).get("state", "Insufficient Data"),
+
+            "L": iv.get("L", {}).get("score"),
+            "L_state": iv.get("L", {}).get("state", "Insufficient Data"),
+
+            "D": iv.get("D", {}).get("score"),
+            "D_state": iv.get("D", {}).get("state", "Insufficient Data"),
+
+            "M": iv.get("M", {}).get("score"),
+            "M_state": iv.get("M", {}).get("state", "Insufficient Data"),
+
+            "X": iv.get("X", {}).get("score"),
+            "X_state": iv.get("X", {}).get("state", "Insufficient Data"),
+
+            "C": iv.get("C", {}).get("score"),
+            "C_state": iv.get("C", {}).get("state", "Insufficient Data"),
+
+            "S_proxy": iv.get("S", {}).get("score"),
+            "S_state": iv.get("S", {}).get("state", "Insufficient Data"),
+        }
+        
+        iv = iv_payload.get("iv_vector", {})
+
         row = {
             "date": dt.strftime("%Y-%m-%d"),
             "P": dimensions["P"]["score"],
@@ -278,11 +317,23 @@ def build_cflow_state_history():
 
     latest = history_rows[-1] if history_rows else {}
 
+    
+
+    history_rows = [
+        row for row in history_rows
+        if row.get("date") != live_row["date"]
+    ]
+
+    history_rows.append(live_row)
+    history_rows = sorted(history_rows, key=lambda x: x["date"])
+    latest = history_rows[-1] if history_rows else {}
+
     payload = {
         "meta": {
             "name": "C•FLOW Historical State Series",
             "source": "the_Spine | C•FLOW deterministic state history engine",
-            "method": "asof_bounded_average_v1",
+            "method": "asof_bounded_average_plus_live_iv_vector_v1",
+            "live_iv_vector_overlay": True,
             "forecasting": "prohibited",
             "ft_gmi_role": "Historical State Series",
             "iv_mapping": ["P", "F", "L", "D", "M", "X", "C", "S"],
