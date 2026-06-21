@@ -1700,7 +1700,7 @@ const CFLOW_MENU = {
     {
       key: "L",
       name: "Liquidity",
-      layer: "System Pressure",
+      layer: "Funding Liquidity",
       value: "--",
       change: "--",
       period: "QRT",
@@ -1718,7 +1718,7 @@ const CFLOW_MENU = {
     {
       key: "M",
       name: "Momentum",
-      layer: "System Pressure",
+      layer: "Economic Momentum",
       value: "--",
       change: "--",
       period: "QRT",
