@@ -1514,7 +1514,7 @@ function remapFinStateRowByPeriod(row, period) {
     {
       key: "L",
       name: "Liquidity",
-      layer: "System Pressure",
+      layer: "Funding Liquidity",
       value: "--",
       change: "--",
       period: "QRT",
@@ -1532,7 +1532,7 @@ function remapFinStateRowByPeriod(row, period) {
     {
       key: "M",
       name: "Momentum",
-      layer: "System Pressure",
+      layer: "Economic Momentum",
       value: "--",
       change: "--",
       period: "QRT",
@@ -7589,6 +7589,20 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
