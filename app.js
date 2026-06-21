@@ -1570,7 +1570,6 @@ const CFLOW_MENU = {
   physical: {
     label: "Econ",
     subsystems: {
-
       activity: {
         label: "Activity",
         metrics: [
@@ -1616,8 +1615,7 @@ const CFLOW_MENU = {
       logistics: {
         label: "Logistics",
         metrics: [
-          { value: "transport-transmission-composite", label: "Transport Transmission Composite" }, // NEW
-
+          { value: "transport-transmission-composite", label: "Transport Composite" },
           { value: "cass-freight-shipments", label: "Cass Freight Shipments" },
           { value: "freight-transportation-services", label: "Freight Transportation Services" },
           { value: "rail-freight-carloads", label: "Rail Freight Carloads" },
@@ -1636,22 +1634,19 @@ const CFLOW_MENU = {
           { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" },
         ],
       },
-
+    },
   },
 
   financial: {
     label: "Capital",
     subsystems: {
-
-    composite: {
-      label: "Composite",
-      metrics: [
-        { value: "cflow-composite", label: "C•FLOW Composite" },
-        { value: "cflow-state-engine", label: "C•FLOW State Engine" },
-        { value: "econ-composite", label: "Econ Composite" },
-        { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" },
-      ],
-    },
+      composite: {
+        label: "Composite",
+        metrics: [
+          { value: "financial-transmission-composite", label: "Financial Transmission Composite" },
+          { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" },
+        ],
+      },
 
       funding: {
         label: "Funding",
@@ -1678,6 +1673,8 @@ const CFLOW_MENU = {
     },
   },
 };
+
+
   const FINSTATE_IV_VECTOR_SKELETON = [
     {
       key: "P",
