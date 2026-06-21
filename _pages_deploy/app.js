@@ -1566,6 +1566,7 @@ function remapFinStateRowByPeriod(row, period) {
       direction: "→",
     },
   ];
+
 const CFLOW_MENU = {
   physical: {
     label: "Econ",
@@ -1628,9 +1629,11 @@ const CFLOW_MENU = {
       composite: {
         label: "Composite",
         metrics: [
-          { value: "cflow-composite", label: "C•FLOW Composite" },
-          { value: "cflow-state-engine", label: "C•FLOW State Engine" },
-          { value: "econ-composite", label: "Econ Composite" },
+          { value: "financial-transmission-composite", label: "Financial Transmission Composite" },
+          { value: "capital-composite", label: "Capital Composite" },
+          { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" },
+          { value: "fragility-composite", label: "Fragility Composite" },
+          { value: "dispersion-composite", label: "Dispersion Composite" },
           { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" },
         ],
       },
@@ -1673,7 +1676,7 @@ const CFLOW_MENU = {
     },
   },
 };
-
+  
 
   const FINSTATE_IV_VECTOR_SKELETON = [
     {
@@ -2324,6 +2327,16 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
 
       "econ-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/econ_composite_serving.json",
+
+      "capital-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/capital_composite_serving.json",
+
+      "fragility-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/fragility_composite_serving.json",
+
+      "dispersion-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/dispersion_composite_serving.json",
+
 
       },
   };
@@ -3835,7 +3848,7 @@ function updateCFlowDropdowns({ resetSubsystem = false, resetMetric = false } = 
 
     if (viewName === "cflow") {
       document.body.classList.add("view-cflow", "about-sidebar-hidden");
-      void renderCFlowVector();;
+      void renderCFlowVector();
       return;
     }
 
@@ -5385,42 +5398,6 @@ async function renderGlobalEquityRegion(region, horizon) {
     const visible = HORIZON_LENGTH[horizon] || 30;
     return enriched.slice(-visible);
   }
-
-  function getEmbeddedSpreadRows(pair, horizon) {
-    const store = activeDataStore.spreads || {};
-    const symbol = DISPLAY_PAIR_TO_SYMBOL[pair];
-    const reverse = reverseSymbol(symbol);
-
-    const payload =
-      store?.pairs?.[pair] ||
-      store?.pairs?.[symbol] ||
-      store?.[pair] ||
-      store?.[symbol] ||
-      store?.[reverse] ||
-      null;
-
-    const raw = Array.isArray(payload)
-      ? payload
-      : Array.isArray(payload?.rows)
-        ? payload.rows
-        : [];
-
-    return raw
-      .map((r) => ({
-        date: r.date || r.as_of_date,
-        value: Number(
-          r.yld_10y_diff ??
-            r.comparative_spread ??
-            r.bond_spread ??
-            r.spread ??
-            r.value,
-        ),
-      }))
-      .filter((r) => r.date && Number.isFinite(r.value))
-      .sort((a, b) => String(a.date).localeCompare(String(b.date)))
-      .slice(-(SPREAD_HORIZON_LENGTH[horizon] || 24));
-  }
-
 
 
   function buildSpreadSeries(rows, spreadMode) {
@@ -7612,6 +7589,21 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
