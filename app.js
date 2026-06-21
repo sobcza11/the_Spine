@@ -1635,6 +1635,7 @@ const CFLOW_MENU = {
           { value: "fragility-composite", label: "Fragility Composite" },
           { value: "dispersion-composite", label: "Dispersion Composite" },
           { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" },
+          { value: "cflow-regime-engine", label: "C•FLOW Regime Engine" },
         ],
       },
     },
@@ -1921,6 +1922,118 @@ async function renderCFlowVector() {
     MODULE_QUESTIONS.cflow,
   );
 }
+
+async function renderCflowOracleChamber() {
+  const url = DATA_ENDPOINTS.oraclechambers?.["cflow-chamber"];
+
+  try {
+    const payload = await fetchJsonWithBust(url);
+
+    const latest = payload.latest || {};
+    const attribution = payload.attribution || {};
+
+    const target = document.querySelector(".cflow-liquidity-panel");
+    if (!target) return;
+
+    const drivers = (attribution.drivers || [])
+      .map((x) => `${x.vector} ${formatNumber(x.score, 2)}`)
+      .join(" • ");
+
+    const offsets = (attribution.offsets || [])
+      .map((x) => `${x.vector} ${formatNumber(x.score, 2)}`)
+      .join(" • ");
+
+    target.innerHTML = `
+      <div class="panel-title">ORACLE CHAMBER • C•FLOW</div>
+
+      <div class="chart-header-row">
+        <div class="chart-stat">
+          <span class="chart-stat-label">Regime</span>
+          <span class="chart-stat-value">${latest.regime || "--"}</span>
+        </div>
+
+        <div class="chart-stat">
+          <span class="chart-stat-label">C•FLOW</span>
+          <span class="chart-stat-value">${formatNumber(latest.cflow_score, 2)}</span>
+        </div>
+
+        <div class="chart-stat">
+          <span class="chart-stat-label">Mode</span>
+          <span class="chart-stat-value">Explain</span>
+        </div>
+      </div>
+
+      <div class="panel-placeholder" style="display:block;text-align:left;">
+        <div><b>Observation</b></div>
+        <div style="margin-bottom:10px;">${payload.observation || "--"}</div>
+
+        <div><b>Diagnosis</b></div>
+        <div style="margin-bottom:10px;">${payload.diagnosis || "--"}</div>
+
+        <div><b>Drivers</b></div>
+        <div>${drivers || "--"}</div>
+
+        <div style="margin-top:8px;"><b>Offsets</b></div>
+        <div>${offsets || "--"}</div>
+      </div>
+
+      <div class="panel-footnote">
+        Oracle Chambers explains deterministic state only. No forecast.
+      </div>
+    `;
+  } catch (err) {
+    console.error("Failed loading C•FLOW Oracle Chamber", err);
+  }
+}
+
+
+async function renderCflowRegimeEngine() {
+  const url = DATA_ENDPOINTS.cflow["cflow-regime-engine"];
+
+  try {
+    const payload = await fetchJsonWithBust(url);
+    const latest = payload.latest || {};
+    const attribution = payload.attribution || {};
+
+    const regime = latest.regime || "--";
+    const score = formatNumber(latest.cflow_score, 2);
+
+    const drivers = (attribution.primary_drivers || [])
+      .map(([key, value]) => `${key} ${formatNumber(value, 2)}`)
+      .join(" • ");
+
+    const offsets = (attribution.primary_offsets || [])
+      .map(([key, value]) => `${key} ${formatNumber(value, 2)}`)
+      .join(" • ");
+
+    const label = document.getElementById("cflow-regime-label");
+    const scoreNode = document.getElementById("cflow-regime-score");
+    const summary = document.getElementById("cflow-regime-summary");
+    const note = document.getElementById("cflow-regime-note");
+
+    if (label) label.textContent = regime;
+    if (scoreNode) scoreNode.textContent = score;
+
+    if (summary) {
+      summary.innerHTML = `
+        <div>
+          <div>Drivers: ${drivers || "--"}</div>
+          <div>Offsets: ${offsets || "--"}</div>
+        </div>
+      `;
+    }
+
+    if (note) {
+      note.textContent =
+        attribution.diagnostic_note ||
+        "Current regime classification only. No forecast.";
+    }
+  } catch (err) {
+    console.error("Failed loading C•FLOW Regime Engine", err);
+  }
+}
+
+
 
 function renderCoreModelIVVector() {
   renderModuleIVVector(
@@ -2337,8 +2450,24 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "dispersion-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/dispersion_composite_serving.json",
 
+      "cflow-regime-engine":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_regime_engine_serving.json",
+
+      "cflow-regime-definitions":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_regime_definitions_serving.json",
 
       },
+
+    oraclechambers: {
+      "registry":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/oracle_chambers_registry.json",
+
+      "cflow-chamber":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/cflow_chamber_serving.json",
+
+
+    },
+
   };
 
 
@@ -6807,8 +6936,15 @@ cflowControls.domain?.addEventListener("change", () => {
 async function renderCFlow() {
   updateCFlowDropdowns();
   await renderCFlowVector();
+  await renderCflowOracleChamber();
 
   const metricKey = cflowControls.metric?.value;
+
+  if (metricKey === "cflow-regime-engine") {
+    await renderCflowRegimeEngine();
+    return;
+  }
+
   const endpoint = DATA_ENDPOINTS.cflow?.[metricKey];
 
   const title = document.querySelector(".cflow-quality-panel .panel-title");
@@ -6869,6 +7005,9 @@ async function renderCFlow() {
     `;
   }
 }
+
+
+
 
   cflowControls.subsystem?.addEventListener("change", () => {
     updateCFlowDropdowns();
@@ -7504,6 +7643,42 @@ async function renderCFlow() {
     }
   });
 
+  async function loadCflowRegimeEngine() {
+    const url = "data/serving/cflow/cflow_regime_engine_serving.json";
+
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const data = await res.json();
+      const latest = data.latest || {};
+      const attribution = data.attribution || {};
+
+      const regime = latest.regime ?? "--";
+      const score = latest.cflow_score ?? "--";
+
+      const drivers = (attribution.primary_drivers || [])
+        .map(([name, value]) => `${name} ${Number(value).toFixed(2)}`)
+        .join(" • ");
+
+
+      const offsets = (attribution.primary_offsets || [])
+        .map(([name, value]) => `${name} ${Number(value).toFixed(2)}`)
+        .join(" • ");
+
+      document.getElementById("cflow-regime-label").textContent = regime;
+      document.getElementById("cflow-regime-score").textContent =
+        score === "--" ? "--" : Number(score).toFixed(2);
+      document.getElementById("cflow-regime-drivers").textContent = drivers || "--";
+      document.getElementById("cflow-regime-offsets").textContent = offsets || "--";
+      document.getElementById("cflow-regime-note").textContent =
+        data.attribution?.diagnostic_note || "Current regime classification only.";
+    } catch (err) {
+      console.error("Failed to load C•FLOW Regime Engine:", err);
+    }
+  }
+
+
   Object.values(ratesControls).forEach((el) => {
     if (el) {
       el.addEventListener("change", () => {
@@ -7589,6 +7764,47 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
