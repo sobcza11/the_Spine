@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parents[3]
 
 CFLOW_COMPOSITE = ROOT / "data/serving/cflow/cflow_composite_serving.json"
 ECON_COMPOSITE = ROOT / "data/serving/cflow/econ_composite_serving.json"
+CAPITAL_COMPOSITE = ROOT / "data/serving/cflow/capital_composite_serving.json"
 FINANCIAL_COMPOSITE = ROOT / "data/serving/c_flow/financial_transmission_composite_serving.json"
 IV_VECTOR = ROOT / "data/serving/c_flow/cflow_iv_vector_contribution_serving.json"
 
@@ -37,18 +38,40 @@ def classify(score: float) -> str:
 def main():
     cflow = load_latest(CFLOW_COMPOSITE)
     econ = load_latest(ECON_COMPOSITE)
+    capital = load_latest(CAPITAL_COMPOSITE)
     financial = load_latest(FINANCIAL_COMPOSITE)
 
-    iv_payload = json.loads(IV_VECTOR.read_text(encoding="utf-8")) if IV_VECTOR.exists() else {}
+    iv_payload = json.loads(IV_VECTOR.read_text(encoding="utf-8"))
+    iv_latest = iv_payload["latest"]
     iv_vector = iv_payload.get("iv_vector", {})
+
+    active_vectors = {
+        key: val
+        for key, val in iv_vector.items()
+        if val.get("score") is not None
+    }
+
+    vector_scores = [
+        float(val["score"])
+        for val in active_vectors.values()
+        if val.get("score") is not None
+    ]
+
+    vector_score = round(sum(vector_scores) / len(vector_scores), 2)
 
     latest_date = max(
         cflow["date"],
         econ["date"],
+        capital["date"],
         financial["date"],
+        str(iv_latest["date"]),
     )
 
-    score = round(cflow["score"], 2)
+    score = round(
+        (0.60 * cflow["score"])
+        + (0.40 * vector_score),
+        2,
+    )
 
     out = {
         "metric": "C•FLOW State Engine",
@@ -59,9 +82,11 @@ def main():
         "meta": {
             "name": "C•FLOW State Engine",
             "forecasting": "prohibited",
-            "phase": "8N",
-            "method": "cflow_composite_state_engine_v1",
-            "state_source": "cflow_composite_serving",
+            "phase": "8S",
+            "method": "cflow_composite_plus_full_iv_vector_v1",
+            "state_source": "cflow_composite + iv_vector_8of8",
+            "active_vector_count": len(active_vectors),
+            "target_vector_count": 8,
         },
         "latest": {
             "date": latest_date,
@@ -73,27 +98,45 @@ def main():
         "state": {
             "level": classify(score),
             "score": score,
+            "cflow_composite_score": cflow["score"],
+            "iv_vector_score": vector_score,
+            "active_vector_count": len(active_vectors),
+            "target_vector_count": 8,
+            "coverage": f"{len(active_vectors)}/8",
             "interpretation": (
-                "C•FLOW is soft/benign."
+                "C•FLOW is soft/benign with full IV[t] routing coverage."
                 if score < 25
-                else "C•FLOW is under watch."
+                else "C•FLOW is under watch with full IV[t] routing coverage."
                 if score < 50
-                else "C•FLOW is in stress."
+                else "C•FLOW is in stress with full IV[t] routing coverage."
                 if score < 75
-                else "C•FLOW is constrained."
+                else "C•FLOW is constrained with full IV[t] routing coverage."
             ),
         },
+        "iv_vector": iv_vector,
         "attribution": {
             "cflow_composite": {
                 "date": cflow["date"],
                 "score": cflow["score"],
                 "state": cflow["state"],
-                "weight": 1.0,
+                "weight": 0.60,
+            },
+            "iv_vector_contribution": {
+                "date": str(iv_latest["date"]),
+                "score": vector_score,
+                "state": classify(vector_score),
+                "weight": 0.40,
+                "active_vector_count": len(active_vectors),
             },
             "econ_composite": {
                 "date": econ["date"],
                 "score": econ["score"],
                 "state": econ["state"],
+            },
+            "capital_composite": {
+                "date": capital["date"],
+                "score": capital["score"],
+                "state": capital["state"],
             },
             "financial_transmission_composite": {
                 "date": financial["date"],
@@ -101,7 +144,6 @@ def main():
                 "state": financial["state"],
             },
         },
-        "iv_vector": iv_vector,
     }
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
