@@ -1567,13 +1567,12 @@ function remapFinStateRowByPeriod(row, period) {
     },
   ];
 const CFLOW_MENU = {
-
   physical: {
-    label: "Physical Economy",
+    label: "Econ",
     subsystems: {
 
       activity: {
-        label: "Economic Activity",
+        label: "Activity",
         metrics: [
           { value: "weekly-economic-index", label: "Redbook" },
           { value: "industrial-production", label: "Industrial Production" },
@@ -1586,9 +1585,9 @@ const CFLOW_MENU = {
       },
 
       labor: {
-        label: "Labor Transmission",
+        label: "Labor",
         metrics: [
-          { value: "labor-composite", label: "Labor Composite" },                // ✅
+          { value: "labor-composite", label: "Labor Composite" },
           { value: "jolts-openings", label: "JOLTS Openings" },
           { value: "initial-jobless-claims", label: "Initial Claims" },
           { value: "weekly-hours-worked", label: "Weekly Hours Worked" },
@@ -1596,9 +1595,9 @@ const CFLOW_MENU = {
       },
 
       inflation: {
-        label: "Inflation Transmission",
+        label: "Inflation",
         metrics: [
-          { value: "inflation-composite", label: "Inflation Composite" },        // ✅
+          { value: "inflation-composite", label: "Inflation Composite" },
           { value: "core-pce", label: "Core PCE" },
           { value: "core-cpi", label: "Core CPI" },
           { value: "ppi-finished-goods", label: "PPI Finished Goods" },
@@ -1606,82 +1605,79 @@ const CFLOW_MENU = {
       },
 
       energy: {
-        label: "Energy Demand",
+        label: "Energy",
         metrics: [
-          { value: "energy-composite", label: "Energy Composite" },              // ✅
-          { value: "diesel-demand", label: "Diesel Demand" },                    // 🚧
+          { value: "energy-composite", label: "Energy Composite" },
+          { value: "diesel-demand", label: "Diesel Demand" },
           { value: "distillate-inventories", label: "Distillate Inventories" },
         ],
       },
 
       logistics: {
-        label: "Logistics / Freight",
+        label: "Logistics",
         metrics: [
-          { value: "cass-freight-shipments", label: "Cass Freight Shipments" },  // 🚧
+          { value: "transport-transmission-composite", label: "Transport Transmission Composite" }, // NEW
+
+          { value: "cass-freight-shipments", label: "Cass Freight Shipments" },
           { value: "freight-transportation-services", label: "Freight Transportation Services" },
           { value: "rail-freight-carloads", label: "Rail Freight Carloads" },
           { value: "rail-freight-intermodal", label: "Rail Freight Intermodal" },
-          { value: "container-shipping-index", label: "Container Shipping Index" }, // 🚧
-          { value: "baltic-dry-index", label: "Baltic Dry Proxy" },                 // 🚧
+          { value: "container-shipping-index", label: "Container Shipping Index" },
+          { value: "baltic-dry-index", label: "Baltic Dry Proxy" },
         ],
       },
-
-    },
-  },
-
-  financial: {
-    label: "Financial Transmission",
-    subsystems: {
 
       composite: {
         label: "Composite",
         metrics: [
-          { value: "financial-transmission-composite", label: "Financial Transmission Composite" }, // ✅
+          { value: "cflow-composite", label: "C•FLOW Composite" },
+          { value: "cflow-state-engine", label: "C•FLOW State Engine" },
+          { value: "econ-composite", label: "Econ Composite" },
+          { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" },
         ],
       },
+
+  },
+
+  financial: {
+    label: "Capital",
+    subsystems: {
+
+    composite: {
+      label: "Composite",
+      metrics: [
+        { value: "cflow-composite", label: "C•FLOW Composite" },
+        { value: "cflow-state-engine", label: "C•FLOW State Engine" },
+        { value: "econ-composite", label: "Econ Composite" },
+        { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" },
+      ],
+    },
 
       funding: {
         label: "Funding",
         metrics: [
-          { value: "sofr-funding", label: "SOFR Funding Stress" },               // ✅
-          { value: "funding-stress-composite", label: "Funding Stress Composite" }, // ✅
+          { value: "sofr-funding", label: "SOFR Funding Stress" },
+          { value: "funding-stress-composite", label: "Funding Stress Composite" },
         ],
       },
 
       credit: {
         label: "Credit",
         metrics: [
-          { value: "hy-oas", label: "High Yield OAS" },                          // ✅
-          { value: "credit-transmission-composite", label: "Credit Transmission Composite" }, // ✅
-        ],
-      },
-
-      liquidity: {
-        label: "Liquidity",
-        metrics: [
-          { value: "liquidity-constraint-composite", label: "Liquidity Constraint Composite" }, // ✅
+          { value: "hy-oas", label: "High Yield OAS" },
+          { value: "credit-transmission-composite", label: "Credit Transmission Composite" },
         ],
       },
 
       positioning: {
         label: "Positioning",
         metrics: [
-          { value: "cot-positioning", label: "COT Positioning" },                // ✅
+          { value: "cot-positioning", label: "COT Positioning" },
         ],
       },
-
-      ivt: {
-        label: "IV[t] Routing",
-        metrics: [
-          { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" }, // ✅
-        ],
-      },
-
     },
   },
-
 };
-
   const FINSTATE_IV_VECTOR_SKELETON = [
     {
       key: "P",
@@ -1887,13 +1883,44 @@ const CFLOW_MENU = {
     );
   }
 
-  function renderCFlowVector() {
+async function renderCFlowVector() {
+  try {
+    const url =
+      DATA_ENDPOINTS.cflow["cflow-iv-vector-contribution"];
+
+    const payload = await fetchJsonWithBust(url);
+    const vector = payload?.iv_vector || {};
+
+    const items = CFLOW_VECTOR_SKELETON.map((item) => {
+      const live = vector[item.key];
+
+      if (!live) return item;
+
+      return {
+        ...item,
+        value: formatNumber(live.score, 2),
+        change: live.state || "--",
+        period: "QRT",
+      };
+    });
+
     renderModuleIVVector(
       "cflow-vector",
-      CFLOW_VECTOR_SKELETON,
+      items,
       MODULE_QUESTIONS.cflow,
     );
+
+    return;
+  } catch (err) {
+    console.error("Failed loading C•FLOW IV[t] contribution", err);
   }
+
+  renderModuleIVVector(
+    "cflow-vector",
+    CFLOW_VECTOR_SKELETON,
+    MODULE_QUESTIONS.cflow,
+  );
+}
 
 function renderCoreModelIVVector() {
   renderModuleIVVector(
@@ -2280,7 +2307,7 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "credit-transmission-composite":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/credit_transmission_composite_serving.json",
 
-      "baltic-dry":
+      "baltic-dry-index":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/baltic_dry_proxy_serving.json",
 
       "cot-positioning":
@@ -2294,6 +2321,12 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
 
       "cflow-iv-vector-contribution":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_iv_vector_contribution_serving.json",
+
+      "transport-transmission-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/transport_transmission_composite_serving.json",
+
+      "econ-composite":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/econ_composite_serving.json",
 
       },
   };
@@ -2377,7 +2410,7 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
     fx: "Capital Prefers What?",
     finstate: "What Is Graham Seeing?",
     equities: "Who Is Leading?",
-    cflow: "Where Activity Propagates?",
+    cflow: "Activity Propagates Where?",
   };
 
   function filterIndustryRowsForEtf(rows, etfFocus) {
@@ -3624,6 +3657,22 @@ function updateCFlowDropdowns({ resetSubsystem = false, resetMetric = false } = 
     });
   }
 
+  const ABOUT_VIEW_NAMES = new Set([
+    "what-is",
+    "what-is-vector",
+    "what-is-iso",
+    "what-is-not",
+    "core-model",
+    "metrics-defined",
+    "intended-interpretation",
+    "cpmai-alignment",
+    "system-architect",
+  ]);
+
+  function getTopNavViewName(viewName) {
+    return ABOUT_VIEW_NAMES.has(viewName) ? "what-is" : viewName;
+  }
+
   document
     .querySelectorAll(
       ".top-nav-item[data-view], .sidebar-nav .nav-item[data-view], .module-tab[data-view]",
@@ -3789,7 +3838,7 @@ function updateCFlowDropdowns({ resetSubsystem = false, resetMetric = false } = 
 
     if (viewName === "cflow") {
       document.body.classList.add("view-cflow", "about-sidebar-hidden");
-      renderCFlowVector();
+      void renderCFlowVector();;
       return;
     }
 
@@ -4236,9 +4285,11 @@ function updateCFlowDropdowns({ resetSubsystem = false, resetMetric = false } = 
 
     moduleTabs.forEach((tab) => tab.classList.remove("active"));
 
+    const topNavViewName = getTopNavViewName(viewName);
+
     document
       .querySelectorAll(
-        `.module-tab[data-view="${viewName}"], .top-nav-item[data-view="${viewName}"]`,
+        `.module-tab[data-view="${topNavViewName}"], .top-nav-item[data-view="${topNavViewName}"]`,
       )
       .forEach((tab) => tab.classList.add("active"));
 
@@ -4965,7 +5016,7 @@ async function renderGlobalEquityRegion(region, horizon) {
           );
           updateStatValue(
             document.getElementById("equities-index-focus"),
-            etfFocus || "SPY",
+            formatEquitiesFocusLabel(etfFocus || "SPY"),
           );
           updateStatValue(
             document.getElementById("equities-index-mode"),
@@ -5008,7 +5059,7 @@ async function renderGlobalEquityRegion(region, horizon) {
           const etfRows = filterIndustryRowsForEtf(panelRows, etfFocus);
 
           if (industrySubtitle) {
-            industrySubtitle.textContent = `${etfFocus} | ${getEquitiesTickerLabel(etfFocus)}`;
+            industrySubtitle.textContent = formatEquitiesFocusLabel(etfFocus);
           }
 
           if (!etfRows.length) {
@@ -5082,7 +5133,7 @@ async function renderGlobalEquityRegion(region, horizon) {
           const cfg = EQUITIES_LENS_CONFIG[etfFocus];
 
           if (industrySubtitle) {
-            industrySubtitle.textContent = `Lens Structure — ${etfFocus} | ${getEquitiesTickerLabel(etfFocus)}`;
+            industrySubtitle.textContent = `Lens Structure - ${formatEquitiesFocusLabel(etfFocus)}`;
           }
 
           updateStatValue(
@@ -5421,6 +5472,15 @@ async function renderGlobalEquityRegion(region, horizon) {
       EQUITIES_TICKER_LABELS[String(symbol || "").toUpperCase()] ||
       String(symbol || "").toUpperCase()
     );
+  }
+
+  function formatEquitiesFocusLabel(symbol) {
+    const normalizedSymbol = String(symbol || "").toUpperCase();
+    const tickerLabel = getEquitiesTickerLabel(normalizedSymbol);
+
+    return tickerLabel && tickerLabel !== normalizedSymbol
+      ? `${normalizedSymbol} | ${tickerLabel}`
+      : normalizedSymbol;
   }
 
   function getSpreadModeConfig(mode) {
@@ -6772,7 +6832,7 @@ cflowControls.domain?.addEventListener("change", () => {
 
 async function renderCFlow() {
   updateCFlowDropdowns();
-  renderCFlowVector();
+  await renderCFlowVector();
 
   const metricKey = cflowControls.metric?.value;
   const endpoint = DATA_ENDPOINTS.cflow?.[metricKey];
@@ -7555,6 +7615,20 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
