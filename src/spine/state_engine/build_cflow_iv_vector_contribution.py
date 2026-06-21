@@ -7,6 +7,7 @@ FINANCIAL = ROOT / "data/serving/c_flow/financial_transmission_composite_serving
 LIQUIDITY = ROOT / "data/serving/c_flow/liquidity_constraint_composite_serving.json"
 TRANSPORT = ROOT / "data/serving/cflow/transport_transmission_composite_serving.json"
 ECON = ROOT / "data/serving/cflow/econ_composite_serving.json"
+CAPITAL = ROOT / "data/serving/cflow/capital_composite_serving.json"
 
 OUTPUT = ROOT / "data/serving/c_flow/cflow_iv_vector_contribution_serving.json"
 
@@ -31,16 +32,27 @@ def main():
     liquidity_latest, _ = load_latest(LIQUIDITY)
     transport_latest, _ = load_latest(TRANSPORT)
     econ_latest, _ = load_latest(ECON)
+    capital_latest, _ = load_latest(CAPITAL)
 
     financial_score = float(financial_latest["score"])
     liquidity_score = float(liquidity_latest["score"])
     transport_score = float(transport_latest["score"])
     econ_score = float(econ_latest["score"])
+    capital_score = float(capital_latest["score"])
 
     iv_p = round((0.60 * transport_score) + (0.40 * econ_score), 2)
     iv_m = round((0.50 * transport_score) + (0.50 * econ_score), 2)
     iv_l = round((0.70 * liquidity_score) + (0.30 * financial_score), 2)
+
     iv_x = round((0.50 * transport_score) + (0.50 * financial_score), 2)
+
+    iv_c = round(
+        (0.50 * capital_score)
+        + (0.30 * financial_score)
+        + (0.20 * liquidity_score),
+        2,
+    )
+
     iv_s = round(
         (0.40 * econ_score)
         + (0.40 * financial_score)
@@ -48,7 +60,8 @@ def main():
         2,
     )
 
-    composite_score = round((iv_p + iv_m + iv_l + iv_x + iv_s) / 5, 2)
+    composite_score = round((iv_p + iv_m + iv_l + iv_x + iv_c + iv_s) / 6, 2)
+
 
     latest_date = max(
         str(financial_latest["date"]),
@@ -113,6 +126,16 @@ def main():
                     "financial_transmission": 0.50,
                 },
             },
+            "C": {
+                "name": "Coherence",
+                "score": iv_c,
+                "state": classify(iv_c),
+                "source_weighting": {
+                    "capital_composite": 0.50,
+                    "financial_transmission": 0.30,
+                    "liquidity_constraint": 0.20,
+                },
+            },
             "S": {
                 "name": "Systemicity",
                 "score": iv_s,
@@ -129,6 +152,7 @@ def main():
             "liquidity_constraint_composite": liquidity_latest,
             "transport_transmission_composite": transport_latest,
             "econ_composite": econ_latest,
+            "capital_composite": capital_latest,
         },
     }
 
