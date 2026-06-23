@@ -53,50 +53,35 @@ DAILY_RATES_SERIES = {
 #   intentionally labeled XXST instead of XX02Y.
 
 MONTHLY_RATES_SERIES = {
-    # United States (true monthly resample of Treasury yields)
+    # United States
     "US02Y": "DGS2",
     "US10Y": "DGS10",
 
-    # Germany
-    "DE10Y": "IRLTLT01DEM156N",
-    "DEST": "IRSTCI01DEM156N",
-
-    # Italy
-    "IT10Y": "IRLTLT01ITM156N",
-    "ITST": "IRSTCI01ITM156N",
-
-    # Japan
-    "JP10Y": "IRLTLT01JPM156N",
-    "JPST": "IRSTCI01JPM156N",
-
-    # United Kingdom
-    "UK10Y": "IRLTLT01GBM156N",
-    "UKST": "IRSTCI01GBM156N",
-
-    # Switzerland
-    "CH10Y": "IRLTLT01CHM156N",
-    "CHST": "IRSTCI01CHM156N",
-
-    # Canada
+    # North America
     "CA10Y": "IRLTLT01CAM156N",
     "CAST": "IRSTCI01CAM156N",
 
-    # Australia
+    # Europe+
+    "DE10Y": "IRLTLT01DEM156N",
+    "DEST": "IRSTCI01DEM156N",
+
+    "FR10Y": "IRLTLT01FRM156N",
+    "FRST": "IRSTCI01FRM156N",
+
+    "IT10Y": "IRLTLT01ITM156N",
+    "ITST": "IRSTCI01ITM156N",
+
+    "UK10Y": "IRLTLT01GBM156N",
+    "UKST": "IRSTCI01GBM156N",
+
+    "EU10Y": "IRLTLT01EZM156N",
+
+    # Asia-Pacific
+    "JP10Y": "IRLTLT01JPM156N",
+    "JPST": "IRSTCI01JPM156N",
+
     "AU10Y": "IRLTLT01AUM156N",
     "AUST": "IRSTCI01AUM156N",
-
-    # New Zealand
-    "NZ10Y": "IRLTLT01NZM156N",
-    "NZST": "IRSTCI01NZM156N",
-
-    # Sweden
-    "SE10Y": "IRLTLT01SEM156N",
-    "SEST": "IRSTCI01SEM156N",
-
-    # Norway
-    "NO10Y": "IRLTLT01NOM156N",
-    "NOST": "IRSTCI01NOM156N",
-
 }
 
 # -----------------------------
@@ -108,22 +93,29 @@ RATES_SPREADS_DAILY = {
 }
 
 RATES_SPREADS_MONTHLY = {
+    # Domestic curve / short-rate spreads
     "US10Y_US02Y_M": ("US10Y", "US02Y"),
-    "DE10Y_DEST": ("DE10Y", "DEST"),
-    "IT10Y_ITST": ("IT10Y", "ITST"),
-    "JP10Y_JPST": ("JP10Y", "JPST"),
-    "UK10Y_UKST": ("UK10Y", "UKST"),
-    "CH10Y_CHST": ("CH10Y", "CHST"),
     "CA10Y_CAST": ("CA10Y", "CAST"),
-    "AU10Y_AUST": ("AU10Y", "AUST"),
-    "NZ10Y_NZST": ("NZ10Y", "NZST"),
-    "SE10Y_SEST": ("SE10Y", "SEST"),
-    "NO10Y_NOST": ("NO10Y", "NOST"),
 
-    # Cross-country macro spreads
+    "DE10Y_DEST": ("DE10Y", "DEST"),
+    "FR10Y_FRST": ("FR10Y", "FRST"),
+    "IT10Y_ITST": ("IT10Y", "ITST"),
+    "UK10Y_UKST": ("UK10Y", "UKST"),
+
+    "JP10Y_JPST": ("JP10Y", "JPST"),
+    "AU10Y_AUST": ("AU10Y", "AUST"),
+
+    # Europe+ dispersion
+    "FR10Y_DE10Y": ("FR10Y", "DE10Y"),
     "IT10Y_DE10Y": ("IT10Y", "DE10Y"),
+    "UK10Y_DE10Y": ("UK10Y", "DE10Y"),
+
+    # Global rates dispersion
     "US10Y_DE10Y": ("US10Y", "DE10Y"),
-    "US10Y_JP10Y": ("US10Y", "JP10Y"),
+    "US10Y_FR10Y": ("US10Y", "FR10Y"),
+    "US10Y_IT10Y": ("US10Y", "IT10Y"),
     "US10Y_UK10Y": ("US10Y", "UK10Y"),
+    "US10Y_JP10Y": ("US10Y", "JP10Y"),
+    "US10Y_AU10Y": ("US10Y", "AU10Y"),
 }
 

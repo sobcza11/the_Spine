@@ -15,12 +15,14 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      PYTHONPATH: ${{ github.workspace }}/src
       R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
       R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
       R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
       R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
       R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_REGION: auto
       FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
 
     steps:
@@ -37,12 +39,22 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir -r ./requirements.ci.txt
 
-      - name: Build monthly yields
-        shell: bash
+      - name: Build monthly rates yields leaf
         run: |
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python src/spine/jobs/rates/ingest/build_rates_yields_monthly_update_t1.py
+          python src/spine/jobs/rates/ingest/build_rates_yields_monthly_update_t1.py
 
-      - name: Validate monthly yields
-        shell: bash
+      - name: Validate monthly rates yields leaf
         run: |
-          PYTHONPATH="${GITHUB_WORKSPACE}/src" python src/spine/jobs/rates/validate/validate_rates_yields_monthly_t1.py
+          python src/spine/jobs/rates/validate/validate_rates_yields_monthly_t1.py
+
+      - name: Build monthly rates spreads
+        run: |
+          python src/spine/jobs/rates/derive/build_rates_spreads_t2.py
+
+      - name: Build selected global rates serving panel
+        run: |
+          python src/spine/jobs/rates/derive/build_rates_selected_global_panel_t1.py
+
+      - name: Build rates sigma rank
+        run: |
+          python src/spine/jobs/rates/derive/build_rates_sigma_rank_t2.py
