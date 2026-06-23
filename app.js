@@ -1636,6 +1636,8 @@ const CFLOW_MENU = {
           { value: "dispersion-composite", label: "Dispersion Composite" },
           { value: "cflow-iv-vector-contribution", label: "C•FLOW IV[t] Vector Contribution" },
           { value: "cflow-regime-engine", label: "C•FLOW Regime Engine" },
+          { value: "cflow-regime-definitions", label: "C•FLOW Regime Definitions" },
+          { value: "cflow-completion-ledger", label: "C•FLOW Completion Ledger" },
         ],
       },
     },
@@ -1986,6 +1988,109 @@ async function renderCflowOracleChamber() {
   }
 }
 
+async function renderOracleChamberCard(endpointKey, containerSelector, fallbackTitle) {
+  const url = DATA_ENDPOINTS.oraclechambers?.[endpointKey];
+  const container = document.querySelector(containerSelector);
+
+  if (!container) return;
+
+  if (!url) {
+    container.innerHTML = `<div class="panel-placeholder">No endpoint registered.</div>`;
+    return;
+  }
+
+  try {
+    const payload = await fetchJsonWithBust(url);
+    const latest = payload.latest || {};
+    const measurement = payload.measurement || [];
+    const attribution = payload.attribution || {};
+
+    const drivers = attribution.drivers || [];
+    const offsets = attribution.offsets || [];
+
+    container.innerHTML = `
+      <div class="panel-title">${payload.metric || fallbackTitle}</div>
+
+      <div class="cflow-live-card">
+        <div style="font-size:2rem;font-weight:700;color:#eef3fa;">
+          ${latest.score ?? latest.cflow_score ?? "--"}
+        </div>
+
+        <div style="margin-top:8px;color:#d5b37c;font-weight:600;">
+          ${latest.state ?? latest.regime ?? "--"}
+        </div>
+
+        <div style="margin-top:10px;color:#8f9aac;font-size:.78rem;">
+          ${payload.observation || ""}
+        </div>
+
+        <div style="margin-top:16px;text-align:left;">
+          <div style="color:#d5b37c;font-size:.75rem;margin-bottom:6px;">
+            PRIMARY DRIVERS
+          </div>
+          ${drivers
+            .map(
+              d => `
+                <div style="display:flex;justify-content:space-between;font-size:.78rem;color:#eef3fa;">
+                  <span>${d.component || d.vector || d.chamber || "--"}</span>
+                  <span>${d.score ?? "--"}</span>
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+
+        <div style="margin-top:14px;text-align:left;">
+          <div style="color:#657184;font-size:.75rem;margin-bottom:6px;">
+            MEASUREMENT
+          </div>
+          ${measurement
+            .slice(0, 5)
+            .map(
+              m => `
+                <div style="display:flex;justify-content:space-between;font-size:.76rem;color:#8f9aac;">
+                  <span>${m.component || m.vector || m.chamber || "--"}</span>
+                  <span>${m.score ?? "--"}</span>
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+
+        <div style="margin-top:14px;color:#657184;font-size:.72rem;">
+          ${latest.date || "Latest available"}
+        </div>
+      </div>
+    `;
+  } catch (err) {
+    console.error(`Failed loading ${endpointKey}`, err);
+    container.innerHTML = `<div class="panel-placeholder">Failed loading chamber.</div>`;
+  }
+}
+
+async function renderRatesOracleChamber() {
+  await renderOracleChamberCard(
+    "rates-chamber",
+    "#rates-chamber-panel",
+    "Rates Chamber"
+  );
+}
+
+async function renderFxOracleChamber() {
+  await renderOracleChamberCard(
+    "fx-chamber",
+    "#fx-chamber-panel",
+    "FX Chamber"
+  );
+}
+
+async function renderEquitiesOracleChamber() {
+  await renderOracleChamberCard(
+    "equities-chamber",
+    "#equities-chamber-panel",
+    "Equities Chamber"
+  );
+}
 
 async function renderCflowRegimeEngine() {
   const url = DATA_ENDPOINTS.cflow["cflow-regime-engine"];
@@ -2033,7 +2138,38 @@ async function renderCflowRegimeEngine() {
   }
 }
 
+async function renderCflowRegimeDefinitions() {
+  const url = DATA_ENDPOINTS.cflow["cflow-regime-definitions"];
 
+  try {
+    const payload = await fetchJsonWithBust(url);
+    const regimes = payload.regimes || {};
+
+    const title = document.querySelector(".cflow-quality-panel .panel-title");
+    const body = document.querySelector(".cflow-quality-panel .panel-placeholder");
+
+    if (title) title.textContent = "C•FLOW REGIME DEFINITIONS";
+
+    if (body) {
+      body.innerHTML = `
+        <div class="cflow-live-card" style="text-align:left;">
+          ${Object.entries(regimes)
+            .map(([name, cfg]) => `
+              <div style="margin-bottom:12px;">
+                <div style="font-weight:700;color:#eef3fa;">${name}</div>
+                <div style="font-size:.78rem;color:#8f9aac;">
+                  ${cfg.description || "--"}
+                </div>
+              </div>
+            `)
+            .join("")}
+        </div>
+      `;
+    }
+  } catch (err) {
+    console.error("Failed loading C•FLOW Regime Definitions", err);
+  }
+}
 
 function renderCoreModelIVVector() {
   renderModuleIVVector(
@@ -2456,6 +2592,9 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "cflow-regime-definitions":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_regime_definitions_serving.json",
 
+      "cflow-completion-ledger":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/cflow/cflow_completion_ledger_serving.json",
+
       },
 
     oraclechambers: {
@@ -2465,8 +2604,59 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       "cflow-chamber":
         "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/cflow_chamber_serving.json",
 
+      "rates-chamber":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/rates_chamber_serving.json",
+
+      "equities-chamber":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/equities_chamber_serving.json",
+
+      "fx-chamber":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/fx_chamber_serving.json",
+
+      "crossasset-chamber":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/crossasset_chamber_serving.json",
+
+      "oracle-router":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/oracle_router_serving.json",
+
+      "oracle-completion-ledger":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/oraclechambers/oracle_completion_ledger_serving.json",
+    },
+
+    geoscen: {
+
+      "state-engine":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_state_engine_serving.json",
+
+      "state-history":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_state_history_serving.json",
+
+      "regime-engine":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_regime_engine_serving.json",
+
+      "completion-ledger":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_completion_ledger_serving.json",
+
+      "routing-engine":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_routing_engine_serving.json",
+
+      "iv-contribution":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_iv_contribution_serving.json",
+
+      "shipping-routes":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_shipping_routes_serving.json",
+
+      "energy-geography":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_energy_geography_serving.json",
+
+      "critical-minerals":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_critical_minerals_serving.json",
+
+      "chokepoints":
+        "https://pub-73703eeb21994303b8b98f8cbcf6dbca.r2.dev/spine_us/serving/geoscen/geoscen_chokepoints_serving.json"
 
     },
+
 
   };
 
@@ -3193,6 +3383,64 @@ document.getElementById("finstate-country")?.addEventListener("change", () => {
       noMax: noVals.length ? Math.max(...noVals) : null,
       noMin: noVals.length ? Math.min(...noVals) : null,
     };
+  }
+
+  async function renderCflowCompletionLedger() {
+    const url =
+      DATA_ENDPOINTS.cflow["cflow-completion-ledger"];
+
+    try {
+      const payload = await fetchJsonWithBust(url);
+
+      const latest = payload.latest || {};
+      const components = payload.components || [];
+
+      const title = document.querySelector(
+        ".cflow-quality-panel .panel-title"
+      );
+
+      const body = document.querySelector(
+        ".cflow-quality-panel .panel-placeholder"
+      );
+
+      if (title) {
+        title.textContent =
+          "C•FLOW COMPLETION LEDGER";
+      }
+
+      if (body) {
+        body.innerHTML = `
+          <div class="cflow-live-card">
+
+            <div style="font-size:2rem;font-weight:700;">
+              ${latest.completion_pct ?? "--"}%
+            </div>
+
+            <div style="margin-top:8px;">
+              ${latest.complete_components ?? "--"}
+              /
+              ${latest.total_components ?? "--"}
+            </div>
+
+            <div style="margin-top:16px;text-align:left;">
+              ${components
+                .map(
+                  c => `
+                    <div>
+                      ${c.status === "complete" ? "✅" : "⬜"}
+                      ${c.name}
+                    </div>
+                  `
+                )
+                .join("")}
+            </div>
+
+          </div>
+        `;
+      }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   function renderIndustryPanelTable(container, rows, etfFocus) {
@@ -4008,7 +4256,7 @@ function updateCFlowDropdowns({ resetSubsystem = false, resetMetric = false } = 
   async function renderRates() {
     try {
       console.log("Rendering RATES...");
-
+      await renderRatesOracleChamber();
       renderRatesVector();
 
       const RATES_COUNTRY_ALIASES = {
@@ -5059,6 +5307,7 @@ async function renderGlobalEquityRegion(region, horizon) {
   async function renderEquities() {
     updateEquitiesGeoScenToolbarLabel();
     renderEquitiesVector();
+    await renderEquitiesOracleChamber();
 
     const region = equitiesControls.region?.value || "USA";
     const horizon = equitiesControls.horizon?.value || "30D";
@@ -6766,6 +7015,7 @@ function renderWTIInventoryIndexChart(containerId, rows) {
 
     await loadFXDepthData();
     renderFXDepth(pair);
+    await renderFxOracleChamber();
 
     if (!activeDataLoaded) {
       setChartPlaceholder(
@@ -6942,6 +7192,18 @@ async function renderCFlow() {
 
   if (metricKey === "cflow-regime-engine") {
     await renderCflowRegimeEngine();
+    return;
+  }
+
+  if (metricKey === "cflow-regime-definitions") {
+    await renderCflowRegimeDefinitions();
+    return;
+  }
+
+  if (
+    metricKey === "cflow-completion-ledger"
+  ) {
+    await renderCflowCompletionLedger();
     return;
   }
 
@@ -7764,77 +8026,6 @@ async function renderCFlow() {
     showView("what-is");
   })();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
