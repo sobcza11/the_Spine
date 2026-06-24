@@ -20,11 +20,14 @@ OUT_KEY = "spine_us/serving/rates/rates_selected_global_panel.json"
 COUNTRY_MAP = {
     "US": {"country": "US", "y2": "US02Y", "y10": "US10Y"},
     "CA": {"country": "CA", "y2": "CAST", "y10": "CA10Y"},
+
+    "EU": {"country": "EU", "y2": None, "y10": "EU10Y"},
     "DE": {"country": "DE", "y2": "DEST", "y10": "DE10Y"},
     "FR": {"country": "FR", "y2": "FRST", "y10": "FR10Y"},
     "IT": {"country": "IT", "y2": "ITST", "y10": "IT10Y"},
     "ES": {"country": "ES", "y2": "ESST", "y10": "ES10Y"},
     "UK": {"country": "UK", "y2": "UKST", "y10": "UK10Y"},
+
     "JP": {"country": "JP", "y2": "JPST", "y10": "JP10Y"},
     "KR": {"country": "KR", "y2": "KRST", "y10": "KR10Y"},
     "AU": {"country": "AU", "y2": "AUST", "y10": "AU10Y"},
@@ -74,10 +77,13 @@ def build_panel(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
 
     for country, cfg in COUNTRY_MAP.items():
-        y2_col = cfg["y2"]
+        y2_col = cfg.get("y2")
         y10_col = cfg["y10"]
 
-        if y10_col not in wide.columns:
+        has_y2 = bool(y2_col) and y2_col in wide.columns
+        has_y10 = bool(y10_col) and y10_col in wide.columns
+
+        if not has_y10:
             print(f"WARNING: missing {y10_col}; skipping {country}")
             continue
 
@@ -85,16 +91,20 @@ def build_panel(df: pd.DataFrame) -> pd.DataFrame:
         temp["date"] = wide["date"]
         temp["country"] = country
         temp["series_type"] = "curve"
-        temp["curve_eligible"] = y2_col in wide.columns
-        temp["spread_eligible"] = y2_col in wide.columns
-        temp["y2"] = wide[y2_col] if y2_col in wide.columns else None
+
+        temp["curve_eligible"] = has_y2
+        temp["spread_eligible"] = has_y2
+
+        temp["y2"] = wide[y2_col] if has_y2 else None
         temp["y10"] = wide[y10_col]
-        temp["spread"] = temp["y10"] - temp["y2"] if y2_col in wide.columns else None
+        temp["spread"] = temp["y10"] - temp["y2"] if has_y2 else None
+
         temp["symbol"] = f"{country}_CURVE"
         temp["y10_proxy"] = None
         temp["y10_proxy_source"] = y10_col
+
         temp["policy_proxy"] = None
-        temp["policy_proxy_source"] = y2_col if y2_col in wide.columns else None
+        temp["policy_proxy_source"] = y2_col if has_y2 else None
         temp["policy_pressure_t1"] = None
         temp["state"] = None
 
