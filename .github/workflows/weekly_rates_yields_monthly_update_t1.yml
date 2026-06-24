@@ -51,10 +51,6 @@ jobs:
         run: |
           python src/spine/jobs/rates/derive/build_rates_spreads_t2.py
 
-      - name: Build selected global rates serving panel
+      - name: Build selected global rates panel
         run: |
           python src/spine/jobs/rates/derive/build_rates_selected_global_panel_t1.py
-
-      - name: Build rates sigma rank
-        run: |
-          python src/spine/jobs/rates/derive/build_rates_sigma_rank_t2.py

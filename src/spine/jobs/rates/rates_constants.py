@@ -71,6 +71,9 @@ MONTHLY_RATES_SERIES = {
     "IT10Y": "IRLTLT01ITM156N",
     "ITST": "IRSTCI01ITM156N",
 
+    "ES10Y": "IRLTLT01ESM156N",
+    "ESST": "IRSTCI01ESM156N",
+
     "UK10Y": "IRLTLT01GBM156N",
     "UKST": "IRSTCI01GBM156N",
 
@@ -82,6 +85,10 @@ MONTHLY_RATES_SERIES = {
 
     "AU10Y": "IRLTLT01AUM156N",
     "AUST": "IRSTCI01AUM156N",
+
+    "KR10Y": "IRLTLT01KRM156N",
+    "KRST": "IRSTCI01KRM156N",
+
 }
 
 # -----------------------------
@@ -101,9 +108,11 @@ RATES_SPREADS_MONTHLY = {
     "FR10Y_FRST": ("FR10Y", "FRST"),
     "IT10Y_ITST": ("IT10Y", "ITST"),
     "UK10Y_UKST": ("UK10Y", "UKST"),
+    "ES10Y_ESST": ("ES10Y", "ESST"),
 
     "JP10Y_JPST": ("JP10Y", "JPST"),
     "AU10Y_AUST": ("AU10Y", "AUST"),
+    "KR10Y_KRST": ("KR10Y", "KRST"),
 
     # Europe+ dispersion
     "FR10Y_DE10Y": ("FR10Y", "DE10Y"),
