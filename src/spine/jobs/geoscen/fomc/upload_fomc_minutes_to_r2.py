@@ -27,7 +27,16 @@ def main() -> None:
     if not local_path.exists():
         raise FileNotFoundError(local_path)
 
-    endpoint = _env("R2_ENDPOINT")
+    endpoint = (
+        os.getenv("R2_ENDPOINT")
+        or os.getenv("R2_ENDPOINT_URL")
+    )
+
+    if not endpoint:
+        raise RuntimeError(
+            "Missing required env var: R2_ENDPOINT or R2_ENDPOINT_URL"
+        )
+
     access_key = _env("R2_ACCESS_KEY_ID")
     secret_key = _env("R2_SECRET_ACCESS_KEY")
     bucket = os.getenv("R2_BUCKET_NAME") or os.getenv("R2_BUCKET")
