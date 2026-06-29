@@ -29,36 +29,37 @@ COUNTRY_MAP = {
         "fallback": None,
         "output": "eu_policy_language_latest.json",
     },
+
     "GB": {
         "label": "United Kingdom",
         "bank": "Bank of England",
         "code": "BOE",
         "currency": "GBP",
-        "document_type": "mpc",
-        "canonical": "data/geoscen/cb/boe",
-        "fallback": None,
+        "document_type": "policy_minutes",
+        "canonical": "data/geoscen/cb/boe/boe_policy_minutes_text_t1.parquet",
         "output": "gb_policy_language_latest.json",
     },
+
     "JP": {
         "label": "Japan",
         "bank": "Bank of Japan",
         "code": "BOJ",
         "currency": "JPY",
-        "document_type": "policy_decision",
-        "canonical": "data/geoscen/cb/boj",
-        "fallback": None,
+        "document_type": "outlook_report",
+        "canonical": "data/geoscen/cb/boj/boj_outlook_text_t1.parquet",
         "output": "jp_policy_language_latest.json",
     },
+
     "CA": {
         "label": "Canada",
         "bank": "Bank of Canada",
         "code": "BOC",
         "currency": "CAD",
-        "document_type": "rate_decision",
-        "canonical": "data/geoscen/cb/boc",
-        "fallback": None,
+        "document_type": "rate_announcement",
+        "canonical": "data/geoscen/cb/boc/boc_rate_text_t1.parquet",
         "output": "ca_policy_language_latest.json",
     },
+
     "AU": {
         "label": "Australia",
         "bank": "Reserve Bank of Australia",
@@ -194,15 +195,25 @@ def classify_sentence(sentence: str) -> tuple[str, int, list[str]]:
 
 
 def find_source_file(cfg: dict) -> Path | None:
+    canonical = Path(cfg["canonical"])
+
+    if canonical.exists() and canonical.is_file():
+        return canonical
+
     paths = []
 
-    canonical = Path(cfg["canonical"])
-    if canonical.exists():
+    if canonical.exists() and canonical.is_dir():
         paths.extend(canonical.glob("*.parquet"))
 
     fallback = cfg.get("fallback")
     if fallback and Path(fallback).exists():
-        paths.extend(Path(fallback).glob("*.parquet"))
+        fallback_path = Path(fallback)
+
+        if fallback_path.is_file():
+            paths.append(fallback_path)
+
+        if fallback_path.is_dir():
+            paths.extend(fallback_path.glob("*.parquet"))
 
     if not paths:
         return None
@@ -213,6 +224,7 @@ def find_source_file(cfg: dict) -> Path | None:
         or cfg["document_type"].lower() in p.name.lower()
         or "combined" in p.name.lower()
         or "canonical" in p.name.lower()
+        or "text" in p.name.lower()
     ]
 
     return sorted(preferred or paths)[-1]
