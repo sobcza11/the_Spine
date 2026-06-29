@@ -1,41 +1,41 @@
-############################################################
-# upload_policy_language_to_r2.py
-############################################################
-
-import subprocess
 from pathlib import Path
+import os
 
-ROOT = Path(__file__).resolve().parents[3]
+import boto3
 
+
+ROOT = Path.cwd()
 SERVING = ROOT / "data" / "serving" / "rates"
 
-files = sorted(
-    SERVING.glob("*_policy_language_latest.json")
-)
 
-if not files:
-    raise RuntimeError("No policy-language JSON files found.")
+def main():
+    endpoint = os.getenv("R2_ENDPOINT") or os.getenv("R2_ENDPOINT_URL")
+    bucket = os.getenv("R2_BUCKET_NAME") or os.getenv("R2_BUCKET")
 
-for file in files:
+    if not endpoint:
+        raise RuntimeError("Missing R2_ENDPOINT or R2_ENDPOINT_URL")
 
-    key = f"spine_us/serving/rates/{file.name}"
+    if not bucket:
+        raise RuntimeError("Missing R2_BUCKET_NAME or R2_BUCKET")
 
-    print("=" * 70)
-    print(file.name)
-    print("=" * 70)
+    files = sorted(SERVING.glob("*_policy_language_latest.json"))
 
-    subprocess.run(
-        [
-            "aws",
-            "s3",
-            "cp",
-            str(file),
-            f"s3://{ROOT.joinpath('').name}/{key}",
-            "--endpoint-url",
-            "https://$R2_ENDPOINT_URL",
-        ],
-        check=True,
+    if not files:
+        print("No policy-language JSON files found. Skipping upload.")
+        return
+
+    client = boto3.client(
+        "s3",
+        endpoint_url=endpoint,
+        aws_access_key_id=os.environ["R2_ACCESS_KEY_ID"],
+        aws_secret_access_key=os.environ["R2_SECRET_ACCESS_KEY"],
     )
 
-print()
-print("Upload Complete.")
+    for file in files:
+        key = f"spine_us/serving/rates/{file.name}"
+        client.upload_file(str(file), bucket, key)
+        print(f"Uploaded: {key}")
+
+
+if __name__ == "__main__":
+    main()
