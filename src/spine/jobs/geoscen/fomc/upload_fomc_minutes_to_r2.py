@@ -2,7 +2,7 @@
 Upload FOMC Minutes canonical parquet to R2.
 
 Run:
-python -m spine.jobs.geoscen.upload_fomc_minutes_to_r2
+python -m spine.jobs.geoscen.fomc.upload_fomc_minutes_to_r2
 """
 
 from __future__ import annotations
@@ -15,34 +15,37 @@ import boto3
 from spine.jobs.geoscen.fomc.fomc_constants import LOCAL_OUTPUT_PATH, R2_KEY
 
 
-def _env(name: str) -> str:
+def get_required_env(name: str) -> str:
     value = os.getenv(name)
     if not value:
         raise RuntimeError(f"Missing required env var: {name}")
     return value
 
 
+def get_r2_endpoint() -> str:
+    endpoint = os.getenv("R2_ENDPOINT") or os.getenv("R2_ENDPOINT_URL")
+    if not endpoint:
+        raise RuntimeError("Missing required env var: R2_ENDPOINT or R2_ENDPOINT_URL")
+    return endpoint
+
+
+def get_r2_bucket() -> str:
+    bucket = os.getenv("R2_BUCKET_NAME") or os.getenv("R2_BUCKET")
+    if not bucket:
+        raise RuntimeError("Missing required env var: R2_BUCKET_NAME or R2_BUCKET")
+    return bucket
+
+
 def main() -> None:
     local_path = Path(LOCAL_OUTPUT_PATH)
+
     if not local_path.exists():
         raise FileNotFoundError(local_path)
 
-    endpoint = (
-        os.getenv("R2_ENDPOINT")
-        or os.getenv("R2_ENDPOINT_URL")
-    )
-
-    if not endpoint:
-        raise RuntimeError(
-            "Missing required env var: R2_ENDPOINT or R2_ENDPOINT_URL"
-        )
-
-    access_key = _env("R2_ACCESS_KEY_ID")
-    secret_key = _env("R2_SECRET_ACCESS_KEY")
-    bucket = os.getenv("R2_BUCKET_NAME") or os.getenv("R2_BUCKET")
-
-    if not bucket:
-        raise RuntimeError("Missing R2_BUCKET_NAME or R2_BUCKET")
+    endpoint = get_r2_endpoint()
+    access_key = get_required_env("R2_ACCESS_KEY_ID")
+    secret_key = get_required_env("R2_SECRET_ACCESS_KEY")
+    bucket = get_r2_bucket()
 
     client = boto3.client(
         "s3",
@@ -52,10 +55,10 @@ def main() -> None:
     )
 
     client.upload_file(str(local_path), bucket, R2_KEY)
+
     print(f"[GeoScen:FOMC] uploaded={R2_KEY}")
 
 
 if __name__ == "__main__":
     main()
-
     
