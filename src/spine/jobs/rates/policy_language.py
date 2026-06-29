@@ -71,6 +71,15 @@ COUNTRY_MAP = {
     },
 }
 
+TEXT_REQUIRED = {
+    "US": True,
+    "EU": True,
+    "GB": False,
+    "JP": False,
+    "CA": False,
+    "AU": False,
+}
+
 
 DISPLAY_BUCKETS = ["SH", "MH", "N", "MD", "SD"]
 
@@ -217,18 +226,15 @@ def load_latest_document(cfg: dict) -> dict:
 
     df = pd.read_parquet(source_file)
 
-    text_col = "text" if "text" in df.columns else None
     date_col = "date" if "date" in df.columns else None
-
-    if text_col is None:
-        raise ValueError(f"No text column found in {source_file}")
+    text_col = "text" if "text" in df.columns else None
 
     if date_col is None:
         raise ValueError(f"No date column found in {source_file}")
 
     df = df.copy()
     df[date_col] = pd.to_datetime(df[date_col], errors="coerce")
-    df = df.dropna(subset=[date_col, text_col])
+    df = df.dropna(subset=[date_col])
 
     if "document_type" in df.columns:
         filtered = df[df["document_type"].astype(str).str.lower() == cfg["document_type"].lower()]
@@ -237,12 +243,18 @@ def load_latest_document(cfg: dict) -> dict:
 
     latest = df.sort_values(date_col).iloc[-1]
 
+    text_value = (
+        clean_text(latest[text_col])
+        if text_col is not None
+        else clean_text(latest.get("title", cfg["document_type"]))
+    )
+
     return {
         "source_file": source_file.name,
         "document_date": latest[date_col].strftime("%Y-%m-%d"),
         "title": str(latest.get("title", cfg["document_type"])),
         "url": str(latest.get("url", "")),
-        "text": clean_text(latest[text_col]),
+        "text": text_value,
     }
 
 
