@@ -226,7 +226,13 @@ def load_latest_document(cfg: dict) -> dict:
 
     df = pd.read_parquet(source_file)
 
-    date_col = "date" if "date" in df.columns else None
+    date_col = (
+        "date"
+        if "date" in df.columns
+        else "ingested_at_utc"
+        if "ingested_at_utc" in df.columns
+        else None
+    )
     text_col = "text" if "text" in df.columns else None
 
     if date_col is None:
