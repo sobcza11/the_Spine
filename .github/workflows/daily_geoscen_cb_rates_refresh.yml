@@ -1,0 +1,53 @@
+############################################################
+# GitHub Actions
+# Daily GeoScen Central Bank RATES Refresh
+############################################################
+
+name: Daily GeoScen CB RATES Refresh
+
+on:
+  schedule:
+    - cron: "20 11 * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh-cb-rates:
+    runs-on: ubuntu-latest
+
+    env:
+      R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_REGION: auto
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas pyarrow requests beautifulsoup4 boto3 awscli
+
+      - name: Refresh Central Bank Corpora
+        run: |
+          python src/spine/jobs/geoscen/cb/refresh_all_cb_corpora.py
+
+      - name: Build RATES Policy Language Latest
+        run: |
+          python src/spine/jobs/rates/build_policy_language_latest_all.py
+
+      - name: Upload RATES Policy Language JSON
+        run: |
+          aws s3 cp data/serving/rates/ s3://$R2_BUCKET/spine_us/serving/rates/ \
+            --recursive \
+            --exclude "*" \
+            --include "*_policy_language_latest.json" \
+            --endpoint-url $R2_ENDPOINT_URL
+            
