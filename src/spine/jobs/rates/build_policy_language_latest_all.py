@@ -31,11 +31,11 @@ def main():
 
             build_latest(jurisdiction)
 
-            print(f"✓ {jurisdiction} COMPLETE")
+            print(f"{jurisdiction} COMPLETE")
 
         except Exception as e:
 
-            print(f"✗ {jurisdiction} FAILED")
+            print(f"{jurisdiction} FAILED")
             print(e)
 
             continue
