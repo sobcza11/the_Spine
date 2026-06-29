@@ -26,9 +26,7 @@ def execute_pipeline(bank):
             module.run()
 
         else:
-            raise RuntimeError(
-                f"{module_name} has no main() or run()"
-            )
+            print(f"SKIP: {module_name} has no main() or run()")
 
     print("\nPipeline Complete.")
 
