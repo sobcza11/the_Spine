@@ -47,5 +47,13 @@ def ingest_boc_rate_announcements() -> pd.DataFrame:
     return df
 
 
-if __name__ == "__main__":
+def main():
     ingest_boc_rate_announcements()
+
+
+def run():
+    ingest_boc_rate_announcements()
+
+
+if __name__ == "__main__":
+    main()

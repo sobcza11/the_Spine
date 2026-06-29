@@ -66,6 +66,14 @@ def ingest_boj_outlook() -> pd.DataFrame:
     return df
 
 
-if __name__ == "__main__":
+def main():
     ingest_boj_outlook()
+
+
+def run():
+    ingest_boj_outlook()
+
+
+if __name__ == "__main__":
+    main()
 

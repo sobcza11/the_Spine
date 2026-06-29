@@ -113,6 +113,15 @@ def ingest_boe_policy_minutes() -> pd.DataFrame:
     return df
 
 
-if __name__ == "__main__":
+
+def main():
     ingest_boe_policy_minutes()
+
+
+def run():
+    ingest_boe_policy_minutes()
+
+
+if __name__ == "__main__":
+    main()
 
