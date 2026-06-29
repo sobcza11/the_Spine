@@ -16,6 +16,7 @@ jobs:
 
     env:
       R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL }}
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT_URL }}
       R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
       R2_BUCKET: ${{ secrets.R2_BUCKET }}
@@ -50,18 +51,3 @@ jobs:
 
       - name: Upload Policy Language
         run: python -m spine.jobs.rates.upload_policy_language_to_r2
-
-      - name: Build Policy Language
-        run: python -m spine.jobs.rates.build_policy_language_latest_all
-
-      - name: Upload Policy Language
-        run: python -m spine.jobs.rates.upload_policy_language_to_r2
-
-      - name: Upload RATES Policy Language JSON
-        run: |
-          aws s3 cp data/serving/rates/ s3://$R2_BUCKET/spine_us/serving/rates/ \
-            --recursive \
-            --exclude "*" \
-            --include "*_policy_language_latest.json" \
-            --endpoint-url $R2_ENDPOINT_URL
-            
