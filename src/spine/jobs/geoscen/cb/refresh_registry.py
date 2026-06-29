@@ -39,6 +39,7 @@ BANK_REGISTRY = {
     "BOE": {
         "name": "Bank of England",
         "pipeline": [
+            "spine.jobs.geoscen.cb.boe.ingest_boe_policy_minutes_t1",
             "spine.jobs.geoscen.cb.boe.extract_boe_policy_minutes_text_t1",
         ],
     },
@@ -46,6 +47,7 @@ BANK_REGISTRY = {
     "BOJ": {
         "name": "Bank of Japan",
         "pipeline": [
+            "spine.jobs.geoscen.cb.boj.ingest_boj_outlook_t1",
             "spine.jobs.geoscen.cb.boj.extract_boj_outlook_text_t1",
         ],
     },
@@ -53,6 +55,7 @@ BANK_REGISTRY = {
     "BOC": {
         "name": "Bank of Canada",
         "pipeline": [
+            "spine.jobs.geoscen.cb.boc.ingest_boc_rate_announcements_t1",
             "spine.jobs.geoscen.cb.boc.extract_boc_rate_text_t1",
         ],
     },
