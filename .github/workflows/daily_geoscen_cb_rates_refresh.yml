@@ -35,13 +35,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas pyarrow requests beautifulsoup4 boto3 awscli
 
-      - name: Refresh Central Bank Corpora
-        run: |
-          python src/spine/jobs/geoscen/cb/refresh_all_cb_corpora.py
+      - name: Refresh Federal Reserve
+        run: python -m spine.jobs.geoscen.cb.refresh_cb --bank FED
 
-      - name: Build RATES Policy Language Latest
-        run: |
-          python src/spine/jobs/rates/build_policy_language_latest_all.py
+      - name: Refresh European Central Bank
+        run: python -m spine.jobs.geoscen.cb.refresh_cb --bank ECB
+
+      - name: Build Policy Language
+        run: python -m spine.jobs.rates.build_policy_language_latest_all
+
+      - name: Upload Policy Language
+        run: python -m spine.jobs.rates.upload_policy_language_to_r2
+
+      - name: Build Policy Language
+        run: python -m spine.jobs.rates.build_policy_language_latest_all
+
+      - name: Upload Policy Language
+        run: python -m spine.jobs.rates.upload_policy_language_to_r2
 
       - name: Upload RATES Policy Language JSON
         run: |
