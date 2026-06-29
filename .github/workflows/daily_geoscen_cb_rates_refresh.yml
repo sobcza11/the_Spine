@@ -46,8 +46,17 @@ jobs:
       - name: Refresh European Central Bank
         run: python -m spine.jobs.geoscen.cb.refresh_cb --bank ECB
 
+      - name: Refresh Bank of England
+        run: python -m spine.jobs.geoscen.cb.refresh_cb --bank BOE
+
+      - name: Refresh Bank of Japan
+        run: python -m spine.jobs.geoscen.cb.refresh_cb --bank BOJ
+
+      - name: Refresh Bank of Canada
+        run: python -m spine.jobs.geoscen.cb.refresh_cb --bank BOC
+
       - name: Build Policy Language
         run: python -m spine.jobs.rates.build_policy_language_latest_all
-
+        
       - name: Upload Policy Language
         run: python -m spine.jobs.rates.upload_policy_language_to_r2
