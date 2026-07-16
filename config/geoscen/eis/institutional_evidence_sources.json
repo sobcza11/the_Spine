@@ -1,0 +1,64 @@
+﻿{
+  "schema_version": "1.0.0",
+  "component": "Institutional • Evidence",
+  "component_id": "institutional_evidence",
+  "sources": [
+    {
+      "source_id": "ism",
+      "source_type": "governed_repository_artifact",
+      "enabled": true,
+      "existing_location": "data/geoscen/pmi",
+      "target_stage": "canonical",
+      "purpose": [
+        "manufacturing_commentary",
+        "services_commentary",
+        "component_evidence"
+      ]
+    },
+    {
+      "source_id": "nfib",
+      "source_type": "api_or_governed_download",
+      "enabled": false,
+      "api_base_env": "NFIB_API_BASE",
+      "api_key_env": "NFIB_API_KEY",
+      "target_stage": "raw",
+      "purpose": [
+        "small_business_activity",
+        "labor_pressure",
+        "pricing_pressure",
+        "credit_conditions",
+        "capital_spending"
+      ]
+    },
+    {
+      "source_id": "beige_book",
+      "source_type": "official_download_or_feed",
+      "enabled": true,
+      "existing_location": "data/geoscen/beige_book",
+      "api_base_env": "BEIGE_BOOK_SOURCE_BASE",
+      "target_stage": "raw",
+      "purpose": [
+        "federal_reserve_district_evidence",
+        "regional_activity",
+        "labor",
+        "prices",
+        "housing",
+        "banking"
+      ]
+    },
+    {
+      "source_id": "central_banks",
+      "source_type": "official_feeds",
+      "enabled": true,
+      "existing_location": "data/geoscen/cb",
+      "target_stage": "raw",
+      "purpose": [
+        "policy_bias",
+        "inflation_narrative",
+        "growth_narrative",
+        "labor_narrative",
+        "financial_stability"
+      ]
+    }
+  ]
+}

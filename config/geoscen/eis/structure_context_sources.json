@@ -1,0 +1,70 @@
+﻿{
+  "schema_version": "1.0.0",
+  "component": "Structure • Context",
+  "component_id": "structure_context",
+  "sources": [
+    {
+      "source_id": "census_acs",
+      "publisher": "U.S. Census Bureau",
+      "source_type": "api",
+      "cadence": "annual",
+      "enabled": false,
+      "api_base_env": "CENSUS_API_BASE",
+      "api_key_env": "CENSUS_API_KEY",
+      "target_stage": "raw",
+      "purpose": [
+        "population",
+        "income",
+        "education",
+        "poverty",
+        "housing",
+        "demographics",
+        "industry_mix",
+        "occupation_mix"
+      ]
+    },
+    {
+      "source_id": "fred",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "source_type": "api",
+      "cadence": "mixed",
+      "enabled": false,
+      "api_base_env": "FRED_API_BASE",
+      "api_key_env": "FRED_API_KEY",
+      "target_stage": "raw",
+      "purpose": [
+        "regional_macro_context",
+        "labor_context",
+        "income_context",
+        "housing_context"
+      ]
+    },
+    {
+      "source_id": "fhfa",
+      "publisher": "Federal Housing Finance Agency",
+      "source_type": "api_or_download",
+      "cadence": "quarterly_or_monthly",
+      "enabled": false,
+      "api_base_env": "FHFA_API_BASE",
+      "api_key_env": null,
+      "target_stage": "raw",
+      "purpose": [
+        "house_price_context"
+      ]
+    },
+    {
+      "source_id": "hud",
+      "publisher": "U.S. Department of Housing and Urban Development",
+      "source_type": "api_or_download",
+      "cadence": "mixed",
+      "enabled": false,
+      "api_base_env": "HUD_API_BASE",
+      "api_key_env": "HUD_API_TOKEN",
+      "target_stage": "raw",
+      "purpose": [
+        "housing_affordability",
+        "regional_housing_conditions"
+      ]
+    }
+  ]
+}
