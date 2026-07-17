@@ -80,13 +80,35 @@ class ExecutionPlan:
         }
 
 
-def default_stage8_plan(*, run_mode: str = "offline_fixture", run_id: str = "stage8-test-run") -> ExecutionPlan:
+def default_stage8_plan(
+    *,
+    run_mode: str = "offline_fixture",
+    run_id: str = "stage8-test-run",
+    include_large_datasets: bool = True,
+    large_datasets_only: bool = False,
+) -> ExecutionPlan:
+
+    if large_datasets_only:
+        specifications = tuple(
+            spec
+            for spec in initial_stage8_specifications()
+            if spec.provider == "fhfa"
+        )
+    elif include_large_datasets:
+        specifications = initial_stage8_specifications()
+    else:
+        specifications = tuple(
+            spec
+            for spec in initial_stage8_specifications()
+            if spec.provider != "fhfa"
+        )
+
     return ExecutionPlan(
         plan_id="stage8_initial_integration",
         schema_version=INTEGRATION_SCHEMA_VERSION,
         generated_at=utc_now_iso(),
         run_mode=run_mode,
-        specifications=initial_stage8_specifications(),
+        specifications=specifications,
         requested_by="GeoScen EIS Stage 8",
         correlation_id=run_id,
         raw_root="data/source/geoscen/eis/raw",

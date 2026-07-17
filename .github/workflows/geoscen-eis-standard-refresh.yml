@@ -1,0 +1,67 @@
+﻿name: GeoScen EIS Standard Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1-5"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: geoscen-eis-standard-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      EIS_ALLOW_LIVE: "1"
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      BEA_USER_ID: ${{ secrets.BEA_USER_ID }}
+      CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+      BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+      HUD_USER_ACCESS_TOKEN: ${{ secrets.HUD_USER_ACCESS_TOKEN }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements-ci.txt ]; then
+            pip install -r requirements-ci.txt
+          elif [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Test EIS
+        run: python -m pytest tests/geoscen/eis -q
+
+      - name: Run standard live ingestion
+        shell: bash
+        run: |
+          RUN_ID="eis-standard-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          python src/spine/jobs/geoscen/eis/run_eis_connectors.py \
+            --mode live \
+            --allow-live \
+            --run-id "$RUN_ID" \
+            --output-root data/geoscen/eis_live
+
+      - name: Upload governed EIS artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: geoscen-eis-standard-${{ github.run_id }}
+          path: data/geoscen/eis_live/
+          retention-days: 30
+          if-no-files-found: error

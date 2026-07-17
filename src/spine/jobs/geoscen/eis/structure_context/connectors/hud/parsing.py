@@ -15,8 +15,19 @@ def load_hud_payload(response_text: str) -> Mapping[str, Any]:
         if text.lower().startswith("<!doctype html") or text.lower().startswith("<html"):
             raise UpstreamResponseError("HUD response was HTML, not JSON.", provider="hud") from exc
         raise UpstreamResponseError("Malformed HUD JSON response.", provider="hud") from exc
+    if isinstance(payload, list):
+        if not payload:
+            raise ResponseValidationError(
+                "HUD payload must not be an empty array.",
+                provider="hud",
+            )
+        return {"data": payload}
+
     if not isinstance(payload, Mapping):
-        raise ResponseValidationError("HUD payload must be an object.", provider="hud")
+        raise ResponseValidationError(
+            "HUD payload must be an object or array.",
+            provider="hud",
+        )
     status = str(payload.get("status") or payload.get("code") or "").lower()
     if status in {"error", "failed", "failure"} or "error" in payload:
         message = str(payload.get("message") or payload.get("error") or "HUD API error")[:240]

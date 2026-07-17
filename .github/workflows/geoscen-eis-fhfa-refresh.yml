@@ -1,0 +1,60 @@
+﻿name: GeoScen EIS FHFA Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "43 7 * * 0"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: geoscen-eis-fhfa-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+      EIS_ALLOW_LIVE: "1"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements-ci.txt ]; then
+            pip install -r requirements-ci.txt
+          elif [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Run FHFA live ingestion
+        shell: bash
+        run: |
+          RUN_ID="eis-fhfa-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          python src/spine/jobs/geoscen/eis/run_eis_connectors.py \
+            --mode live \
+            --allow-live \
+            --large-datasets-only \
+            --run-id "$RUN_ID" \
+            --output-root data/geoscen/eis_fhfa_live
+
+      - name: Upload governed FHFA artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: geoscen-eis-fhfa-${{ github.run_id }}
+          path: data/geoscen/eis_fhfa_live/
+          retention-days: 30
+          if-no-files-found: error

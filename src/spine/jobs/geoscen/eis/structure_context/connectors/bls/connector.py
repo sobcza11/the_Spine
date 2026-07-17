@@ -176,8 +176,15 @@ class BLSConnector:
             validation = ValidationResult(True, (), tuple(warnings), REQUIRED_ROW_FIELDS, len(rows))
         measurement_as_of = max((row["measurement_period"] for row in rows), default=None)
         response_status = "success"
-        if warnings or missing:
-            response_status = "partial" if rows else "unavailable"
+
+        if missing:
+            response_status = (
+                "partial"
+                if rows
+                else "unavailable"
+            )
+        elif not rows:
+            response_status = "unavailable"
         dataset = ",".join(requested[:5]) + (f",+{len(requested) - 5}" if len(requested) > 5 else "")
         return {
             "response_status": response_status,
@@ -206,9 +213,19 @@ class BLSConnector:
     def _normalize_series(self, series_list: list[Mapping[str, Any]], requested: list[str], retrieved_at: str) -> tuple[list[dict[str, Any]], list[str]]:
         rows: list[dict[str, Any]] = []
         warnings: list[str] = []
-        requested_set = set(requested)
+        requested_set = {
+            str(item).strip().upper()
+            for item in requested
+            if str(item).strip()
+        }
+
         for series in series_list:
-            series_id = str(series.get("seriesID") or "").strip()
+            series_id = (
+                str(series.get("seriesID") or "")
+                .strip()
+                .upper()
+            )
+
             if not series_id:
                 warnings.append("series_missing_id")
                 continue
