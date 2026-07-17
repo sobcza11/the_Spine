@@ -1,0 +1,7 @@
+{
+  "status": "success",
+  "data": [
+    {"state_id": "MI", "state_code": "MI", "state_name": "Michigan"},
+    {"state_id": "AL", "state_code": "AL", "state_name": "Alabama"}
+  ]
+}

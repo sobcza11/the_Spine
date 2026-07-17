@@ -1,0 +1,6 @@
+{
+  "artifact_type": "eis_structure_context_serving",
+  "schema_version": "geoscen.eis.structure_context.v1",
+  "expected_indicator_count": 12,
+  "expected_min_observation_count": 12
+}

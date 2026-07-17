@@ -1,0 +1,14 @@
+{
+  "groups": [
+    {
+      "name": "B01001",
+      "description": "Sex by Age",
+      "variables": "https://api.census.gov/data/2023/acs/acs5/groups/B01001.json"
+    },
+    {
+      "name": "B19013",
+      "description": "Median Household Income",
+      "variables": "https://api.census.gov/data/2023/acs/acs5/groups/B19013.json"
+    }
+  ]
+}

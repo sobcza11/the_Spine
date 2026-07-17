@@ -1,0 +1,7 @@
+{
+  "status": "success",
+  "data": [
+    {"entityid": "MET19804", "metro_code": "19804", "metro_name": "Detroit-Warren-Dearborn, MI", "state_codes": ["MI"]},
+    {"entityid": "MET24340", "metro_code": "24340", "metro_name": "Grand Rapids-Kentwood, MI", "state_codes": ["MI"]}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "plan_id": "stage8_initial_integration",
+  "schema_version": "geoscen.eis.integration.v1",
+  "run_mode": "offline_fixture",
+  "requested_by": "test",
+  "correlation_id": "stage8-test-run",
+  "raw_root": "data/source/geoscen/eis/raw",
+  "normalized_root": "data/source/geoscen/eis",
+  "manifest_root": "data/source/geoscen/eis/manifests",
+  "fail_fast": false,
+  "allow_partial": true,
+  "credential_preflight": true,
+  "maximum_total_rows": 50000,
+  "maximum_total_raw_bytes": 50000000
+}

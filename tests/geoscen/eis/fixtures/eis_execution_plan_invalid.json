@@ -1,0 +1,12 @@
+{
+  "plan_id": "bad/plan",
+  "schema_version": "bad",
+  "run_mode": "live",
+  "correlation_id": "bad",
+  "raw_root": "../raw",
+  "normalized_root": "../normalized",
+  "manifest_root": "../manifest",
+  "credentials": {
+    "FRED_API_KEY": "secret"
+  }
+}

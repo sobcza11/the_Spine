@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "data": {
+    "entityid": "2612599999",
+    "state_code": "MI",
+    "county_name": "Oakland County",
+    "year": "2025",
+    "income_category": "very_low_income",
+    "median_family_income": "104300",
+    "il_1": "36500",
+    "il_2": "41700",
+    "il_3": "",
+    "il_4": "52100"
+  }
+}

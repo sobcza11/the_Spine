@@ -1,0 +1,18 @@
+{
+  "concept": "Sex by Age",
+  "variables": {
+    "B01001_001E": {
+      "label": "Estimate!!Total:",
+      "predicateType": "int",
+      "limit": 0,
+      "predicateOnly": false,
+      "attributes": "B01001_001EA,B01001_001M"
+    },
+    "B01001_002E": {
+      "label": "Estimate!!Total:!!Male:",
+      "predicateType": "int",
+      "limit": 0,
+      "predicateOnly": false
+    }
+  }
+}

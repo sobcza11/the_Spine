@@ -1,0 +1,1 @@
+{"BEAAPI":{"Results":{"Parameter":[{"ParameterName":"TableName","ParameterDescription":"Table name","ParameterDataType":"string","ParameterIsRequired":"1","MultipleAcceptedFlag":"0","AllValue":"X"},{"ParameterName":"Year","ParameterDescription":"Year","ParameterDataType":"integer","ParameterIsRequired":"yes","MultipleAcceptedFlag":"maybe","ParameterDefaultValue":"2024"}]}}}

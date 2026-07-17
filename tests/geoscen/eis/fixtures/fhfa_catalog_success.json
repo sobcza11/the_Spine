@@ -1,0 +1,18 @@
+[
+  {
+    "dataset_id": "hpi_national_purchase_only",
+    "display_name": "National purchase-only HPI",
+    "geography_level": "national",
+    "index_type": "purchase-only",
+    "frequency": "monthly",
+    "active": true
+  },
+  {
+    "dataset_id": "hpi_state_all_transactions",
+    "display_name": "State all-transactions HPI",
+    "geography_level": "state",
+    "index_type": "all-transactions",
+    "frequency": "quarterly",
+    "active": true
+  }
+]

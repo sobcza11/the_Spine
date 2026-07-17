@@ -1,0 +1,7 @@
+{
+  "status": "success",
+  "data": [
+    {"entityid": "2612599999", "state_code": "MI", "county_name": "Oakland County", "year": "2025", "Efficiency": "1040"},
+    {"state_code": "MI", "county_name": "Malformed", "year": "2025"}
+  ]
+}

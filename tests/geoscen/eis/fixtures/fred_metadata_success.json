@@ -1,0 +1,23 @@
+{
+  "realtime_start": "2024-01-01",
+  "realtime_end": "2024-12-31",
+  "seriess": [
+    {
+      "id": "UNRATE",
+      "realtime_start": "2024-01-01",
+      "realtime_end": "2024-12-31",
+      "title": "Unemployment Rate",
+      "observation_start": "1948-01-01",
+      "observation_end": "2024-04-01",
+      "frequency": "Monthly",
+      "frequency_short": "M",
+      "units": "Percent",
+      "units_short": "%",
+      "seasonal_adjustment": "Seasonally Adjusted",
+      "seasonal_adjustment_short": "SA",
+      "last_updated": "2024-05-03 07:45:02-05",
+      "popularity": 95,
+      "notes": "Long official notes stay in normalized metadata and are not logging metadata."
+    }
+  ]
+}

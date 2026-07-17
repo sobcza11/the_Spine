@@ -1,0 +1,66 @@
+{
+  "status": "REQUEST_SUCCEEDED",
+  "responseTime": 123,
+  "message": [],
+  "Results": {
+    "series": [
+      {
+        "seriesID": "CUUR0000SA0",
+        "catalog": {
+          "series_title": "Consumer Price Index for All Urban Consumers",
+          "survey_name": "CPI",
+          "seasonality": "Not Seasonally Adjusted",
+          "area": "U.S. city average",
+          "item": "All items",
+          "measure_data_type": "Index"
+        },
+        "data": [
+          {
+            "year": "2024",
+            "period": "M13",
+            "periodName": "Annual Average",
+            "latest": "false",
+            "value": "313.689",
+            "footnotes": [
+              {
+                "code": "P",
+                "text": "Preliminary."
+              }
+            ]
+          },
+          {
+            "year": "2024",
+            "period": "M01",
+            "periodName": "January",
+            "latest": "true",
+            "value": "309.685",
+            "footnotes": [
+              {}
+            ]
+          }
+        ]
+      },
+      {
+        "seriesID": "LNS14000000",
+        "data": [
+          {
+            "year": "2024",
+            "period": "Q01",
+            "periodName": "1st Quarter",
+            "latest": "false",
+            "value": "bad-value",
+            "footnotes": []
+          },
+          {
+            "year": "2024",
+            "period": "A01",
+            "periodName": "Annual",
+            "latest": "false",
+            "value": "4",
+            "footnotes": []
+          }
+        ]
+      }
+    ]
+  }
+}

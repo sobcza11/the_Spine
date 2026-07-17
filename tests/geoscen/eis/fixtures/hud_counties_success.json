@@ -1,0 +1,7 @@
+{
+  "status": "success",
+  "data": [
+    {"entityid": "2612599999", "county_name": "Oakland County", "county_code": "26125", "metro_status": "metro"},
+    {"entityid": "2616399999", "county_name": "Wayne County", "county_code": "26163", "metro_status": "metro"}
+  ]
+}

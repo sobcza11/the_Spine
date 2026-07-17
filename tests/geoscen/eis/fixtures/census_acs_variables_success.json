@@ -1,0 +1,21 @@
+{
+  "variables": {
+    "B01001_001E": {
+      "label": "Estimate!!Total:",
+      "concept": "Sex by Age",
+      "predicateType": "int",
+      "group": "B01001",
+      "limit": 0,
+      "predicateOnly": false,
+      "attributes": "B01001_001EA,B01001_001M"
+    },
+    "NAME": {
+      "label": "Geographic Area Name",
+      "concept": "Geography",
+      "predicateType": "string",
+      "group": "N/A",
+      "limit": 0,
+      "predicateOnly": false
+    }
+  }
+}

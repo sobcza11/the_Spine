@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "data": {
+    "entityid": "2612599999",
+    "entity_type": "county",
+    "state_code": "MI",
+    "county_name": "Oakland County",
+    "year": "2025",
+    "Efficiency": "1040",
+    "One-Bedroom": "1120",
+    "Two-Bedroom": "1380",
+    "Three-Bedroom": "",
+    "Four-Bedroom": "2210"
+  }
+}

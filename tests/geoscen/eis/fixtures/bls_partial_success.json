@@ -1,0 +1,24 @@
+{
+  "status": "REQUEST_SUCCEEDED_WITH_WARNINGS",
+  "responseTime": 111,
+  "message": [
+    "Series does not exist for requested payload."
+  ],
+  "Results": {
+    "series": [
+      {
+        "seriesID": "LNS14000000",
+        "data": [
+          {
+            "year": "2024",
+            "period": "M01",
+            "periodName": "January",
+            "latest": "true",
+            "value": "3.7",
+            "footnotes": []
+          }
+        ]
+      }
+    ]
+  }
+}

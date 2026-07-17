@@ -1,0 +1,25 @@
+{
+  "fips": [
+    {
+      "name": "state",
+      "geoLevelDisplay": "State",
+      "geoLevelId": "040",
+      "requires": [],
+      "wildcard": ["*"]
+    },
+    {
+      "name": "county",
+      "geoLevelDisplay": "County",
+      "geoLevelId": "050",
+      "requires": ["state"],
+      "wildcard": ["*"]
+    },
+    {
+      "name": "tract",
+      "geoLevelDisplay": "Census Tract",
+      "geoLevelId": "140",
+      "requires": ["state", "county"],
+      "wildcard": ["*"]
+    }
+  ]
+}

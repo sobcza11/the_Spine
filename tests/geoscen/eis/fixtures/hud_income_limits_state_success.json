@@ -1,0 +1,7 @@
+{
+  "status": "success",
+  "data": [
+    {"entityid": "2612599999", "state_code": "MI", "county_name": "Oakland County", "year": "2025", "income_category": "low_income", "median_family_income": "104300", "il_1": "58400", "il_2": "66750"},
+    {"entityid": "", "state_code": "MI", "county_name": "Malformed", "year": "2025", "income_category": "low_income", "il_1": "1"}
+  ]
+}
