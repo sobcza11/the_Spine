@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "profile_version": "1.0.0",
+  "instrument_id": "MDY",
+  "provider": "TIINGO",
+  "provider_symbol": "MDY",
+  "provider_dataset": "DAILY_EOD_PRICES",
+  "asset_class": "EQUITY",
+  "instrument_type": "ETF_INDEX_PROXY",
+  "currency": "USD",
+  "geographic_scope": "UNITED_STATES",
+  "analytical_scope": "S_AND_P_MIDCAP_400",
+  "universe_designation": "US_MID_CAP_PROXY",
+  "observation_key": ["symbol", "date"],
+  "date_column": "date",
+  "price_fields": ["open", "high", "low", "close", "volume"],
+  "adjusted_price_fields": ["adjOpen", "adjHigh", "adjLow", "adjClose", "adjVolume"],
+  "split_factor_field": "splitFactor",
+  "dividend_field": "divCash",
+  "canonical_schema_version": "1.0.0",
+  "shared_implementation": {
+    "adapter": "spine.jobs.equity.build_equity_index_hist_t1:_fetch_tiingo_daily",
+    "canonicalizer": "spine.equities.index_pipeline:canonicalize_tiingo_daily",
+    "acquisition_manifest": "spine.equities.provenance.acquisition_manifest",
+    "canonical_metadata": "spine.equities.provenance.canonical_observation_metadata",
+    "serving_metadata": "spine.equities.provenance.serving_export_metadata"
+  },
+  "acquisition_policy": {
+    "authorization_status": "AUTHORIZATION_REQUIRED",
+    "authorization_reference": null,
+    "approved_start": null,
+    "approved_end": null,
+    "request_budget": null,
+    "request_count": 1,
+    "retry_count": 6,
+    "merge_policy": "SYMBOL_DATE_KEEP_LAST"
+  },
+  "corporate_action_policy": {
+    "policy_id": "TIINGO_RAW_ADJUSTED_SEPARATION_V1",
+    "raw_adjusted_separation_required": true,
+    "total_return_interpretation": "PROHIBITED_WITHOUT_EXPLICIT_AUTHORIZATION"
+  },
+  "serving_contract": {
+    "canonical_path": "data/canonical/equities/indexes/mdy_daily_eod_v1.parquet",
+    "canonical_metadata_path": "data/canonical/equities/indexes/mdy_daily_eod_v1.metadata.json",
+    "serving_path": "data/serving/equities/indexes/mdy_daily_eod_v1.parquet",
+    "serving_metadata_path": "data/serving/equities/indexes/mdy_daily_eod_v1.metadata.json",
+    "publication_mode": "VALIDATION_ONLY"
+  },
+  "lens_eligibility": {
+    "destinations": ["MARKET_BREADTH", "VOLATILITY_STRUCTURE", "LIQUIDITY_FLOWS"],
+    "policy": "EVALUATE_ONLY_NO_ACTIVATION"
+  },
+  "lifecycle": "SHADOW",
+  "runtime_authorization": "VALIDATION_ONLY"
+}

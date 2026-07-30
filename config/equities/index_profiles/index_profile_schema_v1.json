@@ -1,0 +1,33 @@
+{
+  "additional_properties": false,
+  "object_type": "EQUITIES_INDEX_PROFILE_SCHEMA_V1",
+  "profile_schema_version": "1.0.0",
+  "required_fields": [
+    "schema_version",
+    "profile_version",
+    "instrument_id",
+    "provider",
+    "provider_symbol",
+    "provider_dataset",
+    "asset_class",
+    "instrument_type",
+    "currency",
+    "geographic_scope",
+    "analytical_scope",
+    "universe_designation",
+    "observation_key",
+    "date_column",
+    "price_fields",
+    "adjusted_price_fields",
+    "split_factor_field",
+    "dividend_field",
+    "canonical_schema_version",
+    "shared_implementation",
+    "acquisition_policy",
+    "corporate_action_policy",
+    "serving_contract",
+    "lens_eligibility",
+    "lifecycle",
+    "runtime_authorization"
+  ]
+}

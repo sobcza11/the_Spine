@@ -8,11 +8,13 @@ import sys
 import boto3
 import pandas as pd
 
+from spine.equities.index_profiles import INSTRUMENTS
+
 
 SOURCE_R2_KEY = "spine_us/us_equity_index_t1.parquet"
 TARGET_R2_KEY = "spine_us/serving/equities/us_equity_index_data.json"
 
-KEEP_SYMBOLS = ["SPY", "QQQ", "DIA", "ITOT", "MDY", "IWM"]
+KEEP_SYMBOLS = list(INSTRUMENTS)
 OUT_COLS = ["symbol", "date", "close"]
 
 

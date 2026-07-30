@@ -10,10 +10,12 @@ import boto3
 import pandas as pd
 import requests
 
+from spine.equities.index_profiles import INSTRUMENTS
+
 # =========================
 # Config
 # =========================
-T1_INDEX_ETFS: List[str] = ["SPY", "QQQ", "DIA", "IWM", "ITOT", "MDY"]
+T1_INDEX_ETFS: List[str] = list(INSTRUMENTS)
 
 R2_KEY = "spine_us/us_equity_index_t1.parquet"
 
@@ -160,4 +162,3 @@ if __name__ == "__main__":
         print(f"ERROR: {e}", file=sys.stderr)
         raise
 
-    
