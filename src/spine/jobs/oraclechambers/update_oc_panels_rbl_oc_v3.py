@@ -3,6 +3,19 @@ import html
 
 import pandas as pd
 
+from spine.jobs.oraclechambers.presentation import EQUITIES_INDUSTRY_RBL_PLACEHOLDER_V1
+
+
+EQUITIES_REQUIRED_ANALYTICAL_FIELDS = {
+    "date",
+    "rbl_report_with_regime",
+    "regime_label",
+    "regime_confidence",
+    "dominance_mean",
+    "signal_strength",
+    "tone_direction",
+}
+
 
 PANEL_HTML = """<!doctype html>
 <html lang="en">
@@ -154,6 +167,16 @@ def latest_row(path):
     return df.sort_values("date").iloc[-1]
 
 
+def validate_equities_panel_source(row):
+    missing = sorted(EQUITIES_REQUIRED_ANALYTICAL_FIELDS - set(row.index))
+    if missing:
+        raise KeyError(f"Missing EQUITIES analytical fields: {missing}")
+    null_fields = sorted(field for field in EQUITIES_REQUIRED_ANALYTICAL_FIELDS if pd.isna(row[field]))
+    if null_fields:
+        raise ValueError(f"Null EQUITIES analytical fields: {null_fields}")
+    return row
+
+
 def write_panel(path, **kwargs):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(PANEL_HTML.format(**kwargs), encoding="utf-8")
@@ -166,7 +189,9 @@ def main():
     macro = latest_row(base / "geoscen" / "geoscen_serving_v2.parquet")
     fx = latest_row(base / "fx" / "fx_serving_v2.parquet")
     rates = latest_row(base / "rates" / "rates_serving_v2.parquet")
-    equities = latest_row(base / "equities" / "equities_serving_v2.parquet")
+    equities = validate_equities_panel_source(
+        latest_row(base / "equities" / "equities_serving_v2.parquet")
+    )
 
     write_panel(
         base / "geoscen" / "geoscen_panel_v1.html",
@@ -210,7 +235,7 @@ def main():
         zt_value="--",
         zt_note="Industry / sector signal layer pending final computation",
         graph_note="Industry / sector validation graph reserved",
-        rbl_oc=safe_text(equities["rbl_oc"]),
+        rbl_oc=safe_text(EQUITIES_INDUSTRY_RBL_PLACEHOLDER_V1),
         final_metric="--",
         final_note="Reserved Equity Industry/Sector Metric",
         footer="Source: the_Spine | Equity Industry/Sectors | Offline panel v1 | IsoVector.io standard",
@@ -226,7 +251,7 @@ def main():
         zt_value="--",
         zt_note="Industry / sector signal layer pending final computation",
         graph_note="Industry / sector validation graph reserved",
-        rbl_oc=safe_text(equities["rbl_oc"]),
+        rbl_oc=safe_text(EQUITIES_INDUSTRY_RBL_PLACEHOLDER_V1),
         final_metric="--",
         final_note="Reserved Equity Industry/Sector Metric",
         footer="Source: the_Spine | Equity Industry/Sectors | Offline panel v1 | IsoVector.io standard",
