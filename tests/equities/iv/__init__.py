@@ -1,0 +1,1 @@
+"""EQUITIES IV adapter tests."""

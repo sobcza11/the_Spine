@@ -1,0 +1,31 @@
+{
+  "sys_equities_contribution": {
+    "domain": "EQUITIES",
+    "coordinates": {
+      "P": {
+        "value": 0.42,
+        "confidence": 0.8,
+        "method_id": "equities_fixture_pressure_v1",
+        "method_version": "1.0.0",
+        "observation_time": "2026-07-29T00:00:00Z",
+        "as_of_time": "2026-07-29T01:00:00Z",
+        "lifecycle": "EXPERIMENTAL",
+        "lineage": ["fixture:governed-equities", "method:pressure-v1"],
+        "evidence_id": "equities-fixture-p",
+        "source_type": "governed_test_fixture"
+      },
+      "D": {
+        "value": 0.24,
+        "confidence": 0.7,
+        "method_id": "equities_fixture_dispersion_v1",
+        "method_version": "1.0.0",
+        "observation_time": "2026-07-29T00:00:00Z",
+        "as_of_time": "2026-07-29T01:00:00Z",
+        "lifecycle": "EXPERIMENTAL",
+        "lineage": ["fixture:governed-equities", "method:dispersion-v1"],
+        "evidence_id": "equities-fixture-d",
+        "source_type": "governed_test_fixture"
+      }
+    }
+  }
+}
